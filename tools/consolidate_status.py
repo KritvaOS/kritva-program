@@ -220,9 +220,10 @@ def compute(base, reports, effective, reg):
                 elif ap["acceptance"] == "PASS":
                     types = {ev["type"] for ev in t["evidence"]}
                     verifiable = [ev for ev in t["evidence"] if ev.get("commit") == ap["source_commit"]
-                                  and (ev.get("ci_run") or ev.get("report_sha256"))]
+                                  and (ev.get("ci_run") or ev.get("report_sha256"))
+                                  and str(ev.get("result") or "").upper() == "PASS"]
                     if not verifiable:
-                        warnings.append(f"{bt['id']}: PASS lacks evidence bound to commit with ci_run or report_sha256; no credit")
+                        warnings.append(f"{bt['id']}: PASS lacks evidence bound to the approved commit with ci_run or report_sha256 and result PASS; no credit")
                     elif bt.get("requires_physical") and "physical" not in types:
                         warnings.append(f"{bt['id']}: physical gate cannot be satisfied by {sorted(types)} evidence; no credit")
                     else:
