@@ -1,0 +1,85 @@
+{
+  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; full 40-hex release commit still UNVERIFIED. CORE tasks are not seeded in the baseline, so its guard is inactive.",
+  "workstreams": [
+    {
+      "id": "CORE",
+      "name": "Core",
+      "repo": null,
+      "closed_release": "R1.0",
+      "closed_ids": [
+        "KF-CORE-R10"
+      ]
+    },
+    {
+      "id": "COMMUNITY",
+      "name": "Community",
+      "repo": "KritvaOS/kritvaos-community",
+      "protected_ids": [
+        "KOS-I2",
+        "KOS-I3",
+        "KOS-I4"
+      ]
+    },
+    {
+      "id": "SENSE",
+      "name": "Sense",
+      "repo": null
+    },
+    {
+      "id": "MOTION",
+      "name": "Motion",
+      "repo": null
+    },
+    {
+      "id": "SKILL",
+      "name": "Skill",
+      "repo": null
+    },
+    {
+      "id": "MIND",
+      "name": "Mind",
+      "repo": null
+    },
+    {
+      "id": "SIM",
+      "name": "Sim",
+      "repo": null
+    },
+    {
+      "id": "SDK",
+      "name": "SDK",
+      "repo": null
+    },
+    {
+      "id": "STUDIO",
+      "name": "Studio",
+      "repo": null
+    },
+    {
+      "id": "CONTROL_PLANE",
+      "name": "Control Plane",
+      "repo": null
+    },
+    {
+      "id": "RAAS",
+      "name": "RaaS",
+      "repo": null
+    },
+    {
+      "id": "EDUCATION_APPLICATIONS",
+      "name": "Education applications",
+      "repo": null
+    },
+    {
+      "id": "INTEGRATION_SOFTWARE_VALIDATION",
+      "name": "Integration & software validation",
+      "repo": null
+    },
+    {
+      "id": "MECHANICAL",
+      "name": "Mechanical",
+      "repo": null,
+      "hold": true
+    }
+  ]
+}

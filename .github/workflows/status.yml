@@ -1,0 +1,17 @@
+name: status
+on: [pull_request, push]
+jobs:
+  status-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      # Phase 1 (read-only). Committed outputs must match regeneration from sources/.
+      # Switch to --fetch with a least-privilege read token once engineering repos publish status/status.json.
+      - name: status-generated-check
+        run: python3 tools/consolidate_status.py --sources-dir sources --check
+      - name: status-validate (example sources, scratch copy)
+        run: |
+          cp -r . "$RUNNER_TEMP/kp"
+          python3 tools/consolidate_status.py --root "$RUNNER_TEMP/kp" --sources-dir examples/sources --now 2026-10-12T00:00:00Z

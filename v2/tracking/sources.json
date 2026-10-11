@@ -1,0 +1,8 @@
+{
+  "_note": "Where to fetch each workstream's status.json. ref should be pinned to a commit/tag for reproducible runs. All UNVERIFIED until repos are reconciled.",
+  "status_path": "status/status.json",
+  "freshness_days": 14,
+  "sources": [
+    {"workstream_id": "COMMUNITY", "repo": "KritvaOS/kritvaos-community", "ref": "main"}
+  ]
+}

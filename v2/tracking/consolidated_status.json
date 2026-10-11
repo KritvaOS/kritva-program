@@ -1,0 +1,363 @@
+{
+  "baseline_version": 0,
+  "errors": [],
+  "open_gates": [
+    "KOS-I3: human safety review (owner) - OPEN per Community MILESTONE_STATUS.md",
+    "KOS-I4: KOS-CI-001 Release/ASan/UBSan CI deferred",
+    "KOS-I4: human safety review (owner) - OPEN per Community MILESTONE_STATUS.md"
+  ],
+  "progress": {
+    "accepted_progress_pct": null,
+    "basis": "no approved baseline weights"
+  },
+  "tasks": [
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I2-001",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I2-002",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I2-003",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I2-004",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I2-005",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I2-006",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I3-001",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I3-002",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I3-003",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I3-004",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I3-005",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I3-006",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I3-007",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I4-001",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I4-002",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I4-003",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I4-004",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I4-005",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I4-006",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I4-007",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "credit": false,
+      "execution": null,
+      "git_sync": null,
+      "readiness": null,
+      "task_id": "I4-008",
+      "weight": null,
+      "workstream_id": "COMMUNITY"
+    }
+  ],
+  "warnings": [
+    "COMMUNITY: no status source (UNVERIFIED)",
+    "CONTROL_PLANE: no status source (UNVERIFIED)",
+    "CORE: closed-milestone guard for KF-CORE-R10 inactive (no baseline tasks seeded)",
+    "CORE: no status source (UNVERIFIED)",
+    "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
+    "I2-001: not reported by COMMUNITY (no credit)",
+    "I2-002: not reported by COMMUNITY (no credit)",
+    "I2-003: not reported by COMMUNITY (no credit)",
+    "I2-004: not reported by COMMUNITY (no credit)",
+    "I2-005: not reported by COMMUNITY (no credit)",
+    "I2-006: not reported by COMMUNITY (no credit)",
+    "I3-001: not reported by COMMUNITY (no credit)",
+    "I3-002: not reported by COMMUNITY (no credit)",
+    "I3-003: not reported by COMMUNITY (no credit)",
+    "I3-004: not reported by COMMUNITY (no credit)",
+    "I3-005: not reported by COMMUNITY (no credit)",
+    "I3-006: not reported by COMMUNITY (no credit)",
+    "I3-007: not reported by COMMUNITY (no credit)",
+    "I4-001: not reported by COMMUNITY (no credit)",
+    "I4-002: not reported by COMMUNITY (no credit)",
+    "I4-003: not reported by COMMUNITY (no credit)",
+    "I4-004: not reported by COMMUNITY (no credit)",
+    "I4-005: not reported by COMMUNITY (no credit)",
+    "I4-006: not reported by COMMUNITY (no credit)",
+    "I4-007: not reported by COMMUNITY (no credit)",
+    "I4-008: not reported by COMMUNITY (no credit)",
+    "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
+    "MECHANICAL: no status source (UNVERIFIED)",
+    "MIND: no status source (UNVERIFIED)",
+    "MOTION: no status source (UNVERIFIED)",
+    "RAAS: no status source (UNVERIFIED)",
+    "SDK: no status source (UNVERIFIED)",
+    "SENSE: no status source (UNVERIFIED)",
+    "SIM: no status source (UNVERIFIED)",
+    "SKILL: no status source (UNVERIFIED)",
+    "STUDIO: no status source (UNVERIFIED)"
+  ],
+  "workstreams": [
+    {
+      "commit": "-------",
+      "id": "COMMUNITY",
+      "repo": "KritvaOS/kritvaos-community",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "CONTROL_PLANE",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "CORE",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "EDUCATION_APPLICATIONS",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "INTEGRATION_SOFTWARE_VALIDATION",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "MECHANICAL",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "MIND",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "MOTION",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "RAAS",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "SDK",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "SENSE",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "SIM",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "SKILL",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "STUDIO",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    }
+  ]
+}

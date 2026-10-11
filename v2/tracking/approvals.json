@@ -1,0 +1,7 @@
+{
+  "_note": "Append-only approval ledger (D-011). Never edit or delete records; a changed decision adds a record whose `supersedes` names the old approval_id. A PASS applies only to the exact task and source_commit reviewed. authorized_approvers lists who may approve (owner-stated: Dinesh). Approver values in records must match exactly.",
+  "authorized_approvers": [
+    "Dinesh"
+  ],
+  "approvals": []
+}
