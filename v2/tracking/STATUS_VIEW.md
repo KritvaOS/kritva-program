@@ -2,7 +2,14 @@
 
 # Consolidated Program Status (generated)
 
-Baseline version: 0 | Accepted progress: N/A (no approved baseline weights)
+## Summary
+
+- Baseline version: 0 (DRAFT, not approved)
+- Accepted progress: N/A (no approved baseline weights)
+- Execution reported complete: 0/30 tasks (repo-reported; not acceptance)
+- Evidence coverage: 0/30 tasks with verified evidence
+- Release readiness: NOT_READY (open release gates: GATE-KOS-CI-001, GATE-KOS-I3-SAFETY, GATE-KOS-I4-SAFETY; uncredited tasks: 30)
+- Schedule and effort: NOT TRACKED here (separate from progress; no dates or actuals approved)
 
 ## Workstreams
 
@@ -16,53 +23,77 @@ Baseline version: 0 | Accepted progress: N/A (no approved baseline weights)
 | MECHANICAL | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | MIND | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | MOTION | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| RAAS | UNVERIFIED | UNVERIFIED | 0 | ------- |
+| RAAS | KritvaOS/kritva-raas | UNVERIFIED | 0 | ------- |
 | SDK | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | SENSE | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | SIM | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | SKILL | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | STUDIO | UNVERIFIED | UNVERIFIED | 0 | ------- |
 
+## Rollup by phase (P0-P8)
+
+| Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
+|---|---|---|---|---|---|
+| UNMAPPED | 30 | 0 | 0 | N/A | N/A |
+
+## Rollup by workstream
+
+| Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
+|---|---|---|---|---|---|
+| COMMUNITY | 21 | 0 | 0 | N/A | N/A |
+| CORE | 9 | 0 | 0 | N/A | N/A |
+
+## Rollup by milestone
+
+| Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
+|---|---|---|---|---|---|
+| KF-CORE-R10 | 9 | 0 | 0 | N/A | N/A |
+| KOS-I2 | 6 | 0 | 0 | N/A | N/A |
+| KOS-I3 | 7 | 0 | 0 | N/A | N/A |
+| KOS-I4 | 8 | 0 | 0 | N/A | N/A |
+
 ## Tasks
 
-| Task | Workstream | Weight | Execution | Git sync | Readiness | Acceptance | Credit |
-|---|---|---|---|---|---|---|---|
-| I2-001 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I2-002 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I2-003 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I2-004 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I2-005 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I2-006 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I3-001 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I3-002 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I3-003 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I3-004 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I3-005 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I3-006 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I3-007 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I4-001 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I4-002 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I4-003 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I4-004 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I4-005 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I4-006 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I4-007 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| I4-008 | COMMUNITY | None | - | - | - | NOT_RUN | no |
-| KF-CORE-R10-001 | CORE | None | - | - | - | NOT_RUN | no |
-| KF-CORE-R10-002 | CORE | None | - | - | - | NOT_RUN | no |
-| KF-CORE-R10-003 | CORE | None | - | - | - | NOT_RUN | no |
-| KF-CORE-R10-004 | CORE | None | - | - | - | NOT_RUN | no |
-| KF-CORE-R10-005 | CORE | None | - | - | - | NOT_RUN | no |
-| KF-CORE-R10-006 | CORE | None | - | - | - | NOT_RUN | no |
-| KF-CORE-R10-007 | CORE | None | - | - | - | NOT_RUN | no |
-| KF-CORE-R10-008 | CORE | None | - | - | - | NOT_RUN | no |
-| KF-CORE-R10-009 | CORE | None | - | - | - | NOT_RUN | no |
+| Task | Workstream | Weight | Execution | Acceptance | Credit | Why |
+|---|---|---|---|---|---|---|
+| I2-001 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I2-002 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I2-003 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I2-004 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I2-005 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I2-006 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I3-001 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I3-002 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I3-003 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I3-004 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I3-005 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I3-006 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I3-007 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I4-001 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I4-002 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I4-003 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I4-004 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I4-005 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I4-006 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I4-007 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I4-008 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
+| KF-CORE-R10-001 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
+| KF-CORE-R10-002 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
+| KF-CORE-R10-003 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
+| KF-CORE-R10-004 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
+| KF-CORE-R10-005 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
+| KF-CORE-R10-006 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
+| KF-CORE-R10-007 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
+| KF-CORE-R10-008 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
+| KF-CORE-R10-009 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
 
-## Open gates (from baseline)
+## Gates
 
-- KOS-I3: human safety review (owner) - OPEN per Community MILESTONE_STATUS.md
-- KOS-I4: KOS-CI-001 Release/ASan/UBSan CI deferred
-- KOS-I4: human safety review (owner) - OPEN per Community MILESTONE_STATUS.md
+| Gate | Status | Blocks | Scope | Owner |
+|---|---|---|---|---|
+| GATE-KOS-I3-SAFETY | OPEN | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I3 | Dinesh |
+| GATE-KOS-I4-SAFETY | OPEN | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I4 | Dinesh |
+| GATE-KOS-CI-001 | OPEN | RELEASE | KOS-I4 | Dinesh |
 
 ## Warnings
 

@@ -1,11 +1,159 @@
 {
+  "baseline_approved": false,
   "baseline_version": 0,
+  "by_milestone": {
+    "KF-CORE-R10": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 9,
+      "weight": 0,
+      "weighted": false
+    },
+    "KOS-I2": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 6,
+      "weight": 0,
+      "weighted": false
+    },
+    "KOS-I3": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 7,
+      "weight": 0,
+      "weighted": false
+    },
+    "KOS-I4": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 8,
+      "weight": 0,
+      "weighted": false
+    }
+  },
+  "by_phase": {
+    "UNMAPPED": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 30,
+      "weight": 0,
+      "weighted": false
+    }
+  },
+  "by_workstream": {
+    "COMMUNITY": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 21,
+      "weight": 0,
+      "weighted": false
+    },
+    "CORE": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 9,
+      "weight": 0,
+      "weighted": false
+    }
+  },
   "errors": [],
-  "open_gates": [
-    "KOS-I3: human safety review (owner) - OPEN per Community MILESTONE_STATUS.md",
-    "KOS-I4: KOS-CI-001 Release/ASan/UBSan CI deferred",
-    "KOS-I4: human safety review (owner) - OPEN per Community MILESTONE_STATUS.md"
+  "evidence_health": [],
+  "gates": [
+    {
+      "approval_required": true,
+      "blocking_effect": [
+        "TASK_CREDIT",
+        "PHASE_EXIT",
+        "RELEASE"
+      ],
+      "closed_at": null,
+      "closed_by": null,
+      "closure_criteria": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
+      "evidence_commit": null,
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "note": "OPEN per Community MILESTONE_STATUS.md. Scope is the whole milestone as a conservative default; the owner may narrow it to specific task_ids.",
+      "owner": "Dinesh",
+      "scope": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "status": "OPEN",
+      "title": "KOS-I3 human safety review"
+    },
+    {
+      "approval_required": true,
+      "blocking_effect": [
+        "TASK_CREDIT",
+        "PHASE_EXIT",
+        "RELEASE"
+      ],
+      "closed_at": null,
+      "closed_by": null,
+      "closure_criteria": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
+      "evidence_commit": null,
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "note": "OPEN per Community MILESTONE_STATUS.md. I4-004..008 are flagged safety-relevant; milestone-wide scope is a conservative default pending owner narrowing.",
+      "owner": "Dinesh",
+      "scope": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "status": "OPEN",
+      "title": "KOS-I4 human safety review"
+    },
+    {
+      "approval_required": true,
+      "blocking_effect": [
+        "RELEASE"
+      ],
+      "closed_at": null,
+      "closed_by": null,
+      "closure_criteria": "Reviewed evidence that the release, ASan and UBSan CI variants ran green on the closing commit, and the owner closes the gate. A CI job existing does not close it.",
+      "evidence_commit": null,
+      "gate_id": "GATE-KOS-CI-001",
+      "note": "Community docs say deferred; kritvaos-community ci.yml already has a variants job. Its results are UNVERIFIED. Scope (KOS-I4, release only) is UNVERIFIED.",
+      "owner": "Dinesh",
+      "scope": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "status": "OPEN",
+      "title": "KOS-CI-001 Release/ASan/UBSan CI"
+    }
   ],
+  "measures": {
+    "evidence_coverage": {
+      "tasks_total": 30,
+      "tasks_with_verified_evidence": 0
+    },
+    "execution_complete": {
+      "note": "reported by repos; not acceptance",
+      "tasks_complete": 0,
+      "tasks_total": 30
+    },
+    "release_readiness": {
+      "open_release_gates": [
+        "GATE-KOS-CI-001",
+        "GATE-KOS-I3-SAFETY",
+        "GATE-KOS-I4-SAFETY"
+      ],
+      "state": "NOT_READY",
+      "uncredited_tasks": 30
+    }
+  },
   "progress": {
     "accepted_progress_pct": null,
     "basis": "no approved baseline weights"
@@ -13,9 +161,14 @@
   "tasks": [
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I2",
+      "phase": null,
       "readiness": null,
       "task_id": "I2-001",
       "weight": null,
@@ -23,9 +176,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I2",
+      "phase": null,
       "readiness": null,
       "task_id": "I2-002",
       "weight": null,
@@ -33,9 +191,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I2",
+      "phase": null,
       "readiness": null,
       "task_id": "I2-003",
       "weight": null,
@@ -43,9 +206,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I2",
+      "phase": null,
       "readiness": null,
       "task_id": "I2-004",
       "weight": null,
@@ -53,9 +221,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I2",
+      "phase": null,
       "readiness": null,
       "task_id": "I2-005",
       "weight": null,
@@ -63,9 +236,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I2",
+      "phase": null,
       "readiness": null,
       "task_id": "I2-006",
       "weight": null,
@@ -73,9 +251,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I3-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I3",
+      "phase": null,
       "readiness": null,
       "task_id": "I3-001",
       "weight": null,
@@ -83,9 +268,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I3-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I3",
+      "phase": null,
       "readiness": null,
       "task_id": "I3-002",
       "weight": null,
@@ -93,9 +285,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I3-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I3",
+      "phase": null,
       "readiness": null,
       "task_id": "I3-003",
       "weight": null,
@@ -103,9 +302,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I3-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I3",
+      "phase": null,
       "readiness": null,
       "task_id": "I3-004",
       "weight": null,
@@ -113,9 +319,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I3-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I3",
+      "phase": null,
       "readiness": null,
       "task_id": "I3-005",
       "weight": null,
@@ -123,9 +336,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I3-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I3",
+      "phase": null,
       "readiness": null,
       "task_id": "I3-006",
       "weight": null,
@@ -133,9 +353,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I3-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I3",
+      "phase": null,
       "readiness": null,
       "task_id": "I3-007",
       "weight": null,
@@ -143,9 +370,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I4-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I4",
+      "phase": null,
       "readiness": null,
       "task_id": "I4-001",
       "weight": null,
@@ -153,9 +387,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I4-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I4",
+      "phase": null,
       "readiness": null,
       "task_id": "I4-002",
       "weight": null,
@@ -163,9 +404,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I4-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I4",
+      "phase": null,
       "readiness": null,
       "task_id": "I4-003",
       "weight": null,
@@ -173,9 +421,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I4-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I4",
+      "phase": null,
       "readiness": null,
       "task_id": "I4-004",
       "weight": null,
@@ -183,9 +438,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I4-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I4",
+      "phase": null,
       "readiness": null,
       "task_id": "I4-005",
       "weight": null,
@@ -193,9 +455,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I4-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I4",
+      "phase": null,
       "readiness": null,
       "task_id": "I4-006",
       "weight": null,
@@ -203,9 +472,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I4-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I4",
+      "phase": null,
       "readiness": null,
       "task_id": "I4-007",
       "weight": null,
@@ -213,9 +489,16 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [
+        "GATE-KOS-I4-SAFETY"
+      ],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KOS-I4",
+      "phase": null,
       "readiness": null,
       "task_id": "I4-008",
       "weight": null,
@@ -223,9 +506,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
       "readiness": null,
       "task_id": "KF-CORE-R10-001",
       "weight": null,
@@ -233,9 +521,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
       "readiness": null,
       "task_id": "KF-CORE-R10-002",
       "weight": null,
@@ -243,9 +536,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
       "readiness": null,
       "task_id": "KF-CORE-R10-003",
       "weight": null,
@@ -253,9 +551,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
       "readiness": null,
       "task_id": "KF-CORE-R10-004",
       "weight": null,
@@ -263,9 +566,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
       "readiness": null,
       "task_id": "KF-CORE-R10-005",
       "weight": null,
@@ -273,9 +581,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
       "readiness": null,
       "task_id": "KF-CORE-R10-006",
       "weight": null,
@@ -283,9 +596,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
       "readiness": null,
       "task_id": "KF-CORE-R10-007",
       "weight": null,
@@ -293,9 +611,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
       "readiness": null,
       "task_id": "KF-CORE-R10-008",
       "weight": null,
@@ -303,9 +626,14 @@
     },
     {
       "acceptance": "NOT_RUN",
+      "blocked_by": [],
       "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_verified": false,
       "execution": null,
       "git_sync": null,
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
       "readiness": null,
       "task_id": "KF-CORE-R10-009",
       "weight": null,
@@ -418,7 +746,7 @@
     {
       "commit": "-------",
       "id": "RAAS",
-      "repo": null,
+      "repo": "KritvaOS/kritva-raas",
       "source_state": "UNVERIFIED",
       "tasks_reported": 0
     },

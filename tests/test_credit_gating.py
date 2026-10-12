@@ -1,55 +1,43 @@
 """Credit-gating regression tests for tools/consolidate_status.py.
 
-Run: python3 -m unittest tests/test_credit_gating.py
-Each case builds a scratch copy of the repo with weighted tasks, one source
-report, and one approval, then asserts whether task I2-001 earns credit.
+Run: python3 -m unittest discover -s tests -p "test_*.py"
+Each case builds a scratch repo with an APPROVED baseline (made by the real freeze tool), one source report and
+one approval, then asserts whether the task earns credit. Every ineligible case must earn zero.
 """
-import copy, datetime, json, shutil, subprocess, sys, tempfile, unittest
+import json
+import sys
+import tempfile
+import unittest
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-SHA, OTHER = "a" * 40, "b" * 40
-GOOD = {"type": "software", "uri": "u", "description": "d", "commit": SHA,
-        "ci_run": "https://example.invalid/run/1", "report_sha256": None, "result": "PASS"}
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from support import GOOD, OTHER, SHA, make_root, row, run, write_sources  # noqa: E402
 
 
-def run_case(ev, review="APPROVED", acc="PASS", **approval_over):
+def case(ev=GOOD, task="I2-001", review="APPROVED", acc="PASS", mutate_base=None, **approval_over):
     with tempfile.TemporaryDirectory() as d:
-        r = Path(d)
-        for sub in ("tools", "schema", "v2", "examples"):
-            shutil.copytree(ROOT / sub, r / sub)
-        base = json.loads((r / "v2/tracking/baseline.json").read_text())
-        for t in base["tasks"]:
-            t["weight"] = 1
-        base["baseline_approved"] = True
-        (r / "v2/tracking/baseline.json").write_text(json.dumps(base))
-        src = json.loads((r / "examples/sources/COMMUNITY.example.json").read_text())
-        src["source"]["commit"] = SHA
-        src["updated_at"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-        for t in src["tasks"]:
-            if t["task_id"] == "I2-001":
-                t["evidence"] = [copy.deepcopy(ev)]
-        (r / "sources").mkdir()
-        (r / "sources/COMMUNITY.json").write_text(json.dumps(src))
-        ap = {"approval_id": "A1", "task_id": "I2-001", "baseline_version": 0,
-              "source_repo": "KritvaOS/kritvaos-community", "source_commit": SHA,
-              "review_status": review, "acceptance": acc, "approver": "Dinesh",
-              "approved_at": "2026-10-11T12:00:00Z", "evidence_refs": ["x"], "rationale": "r"}
+        r = make_root(d)
+        if mutate_base:
+            mutate_base(r)
+        write_sources(r, task, ev)
+        ap = {"approval_id": "A1", "task_id": task, "baseline_version": 1,
+              "source_repo": "KritvaOS/kritvaos-community", "source_commit": SHA, "review_status": review,
+              "acceptance": acc, "approver": "Dinesh", "approved_at": "2026-10-11T12:00:00Z",
+              "evidence_refs": ["x"], "rationale": "r"}
         ap.update(approval_over)
-        (r / "v2/tracking/approvals.json").write_text(json.dumps(
-            {"authorized_approvers": ["Dinesh"], "approvals": [ap]}))
-        p = subprocess.run([sys.executable, str(r / "tools/consolidate_status.py"),
-                            "--root", str(r), "--sources-dir", str(r / "sources")],
-                           capture_output=True, text=True)
+        (r / "v2/tracking/approvals.json").write_text(json.dumps({"authorized_approvers": ["Dinesh"], "approvals": [ap]}))
+        p = run(r, "--sources-dir", str(r / "sources"))
         if p.returncode != 0:
             return p.returncode, None
-        c = json.loads((r / "v2/tracking/consolidated_status.json").read_text())
-        return 0, next(x["credit"] for x in c["tasks"] if x["task_id"] == "I2-001")
+        x = row(r, task)
+        return 0, (x["credit"], x["credit_reason"])
 
 
 class CreditGating(unittest.TestCase):
-    def test_valid_pass_earns_credit(self):
-        self.assertEqual(run_case(GOOD), (0, True))
+    def test_valid_pass_earns_credit_with_reason(self):
+        rc, (credit, reason) = case()
+        self.assertEqual((rc, credit), (0, True))
+        self.assertIn("approval A1", reason)
 
     def test_no_credit_cases(self):
         cases = {
@@ -57,20 +45,75 @@ class CreditGating(unittest.TestCase):
             "evidence result null": dict(ev={**GOOD, "result": None}),
             "evidence commit mismatch": dict(ev={**GOOD, "commit": OTHER}),
             "no ci_run or sha": dict(ev={**GOOD, "ci_run": None}),
-            "WAIVED": dict(ev=GOOD, acc="WAIVED"),
-            "acceptance FAIL": dict(ev=GOOD, acc="FAIL"),
-            "stale approval": dict(ev=GOOD, source_commit=OTHER),
+            "WAIVED": dict(acc="WAIVED"),
+            "acceptance FAIL": dict(acc="FAIL"),
+            "stale approval": dict(source_commit=OTHER),
         }
         for name, kw in cases.items():
             with self.subTest(name):
-                self.assertEqual(run_case(**kw), (0, False))
+                rc, (credit, reason) = case(**kw)
+                self.assertEqual((rc, credit), (0, False))
+                self.assertTrue(reason)
 
     def test_invalid_approvals_fail_validation(self):
-        for name, kw in {"review not approved": dict(ev=GOOD, review="PENDING"),
-                         "unauthorized approver": dict(ev=GOOD, approver="Eve")}.items():
+        for name, kw in {"review not approved": dict(review="PENDING"),
+                         "unauthorized approver": dict(approver="Eve")}.items():
             with self.subTest(name):
-                rc, _ = run_case(**kw)
-                self.assertEqual(rc, 1)
+                self.assertEqual(case(**kw)[0], 1)
+
+    def test_open_gate_blocks_credit_even_with_perfect_approval(self):
+        rc, (credit, reason) = case(task="I3-001")
+        self.assertEqual((rc, credit), (0, False))
+        self.assertIn("GATE-KOS-I3-SAFETY", reason)
+
+    def test_closing_gate_requires_evidence_and_authorized_closer(self):
+        def close(r, **over):
+            p = r / "v2/tracking/baseline.json"
+            b = json.loads(p.read_text())
+            g = next(x for x in b["gates"] if x["gate_id"] == "GATE-KOS-I3-SAFETY")
+            g.update(status="CLOSED", **over)
+            p.write_text(json.dumps(b))
+        # tampering after approval is itself an error (hash mismatch), so any edit must fail closed
+        rc, _ = case(task="I3-001", mutate_base=lambda r: close(r, evidence_commit=SHA, closed_at="2026-10-12T00:00:00Z", closed_by="Dinesh"))
+        self.assertEqual(rc, 1)
+
+    def test_draft_baseline_gives_no_credit(self):
+        with tempfile.TemporaryDirectory() as d:
+            r = make_root(d, approve=False)
+            write_sources(r)
+            self.assertEqual(run(r, "--sources-dir", str(r / "sources")).returncode, 0)
+            x = row(r, "I2-001")
+            self.assertFalse(x["credit"])
+            self.assertIn("DRAFT", x["credit_reason"])
+
+    def test_baseline_edit_after_approval_is_an_error(self):
+        with tempfile.TemporaryDirectory() as d:
+            r = make_root(d)
+            p = r / "v2/tracking/baseline.json"
+            b = json.loads(p.read_text())
+            b["tasks"][0]["weight"] += 1
+            p.write_text(json.dumps(b, indent=2) + "\n")
+            write_sources(r)
+            q = run(r, "--sources-dir", str(r / "sources"))
+            self.assertEqual(q.returncode, 1)
+            self.assertIn("baseline_sha256", q.stderr)
+
+    def test_freeze_refuses_unauthorized_approver_and_overwrite(self):
+        import subprocess
+        with tempfile.TemporaryDirectory() as d:
+            r = make_root(d, approve=False)
+            base = [sys.executable, str(r / "tools/freeze_baseline.py"), "--root", str(r), "--proposal",
+                    str(r / "v2/tracking/baseline_v1_proposal.json"), "--approve", "--commit", SHA, "--reason", "t"]
+            self.assertEqual(subprocess.run(base + ["--approver", "Eve"], capture_output=True).returncode, 1)
+            self.assertEqual(subprocess.run(base + ["--approver", "Dinesh"], capture_output=True).returncode, 0)
+            frozen = r / "v2/tracking/baselines"
+            v1 = (frozen / "baseline_v1.json").read_text()
+            # a second freeze makes v2 and leaves v1 untouched; an existing version is never overwritten
+            self.assertEqual(subprocess.run(base + ["--approver", "Dinesh"], capture_output=True).returncode, 0)
+            self.assertEqual((frozen / "baseline_v1.json").read_text(), v1)
+            self.assertTrue((frozen / "baseline_v2.json").exists())
+            (frozen / "baseline_v3.json").write_text("{}")
+            self.assertNotEqual(subprocess.run(base + ["--approver", "Dinesh"], capture_output=True).returncode, 0)
 
 
 if __name__ == "__main__":

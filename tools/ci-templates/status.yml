@@ -1,0 +1,32 @@
+# TEMPLATE for .github/workflows/status.yml (workflow paths are protected from remote tools: copy it yourself).
+# Replaces the current Phase-1 workflow. Before use: pin each `uses:` to a verified full commit SHA.
+name: status
+on: [pull_request, push]
+permissions:
+  contents: read
+jobs:
+  status-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: {python-version: "3.12"}
+      - name: tests (credit gating, baseline freeze, fetch, history, SHA resolver)
+        run: python3 -m unittest discover -s tests -p "test_*.py"
+      - name: status-generated-check
+        run: python3 tools/consolidate_status.py --sources-dir sources --check
+      - name: history hash chain
+        run: python3 tools/consolidate_status.py --verify-history
+      - name: status-validate (example sources, scratch copy)
+        run: |
+          cp -r . "$RUNNER_TEMP/kp"
+          python3 tools/consolidate_status.py --root "$RUNNER_TEMP/kp" --sources-dir examples/sources --now 2026-10-12T00:00:00Z
+  # Phase 2 (private repos): uncomment after a read-only GitHub App / fine-grained token exists as a secret.
+  # reconcile:
+  #   if: github.event_name == 'workflow_dispatch'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v5
+  #     - run: python3 tools/consolidate_status.py --fetch --strict --snapshot
+  #       env:
+  #         GH_TOKEN: ${{ secrets.STATUS_READ_TOKEN }}   # read-only; never write access to approvals or baseline
