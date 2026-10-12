@@ -1,5 +1,5 @@
 {
-  "_note": "DRAFT, NOT APPROVED. Community task IDs seeded from kritvaos-community planning/milestones/*/TASKS.md (read 2026-10-11). Weights are null until the owner approves them, so progress is N/A. Core and RaaS tasks are intentionally not seeded (Core R1.0 mapping and release commit still to verify; RaaS IDs UNVERIFIED). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment.",
+  "_note": "DRAFT, NOT APPROVED. Community task IDs seeded from kritvaos-community planning/milestones/*/TASKS.md (read 2026-10-11). Weights are null until the owner approves them, so progress is N/A. Core R1.0 tasks KF-CORE-R10-001..009 are seeded (D-014); Core R02..R09 and RaaS are intentionally not seeded (RaaS IDs UNVERIFIED). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment.",
   "baseline_version": 0,
   "baseline_approved": false,
   "mechanical_hold_reopened_by_decision": null,
@@ -15,6 +15,11 @@
     "PRODUCTION"
   ],
   "milestones": [
+    {
+      "id": "KF-CORE-R10",
+      "workstream_id": "CORE",
+      "open_gates": []
+    },
     {
       "id": "KOS-I2",
       "workstream_id": "COMMUNITY",
@@ -37,6 +42,78 @@
     }
   ],
   "tasks": [
+    {
+      "id": "KF-CORE-R10-001",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Public API Inventory & Compatibility Classification",
+      "weight": null,
+      "requires_physical": false
+    },
+    {
+      "id": "KF-CORE-R10-002",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Source & Semantic Compatibility Contract",
+      "weight": null,
+      "requires_physical": false
+    },
+    {
+      "id": "KF-CORE-R10-003",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "ABI / Binary Compatibility Policy",
+      "weight": null,
+      "requires_physical": false
+    },
+    {
+      "id": "KF-CORE-R10-004",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Versioning & API Evolution Policy",
+      "weight": null,
+      "requires_physical": false
+    },
+    {
+      "id": "KF-CORE-R10-005",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Deprecation & Migration Policy",
+      "weight": null,
+      "requires_physical": false
+    },
+    {
+      "id": "KF-CORE-R10-006",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Compatibility & Boundary Validation Harness",
+      "weight": null,
+      "requires_physical": false
+    },
+    {
+      "id": "KF-CORE-R10-007",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Package / Install Compatibility",
+      "weight": null,
+      "requires_physical": false
+    },
+    {
+      "id": "KF-CORE-R10-008",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Documentation / Security / Traceability Validation",
+      "weight": null,
+      "requires_physical": false
+    },
+    {
+      "id": "KF-CORE-R10-009",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Full Validation & Release Candidate",
+      "weight": null,
+      "requires_physical": false
+    },
     {
       "id": "I2-001",
       "workstream_id": "COMMUNITY",

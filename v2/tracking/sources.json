@@ -3,6 +3,15 @@
   "status_path": "status/status.json",
   "freshness_days": 14,
   "sources": [
-    {"workstream_id": "COMMUNITY", "repo": "KritvaOS/kritvaos-community", "ref": "main"}
+    {
+      "workstream_id": "CORE",
+      "repo": "KritvaOS/kritva-core",
+      "ref": "main"
+    },
+    {
+      "workstream_id": "COMMUNITY",
+      "repo": "KritvaOS/kritvaos-community",
+      "ref": "main"
+    }
   ]
 }

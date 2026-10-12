@@ -1,0 +1,166 @@
+{
+  "schema_version": "2.0",
+  "workstream_id": "CORE",
+  "repo": "KritvaOS/kritva-core",
+  "source": {
+    "branch": "main",
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tag": null
+  },
+  "tasks": [
+    {
+      "task_id": "KF-CORE-R10-001",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-001/ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (`1dba571`)'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-002",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-002/ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (`bbe10b6`)'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-003",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-003/ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (`559d75f`)'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-004",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-004/ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (`a121c24`)'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-005",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-005/ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (`2882cd2`)'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-006",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-006/ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (`b44b14b`)'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-007",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-007/ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (`f212e46`, F5 `30c461b`)'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-008",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-008/ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (`c0edf1f`)'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-009",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-009/ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (candidate `af16847`)'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-10-11T12:00:00Z"
+}

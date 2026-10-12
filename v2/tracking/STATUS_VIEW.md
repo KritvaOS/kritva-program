@@ -10,7 +10,7 @@ Baseline version: 0 | Accepted progress: N/A (no approved baseline weights)
 |---|---|---|---|---|
 | COMMUNITY | KritvaOS/kritvaos-community | UNVERIFIED | 0 | ------- |
 | CONTROL_PLANE | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| CORE | UNVERIFIED | UNVERIFIED | 0 | ------- |
+| CORE | KritvaOS/kritva-core | UNVERIFIED | 0 | ------- |
 | EDUCATION_APPLICATIONS | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | INTEGRATION_SOFTWARE_VALIDATION | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | MECHANICAL | UNVERIFIED | UNVERIFIED | 0 | ------- |
@@ -48,6 +48,15 @@ Baseline version: 0 | Accepted progress: N/A (no approved baseline weights)
 | I4-006 | COMMUNITY | None | - | - | - | NOT_RUN | no |
 | I4-007 | COMMUNITY | None | - | - | - | NOT_RUN | no |
 | I4-008 | COMMUNITY | None | - | - | - | NOT_RUN | no |
+| KF-CORE-R10-001 | CORE | None | - | - | - | NOT_RUN | no |
+| KF-CORE-R10-002 | CORE | None | - | - | - | NOT_RUN | no |
+| KF-CORE-R10-003 | CORE | None | - | - | - | NOT_RUN | no |
+| KF-CORE-R10-004 | CORE | None | - | - | - | NOT_RUN | no |
+| KF-CORE-R10-005 | CORE | None | - | - | - | NOT_RUN | no |
+| KF-CORE-R10-006 | CORE | None | - | - | - | NOT_RUN | no |
+| KF-CORE-R10-007 | CORE | None | - | - | - | NOT_RUN | no |
+| KF-CORE-R10-008 | CORE | None | - | - | - | NOT_RUN | no |
+| KF-CORE-R10-009 | CORE | None | - | - | - | NOT_RUN | no |
 
 ## Open gates (from baseline)
 
@@ -59,7 +68,6 @@ Baseline version: 0 | Accepted progress: N/A (no approved baseline weights)
 
 - COMMUNITY: no status source (UNVERIFIED)
 - CONTROL_PLANE: no status source (UNVERIFIED)
-- CORE: closed-milestone guard for KF-CORE-R10 inactive (no baseline tasks seeded)
 - CORE: no status source (UNVERIFIED)
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
 - I2-001: not reported by COMMUNITY (no credit)
@@ -84,6 +92,15 @@ Baseline version: 0 | Accepted progress: N/A (no approved baseline weights)
 - I4-007: not reported by COMMUNITY (no credit)
 - I4-008: not reported by COMMUNITY (no credit)
 - INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)
+- KF-CORE-R10-001: not reported by CORE (no credit)
+- KF-CORE-R10-002: not reported by CORE (no credit)
+- KF-CORE-R10-003: not reported by CORE (no credit)
+- KF-CORE-R10-004: not reported by CORE (no credit)
+- KF-CORE-R10-005: not reported by CORE (no credit)
+- KF-CORE-R10-006: not reported by CORE (no credit)
+- KF-CORE-R10-007: not reported by CORE (no credit)
+- KF-CORE-R10-008: not reported by CORE (no credit)
+- KF-CORE-R10-009: not reported by CORE (no credit)
 - MECHANICAL: no status source (UNVERIFIED)
 - MIND: no status source (UNVERIFIED)
 - MOTION: no status source (UNVERIFIED)

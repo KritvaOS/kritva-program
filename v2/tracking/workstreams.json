@@ -1,10 +1,10 @@
 {
-  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; full 40-hex release commit still UNVERIFIED. CORE tasks are not seeded in the baseline, so its guard is inactive.",
+  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; tag kritva-core-r1.0 resolves to commit 4acce3b60833abfe33168c4766405ab86ea73edc (verified locally by Dinesh 2026-10-11). KF-CORE-R10-001..009 are seeded in the baseline (D-014), so the closed-milestone guard for KF-CORE-R10 is active. Core R02..R09 are not tracked.",
   "workstreams": [
     {
       "id": "CORE",
       "name": "Core",
-      "repo": null,
+      "repo": "KritvaOS/kritva-core",
       "closed_release": "R1.0",
       "closed_ids": [
         "KF-CORE-R10"
