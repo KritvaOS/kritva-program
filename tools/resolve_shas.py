@@ -10,7 +10,10 @@ For every Markdown line under planning/ that names EXACTLY ONE task ID and quote
 parentheses, it records: the full 40-hex commit (git rev-parse), whether it is an ancestor of origin/main,
 and the commit subject. Lines naming several tasks or a range are not attributed to any task; their commits
 are listed separately under milestone_level_commits. Tags are peeled to the commit they point at. With --ci it also lists workflow runs
-for each commit (needs the `gh` CLI; never required).
+for each commit (needs the `gh` CLI; never required). gh runs inside the checkout, so it targets that repo.
+With --covering-runs N it also lists, per task commit, the nearest successful run per workflow on a later
+commit, plus which of the task's files changed in between. Such a run is only a candidate: it validates the
+LATER tree, and a reviewer must confirm that it covers the task.
 
 This only produces CANDIDATES. A planning note that quotes a SHA is not evidence: a candidate becomes
 evidence only when it has a passing CI run or retained report for that exact commit, the task's criteria
@@ -50,16 +53,49 @@ def subject(repo, full):
     return git(repo, "log", "-1", "--format=%s", full)[1]
 
 
-def ci_runs(full, slug):
+def gh_runs(repo, slug, *extra):
+    """`gh run list` executed INSIDE the checkout (cwd=repo) so gh targets that repo, not the caller's."""
     try:
-        r = subprocess.run(["gh", "run", "list", "--commit", full, "--limit", "20", "--json",
-                            "databaseId,workflowName,conclusion,status,url"] + (["--repo", slug] if slug else []),
-                           capture_output=True, text=True)
+        r = subprocess.run(["gh", "run", "list", "--json",
+                            "databaseId,workflowName,conclusion,status,url,headSha,event,createdAt",
+                            *extra] + (["--repo", slug] if slug else []),
+                           capture_output=True, text=True, cwd=str(repo))
     except OSError:
         return None
     if r.returncode != 0:
         return None
     return json.loads(r.stdout or "[]")
+
+
+def ci_runs(repo, full, slug):
+    return gh_runs(repo, slug, "--commit", full, "--limit", "20")
+
+
+def covering_runs(repo, full, runs, anc_cache):
+    """Nearest SUCCESSFUL run per workflow whose head commit contains `full`, with what changed in between.
+
+    A run on a later commit validates that later tree. It supports the task only if the task's own files are
+    unchanged from `full` to the run's head (task_files_changed_after == []) and a reviewer confirms the run's
+    tests cover the task's criteria. This lists candidates; it never decides.
+    """
+    touched = git(repo, "diff-tree", "--no-commit-id", "--name-only", "-r", "--root", full)[1].splitlines()
+    best = {}
+    for r in runs or []:
+        if r.get("conclusion") != "success":
+            continue
+        h = r.get("headSha", "")
+        if h not in anc_cache:
+            anc_cache[h] = git(repo, "merge-base", "--is-ancestor", full, h)[0] == 0 if h else False
+        key = (full, h)
+        if not anc_cache[h]:
+            continue
+        n = int(git(repo, "rev-list", "--count", f"{full}..{h}")[1] or 0)
+        wf = r["workflowName"]
+        if wf not in best or n < best[wf]["commits_after"]:
+            changed = git(repo, "diff", "--name-only", full, h, "--", *touched)[1].splitlines() if touched else []
+            best[wf] = {"workflow": wf, "run_id": r["databaseId"], "url": r["url"], "head_sha": h,
+                        "event": r.get("event"), "commits_after": n, "task_files_changed_after": changed}
+    return sorted(best.values(), key=lambda x: (x["commits_after"], x["workflow"]))
 
 
 def main():
@@ -69,6 +105,8 @@ def main():
     ap.add_argument("--tag", action="append", default=[], help="tag to peel to its commit (repeatable)")
     ap.add_argument("--slug", help="owner/name for gh (default: gh infers from the checkout)")
     ap.add_argument("--ci", action="store_true", help="also list CI runs per commit (needs gh)")
+    ap.add_argument("--covering-runs", type=int, metavar="N",
+                    help="also list the nearest successful run per workflow on a LATER commit (scans the last N runs)")
     ap.add_argument("--out", help="write JSON here (default: stdout)")
     a = ap.parse_args()
     repo = Path(a.repo).expanduser()
@@ -111,7 +149,13 @@ def main():
     if a.ci:
         for items in tasks.values():
             for i in items:
-                i["ci_runs"] = ci_runs(i["full"], a.slug)
+                i["ci_runs"] = ci_runs(repo, i["full"], a.slug)
+    if a.covering_runs:
+        runs = gh_runs(repo, a.slug, "--limit", str(a.covering_runs))
+        cache = {}
+        for items in tasks.values():
+            for i in items:
+                i["covering_runs"] = covering_runs(repo, i["full"], runs, cache) if runs is not None else None
     doc = {"repo_head": head, "note": "CANDIDATES ONLY. Not evidence until reviewed and approved centrally.",
            "tasks": dict(sorted(tasks.items())), "unresolved_or_ambiguous": unresolved, "tags": tags,
            "milestone_level_commits": milestone_level}

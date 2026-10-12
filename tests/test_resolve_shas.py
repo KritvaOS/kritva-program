@@ -38,6 +38,45 @@ class Resolve(unittest.TestCase):
             self.assertNotIn("I2-004", doc["tasks"])  # multi-task lines are never attributed to a task
             self.assertIn(full, doc["milestone_level_commits"])
 
+    def test_ci_runs_in_checkout_and_covering_runs(self):
+        import os, stat
+        with tempfile.TemporaryDirectory() as d:
+            r = Path(d) / "repo"; r.mkdir()
+            g(r, "init", "-q", "-b", "main")
+            (r / "t.txt").write_text("1"); g(r, "add", "."); g(r, "commit", "-q", "-m", "task")
+            c1 = g(r, "rev-parse", "HEAD")
+            (r / "other.txt").write_text("2"); g(r, "add", "."); g(r, "commit", "-q", "-m", "later")
+            c2 = g(r, "rev-parse", "HEAD")
+            (r / "t.txt").write_text("3"); g(r, "add", "."); g(r, "commit", "-q", "-m", "touch task file")
+            c3 = g(r, "rev-parse", "HEAD")
+            (r / "planning").mkdir()
+            (r / "planning/S.md").write_text(f"| I2-001 | Done (`{c1[:9]}`) |\n")
+            cwdlog = Path(d) / "cwd.log"
+            runs = [{"databaseId": 1, "workflowName": "CI", "conclusion": "success", "status": "completed",
+                     "url": "u1", "headSha": c2, "event": "push", "createdAt": "x"},
+                    {"databaseId": 2, "workflowName": "CI", "conclusion": "success", "status": "completed",
+                     "url": "u2", "headSha": c3, "event": "push", "createdAt": "x"},
+                    {"databaseId": 3, "workflowName": "Bad", "conclusion": "failure", "status": "completed",
+                     "url": "u3", "headSha": c3, "event": "push", "createdAt": "x"}]
+            bindir = Path(d) / "bin"; bindir.mkdir()
+            fake = bindir / "gh"
+            fake.write_text("#!/bin/sh\npwd >> '%s'\nif echo \"$@\" | grep -q -- --commit; then echo '[]'; else cat <<'EOF2'\n%s\nEOF2\nfi\n"
+                            % (cwdlog, json.dumps(runs)))
+            fake.chmod(fake.stat().st_mode | stat.S_IEXEC)
+            out = Path(d) / "o.json"
+            env = dict(os.environ, PATH=f"{bindir}:{os.environ['PATH']}")
+            p = subprocess.run([sys.executable, str(ROOT / "tools/resolve_shas.py"), "--repo", str(r), "--ci",
+                                "--covering-runs", "50", "--out", str(out)], capture_output=True, text=True, env=env)
+            self.assertEqual(p.returncode, 0, p.stderr)
+            item = json.loads(out.read_text())["tasks"]["I2-001"][0]
+            self.assertEqual(item["ci_runs"], [])  # explicit "no runs", not a lookup failure
+            cov = item["covering_runs"]
+            self.assertEqual(len(cov), 1)  # failure run ignored; one entry per workflow
+            self.assertEqual(cov[0]["head_sha"], c2)  # nearest descendant wins
+            self.assertEqual(cov[0]["commits_after"], 1)
+            self.assertEqual(cov[0]["task_files_changed_after"], [])
+            self.assertTrue(all(Path(x).resolve() == r.resolve() for x in cwdlog.read_text().split()))
+
 
 if __name__ == "__main__":
     unittest.main()
