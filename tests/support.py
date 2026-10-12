@@ -36,6 +36,7 @@ def write_sources(r, task_id="I2-001", ev=GOOD, drop_core=True):
     for t in src["tasks"]:
         if t["task_id"] == task_id:
             t["evidence"] = [copy.deepcopy(ev)]
+            t["execution"] = "COMPLETE"
     (r / "sources").mkdir(exist_ok=True)
     (r / "sources/COMMUNITY.json").write_text(json.dumps(src))
 

@@ -47,13 +47,50 @@ class CreditGating(unittest.TestCase):
             "no ci_run or sha": dict(ev={**GOOD, "ci_run": None}),
             "WAIVED": dict(acc="WAIVED"),
             "acceptance FAIL": dict(acc="FAIL"),
-            "stale approval": dict(source_commit=OTHER),
+            "stale approval (evidence bound to another commit)": dict(source_commit=OTHER),
         }
         for name, kw in cases.items():
             with self.subTest(name):
                 rc, (credit, reason) = case(**kw)
                 self.assertEqual((rc, credit), (0, False))
                 self.assertTrue(reason)
+
+    def test_repo_moving_on_does_not_stale_an_approval(self):
+        # report HEAD differs from the approved task commit, but the evidence is still bound to the approved commit
+        with tempfile.TemporaryDirectory() as d:
+            r = make_root(d)
+            write_sources(r)
+            s = json.loads((r / "sources/COMMUNITY.json").read_text())
+            s["source"]["commit"] = OTHER
+            (r / "sources/COMMUNITY.json").write_text(json.dumps(s))
+            ev = dict(GOOD)
+            s2 = json.loads((r / "sources/COMMUNITY.json").read_text())
+            for x in s2["tasks"]:
+                if x["task_id"] == "I2-001":
+                    x["evidence"] = [ev]
+            (r / "sources/COMMUNITY.json").write_text(json.dumps(s2))
+            ap = {"approval_id": "A1", "task_id": "I2-001", "baseline_version": 1, "source_repo": "x",
+                  "source_commit": SHA, "review_status": "APPROVED", "acceptance": "PASS", "approver": "Dinesh",
+                  "approved_at": "2026-10-11T12:00:00Z", "evidence_refs": ["x"]}
+            (r / "v2/tracking/approvals.json").write_text(json.dumps({"authorized_approvers": ["Dinesh"], "approvals": [ap]}))
+            self.assertEqual(run(r, "--sources-dir", str(r / "sources")).returncode, 0)
+            self.assertTrue(row(r, "I2-001")["credit"])
+
+    def test_reopened_task_loses_credit(self):
+        with tempfile.TemporaryDirectory() as d:
+            r = make_root(d)
+            write_sources(r)
+            s = json.loads((r / "sources/COMMUNITY.json").read_text())
+            for x in s["tasks"]:
+                if x["task_id"] == "I2-001":
+                    x["execution"] = "IN_PROGRESS"
+            (r / "sources/COMMUNITY.json").write_text(json.dumps(s))
+            ap = {"approval_id": "A1", "task_id": "I2-001", "baseline_version": 1, "source_repo": "x",
+                  "source_commit": SHA, "review_status": "APPROVED", "acceptance": "PASS", "approver": "Dinesh",
+                  "approved_at": "2026-10-11T12:00:00Z", "evidence_refs": ["x"]}
+            (r / "v2/tracking/approvals.json").write_text(json.dumps({"authorized_approvers": ["Dinesh"], "approvals": [ap]}))
+            run(r, "--sources-dir", str(r / "sources"))
+            self.assertFalse(row(r, "I2-001")["credit"])
 
     def test_invalid_approvals_fail_validation(self):
         for name, kw in {"review not approved": dict(review="PENDING"),

@@ -1,0 +1,914 @@
+{
+  "repo_head": "54984ae1d207b2ea3ffe14699b4e9a4b56099642",
+  "note": "CANDIDATES ONLY. Not evidence until reviewed and approved centrally.",
+  "tasks": {
+    "KF-CORE-R02-001": [
+      {
+        "short": "df44d38",
+        "full": "df44d3865a436a4fc4631bb02aa8913dca23c5a5",
+        "source": "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-001/ACCEPTANCE_CRITERIA.md:137",
+        "subject": "fix(core): harden Result contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R02-002": [
+      {
+        "short": "d6d939d",
+        "full": "d6d939d4fd07f482a675c019f0daf3007a8335a2",
+        "source": "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-002/ACCEPTANCE_CRITERIA.md:132",
+        "subject": "fix(core): clean up Status API contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R02-003": [
+      {
+        "short": "d7d29cb",
+        "full": "d7d29cbda91b1631e751f6cf7de474c4a1c8c5c9",
+        "source": "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-003/ACCEPTANCE_CRITERIA.md:138",
+        "subject": "docs(core): clarify statistics contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R02-006": [
+      {
+        "short": "7d2a36c",
+        "full": "7d2a36ce170e520230b87b69ea7d158ab159e9e6",
+        "source": "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-006/ACCEPTANCE_CRITERIA.md:139",
+        "subject": "docs(planning): record R02-006 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "00899f9",
+        "full": "00899f9551b8b5d216cb60350525db09669c0b93",
+        "source": "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-006/ACCEPTANCE_CRITERIA.md:139",
+        "subject": "docs(core): close requirements API traceability",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R02-007": [
+      {
+        "short": "bf2144a",
+        "full": "bf2144ad77cd144f6b85b47818022912bf9c0cb1",
+        "source": "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-007/ACCEPTANCE_CRITERIA.md:148",
+        "subject": "test(core): strengthen foundation contract coverage",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "495eb28",
+        "full": "495eb285b84ef4e2cde973c816e8a44fff99340a",
+        "source": "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-007/ACCEPTANCE_CRITERIA.md:148",
+        "subject": "docs(planning): record R02-007 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R02-008": [
+      {
+        "short": "1472b79",
+        "full": "1472b79cdebcbd0562db3e5b4dd2e4ff1259958f",
+        "source": "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-008/ACCEPTANCE_CRITERIA.md:184",
+        "subject": "test(core): complete R0.2 validation",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R03-001": [
+      {
+        "short": "35efee1",
+        "full": "35efee1c4c13df9e8a8e9e893023c617c7b41177",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:14",
+        "subject": "docs(core): qualify component error source rule",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "655c1dd",
+        "full": "655c1dd88954bd019fea21a960643c8f02ed22f3",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:14",
+        "subject": "feat(core): define component runtime contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "9a98ab3",
+        "full": "9a98ab3380a700769245510025c871980ec236ee",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:14",
+        "subject": "docs(planning): correct R03 foundation requirement traceability",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "4140e15",
+        "full": "4140e159127a6912fdf0899d88a038edb75a59b5",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:14",
+        "subject": "docs(planning): accept R03-001",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R03-002": [
+      {
+        "short": "7ae9a32",
+        "full": "7ae9a32fdd251cbfc529f181bed001b0ea4ce79f",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:15",
+        "subject": "feat(core): add component registry",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "4649910",
+        "full": "46499105d495b6fbe2a0c7233da767961305c416",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:15",
+        "subject": "docs(planning): record R03-002 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "0760c93",
+        "full": "0760c93fc278a6de5d98fdd64b1d2b7c080f4c9a",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:15",
+        "subject": "docs(planning): accept R03-002",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R03-003": [
+      {
+        "short": "795fb94",
+        "full": "795fb94f5645f7b3ee24807eb24202131aac30c7",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:16",
+        "subject": "feat(core): add runtime dependency management",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "7e2a53b",
+        "full": "7e2a53b7e967cf810e24944d42409c396ea23363",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:16",
+        "subject": "docs(planning): record R03-003 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "6f9db3d",
+        "full": "6f9db3d8a7c2fdbf5bdb850d8eaacee94069e694",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:16",
+        "subject": "docs(planning): accept R03-003",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R03-004": [
+      {
+        "short": "e4d3a9b",
+        "full": "e4d3a9b460ddb9d23126fd751a129c16edb790c8",
+        "source": "planning/MILESTONE_STATUS.md:94",
+        "subject": "feat(core): add runtime manager",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "40e33e9",
+        "full": "40e33e9ec95f88bff66a391293a0736628d508b1",
+        "source": "planning/MILESTONE_STATUS.md:94",
+        "subject": "test(core): enforce runtime topology freeze through views",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "25eb914",
+        "full": "25eb9146dab0e1579bbaf1d83ed8237a03407c90",
+        "source": "planning/MILESTONE_STATUS.md:94",
+        "subject": "docs(core): define runtime manager requirement",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R03-005": [
+      {
+        "short": "e2b660d",
+        "full": "e2b660d9559ce9b74d52185e09958a06f034caaa",
+        "source": "planning/MILESTONE_STATUS.md:95",
+        "subject": "feat(core): implement runtime lifecycle orchestration",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a4f2a65",
+        "full": "a4f2a65720771407f09e3723571302cc47ff1c2f",
+        "source": "planning/MILESTONE_STATUS.md:95",
+        "subject": "fix(core): preserve runtime shutdown progress",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "eac011f",
+        "full": "eac011f0336e870f1b93f4e8dddda958edbba99f",
+        "source": "planning/MILESTONE_STATUS.md:95",
+        "subject": "docs(core): define runtime lifecycle requirement",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R03-006": [
+      {
+        "short": "ee3d55d",
+        "full": "ee3d55dd14974b36f2bb29fa4bcb5ed12b3bc255",
+        "source": "planning/MILESTONE_STATUS.md:96",
+        "subject": "feat(core): define runtime failure handling",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d651677",
+        "full": "d651677333f814a3245f3c70cbb875b9e019b4cb",
+        "source": "planning/MILESTONE_STATUS.md:96",
+        "subject": "docs(core): define runtime failure handling requirement",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R03-007": [
+      {
+        "short": "9d1c7d1",
+        "full": "9d1c7d1f38fc8fbd0ac7636ae4ec9c88e6d7d8f4",
+        "source": "planning/MILESTONE_STATUS.md:98",
+        "subject": "test(core): add runtime integration contracts",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R03-008": [
+      {
+        "short": "407df6b",
+        "full": "407df6ba6dc5916befe9112123738249a3b83c5a",
+        "source": "planning/MILESTONE_STATUS.md:100",
+        "subject": "test(core): complete R03 runtime validation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "f598fef",
+        "full": "f598fef842befaa66021f9733f35cfcfb706f28e",
+        "source": "planning/MILESTONE_STATUS.md:100",
+        "subject": "test(core): exercise failure recovery in install consumer",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R03-PREP-001": [
+      {
+        "short": "29255d5",
+        "full": "29255d546e273dfab12c50efd6bd103616685a4f",
+        "source": "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-PREP-001/ACCEPTANCE_CRITERIA.md:63",
+        "subject": "build(core): install and package Core library",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "bbbb9e9",
+        "full": "bbbb9e9d5d5cc533f83489583f58812f220958d5",
+        "source": "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-PREP-001/ACCEPTANCE_CRITERIA.md:63",
+        "subject": "docs(planning): record R03-PREP-001 task and evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R04-001": [
+      {
+        "short": "d1c5f13",
+        "full": "d1c5f1314d7d7d9c4120bfe0eca673ea8ee72cc2",
+        "source": "planning/MILESTONE_STATUS.md:175",
+        "subject": "feat(core): define platform adapter boundary",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R04-002": [
+      {
+        "short": "eb06fa0",
+        "full": "eb06fa0bf0e1bfef9c0316505f42309a2ca53363",
+        "source": "planning/MILESTONE_STATUS.md:176",
+        "subject": "feat(core): harden scheduler platform contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R04-003": [
+      {
+        "short": "67114bb",
+        "full": "67114bb5c0629323ba09fad5bc90cde9a6305965",
+        "source": "planning/MILESTONE_STATUS.md:177",
+        "subject": "feat(core): define clock and timer platform contracts",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R04-004": [
+      {
+        "short": "4af4756",
+        "full": "4af4756cbe32ea1f6761caaae519aa3fbc30d96f",
+        "source": "planning/MILESTONE_STATUS.md:178",
+        "subject": "feat(core): define watchdog platform contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R04-005": [
+      {
+        "short": "f7231c1",
+        "full": "f7231c154421a87af0412d55c2558838e119081c",
+        "source": "planning/MILESTONE_STATUS.md:180",
+        "subject": "feat(core): define platform capability contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R04-006": [
+      {
+        "short": "460de87",
+        "full": "460de878bf6cfa93e621a5bbfd094814285f9796",
+        "source": "planning/MILESTONE_STATUS.md:181",
+        "subject": "test(core): add platform conformance suite",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R04-007": [
+      {
+        "short": "36c5cb8",
+        "full": "36c5cb8a469388dc8422bff93e0e5db0c33ba613",
+        "source": "planning/MILESTONE_STATUS.md:183",
+        "subject": "feat(core): define runtime platform integration boundary",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R04-008": [
+      {
+        "short": "e7df87c",
+        "full": "e7df87c283d4772449fd34343e375feaa2746c24",
+        "source": "planning/MILESTONE_STATUS.md:184",
+        "subject": "build(core): prepare 0.4.0 release metadata",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "f0669eb",
+        "full": "f0669eb1b4b197f1553692bcc56fda62d3fec0ca",
+        "source": "planning/MILESTONE_STATUS.md:184",
+        "subject": "test(core): complete R04 platform validation",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R05-001": [
+      {
+        "short": "c5910e7",
+        "full": "c5910e7d33f1dfb57c588241010d6f29fcae1e28",
+        "source": "planning/MILESTONE_STATUS.md:197",
+        "subject": "feat(core): add platform context",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R05-002": [
+      {
+        "short": "f9d6007",
+        "full": "f9d6007591a3ea03333a3ba1c76df460fd0aff1a",
+        "source": "planning/MILESTONE_STATUS.md:198",
+        "subject": "feat(core): define platform service requirements",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R05-003": [
+      {
+        "short": "f8cd523",
+        "full": "f8cd523439a47c94bb27b9b6d7bb2dfabdf1f565",
+        "source": "planning/MILESTONE_STATUS.md:199",
+        "subject": "feat(core): define explicit platform service consumption",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R05-004": [
+      {
+        "short": "f23777b",
+        "full": "f23777b1100ec7d3b949de5c1098a0985b7dd11f",
+        "source": "planning/MILESTONE_STATUS.md:200",
+        "subject": "feat(core): preserve runtime platform lifecycle boundary",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R05-005": [
+      {
+        "short": "7f30626",
+        "full": "7f306260675de884408ea8ff96959b7b615e2bc3",
+        "source": "planning/MILESTONE_STATUS.md:202",
+        "subject": "test(core): add platform integration reference harness",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R05-006": [
+      {
+        "short": "fe04d35",
+        "full": "fe04d35784e40aaecd39670797d4b4bbb092af83",
+        "source": "planning/MILESTONE_STATUS.md:203",
+        "subject": "test(core): add platform runtime integration tests",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R05-007": [
+      {
+        "short": "8384f5d",
+        "full": "8384f5d4d9fcf80cd8916ffc315148afa769c239",
+        "source": "planning/MILESTONE_STATUS.md:205",
+        "subject": "test(core): complete R0.5 validation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "5fb5e69",
+        "full": "5fb5e69cdf8cbb85ed1c64bbdbb064cade5d1fd1",
+        "source": "planning/MILESTONE_STATUS.md:205",
+        "subject": "build(core): prepare 0.5.0 release metadata",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R06-001": [
+      {
+        "short": "8031c47",
+        "full": "8031c47367ba6325f540d88e2595f6bb9f89e0c4",
+        "source": "planning/MILESTONE_STATUS.md:216",
+        "subject": "feat(core): define component execution context",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R06-002": [
+      {
+        "short": "072b713",
+        "full": "072b71354f51626d13a97690d2d9a12b9075694e",
+        "source": "planning/MILESTONE_STATUS.md:217",
+        "subject": "feat(core): define operational context access policy",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R06-003": [
+      {
+        "short": "adb0e08",
+        "full": "adb0e086307583937877edfba065e3c8e7e6cfe7",
+        "source": "planning/MILESTONE_STATUS.md:218",
+        "subject": "feat(core): define component context injection boundary",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R06-004": [
+      {
+        "short": "5b755af",
+        "full": "5b755af17b430caf74b28621105fbb6fddc25c43",
+        "source": "planning/MILESTONE_STATUS.md:219",
+        "subject": "feat(core): bind context requirements and capabilities",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R06-005": [
+      {
+        "short": "c7f7b46",
+        "full": "c7f7b466a682296abc30be578d4f660ac4756fff",
+        "source": "planning/MILESTONE_STATUS.md:221",
+        "subject": "test(core): add component context reference harness",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R06-006": [
+      {
+        "short": "2fd5424",
+        "full": "2fd542444df6a1e3470bda935255c45414db2de0",
+        "source": "planning/MILESTONE_STATUS.md:222",
+        "subject": "test(core): add component context integration tests",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R06-007": [
+      {
+        "short": "7351db6",
+        "full": "7351db6254bc003fb4a302f25eb15e773925076c",
+        "source": "planning/MILESTONE_STATUS.md:224",
+        "subject": "test(core): complete R0.6 validation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "b473e5d",
+        "full": "b473e5d7964b7ef95fe3deb39e1c9f377ce66f33",
+        "source": "planning/MILESTONE_STATUS.md:224",
+        "subject": "build(core): prepare 0.6.0 release metadata",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R07-001": [
+      {
+        "short": "6849a73",
+        "full": "6849a73a13435d38a36e5a97d3f682a8c062c123",
+        "source": "planning/TASKS.md:87",
+        "subject": "feat(core): define component operational observation contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "6518240",
+        "full": "6518240785ca784767794e1959a100143d059b4a",
+        "source": "planning/CHANGELOG.md:146",
+        "subject": "docs(planning): record R07-001 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R07-002": [
+      {
+        "short": "61e0067",
+        "full": "61e0067ab0074ffd2dff19e148a6e4d7576b8e65",
+        "source": "planning/TASKS.md:88",
+        "subject": "feat(core): define component status and health reporting contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "8d9e4b0",
+        "full": "8d9e4b0d1bce662939b5113fa5b12d24acb2d848",
+        "source": "planning/CHANGELOG.md:147",
+        "subject": "docs(planning): record R07-002 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R07-003": [
+      {
+        "short": "871b878",
+        "full": "871b878c23e9b75bb6da5554c5d7a60edbe29d0e",
+        "source": "planning/CHANGELOG.md:148",
+        "subject": "docs(planning): record R07-003 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "56ff226",
+        "full": "56ff226bd156873646b6e30290ba4dc620a9894d",
+        "source": "planning/TASKS.md:89",
+        "subject": "feat(core): define component operational event contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R07-004": [
+      {
+        "short": "e354dac",
+        "full": "e354dacc48530eb22994ac0f292bcc4084acbffb",
+        "source": "planning/CHANGELOG.md:149",
+        "subject": "docs(planning): record R07-004 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "16654e9",
+        "full": "16654e92039ae869a25c99553241c3ed68305b47",
+        "source": "planning/TASKS.md:90",
+        "subject": "feat(core): define component statistics observation contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R07-005": [
+      {
+        "short": "0b1bd1d",
+        "full": "0b1bd1d7d64e0fc9968dacf4c89aa68ea14dc8ec",
+        "source": "planning/TASKS.md:92",
+        "subject": "test(core): add component operational reference harness",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "2d60432",
+        "full": "2d604323883f85d6b417853ea2dc3e127fbe36de",
+        "source": "planning/CHANGELOG.md:151",
+        "subject": "docs(planning): record R07-005 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R07-006": [
+      {
+        "short": "3f524cd",
+        "full": "3f524cd71005d9f715af11a406e970269b9aa7f0",
+        "source": "planning/TASKS.md:93",
+        "subject": "test(core): add component operational integration tests",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "ceffe92",
+        "full": "ceffe925bb5144128ec7ef62519733bb12fb3092",
+        "source": "planning/CHANGELOG.md:152",
+        "subject": "docs(planning): record R07-006 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R07-007": [
+      {
+        "short": "d83e1ba",
+        "full": "d83e1baf45e13390167c24d7973725089cfd5551",
+        "source": "planning/TASKS.md:95",
+        "subject": "build(core): prepare 0.7.0 release metadata",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "86dfcb9",
+        "full": "86dfcb924e3e48dcb1121ac25409a0bc4261b438",
+        "source": "planning/TASKS.md:95",
+        "subject": "test(core): complete R0.7 operational validation",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R08-001": [
+      {
+        "short": "bb3752a",
+        "full": "bb3752adef1f92b898cb1e8c5190b51c1861f529",
+        "source": "planning/CHANGELOG.md:105",
+        "subject": "docs(planning): record R08-001 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "605516b",
+        "full": "605516b1a1aa33fb59c3068a256ebe7a65c1f3ed",
+        "source": "planning/TASKS.md:138",
+        "subject": "feat(core): define component configuration contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R08-002": [
+      {
+        "short": "6efeaac",
+        "full": "6efeaacf2d38cbce63e489ebdcbd9b7ec87ce994",
+        "source": "planning/TASKS.md:139",
+        "subject": "feat(core): define configuration ownership and atomic application",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "6aab91b",
+        "full": "6aab91bfb8d1b24a141bfb08829778a41c3e7c72",
+        "source": "planning/CHANGELOG.md:106",
+        "subject": "docs(planning): record R08-002 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R08-003": [
+      {
+        "short": "0ea3ea3",
+        "full": "0ea3ea35298589757e38272d4b798c0fae968815",
+        "source": "planning/CHANGELOG.md:107",
+        "subject": "docs(planning): record R08-003 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "bdb4b93",
+        "full": "bdb4b93b6e0543ab3e86c5a66c66e90a13ef229f",
+        "source": "planning/TASKS.md:140",
+        "subject": "feat(core): define configuration version and validation contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R08-004": [
+      {
+        "short": "f4b6de4",
+        "full": "f4b6de4667195ed582a4fa28ebabed10370d2516",
+        "source": "planning/TASKS.md:142",
+        "subject": "test(core): add configuration reference harness",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "2b93ad6",
+        "full": "2b93ad61b74d3cab1a418c3a0285be3b18039d66",
+        "source": "planning/CHANGELOG.md:109",
+        "subject": "docs(planning): record R08-004 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R08-005": [
+      {
+        "short": "159b1bc",
+        "full": "159b1bceb25eaf77537d2135fc9c109c0ffeac78",
+        "source": "planning/CHANGELOG.md:110",
+        "subject": "docs(planning): record R08-005 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a5dfbc1",
+        "full": "a5dfbc128cdaaf5060a87fc2d7459b5a9394db0d",
+        "source": "planning/TASKS.md:143",
+        "subject": "test(core): add configuration runtime integration tests",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R08-006": [
+      {
+        "short": "94fad8e",
+        "full": "94fad8e4bade30578be07b84f393356737f8cc21",
+        "source": "planning/TASKS.md:145",
+        "subject": "test(core): validate configuration boundary and regression",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "644bdf8",
+        "full": "644bdf8afb62d939e786b5dff34297bc45707124",
+        "source": "planning/CHANGELOG.md:112",
+        "subject": "docs(planning): record R08-006 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R08-007": [
+      {
+        "short": "1aa3611",
+        "full": "1aa36111277c5be780ab1e2c4525fc3a1b592333",
+        "source": "planning/TASKS.md:146",
+        "subject": "test(core): complete R0.8 configuration validation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "1e7ba2b",
+        "full": "1e7ba2be545229f50fea5b0674c2a3b7674a5429",
+        "source": "planning/TASKS.md:146",
+        "subject": "build(core): prepare 0.8.0 release metadata",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R09-001": [
+      {
+        "short": "7a727e8",
+        "full": "7a727e8bc82aa41a4274ed361b4870b365555fa3",
+        "source": "planning/CHANGELOG.md:64",
+        "subject": "docs(planning): record R09-001 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "4081dc0",
+        "full": "4081dc06058a6c216d1a48a42f5861905cb3b274",
+        "source": "planning/TASKS.md:236",
+        "subject": "feat(core): define capability contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "c250c54",
+        "full": "c250c547e79f44b2f72db99384c2f892c5f2f13d",
+        "source": "planning/CHANGELOG.md:64",
+        "subject": "docs(core): reconcile R09 documentation baseline",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R09-002": [
+      {
+        "short": "4bd241e",
+        "full": "4bd241ee5df862a82debf49b85cb030f95b9970c",
+        "source": "planning/TASKS.md:237",
+        "subject": "feat(core): define capability set and version semantics",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "7bcd90d",
+        "full": "7bcd90d42f8f24074f23f5bba231e996ca26e985",
+        "source": "planning/CHANGELOG.md:65",
+        "subject": "docs(planning): record R09-002 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R09-003": [
+      {
+        "short": "e53464a",
+        "full": "e53464abb87e0a43b56aecbac7fe487ae5ac6ac6",
+        "source": "planning/CHANGELOG.md:66",
+        "subject": "docs(planning): record R09-003 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "e91a51f",
+        "full": "e91a51fa2669ab4c9acfe8e07696ac0244d2ed14",
+        "source": "planning/TASKS.md:238",
+        "subject": "feat(core): define capability requirement matching boundary",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "7b6b0f4",
+        "full": "7b6b0f440ef9f614e80c3971d9511a06be6a2cf2",
+        "source": "planning/CHANGELOG.md:66",
+        "subject": "docs(core): flatten API documentation domain directories",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R09-004": [
+      {
+        "short": "2608795",
+        "full": "2608795c3e96f27b07428e5ce22570c671b5c683",
+        "source": "planning/TASKS.md:240",
+        "subject": "test(core): add capability contract reference harness",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "9d0a81d",
+        "full": "9d0a81d0d7187e778c06ea0c1877dac737874a7e",
+        "source": "planning/CHANGELOG.md:68",
+        "subject": "docs(planning): record R09-004 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R09-005": [
+      {
+        "short": "9a086ae",
+        "full": "9a086ae3c94f99d36dc23c47152027961de5c0a0",
+        "source": "planning/CHANGELOG.md:69",
+        "subject": "docs(planning): record R09-005 evidence",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "0f6b6c3",
+        "full": "0f6b6c3b20c07f107ccde3f0237906e4df81e7ff",
+        "source": "planning/TASKS.md:241",
+        "subject": "test(core): add capability readiness lifecycle integration tests",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R09-006": [
+      {
+        "short": "04f0859",
+        "full": "04f08597c7cc3074ecdd08e2315115cf43fdbed5",
+        "source": "planning/TASKS.md:243",
+        "subject": "test(core): validate R0.9 documentation security and boundaries",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "87a2960",
+        "full": "87a29605db562f0562aac95835781c99eb654f9f",
+        "source": "planning/CHANGELOG.md:71",
+        "subject": "docs(planning): record R09-006 evidence",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R09-007": [
+      {
+        "short": "683a3ce",
+        "full": "683a3ce11fb4bc6aaaa2c23625bb307ee77df007",
+        "source": "planning/TASKS.md:244",
+        "subject": "test(core): complete R0.9 capability validation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "ef14e99",
+        "full": "ef14e99e3ff76487c95644004816105ead803aaa",
+        "source": "planning/TASKS.md:244",
+        "subject": "build(core): prepare 0.9.0 release metadata",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R10-001": [
+      {
+        "short": "1dba571",
+        "full": "1dba57166dfef312f6c204b8dd759c93ec309c99",
+        "source": "planning/TASKS.md:282",
+        "subject": "docs(core): inventory and classify R1.0 public API",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R10-002": [
+      {
+        "short": "bbe10b6",
+        "full": "bbe10b6cb67165834d91b1cd0fe428579af5136d",
+        "source": "planning/TASKS.md:283",
+        "subject": "docs(core): define source and semantic compatibility contract",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R10-003": [
+      {
+        "short": "559d75f",
+        "full": "559d75f7d7b57ef0dd6652e6f9d751b732e2d90d",
+        "source": "planning/TASKS.md:284",
+        "subject": "docs(core): define R1.0 ABI compatibility policy",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R10-004": [
+      {
+        "short": "a121c24",
+        "full": "a121c24f3987e97e4f7650effd45da638932e54e",
+        "source": "planning/TASKS.md:285",
+        "subject": "docs(core): define versioning and API evolution policy",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R10-005": [
+      {
+        "short": "2882cd2",
+        "full": "2882cd2083591011d8556eec582eb777b6936dc3",
+        "source": "planning/TASKS.md:286",
+        "subject": "docs(core): define API deprecation and migration policy",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R10-006": [
+      {
+        "short": "b44b14b",
+        "full": "b44b14be9ac32a75b7fcf0568ddabfb14bedb1d1",
+        "source": "planning/TASKS.md:288",
+        "subject": "test(core): add R1.0 compatibility boundary harness",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R10-007": [
+      {
+        "short": "f212e46",
+        "full": "f212e469bb764cc0e27b3e40dfe8d67e9cd241d0",
+        "source": "planning/TASKS.md:289",
+        "subject": "test(core): validate R1.0 package compatibility",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "30c461b",
+        "full": "30c461b14a5330e2e37ce1ca8f389a77afe24324",
+        "source": "planning/TASKS.md:289",
+        "subject": "docs(core): clarify EXACT package version matching",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R10-008": [
+      {
+        "short": "c0edf1f",
+        "full": "c0edf1f0e1fa75dd90172e280776ea5fd27ac8eb",
+        "source": "planning/TASKS.md:291",
+        "subject": "test(core): validate R1.0 documentation security and traceability",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "KF-CORE-R10-009": [
+      {
+        "short": "af16847",
+        "full": "af168478fa223b9c5bf4790984849cdf23964642",
+        "source": "planning/TASKS.md:292",
+        "subject": "build(core): prepare 1.0.0 release candidate",
+        "ancestor_of_origin_main": true
+      }
+    ]
+  },
+  "unresolved_or_ambiguous": [],
+  "tags": {
+    "kritva-core-r1.0": "4acce3b60833abfe33168c4766405ab86ea73edc"
+  }
+}

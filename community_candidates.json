@@ -1,0 +1,1086 @@
+{
+  "repo_head": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+  "note": "CANDIDATES ONLY. Not evidence until reviewed and approved centrally.",
+  "tasks": {
+    "I2-001": [
+      {
+        "short": "150d211",
+        "full": "150d21161ce22676a23c76adbc5758222421f948",
+        "source": "planning/MILESTONE_STATUS.md:13",
+        "subject": "KOS-I2: implement runtime host",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I2-002": [
+      {
+        "short": "e2851fd",
+        "full": "e2851fdae3229e7a0139841ee1c099dab2ad218d",
+        "source": "planning/MILESTONE_STATUS.md:14",
+        "subject": "KOS-I2: implement component composition",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I2-003": [
+      {
+        "short": "ae0de75",
+        "full": "ae0de753d1e240a71da9e1411efc30cbfe9a109e",
+        "source": "planning/MILESTONE_STATUS.md:15",
+        "subject": "KOS-I2: implement runtime configuration",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I2-004": [
+      {
+        "short": "bfa2b29",
+        "full": "bfa2b29aee7fcfcd34bf9b870b6249e556e32333",
+        "source": "planning/MILESTONE_STATUS.md:16",
+        "subject": "KOS-I2: implement runtime observation",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I2-005": [
+      {
+        "short": "e8ad793",
+        "full": "e8ad7937366455c758c9cd0add35fb17d8593b3c",
+        "source": "planning/MILESTONE_STATUS.md:17",
+        "subject": "KOS-I2: implement failure handling",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I2-006": [
+      {
+        "short": "69521ef",
+        "full": "69521ef3c164847e8956ef509d2f8f6a308f24b1",
+        "source": "planning/MILESTONE_STATUS.md:18",
+        "subject": "KOS-I2: add reference runtime demo",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I3-001": [
+      {
+        "short": "39780cc",
+        "full": "39780ccb8f93719471ee982299f6f43f2cee6196",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint contracts",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "46b91fa",
+        "full": "46b91fabac8bd4a9df00797ca23313717127c325",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement observation diagnostics and fault handling",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd1a35c",
+        "full": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement mock device and endpoint library",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "97ab518",
+        "full": "97ab51870a122019a80acf7507bd916a4bef3a3b",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a7e08e5",
+        "full": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint registry",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d8cd315",
+        "full": "d8cd3150867a7e71111579a9cac6d37a5832731e",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: add reference device demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "f980675",
+        "full": "f98067542476258b3e346353115bf663760b5491",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement typed sensor and actuator interfaces",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "ecc0ca3",
+        "full": "ecc0ca37eb5b6d93db299218bf3485688b309420",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: close milestone acceptance record",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "40a6940",
+        "full": "40a6940680ea9da650026239c353712b5c4ce40c",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address audit findings",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "e61814e",
+        "full": "e61814e4ded6dca1b526a6e037a2bf0356a06752",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: align final planning records",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "9912e3c",
+        "full": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address re-audit findings",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I3-002": [
+      {
+        "short": "a7e08e5",
+        "full": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint registry",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "46b91fa",
+        "full": "46b91fabac8bd4a9df00797ca23313717127c325",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement observation diagnostics and fault handling",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd1a35c",
+        "full": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement mock device and endpoint library",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "97ab518",
+        "full": "97ab51870a122019a80acf7507bd916a4bef3a3b",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d8cd315",
+        "full": "d8cd3150867a7e71111579a9cac6d37a5832731e",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: add reference device demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "39780cc",
+        "full": "39780ccb8f93719471ee982299f6f43f2cee6196",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint contracts",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "f980675",
+        "full": "f98067542476258b3e346353115bf663760b5491",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement typed sensor and actuator interfaces",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "ecc0ca3",
+        "full": "ecc0ca37eb5b6d93db299218bf3485688b309420",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: close milestone acceptance record",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "40a6940",
+        "full": "40a6940680ea9da650026239c353712b5c4ce40c",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address audit findings",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "e61814e",
+        "full": "e61814e4ded6dca1b526a6e037a2bf0356a06752",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: align final planning records",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "9912e3c",
+        "full": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address re-audit findings",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I3-003": [
+      {
+        "short": "97ab518",
+        "full": "97ab51870a122019a80acf7507bd916a4bef3a3b",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "46b91fa",
+        "full": "46b91fabac8bd4a9df00797ca23313717127c325",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement observation diagnostics and fault handling",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd1a35c",
+        "full": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement mock device and endpoint library",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a7e08e5",
+        "full": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint registry",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d8cd315",
+        "full": "d8cd3150867a7e71111579a9cac6d37a5832731e",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: add reference device demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "39780cc",
+        "full": "39780ccb8f93719471ee982299f6f43f2cee6196",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint contracts",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "f980675",
+        "full": "f98067542476258b3e346353115bf663760b5491",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement typed sensor and actuator interfaces",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "ecc0ca3",
+        "full": "ecc0ca37eb5b6d93db299218bf3485688b309420",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: close milestone acceptance record",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "40a6940",
+        "full": "40a6940680ea9da650026239c353712b5c4ce40c",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address audit findings",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "e61814e",
+        "full": "e61814e4ded6dca1b526a6e037a2bf0356a06752",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: align final planning records",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "9912e3c",
+        "full": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address re-audit findings",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I3-004": [
+      {
+        "short": "f980675",
+        "full": "f98067542476258b3e346353115bf663760b5491",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement typed sensor and actuator interfaces",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "46b91fa",
+        "full": "46b91fabac8bd4a9df00797ca23313717127c325",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement observation diagnostics and fault handling",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd1a35c",
+        "full": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement mock device and endpoint library",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "97ab518",
+        "full": "97ab51870a122019a80acf7507bd916a4bef3a3b",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a7e08e5",
+        "full": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint registry",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d8cd315",
+        "full": "d8cd3150867a7e71111579a9cac6d37a5832731e",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: add reference device demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "39780cc",
+        "full": "39780ccb8f93719471ee982299f6f43f2cee6196",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint contracts",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "ecc0ca3",
+        "full": "ecc0ca37eb5b6d93db299218bf3485688b309420",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: close milestone acceptance record",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "40a6940",
+        "full": "40a6940680ea9da650026239c353712b5c4ce40c",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address audit findings",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "e61814e",
+        "full": "e61814e4ded6dca1b526a6e037a2bf0356a06752",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: align final planning records",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "9912e3c",
+        "full": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address re-audit findings",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I3-005": [
+      {
+        "short": "cd1a35c",
+        "full": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement mock device and endpoint library",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "46b91fa",
+        "full": "46b91fabac8bd4a9df00797ca23313717127c325",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement observation diagnostics and fault handling",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "97ab518",
+        "full": "97ab51870a122019a80acf7507bd916a4bef3a3b",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a7e08e5",
+        "full": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint registry",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d8cd315",
+        "full": "d8cd3150867a7e71111579a9cac6d37a5832731e",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: add reference device demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "39780cc",
+        "full": "39780ccb8f93719471ee982299f6f43f2cee6196",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint contracts",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "f980675",
+        "full": "f98067542476258b3e346353115bf663760b5491",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement typed sensor and actuator interfaces",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "ecc0ca3",
+        "full": "ecc0ca37eb5b6d93db299218bf3485688b309420",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: close milestone acceptance record",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "40a6940",
+        "full": "40a6940680ea9da650026239c353712b5c4ce40c",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address audit findings",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "e61814e",
+        "full": "e61814e4ded6dca1b526a6e037a2bf0356a06752",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: align final planning records",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "9912e3c",
+        "full": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address re-audit findings",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I3-006": [
+      {
+        "short": "46b91fa",
+        "full": "46b91fabac8bd4a9df00797ca23313717127c325",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement observation diagnostics and fault handling",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd1a35c",
+        "full": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement mock device and endpoint library",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "97ab518",
+        "full": "97ab51870a122019a80acf7507bd916a4bef3a3b",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a7e08e5",
+        "full": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint registry",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d8cd315",
+        "full": "d8cd3150867a7e71111579a9cac6d37a5832731e",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: add reference device demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "39780cc",
+        "full": "39780ccb8f93719471ee982299f6f43f2cee6196",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint contracts",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "f980675",
+        "full": "f98067542476258b3e346353115bf663760b5491",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement typed sensor and actuator interfaces",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "ecc0ca3",
+        "full": "ecc0ca37eb5b6d93db299218bf3485688b309420",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: close milestone acceptance record",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "40a6940",
+        "full": "40a6940680ea9da650026239c353712b5c4ce40c",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address audit findings",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "e61814e",
+        "full": "e61814e4ded6dca1b526a6e037a2bf0356a06752",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: align final planning records",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "9912e3c",
+        "full": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address re-audit findings",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I3-007": [
+      {
+        "short": "d8cd315",
+        "full": "d8cd3150867a7e71111579a9cac6d37a5832731e",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: add reference device demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "46b91fa",
+        "full": "46b91fabac8bd4a9df00797ca23313717127c325",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement observation diagnostics and fault handling",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd1a35c",
+        "full": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement mock device and endpoint library",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "97ab518",
+        "full": "97ab51870a122019a80acf7507bd916a4bef3a3b",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a7e08e5",
+        "full": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint registry",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "39780cc",
+        "full": "39780ccb8f93719471ee982299f6f43f2cee6196",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement device and endpoint contracts",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "f980675",
+        "full": "f98067542476258b3e346353115bf663760b5491",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: implement typed sensor and actuator interfaces",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "ecc0ca3",
+        "full": "ecc0ca37eb5b6d93db299218bf3485688b309420",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: close milestone acceptance record",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "40a6940",
+        "full": "40a6940680ea9da650026239c353712b5c4ce40c",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address audit findings",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "e61814e",
+        "full": "e61814e4ded6dca1b526a6e037a2bf0356a06752",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: align final planning records",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "9912e3c",
+        "full": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+        "source": "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56",
+        "subject": "KOS-I3: address re-audit findings",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I4-001": [
+      {
+        "short": "d2f8936",
+        "full": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "source": "planning/milestones/KOS-I4/TASKS.md:26",
+        "subject": "KOS-I4 I4-001 admit responses by correlation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "3c535b6",
+        "full": "3c535b64ebae626065032e7315e679e474f6853b",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-004 implement edge host and remote service",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "79f4daf",
+        "full": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "source": "planning/milestones/KOS-I4/CHANGELOG.md:3",
+        "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "94aa01d",
+        "full": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a690520",
+        "full": "a6905207441abdc13ec6238272e7681093c50180",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "c40fbb2",
+        "full": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "52218f4",
+        "full": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd51be8",
+        "full": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I4-002": [
+      {
+        "short": "52218f4",
+        "full": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "source": "planning/milestones/KOS-I4/TASKS.md:27",
+        "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "15c1781",
+        "full": "15c17813adebcc99eacb8a59b402c9e9ff7761c4",
+        "source": "planning/MILESTONE_STATUS.md:53",
+        "subject": "KOS-I4 I4-003 implement deterministic simulated transport",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "3c535b6",
+        "full": "3c535b64ebae626065032e7315e679e474f6853b",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-004 implement edge host and remote service",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d2f8936",
+        "full": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-001 admit responses by correlation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "79f4daf",
+        "full": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "94aa01d",
+        "full": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a690520",
+        "full": "a6905207441abdc13ec6238272e7681093c50180",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "c40fbb2",
+        "full": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd51be8",
+        "full": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I4-003": [
+      {
+        "short": "c40fbb2",
+        "full": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "source": "planning/milestones/KOS-I4/TASKS.md:28",
+        "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "3c535b6",
+        "full": "3c535b64ebae626065032e7315e679e474f6853b",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-004 implement edge host and remote service",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d2f8936",
+        "full": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-001 admit responses by correlation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "79f4daf",
+        "full": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "94aa01d",
+        "full": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a690520",
+        "full": "a6905207441abdc13ec6238272e7681093c50180",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "52218f4",
+        "full": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd51be8",
+        "full": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I4-004": [
+      {
+        "short": "3c535b6",
+        "full": "3c535b64ebae626065032e7315e679e474f6853b",
+        "source": "planning/milestones/KOS-I4/TASKS.md:29",
+        "subject": "KOS-I4 I4-004 implement edge host and remote service",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d2f8936",
+        "full": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-001 admit responses by correlation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "79f4daf",
+        "full": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "94aa01d",
+        "full": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a690520",
+        "full": "a6905207441abdc13ec6238272e7681093c50180",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "c40fbb2",
+        "full": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "52218f4",
+        "full": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd51be8",
+        "full": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I4-005": [
+      {
+        "short": "a690520",
+        "full": "a6905207441abdc13ec6238272e7681093c50180",
+        "source": "planning/milestones/KOS-I4/TASKS.md:30",
+        "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "3c535b6",
+        "full": "3c535b64ebae626065032e7315e679e474f6853b",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-004 implement edge host and remote service",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d2f8936",
+        "full": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-001 admit responses by correlation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "79f4daf",
+        "full": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "94aa01d",
+        "full": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "c40fbb2",
+        "full": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "52218f4",
+        "full": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd51be8",
+        "full": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I4-006": [
+      {
+        "short": "94aa01d",
+        "full": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "source": "planning/milestones/KOS-I4/TASKS.md:31",
+        "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "3c535b6",
+        "full": "3c535b64ebae626065032e7315e679e474f6853b",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-004 implement edge host and remote service",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d2f8936",
+        "full": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-001 admit responses by correlation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "79f4daf",
+        "full": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a690520",
+        "full": "a6905207441abdc13ec6238272e7681093c50180",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "c40fbb2",
+        "full": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "52218f4",
+        "full": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd51be8",
+        "full": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I4-007": [
+      {
+        "short": "cd51be8",
+        "full": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "source": "planning/milestones/KOS-I4/TASKS.md:32",
+        "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "3c535b6",
+        "full": "3c535b64ebae626065032e7315e679e474f6853b",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-004 implement edge host and remote service",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d2f8936",
+        "full": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-001 admit responses by correlation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "79f4daf",
+        "full": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "94aa01d",
+        "full": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a690520",
+        "full": "a6905207441abdc13ec6238272e7681093c50180",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "c40fbb2",
+        "full": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "52218f4",
+        "full": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+        "ancestor_of_origin_main": true
+      }
+    ],
+    "I4-008": [
+      {
+        "short": "79f4daf",
+        "full": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "source": "planning/milestones/KOS-I4/TASKS.md:33",
+        "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "3c535b6",
+        "full": "3c535b64ebae626065032e7315e679e474f6853b",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-004 implement edge host and remote service",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "d2f8936",
+        "full": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-001 admit responses by correlation",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "94aa01d",
+        "full": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "a690520",
+        "full": "a6905207441abdc13ec6238272e7681093c50180",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "c40fbb2",
+        "full": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "52218f4",
+        "full": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "source": "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+        "ancestor_of_origin_main": true
+      },
+      {
+        "short": "cd51be8",
+        "full": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "source": "planning/milestones/KOS-I4/TASKS.md:20",
+        "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+        "ancestor_of_origin_main": true
+      }
+    ]
+  },
+  "unresolved_or_ambiguous": [],
+  "tags": {}
+}

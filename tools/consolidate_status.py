@@ -343,6 +343,10 @@ def has_verifiable_evidence(t, commit):
             and str(ev.get("result") or "").upper() == "PASS"]
 
 
+def has_commit_bound_evidence(t):
+    return any(ev.get("commit") for ev in t["evidence"])
+
+
 def compute(base, reports, effective, reg):
     """Per-task rows and accepted progress. Every row says WHY it has or lacks credit."""
     tasks, warnings = [], []
@@ -374,10 +378,13 @@ def compute(base, reports, effective, reg):
                 reason = "baseline weight not approved"
             elif not ap:
                 reason = "no central approval recorded"
-            elif ap["source_commit"] != doc["source"]["commit"]:
+            elif t["execution"] != "COMPLETE":
+                reason = f"task is reported {t['execution']} (reopened or unfinished); credit requires COMPLETE"
+            elif has_commit_bound_evidence(t) and not any(ev.get("commit") == ap["source_commit"] for ev in t["evidence"]):
                 row["acceptance"] = "STALE_APPROVAL"
                 row["evidence_verified"] = False
-                reason = f"approval {ap['approval_id']} is for an older source commit; re-review required"
+                reason = (f"approval {ap['approval_id']} is bound to {ap['source_commit'][:7]} but the report's evidence "
+                          f"is bound to a different commit; re-review required")
                 warnings.append(f"{bt['id']}: {reason}")
             elif ap["acceptance"] != "PASS":
                 reason = f"acceptance is {ap['acceptance']}"
@@ -451,7 +458,7 @@ def evidence_health(tasks, workstreams, warnings):
     for w in workstreams:
         if w["source_state"] in ("STALE", "INVALID"):
             h.append(f"{w['id']}: source {w['source_state']}")
-    h += [x for x in warnings if "older source commit" in x]
+    h += [x for x in warnings if "different commit" in x]
     return sorted(set(h))
 
 

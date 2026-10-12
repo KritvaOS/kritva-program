@@ -25,7 +25,7 @@ class Resolve(unittest.TestCase):
             g(r, "tag", "-a", "v1", "-m", "annotated")
             (r / "planning").mkdir()
             (r / "planning/S.md").write_text(
-                f"| I2-001 | Done (`{full[:9]}`) |\n| I2-002 | Done (`deadbee`) |\n| I2-003 | no sha here 2026 |\n")
+                f"| I2-001 | Done (`{full[:9]}`) |\n| I2-002 | Done (`deadbee`) |\n| I2-003 | no sha here 2026 |\n| I2-004, I2-005 | shared (`{full[:8]}`) |\n")
             out = r / "o.json"
             p = subprocess.run([sys.executable, str(ROOT / "tools/resolve_shas.py"), "--repo", str(r), "--tag", "v1",
                                 "--out", str(out)], capture_output=True, text=True)
@@ -35,6 +35,8 @@ class Resolve(unittest.TestCase):
             self.assertEqual(doc["tags"]["v1"], full)  # annotated tag peeled to the commit
             self.assertEqual([u["task"] for u in doc["unresolved_or_ambiguous"]], ["I2-002"])
             self.assertNotIn("I2-003", doc["tasks"])
+            self.assertNotIn("I2-004", doc["tasks"])  # multi-task lines are never attributed to a task
+            self.assertIn(full, doc["milestone_level_commits"])
 
 
 if __name__ == "__main__":

@@ -6,9 +6,10 @@ Run it LOCALLY inside (or pointing at) a checkout, where git has the history:
   python3 tools/resolve_shas.py --repo ~/workarea/kritvaOS/kritva-core --tag kritva-core-r1.0 --ci \\
       --out core_candidates.json
 
-For every Markdown line under planning/ that names a task ID and quotes a short SHA in backticks or
+For every Markdown line under planning/ that names EXACTLY ONE task ID and quotes a short SHA in backticks or
 parentheses, it records: the full 40-hex commit (git rev-parse), whether it is an ancestor of origin/main,
-and the commit subject. Tags are peeled to the commit they point at. With --ci it also lists workflow runs
+and the commit subject. Lines naming several tasks or a range are not attributed to any task; their commits
+are listed separately under milestone_level_commits. Tags are peeled to the commit they point at. With --ci it also lists workflow runs
 for each commit (needs the `gh` CLI; never required).
 
 This only produces CANDIDATES. A planning note that quotes a SHA is not evidence: a candidate becomes
@@ -75,7 +76,7 @@ def main():
     if rc != 0:
         print(f"ERROR: {repo} is not a usable git checkout", file=sys.stderr)
         return 2
-    tasks, unresolved, seen = {}, [], {}
+    tasks, unresolved, seen, milestone_level = {}, [], {}, {}
     for md in sorted((repo / a.planning).rglob("*.md")):
         for n, line in enumerate(md.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
             ids = set(TASK.findall(line))
@@ -87,6 +88,12 @@ def main():
                     continue  # skip plain numbers / words that merely look like hex unless quoted
                 state, full = seen.setdefault(short, resolve(repo, short))
                 loc = f"{md.relative_to(repo)}:{n}"
+                if len(ids) != 1 or re.search(r"\bI\d-\d{3}\.\.|R\d+-\d{3}\.\.", line):
+                    # a line naming several tasks (or a range) cannot attribute a commit to one task
+                    if state == "OK":
+                        milestone_level.setdefault(full, {"short": short, "subject": subject(repo, full),
+                                                          "sources": []})["sources"].append(loc)
+                    continue
                 for tid in sorted(ids):
                     if state == "OK":
                         tasks.setdefault(tid, []).append({
@@ -106,7 +113,8 @@ def main():
             for i in items:
                 i["ci_runs"] = ci_runs(i["full"], a.slug)
     doc = {"repo_head": head, "note": "CANDIDATES ONLY. Not evidence until reviewed and approved centrally.",
-           "tasks": dict(sorted(tasks.items())), "unresolved_or_ambiguous": unresolved, "tags": tags}
+           "tasks": dict(sorted(tasks.items())), "unresolved_or_ambiguous": unresolved, "tags": tags,
+           "milestone_level_commits": milestone_level}
     text = json.dumps(doc, indent=2) + "\n"
     if a.out:
         Path(a.out).write_text(text, encoding="utf-8")
