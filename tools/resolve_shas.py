@@ -71,7 +71,7 @@ def ci_runs(repo, full, slug):
     return gh_runs(repo, slug, "--commit", full, "--limit", "20")
 
 
-def covering_runs(repo, full, runs, anc_cache):
+def covering_runs(repo, full, runs, anc_cache, workflows=None):
     """Nearest SUCCESSFUL run per workflow whose head commit contains `full`, with what changed in between.
 
     A run on a later commit validates that later tree. It supports the task only if the task's own files are
@@ -81,13 +81,13 @@ def covering_runs(repo, full, runs, anc_cache):
     touched = git(repo, "diff-tree", "--no-commit-id", "--name-only", "-r", "--root", full)[1].splitlines()
     best = {}
     for r in runs or []:
-        if r.get("conclusion") != "success":
+        if r.get("conclusion") != "success" or (workflows and r.get("workflowName") not in workflows):
             continue
         h = r.get("headSha", "")
-        if h not in anc_cache:
-            anc_cache[h] = git(repo, "merge-base", "--is-ancestor", full, h)[0] == 0 if h else False
-        key = (full, h)
-        if not anc_cache[h]:
+        key = (full, h)  # ancestry depends on BOTH commits; caching by h alone leaked older runs into later tasks
+        if key not in anc_cache:
+            anc_cache[key] = git(repo, "merge-base", "--is-ancestor", full, h)[0] == 0 if h else False
+        if not anc_cache[key]:
             continue
         n = int(git(repo, "rev-list", "--count", f"{full}..{h}")[1] or 0)
         wf = r["workflowName"]
@@ -107,6 +107,8 @@ def main():
     ap.add_argument("--ci", action="store_true", help="also list CI runs per commit (needs gh)")
     ap.add_argument("--covering-runs", type=int, metavar="N",
                     help="also list the nearest successful run per workflow on a LATER commit (scans the last N runs)")
+    ap.add_argument("--workflow", action="append", default=[],
+                    help="only consider covering runs of this workflow name (repeatable), e.g. 'KritvaOS CI'")
     ap.add_argument("--out", help="write JSON here (default: stdout)")
     a = ap.parse_args()
     repo = Path(a.repo).expanduser()
@@ -155,7 +157,7 @@ def main():
         cache = {}
         for items in tasks.values():
             for i in items:
-                i["covering_runs"] = covering_runs(repo, i["full"], runs, cache) if runs is not None else None
+                i["covering_runs"] = covering_runs(repo, i["full"], runs, cache, a.workflow or None) if runs is not None else None
     doc = {"repo_head": head, "note": "CANDIDATES ONLY. Not evidence until reviewed and approved centrally.",
            "tasks": dict(sorted(tasks.items())), "unresolved_or_ambiguous": unresolved, "tags": tags,
            "milestone_level_commits": milestone_level}

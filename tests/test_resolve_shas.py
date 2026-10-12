@@ -50,7 +50,7 @@ class Resolve(unittest.TestCase):
             (r / "t.txt").write_text("3"); g(r, "add", "."); g(r, "commit", "-q", "-m", "touch task file")
             c3 = g(r, "rev-parse", "HEAD")
             (r / "planning").mkdir()
-            (r / "planning/S.md").write_text(f"| I2-001 | Done (`{c1[:9]}`) |\n")
+            (r / "planning/S.md").write_text(f"| I2-001 | Done (`{c1[:9]}`) |\n| I2-002 | Done (`{c3[:9]}`) |\n")
             cwdlog = Path(d) / "cwd.log"
             runs = [{"databaseId": 1, "workflowName": "CI", "conclusion": "success", "status": "completed",
                      "url": "u1", "headSha": c2, "event": "push", "createdAt": "x"},
@@ -75,6 +75,9 @@ class Resolve(unittest.TestCase):
             self.assertEqual(cov[0]["head_sha"], c2)  # nearest descendant wins
             self.assertEqual(cov[0]["commits_after"], 1)
             self.assertEqual(cov[0]["task_files_changed_after"], [])
+            later = json.loads(out.read_text())["tasks"]["I2-002"][0]["covering_runs"]
+            self.assertEqual([c["head_sha"] for c in later], [c3])  # run on older c2 must NOT cover task at c3
+            self.assertEqual(later[0]["commits_after"], 0)
             self.assertTrue(all(Path(x).resolve() == r.resolve() for x in cwdlog.read_text().split()))
 
 
