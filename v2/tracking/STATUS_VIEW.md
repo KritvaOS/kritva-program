@@ -5,10 +5,10 @@
 ## Summary
 
 - Baseline version: 1 (APPROVED)
-- Accepted progress: 0.0% (0/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
+- Accepted progress: 47.52% (48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/30 tasks (repo-reported; not acceptance)
-- Evidence coverage: 0/30 tasks with verified evidence
-- Release readiness: NOT_READY (open release gates: GATE-KOS-CI-001, GATE-KOS-I3-SAFETY, GATE-KOS-I4-SAFETY; uncredited tasks: 30)
+- Evidence coverage: 15/30 tasks with verified evidence
+- Release readiness: NOT_READY (open release gates: GATE-KOS-CI-001, GATE-KOS-I3-SAFETY, GATE-KOS-I4-SAFETY; uncredited tasks: 15)
 - Schedule and effort: NOT TRACKED here (separate from progress; no dates or actuals approved)
 
 ## Workstreams
@@ -34,21 +34,21 @@
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| UNMAPPED | 30 | 30 | 0 | 101 | 0 |
+| UNMAPPED | 30 | 30 | 15 | 101 | 48 |
 
 ## Rollup by workstream
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| COMMUNITY | 21 | 21 | 0 | 71 | 0 |
-| CORE | 9 | 9 | 0 | 30 | 0 |
+| COMMUNITY | 21 | 21 | 6 | 71 | 18 |
+| CORE | 9 | 9 | 9 | 30 | 30 |
 
 ## Rollup by milestone
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| KF-CORE-R10 | 9 | 9 | 0 | 30 | 0 |
-| KOS-I2 | 6 | 6 | 0 | 18 | 0 |
+| KF-CORE-R10 | 9 | 9 | 9 | 30 | 30 |
+| KOS-I2 | 6 | 6 | 6 | 18 | 18 |
 | KOS-I3 | 7 | 7 | 0 | 23 | 0 |
 | KOS-I4 | 8 | 8 | 0 | 30 | 0 |
 
@@ -56,12 +56,12 @@
 
 | Task | Workstream | Weight | Execution | Acceptance | Credit | Why |
 |---|---|---|---|---|---|---|
-| I2-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I2-002 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I2-003 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I2-004 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I2-005 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I2-006 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I2-001 | COMMUNITY | 4 | COMPLETE | PASS | yes | weight 4 x approval A001 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-002 | COMMUNITY | 3 | COMPLETE | PASS | yes | weight 3 x approval A002 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-003 | COMMUNITY | 3 | COMPLETE | PASS | yes | weight 3 x approval A003 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-004 | COMMUNITY | 3 | COMPLETE | PASS | yes | weight 3 x approval A004 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-005 | COMMUNITY | 3 | COMPLETE | PASS | yes | weight 3 x approval A005 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-006 | COMMUNITY | 2 | COMPLETE | PASS | yes | weight 2 x approval A006 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
 | I3-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
 | I3-002 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
 | I3-003 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
@@ -77,15 +77,15 @@
 | I4-006 | COMMUNITY | 5 | COMPLETE | NOT_RUN | no | no central approval recorded |
 | I4-007 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
 | I4-008 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-001 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-002 | CORE | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-003 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-004 | CORE | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-005 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-006 | CORE | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-007 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-008 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-009 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-001 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A007 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-002 | CORE | 4 | COMPLETE | PASS | yes | weight 4 x approval A008 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-003 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A009 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-004 | CORE | 4 | COMPLETE | PASS | yes | weight 4 x approval A010 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-005 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A011 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-006 | CORE | 4 | COMPLETE | PASS | yes | weight 4 x approval A012 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-007 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A013 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-008 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A014 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-009 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A015 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 
 ## Gates
 
@@ -97,12 +97,6 @@
 
 ## Evidence health
 
-- I2-001: no verified evidence
-- I2-002: no verified evidence
-- I2-003: no verified evidence
-- I2-004: no verified evidence
-- I2-005: no verified evidence
-- I2-006: no verified evidence
 - I3-001: no verified evidence
 - I3-002: no verified evidence
 - I3-003: no verified evidence
@@ -118,15 +112,6 @@
 - I4-006: no verified evidence
 - I4-007: no verified evidence
 - I4-008: no verified evidence
-- KF-CORE-R10-001: no verified evidence
-- KF-CORE-R10-002: no verified evidence
-- KF-CORE-R10-003: no verified evidence
-- KF-CORE-R10-004: no verified evidence
-- KF-CORE-R10-005: no verified evidence
-- KF-CORE-R10-006: no verified evidence
-- KF-CORE-R10-007: no verified evidence
-- KF-CORE-R10-008: no verified evidence
-- KF-CORE-R10-009: no verified evidence
 
 ## Warnings
 

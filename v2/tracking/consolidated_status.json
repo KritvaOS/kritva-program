@@ -3,17 +3,17 @@
   "baseline_version": 1,
   "by_milestone": {
     "KF-CORE-R10": {
-      "accepted_weight": 0,
+      "accepted_weight": 30,
       "complete": 9,
-      "credited": 0,
+      "credited": 9,
       "tasks": 9,
       "weight": 30,
       "weighted": true
     },
     "KOS-I2": {
-      "accepted_weight": 0,
+      "accepted_weight": 18,
       "complete": 6,
-      "credited": 0,
+      "credited": 6,
       "tasks": 6,
       "weight": 18,
       "weighted": true
@@ -37,9 +37,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 0,
+      "accepted_weight": 48,
       "complete": 30,
-      "credited": 0,
+      "credited": 15,
       "tasks": 30,
       "weight": 101,
       "weighted": true
@@ -47,17 +47,17 @@
   },
   "by_workstream": {
     "COMMUNITY": {
-      "accepted_weight": 0,
+      "accepted_weight": 18,
       "complete": 21,
-      "credited": 0,
+      "credited": 6,
       "tasks": 21,
       "weight": 71,
       "weighted": true
     },
     "CORE": {
-      "accepted_weight": 0,
+      "accepted_weight": 30,
       "complete": 9,
-      "credited": 0,
+      "credited": 9,
       "tasks": 9,
       "weight": 30,
       "weighted": true
@@ -65,12 +65,6 @@
   },
   "errors": [],
   "evidence_health": [
-    "I2-001: no verified evidence",
-    "I2-002: no verified evidence",
-    "I2-003: no verified evidence",
-    "I2-004: no verified evidence",
-    "I2-005: no verified evidence",
-    "I2-006: no verified evidence",
     "I3-001: no verified evidence",
     "I3-002: no verified evidence",
     "I3-003: no verified evidence",
@@ -85,16 +79,7 @@
     "I4-005: no verified evidence",
     "I4-006: no verified evidence",
     "I4-007: no verified evidence",
-    "I4-008: no verified evidence",
-    "KF-CORE-R10-001: no verified evidence",
-    "KF-CORE-R10-002: no verified evidence",
-    "KF-CORE-R10-003: no verified evidence",
-    "KF-CORE-R10-004: no verified evidence",
-    "KF-CORE-R10-005: no verified evidence",
-    "KF-CORE-R10-006: no verified evidence",
-    "KF-CORE-R10-007: no verified evidence",
-    "KF-CORE-R10-008: no verified evidence",
-    "KF-CORE-R10-009: no verified evidence"
+    "I4-008: no verified evidence"
   ],
   "gates": [
     {
@@ -168,7 +153,7 @@
   "measures": {
     "evidence_coverage": {
       "tasks_total": 30,
-      "tasks_with_verified_evidence": 0
+      "tasks_with_verified_evidence": 15
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
@@ -182,20 +167,20 @@
         "GATE-KOS-I4-SAFETY"
       ],
       "state": "NOT_READY",
-      "uncredited_tasks": 30
+      "uncredited_tasks": 15
     }
   },
   "progress": {
-    "accepted_progress_pct": 0.0,
-    "basis": "0/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 47.52,
+    "basis": "48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "tasks": [
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 4 x approval A001 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
@@ -206,11 +191,11 @@
       "workstream_id": "COMMUNITY"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A002 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
@@ -221,11 +206,11 @@
       "workstream_id": "COMMUNITY"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A003 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
@@ -236,11 +221,11 @@
       "workstream_id": "COMMUNITY"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A004 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
@@ -251,11 +236,11 @@
       "workstream_id": "COMMUNITY"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A005 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
@@ -266,11 +251,11 @@
       "workstream_id": "COMMUNITY"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 2 x approval A006 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
@@ -536,11 +521,11 @@
       "workstream_id": "COMMUNITY"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A007 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
@@ -551,11 +536,11 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 4 x approval A008 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
@@ -566,11 +551,11 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A009 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
@@ -581,11 +566,11 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 4 x approval A010 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
@@ -596,11 +581,11 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A011 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
@@ -611,11 +596,11 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 4 x approval A012 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
@@ -626,11 +611,11 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A013 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
@@ -641,11 +626,11 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A014 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
@@ -656,11 +641,11 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A015 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",

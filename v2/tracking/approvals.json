@@ -3,5 +3,231 @@
   "authorized_approvers": [
     "Dinesh"
   ],
-  "approvals": []
+  "approvals": [
+    {
+      "approval_id": "A001",
+      "task_id": "I2-001",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A002",
+      "task_id": "I2-002",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A003",
+      "task_id": "I2-003",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A004",
+      "task_id": "I2-004",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A005",
+      "task_id": "I2-005",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A006",
+      "task_id": "I2-006",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A007",
+      "task_id": "KF-CORE-R10-001",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A008",
+      "task_id": "KF-CORE-R10-002",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A009",
+      "task_id": "KF-CORE-R10-003",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A010",
+      "task_id": "KF-CORE-R10-004",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A011",
+      "task_id": "KF-CORE-R10-005",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A012",
+      "task_id": "KF-CORE-R10-006",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A013",
+      "task_id": "KF-CORE-R10-007",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A014",
+      "task_id": "KF-CORE-R10-008",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A015",
+      "task_id": "KF-CORE-R10-009",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    }
+  ]
 }
