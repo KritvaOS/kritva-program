@@ -130,6 +130,71 @@ def fetch_sources(cfg):
     return found, problems, meta
 
 
+RUN_ID = re.compile(r"(?:actions/runs/)?(\d+)/?$")
+VERIFICATION_FILE = "run_verification.json"
+
+
+def run_id_of(ci_run):
+    m = RUN_ID.search(str(ci_run or "").strip())
+    return m.group(1) if m else None
+
+
+def ci_entries(reports):
+    """Every (repo, run_id) cited by a CI-bound PASS evidence entry in the current reports."""
+    out = set()
+    for _, (_, doc) in reports.items():
+        for t in doc["tasks"]:
+            for ev in t["evidence"]:
+                rid = run_id_of(ev.get("ci_run"))
+                if ev.get("commit") and rid and str(ev.get("result") or "").upper() == "PASS":
+                    out.add((doc["repo"], rid))
+    return sorted(out)
+
+
+def verify_runs(reports, previous, now):
+    """Ask GitHub about each cited CI run and record FACTS (head sha, conclusion, jobs, workflow, repo).
+
+    Never decides credit; compute() does, comparing these facts to the approved commit. If GitHub cannot be
+    reached for a run, a previously recorded result is kept (with its old timestamp) and a warning is returned.
+    """
+    runs, warnings = dict(previous.get("runs", {})), []
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    for repo, rid in ci_entries(reports):
+        key = f"{repo}#{rid}"
+        info = gh_json(f"repos/{repo}/actions/runs/{rid}")
+        jobs = gh_json(f"repos/{repo}/actions/runs/{rid}/jobs?per_page=100")
+        if not isinstance(info, dict) or not isinstance(jobs, dict):
+            warnings.append(f"{key}: GitHub lookup failed" + (" (previous record kept)" if key in runs else ""))
+            if key not in runs:
+                runs[key] = {"repo": repo, "run_id": rid, "state": "UNAVAILABLE", "retrieved_at": stamp}
+            continue
+        runs[key] = {"repo": (info.get("repository") or {}).get("full_name"), "run_id": rid, "state": "RETRIEVED",
+                     "head_sha": info.get("head_sha"), "status": info.get("status"),
+                     "conclusion": info.get("conclusion"), "workflow": info.get("name"),
+                     "jobs": [{"name": j.get("name"), "conclusion": j.get("conclusion")} for j in jobs.get("jobs", [])],
+                     "retrieved_at": stamp}
+    return {"_note": "Facts fetched from the GitHub Actions API by tools/consolidate_status.py --verify-runs. "
+                     "Credit decisions compare them with the approved commit.", "runs": dict(sorted(runs.items()))}, warnings
+
+
+def run_problem(rec, repo, commit, description):
+    """Why a recorded run does NOT validate `commit` for `repo`, or None when it does."""
+    if not rec or rec.get("state") != "RETRIEVED":
+        return "no verified GitHub record for the run (run --verify-runs)"
+    if str(rec.get("repo") or "").lower() != repo.lower():
+        return f"run belongs to {rec.get('repo')}, not {repo}"
+    if rec.get("head_sha") != commit:
+        return f"run head is {str(rec.get('head_sha'))[:7]}, not the approved commit {commit[:7]}"
+    if rec.get("status") != "completed" or rec.get("conclusion") != "success":
+        return f"run is {rec.get('status')}/{rec.get('conclusion')}, not completed/success"
+    jobs = rec.get("jobs") or []
+    if not jobs or any(j.get("conclusion") not in ("success", "skipped") for j in jobs):
+        return "a job of the run did not succeed (or no jobs recorded)"
+    if rec.get("workflow") and not str(description or "").startswith(str(rec["workflow"])):
+        return f"workflow {rec['workflow']!r} does not match the evidence description"
+    return None
+
+
 def read_dir(path):
     found = {}
     for p in sorted(Path(path).glob("*.json")):
@@ -347,7 +412,7 @@ def has_commit_bound_evidence(t):
     return any(ev.get("commit") for ev in t["evidence"])
 
 
-def compute(base, reports, effective, reg):
+def compute(base, reports, effective, reg, vr=None, require_vr=False, emap=None):
     """Per-task rows and accepted progress. Every row says WHY it has or lacks credit."""
     tasks, warnings = [], []
     task_state = {}
@@ -359,7 +424,8 @@ def compute(base, reports, effective, reg):
         row = {"task_id": bt["id"], "workstream_id": bt["workstream_id"], "milestone_id": bt.get("milestone_id"),
                "phase": bt.get("phase"), "weight": bt.get("weight"), "execution": None, "git_sync": None,
                "readiness": None, "acceptance": "NOT_RUN", "evidence_verified": False, "credit": False,
-               "blocked_by": gates_for(bt, gates), "credit_reason": ""}
+               "blocked_by": gates_for(bt, gates), "credit_reason": "", "evidence_class": None,
+               "tested_commit": None, "task_commit": None, "evidence_run": None, "run_verified": None}
         st = task_state.get(bt["id"])
         ap = effective.get(bt["id"])
         if not st:
@@ -371,7 +437,26 @@ def compute(base, reports, effective, reg):
             if ap:
                 row["acceptance"] = ap["acceptance"]
                 row["evidence_verified"] = bool(has_verifiable_evidence(t, ap["source_commit"]))
-            reason = None
+            reason, run_note = None, None
+            if ap:
+                ev_ok = has_verifiable_evidence(t, ap["source_commit"])
+                runs = [e for e in ev_ok if run_id_of(e.get("ci_run"))]
+                if runs:
+                    key = f"{doc['repo']}#{run_id_of(runs[0]['ci_run'])}"
+                    row["evidence_run"] = run_id_of(runs[0]["ci_run"])
+                    probs = [run_problem((vr or {}).get("runs", {}).get(f"{doc['repo']}#{run_id_of(e['ci_run'])}"),
+                                         doc["repo"], ap["source_commit"], e.get("description")) for e in runs]
+                    row["run_verified"] = any(p is None for p in probs)
+                    run_note = None if row["run_verified"] else probs[0]
+                elif ev_ok:
+                    row["run_verified"] = None  # report-hash evidence: no CI run to verify
+                if ev_ok:
+                    row["tested_commit"] = ap["source_commit"]
+                    m = (emap or {}).get(bt["id"])
+                    if m and (m.get("evidence") or {}).get("commit") == ap["source_commit"] and m.get("mode"):
+                        row["evidence_class"], row["task_commit"] = m["mode"], m.get("task_commit")
+                    else:
+                        row["evidence_class"] = "UNSPECIFIED"
             if not base.get("baseline_approved"):
                 reason = "baseline is a DRAFT (not approved by an authorized approver)"
             elif bt.get("weight") is None:
@@ -393,6 +478,9 @@ def compute(base, reports, effective, reg):
             elif not row["evidence_verified"]:
                 reason = "no evidence bound to the approved commit with ci_run or report_sha256 and result PASS"
                 warnings.append(f"{bt['id']}: PASS lacks verifiable evidence; no credit")
+            elif require_vr and run_note:
+                reason = f"CI run {row['evidence_run']} not verified against GitHub: {run_note}"
+                warnings.append(f"{bt['id']}: {reason}; no credit")
             elif bt.get("requires_physical") and "physical" not in {ev["type"] for ev in t["evidence"]}:
                 reason = "physical gate cannot be satisfied by software or simulation evidence"
                 warnings.append(f"{bt['id']}: {reason}; no credit")
@@ -443,7 +531,8 @@ def measures(tasks, gates):
     return {
         "execution_complete": {"tasks_complete": sum(t["execution"] == "COMPLETE" for t in tasks), "tasks_total": n,
                                "note": "reported by repos; not acceptance"},
-        "evidence_coverage": {"tasks_with_verified_evidence": sum(t["evidence_verified"] for t in tasks), "tasks_total": n},
+        "evidence_coverage": {"tasks_with_verified_evidence": sum(t["evidence_verified"] for t in tasks), "tasks_total": n,
+                              "tasks_with_github_verified_run": sum(t["run_verified"] is True for t in tasks)},
         "release_readiness": {"state": "NOT_READY" if (open_release or any(not t["credit"] for t in tasks)) else "READY",
                               "open_release_gates": open_release,
                               "uncredited_tasks": sum(not t["credit"] for t in tasks)},
@@ -462,6 +551,23 @@ def evidence_health(tasks, workstreams, warnings):
     return sorted(set(h))
 
 
+def evidence_lines(c):
+    """Disclose which kind of evidence backs the credited tasks (never present milestone-level as per-task)."""
+    cls = {}
+    for t in c["tasks"]:
+        if t["credit"]:
+            cls[t["evidence_class"] or "UNSPECIFIED"] = cls.get(t["evidence_class"] or "UNSPECIFIED", 0) + 1
+    if not cls:
+        return []
+    out = ["- Evidence classes of credited tasks: " + ", ".join(f"{k} {v}" for k, v in sorted(cls.items()))]
+    if cls.get("MILESTONE") or cls.get("UNSPECIFIED"):
+        out.append("- Evidence qualification: MILESTONE-class tasks were validated by a CI run on a LATER commit "
+                   "(\"accepted as of\" that commit), not by a run on the task's own commit; the tested commit is shown per task. "
+                   "UNSPECIFIED means the evidence class is not recorded. Open safety gates keep gated tasks at zero credit "
+                   "and release readiness NOT_READY. Credit reflects approval and CI evidence, not physical validation or safety sign-off.")
+    return out
+
+
 def render(c):
     pct = c["progress"]["accepted_progress_pct"]
     m = c["measures"]
@@ -471,10 +577,16 @@ def render(c):
          f"- Baseline version: {c['baseline_version']} ({'APPROVED' if c['baseline_approved'] else 'DRAFT, not approved'})",
          f"- Accepted progress: {'N/A' if pct is None else str(pct) + '%'} ({c['progress']['basis']})",
          f"- Execution reported complete: {m['execution_complete']['tasks_complete']}/{m['execution_complete']['tasks_total']} tasks (repo-reported; not acceptance)",
-         f"- Evidence coverage: {m['evidence_coverage']['tasks_with_verified_evidence']}/{m['evidence_coverage']['tasks_total']} tasks with verified evidence",
+         f"- Credited tasks: {sum(1 for t in c['tasks'] if t['credit'])}/{len(c['tasks'])}; "
+         f"blocked by open gates: {sum(1 for t in c['tasks'] if t['blocked_by'])} "
+         f"({', '.join(sorted({g for t in c['tasks'] for g in t['blocked_by']})) or 'none'})",
+         f"- Evidence coverage: {m['evidence_coverage']['tasks_with_verified_evidence']}/{m['evidence_coverage']['tasks_total']} tasks with verified evidence; "
+         f"{m['evidence_coverage']['tasks_with_github_verified_run']} with the CI run confirmed against GitHub"
+         f" (policy: {'required for credit' if c.get('require_run_verification') else 'not required'})",
          f"- Release readiness: {m['release_readiness']['state']} (open release gates: "
          f"{', '.join(m['release_readiness']['open_release_gates']) or 'none'}; uncredited tasks: {m['release_readiness']['uncredited_tasks']})",
          "- Schedule and effort: NOT TRACKED here (separate from progress; no dates or actuals approved)",
+         *evidence_lines(c),
          "", "## Workstreams", "",
          "| Workstream | Repo | Source state | Tasks reported | Commit |", "|---|---|---|---|---|"]
     for w in c["workstreams"]:
@@ -488,10 +600,14 @@ def render(c):
                      f"{g['weight'] if g['weighted'] else 'N/A'} | {g['accepted_weight'] if g['weighted'] else 'N/A'} |")
     L += ["", "## Tasks", ""]
     if c["tasks"]:
-        L += ["| Task | Workstream | Weight | Execution | Acceptance | Credit | Why |", "|---|---|---|---|---|---|---|"]
+        L += ["| Task | Workstream | Weight | Execution | Acceptance | Credit | Evidence (class, tested commit, task commit, run) | Run checked | Why |",
+              "|---|---|---|---|---|---|---|---|---|"]
         for t in c["tasks"]:
+            ev = (f"{t['evidence_class']}: {t['tested_commit'][:7]} (task {t['task_commit'][:7] if t['task_commit'] else '-'}), run {t['evidence_run'] or '-'}"
+                  if t["tested_commit"] else "-")
+            chk = {True: "yes", False: "NO", None: "-"}[t["run_verified"]]
             L.append(f"| {t['task_id']} | {t['workstream_id']} | {t['weight']} | {t['execution'] or '-'} | "
-                     f"{t['acceptance']} | {'yes' if t['credit'] else 'no'} | {t['credit_reason']} |")
+                     f"{t['acceptance']} | {'yes' if t['credit'] else 'no'} | {ev} | {chk} | {t['credit_reason']} |")
     else:
         L.append("No approved baseline tasks yet (task IDs and weights pending, see D-007).")
     L += ["", "## Gates", ""]
@@ -584,6 +700,8 @@ def main():
     ap.add_argument("--now", help="ISO time for freshness checks (default: current UTC)")
     ap.add_argument("--snapshot", action="store_true", help="append a snapshot (or failure record) under v2/history")
     ap.add_argument("--verify-history", action="store_true", help="verify the snapshot hash chain and exit")
+    ap.add_argument("--verify-runs", action="store_true",
+                    help="query GitHub for every CI run cited by evidence and record the facts in v2/tracking/run_verification.json")
     a = ap.parse_args()
     root = Path(a.root)
     if a.verify_history:
@@ -654,11 +772,22 @@ def main():
         out_ws.append(entry)
     errors += [f"source for unknown workstream {u!r}" for u in sorted(set(found) - set(reg))]
 
-    tasks, prog, cwarn = compute(base, reports, effective, reg)
+    vfile = root / TRACK / VERIFICATION_FILE
+    vr = json.loads(vfile.read_text(encoding="utf-8")) if vfile.exists() else {"runs": {}}
+    if a.verify_runs:
+        vr, vwarn = verify_runs(reports, vr, now)
+        warnings += vwarn
+        if not a.check:
+            vfile.write_text(json.dumps(vr, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    require_vr = bool(cfg.get("require_run_verification"))
+    emap_path = root / TRACK / "evidence_map_proposal.json"
+    emap = {r["task_id"]: r for r in json.loads(emap_path.read_text(encoding="utf-8")).get("rows", [])} if emap_path.exists() else {}
+    tasks, prog, cwarn = compute(base, reports, effective, reg, vr, require_vr, emap)
     warnings += cwarn
     gates = base.get("gates", [])
     c = {"baseline_version": base["baseline_version"], "baseline_approved": bool(base.get("baseline_approved")),
          "progress": prog, "measures": measures(tasks, gates), "workstreams": out_ws, "tasks": tasks,
+         "require_run_verification": require_vr,
          "by_phase": rollup(tasks, "phase"), "by_workstream": rollup(tasks, "workstream_id"),
          "by_milestone": rollup(tasks, "milestone_id"), "gates": gates,
          "evidence_health": evidence_health(tasks, out_ws, warnings),

@@ -7,9 +7,12 @@
 - Baseline version: 1 (APPROVED)
 - Accepted progress: 47.52% (48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/30 tasks (repo-reported; not acceptance)
-- Evidence coverage: 15/30 tasks with verified evidence
+- Credited tasks: 15/30; blocked by open gates: 15 (GATE-KOS-I3-SAFETY, GATE-KOS-I4-SAFETY)
+- Evidence coverage: 15/30 tasks with verified evidence; 15 with the CI run confirmed against GitHub (policy: required for credit)
 - Release readiness: NOT_READY (open release gates: GATE-KOS-CI-001, GATE-KOS-I3-SAFETY, GATE-KOS-I4-SAFETY; uncredited tasks: 15)
 - Schedule and effort: NOT TRACKED here (separate from progress; no dates or actuals approved)
+- Evidence classes of credited tasks: MILESTONE 15
+- Evidence qualification: MILESTONE-class tasks were validated by a CI run on a LATER commit ("accepted as of" that commit), not by a run on the task's own commit; the tested commit is shown per task. UNSPECIFIED means the evidence class is not recorded. Open safety gates keep gated tasks at zero credit and release readiness NOT_READY. Credit reflects approval and CI evidence, not physical validation or safety sign-off.
 
 ## Workstreams
 
@@ -54,38 +57,38 @@
 
 ## Tasks
 
-| Task | Workstream | Weight | Execution | Acceptance | Credit | Why |
-|---|---|---|---|---|---|---|
-| I2-001 | COMMUNITY | 4 | COMPLETE | PASS | yes | weight 4 x approval A001 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-002 | COMMUNITY | 3 | COMPLETE | PASS | yes | weight 3 x approval A002 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-003 | COMMUNITY | 3 | COMPLETE | PASS | yes | weight 3 x approval A003 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-004 | COMMUNITY | 3 | COMPLETE | PASS | yes | weight 3 x approval A004 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-005 | COMMUNITY | 3 | COMPLETE | PASS | yes | weight 3 x approval A005 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-006 | COMMUNITY | 2 | COMPLETE | PASS | yes | weight 2 x approval A006 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I3-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I3-002 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I3-003 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I3-004 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I3-005 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I3-006 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I3-007 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I4-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I4-002 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I4-003 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I4-004 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I4-005 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I4-006 | COMMUNITY | 5 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I4-007 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| I4-008 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | no central approval recorded |
-| KF-CORE-R10-001 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A007 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-002 | CORE | 4 | COMPLETE | PASS | yes | weight 4 x approval A008 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-003 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A009 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-004 | CORE | 4 | COMPLETE | PASS | yes | weight 4 x approval A010 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-005 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A011 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-006 | CORE | 4 | COMPLETE | PASS | yes | weight 4 x approval A012 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-007 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A013 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-008 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A014 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-009 | CORE | 3 | COMPLETE | PASS | yes | weight 3 x approval A015 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| Task | Workstream | Weight | Execution | Acceptance | Credit | Evidence (class, tested commit, task commit, run) | Run checked | Why |
+|---|---|---|---|---|---|---|---|---|
+| I2-001 | COMMUNITY | 4 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 150d211), run 38158709895 | yes | weight 4 x approval A001 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-002 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task e2851fd), run 38158709895 | yes | weight 3 x approval A002 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-003 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task ae0de75), run 38158709895 | yes | weight 3 x approval A003 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-004 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task bfa2b29), run 38158709895 | yes | weight 3 x approval A004 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-005 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task e8ad793), run 38158709895 | yes | weight 3 x approval A005 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-006 | COMMUNITY | 2 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 69521ef), run 38158709895 | yes | weight 2 x approval A006 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I3-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I3-002 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I3-003 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I3-004 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I3-005 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I3-006 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I3-007 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I4-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I4-002 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I4-003 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I4-004 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I4-005 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I4-006 | COMMUNITY | 5 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I4-007 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I4-008 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| KF-CORE-R10-001 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 1dba571), run 37192914607 | yes | weight 3 x approval A007 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-002 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task bbe10b6), run 37192914607 | yes | weight 4 x approval A008 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-003 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 559d75f), run 37192914607 | yes | weight 3 x approval A009 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-004 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task a121c24), run 37192914607 | yes | weight 4 x approval A010 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-005 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 2882cd2), run 37192914607 | yes | weight 3 x approval A011 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-006 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task b44b14b), run 37192914607 | yes | weight 4 x approval A012 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-007 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task f212e46), run 37192914607 | yes | weight 3 x approval A013 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-008 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task c0edf1f), run 37192914607 | yes | weight 3 x approval A014 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-009 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task af16847), run 37192914607 | yes | weight 3 x approval A015 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 
 ## Gates
 

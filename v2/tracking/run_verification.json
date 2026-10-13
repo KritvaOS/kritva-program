@@ -1,0 +1,213 @@
+{
+  "_note": "Facts fetched from the GitHub Actions API by tools/consolidate_status.py --verify-runs. Credit decisions compare them with the approved commit.",
+  "runs": {
+    "KritvaOS/kritva-core#37192914607": {
+      "conclusion": "success",
+      "head_sha": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "kritva-core-test"
+        }
+      ],
+      "repo": "KritvaOS/kritva-core",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "37192914607",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "Kritva Core CI"
+    },
+    "KritvaOS/kritvaos-community#37253855540": {
+      "conclusion": "success",
+      "head_sha": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Toolchain Validation"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build and Test"
+        }
+      ],
+      "repo": "KritvaOS/kritvaos-community",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "37253855540",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "KritvaOS CI"
+    },
+    "KritvaOS/kritvaos-community#37256868535": {
+      "conclusion": "success",
+      "head_sha": "52218f484f29ea58813b848008d187aeab98a0bf",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Build and Test"
+        },
+        {
+          "conclusion": "success",
+          "name": "Toolchain Validation"
+        }
+      ],
+      "repo": "KritvaOS/kritvaos-community",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "37256868535",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "KritvaOS CI"
+    },
+    "KritvaOS/kritvaos-community#37347653023": {
+      "conclusion": "success",
+      "head_sha": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Toolchain Validation"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build and Test"
+        }
+      ],
+      "repo": "KritvaOS/kritvaos-community",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "37347653023",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "KritvaOS CI"
+    },
+    "KritvaOS/kritvaos-community#37405212290": {
+      "conclusion": "success",
+      "head_sha": "3c535b64ebae626065032e7315e679e474f6853b",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Build and Test"
+        },
+        {
+          "conclusion": "success",
+          "name": "Toolchain Validation"
+        }
+      ],
+      "repo": "KritvaOS/kritvaos-community",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "37405212290",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "KritvaOS CI"
+    },
+    "KritvaOS/kritvaos-community#37407633177": {
+      "conclusion": "success",
+      "head_sha": "a6905207441abdc13ec6238272e7681093c50180",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Toolchain Validation"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build and Test"
+        }
+      ],
+      "repo": "KritvaOS/kritvaos-community",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "37407633177",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "KritvaOS CI"
+    },
+    "KritvaOS/kritvaos-community#37497496804": {
+      "conclusion": "success",
+      "head_sha": "94aa01d8ed99561acf77020257e6c517b15a369d",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Toolchain Validation"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build and Test"
+        }
+      ],
+      "repo": "KritvaOS/kritvaos-community",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "37497496804",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "KritvaOS CI"
+    },
+    "KritvaOS/kritvaos-community#37507901354": {
+      "conclusion": "success",
+      "head_sha": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Toolchain Validation"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build and Test"
+        }
+      ],
+      "repo": "KritvaOS/kritvaos-community",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "37507901354",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "KritvaOS CI"
+    },
+    "KritvaOS/kritvaos-community#37561636952": {
+      "conclusion": "success",
+      "head_sha": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Build and Test"
+        },
+        {
+          "conclusion": "success",
+          "name": "Toolchain Validation"
+        }
+      ],
+      "repo": "KritvaOS/kritvaos-community",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "37561636952",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "KritvaOS CI"
+    },
+    "KritvaOS/kritvaos-community#38158709895": {
+      "conclusion": "success",
+      "head_sha": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Toolchain Validation"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build and Test (ubsan)"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build and Test (asan)"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build and Test"
+        },
+        {
+          "conclusion": "success",
+          "name": "Build and Test (release)"
+        }
+      ],
+      "repo": "KritvaOS/kritvaos-community",
+      "retrieved_at": "2026-10-13T17:17:42Z",
+      "run_id": "38158709895",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "KritvaOS CI"
+    }
+  }
+}

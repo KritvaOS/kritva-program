@@ -21,6 +21,12 @@ def make_root(d, approve=True, real=False):
         shutil.copytree(ROOT / sub, r / sub)
     if real:
         return r
+    # run verification is off unless a test turns it on
+    cfgp = r / "v2/tracking/sources.json"
+    cfg = json.loads(cfgp.read_text())
+    cfg.pop("require_run_verification", None)
+    cfgp.write_text(json.dumps(cfg))
+    (r / "v2/tracking/run_verification.json").unlink(missing_ok=True)
     # tests start from an EMPTY approval ledger, whatever the real one holds
     (r / "v2/tracking/approvals.json").write_text(json.dumps({"authorized_approvers": ["Dinesh"], "approvals": []}))
     bdir, v0 = r / "v2/tracking/baselines", r / "v2/tracking/baselines/baseline_v0.json"
