@@ -6,7 +6,7 @@
 
 - Baseline version: 1 (APPROVED)
 - Accepted progress: 0.0% (0/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
-- Execution reported complete: 9/30 tasks (repo-reported; not acceptance)
+- Execution reported complete: 30/30 tasks (repo-reported; not acceptance)
 - Evidence coverage: 0/30 tasks with verified evidence
 - Release readiness: NOT_READY (open release gates: GATE-KOS-CI-001, GATE-KOS-I3-SAFETY, GATE-KOS-I4-SAFETY; uncredited tasks: 30)
 - Schedule and effort: NOT TRACKED here (separate from progress; no dates or actuals approved)
@@ -15,9 +15,9 @@
 
 | Workstream | Repo | Source state | Tasks reported | Commit |
 |---|---|---|---|---|
-| COMMUNITY | KritvaOS/kritvaos-community | OK | 21 | aaaaaaa |
+| COMMUNITY | KritvaOS/kritvaos-community | OK | 21 | 8256ba3 |
 | CONTROL_PLANE | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| CORE | KritvaOS/kritva-core | OK | 9 | aaaaaaa |
+| CORE | KritvaOS/kritva-core | OK | 9 | 54984ae |
 | EDUCATION_APPLICATIONS | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | INTEGRATION_SOFTWARE_VALIDATION | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | MECHANICAL | UNVERIFIED | UNVERIFIED | 0 | ------- |
@@ -34,13 +34,13 @@
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| UNMAPPED | 30 | 9 | 0 | 101 | 0 |
+| UNMAPPED | 30 | 30 | 0 | 101 | 0 |
 
 ## Rollup by workstream
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| COMMUNITY | 21 | 0 | 0 | 71 | 0 |
+| COMMUNITY | 21 | 21 | 0 | 71 | 0 |
 | CORE | 9 | 9 | 0 | 30 | 0 |
 
 ## Rollup by milestone
@@ -48,35 +48,35 @@
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
 | KF-CORE-R10 | 9 | 9 | 0 | 30 | 0 |
-| KOS-I2 | 6 | 0 | 0 | 18 | 0 |
-| KOS-I3 | 7 | 0 | 0 | 23 | 0 |
-| KOS-I4 | 8 | 0 | 0 | 30 | 0 |
+| KOS-I2 | 6 | 6 | 0 | 18 | 0 |
+| KOS-I3 | 7 | 7 | 0 | 23 | 0 |
+| KOS-I4 | 8 | 8 | 0 | 30 | 0 |
 
 ## Tasks
 
 | Task | Workstream | Weight | Execution | Acceptance | Credit | Why |
 |---|---|---|---|---|---|---|
-| I2-001 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I2-002 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I2-003 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I2-004 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I2-005 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I2-006 | COMMUNITY | 2 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I3-001 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I3-002 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I3-003 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I3-004 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I3-005 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I3-006 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I3-007 | COMMUNITY | 2 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I4-001 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I4-002 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I4-003 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I4-004 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I4-005 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I4-006 | COMMUNITY | 5 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I4-007 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
-| I4-008 | COMMUNITY | 2 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I2-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I2-002 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I2-003 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I2-004 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I2-005 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I2-006 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I3-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I3-002 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I3-003 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I3-004 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I3-005 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I3-006 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I3-007 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I4-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I4-002 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I4-003 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I4-004 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I4-005 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I4-006 | COMMUNITY | 5 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I4-007 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| I4-008 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | no central approval recorded |
 | KF-CORE-R10-001 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
 | KF-CORE-R10-002 | CORE | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
 | KF-CORE-R10-003 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
