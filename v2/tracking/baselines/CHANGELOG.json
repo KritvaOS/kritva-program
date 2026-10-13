@@ -1,0 +1,11 @@
+[
+  {
+    "from_version": 0,
+    "to_version": 1,
+    "approver": "Dinesh",
+    "approved_at": "2026-10-13T16:44:57Z",
+    "canonical_commit": "11416537a59a7a4015ed1286a2e48b66e963b958",
+    "reason": "Approve baseline v1 weights as proposed: Core R1.0 (9 tasks) and Community I2-I4 (21 tasks)",
+    "baseline_sha256": "874abe0bcddfbc90f7d5ab449cd7e7a64408bbcd7d640f37fdca01d74bd50e16"
+  }
+]
