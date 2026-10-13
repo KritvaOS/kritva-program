@@ -13,10 +13,18 @@ GOOD = {"type": "software", "uri": "u", "description": "d", "commit": SHA,
         "ci_run": "https://example.invalid/run/1", "report_sha256": None, "result": "PASS"}
 
 
-def make_root(d, approve=True):
+def make_root(d, approve=True, real=False):
+    """Scratch copy of the repo. By default it is reset to the DRAFT baseline (baselines/baseline_v0.json, preserved by
+    the first real freeze) so tests can freeze their own; real=True keeps the repo's actual frozen baseline."""
     r = Path(d)
     for sub in ("tools", "schema", "v2", "examples"):
         shutil.copytree(ROOT / sub, r / sub)
+    if real:
+        return r
+    bdir, v0 = r / "v2/tracking/baselines", r / "v2/tracking/baselines/baseline_v0.json"
+    if v0.exists():
+        shutil.copy(v0, r / "v2/tracking/baseline.json")
+        shutil.rmtree(bdir)
     if approve:
         p = subprocess.run([sys.executable, str(r / "tools/freeze_baseline.py"), "--root", str(r), "--proposal",
                             str(r / "v2/tracking/baseline_v1_proposal.json"), "--approve", "--approver", "Dinesh",

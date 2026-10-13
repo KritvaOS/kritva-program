@@ -10,6 +10,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from support import GOOD, OTHER, SHA, make_root, row, run, write_sources  # noqa: E402
 
@@ -151,6 +153,16 @@ class CreditGating(unittest.TestCase):
             self.assertTrue((frozen / "baseline_v2.json").exists())
             (frozen / "baseline_v3.json").write_text("{}")
             self.assertNotEqual(subprocess.run(base + ["--approver", "Dinesh"], capture_output=True).returncode, 0)
+
+    def test_real_repo_baseline_verifies(self):
+        """The repo's own committed baseline must pass the consolidator's hash and frozen-copy checks."""
+        if not (ROOT / "v2/tracking/baselines/baseline_v1.json").exists():
+            self.skipTest("baseline not frozen yet")
+        with tempfile.TemporaryDirectory() as d:
+            r = make_root(d, real=True)
+            q = run(r, "--sources-dir", str(r / "examples/sources"))
+            self.assertEqual(q.returncode, 0, q.stderr)
+            self.assertNotIn("baseline", "\n".join(l for l in q.stderr.splitlines() if l.startswith("ERROR")))
 
 
 if __name__ == "__main__":
