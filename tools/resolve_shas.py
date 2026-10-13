@@ -14,6 +14,8 @@ for each commit (needs the `gh` CLI; never required). gh runs inside the checkou
 With --covering-runs N it also lists, per task commit, the nearest successful run per workflow on a later
 commit, plus which of the task's files changed in between. Such a run is only a candidate: it validates the
 LATER tree, and a reviewer must confirm that it covers the task.
+With --against FULL_SHA (repeatable) it records, per task, whether that later commit descends from the task
+commit and which of the task's files changed or were deleted; tools/build_evidence_map.py uses this.
 
 This only produces CANDIDATES. A planning note that quotes a SHA is not evidence: a candidate becomes
 evidence only when it has a passing CI run or retained report for that exact commit, the task's criteria
@@ -98,6 +100,20 @@ def covering_runs(repo, full, runs, anc_cache, workflows=None):
     return sorted(best.values(), key=lambda x: (x["commits_after"], x["workflow"]))
 
 
+def against(repo, full, sha):
+    """How a later commit `sha` relates to task commit `full`: descendant?, which of the task's files changed or vanished."""
+    if git(repo, "cat-file", "-e", f"{sha}^{{commit}}")[0] != 0:
+        return {"state": "UNKNOWN_COMMIT"}
+    if git(repo, "merge-base", "--is-ancestor", full, sha)[0] != 0:
+        return {"state": "NOT_DESCENDANT"}
+    touched = git(repo, "diff-tree", "--no-commit-id", "--name-only", "-r", "--root", full)[1].splitlines()
+    rows = git(repo, "diff", "--name-status", full, sha, "--", *touched)[1].splitlines() if touched else []
+    changed = [r.split("\t", 1)[1] for r in rows if "\t" in r]
+    deleted = [r.split("\t", 1)[1] for r in rows if r.startswith("D\t")]
+    return {"state": "DESCENDANT", "commits_after": int(git(repo, "rev-list", "--count", f"{full}..{sha}")[1] or 0),
+            "task_files_changed": changed, "task_files_deleted": deleted}
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--repo", default=".")
@@ -107,6 +123,9 @@ def main():
     ap.add_argument("--ci", action="store_true", help="also list CI runs per commit (needs gh)")
     ap.add_argument("--covering-runs", type=int, metavar="N",
                     help="also list the nearest successful run per workflow on a LATER commit (scans the last N runs)")
+    ap.add_argument("--against", action="append", default=[], metavar="SHA",
+                    help="full SHA of a later evidence commit; records per task whether it descends from the task commit "
+                         "and which task files changed or were deleted (repeatable)")
     ap.add_argument("--workflow", action="append", default=[],
                     help="only consider covering runs of this workflow name (repeatable), e.g. 'KritvaOS CI'")
     ap.add_argument("--out", help="write JSON here (default: stdout)")
@@ -158,6 +177,13 @@ def main():
         for items in tasks.values():
             for i in items:
                 i["covering_runs"] = covering_runs(repo, i["full"], runs, cache, a.workflow or None) if runs is not None else None
+    for sha in a.against:
+        if not re.fullmatch(r"[0-9a-f]{40}", sha):
+            print(f"ERROR: --against needs a full 40-hex SHA, got {sha!r}", file=sys.stderr)
+            return 2
+        for items in tasks.values():
+            for i in items:
+                i.setdefault("against", {})[sha] = against(repo, i["full"], sha)
     doc = {"repo_head": head, "note": "CANDIDATES ONLY. Not evidence until reviewed and approved centrally.",
            "tasks": dict(sorted(tasks.items())), "unresolved_or_ambiguous": unresolved, "tags": tags,
            "milestone_level_commits": milestone_level}

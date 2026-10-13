@@ -23,7 +23,18 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 295,
+            "task_files_changed": [
+              "API.md",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R02-002": [
@@ -46,7 +57,17 @@
               "API.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 292,
+            "task_files_changed": [
+              "API.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R02-003": [
@@ -70,7 +91,18 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 289,
+            "task_files_changed": [
+              "API.md",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R02-006": [
@@ -96,7 +128,20 @@
               "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-006/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 274,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-006/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "00899f9",
@@ -119,7 +164,21 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 275,
+            "task_files_changed": [
+              "API.md",
+              "Makefile",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "scripts/audit/check_traceability.py"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R02-007": [
@@ -145,7 +204,20 @@
               "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-007/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 270,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-007/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "bf2144a",
@@ -164,7 +236,20 @@
             "commits_after": 7,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 271,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R02-008": [
@@ -190,7 +275,20 @@
               "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-008/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 267,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R02/tasks/KF-CORE-R02-008/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R03-001": [
@@ -215,7 +313,55 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 255,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
+      {
+        "short": "9a98ab3",
+        "full": "9a98ab3380a700769245510025c871980ec236ee",
+        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:14",
+        "subject": "docs(planning): correct R03 foundation requirement traceability",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37098227841,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37098227841",
+            "head_sha": "880a8d3c93ab8233955ab6d6c33bb0903258b9ae",
+            "event": "push",
+            "commits_after": 9,
+            "task_files_changed_after": [
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-001/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-002/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-003/ACCEPTANCE_CRITERIA.md"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 254,
+            "task_files_changed": [
+              "planning/milestones/KF-CORE-R03/REQUIREMENTS_PROPOSAL.md",
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-001/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-002/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-003/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "655c1dd",
@@ -241,30 +387,23 @@
               "include/kritva/core/runtime/component.hpp"
             ]
           }
-        ]
-      },
-      {
-        "short": "9a98ab3",
-        "full": "9a98ab3380a700769245510025c871980ec236ee",
-        "source": "planning/milestones/KF-CORE-R03/R03_FOUNDATION_API_REVIEW_EVIDENCE.md:14",
-        "subject": "docs(planning): correct R03 foundation requirement traceability",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37098227841,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37098227841",
-            "head_sha": "880a8d3c93ab8233955ab6d6c33bb0903258b9ae",
-            "event": "push",
-            "commits_after": 9,
-            "task_files_changed_after": [
-              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-001/ACCEPTANCE_CRITERIA.md",
-              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-002/ACCEPTANCE_CRITERIA.md",
-              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-003/ACCEPTANCE_CRITERIA.md"
-            ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 257,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp",
+              "include/kritva/core/runtime/component.hpp",
+              "tests/contract/reference_component.hpp"
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       },
       {
         "short": "4140e15",
@@ -287,7 +426,19 @@
               "planning/TASKS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 253,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R03-002": [
@@ -315,7 +466,22 @@
               "tests/install/consumer/main.cpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 252,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "4649910",
@@ -339,7 +505,20 @@
               "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-002/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 251,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-002/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "0760c93",
@@ -362,7 +541,19 @@
               "planning/TASKS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 250,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R03-003": [
@@ -383,7 +574,22 @@
             "commits_after": 4,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 249,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "7e2a53b",
@@ -407,7 +613,20 @@
               "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-003/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 248,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-003/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "6f9db3d",
@@ -429,10 +648,90 @@
               "planning/MILESTONE_STATUS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 247,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R03-004": [
+      {
+        "short": "25eb914",
+        "full": "25eb9146dab0e1579bbaf1d83ed8237a03407c90",
+        "source": "planning/MILESTONE_STATUS.md:94",
+        "subject": "docs(core): define runtime manager requirement",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37100848963,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37100848963",
+            "head_sha": "54e14bc275931ac983941d7c9152162a7e53dca9",
+            "event": "push",
+            "commits_after": 14,
+            "task_files_changed_after": [
+              "REQUIREMENTS.md",
+              "include/kritva/core/runtime/runtime_manager.hpp",
+              "src/runtime_manager.cpp",
+              "tests/unit/runtime_manager_test.cpp"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 240,
+            "task_files_changed": [
+              "REQUIREMENTS.md",
+              "include/kritva/core/runtime/runtime_manager.hpp",
+              "src/runtime_manager.cpp",
+              "tests/unit/runtime_manager_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
+      {
+        "short": "40e33e9",
+        "full": "40e33e9ec95f88bff66a391293a0736628d508b1",
+        "source": "planning/MILESTONE_STATUS.md:94",
+        "subject": "test(core): enforce runtime topology freeze through views",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37100848963,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37100848963",
+            "head_sha": "54e14bc275931ac983941d7c9152162a7e53dca9",
+            "event": "push",
+            "commits_after": 15,
+            "task_files_changed_after": [
+              "tests/unit/runtime_manager_test.cpp"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 241,
+            "task_files_changed": [
+              "tests/unit/runtime_manager_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "e4d3a9b",
         "full": "e4d3a9b460ddb9d23126fd751a129c16edb790c8",
@@ -459,55 +758,67 @@
               "tests/unit/runtime_manager_test.cpp"
             ]
           }
-        ]
-      },
-      {
-        "short": "40e33e9",
-        "full": "40e33e9ec95f88bff66a391293a0736628d508b1",
-        "source": "planning/MILESTONE_STATUS.md:94",
-        "subject": "test(core): enforce runtime topology freeze through views",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37100848963,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37100848963",
-            "head_sha": "54e14bc275931ac983941d7c9152162a7e53dca9",
-            "event": "push",
-            "commits_after": 15,
-            "task_files_changed_after": [
-              "tests/unit/runtime_manager_test.cpp"
-            ]
-          }
-        ]
-      },
-      {
-        "short": "25eb914",
-        "full": "25eb9146dab0e1579bbaf1d83ed8237a03407c90",
-        "source": "planning/MILESTONE_STATUS.md:94",
-        "subject": "docs(core): define runtime manager requirement",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37100848963,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37100848963",
-            "head_sha": "54e14bc275931ac983941d7c9152162a7e53dca9",
-            "event": "push",
-            "commits_after": 14,
-            "task_files_changed_after": [
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 243,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
               "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp",
               "include/kritva/core/runtime/runtime_manager.hpp",
               "src/runtime_manager.cpp",
+              "tests/install/consumer/main.cpp",
               "tests/unit/runtime_manager_test.cpp"
-            ]
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       }
     ],
     "KF-CORE-R03-005": [
+      {
+        "short": "a4f2a65",
+        "full": "a4f2a65720771407f09e3723571302cc47ff1c2f",
+        "source": "planning/MILESTONE_STATUS.md:95",
+        "subject": "fix(core): preserve runtime shutdown progress",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37100848963,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37100848963",
+            "head_sha": "54e14bc275931ac983941d7c9152162a7e53dca9",
+            "event": "push",
+            "commits_after": 8,
+            "task_files_changed_after": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "include/kritva/core/runtime/runtime_manager.hpp",
+              "src/runtime_manager.cpp",
+              "tests/unit/runtime_lifecycle_test.cpp"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 234,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "include/kritva/core/runtime/runtime_manager.hpp",
+              "src/runtime_manager.cpp",
+              "tests/unit/runtime_lifecycle_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "e2b660d",
         "full": "e2b660d9559ce9b74d52185e09958a06f034caaa",
@@ -534,7 +845,25 @@
               "tests/unit/runtime_lifecycle_test.cpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 236,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/runtime/runtime_manager.hpp",
+              "src/runtime_manager.cpp",
+              "tests/contract/reference_component.hpp",
+              "tests/install/consumer/main.cpp",
+              "tests/unit/runtime_lifecycle_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "eac011f",
@@ -557,32 +886,19 @@
               "src/runtime_manager.cpp"
             ]
           }
-        ]
-      },
-      {
-        "short": "a4f2a65",
-        "full": "a4f2a65720771407f09e3723571302cc47ff1c2f",
-        "source": "planning/MILESTONE_STATUS.md:95",
-        "subject": "fix(core): preserve runtime shutdown progress",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37100848963,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37100848963",
-            "head_sha": "54e14bc275931ac983941d7c9152162a7e53dca9",
-            "event": "push",
-            "commits_after": 8,
-            "task_files_changed_after": [
-              "API.md",
-              "ARCHITECTURE.md",
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 233,
+            "task_files_changed": [
+              "REQUIREMENTS.md",
               "include/kritva/core/runtime/runtime_manager.hpp",
-              "src/runtime_manager.cpp",
-              "tests/unit/runtime_lifecycle_test.cpp"
-            ]
+              "src/runtime_manager.cpp"
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       }
     ],
     "KF-CORE-R03-006": [
@@ -603,7 +919,21 @@
             "commits_after": 2,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 228,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "REQUIREMENTS.md",
+              "include/kritva/core/runtime/runtime_manager.hpp",
+              "src/runtime_manager.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "ee3d55d",
@@ -629,7 +959,24 @@
               "tests/unit/runtime_failure_test.cpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 230,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/runtime/runtime_manager.hpp",
+              "src/runtime_manager.cpp",
+              "tests/install/consumer/main.cpp",
+              "tests/unit/runtime_failure_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R03-007": [
@@ -653,29 +1000,21 @@
               "tests/integration/runtime_integration_test.cpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 222,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "tests/integration/runtime_integration_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R03-008": [
-      {
-        "short": "f598fef",
-        "full": "f598fef842befaa66021f9733f35cfcfb706f28e",
-        "source": "planning/MILESTONE_STATUS.md:100",
-        "subject": "test(core): exercise failure recovery in install consumer",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37103692193,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37103692193",
-            "head_sha": "cc16ec9119209a379009a18e0b40cb469b4e58a1",
-            "event": "push",
-            "commits_after": 3,
-            "task_files_changed_after": []
-          }
-        ]
-      },
       {
         "short": "407df6b",
         "full": "407df6ba6dc5916befe9112123738249a3b83c5a",
@@ -698,7 +1037,49 @@
               "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-008/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 215,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-008/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
+      {
+        "short": "f598fef",
+        "full": "f598fef842befaa66021f9733f35cfcfb706f28e",
+        "source": "planning/MILESTONE_STATUS.md:100",
+        "subject": "test(core): exercise failure recovery in install consumer",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37103692193,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37103692193",
+            "head_sha": "cc16ec9119209a379009a18e0b40cb469b4e58a1",
+            "event": "push",
+            "commits_after": 3,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 216,
+            "task_files_changed": [
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R03-PREP-001": [
@@ -719,7 +1100,25 @@
             "commits_after": 2,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 261,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "Makefile",
+              "README.md",
+              "REQUIREMENTS.md",
+              "scripts/audit/check_traceability.py",
+              "tests/install/consumer/CMakeLists.txt",
+              "tests/install/consumer/main.cpp",
+              "tests/install/run_install_test.cmake"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "bbbb9e9",
@@ -742,7 +1141,19 @@
               "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-PREP-001/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 260,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R03/tasks/KF-CORE-R03-PREP-001/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R04-001": [
@@ -769,7 +1180,22 @@
               "include/kritva/core/core.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 208,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp",
+              "scripts/audit/check_traceability.py"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R04-002": [
@@ -795,7 +1221,20 @@
               "tests/contract/reference_scheduler.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 205,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "tests/contract/reference_scheduler.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R04-003": [
@@ -822,7 +1261,21 @@
               "tests/contract/reference_timer.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 202,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "tests/contract/reference_timer.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R04-004": [
@@ -849,7 +1302,21 @@
               "tests/contract/reference_watchdog.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 199,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "tests/contract/reference_watchdog.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R04-005": [
@@ -876,7 +1343,22 @@
               "tests/contract/reference_adapter.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 194,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp",
+              "tests/contract/reference_adapter.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R04-006": [
@@ -901,7 +1383,19 @@
               "TESTING.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 191,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R04-007": [
@@ -926,10 +1420,61 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 185,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/runtime/runtime_manager.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R04-008": [
+      {
+        "short": "e7df87c",
+        "full": "e7df87c283d4772449fd34343e375feaa2746c24",
+        "source": "planning/MILESTONE_STATUS.md:184",
+        "subject": "build(core): prepare 0.4.0 release metadata",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37111279933,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37111279933",
+            "head_sha": "b31108d55b3211ae56f2212009d359393c4c8728",
+            "event": "push",
+            "commits_after": 3,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 181,
+            "task_files_changed": [
+              "API.md",
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "README.md",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "VERSION",
+              "tests/install/consumer/CMakeLists.txt",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "f0669eb",
         "full": "f0669eb1b4b197f1553692bcc56fda62d3fec0ca",
@@ -952,26 +1497,20 @@
               "planning/milestones/KF-CORE-R04/tasks/KF-CORE-R04-008/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
-      },
-      {
-        "short": "e7df87c",
-        "full": "e7df87c283d4772449fd34343e375feaa2746c24",
-        "source": "planning/MILESTONE_STATUS.md:184",
-        "subject": "build(core): prepare 0.4.0 release metadata",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37111279933,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37111279933",
-            "head_sha": "b31108d55b3211ae56f2212009d359393c4c8728",
-            "event": "push",
-            "commits_after": 3,
-            "task_files_changed_after": []
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 180,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R04/tasks/KF-CORE-R04-008/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       }
     ],
     "KF-CORE-R05-001": [
@@ -999,7 +1538,22 @@
               "include/kritva/core/platform/context.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 174,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp",
+              "include/kritva/core/platform/context.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R05-002": [
@@ -1025,7 +1579,21 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 171,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R05-003": [
@@ -1051,7 +1619,20 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 168,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R05-004": [
@@ -1076,7 +1657,21 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 165,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "tests/integration/runtime_scenarios.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R05-005": [
@@ -1101,7 +1696,19 @@
               "TESTING.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 160,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R05-006": [
@@ -1126,7 +1733,19 @@
               "TESTING.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 157,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R05-007": [
@@ -1147,7 +1766,25 @@
             "commits_after": 3,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 151,
+            "task_files_changed": [
+              "API.md",
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "README.md",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "VERSION",
+              "tests/install/consumer/CMakeLists.txt",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "8384f5d",
@@ -1171,7 +1808,20 @@
               "planning/milestones/KF-CORE-R05/tasks/KF-CORE-R05-007/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 150,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R05/tasks/KF-CORE-R05-007/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R06-001": [
@@ -1198,7 +1848,22 @@
               "include/kritva/core/runtime/component_context.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 144,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp",
+              "include/kritva/core/runtime/component_context.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R06-002": [
@@ -1225,7 +1890,21 @@
               "include/kritva/core/runtime/component_context.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 141,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/runtime/component_context.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R06-003": [
@@ -1252,7 +1931,21 @@
               "include/kritva/core/runtime/component_context.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 138,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/runtime/component_context.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R06-004": [
@@ -1278,7 +1971,20 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 135,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R06-005": [
@@ -1303,7 +2009,20 @@
               "TESTING.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 130,
+            "task_files_changed": [
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R06-006": [
@@ -1328,10 +2047,59 @@
               "TESTING.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 127,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R06-007": [
+      {
+        "short": "b473e5d",
+        "full": "b473e5d7964b7ef95fe3deb39e1c9f377ce66f33",
+        "source": "planning/MILESTONE_STATUS.md:224",
+        "subject": "build(core): prepare 0.6.0 release metadata",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37126197246,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37126197246",
+            "head_sha": "a4c41aa586efc2da027b6f8401d6bb5dcf421a3f",
+            "event": "push",
+            "commits_after": 3,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 121,
+            "task_files_changed": [
+              "API.md",
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "README.md",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "VERSION",
+              "tests/install/consumer/CMakeLists.txt",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "7351db6",
         "full": "7351db6254bc003fb4a302f25eb15e773925076c",
@@ -1355,54 +2123,24 @@
               "planning/milestones/KF-CORE-R06/tasks/KF-CORE-R06-007/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
-      },
-      {
-        "short": "b473e5d",
-        "full": "b473e5d7964b7ef95fe3deb39e1c9f377ce66f33",
-        "source": "planning/MILESTONE_STATUS.md:224",
-        "subject": "build(core): prepare 0.6.0 release metadata",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37126197246,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37126197246",
-            "head_sha": "a4c41aa586efc2da027b6f8401d6bb5dcf421a3f",
-            "event": "push",
-            "commits_after": 3,
-            "task_files_changed_after": []
-          }
-        ]
-      }
-    ],
-    "KF-CORE-R07-001": [
-      {
-        "short": "6518240",
-        "full": "6518240785ca784767794e1959a100143d059b4a",
-        "source": "planning/CHANGELOG.md:146",
-        "subject": "docs(planning): record R07-001 evidence",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37138605338,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37138605338",
-            "head_sha": "424984f13aa44f2fe29c1a2601d4bfae4512d377",
-            "event": "push",
-            "commits_after": 24,
-            "task_files_changed_after": [
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 120,
+            "task_files_changed": [
               "planning/CHANGELOG.md",
               "planning/MASTER_TRACKER.md",
               "planning/MILESTONE_STATUS.md",
               "planning/TASKS.md",
-              "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-001/ACCEPTANCE_CRITERIA.md"
-            ]
+              "planning/milestones/KF-CORE-R06/tasks/KF-CORE-R06-007/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
           }
-        ]
-      },
+        }
+      }
+    ],
+    "KF-CORE-R07-001": [
       {
         "short": "6849a73",
         "full": "6849a73a13435d38a36e5a97d3f682a8c062c123",
@@ -1428,7 +2166,62 @@
               "include/kritva/core/runtime/component_statistics.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 115,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/core.hpp",
+              "include/kritva/core/runtime/component_observation.hpp",
+              "include/kritva/core/runtime/component_statistics.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
+      {
+        "short": "6518240",
+        "full": "6518240785ca784767794e1959a100143d059b4a",
+        "source": "planning/CHANGELOG.md:146",
+        "subject": "docs(planning): record R07-001 evidence",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37138605338,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37138605338",
+            "head_sha": "424984f13aa44f2fe29c1a2601d4bfae4512d377",
+            "event": "push",
+            "commits_after": 24,
+            "task_files_changed_after": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-001/ACCEPTANCE_CRITERIA.md"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 114,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-001/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R07-002": [
@@ -1455,7 +2248,21 @@
               "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-002/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 111,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-002/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "61e0067",
@@ -1478,10 +2285,58 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 112,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R07-003": [
+      {
+        "short": "56ff226",
+        "full": "56ff226bd156873646b6e30290ba4dc620a9894d",
+        "source": "planning/TASKS.md:89",
+        "subject": "feat(core): define component operational event contract",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37138605338,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37138605338",
+            "head_sha": "424984f13aa44f2fe29c1a2601d4bfae4512d377",
+            "event": "push",
+            "commits_after": 19,
+            "task_files_changed_after": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 109,
+            "task_files_changed": [
+              "API.md",
+              "ARCHITECTURE.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "871b878",
         "full": "871b878c23e9b75bb6da5554c5d7a60edbe29d0e",
@@ -1505,13 +2360,29 @@
               "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-003/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
-      },
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 108,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-003/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "KF-CORE-R07-004": [
       {
-        "short": "56ff226",
-        "full": "56ff226bd156873646b6e30290ba4dc620a9894d",
-        "source": "planning/TASKS.md:89",
-        "subject": "feat(core): define component operational event contract",
+        "short": "16654e9",
+        "full": "16654e92039ae869a25c99553241c3ed68305b47",
+        "source": "planning/TASKS.md:90",
+        "subject": "feat(core): define component statistics observation contract",
         "ancestor_of_origin_main": true,
         "ci_runs": [],
         "covering_runs": [
@@ -1521,17 +2392,27 @@
             "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37138605338",
             "head_sha": "424984f13aa44f2fe29c1a2601d4bfae4512d377",
             "event": "push",
-            "commits_after": 19,
+            "commits_after": 16,
             "task_files_changed_after": [
               "API.md",
               "CMakeLists.txt",
               "REQUIREMENTS.md"
             ]
           }
-        ]
-      }
-    ],
-    "KF-CORE-R07-004": [
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 106,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "e354dac",
         "full": "e354dacc48530eb22994ac0f292bcc4084acbffb",
@@ -1555,30 +2436,21 @@
               "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-004/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
-      },
-      {
-        "short": "16654e9",
-        "full": "16654e92039ae869a25c99553241c3ed68305b47",
-        "source": "planning/TASKS.md:90",
-        "subject": "feat(core): define component statistics observation contract",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37138605338,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37138605338",
-            "head_sha": "424984f13aa44f2fe29c1a2601d4bfae4512d377",
-            "event": "push",
-            "commits_after": 16,
-            "task_files_changed_after": [
-              "API.md",
-              "CMakeLists.txt",
-              "REQUIREMENTS.md"
-            ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 105,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-004/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       }
     ],
     "KF-CORE-R07-005": [
@@ -1605,7 +2477,21 @@
               "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-005/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 100,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-005/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "0b1bd1d",
@@ -1628,33 +2514,22 @@
               "TESTING.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 101,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R07-006": [
-      {
-        "short": "3f524cd",
-        "full": "3f524cd71005d9f715af11a406e970269b9aa7f0",
-        "source": "planning/TASKS.md:93",
-        "subject": "test(core): add component operational integration tests",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37138605338,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37138605338",
-            "head_sha": "424984f13aa44f2fe29c1a2601d4bfae4512d377",
-            "event": "push",
-            "commits_after": 8,
-            "task_files_changed_after": [
-              "API.md",
-              "CMakeLists.txt",
-              "REQUIREMENTS.md"
-            ]
-          }
-        ]
-      },
       {
         "short": "ceffe92",
         "full": "ceffe925bb5144128ec7ef62519733bb12fb3092",
@@ -1678,7 +2553,57 @@
               "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-006/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 97,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-006/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
+      {
+        "short": "3f524cd",
+        "full": "3f524cd71005d9f715af11a406e970269b9aa7f0",
+        "source": "planning/TASKS.md:93",
+        "subject": "test(core): add component operational integration tests",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37138605338,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37138605338",
+            "head_sha": "424984f13aa44f2fe29c1a2601d4bfae4512d377",
+            "event": "push",
+            "commits_after": 8,
+            "task_files_changed_after": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 98,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R07-007": [
@@ -1699,7 +2624,24 @@
             "commits_after": 3,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 93,
+            "task_files_changed": [
+              "API.md",
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "README.md",
+              "REQUIREMENTS.md",
+              "VERSION",
+              "tests/install/consumer/CMakeLists.txt",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "86dfcb9",
@@ -1724,7 +2666,21 @@
               "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-007/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 92,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R07/tasks/KF-CORE-R07-007/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R08-001": [
@@ -1750,7 +2706,20 @@
               "include/kritva/core/configuration/configuration.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 86,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/configuration/configuration.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "bb3752a",
@@ -1775,34 +2744,24 @@
               "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-001/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 85,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-001/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R08-002": [
-      {
-        "short": "6efeaac",
-        "full": "6efeaacf2d38cbce63e489ebdcbd9b7ec87ce994",
-        "source": "planning/TASKS.md:139",
-        "subject": "feat(core): define configuration ownership and atomic application",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37168945478,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37168945478",
-            "head_sha": "cbbec8156050d6b14269eb3a8a13823a8a39d243",
-            "event": "push",
-            "commits_after": 22,
-            "task_files_changed_after": [
-              "API.md",
-              "CMakeLists.txt",
-              "REQUIREMENTS.md",
-              "include/kritva/core/configuration/configuration.hpp"
-            ]
-          }
-        ]
-      },
       {
         "short": "6aab91b",
         "full": "6aab91bfb8d1b24a141bfb08829778a41c3e7c72",
@@ -1826,10 +2785,96 @@
               "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-002/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 82,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-002/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
+      {
+        "short": "6efeaac",
+        "full": "6efeaacf2d38cbce63e489ebdcbd9b7ec87ce994",
+        "source": "planning/TASKS.md:139",
+        "subject": "feat(core): define configuration ownership and atomic application",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37168945478,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37168945478",
+            "head_sha": "cbbec8156050d6b14269eb3a8a13823a8a39d243",
+            "event": "push",
+            "commits_after": 22,
+            "task_files_changed_after": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/configuration/configuration.hpp"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 83,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/configuration/configuration.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R08-003": [
+      {
+        "short": "bdb4b93",
+        "full": "bdb4b93b6e0543ab3e86c5a66c66e90a13ef229f",
+        "source": "planning/TASKS.md:140",
+        "subject": "feat(core): define configuration version and validation contract",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37168945478,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37168945478",
+            "head_sha": "cbbec8156050d6b14269eb3a8a13823a8a39d243",
+            "event": "push",
+            "commits_after": 19,
+            "task_files_changed_after": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 80,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "0ea3ea3",
         "full": "0ea3ea35298589757e38272d4b798c0fae968815",
@@ -1853,30 +2898,21 @@
               "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-003/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
-      },
-      {
-        "short": "bdb4b93",
-        "full": "bdb4b93b6e0543ab3e86c5a66c66e90a13ef229f",
-        "source": "planning/TASKS.md:140",
-        "subject": "feat(core): define configuration version and validation contract",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37168945478,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37168945478",
-            "head_sha": "cbbec8156050d6b14269eb3a8a13823a8a39d243",
-            "event": "push",
-            "commits_after": 19,
-            "task_files_changed_after": [
-              "API.md",
-              "CMakeLists.txt",
-              "REQUIREMENTS.md"
-            ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 79,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-003/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       }
     ],
     "KF-CORE-R08-004": [
@@ -1902,7 +2938,20 @@
               "tests/runtime/reference_configuration.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 75,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "tests/runtime/reference_configuration.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "2b93ad6",
@@ -1927,7 +2976,21 @@
               "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-004/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 74,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-004/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R08-005": [
@@ -1953,7 +3016,20 @@
               "TESTING.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 72,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "159b1bc",
@@ -1978,7 +3054,21 @@
               "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-005/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 71,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-005/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R08-006": [
@@ -2005,7 +3095,21 @@
               "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-006/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 66,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-006/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "94fad8e",
@@ -2028,10 +3132,59 @@
               "tests/install/consumer/main.cpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 67,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R08-007": [
+      {
+        "short": "1e7ba2b",
+        "full": "1e7ba2be545229f50fea5b0674c2a3b7674a5429",
+        "source": "planning/TASKS.md:146",
+        "subject": "build(core): prepare 0.8.0 release metadata",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37168945478,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37168945478",
+            "head_sha": "cbbec8156050d6b14269eb3a8a13823a8a39d243",
+            "event": "push",
+            "commits_after": 3,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 64,
+            "task_files_changed": [
+              "API.md",
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "README.md",
+              "REQUIREMENTS.md",
+              "VERSION",
+              "tests/install/consumer/CMakeLists.txt",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "1aa3611",
         "full": "1aa36111277c5be780ab1e2c4525fc3a1b592333",
@@ -2055,26 +3208,21 @@
               "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-007/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
-      },
-      {
-        "short": "1e7ba2b",
-        "full": "1e7ba2be545229f50fea5b0674c2a3b7674a5429",
-        "source": "planning/TASKS.md:146",
-        "subject": "build(core): prepare 0.8.0 release metadata",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37168945478,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37168945478",
-            "head_sha": "cbbec8156050d6b14269eb3a8a13823a8a39d243",
-            "event": "push",
-            "commits_after": 3,
-            "task_files_changed_after": []
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 63,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R08/tasks/KF-CORE-R08-007/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       }
     ],
     "KF-CORE-R09-001": [
@@ -2101,7 +3249,21 @@
               "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-001/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 56,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-001/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "c250c54",
@@ -2161,7 +3323,76 @@
               "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-007/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 58,
+            "task_files_changed": [
+              "REQUIREMENTS.md",
+              "docs/README.md",
+              "docs/api/API_GUIDELINES.md",
+              "docs/api/API_INDEX.md",
+              "docs/api/README.md",
+              "docs/api/capability/capability/CAPABILITY.md",
+              "docs/api/capability/capability/CAPABILITY_REQUIREMENTS.md",
+              "docs/api/capability/capability/CAPABILITY_SET.md",
+              "docs/api/configuration/configuration/CONFIGURATION.md",
+              "docs/api/configuration/configuration/CONFIGURATION_VERSION.md",
+              "docs/api/context/context/COMPONENT_CONTEXT.md",
+              "docs/api/context/context/PLATFORM_CONTEXT.md",
+              "docs/api/error/error/ERROR.md",
+              "docs/api/error/error/ERROR_CODES.md",
+              "docs/api/lifecycle/lifecycle/LIFECYCLE.md",
+              "docs/api/platform/platform/PLATFORM_ADAPTER.md",
+              "docs/api/platform/platform/PLATFORM_REQUIREMENTS.md",
+              "docs/api/runtime/runtime/COMPONENT.md",
+              "docs/api/runtime/runtime/DEPENDENCY_GRAPH.md",
+              "docs/api/runtime/runtime/RUNTIME.md",
+              "docs/security/SECURITY_ARCHITECTURE.md",
+              "docs/security/SECURITY_DECISIONS.md",
+              "docs/security/THREAT_MODEL.md",
+              "docs/security/TRUST_BOUNDARIES.md",
+              "planning/CHANGELOG.md",
+              "planning/GIT_COMMIT_STEP.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/README.md",
+              "planning/REVIEW_CHECKLIST.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R09/MILESTONE.md",
+              "planning/milestones/KF-CORE-R09/R09_CAPABILITY_API_REVIEW.md",
+              "planning/milestones/KF-CORE-R09/R09_INTEGRATION_FREEZE.md",
+              "planning/milestones/KF-CORE-R09/R09_RELEASE_GATE.md",
+              "planning/milestones/KF-CORE-R09/R09_SECURITY_REVIEW.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-001/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-002/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-003/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-004/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-005/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-006/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-007/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": [
+              "docs/api/capability/capability/CAPABILITY.md",
+              "docs/api/capability/capability/CAPABILITY_REQUIREMENTS.md",
+              "docs/api/capability/capability/CAPABILITY_SET.md",
+              "docs/api/configuration/configuration/CONFIGURATION.md",
+              "docs/api/configuration/configuration/CONFIGURATION_VERSION.md",
+              "docs/api/context/context/COMPONENT_CONTEXT.md",
+              "docs/api/context/context/PLATFORM_CONTEXT.md",
+              "docs/api/error/error/ERROR.md",
+              "docs/api/error/error/ERROR_CODES.md",
+              "docs/api/lifecycle/lifecycle/LIFECYCLE.md",
+              "docs/api/platform/platform/PLATFORM_ADAPTER.md",
+              "docs/api/platform/platform/PLATFORM_REQUIREMENTS.md",
+              "docs/api/runtime/runtime/COMPONENT.md",
+              "docs/api/runtime/runtime/DEPENDENCY_GRAPH.md",
+              "docs/api/runtime/runtime/RUNTIME.md"
+            ]
+          }
+        }
       },
       {
         "short": "4081dc0",
@@ -2184,7 +3415,19 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 57,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R09-002": [
@@ -2210,7 +3453,20 @@
               "include/kritva/core/capability/capability_set.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 54,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "include/kritva/core/capability/capability_set.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "7bcd90d",
@@ -2235,7 +3491,21 @@
               "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-002/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 53,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-002/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R09-003": [
@@ -2260,7 +3530,23 @@
               "docs/api/runtime/DEPENDENCY_GRAPH.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 51,
+            "task_files_changed": [
+              "docs/api/error/ERROR_CODES.md",
+              "docs/api/lifecycle/LIFECYCLE.md",
+              "docs/api/platform/PLATFORM_ADAPTER.md",
+              "docs/api/platform/PLATFORM_REQUIREMENTS.md",
+              "docs/api/runtime/COMPONENT.md",
+              "docs/api/runtime/DEPENDENCY_GRAPH.md",
+              "docs/api/runtime/RUNTIME.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "e53464a",
@@ -2285,7 +3571,21 @@
               "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-003/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 49,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-003/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "e91a51f",
@@ -2308,10 +3608,57 @@
               "REQUIREMENTS.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 50,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R09-004": [
+      {
+        "short": "2608795",
+        "full": "2608795c3e96f27b07428e5ce22570c671b5c683",
+        "source": "planning/TASKS.md:240",
+        "subject": "test(core): add capability contract reference harness",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37181311248,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37181311248",
+            "head_sha": "d72343a6ed6a0b0032655d83617b5f4493b36914",
+            "event": "push",
+            "commits_after": 14,
+            "task_files_changed_after": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 45,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "9d0a81d",
         "full": "9d0a81d0d7187e778c06ea0c1877dac737874a7e",
@@ -2335,57 +3682,24 @@
               "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-004/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
-      },
-      {
-        "short": "2608795",
-        "full": "2608795c3e96f27b07428e5ce22570c671b5c683",
-        "source": "planning/TASKS.md:240",
-        "subject": "test(core): add capability contract reference harness",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37181311248,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37181311248",
-            "head_sha": "d72343a6ed6a0b0032655d83617b5f4493b36914",
-            "event": "push",
-            "commits_after": 14,
-            "task_files_changed_after": [
-              "CMakeLists.txt",
-              "REQUIREMENTS.md",
-              "TESTING.md"
-            ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 44,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-004/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       }
     ],
     "KF-CORE-R09-005": [
-      {
-        "short": "0f6b6c3",
-        "full": "0f6b6c3b20c07f107ccde3f0237906e4df81e7ff",
-        "source": "planning/TASKS.md:241",
-        "subject": "test(core): add capability readiness lifecycle integration tests",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37181311248,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37181311248",
-            "head_sha": "d72343a6ed6a0b0032655d83617b5f4493b36914",
-            "event": "push",
-            "commits_after": 11,
-            "task_files_changed_after": [
-              "API.md",
-              "CMakeLists.txt",
-              "REQUIREMENTS.md",
-              "TESTING.md"
-            ]
-          }
-        ]
-      },
       {
         "short": "9a086ae",
         "full": "9a086ae3c94f99d36dc23c47152027961de5c0a0",
@@ -2409,10 +3723,106 @@
               "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-005/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 41,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-005/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
+      {
+        "short": "0f6b6c3",
+        "full": "0f6b6c3b20c07f107ccde3f0237906e4df81e7ff",
+        "source": "planning/TASKS.md:241",
+        "subject": "test(core): add capability readiness lifecycle integration tests",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37181311248,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37181311248",
+            "head_sha": "d72343a6ed6a0b0032655d83617b5f4493b36914",
+            "event": "push",
+            "commits_after": 11,
+            "task_files_changed_after": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 42,
+            "task_files_changed": [
+              "API.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R09-006": [
+      {
+        "short": "04f0859",
+        "full": "04f08597c7cc3074ecdd08e2315115cf43fdbed5",
+        "source": "planning/TASKS.md:243",
+        "subject": "test(core): validate R0.9 documentation security and boundaries",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37181311248,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37181311248",
+            "head_sha": "d72343a6ed6a0b0032655d83617b5f4493b36914",
+            "event": "push",
+            "commits_after": 6,
+            "task_files_changed_after": [
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "planning/milestones/KF-CORE-R09/R09_SECURITY_REVIEW.md",
+              "tests/install/consumer/main.cpp"
+            ]
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 37,
+            "task_files_changed": [
+              "CMakeLists.txt",
+              "Makefile",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "docs/api/API_INDEX.md",
+              "docs/api/README.md",
+              "docs/security/SECURITY_ARCHITECTURE.md",
+              "docs/security/SECURITY_DECISIONS.md",
+              "docs/security/THREAT_MODEL.md",
+              "docs/security/TRUST_BOUNDARIES.md",
+              "planning/milestones/KF-CORE-R09/R09_SECURITY_REVIEW.md",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
       {
         "short": "87a2960",
         "full": "87a29605db562f0562aac95835781c99eb654f9f",
@@ -2436,53 +3846,24 @@
               "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-006/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
-      },
-      {
-        "short": "04f0859",
-        "full": "04f08597c7cc3074ecdd08e2315115cf43fdbed5",
-        "source": "planning/TASKS.md:243",
-        "subject": "test(core): validate R0.9 documentation security and boundaries",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37181311248,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37181311248",
-            "head_sha": "d72343a6ed6a0b0032655d83617b5f4493b36914",
-            "event": "push",
-            "commits_after": 6,
-            "task_files_changed_after": [
-              "CMakeLists.txt",
-              "REQUIREMENTS.md",
-              "planning/milestones/KF-CORE-R09/R09_SECURITY_REVIEW.md",
-              "tests/install/consumer/main.cpp"
-            ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 36,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-006/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       }
     ],
     "KF-CORE-R09-007": [
-      {
-        "short": "ef14e99",
-        "full": "ef14e99e3ff76487c95644004816105ead803aaa",
-        "source": "planning/TASKS.md:244",
-        "subject": "build(core): prepare 0.9.0 release metadata",
-        "ancestor_of_origin_main": true,
-        "ci_runs": [],
-        "covering_runs": [
-          {
-            "workflow": "Kritva Core CI",
-            "run_id": 37181311248,
-            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37181311248",
-            "head_sha": "d72343a6ed6a0b0032655d83617b5f4493b36914",
-            "event": "push",
-            "commits_after": 3,
-            "task_files_changed_after": []
-          }
-        ]
-      },
       {
         "short": "683a3ce",
         "full": "683a3ce11fb4bc6aaaa2c23625bb307ee77df007",
@@ -2506,7 +3887,57 @@
               "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-007/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 33,
+            "task_files_changed": [
+              "planning/CHANGELOG.md",
+              "planning/MASTER_TRACKER.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/TASKS.md",
+              "planning/milestones/KF-CORE-R09/tasks/KF-CORE-R09-007/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
+      {
+        "short": "ef14e99",
+        "full": "ef14e99e3ff76487c95644004816105ead803aaa",
+        "source": "planning/TASKS.md:244",
+        "subject": "build(core): prepare 0.9.0 release metadata",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "Kritva Core CI",
+            "run_id": 37181311248,
+            "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37181311248",
+            "head_sha": "d72343a6ed6a0b0032655d83617b5f4493b36914",
+            "event": "push",
+            "commits_after": 3,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 34,
+            "task_files_changed": [
+              "API.md",
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "README.md",
+              "REQUIREMENTS.md",
+              "VERSION",
+              "tests/install/consumer/CMakeLists.txt",
+              "tests/install/consumer/main.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R10-001": [
@@ -2536,7 +3967,24 @@
               "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-001/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 25,
+            "task_files_changed": [
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "Makefile",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "docs/api/README.md",
+              "docs/compatibility/API_INVENTORY.md",
+              "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-001/ACCEPTANCE_CRITERIA.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R10-002": [
@@ -2567,7 +4015,25 @@
               "scripts/audit/check_compat_policy.py"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 22,
+            "task_files_changed": [
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "Makefile",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "docs/api/API_GUIDELINES.md",
+              "docs/api/README.md",
+              "docs/compatibility/COMPATIBILITY_POLICY.md",
+              "scripts/audit/check_compat_policy.py"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R10-003": [
@@ -2596,7 +4062,23 @@
               "scripts/audit/check_compat_policy.py"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 19,
+            "task_files_changed": [
+              "CHANGELOG.md",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "docs/api/API_GUIDELINES.md",
+              "docs/api/README.md",
+              "docs/compatibility/ABI_POLICY.md",
+              "scripts/audit/check_compat_policy.py"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R10-004": [
@@ -2626,7 +4108,24 @@
               "scripts/audit/check_compat_policy.py"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 16,
+            "task_files_changed": [
+              "CHANGELOG.md",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "docs/api/API_GUIDELINES.md",
+              "docs/api/README.md",
+              "docs/compatibility/COMPATIBILITY_POLICY.md",
+              "docs/compatibility/VERSIONING_POLICY.md",
+              "scripts/audit/check_compat_policy.py"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R10-005": [
@@ -2653,7 +4152,21 @@
               "scripts/audit/check_compat_policy.py"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 14,
+            "task_files_changed": [
+              "CHANGELOG.md",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "docs/compatibility/DEPRECATION_POLICY.md",
+              "scripts/audit/check_compat_policy.py"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R10-006": [
@@ -2680,7 +4193,21 @@
               "TESTING.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 10,
+            "task_files_changed": [
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "Makefile",
+              "REQUIREMENTS.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R10-007": [
@@ -2704,7 +4231,18 @@
               "TESTING.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 7,
+            "task_files_changed": [
+              "CHANGELOG.md",
+              "TESTING.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "f212e46",
@@ -2730,7 +4268,22 @@
               "tests/install/consumer/CMakeLists.txt"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 8,
+            "task_files_changed": [
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "TESTING.md",
+              "scripts/audit/check_compat_policy.py",
+              "tests/install/consumer/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R10-008": [
@@ -2757,7 +4310,21 @@
               "planning/milestones/KF-CORE-R10/R10_SECURITY_REVIEW.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 4,
+            "task_files_changed": [
+              "API.md",
+              "CHANGELOG.md",
+              "CMakeLists.txt",
+              "REQUIREMENTS.md",
+              "planning/milestones/KF-CORE-R10/R10_SECURITY_REVIEW.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "KF-CORE-R10-009": [
@@ -2778,7 +4345,15 @@
             "commits_after": 2,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "4acce3b60833abfe33168c4766405ab86ea73edc": {
+            "state": "DESCENDANT",
+            "commits_after": 2,
+            "task_files_changed": [],
+            "task_files_deleted": []
+          }
+        }
       }
     ]
   },

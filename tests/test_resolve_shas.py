@@ -78,6 +78,15 @@ class Resolve(unittest.TestCase):
             later = json.loads(out.read_text())["tasks"]["I2-002"][0]["covering_runs"]
             self.assertEqual([c["head_sha"] for c in later], [c3])  # run on older c2 must NOT cover task at c3
             self.assertEqual(later[0]["commits_after"], 0)
+            p2 = subprocess.run([sys.executable, str(ROOT / "tools/resolve_shas.py"), "--repo", str(r), "--against", c3,
+                                 "--against", c1[:7], "--out", str(out)], capture_output=True, text=True, env=env)
+            self.assertEqual(p2.returncode, 2)  # short SHAs are refused, not guessed
+            subprocess.run([sys.executable, str(ROOT / "tools/resolve_shas.py"), "--repo", str(r), "--against", c3,
+                            "--out", str(out)], capture_output=True, text=True, env=env, check=True)
+            ag = json.loads(out.read_text())["tasks"]["I2-001"][0]["against"][c3]
+            self.assertEqual(ag["state"], "DESCENDANT")
+            self.assertEqual(ag["task_files_changed"], ["t.txt"])
+            self.assertEqual(ag["task_files_deleted"], [])
             self.assertTrue(all(Path(x).resolve() == r.resolve() for x in cwdlog.read_text().split()))
 
 

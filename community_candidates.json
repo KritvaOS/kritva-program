@@ -32,7 +32,30 @@
               "tests/runtime/sanity/run_demo_sanity.cmake"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 43,
+            "task_files_changed": [
+              "examples/CMakeLists.txt",
+              "examples/kritva_demo/CMakeLists.txt",
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/CMakeLists.txt",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/runtime_host_integration_test.cpp",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/run_demo_sanity.cmake",
+              "tests/runtime/unit/runtime_host_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I2-002": [
@@ -61,7 +84,26 @@
               "tests/runtime/sanity/run_composition_sanity.cmake"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 42,
+            "task_files_changed": [
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/component_composition_integration_test.cpp",
+              "tests/runtime/sanity/composition_sanity.cpp",
+              "tests/runtime/sanity/run_composition_sanity.cmake",
+              "tests/runtime/unit/component_composition_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I2-003": [
@@ -94,7 +136,31 @@
               "tests/runtime/sanity/run_configuration_sanity.cmake"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 41,
+            "task_files_changed": [
+              "examples/kritva_demo/kritva_demo.conf",
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/CMakeLists.txt",
+              "runtime/include/kritva/runtime/configuration.hpp",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/configuration.cpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/configuration_integration_test.cpp",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/run_configuration_sanity.cmake",
+              "tests/runtime/unit/configuration_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I2-004": [
@@ -125,7 +191,28 @@
               "tests/runtime/probe_component.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 40,
+            "task_files_changed": [
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/include/kritva/runtime/observation.hpp",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/observation_integration_test.cpp",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/observation_sanity.cpp",
+              "tests/runtime/unit/observation_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I2-005": [
@@ -153,7 +240,27 @@
               "tests/runtime/sanity/run_failure_sanity.cmake"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 39,
+            "task_files_changed": [
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/failure_handling_integration_test.cpp",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/failure_sanity.cpp",
+              "tests/runtime/sanity/run_failure_sanity.cmake",
+              "tests/runtime/unit/failure_handling_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I2-006": [
@@ -180,7 +287,26 @@
               "tests/runtime/sanity/run_demo_reference_sanity.cmake"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 38,
+            "task_files_changed": [
+              "examples/kritva_demo/demo_app.cpp",
+              "examples/kritva_demo/demo_app.hpp",
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/demo_application_test.cpp",
+              "tests/runtime/sanity/run_configuration_sanity.cmake",
+              "tests/runtime/sanity/run_demo_reference_sanity.cmake",
+              "tests/runtime/unit/demo_components_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I3-001": [
@@ -218,7 +344,33 @@
               "tests/hardware/unit/endpoint_test.cpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 31,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/CMakeLists.txt",
+              "hardware/abstraction/CMakeLists.txt",
+              "hardware/abstraction/include/kritva/hardware/device.hpp",
+              "hardware/abstraction/include/kritva/hardware/endpoint.hpp",
+              "hardware/abstraction/include/kritva/hardware/sensor_endpoint.hpp",
+              "hardware/abstraction/src/device.cpp",
+              "hardware/abstraction/src/endpoint.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-001/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/conformance/endpoint_conformance.hpp",
+              "tests/hardware/support/test_endpoints.hpp",
+              "tests/hardware/unit/endpoint_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I3-002": [
@@ -247,7 +399,24 @@
               "tests/hardware/support/test_endpoints.hpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 30,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/CMakeLists.txt",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-002/ACCEPTANCE_CRITERIA.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/support/test_endpoints.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I3-003": [
@@ -283,7 +452,31 @@
               "tests/hardware/unit/device_manager_test.cpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 29,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/CMakeLists.txt",
+              "hardware/abstraction/include/kritva/hardware/device_manager.hpp",
+              "hardware/abstraction/include/kritva/hardware/endpoint.hpp",
+              "hardware/abstraction/src/device_manager.cpp",
+              "hardware/abstraction/src/endpoint.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-003/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/conformance/endpoint_conformance.hpp",
+              "tests/hardware/support/test_endpoints.hpp",
+              "tests/hardware/unit/device_manager_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I3-004": [
@@ -310,7 +503,22 @@
               "tests/CMakeLists.txt"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 28,
+            "task_files_changed": [
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/include/kritva/hardware/samples.hpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-004/ACCEPTANCE_CRITERIA.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I3-005": [
@@ -341,7 +549,27 @@
               "tests/hardware/unit/mock_test.cpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 27,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/CMakeLists.txt",
+              "hardware/mock/include/kritva/hardware/mock/mock_motor.hpp",
+              "hardware/mock/src/mock_motor.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-005/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/unit/mock_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I3-006": [
@@ -374,7 +602,28 @@
               "tests/hardware/unit/diagnostics_test.cpp"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 26,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/include/kritva/hardware/device_manager.hpp",
+              "hardware/abstraction/include/kritva/hardware/diagnostics.hpp",
+              "hardware/abstraction/src/device_manager.cpp",
+              "hardware/abstraction/src/diagnostics.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-006/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/unit/diagnostics_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I3-007": [
@@ -400,7 +649,23 @@
               "planning/milestones/KOS-I3/I3-007/ACCEPTANCE_CRITERIA.md"
             ]
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 25,
+            "task_files_changed": [
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "examples/CMakeLists.txt",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-007/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I4-001": [
@@ -442,7 +707,17 @@
             "commits_after": 0,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 14,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_PROTOCOL.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I4-002": [
@@ -484,7 +759,23 @@
             "commits_after": 0,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 13,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_TRANSPORT_ARCHITECTURE.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/transport/CMakeLists.txt",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/I4-002/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
       },
       {
         "short": "15c1781",
@@ -524,7 +815,26 @@
             "commits_after": 0,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 12,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_TRANSPORT_ARCHITECTURE.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/transport/include/kritva/hardware/transport/transport.hpp",
+              "hardware/transport/src/simulated_transport.cpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/I4-003/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/integration/frame_transport_test.cpp",
+              "tests/hardware/unit/transport_hygiene_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I4-003": [
@@ -566,7 +876,15 @@
             "commits_after": 0,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 11,
+            "task_files_changed": [],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I4-004": [
@@ -608,7 +926,30 @@
             "commits_after": 0,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 10,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_PROTOCOL.md",
+              "docs/architecture/KOS-I4_REMOTE_ARCHITECTURE.md",
+              "docs/requirements/KOS-I4/REQUIREMENTS.md",
+              "docs/requirements/KOS-I4/SR.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/remote/CMakeLists.txt",
+              "hardware/remote/include/kritva/hardware/remote/edge_host.hpp",
+              "hardware/remote/src/edge_host.cpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/integration/edge_transport_test.cpp",
+              "tests/hardware/support/edge_rig.hpp",
+              "tests/hardware/unit/remote_hygiene_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I4-005": [
@@ -650,7 +991,33 @@
             "commits_after": 0,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 9,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_REMOTE_ARCHITECTURE.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/remote/CMakeLists.txt",
+              "hardware/remote/include/kritva/hardware/remote/remote_endpoint.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_node.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_session.hpp",
+              "hardware/remote/src/remote_endpoint.cpp",
+              "hardware/remote/src/remote_node.cpp",
+              "hardware/remote/src/remote_session.cpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/I4-006/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/integration/nexus_edge_test.cpp",
+              "tests/hardware/unit/remote_endpoint_test.cpp",
+              "tests/hardware/unit/remote_hygiene_test.cpp",
+              "tests/hardware/unit/remote_session_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I4-006": [
@@ -692,7 +1059,27 @@
             "commits_after": 0,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 8,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_REMOTE_ARCHITECTURE.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/remote/include/kritva/hardware/remote/edge_host.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_endpoint.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_node.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_session.hpp",
+              "hardware/remote/src/remote_node.cpp",
+              "hardware/remote/src/remote_session.cpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I4-007": [
@@ -734,7 +1121,24 @@
             "commits_after": 0,
             "task_files_changed_after": []
           }
-        ]
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 7,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_REMOTE_ARCHITECTURE.md",
+              "docs/requirements/KOS-I4/DR.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/remote/include/kritva/hardware/remote/remote_diagnostics.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_node.hpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
       }
     ],
     "I4-008": [
@@ -746,16 +1150,6 @@
         "ancestor_of_origin_main": true,
         "ci_runs": [
           {
-            "conclusion": "cancelled",
-            "createdAt": "2026-10-07T02:22:02Z",
-            "databaseId": 37561636952,
-            "event": "push",
-            "headSha": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
-            "status": "completed",
-            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952",
-            "workflowName": "KritvaOS CI"
-          },
-          {
             "conclusion": "success",
             "createdAt": "2026-10-07T02:22:02Z",
             "databaseId": 37561636953,
@@ -764,28 +1158,54 @@
             "status": "completed",
             "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636953",
             "workflowName": "Source Header Check"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-07T02:22:02Z",
+            "databaseId": 37561636952,
+            "event": "push",
+            "headSha": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952",
+            "workflowName": "KritvaOS CI"
           }
         ],
         "covering_runs": [
           {
             "workflow": "KritvaOS CI",
-            "run_id": 37561750065,
-            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561750065",
-            "head_sha": "8667f57504d3a8f7e226e999a60f95a22e08a2de",
+            "run_id": 37561636952,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952",
+            "head_sha": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
             "event": "push",
-            "commits_after": 1,
-            "task_files_changed_after": [
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 6,
+            "task_files_changed": [
               "planning/milestones/KOS-I4/CHANGELOG.md",
               "planning/milestones/KOS-I4/TASKS.md"
-            ]
+            ],
+            "task_files_deleted": []
           }
-        ]
+        }
       }
     ]
   },
   "unresolved_or_ambiguous": [],
   "tags": {},
   "milestone_level_commits": {
+    "39780ccb8f93719471ee982299f6f43f2cee6196": {
+      "short": "39780cc",
+      "subject": "KOS-I3: implement device and endpoint contracts",
+      "sources": [
+        "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
     "97ab51870a122019a80acf7507bd916a4bef3a3b": {
       "short": "97ab518",
       "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
@@ -795,9 +1215,9 @@
         "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
       ]
     },
-    "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce": {
-      "short": "cd1a35c",
-      "subject": "KOS-I3: implement mock device and endpoint library",
+    "46b91fabac8bd4a9df00797ca23313717127c325": {
+      "short": "46b91fa",
+      "subject": "KOS-I3: implement observation diagnostics and fault handling",
       "sources": [
         "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
         "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
@@ -811,9 +1231,9 @@
         "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
       ]
     },
-    "39780ccb8f93719471ee982299f6f43f2cee6196": {
-      "short": "39780cc",
-      "subject": "KOS-I3: implement device and endpoint contracts",
+    "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce": {
+      "short": "cd1a35c",
+      "subject": "KOS-I3: implement mock device and endpoint library",
       "sources": [
         "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
         "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
@@ -835,31 +1255,9 @@
         "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
       ]
     },
-    "46b91fabac8bd4a9df00797ca23313717127c325": {
-      "short": "46b91fa",
-      "subject": "KOS-I3: implement observation diagnostics and fault handling",
-      "sources": [
-        "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
-        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
-      ]
-    },
-    "ecc0ca37eb5b6d93db299218bf3485688b309420": {
-      "short": "ecc0ca3",
-      "subject": "KOS-I3: close milestone acceptance record",
-      "sources": [
-        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
-      ]
-    },
     "e61814e4ded6dca1b526a6e037a2bf0356a06752": {
       "short": "e61814e",
       "subject": "KOS-I3: align final planning records",
-      "sources": [
-        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
-      ]
-    },
-    "9912e3cf81f50da99edc4e8885130ad79ec6b9d6": {
-      "short": "9912e3c",
-      "subject": "KOS-I3: address re-audit findings",
       "sources": [
         "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
       ]
@@ -871,6 +1269,27 @@
         "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
       ]
     },
+    "9912e3cf81f50da99edc4e8885130ad79ec6b9d6": {
+      "short": "9912e3c",
+      "subject": "KOS-I3: address re-audit findings",
+      "sources": [
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "ecc0ca37eb5b6d93db299218bf3485688b309420": {
+      "short": "ecc0ca3",
+      "subject": "KOS-I3: close milestone acceptance record",
+      "sources": [
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a": {
+      "short": "c40fbb2",
+      "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+      "sources": [
+        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
+      ]
+    },
     "cd51be85152ef6014796d1856fb0e7e962e28ccf": {
       "short": "cd51be8",
       "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
@@ -879,9 +1298,9 @@
         "planning/milestones/KOS-I4/TASKS.md:20"
       ]
     },
-    "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a": {
-      "short": "c40fbb2",
-      "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+    "94aa01d8ed99561acf77020257e6c517b15a369d": {
+      "short": "94aa01d",
+      "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
       "sources": [
         "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
       ]
@@ -893,9 +1312,9 @@
         "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
       ]
     },
-    "94aa01d8ed99561acf77020257e6c517b15a369d": {
-      "short": "94aa01d",
-      "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+    "d2f893622db2479efe37ca8bbbdcab37d8f151c3": {
+      "short": "d2f8936",
+      "subject": "KOS-I4 I4-001 admit responses by correlation",
       "sources": [
         "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
       ]
@@ -908,13 +1327,6 @@
         "planning/milestones/KOS-I4/CHANGELOG.md:3"
       ]
     },
-    "a6905207441abdc13ec6238272e7681093c50180": {
-      "short": "a690520",
-      "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
-      "sources": [
-        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
-      ]
-    },
     "52218f484f29ea58813b848008d187aeab98a0bf": {
       "short": "52218f4",
       "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
@@ -922,9 +1334,9 @@
         "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
       ]
     },
-    "d2f893622db2479efe37ca8bbbdcab37d8f151c3": {
-      "short": "d2f8936",
-      "subject": "KOS-I4 I4-001 admit responses by correlation",
+    "a6905207441abdc13ec6238272e7681093c50180": {
+      "short": "a690520",
+      "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
       "sources": [
         "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
       ]
