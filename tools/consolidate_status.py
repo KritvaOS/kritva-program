@@ -390,6 +390,70 @@ def validate_baseline(base, authorized, root):
     return e
 
 
+GATE_CLOSURES_FILE = "gate_closures.json"
+CLOSURE_REQ = {"closure_id", "gate_id", "disposition", "evidence_commit", "closed_at", "closed_by", "reviewer",
+               "scope_reviewed", "findings", "limitations", "rationale"}
+CLOSURE_KEYS = CLOSURE_REQ | {"evidence_refs", "supersedes", "criteria_ref"}
+
+
+def validate_closures(ledger, gates, authorized):
+    """Validate the append-only gate-closure ledger. Returns (errors, effective closure per gate).
+
+    The LAST record for a gate wins: CLOSED closes it, REOPENED re-opens it. Baseline gates stay as frozen;
+    closure is a separate owner decision, like an approval.
+    """
+    e, by_id, eff = [], set(), {}
+    gmap = {g["gate_id"]: g for g in gates}
+    for c in ledger.get("closures", []):
+        cid = c.get("closure_id", "?")
+        if not CLOSURE_REQ <= set(c) or set(c) - CLOSURE_KEYS:
+            e.append(f"closure {cid}: malformed record")
+            continue
+        if cid in by_id:
+            e.append(f"closure {cid}: duplicate closure_id")
+            continue
+        by_id.add(cid)
+        g = gmap.get(c["gate_id"])
+        if g is None:
+            e.append(f"closure {cid}: unknown gate {c['gate_id']!r}")
+            continue
+        if c["disposition"] not in ("CLOSED", "REOPENED"):
+            e.append(f"closure {cid}: disposition must be CLOSED or REOPENED")
+            continue
+        n_before = len(e)
+        if c["closed_by"] not in authorized:
+            e.append(f"closure {cid}: closed_by {c['closed_by']!r} is not an authorized approver")
+        if c["disposition"] == "CLOSED" and not SHA.match(str(c["evidence_commit"] or "")):
+            e.append(f"closure {cid}: CLOSED requires a 40-hex evidence_commit (the commit reviewed)")
+        try:
+            parse_ts(c["closed_at"])
+        except (ValueError, AttributeError, TypeError):
+            e.append(f"closure {cid}: closed_at is not ISO-8601")
+        rv = c["reviewer"]
+        if not isinstance(rv, dict) or not str(rv.get("name", "")).strip() or not str(rv.get("role", "")).strip():
+            e.append(f"closure {cid}: reviewer needs a name and a role")
+        for k in ("findings", "limitations", "rationale"):
+            if not str(c[k]).strip():
+                e.append(f"closure {cid}: {k} must be stated (say 'none' or 'not provided' explicitly)")
+        sr, need = c["scope_reviewed"], g["scope"]
+        if not isinstance(sr, dict) or not set(need.get("milestone_ids", [])) <= set(sr.get("milestone_ids", [])) \
+                or not set(need.get("task_ids", [])) <= set(sr.get("task_ids", [])):
+            e.append(f"closure {cid}: scope_reviewed does not cover the gate's scope")
+        if len(e) == n_before:  # an invalid record never takes effect
+            eff[c["gate_id"]] = c
+    return e, {k: v for k, v in eff.items() if v["disposition"] == "CLOSED"}
+
+
+def effective_gates(gates, closures):
+    """Gates as they stand now: baseline records, with CLOSED applied from the closure ledger."""
+    out = []
+    for g in gates:
+        c = closures.get(g["gate_id"])
+        out.append(dict(g, status="CLOSED", evidence_commit=c["evidence_commit"], closed_at=c["closed_at"],
+                        closed_by=c["closed_by"], closure_id=c["closure_id"]) if c else g)
+    return out
+
+
 def gates_for(task, gates):
     """OPEN gates that block TASK_CREDIT for this task."""
     out = []
@@ -613,10 +677,12 @@ def render(c):
         L.append("No approved baseline tasks yet (task IDs and weights pending, see D-007).")
     L += ["", "## Gates", ""]
     if c["gates"]:
-        L += ["| Gate | Status | Blocks | Scope | Owner |", "|---|---|---|---|---|"]
+        L += ["| Gate | Status | Blocks | Scope | Owner | Closure |", "|---|---|---|---|---|---|"]
         for g in c["gates"]:
             sc = ", ".join(g["scope"].get("milestone_ids", []) + g["scope"].get("task_ids", []))
-            L.append(f"| {g['gate_id']} | {g['status']} | {', '.join(g['blocking_effect'])} | {sc} | {g.get('owner', '-')} |")
+            cl = (f"{g['closure_id']}: {g['closed_at'][:10]} by {g['closed_by']}, reviewed {g['evidence_commit'][:7]}"
+                  if g["status"] == "CLOSED" else "-")
+            L.append(f"| {g['gate_id']} | {g['status']} | {', '.join(g['blocking_effect'])} | {sc} | {g.get('owner', '-')} | {cl} |")
     else:
         L.append("No gates recorded.")
     if c["evidence_health"]:
@@ -744,6 +810,12 @@ def main():
     errors += [f"baseline.json: {x}" for x in validate_baseline(base, authorized, root)]
     aerrs, effective = validate_approvals(ledger, base_tasks, base["baseline_version"])
     errors += [f"approvals.json: {x}" for x in aerrs]
+    cpath = root / TRACK / GATE_CLOSURES_FILE
+    cledger = json.loads(cpath.read_text(encoding="utf-8")) if cpath.exists() else {"closures": []}
+    cerrs, closures = validate_closures(cledger, base.get("gates", []), authorized)
+    errors += [f"{GATE_CLOSURES_FILE}: {x}" for x in cerrs]
+    gates = effective_gates(base.get("gates", []), closures)
+    base_eff = {**base, "gates": gates}
 
     reports, out_ws, claimed = {}, [], {}
     for ws_id in sorted(reg):
@@ -790,9 +862,8 @@ def main():
     require_vr = bool(cfg.get("require_run_verification"))
     emap_path = root / TRACK / "evidence_map_proposal.json"
     emap = {r["task_id"]: r for r in json.loads(emap_path.read_text(encoding="utf-8")).get("rows", [])} if emap_path.exists() else {}
-    tasks, prog, cwarn = compute(base, reports, effective, reg, vr, require_vr, emap)
+    tasks, prog, cwarn = compute(base_eff, reports, effective, reg, vr, require_vr, emap)
     warnings += cwarn
-    gates = base.get("gates", [])
     c = {"baseline_version": base["baseline_version"], "baseline_approved": bool(base.get("baseline_approved")),
          "progress": prog, "measures": measures(tasks, gates), "workstreams": out_ws, "tasks": tasks,
          "require_run_verification": require_vr, "generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),

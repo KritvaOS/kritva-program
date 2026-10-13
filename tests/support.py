@@ -27,6 +27,7 @@ def make_root(d, approve=True, real=False):
     cfg.pop("require_run_verification", None)
     cfgp.write_text(json.dumps(cfg))
     (r / "v2/tracking/run_verification.json").unlink(missing_ok=True)
+    (r / "v2/tracking/gate_closures.json").unlink(missing_ok=True)  # tests start with every gate as frozen (OPEN)
     # tests start from an EMPTY approval ledger, whatever the real one holds
     (r / "v2/tracking/approvals.json").write_text(json.dumps({"authorized_approvers": ["Dinesh"], "approvals": []}))
     bdir, v0 = r / "v2/tracking/baselines", r / "v2/tracking/baselines/baseline_v0.json"
