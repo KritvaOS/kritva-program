@@ -1,4 +1,4 @@
-"""Shared helpers: build a scratch copy of the repo with an APPROVED baseline (via the real freeze tool)."""
+"""Shared helpers: build a scratch copy of the repo with an APPROVED baseline (via the real freeze tool) and an empty approval ledger."""
 import copy
 import datetime
 import json
@@ -21,6 +21,8 @@ def make_root(d, approve=True, real=False):
         shutil.copytree(ROOT / sub, r / sub)
     if real:
         return r
+    # tests start from an EMPTY approval ledger, whatever the real one holds
+    (r / "v2/tracking/approvals.json").write_text(json.dumps({"authorized_approvers": ["Dinesh"], "approvals": []}))
     bdir, v0 = r / "v2/tracking/baselines", r / "v2/tracking/baselines/baseline_v0.json"
     if v0.exists():
         shutil.copy(v0, r / "v2/tracking/baseline.json")
