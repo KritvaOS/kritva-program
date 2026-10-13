@@ -4,9 +4,9 @@
 
 ## Summary
 
-- Baseline version: 0 (DRAFT, not approved)
-- Accepted progress: N/A (no approved baseline weights)
-- Execution reported complete: 0/30 tasks (repo-reported; not acceptance)
+- Baseline version: 1 (APPROVED)
+- Accepted progress: 0.0% (0/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
+- Execution reported complete: 9/30 tasks (repo-reported; not acceptance)
 - Evidence coverage: 0/30 tasks with verified evidence
 - Release readiness: NOT_READY (open release gates: GATE-KOS-CI-001, GATE-KOS-I3-SAFETY, GATE-KOS-I4-SAFETY; uncredited tasks: 30)
 - Schedule and effort: NOT TRACKED here (separate from progress; no dates or actuals approved)
@@ -15,9 +15,9 @@
 
 | Workstream | Repo | Source state | Tasks reported | Commit |
 |---|---|---|---|---|
-| COMMUNITY | KritvaOS/kritvaos-community | UNVERIFIED | 0 | ------- |
+| COMMUNITY | KritvaOS/kritvaos-community | OK | 21 | aaaaaaa |
 | CONTROL_PLANE | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| CORE | KritvaOS/kritva-core | UNVERIFIED | 0 | ------- |
+| CORE | KritvaOS/kritva-core | OK | 9 | aaaaaaa |
 | EDUCATION_APPLICATIONS | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | INTEGRATION_SOFTWARE_VALIDATION | UNVERIFIED | UNVERIFIED | 0 | ------- |
 | MECHANICAL | UNVERIFIED | UNVERIFIED | 0 | ------- |
@@ -34,58 +34,58 @@
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| UNMAPPED | 30 | 0 | 0 | N/A | N/A |
+| UNMAPPED | 30 | 9 | 0 | 101 | 0 |
 
 ## Rollup by workstream
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| COMMUNITY | 21 | 0 | 0 | N/A | N/A |
-| CORE | 9 | 0 | 0 | N/A | N/A |
+| COMMUNITY | 21 | 0 | 0 | 71 | 0 |
+| CORE | 9 | 9 | 0 | 30 | 0 |
 
 ## Rollup by milestone
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| KF-CORE-R10 | 9 | 0 | 0 | N/A | N/A |
-| KOS-I2 | 6 | 0 | 0 | N/A | N/A |
-| KOS-I3 | 7 | 0 | 0 | N/A | N/A |
-| KOS-I4 | 8 | 0 | 0 | N/A | N/A |
+| KF-CORE-R10 | 9 | 9 | 0 | 30 | 0 |
+| KOS-I2 | 6 | 0 | 0 | 18 | 0 |
+| KOS-I3 | 7 | 0 | 0 | 23 | 0 |
+| KOS-I4 | 8 | 0 | 0 | 30 | 0 |
 
 ## Tasks
 
 | Task | Workstream | Weight | Execution | Acceptance | Credit | Why |
 |---|---|---|---|---|---|---|
-| I2-001 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I2-002 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I2-003 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I2-004 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I2-005 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I2-006 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I3-001 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I3-002 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I3-003 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I3-004 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I3-005 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I3-006 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I3-007 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I4-001 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I4-002 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I4-003 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I4-004 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I4-005 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I4-006 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I4-007 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| I4-008 | COMMUNITY | None | - | NOT_RUN | no | no current report from the owning workstream |
-| KF-CORE-R10-001 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
-| KF-CORE-R10-002 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
-| KF-CORE-R10-003 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
-| KF-CORE-R10-004 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
-| KF-CORE-R10-005 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
-| KF-CORE-R10-006 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
-| KF-CORE-R10-007 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
-| KF-CORE-R10-008 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
-| KF-CORE-R10-009 | CORE | None | - | NOT_RUN | no | no current report from the owning workstream |
+| I2-001 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I2-002 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I2-003 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I2-004 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I2-005 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I2-006 | COMMUNITY | 2 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I3-001 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I3-002 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I3-003 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I3-004 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I3-005 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I3-006 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I3-007 | COMMUNITY | 2 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I4-001 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I4-002 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I4-003 | COMMUNITY | 3 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I4-004 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I4-005 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I4-006 | COMMUNITY | 5 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I4-007 | COMMUNITY | 4 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| I4-008 | COMMUNITY | 2 | NOT_STARTED | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-001 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-002 | CORE | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-003 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-004 | CORE | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-005 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-006 | CORE | 4 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-007 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-008 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
+| KF-CORE-R10-009 | CORE | 3 | COMPLETE | NOT_RUN | no | no central approval recorded |
 
 ## Gates
 
@@ -95,43 +95,44 @@
 | GATE-KOS-I4-SAFETY | OPEN | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I4 | Dinesh |
 | GATE-KOS-CI-001 | OPEN | RELEASE | KOS-I4 | Dinesh |
 
+## Evidence health
+
+- I2-001: no verified evidence
+- I2-002: no verified evidence
+- I2-003: no verified evidence
+- I2-004: no verified evidence
+- I2-005: no verified evidence
+- I2-006: no verified evidence
+- I3-001: no verified evidence
+- I3-002: no verified evidence
+- I3-003: no verified evidence
+- I3-004: no verified evidence
+- I3-005: no verified evidence
+- I3-006: no verified evidence
+- I3-007: no verified evidence
+- I4-001: no verified evidence
+- I4-002: no verified evidence
+- I4-003: no verified evidence
+- I4-004: no verified evidence
+- I4-005: no verified evidence
+- I4-006: no verified evidence
+- I4-007: no verified evidence
+- I4-008: no verified evidence
+- KF-CORE-R10-001: no verified evidence
+- KF-CORE-R10-002: no verified evidence
+- KF-CORE-R10-003: no verified evidence
+- KF-CORE-R10-004: no verified evidence
+- KF-CORE-R10-005: no verified evidence
+- KF-CORE-R10-006: no verified evidence
+- KF-CORE-R10-007: no verified evidence
+- KF-CORE-R10-008: no verified evidence
+- KF-CORE-R10-009: no verified evidence
+
 ## Warnings
 
-- COMMUNITY: no status source (UNVERIFIED)
 - CONTROL_PLANE: no status source (UNVERIFIED)
-- CORE: no status source (UNVERIFIED)
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
-- I2-001: not reported by COMMUNITY (no credit)
-- I2-002: not reported by COMMUNITY (no credit)
-- I2-003: not reported by COMMUNITY (no credit)
-- I2-004: not reported by COMMUNITY (no credit)
-- I2-005: not reported by COMMUNITY (no credit)
-- I2-006: not reported by COMMUNITY (no credit)
-- I3-001: not reported by COMMUNITY (no credit)
-- I3-002: not reported by COMMUNITY (no credit)
-- I3-003: not reported by COMMUNITY (no credit)
-- I3-004: not reported by COMMUNITY (no credit)
-- I3-005: not reported by COMMUNITY (no credit)
-- I3-006: not reported by COMMUNITY (no credit)
-- I3-007: not reported by COMMUNITY (no credit)
-- I4-001: not reported by COMMUNITY (no credit)
-- I4-002: not reported by COMMUNITY (no credit)
-- I4-003: not reported by COMMUNITY (no credit)
-- I4-004: not reported by COMMUNITY (no credit)
-- I4-005: not reported by COMMUNITY (no credit)
-- I4-006: not reported by COMMUNITY (no credit)
-- I4-007: not reported by COMMUNITY (no credit)
-- I4-008: not reported by COMMUNITY (no credit)
 - INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)
-- KF-CORE-R10-001: not reported by CORE (no credit)
-- KF-CORE-R10-002: not reported by CORE (no credit)
-- KF-CORE-R10-003: not reported by CORE (no credit)
-- KF-CORE-R10-004: not reported by CORE (no credit)
-- KF-CORE-R10-005: not reported by CORE (no credit)
-- KF-CORE-R10-006: not reported by CORE (no credit)
-- KF-CORE-R10-007: not reported by CORE (no credit)
-- KF-CORE-R10-008: not reported by CORE (no credit)
-- KF-CORE-R10-009: not reported by CORE (no credit)
 - MECHANICAL: no status source (UNVERIFIED)
 - MIND: no status source (UNVERIFIED)
 - MOTION: no status source (UNVERIFIED)
