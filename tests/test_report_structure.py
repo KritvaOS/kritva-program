@@ -37,6 +37,17 @@ class EffortSchema(unittest.TestCase):
         self.assertTrue(effort.validate(d, {"CORE"}, {"Dinesh"}))
 
 
+class BaseMethod(EffortSchema):
+    def test_midpoint_label_must_be_true(self):
+        ok = self.doc(completed=rng(10, 12, 14), remaining=rng(2, 3, 4), capability=rng(50, 60, 70), base_method="RANGE_MIDPOINT")
+        self.assertEqual(effort.validate(ok, {"CORE"}, {"Dinesh"}), [])
+        bad = self.doc(completed=rng(10, 11, 14), remaining=rng(2, 3, 4), capability=rng(50, 60, 70), base_method="RANGE_MIDPOINT")
+        self.assertTrue(any("midpoint" in e for e in effort.validate(bad, {"CORE"}, {"Dinesh"})))
+        agreed = self.doc(completed=rng(10, 11, 14), remaining=rng(2, 3, 4), capability=rng(50, 60, 70), base_method="AGREED_BASE")
+        self.assertEqual(effort.validate(agreed, {"CORE"}, {"Dinesh"}), [])
+        self.assertTrue(effort.validate(self.doc(base_method="GUESS"), {"CORE"}, {"Dinesh"}))
+
+
 class RealRepoState(unittest.TestCase):
     """The committed estimate file and registry must agree and stay valid."""
 
@@ -47,7 +58,7 @@ class RealRepoState(unittest.TestCase):
         self.assertEqual(len(doc["workstreams"]), 17)
         for w in ("DEVICE_ENDPOINT", "NEXUS_EDGE", "CI_DEV_INFRA", "ELECTRICAL_POWER", "ACTUATION_CONTROLS", "MANUFACTURING_FLEET"):
             self.assertIn(w, reg)
-        self.assertEqual(doc["approval"]["status"], "DRAFT")  # approval is the owner's explicit step
+        self.assertIn(doc["approval"]["status"], ("DRAFT", "APPROVED"))  # approval is the owner's explicit step; a hash mismatch is caught by validate()
         for w in doc["workstreams"]:
             c, r = w["completed"], w["remaining"]
             self.assertTrue(c["low"] <= c["base"] <= c["high"] and r["low"] <= r["base"] <= r["high"])
@@ -72,6 +83,24 @@ class Rendering(unittest.TestCase):
             self.assertIn("NOT BASELINED", view)
             self.assertIn("Inspected source commit", view)
             self.assertIsNotNone(c["program_status"])
+
+    def test_two_effort_totals_are_labelled_and_reconciled(self):
+        d = tempfile.TemporaryDirectory()
+        r = make_root(d.name, real=False)
+        e = json.loads((ROOT / effort.FILE).read_text())
+        (r / effort.FILE).write_text(json.dumps(e))
+        write_sources(r)
+        p = run(r, "--sources-dir", str(r / "sources"))
+        with d:
+            self.assertEqual(p.returncode, 0, p.stderr)
+            view = (r / "v2/tracking/STATUS_VIEW.md").read_text()
+            self.assertIn("Program-level rounded planning reference", view)
+            self.assertIn("Sum of workstream point estimates", view)
+            self.assertIn("Variance, workstream sum minus planning reference", view)
+            self.assertIn("Capability % definition", view)
+            self.assertIn("agreed range", view)
+            self.assertIn("Registered workstreams: 20; with agreed estimates: 17", view)
+            self.assertIn("NOT PLANNED yet", view)
 
     def test_gates_show_frozen_and_effective_state(self):
         d, r, view, c = self.build()

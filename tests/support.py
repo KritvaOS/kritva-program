@@ -27,6 +27,11 @@ def make_root(d, approve=True, real=False):
     cfg.pop("require_run_verification", None)
     cfgp.write_text(json.dumps(cfg))
     (r / "v2/tracking/run_verification.json").unlink(missing_ok=True)
+    # effort tests start from an empty DRAFT estimate file, whatever the real (possibly approved) one holds
+    (r / "v2/tracking/effort_estimates.json").write_text(json.dumps({
+        "schema_version": "1.0", "estimate_version": 1, "reporting_cutoff": "2026-10-13", "unit": "person_month",
+        "approval": {"status": "DRAFT", "approver": None, "approved_at": None, "commit": None, "content_sha256": None},
+        "crosswalk": [], "workstreams": []}))
     (r / "v2/tracking/gate_closures.json").unlink(missing_ok=True)  # tests start with every gate as frozen (OPEN)
     # tests start from an EMPTY approval ledger, whatever the real one holds
     (r / "v2/tracking/approvals.json").write_text(json.dumps({"authorized_approvers": ["Dinesh"], "approvals": []}))

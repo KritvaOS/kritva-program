@@ -28,9 +28,10 @@ COMPLETED_BASIS = {"RECORDED_ACTUAL", "RECONSTRUCTED_ACTUAL", "OWNER_ESTIMATE"}
 REMAINING_BASIS = {"OWNER_ESTIMATE"}
 CONFIDENCE = {"H", "M", "L"}
 TOP = {"schema_version", "estimate_version", "reporting_cutoff", "unit", "approval", "crosswalk", "workstreams", "_note",
-       "program_planning", "report_notes"}
+       "program_planning", "report_notes", "capability_definition"}
 APPROVAL = {"status", "approver", "approved_at", "commit", "content_sha256"}
-WS_KEYS = {"workstream_id", "completed", "remaining", "capability", "confidence", "assumptions", "source_refs", "owner_notes"}
+WS_KEYS = {"workstream_id", "completed", "remaining", "capability", "base_method", "confidence", "assumptions", "source_refs", "owner_notes"}
+BASE_METHODS = {"AGREED_BASE", "RANGE_MIDPOINT"}
 PLAN_KEYS = {"completed", "remaining", "total", "horizon_months", "basis", "note"}
 CROSS_KEYS = {"legacy_name", "status", "maps_to", "rationale"}
 
@@ -115,6 +116,14 @@ def validate(doc, registry_ids, authorized):
                 errs.append(f"{tag} capability: percentages must be 0-100")
         comp = _range(w.get("completed"), f"{tag} completed", COMPLETED_BASIS, errs)
         rem = _range(w.get("remaining"), f"{tag} remaining", REMAINING_BASIS, errs)
+        bm = w.get("base_method")
+        if bm is not None:
+            if bm not in BASE_METHODS:
+                errs.append(f"{tag}: base_method must be one of {sorted(BASE_METHODS)}")
+            elif bm == "RANGE_MIDPOINT":
+                for nm, r in (("completed", w.get("completed")), ("remaining", w.get("remaining")), ("capability", cap)):
+                    if r and abs(r["base"] - (r["low"] + r["high"]) / 2) > 1e-9:
+                        errs.append(f"{tag} {nm}: base_method RANGE_MIDPOINT but base is not the midpoint of low and high")
         if comp or rem or cap:
             if w.get("confidence") not in CONFIDENCE:
                 errs.append(f"{tag}: confidence must be H, M or L when effort is given")
@@ -135,6 +144,9 @@ def validate(doc, registry_ids, authorized):
             errs.append("program_planning: completed/remaining/total must be non-negative numbers and basis OWNER_ESTIMATE")
         elif abs(pp["completed"] + pp["remaining"] - pp["total"]) > 1e-9:
             errs.append("program_planning: total must equal completed + remaining")
+    cd = doc.get("capability_definition")
+    if cd is not None and not (isinstance(cd, str) and cd.strip()):
+        errs.append("capability_definition must be a non-empty string")
     notes = doc.get("report_notes")
     if notes is not None and not (isinstance(notes, list) and all(isinstance(x, str) and x for x in notes)):
         errs.append("report_notes must be a list of non-empty strings")
@@ -182,6 +194,7 @@ def summary(doc, registry, by_workstream):
         prog = (f"{g['accepted_weight']}/{g['weight']} weight" if g and g.get("weighted") else "Not baselined")
         rows.append({"workstream_id": wid, "name": (registry.get(wid) or {}).get("name") or wid, "completed": ct,
                      "completed_basis": (c or {}).get("basis"), "remaining": rt, "total": tt, "capability": capt,
+                     "base_method": w.get("base_method"),
                      "confidence": w.get("confidence") if (ct or rt or capt) else None, "evidence_progress": prog})
         for key, t in (("completed", ct), ("remaining", rt), ("total", tt)):
             if t:
@@ -192,6 +205,7 @@ def summary(doc, registry, by_workstream):
             "reporting_cutoff": doc.get("reporting_cutoff"), "unit": "person_month", "rows": rows,
             "workstreams_fully_estimated": counted, "workstreams_total": len(registry),
             "sums": {k: tuple(v) for k, v in sums.items()}, "program_planning": doc.get("program_planning"),
+            "capability_definition": doc.get("capability_definition"),
             "notes": doc.get("report_notes") or [],
             "crosswalk_undecided": sorted(c["legacy_name"] for c in cw if c.get("status") == "UNDECIDED")}
 
@@ -206,25 +220,41 @@ def headline_line(s):
     if not pp:
         return "not set"
     return (f"~{pp['completed']:g} PM completed, ~{pp['remaining']:g} PM remaining, ~{pp['total']:g} PM total "
-            f"({status_word(s)}; horizon {pp['horizon_months']} months)")
+            f"(program-level rounded planning reference; {status_word(s)}; target horizon {pp['horizon_months']} months, not a demonstrated schedule)")
 
 
 def render_lines(s):
     """Effort and capability section. Both are owner estimates and never part of accepted progress."""
     L = ["", "## Effort and capability (owner estimates; NOT evidence and never part of accepted engineering progress)", ""]
     L.append(f"- Estimate version {s['estimate_version']}, cutoff {s['reporting_cutoff']}: {status_word(s)}")
-    pp = s.get("program_planning")
+    pp, sm = s.get("program_planning"), s["sums"]
     if pp:
-        L.append(f"- Management planning points: ~{pp['completed']:g} PM completed, ~{pp['remaining']:g} PM remaining, "
-                 f"~{pp['total']:g} PM total V2 effort; delivery horizon {pp['horizon_months']} months"
+        L.append(f"- Program-level rounded planning reference: ~{pp['completed']:g} PM completed, ~{pp['remaining']:g} PM remaining, "
+                 f"~{pp['total']:g} PM total V2 effort; target horizon {pp['horizon_months']} months (a planning target, not a demonstrated schedule)"
                  + (f". {pp['note']}" if pp.get("note") else ""))
-    L.append(f"- Workstreams with completed and remaining estimated: {s['workstreams_fully_estimated']}/{s['workstreams_total']}; "
-             "the rest show NOT_ESTIMATED (never zero)")
-    L.append("- Completed PM is effort spent, not capability: 70 PM spent is not 70% of the product built. "
-             "Capability is the owner's estimate of intended workstream scope delivered. These are estimates from delivered scope, "
-             "not timesheet actuals; commits do not measure effort")
-    L.append("- Format: base (low-high). Total = completed + remaining per bound. Confidence: H actual history / substantial "
-             "implementation, M scope known but implementation not started, L depends on hardware, vendor or algorithm uncertainty")
+    if s["workstreams_fully_estimated"]:
+        L.append(f"- Sum of workstream point estimates (bases): {sm['completed'][1]:g} PM completed, {sm['remaining'][1]:g} PM remaining, "
+                 f"{sm['total'][1]:g} PM total; range {sm['total'][0]:g}-{sm['total'][2]:g} PM total")
+        if pp:
+            d = [sm["completed"][1] - pp["completed"], sm["remaining"][1] - pp["remaining"], sm["total"][1] - pp["total"]]
+            L.append(f"- Variance, workstream sum minus planning reference: {d[0]:+g} completed, {d[1]:+g} remaining, {d[2]:+g} total PM. "
+                     "The two are not forced to match: the owner decides whether to keep both or recalibrate the rows")
+    est = [r["name"] for r in s["rows"] if r["total"]]
+    notest = [r["name"] for r in s["rows"] if not r["total"]]
+    L.append(f"- Registered workstreams: {s['workstreams_total']}; with agreed estimates: {len(est)}; "
+             f"registered but not in the agreed table (NOT_ESTIMATED, never zero): {', '.join(notest) or 'none'}")
+    L.append("- Completed PM is effort spent, not capability: 70 PM spent is not 70% of the product built. These are estimates from "
+             "delivered scope, not timesheet actuals; commits do not measure effort")
+    if s.get("capability_definition"):
+        L.append(f"- Capability % definition: {s['capability_definition']}")
+    L.append("- Format: base (low-high). Total = completed + remaining per bound. Confidence is confidence in the estimate, not maturity: "
+             "H mature scope and strong implementation evidence, M scope understood with material integration or estimation uncertainty, "
+             "L significant hardware, vendor, algorithm or validation uncertainty")
+    agreed = [r["name"] for r in s["rows"] if r["base_method"] == "AGREED_BASE"]
+    mid = [r["name"] for r in s["rows"] if r["base_method"] == "RANGE_MIDPOINT"]
+    if agreed or mid:
+        L.append(f"- Base value: the single value from the agreed table for {', '.join(agreed) or 'none'}; the midpoint of the agreed range for "
+                 f"{', '.join(mid) or 'none'}. Agreed bases need not equal their range midpoints")
     if s["crosswalk_undecided"]:
         L.append(f"- Legacy workstream names awaiting an owner mapping: {', '.join(s['crosswalk_undecided'])}")
     for n in s["notes"]:
@@ -235,12 +265,12 @@ def render_lines(s):
     for r in s["rows"]:
         L.append(f"| {r['name']} | {f(r['completed'])} | {f(r['remaining'])} | {f(r['total'])} | "
                  f"{_fmt(r['capability']) if r['capability'] else 'NOT_ESTIMATED'} | {r['confidence'] or '-'} | {r['evidence_progress']} |")
-    sm = s["sums"]
     if s["workstreams_fully_estimated"]:
-        L.append(f"| **Sum of workstream rows** | {_fmt(sm['completed'])} | {_fmt(sm['remaining'])} | {_fmt(sm['total'])} | | | |")
-        L += ["", "Sums add the workstream bounds and ignore correlated risk; they cover estimated workstreams only and "
-                  "need not equal the rounded management planning points."]
-    L += ["", "Monthly staffing and burn forecast: NOT PLANNED yet (needs parallelization, hiring, COTS/vendor and mechanical-HOLD assumptions)."]
+        L.append(f"| **Sum of workstream point estimates** | {_fmt(sm['completed'])} | {_fmt(sm['remaining'])} | {_fmt(sm['total'])} | | | |")
+        L += ["", "Sums add the workstream bounds and ignore correlated risk; they cover estimated workstreams only."]
+    L += ["", "Monthly staffing and burn forecast: NOT PLANNED yet. It needs monthly staffing by role and workstream, available versus required "
+              "capacity, parallelization assumptions, cumulative burn, and whether contractor, vendor and COTS effort is included. Until it exists "
+              "the 10-12 month horizon is a planning target only."]
     return L
 
 

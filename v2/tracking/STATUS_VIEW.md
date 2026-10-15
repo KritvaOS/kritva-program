@@ -7,13 +7,13 @@
 | Measure | Value | Scope and basis |
 |---|---|---|
 | Accepted engineering progress | 47.52% (48/101 weight) | Frozen baseline v1: only the 30 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
-| Effort invested (person-months) | ~70 PM completed, ~175 PM remaining, ~245 PM total (DRAFT: provisional engineering estimates, not owner-approved; horizon 10-12 months) | Owner estimates from delivered scope, not timesheets; see Effort and capability below |
+| Effort invested (person-months) | ~70 PM completed, ~175 PM remaining, ~245 PM total (program-level rounded planning reference; APPROVED by the owner; target horizon 10-12 months, not a demonstrated schedule) | Owner estimates from delivered scope, not timesheets; see Effort and capability below |
 | V2 capability completion | per workstream (see Effort and capability below) | Owner estimate of intended scope delivered; separate from effort spent and from accepted progress |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
 ## Summary
 
-- Generated at: 2026-10-15T17:33:46Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-15T17:43:33Z (freshness of sources is judged at this time)
 - Baseline version: 1 (APPROVED)
 - Accepted engineering progress: 47.52% (48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/30 tasks (repo-reported; not acceptance)
@@ -134,13 +134,20 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 
 ## Effort and capability (owner estimates; NOT evidence and never part of accepted engineering progress)
 
-- Estimate version 1, cutoff 2026-10-13: DRAFT: provisional engineering estimates, not owner-approved
-- Management planning points: ~70 PM completed, ~175 PM remaining, ~245 PM total V2 effort; delivery horizon 10-12 months. Rounded management planning points; the workstream rows are the underlying estimates and sum slightly differently
-- Workstreams with completed and remaining estimated: 17/20; the rest show NOT_ESTIMATED (never zero)
-- Completed PM is effort spent, not capability: 70 PM spent is not 70% of the product built. Capability is the owner's estimate of intended workstream scope delivered. These are estimates from delivered scope, not timesheet actuals; commits do not measure effort
-- Format: base (low-high). Total = completed + remaining per bound. Confidence: H actual history / substantial implementation, M scope known but implementation not started, L depends on hardware, vendor or algorithm uncertainty
+- Estimate version 1, cutoff 2026-10-13: APPROVED by the owner
+- Program-level rounded planning reference: ~70 PM completed, ~175 PM remaining, ~245 PM total V2 effort; target horizon 10-12 months (a planning target, not a demonstrated schedule). Rounded management planning points; the workstream rows are the underlying estimates and sum slightly differently
+- Sum of workstream point estimates (bases): 71.5 PM completed, 179 PM remaining, 250.5 PM total; range 203.5-295 PM total
+- Variance, workstream sum minus planning reference: +1.5 completed, +4 remaining, +5.5 total PM. The two are not forced to match: the owner decides whether to keep both or recalibrate the rows
+- Registered workstreams: 20; with agreed estimates: 17; registered but not in the agreed table (NOT_ESTIMATED, never zero): Control Plane, Education applications, Studio
+- Completed PM is effort spent, not capability: 70 PM spent is not 70% of the product built. These are estimates from delivered scope, not timesheet actuals; commits do not measure effort
+- Capability % definition: the owner's estimate of the share of the workstream's intended V2 scope that is delivered at the reporting cutoff. Denominator: the intended V2 scope of that workstream as the owner understands it; no formal capability inventory or weighting exists yet. Complete means delivered and working in software or documented design, never physical or safety validation. Evidence: owner judgement informed by repository state; it is not derived from PM spent or from accepted baseline weight. Owner: Dinesh. As of the reporting cutoff. A formal capability inventory with weights and completion criteria is still to be defined
+- Format: base (low-high). Total = completed + remaining per bound. Confidence is confidence in the estimate, not maturity: H mature scope and strong implementation evidence, M scope understood with material integration or estimation uncertainty, L significant hardware, vendor, algorithm or validation uncertainty
+- Base value: the single value from the agreed table for Community, Core, Device / Endpoint, Mechanical, Motion, RaaS, Sense; the midpoint of the agreed range for Actuation / Controls, CI / Dev infrastructure, Electrical / Power, Integration & software validation, Manufacturing / Fleet, Mind, Nexus / Edge, SDK, Sim, Skill. Agreed bases need not equal their range midpoints
 - Mechanical remains on HOLD (D-003); its remaining-effort figure is a planning assumption and does not authorize physical execution
-- Capability % is the owner's estimate of intended workstream scope delivered; 70 PM spent does not mean 70% of the product is built
+- OPEN, not yet stated by the owner: whether historical effort includes work before the current V2 baseline, and whether vendor, COTS, contractor or internship effort is included in completed and remaining PM
+- OPEN naming questions for the owner: the agreed table calls Community 'Runtime / Community'; Integration & software validation and CI / Dev infrastructure are kept as separate rows
+- Task-level evidence detail (verifier and verification time) is held in v2/tracking/run_verification.json; milestone-level runs do not by themselves establish that every task passed
+- Approval provenance: Dinesh approved this estimate version in chat on 2026-10-15 and Claude recorded it at his instruction; the approval is bound to the exact file by content_sha256. Approval covers these provisional engineering estimates only, not the open questions listed here
 
 | Workstream | Completed PM | Remaining PM | Total PM | Capability % | Confidence | Accepted engineering progress |
 |---|---|---|---|---|---|---|
@@ -164,11 +171,11 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 | Sim | 1.5 (1-2) | 10 (8-12) | 11.5 (9-14) | 12.5 (10-15) | M | Not baselined |
 | Skill | 1 (1-1) | 10 (8-12) | 11 (9-13) | 7.5 (5-10) | M | Not baselined |
 | Studio | NOT_ESTIMATED | NOT_ESTIMATED | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| **Sum of workstream rows** | 71.5 (57.5-86) | 179 (146-209) | 250.5 (203.5-295) | | | |
+| **Sum of workstream point estimates** | 71.5 (57.5-86) | 179 (146-209) | 250.5 (203.5-295) | | | |
 
-Sums add the workstream bounds and ignore correlated risk; they cover estimated workstreams only and need not equal the rounded management planning points.
+Sums add the workstream bounds and ignore correlated risk; they cover estimated workstreams only.
 
-Monthly staffing and burn forecast: NOT PLANNED yet (needs parallelization, hiring, COTS/vendor and mechanical-HOLD assumptions).
+Monthly staffing and burn forecast: NOT PLANNED yet. It needs monthly staffing by role and workstream, available versus required capacity, parallelization assumptions, cumulative burn, and whether contractor, vendor and COTS effort is included. Until it exists the 10-12 month horizon is a planning target only.
 
 ## Evidence health
 

@@ -5,11 +5,11 @@
   "reporting_cutoff": "2026-10-13",
   "unit": "person_month",
   "approval": {
-    "status": "DRAFT",
-    "approver": null,
-    "approved_at": null,
-    "commit": null,
-    "content_sha256": null
+    "status": "APPROVED",
+    "approver": "Dinesh",
+    "approved_at": "2026-10-15T17:41:43Z",
+    "commit": "4a92d3826ea63834c00ecec071bf1853592d3da7",
+    "content_sha256": "086f3e8f5b569bd4fa846edbe1e68c47154ef26e8ebca4507428d02ef5e51858"
   },
   "program_planning": {
     "completed": 70,
@@ -21,7 +21,10 @@
   },
   "report_notes": [
     "Mechanical remains on HOLD (D-003); its remaining-effort figure is a planning assumption and does not authorize physical execution",
-    "Capability % is the owner's estimate of intended workstream scope delivered; 70 PM spent does not mean 70% of the product is built"
+    "OPEN, not yet stated by the owner: whether historical effort includes work before the current V2 baseline, and whether vendor, COTS, contractor or internship effort is included in completed and remaining PM",
+    "OPEN naming questions for the owner: the agreed table calls Community 'Runtime / Community'; Integration & software validation and CI / Dev infrastructure are kept as separate rows",
+    "Task-level evidence detail (verifier and verification time) is held in v2/tracking/run_verification.json; milestone-level runs do not by themselves establish that every task passed",
+    "Approval provenance: Dinesh approved this estimate version in chat on 2026-10-15 and Claude recorded it at his instruction; the approval is bound to the exact file by content_sha256. Approval covers these provisional engineering estimates only, not the open questions listed here"
   ],
   "crosswalk": [
     {
@@ -121,7 +124,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "AGREED_BASE"
     },
     {
       "workstream_id": "COMMUNITY",
@@ -152,7 +156,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "AGREED_BASE"
     },
     {
       "workstream_id": "DEVICE_ENDPOINT",
@@ -183,7 +188,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "AGREED_BASE"
     },
     {
       "workstream_id": "NEXUS_EDGE",
@@ -214,7 +220,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     },
     {
       "workstream_id": "CI_DEV_INFRA",
@@ -245,7 +252,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     },
     {
       "workstream_id": "MECHANICAL",
@@ -277,7 +285,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "AGREED_BASE"
     },
     {
       "workstream_id": "ELECTRICAL_POWER",
@@ -308,7 +317,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     },
     {
       "workstream_id": "ACTUATION_CONTROLS",
@@ -339,7 +349,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     },
     {
       "workstream_id": "SENSE",
@@ -370,7 +381,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "AGREED_BASE"
     },
     {
       "workstream_id": "MOTION",
@@ -401,7 +413,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "AGREED_BASE"
     },
     {
       "workstream_id": "SKILL",
@@ -432,7 +445,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     },
     {
       "workstream_id": "MIND",
@@ -463,7 +477,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     },
     {
       "workstream_id": "SIM",
@@ -494,7 +509,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     },
     {
       "workstream_id": "SDK",
@@ -525,7 +541,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     },
     {
       "workstream_id": "RAAS",
@@ -556,7 +573,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "AGREED_BASE"
     },
     {
       "workstream_id": "MANUFACTURING_FLEET",
@@ -588,7 +606,8 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     },
     {
       "workstream_id": "INTEGRATION_SOFTWARE_VALIDATION",
@@ -619,7 +638,9 @@
       "source_refs": [
         "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
       ],
-      "owner_notes": ""
+      "owner_notes": "",
+      "base_method": "RANGE_MIDPOINT"
     }
-  ]
+  ],
+  "capability_definition": "the owner's estimate of the share of the workstream's intended V2 scope that is delivered at the reporting cutoff. Denominator: the intended V2 scope of that workstream as the owner understands it; no formal capability inventory or weighting exists yet. Complete means delivered and working in software or documented design, never physical or safety validation. Evidence: owner judgement informed by repository state; it is not derived from PM spent or from accepted baseline weight. Owner: Dinesh. As of the reporting cutoff. A formal capability inventory with weights and completion criteria is still to be defined"
 }

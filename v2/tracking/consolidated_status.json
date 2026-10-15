@@ -64,11 +64,15 @@
     }
   },
   "effort": {
+    "capability_definition": "the owner's estimate of the share of the workstream's intended V2 scope that is delivered at the reporting cutoff. Denominator: the intended V2 scope of that workstream as the owner understands it; no formal capability inventory or weighting exists yet. Complete means delivered and working in software or documented design, never physical or safety validation. Evidence: owner judgement informed by repository state; it is not derived from PM spent or from accepted baseline weight. Owner: Dinesh. As of the reporting cutoff. A formal capability inventory with weights and completion criteria is still to be defined",
     "crosswalk_undecided": [],
     "estimate_version": 1,
     "notes": [
       "Mechanical remains on HOLD (D-003); its remaining-effort figure is a planning assumption and does not authorize physical execution",
-      "Capability % is the owner's estimate of intended workstream scope delivered; 70 PM spent does not mean 70% of the product is built"
+      "OPEN, not yet stated by the owner: whether historical effort includes work before the current V2 baseline, and whether vendor, COTS, contractor or internship effort is included in completed and remaining PM",
+      "OPEN naming questions for the owner: the agreed table calls Community 'Runtime / Community'; Integration & software validation and CI / Dev infrastructure are kept as separate rows",
+      "Task-level evidence detail (verifier and verification time) is held in v2/tracking/run_verification.json; milestone-level runs do not by themselves establish that every task passed",
+      "Approval provenance: Dinesh approved this estimate version in chat on 2026-10-15 and Claude recorded it at his instruction; the approval is bound to the exact file by content_sha256. Approval covers these provisional engineering estimates only, not the open questions listed here"
     ],
     "program_planning": {
       "basis": "OWNER_ESTIMATE",
@@ -81,6 +85,7 @@
     "reporting_cutoff": "2026-10-13",
     "rows": [
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           5,
           10,
@@ -108,6 +113,7 @@
         "workstream_id": "ACTUATION_CONTROLS"
       },
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           60,
           67.5,
@@ -135,6 +141,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
+        "base_method": "AGREED_BASE",
         "capability": [
           75,
           85,
@@ -162,6 +169,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
+        "base_method": null,
         "capability": null,
         "completed": null,
         "completed_basis": null,
@@ -173,6 +181,7 @@
         "workstream_id": "CONTROL_PLANE"
       },
       {
+        "base_method": "AGREED_BASE",
         "capability": [
           90,
           95,
@@ -200,6 +209,7 @@
         "workstream_id": "CORE"
       },
       {
+        "base_method": "AGREED_BASE",
         "capability": [
           55,
           65,
@@ -227,6 +237,7 @@
         "workstream_id": "DEVICE_ENDPOINT"
       },
       {
+        "base_method": null,
         "capability": null,
         "completed": null,
         "completed_basis": null,
@@ -238,6 +249,7 @@
         "workstream_id": "EDUCATION_APPLICATIONS"
       },
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           10,
           12.5,
@@ -265,6 +277,7 @@
         "workstream_id": "ELECTRICAL_POWER"
       },
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           15,
           17.5,
@@ -292,6 +305,7 @@
         "workstream_id": "INTEGRATION_SOFTWARE_VALIDATION"
       },
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           0,
           0,
@@ -319,6 +333,7 @@
         "workstream_id": "MANUFACTURING_FLEET"
       },
       {
+        "base_method": "AGREED_BASE",
         "capability": [
           5,
           8,
@@ -346,6 +361,7 @@
         "workstream_id": "MECHANICAL"
       },
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           5,
           7.5,
@@ -373,6 +389,7 @@
         "workstream_id": "MIND"
       },
       {
+        "base_method": "AGREED_BASE",
         "capability": [
           5,
           10,
@@ -400,6 +417,7 @@
         "workstream_id": "MOTION"
       },
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           50,
           57.5,
@@ -427,6 +445,7 @@
         "workstream_id": "NEXUS_EDGE"
       },
       {
+        "base_method": "AGREED_BASE",
         "capability": [
           5,
           7,
@@ -454,6 +473,7 @@
         "workstream_id": "RAAS"
       },
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           5,
           10,
@@ -481,6 +501,7 @@
         "workstream_id": "SDK"
       },
       {
+        "base_method": "AGREED_BASE",
         "capability": [
           10,
           12,
@@ -508,6 +529,7 @@
         "workstream_id": "SENSE"
       },
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           10,
           12.5,
@@ -535,6 +557,7 @@
         "workstream_id": "SIM"
       },
       {
+        "base_method": "RANGE_MIDPOINT",
         "capability": [
           5,
           7.5,
@@ -562,6 +585,7 @@
         "workstream_id": "SKILL"
       },
       {
+        "base_method": null,
         "capability": null,
         "completed": null,
         "completed_basis": null,
@@ -573,7 +597,7 @@
         "workstream_id": "STUDIO"
       }
     ],
-    "status": "DRAFT",
+    "status": "APPROVED",
     "sums": {
       "completed": [
         57.5,
@@ -693,7 +717,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-15T17:33:46Z",
+  "generated_at": "2026-10-15T17:43:33Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 30,
