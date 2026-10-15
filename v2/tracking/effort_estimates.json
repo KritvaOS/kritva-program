@@ -1,0 +1,17 @@
+{
+  "_note": "Owner effort estimates in person-months (D-020). DRAFT and empty on purpose: every workstream is NOT_ESTIMATED until Dinesh supplies inputs. Effort never feeds evidence-credited progress. Legacy names below are from the earlier ChatGPT effort table and need an owner mapping to the 14-row registry (map, or add a registry entry).",
+  "schema_version": "1.0",
+  "estimate_version": 1,
+  "reporting_cutoff": "2026-10-13",
+  "unit": "person_month",
+  "approval": {"status": "DRAFT", "approver": null, "approved_at": null, "commit": null, "content_sha256": null},
+  "crosswalk": [
+    {"legacy_name": "Device/Endpoint", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
+    {"legacy_name": "Nexus/Edge", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
+    {"legacy_name": "CI/Dev infrastructure", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
+    {"legacy_name": "Electrical/Power", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
+    {"legacy_name": "Actuation/Controls", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
+    {"legacy_name": "Manufacturing/Fleet", "status": "UNDECIDED", "maps_to": [], "rationale": ""}
+  ],
+  "workstreams": []
+}

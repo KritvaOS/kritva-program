@@ -63,6 +63,167 @@
       "weighted": true
     }
   },
+  "effort": {
+    "crosswalk_undecided": [
+      "Actuation/Controls",
+      "CI/Dev infrastructure",
+      "Device/Endpoint",
+      "Electrical/Power",
+      "Manufacturing/Fleet",
+      "Nexus/Edge"
+    ],
+    "estimate_version": 1,
+    "reporting_cutoff": "2026-10-13",
+    "rows": [
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "18/71 weight",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "COMMUNITY"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "CONTROL_PLANE"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "30/30 weight",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "CORE"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "EDUCATION_APPLICATIONS"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "INTEGRATION_SOFTWARE_VALIDATION"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "MECHANICAL"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "MIND"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "MOTION"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "RAAS"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "SDK"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "SENSE"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "SIM"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "SKILL"
+      },
+      {
+        "completed": null,
+        "completed_basis": null,
+        "confidence": null,
+        "evidence_progress": "Not baselined",
+        "remaining": null,
+        "total": null,
+        "workstream_id": "STUDIO"
+      }
+    ],
+    "status": "DRAFT",
+    "sums": {
+      "completed": [
+        0,
+        0,
+        0
+      ],
+      "remaining": [
+        0,
+        0,
+        0
+      ],
+      "total": [
+        0,
+        0,
+        0
+      ]
+    },
+    "unit": "person_month",
+    "workstreams_fully_estimated": 0,
+    "workstreams_total": 14
+  },
   "errors": [],
   "evidence_health": [
     "I3-001: no verified evidence",
@@ -152,7 +313,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-13T17:33:13Z",
+  "generated_at": "2026-10-15T17:08:33Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 30,

@@ -4,14 +4,14 @@
 
 ## Summary
 
-- Generated at: 2026-10-13T17:33:13Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-15T17:08:33Z (freshness of sources is judged at this time)
 - Baseline version: 1 (APPROVED)
 - Accepted progress: 47.52% (48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/30 tasks (repo-reported; not acceptance)
 - Credited tasks: 15/30; blocked by open gates: 0 (none)
 - Evidence coverage: 15/30 tasks with verified evidence; 15 with the CI run confirmed against GitHub (policy: required for credit)
 - Release readiness: NOT_READY (open release gates: GATE-KOS-CI-001; uncredited tasks: 15)
-- Schedule and effort: NOT TRACKED here (separate from progress; no dates or actuals approved)
+- Schedule: NOT TRACKED here. Effort (person-months): owner estimates in the Effort accounting section, separate from progress
 - Evidence classes of credited tasks: MILESTONE 15
 - Evidence qualification: MILESTONE-class tasks were validated by a CI run on a LATER commit ("accepted as of" that commit), not by a run on the task's own commit; the tested commit is shown per task. UNSPECIFIED means the evidence class is not recorded. Open safety gates keep gated tasks at zero credit and release readiness NOT_READY. Credit reflects approval and CI evidence, not physical validation or safety sign-off.
 
@@ -98,6 +98,30 @@
 | GATE-KOS-I3-SAFETY | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I3 | Dinesh | C001: 2026-10-13 by Dinesh, reviewed 8256ba3 |
 | GATE-KOS-I4-SAFETY | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I4 | Dinesh | C002: 2026-10-13 by Dinesh, reviewed 8256ba3 |
 | GATE-KOS-CI-001 | OPEN | RELEASE | KOS-I4 | Dinesh | - |
+
+## Effort accounting (owner estimates in person-months; NOT evidence and never part of accepted progress)
+
+- Estimate version 1, cutoff 2026-10-13: DRAFT, not owner-approved
+- Workstreams with completed and remaining estimated: 0/14; all others show NOT_ESTIMATED (never zero)
+- Format: base (low-high). Total = completed + remaining per bound. Completed effort is not capability complete: see Evidence-credited progress, which comes only from the approved baseline
+- Legacy workstream names awaiting an owner mapping: Actuation/Controls, CI/Dev infrastructure, Device/Endpoint, Electrical/Power, Manufacturing/Fleet, Nexus/Edge
+
+| Workstream | Completed PM | Basis | Remaining PM | Total PM | Confidence | Evidence-credited progress |
+|---|---|---|---|---|---|---|
+| COMMUNITY | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | 18/71 weight |
+| CONTROL_PLANE | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| CORE | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | 30/30 weight |
+| EDUCATION_APPLICATIONS | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| INTEGRATION_SOFTWARE_VALIDATION | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| MECHANICAL | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| MIND | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| MOTION | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| RAAS | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| SDK | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| SENSE | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| SIM | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| SKILL | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| STUDIO | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
 
 ## Evidence health
 
