@@ -27,9 +27,11 @@ SHA = re.compile(r"^[0-9a-f]{40}$")
 COMPLETED_BASIS = {"RECORDED_ACTUAL", "RECONSTRUCTED_ACTUAL", "OWNER_ESTIMATE"}
 REMAINING_BASIS = {"OWNER_ESTIMATE"}
 CONFIDENCE = {"H", "M", "L"}
-TOP = {"schema_version", "estimate_version", "reporting_cutoff", "unit", "approval", "crosswalk", "workstreams", "_note"}
+TOP = {"schema_version", "estimate_version", "reporting_cutoff", "unit", "approval", "crosswalk", "workstreams", "_note",
+       "program_planning", "report_notes"}
 APPROVAL = {"status", "approver", "approved_at", "commit", "content_sha256"}
-WS_KEYS = {"workstream_id", "completed", "remaining", "confidence", "assumptions", "source_refs", "owner_notes"}
+WS_KEYS = {"workstream_id", "completed", "remaining", "capability", "confidence", "assumptions", "source_refs", "owner_notes"}
+PLAN_KEYS = {"completed", "remaining", "total", "horizon_months", "basis", "note"}
 CROSS_KEYS = {"legacy_name", "status", "maps_to", "rationale"}
 
 
@@ -106,9 +108,14 @@ def validate(doc, registry_ids, authorized):
         if wid in seen:
             errs.append(f"{tag}: duplicate")
         seen.add(wid)
+        cap = w.get("capability")
+        if cap is not None:
+            capr = _range(cap, f"{tag} capability", {"OWNER_ESTIMATE"}, errs)
+            if capr and capr[2] > 100:
+                errs.append(f"{tag} capability: percentages must be 0-100")
         comp = _range(w.get("completed"), f"{tag} completed", COMPLETED_BASIS, errs)
         rem = _range(w.get("remaining"), f"{tag} remaining", REMAINING_BASIS, errs)
-        if comp or rem:
+        if comp or rem or cap:
             if w.get("confidence") not in CONFIDENCE:
                 errs.append(f"{tag}: confidence must be H, M or L when effort is given")
             reconstructed = (w.get("completed") or {}).get("basis") in ("RECONSTRUCTED_ACTUAL", "OWNER_ESTIMATE")
@@ -118,6 +125,19 @@ def validate(doc, registry_ids, authorized):
         for k in ("assumptions", "source_refs"):
             if k in w and not (isinstance(w[k], list) and all(isinstance(x, str) and x for x in w[k])):
                 errs.append(f"{tag}: {k} must be a list of non-empty strings")
+
+    pp = doc.get("program_planning")
+    if pp is not None:
+        if not isinstance(pp, dict) or not {"completed", "remaining", "total", "horizon_months", "basis"} <= set(pp) \
+                or set(pp) - PLAN_KEYS:
+            errs.append("program_planning: needs completed, remaining, total, horizon_months, basis (and optional note)")
+        elif not all(_num(pp[k]) for k in ("completed", "remaining", "total")) or pp["basis"] != "OWNER_ESTIMATE":
+            errs.append("program_planning: completed/remaining/total must be non-negative numbers and basis OWNER_ESTIMATE")
+        elif abs(pp["completed"] + pp["remaining"] - pp["total"]) > 1e-9:
+            errs.append("program_planning: total must equal completed + remaining")
+    notes = doc.get("report_notes")
+    if notes is not None and not (isinstance(notes, list) and all(isinstance(x, str) and x for x in notes)):
+        errs.append("report_notes must be a list of non-empty strings")
 
     names = set()
     for i, c in enumerate(doc.get("crosswalk") or []):
@@ -147,20 +167,22 @@ def _fmt(t):
 
 
 def summary(doc, registry, by_workstream):
-    """Display data only. `registry` is {id: name-bearing dict}; by_workstream is the evidence rollup."""
+    """Display data only. `registry` is {id: workstream dict with optional name}; by_workstream is the evidence rollup."""
     est = {w["workstream_id"]: w for w in (doc.get("workstreams") or [])}
     rows, sums = [], {"completed": [0, 0, 0], "remaining": [0, 0, 0], "total": [0, 0, 0]}
     counted = 0
     for wid in sorted(registry):
         w = est.get(wid, {})
-        c, r = w.get("completed"), w.get("remaining")
+        c, r, cap = w.get("completed"), w.get("remaining"), w.get("capability")
         ct = (c["low"], c["base"], c["high"]) if c else None
         rt = (r["low"], r["base"], r["high"]) if r else None
         tt = tuple(a + b for a, b in zip(ct, rt)) if ct and rt else None
+        capt = (cap["low"], cap["base"], cap["high"]) if cap else None
         g = by_workstream.get(wid)
         prog = (f"{g['accepted_weight']}/{g['weight']} weight" if g and g.get("weighted") else "Not baselined")
-        rows.append({"workstream_id": wid, "completed": ct, "completed_basis": (c or {}).get("basis"), "remaining": rt,
-                     "total": tt, "confidence": w.get("confidence") if (ct or rt) else None, "evidence_progress": prog})
+        rows.append({"workstream_id": wid, "name": (registry.get(wid) or {}).get("name") or wid, "completed": ct,
+                     "completed_basis": (c or {}).get("basis"), "remaining": rt, "total": tt, "capability": capt,
+                     "confidence": w.get("confidence") if (ct or rt or capt) else None, "evidence_progress": prog})
         for key, t in (("completed", ct), ("remaining", rt), ("total", tt)):
             if t:
                 sums[key] = [x + y for x, y in zip(sums[key], t)]
@@ -169,30 +191,56 @@ def summary(doc, registry, by_workstream):
     return {"estimate_version": doc.get("estimate_version"), "status": doc["approval"]["status"],
             "reporting_cutoff": doc.get("reporting_cutoff"), "unit": "person_month", "rows": rows,
             "workstreams_fully_estimated": counted, "workstreams_total": len(registry),
-            "sums": {k: tuple(v) for k, v in sums.items()},
+            "sums": {k: tuple(v) for k, v in sums.items()}, "program_planning": doc.get("program_planning"),
+            "notes": doc.get("report_notes") or [],
             "crosswalk_undecided": sorted(c["legacy_name"] for c in cw if c.get("status") == "UNDECIDED")}
 
 
+def status_word(s):
+    return "APPROVED by the owner" if s["status"] == "APPROVED" else "DRAFT: provisional engineering estimates, not owner-approved"
+
+
+def headline_line(s):
+    """One line for the three-measures table."""
+    pp = s.get("program_planning")
+    if not pp:
+        return "not set"
+    return (f"~{pp['completed']:g} PM completed, ~{pp['remaining']:g} PM remaining, ~{pp['total']:g} PM total "
+            f"({status_word(s)}; horizon {pp['horizon_months']} months)")
+
+
 def render_lines(s):
-    L = ["", "## Effort accounting (owner estimates in person-months; NOT evidence and never part of accepted progress)", ""]
-    L.append(f"- Estimate version {s['estimate_version']}, cutoff {s['reporting_cutoff']}: "
-             f"{'APPROVED by the owner' if s['status'] == 'APPROVED' else 'DRAFT, not owner-approved'}")
+    """Effort and capability section. Both are owner estimates and never part of accepted progress."""
+    L = ["", "## Effort and capability (owner estimates; NOT evidence and never part of accepted engineering progress)", ""]
+    L.append(f"- Estimate version {s['estimate_version']}, cutoff {s['reporting_cutoff']}: {status_word(s)}")
+    pp = s.get("program_planning")
+    if pp:
+        L.append(f"- Management planning points: ~{pp['completed']:g} PM completed, ~{pp['remaining']:g} PM remaining, "
+                 f"~{pp['total']:g} PM total V2 effort; delivery horizon {pp['horizon_months']} months"
+                 + (f". {pp['note']}" if pp.get("note") else ""))
     L.append(f"- Workstreams with completed and remaining estimated: {s['workstreams_fully_estimated']}/{s['workstreams_total']}; "
-             "all others show NOT_ESTIMATED (never zero)")
-    L.append("- Format: base (low-high). Total = completed + remaining per bound. Completed effort is not capability complete: "
-             "see Evidence-credited progress, which comes only from the approved baseline")
+             "the rest show NOT_ESTIMATED (never zero)")
+    L.append("- Completed PM is effort spent, not capability: 70 PM spent is not 70% of the product built. "
+             "Capability is the owner's estimate of intended workstream scope delivered. These are estimates from delivered scope, "
+             "not timesheet actuals; commits do not measure effort")
+    L.append("- Format: base (low-high). Total = completed + remaining per bound. Confidence: H actual history / substantial "
+             "implementation, M scope known but implementation not started, L depends on hardware, vendor or algorithm uncertainty")
     if s["crosswalk_undecided"]:
         L.append(f"- Legacy workstream names awaiting an owner mapping: {', '.join(s['crosswalk_undecided'])}")
-    L += ["", "| Workstream | Completed PM | Basis | Remaining PM | Total PM | Confidence | Evidence-credited progress |",
+    for n in s["notes"]:
+        L.append(f"- {n}")
+    L += ["", "| Workstream | Completed PM | Remaining PM | Total PM | Capability % | Confidence | Accepted engineering progress |",
           "|---|---|---|---|---|---|---|"]
+    f = lambda t: _fmt(t) if t else "NOT_ESTIMATED"
     for r in s["rows"]:
-        f = lambda t: _fmt(t) if t else "NOT_ESTIMATED"
-        L.append(f"| {r['workstream_id']} | {f(r['completed'])} | {r['completed_basis'] or '-'} | {f(r['remaining'])} | "
-                 f"{f(r['total'])} | {r['confidence'] or '-'} | {r['evidence_progress']} |")
+        L.append(f"| {r['name']} | {f(r['completed'])} | {f(r['remaining'])} | {f(r['total'])} | "
+                 f"{_fmt(r['capability']) if r['capability'] else 'NOT_ESTIMATED'} | {r['confidence'] or '-'} | {r['evidence_progress']} |")
     sm = s["sums"]
     if s["workstreams_fully_estimated"]:
-        L.append(f"| **Sum of estimated rows** | {_fmt(sm['completed'])} | | {_fmt(sm['remaining'])} | {_fmt(sm['total'])} | | |")
-        L += ["", "Sums add the stated bounds and ignore correlated risk; they cover estimated workstreams only."]
+        L.append(f"| **Sum of workstream rows** | {_fmt(sm['completed'])} | {_fmt(sm['remaining'])} | {_fmt(sm['total'])} | | | |")
+        L += ["", "Sums add the workstream bounds and ignore correlated risk; they cover estimated workstreams only and "
+                  "need not equal the rounded management planning points."]
+    L += ["", "Monthly staffing and burn forecast: NOT PLANNED yet (needs parallelization, hiring, COTS/vendor and mechanical-HOLD assumptions)."]
     return L
 
 

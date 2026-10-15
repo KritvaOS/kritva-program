@@ -1,17 +1,625 @@
 {
-  "_note": "Owner effort estimates in person-months (D-020). DRAFT and empty on purpose: every workstream is NOT_ESTIMATED until Dinesh supplies inputs. Effort never feeds evidence-credited progress. Legacy names below are from the earlier ChatGPT effort table and need an owner mapping to the 14-row registry (map, or add a registry entry).",
+  "_note": "Owner effort and capability estimates in person-months and percent (D-020, D-021). PROVISIONAL and DRAFT: the figures are the structure agreed with ChatGPT, entered at the owner's instruction; they are engineering estimates from delivered scope, not timesheet actuals. Effort never feeds evidence-credited progress. Studio, Control Plane and Education applications are registered but have no agreed estimate (NOT_ESTIMATED).",
   "schema_version": "1.0",
   "estimate_version": 1,
   "reporting_cutoff": "2026-10-13",
   "unit": "person_month",
-  "approval": {"status": "DRAFT", "approver": null, "approved_at": null, "commit": null, "content_sha256": null},
-  "crosswalk": [
-    {"legacy_name": "Device/Endpoint", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
-    {"legacy_name": "Nexus/Edge", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
-    {"legacy_name": "CI/Dev infrastructure", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
-    {"legacy_name": "Electrical/Power", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
-    {"legacy_name": "Actuation/Controls", "status": "UNDECIDED", "maps_to": [], "rationale": ""},
-    {"legacy_name": "Manufacturing/Fleet", "status": "UNDECIDED", "maps_to": [], "rationale": ""}
+  "approval": {
+    "status": "DRAFT",
+    "approver": null,
+    "approved_at": null,
+    "commit": null,
+    "content_sha256": null
+  },
+  "program_planning": {
+    "completed": 70,
+    "remaining": 175,
+    "total": 245,
+    "horizon_months": "10-12",
+    "basis": "OWNER_ESTIMATE",
+    "note": "Rounded management planning points; the workstream rows are the underlying estimates and sum slightly differently"
+  },
+  "report_notes": [
+    "Mechanical remains on HOLD (D-003); its remaining-effort figure is a planning assumption and does not authorize physical execution",
+    "Capability % is the owner's estimate of intended workstream scope delivered; 70 PM spent does not mean 70% of the product is built"
   ],
-  "workstreams": []
+  "crosswalk": [
+    {
+      "legacy_name": "Device/Endpoint",
+      "status": "MAPPED",
+      "maps_to": [
+        {
+          "workstream_id": "DEVICE_ENDPOINT",
+          "share": 1
+        }
+      ],
+      "rationale": "Added to the registry as its own workstream so the registry matches the 17 agreed reporting rows (D-021)"
+    },
+    {
+      "legacy_name": "Nexus/Edge",
+      "status": "MAPPED",
+      "maps_to": [
+        {
+          "workstream_id": "NEXUS_EDGE",
+          "share": 1
+        }
+      ],
+      "rationale": "Added to the registry as its own workstream so the registry matches the 17 agreed reporting rows (D-021)"
+    },
+    {
+      "legacy_name": "CI/Dev infrastructure",
+      "status": "MAPPED",
+      "maps_to": [
+        {
+          "workstream_id": "CI_DEV_INFRA",
+          "share": 1
+        }
+      ],
+      "rationale": "Added to the registry as its own workstream so the registry matches the 17 agreed reporting rows (D-021)"
+    },
+    {
+      "legacy_name": "Electrical/Power",
+      "status": "MAPPED",
+      "maps_to": [
+        {
+          "workstream_id": "ELECTRICAL_POWER",
+          "share": 1
+        }
+      ],
+      "rationale": "Added to the registry as its own workstream so the registry matches the 17 agreed reporting rows (D-021)"
+    },
+    {
+      "legacy_name": "Actuation/Controls",
+      "status": "MAPPED",
+      "maps_to": [
+        {
+          "workstream_id": "ACTUATION_CONTROLS",
+          "share": 1
+        }
+      ],
+      "rationale": "Added to the registry as its own workstream so the registry matches the 17 agreed reporting rows (D-021)"
+    },
+    {
+      "legacy_name": "Manufacturing/Fleet",
+      "status": "MAPPED",
+      "maps_to": [
+        {
+          "workstream_id": "MANUFACTURING_FLEET",
+          "share": 1
+        }
+      ],
+      "rationale": "Added to the registry as its own workstream so the registry matches the 17 agreed reporting rows (D-021)"
+    }
+  ],
+  "workstreams": [
+    {
+      "workstream_id": "CORE",
+      "completed": {
+        "low": 18,
+        "base": 20,
+        "high": 24,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 0,
+        "base": 2,
+        "high": 3,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 90,
+        "base": 95,
+        "high": 100,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "H",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "Base is the agreed single value where one was given (second agreed table)",
+        "Confidence H is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "COMMUNITY",
+      "completed": {
+        "low": 10,
+        "base": 12,
+        "high": 14,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 3,
+        "base": 4,
+        "high": 5,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 75,
+        "base": 85,
+        "high": 85,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "H",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "Base is the agreed single value where one was given (second agreed table)",
+        "Confidence H is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "DEVICE_ENDPOINT",
+      "completed": {
+        "low": 8,
+        "base": 10,
+        "high": 12,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 6,
+        "base": 8,
+        "high": 10,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 55,
+        "base": 65,
+        "high": 70,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "M",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "Base is the agreed single value where one was given (second agreed table)",
+        "Confidence M is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "NEXUS_EDGE",
+      "completed": {
+        "low": 8,
+        "base": 10,
+        "high": 12,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 8,
+        "base": 10,
+        "high": 12,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 50,
+        "base": 57.5,
+        "high": 65,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "M",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence M is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "CI_DEV_INFRA",
+      "completed": {
+        "low": 3,
+        "base": 4,
+        "high": 5,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 2,
+        "base": 2.5,
+        "high": 3,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 60,
+        "base": 67.5,
+        "high": 75,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "M",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence M is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "MECHANICAL",
+      "completed": {
+        "low": 1,
+        "base": 2,
+        "high": 2,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 18,
+        "base": 22,
+        "high": 24,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 5,
+        "base": 8,
+        "high": 10,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "L",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "Base is the agreed single value where one was given (second agreed table)",
+        "Confidence L is Claude's proposal from the agreed H/M/L rubric, for owner review",
+        "Mechanical stays on HOLD (D-003): remaining effort is a planning assumption, not authorization for physical work"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "ELECTRICAL_POWER",
+      "completed": {
+        "low": 1,
+        "base": 1.5,
+        "high": 2,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 10,
+        "base": 12,
+        "high": 14,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 10,
+        "base": 12.5,
+        "high": 15,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "L",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence L is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "ACTUATION_CONTROLS",
+      "completed": {
+        "low": 1,
+        "base": 1.5,
+        "high": 2,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 12,
+        "base": 14,
+        "high": 16,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 5,
+        "base": 10,
+        "high": 15,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "L",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence L is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "SENSE",
+      "completed": {
+        "low": 1,
+        "base": 1.5,
+        "high": 2,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 10,
+        "base": 12,
+        "high": 14,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 10,
+        "base": 12,
+        "high": 15,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "M",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "Base is the agreed single value where one was given (second agreed table)",
+        "Confidence M is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "MOTION",
+      "completed": {
+        "low": 1,
+        "base": 1.5,
+        "high": 2,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 14,
+        "base": 16,
+        "high": 18,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 5,
+        "base": 10,
+        "high": 15,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "L",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "Base is the agreed single value where one was given (second agreed table)",
+        "Confidence L is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "SKILL",
+      "completed": {
+        "low": 1,
+        "base": 1,
+        "high": 1,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 8,
+        "base": 10,
+        "high": 12,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 5,
+        "base": 7.5,
+        "high": 10,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "M",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence M is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "MIND",
+      "completed": {
+        "low": 0.5,
+        "base": 0.75,
+        "high": 1,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 8,
+        "base": 10,
+        "high": 12,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 5,
+        "base": 7.5,
+        "high": 10,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "L",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence L is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "SIM",
+      "completed": {
+        "low": 1,
+        "base": 1.5,
+        "high": 2,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 8,
+        "base": 10,
+        "high": 12,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 10,
+        "base": 12.5,
+        "high": 15,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "M",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence M is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "SDK",
+      "completed": {
+        "low": 0.5,
+        "base": 0.75,
+        "high": 1,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 5,
+        "base": 6.5,
+        "high": 8,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 5,
+        "base": 10,
+        "high": 15,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "M",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence M is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "RAAS",
+      "completed": {
+        "low": 0.5,
+        "base": 1,
+        "high": 1,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 12,
+        "base": 14,
+        "high": 16,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 5,
+        "base": 7,
+        "high": 10,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "L",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "Base is the agreed single value where one was given (second agreed table)",
+        "Confidence L is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "MANUFACTURING_FLEET",
+      "completed": {
+        "low": 0,
+        "base": 0,
+        "high": 0,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 10,
+        "base": 12,
+        "high": 14,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 0,
+        "base": 0,
+        "high": 0,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "L",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence L is Claude's proposal from the agreed H/M/L rubric, for owner review",
+        "Completed effort is stated as about 0 PM in the agreed table"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "workstream_id": "INTEGRATION_SOFTWARE_VALIDATION",
+      "completed": {
+        "low": 2,
+        "base": 2.5,
+        "high": 3,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "remaining": {
+        "low": 12,
+        "base": 14,
+        "high": 16,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "capability": {
+        "low": 15,
+        "base": 17.5,
+        "high": 20,
+        "basis": "OWNER_ESTIMATE"
+      },
+      "confidence": "M",
+      "assumptions": [
+        "Provisional engineering estimate from delivered scope, agreed by the owner with ChatGPT; not timesheet-derived and not derived from commits or CI",
+        "The agreed table gave a range only; base is the midpoint of that range (Claude's choice, for owner review)",
+        "Confidence M is Claude's proposal from the agreed H/M/L rubric, for owner review"
+      ],
+      "source_refs": [
+        "ChatGPT thread 'Kritva Product Planning': agreed V2 reporting structure and effort table; owner confirmed the structure in chat on 2026-10-15"
+      ],
+      "owner_notes": ""
+    }
+  ]
 }

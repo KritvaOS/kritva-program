@@ -452,8 +452,10 @@ def effective_gates(gates, closures):
     out = []
     for g in gates:
         c = closures.get(g["gate_id"])
-        out.append(dict(g, status="CLOSED", evidence_commit=c["evidence_commit"], closed_at=c["closed_at"],
-                        closed_by=c["closed_by"], closure_id=c["closure_id"]) if c else g)
+        out.append(dict(g, frozen_status=g["status"], status="CLOSED", evidence_commit=c["evidence_commit"],
+                        closed_at=c["closed_at"], closed_by=c["closed_by"], closure_id=c["closure_id"],
+                        reviewer=c["reviewer"], closure_limitations=c["limitations"]) if c
+                   else dict(g, frozen_status=g["status"]))
     return out
 
 
@@ -492,7 +494,8 @@ def compute(base, reports, effective, reg, vr=None, require_vr=False, emap=None)
                "phase": bt.get("phase"), "weight": bt.get("weight"), "execution": None, "git_sync": None,
                "readiness": None, "acceptance": "NOT_RUN", "evidence_verified": False, "credit": False,
                "blocked_by": gates_for(bt, gates), "credit_reason": "", "evidence_class": None,
-               "tested_commit": None, "task_commit": None, "evidence_run": None, "run_verified": None}
+               "tested_commit": None, "task_commit": None, "evidence_run": None, "run_verified": None,
+               "evidence_state": "NO_REPORT", "reported_evidence": None}
         st = task_state.get(bt["id"])
         ap = effective.get(bt["id"])
         if not st:
@@ -505,6 +508,17 @@ def compute(base, reports, effective, reg, vr=None, require_vr=False, emap=None)
                 row["acceptance"] = ap["acceptance"]
                 row["evidence_verified"] = bool(has_verifiable_evidence(t, ap["source_commit"]))
             reason, run_note = None, None
+            rep_ev = [e for e in t["evidence"] if e.get("commit") and e.get("ci_run")
+                      and str(e.get("result") or "").upper() == "PASS"]
+            if rep_ev:  # what the repo REPORTS, whether or not a central approval exists yet
+                e0 = rep_ev[0]
+                rid = run_id_of(e0["ci_run"])
+                rec = (vr or {}).get("runs", {}).get(f"{doc['repo']}#{rid}") if rid else None
+                m0 = (emap or {}).get(bt["id"])
+                cls0 = m0["mode"] if m0 and (m0.get("evidence") or {}).get("commit") == e0["commit"] and m0.get("mode") else None
+                row["reported_evidence"] = {
+                    "commit": e0["commit"], "run": rid, "class": cls0, "task_commit": m0.get("task_commit") if cls0 else None,
+                    "github_verified": (run_problem(rec, doc["repo"], e0["commit"], e0.get("description")) is None) if rec else None}
             if ap:
                 ev_ok = has_verifiable_evidence(t, ap["source_commit"])
                 runs = [e for e in ev_ok if run_id_of(e.get("ci_run"))]
@@ -553,6 +567,18 @@ def compute(base, reports, effective, reg, vr=None, require_vr=False, emap=None)
                 warnings.append(f"{bt['id']}: {reason}; no credit")
             elif row["blocked_by"]:
                 reason = "blocked by open gate(s): " + ", ".join(row["blocked_by"])
+            if not rep_ev and not has_commit_bound_evidence(t):
+                row["evidence_state"] = "NO_EVIDENCE_REPORTED"
+            elif not ap:
+                row["evidence_state"] = "REPORTED_AWAITING_APPROVAL"
+            elif row["acceptance"] == "STALE_APPROVAL":
+                row["evidence_state"] = "BOUND_TO_OTHER_COMMIT"
+            elif not row["evidence_verified"]:
+                row["evidence_state"] = "NOT_VERIFIABLE"
+            elif require_vr and run_note:
+                row["evidence_state"] = "RUN_NOT_VERIFIED"
+            else:
+                row["evidence_state"] = "VERIFIED"
             if reason:
                 row["credit_reason"] = reason
             else:
@@ -607,10 +633,29 @@ def measures(tasks, gates):
 
 
 def evidence_health(tasks, workstreams, warnings):
-    h = []
+    """Why each task's evidence does or does not support credit, in the same terms as the credit rule."""
+    groups = {}
     for t in tasks:
-        if t["execution"] and not t["evidence_verified"]:
-            h.append(f"{t['task_id']}: no verified evidence")
+        st, ev = t["evidence_state"], t["reported_evidence"]
+        if st == "VERIFIED":
+            continue
+        if st == "NO_REPORT":
+            msg = "no current report from the owning workstream"
+        elif st == "NO_EVIDENCE_REPORTED":
+            msg = "the repo reports no commit-bound CI evidence"
+        elif st == "REPORTED_AWAITING_APPROVAL":
+            chk = {True: "run confirmed against GitHub", False: "run NOT confirmed against GitHub",
+                   None: "run not yet checked against GitHub"}[ev["github_verified"]]
+            msg = (f"evidence reported ({ev['class'] or 'class not recorded'}, run {ev['run']} at {ev['commit'][:7]}; {chk}) "
+                   "but no central approval is recorded, so zero credit until approved")
+        elif st == "BOUND_TO_OTHER_COMMIT":
+            msg = "evidence is bound to a different commit than the approval; re-review required"
+        elif st == "RUN_NOT_VERIFIED":
+            msg = "the cited CI run is not verified against GitHub; zero credit"
+        else:
+            msg = "the approval has no evidence bound to its commit with a CI run and PASS; zero credit"
+        groups.setdefault(msg, []).append(t["task_id"])
+    h = [f"{', '.join(sorted(ids))}: {msg}" for msg, ids in sorted(groups.items())]
     for w in workstreams:
         if w["source_state"] in ("STALE", "INVALID"):
             h.append(f"{w['id']}: source {w['source_state']}")
@@ -635,34 +680,81 @@ def evidence_lines(c):
     return out
 
 
+def program_status(root):
+    """The manual program-phase status (v2/tracking/STATUS.md), shown separately from engineering progress."""
+    p = root / TRACK / "STATUS.md"
+    if not p.exists():
+        return None
+    txt = p.read_text(encoding="utf-8")
+
+    def cell(label):
+        m = re.search(r"^\|\s*" + re.escape(label) + r"\s*\|\s*(.+?)\s*\|\s*$", txt, re.M)
+        return m.group(1) if m else None
+    asof = re.search(r"\*\*As of:\*\*\s*(\d{4}-\d{2}-\d{2})", txt)
+    rows = re.findall(r"^\|\s*(P\d[^|]*?)\s*\|\s*([^|]*?)\s*\|\s*([A-Z_]+)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|\s*$", txt, re.M)
+    return {"source": f"{TRACK}/STATUS.md", "as_of": asof.group(1) if asof else None,
+            "current_phase": cell("Current phase"), "accepted_progress": cell("Accepted progress"),
+            "phases": [{"phase": r[0], "name": r[1], "execution": r[2], "review": r[3], "acceptance": r[4], "accepted": r[5]}
+                       for r in rows]}
+
+
 def render(c):
     pct = c["progress"]["accepted_progress_pct"]
     m = c["measures"]
+    bw = c["by_workstream"]
+    ps = c.get("program_status")
+    ef = c.get("effort")
     L = ["<!-- GENERATED by tools/consolidate_status.py. Do not edit by hand. -->", "",
          "# Consolidated Program Status (generated)", "",
-         "## Summary", "",
+         "## Three separate measures (never blended)", "",
+         "| Measure | Value | Scope and basis |", "|---|---|---|",
+         f"| Accepted engineering progress | {'N/A' if pct is None else str(pct) + '%'} ({c['progress']['basis'].split(' (')[0]}) | "
+         f"Frozen baseline v{c['baseline_version']}: only the {len(c['tasks'])} baselined tasks (Core R1.0 and Community I2-I4). "
+         "Approval- and CI-evidence-credited. This is not V2 product completion |",
+         f"| Effort invested (person-months) | {effort.headline_line(ef) if ef else 'not set'} | "
+         "Owner estimates from delivered scope, not timesheets; see Effort and capability below |",
+         "| V2 capability completion | per workstream (see Effort and capability below) | "
+         "Owner estimate of intended scope delivered; separate from effort spent and from accepted progress |",
+         f"| Program phase (P0-P8) | {ps['current_phase'] if ps and ps['current_phase'] else 'unavailable'} | "
+         + (f"Manual status in {ps['source']}, as of {ps['as_of']}; it may lag this report and is not derived from the engineering baseline |"
+            if ps else "no program status file |"),
+         "", "## Summary", "",
          f"- Generated at: {c['generated_at']} (freshness of sources is judged at this time)",
          f"- Baseline version: {c['baseline_version']} ({'APPROVED' if c['baseline_approved'] else 'DRAFT, not approved'})",
-         f"- Accepted progress: {'N/A' if pct is None else str(pct) + '%'} ({c['progress']['basis']})",
+         f"- Accepted engineering progress: {'N/A' if pct is None else str(pct) + '%'} ({c['progress']['basis']})",
          f"- Execution reported complete: {m['execution_complete']['tasks_complete']}/{m['execution_complete']['tasks_total']} tasks (repo-reported; not acceptance)",
          f"- Credited tasks: {sum(1 for t in c['tasks'] if t['credit'])}/{len(c['tasks'])}; "
          f"blocked by open gates: {sum(1 for t in c['tasks'] if t['blocked_by'])} "
          f"({', '.join(sorted({g for t in c['tasks'] for g in t['blocked_by']})) or 'none'})",
-         f"- Evidence coverage: {m['evidence_coverage']['tasks_with_verified_evidence']}/{m['evidence_coverage']['tasks_total']} tasks with verified evidence; "
+         f"- Evidence coverage: {m['evidence_coverage']['tasks_with_verified_evidence']}/{m['evidence_coverage']['tasks_total']} tasks with approved, verified evidence; "
          f"{m['evidence_coverage']['tasks_with_github_verified_run']} with the CI run confirmed against GitHub"
          f" (policy: {'required for credit' if c.get('require_run_verification') else 'not required'})",
          f"- Release readiness: {m['release_readiness']['state']} (open release gates: "
          f"{', '.join(m['release_readiness']['open_release_gates']) or 'none'}; uncredited tasks: {m['release_readiness']['uncredited_tasks']})",
-         "- Schedule: NOT TRACKED here. Effort (person-months): owner estimates in the Effort accounting section, separate from progress",
-         *evidence_lines(c),
-         "", "## Workstreams", "",
-         "| Workstream | Repo | Source state | Tasks reported | Commit |", "|---|---|---|---|---|"]
+         "- Schedule: NOT TRACKED here. Effort and capability are owner estimates in their own section, separate from progress",
+         *evidence_lines(c)]
+    if ps and ps["phases"]:
+        L += ["", "## Program phase status (manual; separate scope from the engineering baseline)", "",
+              f"Source {ps['source']}, as of {ps['as_of']}. Accepted progress there: {ps['accepted_progress'] or 'n/a'}. "
+              "The engineering baseline (Core R1.0, Community I2-I4) is historical engineering work; it does not by itself "
+              "complete P0 FOUNDATION or pass the P0 exit review.", "",
+              "| Phase | Name | Execution | Review | Acceptance | Accepted progress |", "|---|---|---|---|---|---|"]
+        L += [f"| {r['phase']} | {r['name']} | {r['execution']} | {r['review']} | {r['acceptance']} | {r['accepted']} |" for r in ps["phases"]]
+    L += ["", "## Workstreams", "",
+          "BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero progress nor missing data. "
+          "Source state UNVERIFIED means no status source. The commit is the inspected source revision of the status report; "
+          "tested and task commits are per task below.", "",
+          "| Workstream | Repo | Baseline | Source state | Tasks reported | Inspected source commit |", "|---|---|---|---|---|---|"]
     for w in c["workstreams"]:
-        L.append(f"| {w['id']} | {w['repo'] or 'UNVERIFIED'} | {w['source_state']} | {w['tasks_reported']} | {w['commit'][:7]} |")
+        base_txt = f"BASELINED ({bw[w['id']]['tasks']} tasks)" if w["id"] in bw else "NOT BASELINED"
+        L.append(f"| {w['id']} | {w['repo'] or 'UNVERIFIED'} | {base_txt} | {w['source_state']} | {w['tasks_reported']} | {w['commit'][:7]} |")
     for title, key in (("Rollup by phase (P0-P8)", "by_phase"), ("Rollup by workstream", "by_workstream"),
                        ("Rollup by milestone", "by_milestone")):
-        L += ["", f"## {title}", "", "| Group | Tasks | Execution complete | Credited | Weight | Accepted weight |",
-              "|---|---|---|---|---|---|"]
+        L += ["", f"## {title}", ""]
+        if key == "by_phase" and "UNMAPPED" in c[key]:
+            L += ["No approved task-to-phase mapping exists (baseline tasks have no phase), so every task is UNMAPPED. "
+                  "This roll-up is NOT program phase progress; see Program phase status above.", ""]
+        L += ["| Group | Tasks | Execution complete | Credited | Weight | Accepted weight |", "|---|---|---|---|---|---|"]
         for k, g in c[key].items():
             L.append(f"| {k} | {g['tasks']} | {g['complete']} | {g['credited']} | "
                      f"{g['weight'] if g['weighted'] else 'N/A'} | {g['accepted_weight'] if g['weighted'] else 'N/A'} |")
@@ -671,21 +763,40 @@ def render(c):
         L += ["| Task | Workstream | Weight | Execution | Acceptance | Credit | Evidence (class, tested commit, task commit, run) | Run checked | Why |",
               "|---|---|---|---|---|---|---|---|---|"]
         for t in c["tasks"]:
-            ev = (f"{t['evidence_class']}: {t['tested_commit'][:7]} (task {t['task_commit'][:7] if t['task_commit'] else '-'}), run {t['evidence_run'] or '-'}"
-                  if t["tested_commit"] else "-")
-            chk = {True: "yes", False: "NO", None: "-"}[t["run_verified"]]
+            re_ = t["reported_evidence"]
+            if t["tested_commit"]:
+                ev = (f"{t['evidence_class']}: {t['tested_commit'][:7]} (task {t['task_commit'][:7] if t['task_commit'] else '-'}), run {t['evidence_run'] or '-'}")
+                chk = {True: "yes", False: "NO", None: "-"}[t["run_verified"]]
+            elif re_:
+                ev = (f"REPORTED, not approved: {re_['class'] or 'class not recorded'} {re_['commit'][:7]}"
+                      f" (task {re_['task_commit'][:7] if re_['task_commit'] else '-'}), run {re_['run'] or '-'}")
+                chk = {True: "yes", False: "NO", None: "-"}[re_["github_verified"]]
+            else:
+                ev, chk = "-", "-"
             L.append(f"| {t['task_id']} | {t['workstream_id']} | {t['weight']} | {t['execution'] or '-'} | "
                      f"{t['acceptance']} | {'yes' if t['credit'] else 'no'} | {ev} | {chk} | {t['credit_reason']} |")
     else:
         L.append("No approved baseline tasks yet (task IDs and weights pending, see D-007).")
     L += ["", "## Gates", ""]
     if c["gates"]:
-        L += ["| Gate | Status | Blocks | Scope | Owner | Closure |", "|---|---|---|---|---|---|"]
+        L += ["The frozen baseline records each gate's state at approval. A closure is a separate, append-only owner record "
+              "(v2/tracking/gate_closures.json); the effective state is the last valid record. Both are shown so the two "
+              "sources never appear to conflict.", "",
+              "| Gate | Frozen baseline state | Effective state | Blocks | Scope | Closure record | Reviewed commit | Reviewer (independence) |",
+              "|---|---|---|---|---|---|---|---|"]
         for g in c["gates"]:
             sc = ", ".join(g["scope"].get("milestone_ids", []) + g["scope"].get("task_ids", []))
-            cl = (f"{g['closure_id']}: {g['closed_at'][:10]} by {g['closed_by']}, reviewed {g['evidence_commit'][:7]}"
-                  if g["status"] == "CLOSED" else "-")
-            L.append(f"| {g['gate_id']} | {g['status']} | {', '.join(g['blocking_effect'])} | {sc} | {g.get('owner', '-')} | {cl} |")
+            if g["status"] == "CLOSED":
+                rv = g["reviewer"]
+                cl = f"{g['closure_id']}: {g['closed_at'][:10]} by {g['closed_by']}"
+                rc = g["evidence_commit"][:7]
+                who = f"{rv['name']} ({rv['role']}; independence {rv.get('independent_of_implementation', 'not-stated')})"
+            else:
+                cl = rc = who = "-"
+            L.append(f"| {g['gate_id']} | {g['frozen_status']} | {g['status']} | {', '.join(g['blocking_effect'])} | {sc} | {cl} | {rc} | {who} |")
+        for g in c["gates"]:
+            if g["status"] == "CLOSED":
+                L.append(f"- {g['closure_id']} limitations: {g['closure_limitations']}")
     else:
         L.append("No gates recorded.")
     if c.get("effort"):
@@ -876,6 +987,7 @@ def main():
          "by_milestone": rollup(tasks, "milestone_id"), "gates": gates,
          "evidence_health": evidence_health(tasks, out_ws, warnings),
          "errors": sorted(errors), "warnings": sorted(warnings)}
+    c["program_status"] = program_status(root)
     epath = root / effort.FILE
     if epath.exists():
         edoc = json.loads(epath.read_text(encoding="utf-8"))

@@ -1,5 +1,5 @@
 {
-  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; tag kritva-core-r1.0 resolves to commit 4acce3b60833abfe33168c4766405ab86ea73edc (verified locally by Dinesh 2026-10-11). KF-CORE-R10-001..009 are seeded in the baseline (D-014), so the closed-milestone guard for KF-CORE-R10 is active. Core R02..R09 are not tracked. RAAS repo name is recorded (confirmed from project context) but RaaS has no verified task IDs, so it is not in sources.json and has no baseline tasks; onboarding follows v2/tracking/ONBOARDING.md (D-017).",
+  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; tag kritva-core-r1.0 resolves to commit 4acce3b60833abfe33168c4766405ab86ea73edc (verified locally by Dinesh 2026-10-11). KF-CORE-R10-001..009 are seeded in the baseline (D-014), so the closed-milestone guard for KF-CORE-R10 is active. Core R02..R09 are not tracked. RAAS repo name is recorded (confirmed from project context) but RaaS has no verified task IDs, so it is not in sources.json and has no baseline tasks; onboarding follows v2/tracking/ONBOARDING.md (D-017). D-021 (2026-10-15): six workstreams (Device / Endpoint, Nexus / Edge, CI / Dev infrastructure, Electrical / Power, Actuation / Controls, Manufacturing / Fleet) were added so the registry covers the 17 reporting rows agreed with ChatGPT; none has a repo or baseline tasks yet. Studio, Control Plane and Education applications stay registered but are not in the agreed effort table (NOT_ESTIMATED).",
   "workstreams": [
     {
       "id": "CORE",
@@ -80,6 +80,36 @@
       "name": "Mechanical",
       "repo": null,
       "hold": true
+    },
+    {
+      "id": "DEVICE_ENDPOINT",
+      "name": "Device / Endpoint",
+      "repo": null
+    },
+    {
+      "id": "NEXUS_EDGE",
+      "name": "Nexus / Edge",
+      "repo": null
+    },
+    {
+      "id": "CI_DEV_INFRA",
+      "name": "CI / Dev infrastructure",
+      "repo": null
+    },
+    {
+      "id": "ELECTRICAL_POWER",
+      "name": "Electrical / Power",
+      "repo": null
+    },
+    {
+      "id": "ACTUATION_CONTROLS",
+      "name": "Actuation / Controls",
+      "repo": null
+    },
+    {
+      "id": "MANUFACTURING_FLEET",
+      "name": "Manufacturing / Fleet",
+      "repo": null
     }
   ]
 }

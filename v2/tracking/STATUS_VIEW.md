@@ -2,39 +2,68 @@
 
 # Consolidated Program Status (generated)
 
+## Three separate measures (never blended)
+
+| Measure | Value | Scope and basis |
+|---|---|---|
+| Accepted engineering progress | 47.52% (48/101 weight) | Frozen baseline v1: only the 30 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
+| Effort invested (person-months) | ~70 PM completed, ~175 PM remaining, ~245 PM total (DRAFT: provisional engineering estimates, not owner-approved; horizon 10-12 months) | Owner estimates from delivered scope, not timesheets; see Effort and capability below |
+| V2 capability completion | per workstream (see Effort and capability below) | Owner estimate of intended scope delivered; separate from effort spent and from accepted progress |
+| Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
+
 ## Summary
 
-- Generated at: 2026-10-15T17:08:33Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-15T17:33:46Z (freshness of sources is judged at this time)
 - Baseline version: 1 (APPROVED)
-- Accepted progress: 47.52% (48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
+- Accepted engineering progress: 47.52% (48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/30 tasks (repo-reported; not acceptance)
 - Credited tasks: 15/30; blocked by open gates: 0 (none)
-- Evidence coverage: 15/30 tasks with verified evidence; 15 with the CI run confirmed against GitHub (policy: required for credit)
+- Evidence coverage: 15/30 tasks with approved, verified evidence; 15 with the CI run confirmed against GitHub (policy: required for credit)
 - Release readiness: NOT_READY (open release gates: GATE-KOS-CI-001; uncredited tasks: 15)
-- Schedule: NOT TRACKED here. Effort (person-months): owner estimates in the Effort accounting section, separate from progress
+- Schedule: NOT TRACKED here. Effort and capability are owner estimates in their own section, separate from progress
 - Evidence classes of credited tasks: MILESTONE 15
 - Evidence qualification: MILESTONE-class tasks were validated by a CI run on a LATER commit ("accepted as of" that commit), not by a run on the task's own commit; the tested commit is shown per task. UNSPECIFIED means the evidence class is not recorded. Open safety gates keep gated tasks at zero credit and release readiness NOT_READY. Credit reflects approval and CI evidence, not physical validation or safety sign-off.
 
+## Program phase status (manual; separate scope from the engineering baseline)
+
+Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of the P0 baseline (no tasks defined or accepted yet). The engineering baseline (Core R1.0, Community I2-I4) is historical engineering work; it does not by itself complete P0 FOUNDATION or pass the P0 exit review.
+
+| Phase | Name | Execution | Review | Acceptance | Accepted progress |
+|---|---|---|---|---|---|
+| P0 | FOUNDATION | IN_PROGRESS | NOT_REVIEWED | NOT_RUN | 0% |
+| P1 | STUDIO | NOT_STARTED | — | — | 0% |
+| P2–P8 | — | NOT_STARTED | — | — | 0% |
+
 ## Workstreams
 
-| Workstream | Repo | Source state | Tasks reported | Commit |
-|---|---|---|---|---|
-| COMMUNITY | KritvaOS/kritvaos-community | OK | 21 | 8256ba3 |
-| CONTROL_PLANE | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| CORE | KritvaOS/kritva-core | OK | 9 | 54984ae |
-| EDUCATION_APPLICATIONS | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| INTEGRATION_SOFTWARE_VALIDATION | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| MECHANICAL | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| MIND | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| MOTION | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| RAAS | KritvaOS/kritva-raas | UNVERIFIED | 0 | ------- |
-| SDK | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| SENSE | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| SIM | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| SKILL | UNVERIFIED | UNVERIFIED | 0 | ------- |
-| STUDIO | UNVERIFIED | UNVERIFIED | 0 | ------- |
+BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero progress nor missing data. Source state UNVERIFIED means no status source. The commit is the inspected source revision of the status report; tested and task commits are per task below.
+
+| Workstream | Repo | Baseline | Source state | Tasks reported | Inspected source commit |
+|---|---|---|---|---|---|
+| ACTUATION_CONTROLS | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| CI_DEV_INFRA | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| COMMUNITY | KritvaOS/kritvaos-community | BASELINED (21 tasks) | OK | 21 | 8256ba3 |
+| CONTROL_PLANE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| CORE | KritvaOS/kritva-core | BASELINED (9 tasks) | OK | 9 | 54984ae |
+| DEVICE_ENDPOINT | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| EDUCATION_APPLICATIONS | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| ELECTRICAL_POWER | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| INTEGRATION_SOFTWARE_VALIDATION | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| MANUFACTURING_FLEET | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| MECHANICAL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| MIND | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| MOTION | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| NEXUS_EDGE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| RAAS | KritvaOS/kritva-raas | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| SDK | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| SENSE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| SIM | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| SKILL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| STUDIO | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 
 ## Rollup by phase (P0-P8)
+
+No approved task-to-phase mapping exists (baseline tasks have no phase), so every task is UNMAPPED. This roll-up is NOT program phase progress; see Program phase status above.
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
@@ -66,21 +95,21 @@
 | I2-004 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task bfa2b29), run 38158709895 | yes | weight 3 x approval A004 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
 | I2-005 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task e8ad793), run 38158709895 | yes | weight 3 x approval A005 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
 | I2-006 | COMMUNITY | 2 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 69521ef), run 38158709895 | yes | weight 2 x approval A006 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I3-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I3-002 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I3-003 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I3-004 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I3-005 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I3-006 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I3-007 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I4-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I4-002 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I4-003 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I4-004 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I4-005 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I4-006 | COMMUNITY | 5 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I4-007 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
-| I4-008 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | - | - | no central approval recorded |
+| I3-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | REPORTED, not approved: MILESTONE 8256ba3 (task 39780cc), run 38158709895 | yes | no central approval recorded |
+| I3-002 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | REPORTED, not approved: MILESTONE 8256ba3 (task a7e08e5), run 38158709895 | yes | no central approval recorded |
+| I3-003 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | REPORTED, not approved: MILESTONE 8256ba3 (task 97ab518), run 38158709895 | yes | no central approval recorded |
+| I3-004 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | REPORTED, not approved: MILESTONE 8256ba3 (task f980675), run 38158709895 | yes | no central approval recorded |
+| I3-005 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | REPORTED, not approved: MILESTONE 8256ba3 (task cd1a35c), run 38158709895 | yes | no central approval recorded |
+| I3-006 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | REPORTED, not approved: MILESTONE 8256ba3 (task 46b91fa), run 38158709895 | yes | no central approval recorded |
+| I3-007 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | REPORTED, not approved: MILESTONE 8256ba3 (task d8cd315), run 38158709895 | yes | no central approval recorded |
+| I4-001 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | REPORTED, not approved: OWN d2f8936 (task d2f8936), run 37253855540 | yes | no central approval recorded |
+| I4-002 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | REPORTED, not approved: OWN 52218f4 (task 52218f4), run 37256868535 | yes | no central approval recorded |
+| I4-003 | COMMUNITY | 3 | COMPLETE | NOT_RUN | no | REPORTED, not approved: OWN c40fbb2 (task c40fbb2), run 37347653023 | yes | no central approval recorded |
+| I4-004 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | REPORTED, not approved: OWN 3c535b6 (task 3c535b6), run 37405212290 | yes | no central approval recorded |
+| I4-005 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | REPORTED, not approved: OWN a690520 (task a690520), run 37407633177 | yes | no central approval recorded |
+| I4-006 | COMMUNITY | 5 | COMPLETE | NOT_RUN | no | REPORTED, not approved: OWN 94aa01d (task 94aa01d), run 37497496804 | yes | no central approval recorded |
+| I4-007 | COMMUNITY | 4 | COMPLETE | NOT_RUN | no | REPORTED, not approved: OWN cd51be8 (task cd51be8), run 37507901354 | yes | no central approval recorded |
+| I4-008 | COMMUNITY | 2 | COMPLETE | NOT_RUN | no | REPORTED, not approved: RERUN 79f4daf (task 79f4daf), run 37561636952 | yes | no central approval recorded |
 | KF-CORE-R10-001 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 1dba571), run 37192914607 | yes | weight 3 x approval A007 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 | KF-CORE-R10-002 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task bbe10b6), run 37192914607 | yes | weight 4 x approval A008 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 | KF-CORE-R10-003 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 559d75f), run 37192914607 | yes | weight 3 x approval A009 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
@@ -93,62 +122,80 @@
 
 ## Gates
 
-| Gate | Status | Blocks | Scope | Owner | Closure |
-|---|---|---|---|---|---|
-| GATE-KOS-I3-SAFETY | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I3 | Dinesh | C001: 2026-10-13 by Dinesh, reviewed 8256ba3 |
-| GATE-KOS-I4-SAFETY | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I4 | Dinesh | C002: 2026-10-13 by Dinesh, reviewed 8256ba3 |
-| GATE-KOS-CI-001 | OPEN | RELEASE | KOS-I4 | Dinesh | - |
+The frozen baseline records each gate's state at approval. A closure is a separate, append-only owner record (v2/tracking/gate_closures.json); the effective state is the last valid record. Both are shown so the two sources never appear to conflict.
 
-## Effort accounting (owner estimates in person-months; NOT evidence and never part of accepted progress)
+| Gate | Frozen baseline state | Effective state | Blocks | Scope | Closure record | Reviewed commit | Reviewer (independence) |
+|---|---|---|---|---|---|---|---|
+| GATE-KOS-I3-SAFETY | OPEN | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I3 | C001: 2026-10-13 by Dinesh | 8256ba3 | Dinesh (owner and reviewer; independence not-stated) |
+| GATE-KOS-I4-SAFETY | OPEN | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I4 | C002: 2026-10-13 by Dinesh | 8256ba3 | Dinesh (owner and reviewer; independence not-stated) |
+| GATE-KOS-CI-001 | OPEN | OPEN | RELEASE | KOS-I4 | - | - | - |
+- C001 limitations: Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-10-13. Reviewer independence from the implementation is not stated. CI results are supporting evidence only.
+- C002 limitations: Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-10-13. Reviewer independence from the implementation is not stated. CI results are supporting evidence only.
 
-- Estimate version 1, cutoff 2026-10-13: DRAFT, not owner-approved
-- Workstreams with completed and remaining estimated: 0/14; all others show NOT_ESTIMATED (never zero)
-- Format: base (low-high). Total = completed + remaining per bound. Completed effort is not capability complete: see Evidence-credited progress, which comes only from the approved baseline
-- Legacy workstream names awaiting an owner mapping: Actuation/Controls, CI/Dev infrastructure, Device/Endpoint, Electrical/Power, Manufacturing/Fleet, Nexus/Edge
+## Effort and capability (owner estimates; NOT evidence and never part of accepted engineering progress)
 
-| Workstream | Completed PM | Basis | Remaining PM | Total PM | Confidence | Evidence-credited progress |
+- Estimate version 1, cutoff 2026-10-13: DRAFT: provisional engineering estimates, not owner-approved
+- Management planning points: ~70 PM completed, ~175 PM remaining, ~245 PM total V2 effort; delivery horizon 10-12 months. Rounded management planning points; the workstream rows are the underlying estimates and sum slightly differently
+- Workstreams with completed and remaining estimated: 17/20; the rest show NOT_ESTIMATED (never zero)
+- Completed PM is effort spent, not capability: 70 PM spent is not 70% of the product built. Capability is the owner's estimate of intended workstream scope delivered. These are estimates from delivered scope, not timesheet actuals; commits do not measure effort
+- Format: base (low-high). Total = completed + remaining per bound. Confidence: H actual history / substantial implementation, M scope known but implementation not started, L depends on hardware, vendor or algorithm uncertainty
+- Mechanical remains on HOLD (D-003); its remaining-effort figure is a planning assumption and does not authorize physical execution
+- Capability % is the owner's estimate of intended workstream scope delivered; 70 PM spent does not mean 70% of the product is built
+
+| Workstream | Completed PM | Remaining PM | Total PM | Capability % | Confidence | Accepted engineering progress |
 |---|---|---|---|---|---|---|
-| COMMUNITY | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | 18/71 weight |
-| CONTROL_PLANE | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| CORE | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | 30/30 weight |
-| EDUCATION_APPLICATIONS | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| INTEGRATION_SOFTWARE_VALIDATION | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| MECHANICAL | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| MIND | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| MOTION | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| RAAS | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| SDK | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| SENSE | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| SIM | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| SKILL | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
-| STUDIO | NOT_ESTIMATED | - | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| Actuation / Controls | 1.5 (1-2) | 14 (12-16) | 15.5 (13-18) | 10 (5-15) | L | Not baselined |
+| CI / Dev infrastructure | 4 (3-5) | 2.5 (2-3) | 6.5 (5-8) | 67.5 (60-75) | M | Not baselined |
+| Community | 12 (10-14) | 4 (3-5) | 16 (13-19) | 85 (75-85) | H | 18/71 weight |
+| Control Plane | NOT_ESTIMATED | NOT_ESTIMATED | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| Core | 20 (18-24) | 2 (0-3) | 22 (18-27) | 95 (90-100) | H | 30/30 weight |
+| Device / Endpoint | 10 (8-12) | 8 (6-10) | 18 (14-22) | 65 (55-70) | M | Not baselined |
+| Education applications | NOT_ESTIMATED | NOT_ESTIMATED | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| Electrical / Power | 1.5 (1-2) | 12 (10-14) | 13.5 (11-16) | 12.5 (10-15) | L | Not baselined |
+| Integration & software validation | 2.5 (2-3) | 14 (12-16) | 16.5 (14-19) | 17.5 (15-20) | M | Not baselined |
+| Manufacturing / Fleet | 0 (0-0) | 12 (10-14) | 12 (10-14) | 0 (0-0) | L | Not baselined |
+| Mechanical | 2 (1-2) | 22 (18-24) | 24 (19-26) | 8 (5-10) | L | Not baselined |
+| Mind | 0.75 (0.5-1) | 10 (8-12) | 10.75 (8.5-13) | 7.5 (5-10) | L | Not baselined |
+| Motion | 1.5 (1-2) | 16 (14-18) | 17.5 (15-20) | 10 (5-15) | L | Not baselined |
+| Nexus / Edge | 10 (8-12) | 10 (8-12) | 20 (16-24) | 57.5 (50-65) | M | Not baselined |
+| RaaS | 1 (0.5-1) | 14 (12-16) | 15 (12.5-17) | 7 (5-10) | L | Not baselined |
+| SDK | 0.75 (0.5-1) | 6.5 (5-8) | 7.25 (5.5-9) | 10 (5-15) | M | Not baselined |
+| Sense | 1.5 (1-2) | 12 (10-14) | 13.5 (11-16) | 12 (10-15) | M | Not baselined |
+| Sim | 1.5 (1-2) | 10 (8-12) | 11.5 (9-14) | 12.5 (10-15) | M | Not baselined |
+| Skill | 1 (1-1) | 10 (8-12) | 11 (9-13) | 7.5 (5-10) | M | Not baselined |
+| Studio | NOT_ESTIMATED | NOT_ESTIMATED | NOT_ESTIMATED | NOT_ESTIMATED | - | Not baselined |
+| **Sum of workstream rows** | 71.5 (57.5-86) | 179 (146-209) | 250.5 (203.5-295) | | | |
+
+Sums add the workstream bounds and ignore correlated risk; they cover estimated workstreams only and need not equal the rounded management planning points.
+
+Monthly staffing and burn forecast: NOT PLANNED yet (needs parallelization, hiring, COTS/vendor and mechanical-HOLD assumptions).
 
 ## Evidence health
 
-- I3-001: no verified evidence
-- I3-002: no verified evidence
-- I3-003: no verified evidence
-- I3-004: no verified evidence
-- I3-005: no verified evidence
-- I3-006: no verified evidence
-- I3-007: no verified evidence
-- I4-001: no verified evidence
-- I4-002: no verified evidence
-- I4-003: no verified evidence
-- I4-004: no verified evidence
-- I4-005: no verified evidence
-- I4-006: no verified evidence
-- I4-007: no verified evidence
-- I4-008: no verified evidence
+- I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007: evidence reported (MILESTONE, run 38158709895 at 8256ba3; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
+- I4-001: evidence reported (OWN, run 37253855540 at d2f8936; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
+- I4-002: evidence reported (OWN, run 37256868535 at 52218f4; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
+- I4-003: evidence reported (OWN, run 37347653023 at c40fbb2; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
+- I4-004: evidence reported (OWN, run 37405212290 at 3c535b6; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
+- I4-005: evidence reported (OWN, run 37407633177 at a690520; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
+- I4-006: evidence reported (OWN, run 37497496804 at 94aa01d; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
+- I4-007: evidence reported (OWN, run 37507901354 at cd51be8; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
+- I4-008: evidence reported (RERUN, run 37561636952 at 79f4daf; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
 
 ## Warnings
 
+- ACTUATION_CONTROLS: no status source (UNVERIFIED)
+- CI_DEV_INFRA: no status source (UNVERIFIED)
 - CONTROL_PLANE: no status source (UNVERIFIED)
+- DEVICE_ENDPOINT: no status source (UNVERIFIED)
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
+- ELECTRICAL_POWER: no status source (UNVERIFIED)
 - INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)
+- MANUFACTURING_FLEET: no status source (UNVERIFIED)
 - MECHANICAL: no status source (UNVERIFIED)
 - MIND: no status source (UNVERIFIED)
 - MOTION: no status source (UNVERIFIED)
+- NEXUS_EDGE: no status source (UNVERIFIED)
 - RAAS: no status source (UNVERIFIED)
 - SDK: no status source (UNVERIFIED)
 - SENSE: no status source (UNVERIFIED)

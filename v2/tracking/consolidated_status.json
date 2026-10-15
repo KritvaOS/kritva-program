@@ -64,139 +64,510 @@
     }
   },
   "effort": {
-    "crosswalk_undecided": [
-      "Actuation/Controls",
-      "CI/Dev infrastructure",
-      "Device/Endpoint",
-      "Electrical/Power",
-      "Manufacturing/Fleet",
-      "Nexus/Edge"
-    ],
+    "crosswalk_undecided": [],
     "estimate_version": 1,
+    "notes": [
+      "Mechanical remains on HOLD (D-003); its remaining-effort figure is a planning assumption and does not authorize physical execution",
+      "Capability % is the owner's estimate of intended workstream scope delivered; 70 PM spent does not mean 70% of the product is built"
+    ],
+    "program_planning": {
+      "basis": "OWNER_ESTIMATE",
+      "completed": 70,
+      "horizon_months": "10-12",
+      "note": "Rounded management planning points; the workstream rows are the underlying estimates and sum slightly differently",
+      "remaining": 175,
+      "total": 245
+    },
     "reporting_cutoff": "2026-10-13",
     "rows": [
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          5,
+          10,
+          15
+        ],
+        "completed": [
+          1,
+          1.5,
+          2
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "L",
+        "evidence_progress": "Not baselined",
+        "name": "Actuation / Controls",
+        "remaining": [
+          12,
+          14,
+          16
+        ],
+        "total": [
+          13,
+          15.5,
+          18
+        ],
+        "workstream_id": "ACTUATION_CONTROLS"
+      },
+      {
+        "capability": [
+          60,
+          67.5,
+          75
+        ],
+        "completed": [
+          3,
+          4,
+          5
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "M",
+        "evidence_progress": "Not baselined",
+        "name": "CI / Dev infrastructure",
+        "remaining": [
+          2,
+          2.5,
+          3
+        ],
+        "total": [
+          5,
+          6.5,
+          8
+        ],
+        "workstream_id": "CI_DEV_INFRA"
+      },
+      {
+        "capability": [
+          75,
+          85,
+          85
+        ],
+        "completed": [
+          10,
+          12,
+          14
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "H",
         "evidence_progress": "18/71 weight",
-        "remaining": null,
-        "total": null,
+        "name": "Community",
+        "remaining": [
+          3,
+          4,
+          5
+        ],
+        "total": [
+          13,
+          16,
+          19
+        ],
         "workstream_id": "COMMUNITY"
       },
       {
+        "capability": null,
         "completed": null,
         "completed_basis": null,
         "confidence": null,
         "evidence_progress": "Not baselined",
+        "name": "Control Plane",
         "remaining": null,
         "total": null,
         "workstream_id": "CONTROL_PLANE"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          90,
+          95,
+          100
+        ],
+        "completed": [
+          18,
+          20,
+          24
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "H",
         "evidence_progress": "30/30 weight",
-        "remaining": null,
-        "total": null,
+        "name": "Core",
+        "remaining": [
+          0,
+          2,
+          3
+        ],
+        "total": [
+          18,
+          22,
+          27
+        ],
         "workstream_id": "CORE"
       },
       {
+        "capability": [
+          55,
+          65,
+          70
+        ],
+        "completed": [
+          8,
+          10,
+          12
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "M",
+        "evidence_progress": "Not baselined",
+        "name": "Device / Endpoint",
+        "remaining": [
+          6,
+          8,
+          10
+        ],
+        "total": [
+          14,
+          18,
+          22
+        ],
+        "workstream_id": "DEVICE_ENDPOINT"
+      },
+      {
+        "capability": null,
         "completed": null,
         "completed_basis": null,
         "confidence": null,
         "evidence_progress": "Not baselined",
+        "name": "Education applications",
         "remaining": null,
         "total": null,
         "workstream_id": "EDUCATION_APPLICATIONS"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          10,
+          12.5,
+          15
+        ],
+        "completed": [
+          1,
+          1.5,
+          2
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "L",
         "evidence_progress": "Not baselined",
-        "remaining": null,
-        "total": null,
+        "name": "Electrical / Power",
+        "remaining": [
+          10,
+          12,
+          14
+        ],
+        "total": [
+          11,
+          13.5,
+          16
+        ],
+        "workstream_id": "ELECTRICAL_POWER"
+      },
+      {
+        "capability": [
+          15,
+          17.5,
+          20
+        ],
+        "completed": [
+          2,
+          2.5,
+          3
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "M",
+        "evidence_progress": "Not baselined",
+        "name": "Integration & software validation",
+        "remaining": [
+          12,
+          14,
+          16
+        ],
+        "total": [
+          14,
+          16.5,
+          19
+        ],
         "workstream_id": "INTEGRATION_SOFTWARE_VALIDATION"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          0,
+          0,
+          0
+        ],
+        "completed": [
+          0,
+          0,
+          0
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "L",
         "evidence_progress": "Not baselined",
-        "remaining": null,
-        "total": null,
+        "name": "Manufacturing / Fleet",
+        "remaining": [
+          10,
+          12,
+          14
+        ],
+        "total": [
+          10,
+          12,
+          14
+        ],
+        "workstream_id": "MANUFACTURING_FLEET"
+      },
+      {
+        "capability": [
+          5,
+          8,
+          10
+        ],
+        "completed": [
+          1,
+          2,
+          2
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "L",
+        "evidence_progress": "Not baselined",
+        "name": "Mechanical",
+        "remaining": [
+          18,
+          22,
+          24
+        ],
+        "total": [
+          19,
+          24,
+          26
+        ],
         "workstream_id": "MECHANICAL"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          5,
+          7.5,
+          10
+        ],
+        "completed": [
+          0.5,
+          0.75,
+          1
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "L",
         "evidence_progress": "Not baselined",
-        "remaining": null,
-        "total": null,
+        "name": "Mind",
+        "remaining": [
+          8,
+          10,
+          12
+        ],
+        "total": [
+          8.5,
+          10.75,
+          13
+        ],
         "workstream_id": "MIND"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          5,
+          10,
+          15
+        ],
+        "completed": [
+          1,
+          1.5,
+          2
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "L",
         "evidence_progress": "Not baselined",
-        "remaining": null,
-        "total": null,
+        "name": "Motion",
+        "remaining": [
+          14,
+          16,
+          18
+        ],
+        "total": [
+          15,
+          17.5,
+          20
+        ],
         "workstream_id": "MOTION"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          50,
+          57.5,
+          65
+        ],
+        "completed": [
+          8,
+          10,
+          12
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "M",
         "evidence_progress": "Not baselined",
-        "remaining": null,
-        "total": null,
+        "name": "Nexus / Edge",
+        "remaining": [
+          8,
+          10,
+          12
+        ],
+        "total": [
+          16,
+          20,
+          24
+        ],
+        "workstream_id": "NEXUS_EDGE"
+      },
+      {
+        "capability": [
+          5,
+          7,
+          10
+        ],
+        "completed": [
+          0.5,
+          1,
+          1
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "L",
+        "evidence_progress": "Not baselined",
+        "name": "RaaS",
+        "remaining": [
+          12,
+          14,
+          16
+        ],
+        "total": [
+          12.5,
+          15,
+          17
+        ],
         "workstream_id": "RAAS"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          5,
+          10,
+          15
+        ],
+        "completed": [
+          0.5,
+          0.75,
+          1
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "M",
         "evidence_progress": "Not baselined",
-        "remaining": null,
-        "total": null,
+        "name": "SDK",
+        "remaining": [
+          5,
+          6.5,
+          8
+        ],
+        "total": [
+          5.5,
+          7.25,
+          9
+        ],
         "workstream_id": "SDK"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          10,
+          12,
+          15
+        ],
+        "completed": [
+          1,
+          1.5,
+          2
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "M",
         "evidence_progress": "Not baselined",
-        "remaining": null,
-        "total": null,
+        "name": "Sense",
+        "remaining": [
+          10,
+          12,
+          14
+        ],
+        "total": [
+          11,
+          13.5,
+          16
+        ],
         "workstream_id": "SENSE"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          10,
+          12.5,
+          15
+        ],
+        "completed": [
+          1,
+          1.5,
+          2
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "M",
         "evidence_progress": "Not baselined",
-        "remaining": null,
-        "total": null,
+        "name": "Sim",
+        "remaining": [
+          8,
+          10,
+          12
+        ],
+        "total": [
+          9,
+          11.5,
+          14
+        ],
         "workstream_id": "SIM"
       },
       {
-        "completed": null,
-        "completed_basis": null,
-        "confidence": null,
+        "capability": [
+          5,
+          7.5,
+          10
+        ],
+        "completed": [
+          1,
+          1,
+          1
+        ],
+        "completed_basis": "OWNER_ESTIMATE",
+        "confidence": "M",
         "evidence_progress": "Not baselined",
-        "remaining": null,
-        "total": null,
+        "name": "Skill",
+        "remaining": [
+          8,
+          10,
+          12
+        ],
+        "total": [
+          9,
+          11,
+          13
+        ],
         "workstream_id": "SKILL"
       },
       {
+        "capability": null,
         "completed": null,
         "completed_basis": null,
         "confidence": null,
         "evidence_progress": "Not baselined",
+        "name": "Studio",
         "remaining": null,
         "total": null,
         "workstream_id": "STUDIO"
@@ -205,42 +576,36 @@
     "status": "DRAFT",
     "sums": {
       "completed": [
-        0,
-        0,
-        0
+        57.5,
+        71.5,
+        86
       ],
       "remaining": [
-        0,
-        0,
-        0
+        146,
+        179.0,
+        209
       ],
       "total": [
-        0,
-        0,
-        0
+        203.5,
+        250.5,
+        295
       ]
     },
     "unit": "person_month",
-    "workstreams_fully_estimated": 0,
-    "workstreams_total": 14
+    "workstreams_fully_estimated": 17,
+    "workstreams_total": 20
   },
   "errors": [],
   "evidence_health": [
-    "I3-001: no verified evidence",
-    "I3-002: no verified evidence",
-    "I3-003: no verified evidence",
-    "I3-004: no verified evidence",
-    "I3-005: no verified evidence",
-    "I3-006: no verified evidence",
-    "I3-007: no verified evidence",
-    "I4-001: no verified evidence",
-    "I4-002: no verified evidence",
-    "I4-003: no verified evidence",
-    "I4-004: no verified evidence",
-    "I4-005: no verified evidence",
-    "I4-006: no verified evidence",
-    "I4-007: no verified evidence",
-    "I4-008: no verified evidence"
+    "I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007: evidence reported (MILESTONE, run 38158709895 at 8256ba3; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-001: evidence reported (OWN, run 37253855540 at d2f8936; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-002: evidence reported (OWN, run 37256868535 at 52218f4; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-003: evidence reported (OWN, run 37347653023 at c40fbb2; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-004: evidence reported (OWN, run 37405212290 at 3c535b6; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-005: evidence reported (OWN, run 37407633177 at a690520; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-006: evidence reported (OWN, run 37497496804 at 94aa01d; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-007: evidence reported (OWN, run 37507901354 at cd51be8; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-008: evidence reported (RERUN, run 37561636952 at 79f4daf; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved"
   ],
   "gates": [
     {
@@ -254,10 +619,17 @@
       "closed_by": "Dinesh",
       "closure_criteria": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
       "closure_id": "C001",
+      "closure_limitations": "Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-10-13. Reviewer independence from the implementation is not stated. CI results are supporting evidence only.",
       "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "frozen_status": "OPEN",
       "gate_id": "GATE-KOS-I3-SAFETY",
       "note": "OPEN per Community MILESTONE_STATUS.md. Scope is the whole milestone as a conservative default; the owner may narrow it to specific task_ids.",
       "owner": "Dinesh",
+      "reviewer": {
+        "independent_of_implementation": "not-stated",
+        "name": "Dinesh",
+        "role": "owner and reviewer"
+      },
       "scope": {
         "milestone_ids": [
           "KOS-I3"
@@ -278,10 +650,17 @@
       "closed_by": "Dinesh",
       "closure_criteria": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
       "closure_id": "C002",
+      "closure_limitations": "Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-10-13. Reviewer independence from the implementation is not stated. CI results are supporting evidence only.",
       "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "frozen_status": "OPEN",
       "gate_id": "GATE-KOS-I4-SAFETY",
       "note": "OPEN per Community MILESTONE_STATUS.md. I4-004..008 are flagged safety-relevant; milestone-wide scope is a conservative default pending owner narrowing.",
       "owner": "Dinesh",
+      "reviewer": {
+        "independent_of_implementation": "not-stated",
+        "name": "Dinesh",
+        "role": "owner and reviewer"
+      },
       "scope": {
         "milestone_ids": [
           "KOS-I4"
@@ -300,6 +679,7 @@
       "closed_by": null,
       "closure_criteria": "Reviewed evidence that the release, ASan and UBSan CI variants ran green on the closing commit, and the owner closes the gate. A CI job existing does not close it.",
       "evidence_commit": null,
+      "frozen_status": "OPEN",
       "gate_id": "GATE-KOS-CI-001",
       "note": "Community docs say deferred; kritvaos-community ci.yml already has a variants job. Its results are UNVERIFIED. Scope (KOS-I4, release only) is UNVERIFIED.",
       "owner": "Dinesh",
@@ -313,7 +693,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-15T17:08:33Z",
+  "generated_at": "2026-10-15T17:33:46Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 30,
@@ -333,6 +713,38 @@
       "uncredited_tasks": 15
     }
   },
+  "program_status": {
+    "accepted_progress": "0% of the P0 baseline (no tasks defined or accepted yet)",
+    "as_of": "2026-10-09",
+    "current_phase": "P0 FOUNDATION",
+    "phases": [
+      {
+        "acceptance": "NOT_RUN",
+        "accepted": "0%",
+        "execution": "IN_PROGRESS",
+        "name": "FOUNDATION",
+        "phase": "P0",
+        "review": "NOT_REVIEWED"
+      },
+      {
+        "acceptance": "\u2014",
+        "accepted": "0%",
+        "execution": "NOT_STARTED",
+        "name": "STUDIO",
+        "phase": "P1",
+        "review": "\u2014"
+      },
+      {
+        "acceptance": "\u2014",
+        "accepted": "0%",
+        "execution": "NOT_STARTED",
+        "name": "\u2014",
+        "phase": "P2\u2013P8",
+        "review": "\u2014"
+      }
+    ],
+    "source": "v2/tracking/STATUS.md"
+  },
   "progress": {
     "accepted_progress_pct": 47.52,
     "basis": "48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
@@ -346,12 +758,20 @@
       "credit_reason": "weight 4 x approval A001 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "150d21161ce22676a23c76adbc5758222421f948"
+      },
       "run_verified": true,
       "task_commit": "150d21161ce22676a23c76adbc5758222421f948",
       "task_id": "I2-001",
@@ -366,12 +786,20 @@
       "credit_reason": "weight 3 x approval A002 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "e2851fdae3229e7a0139841ee1c099dab2ad218d"
+      },
       "run_verified": true,
       "task_commit": "e2851fdae3229e7a0139841ee1c099dab2ad218d",
       "task_id": "I2-002",
@@ -386,12 +814,20 @@
       "credit_reason": "weight 3 x approval A003 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "ae0de753d1e240a71da9e1411efc30cbfe9a109e"
+      },
       "run_verified": true,
       "task_commit": "ae0de753d1e240a71da9e1411efc30cbfe9a109e",
       "task_id": "I2-003",
@@ -406,12 +842,20 @@
       "credit_reason": "weight 3 x approval A004 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "bfa2b29aee7fcfcd34bf9b870b6249e556e32333"
+      },
       "run_verified": true,
       "task_commit": "bfa2b29aee7fcfcd34bf9b870b6249e556e32333",
       "task_id": "I2-004",
@@ -426,12 +870,20 @@
       "credit_reason": "weight 3 x approval A005 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "e8ad7937366455c758c9cd0add35fb17d8593b3c"
+      },
       "run_verified": true,
       "task_commit": "e8ad7937366455c758c9cd0add35fb17d8593b3c",
       "task_id": "I2-005",
@@ -446,12 +898,20 @@
       "credit_reason": "weight 2 x approval A006 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "69521ef3c164847e8956ef509d2f8f6a308f24b1"
+      },
       "run_verified": true,
       "task_commit": "69521ef3c164847e8956ef509d2f8f6a308f24b1",
       "task_id": "I2-006",
@@ -466,12 +926,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "39780ccb8f93719471ee982299f6f43f2cee6196"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I3-001",
@@ -486,12 +954,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "a7e08e518257d657ae0b1a1ac8696241cc8844d2"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I3-002",
@@ -506,12 +982,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "97ab51870a122019a80acf7507bd916a4bef3a3b"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I3-003",
@@ -526,12 +1010,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "f98067542476258b3e346353115bf663760b5491"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I3-004",
@@ -546,12 +1038,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I3-005",
@@ -566,12 +1066,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "46b91fabac8bd4a9df00797ca23313717127c325"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I3-006",
@@ -586,12 +1094,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "d8cd3150867a7e71111579a9cac6d37a5832731e"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I3-007",
@@ -606,12 +1122,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "github_verified": true,
+        "run": "37253855540",
+        "task_commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I4-001",
@@ -626,12 +1150,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "github_verified": true,
+        "run": "37256868535",
+        "task_commit": "52218f484f29ea58813b848008d187aeab98a0bf"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I4-002",
@@ -646,12 +1178,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "github_verified": true,
+        "run": "37347653023",
+        "task_commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I4-003",
@@ -666,12 +1206,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "3c535b64ebae626065032e7315e679e474f6853b",
+        "github_verified": true,
+        "run": "37405212290",
+        "task_commit": "3c535b64ebae626065032e7315e679e474f6853b"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I4-004",
@@ -686,12 +1234,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "a6905207441abdc13ec6238272e7681093c50180",
+        "github_verified": true,
+        "run": "37407633177",
+        "task_commit": "a6905207441abdc13ec6238272e7681093c50180"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I4-005",
@@ -706,12 +1262,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "github_verified": true,
+        "run": "37497496804",
+        "task_commit": "94aa01d8ed99561acf77020257e6c517b15a369d"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I4-006",
@@ -726,12 +1290,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "github_verified": true,
+        "run": "37507901354",
+        "task_commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I4-007",
@@ -746,12 +1318,20 @@
       "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "RERUN",
+        "commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "github_verified": true,
+        "run": "37561636952",
+        "task_commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9"
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "I4-008",
@@ -766,12 +1346,20 @@
       "credit_reason": "weight 3 x approval A007 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "1dba57166dfef312f6c204b8dd759c93ec309c99"
+      },
       "run_verified": true,
       "task_commit": "1dba57166dfef312f6c204b8dd759c93ec309c99",
       "task_id": "KF-CORE-R10-001",
@@ -786,12 +1374,20 @@
       "credit_reason": "weight 4 x approval A008 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "bbe10b6cb67165834d91b1cd0fe428579af5136d"
+      },
       "run_verified": true,
       "task_commit": "bbe10b6cb67165834d91b1cd0fe428579af5136d",
       "task_id": "KF-CORE-R10-002",
@@ -806,12 +1402,20 @@
       "credit_reason": "weight 3 x approval A009 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "559d75f7d7b57ef0dd6652e6f9d751b732e2d90d"
+      },
       "run_verified": true,
       "task_commit": "559d75f7d7b57ef0dd6652e6f9d751b732e2d90d",
       "task_id": "KF-CORE-R10-003",
@@ -826,12 +1430,20 @@
       "credit_reason": "weight 4 x approval A010 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "a121c24f3987e97e4f7650effd45da638932e54e"
+      },
       "run_verified": true,
       "task_commit": "a121c24f3987e97e4f7650effd45da638932e54e",
       "task_id": "KF-CORE-R10-004",
@@ -846,12 +1458,20 @@
       "credit_reason": "weight 3 x approval A011 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "2882cd2083591011d8556eec582eb777b6936dc3"
+      },
       "run_verified": true,
       "task_commit": "2882cd2083591011d8556eec582eb777b6936dc3",
       "task_id": "KF-CORE-R10-005",
@@ -866,12 +1486,20 @@
       "credit_reason": "weight 4 x approval A012 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "b44b14be9ac32a75b7fcf0568ddabfb14bedb1d1"
+      },
       "run_verified": true,
       "task_commit": "b44b14be9ac32a75b7fcf0568ddabfb14bedb1d1",
       "task_id": "KF-CORE-R10-006",
@@ -886,12 +1514,20 @@
       "credit_reason": "weight 3 x approval A013 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "f212e469bb764cc0e27b3e40dfe8d67e9cd241d0"
+      },
       "run_verified": true,
       "task_commit": "f212e469bb764cc0e27b3e40dfe8d67e9cd241d0",
       "task_id": "KF-CORE-R10-007",
@@ -906,12 +1542,20 @@
       "credit_reason": "weight 3 x approval A014 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "c0edf1f0e1fa75dd90172e280776ea5fd27ac8eb"
+      },
       "run_verified": true,
       "task_commit": "c0edf1f0e1fa75dd90172e280776ea5fd27ac8eb",
       "task_id": "KF-CORE-R10-008",
@@ -926,12 +1570,20 @@
       "credit_reason": "weight 3 x approval A015 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "af168478fa223b9c5bf4790984849cdf23964642"
+      },
       "run_verified": true,
       "task_commit": "af168478fa223b9c5bf4790984849cdf23964642",
       "task_id": "KF-CORE-R10-009",
@@ -941,12 +1593,18 @@
     }
   ],
   "warnings": [
+    "ACTUATION_CONTROLS: no status source (UNVERIFIED)",
+    "CI_DEV_INFRA: no status source (UNVERIFIED)",
     "CONTROL_PLANE: no status source (UNVERIFIED)",
+    "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
+    "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
+    "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
     "MIND: no status source (UNVERIFIED)",
     "MOTION: no status source (UNVERIFIED)",
+    "NEXUS_EDGE: no status source (UNVERIFIED)",
     "RAAS: no status source (UNVERIFIED)",
     "SDK: no status source (UNVERIFIED)",
     "SENSE: no status source (UNVERIFIED)",
@@ -955,6 +1613,20 @@
     "STUDIO: no status source (UNVERIFIED)"
   ],
   "workstreams": [
+    {
+      "commit": "-------",
+      "id": "ACTUATION_CONTROLS",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "CI_DEV_INFRA",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
     {
       "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
       "id": "COMMUNITY",
@@ -978,6 +1650,13 @@
     },
     {
       "commit": "-------",
+      "id": "DEVICE_ENDPOINT",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
       "id": "EDUCATION_APPLICATIONS",
       "repo": null,
       "source_state": "UNVERIFIED",
@@ -985,7 +1664,21 @@
     },
     {
       "commit": "-------",
+      "id": "ELECTRICAL_POWER",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
       "id": "INTEGRATION_SOFTWARE_VALIDATION",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "MANUFACTURING_FLEET",
       "repo": null,
       "source_state": "UNVERIFIED",
       "tasks_reported": 0
@@ -1007,6 +1700,13 @@
     {
       "commit": "-------",
       "id": "MOTION",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "NEXUS_EDGE",
       "repo": null,
       "source_state": "UNVERIFIED",
       "tasks_reported": 0
