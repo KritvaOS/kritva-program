@@ -1,0 +1,53 @@
+{
+  "_note": "Written by tools/refresh_sources.py. Records which revision each committed source copy was fetched from. STATUS_ONLY means the commits between the report's inspected commit and the fetched head touch only the status path; STATUS_TOOLING also touches the repo's own status generator and its test; OTHER_FILES means review the listed files. It is a freshness aid, not acceptance.",
+  "sources": {
+    "COMMUNITY": {
+      "ahead_by": 1,
+      "changed_files": [
+        "scripts/gen_status.py",
+        "scripts/test_gen_status.py",
+        "status/README.md",
+        "status/evidence.json",
+        "status/status.json"
+      ],
+      "changed_files_truncated": false,
+      "fetched_at": "2026-10-16T17:21:54Z",
+      "fetched_head": "794cf195303a5854b63104c91880432d4e905ee2",
+      "gap_kind": "STATUS_TOOLING",
+      "last_attempt_at": "2026-10-16T17:21:54Z",
+      "ref": "main",
+      "relation": "AHEAD",
+      "repo": "KritvaOS/kritvaos-community",
+      "report_source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "report_updated_at": "2026-10-13T16:51:27Z",
+      "state": "FETCHED",
+      "status_only": false,
+      "tasks": 21
+    },
+    "CORE": {
+      "ahead_by": 2,
+      "changed_files": [
+        "scripts/status/gen_status.py",
+        "scripts/status/test_gen_status.py",
+        "status/README.md",
+        "status/evidence.json",
+        "status/status.json"
+      ],
+      "changed_files_truncated": false,
+      "fetched_at": "2026-10-16T17:21:54Z",
+      "fetched_head": "42c6e840e83abda909c571f2d43c7a21ba8d2021",
+      "gap_kind": "STATUS_TOOLING",
+      "last_attempt_at": "2026-10-16T17:21:54Z",
+      "ref": "main",
+      "relation": "AHEAD",
+      "repo": "KritvaOS/kritva-core",
+      "report_source_commit": "54984ae1d207b2ea3ffe14699b4e9a4b56099642",
+      "report_updated_at": "2026-10-13T16:55:23Z",
+      "state": "FETCHED",
+      "status_only": false,
+      "tasks": 9
+    }
+  },
+  "stale_hours": 72,
+  "warn_hours": 24
+}

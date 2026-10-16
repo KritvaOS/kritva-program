@@ -122,3 +122,27 @@ class Rendering(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SourceFreshness(unittest.TestCase):
+    def test_section_rendered_from_manifest_and_absent_without(self):
+        import tempfile
+        from support import make_root, run, write_sources
+        with tempfile.TemporaryDirectory() as t:
+            r = make_root(t + "/kp")
+            write_sources(r)
+            run(r, "--sources-dir", str(r / "sources"), "--now", "2026-10-15T12:00:00Z")
+            self.assertNotIn("## Source freshness", (r / "v2/tracking/STATUS_VIEW.md").read_text())
+            m = {"warn_hours": 24, "stale_hours": 72, "sources": {
+                "COMMUNITY": {"repo": "KritvaOS/kritvaos-community", "state": "FETCHED", "fetched_at": "2026-10-15T00:00:00Z",
+                              "fetched_head": "e" * 40, "report_source_commit": "d" * 40, "relation": "AHEAD",
+                              "ahead_by": 1, "status_only": True, "gap_kind": "STATUS_ONLY"},
+                "CORE": {"repo": "KritvaOS/kritva-core", "state": "FETCH_FAILED"}}}
+            (r / "sources/MANIFEST.json").write_text(json.dumps(m))
+            p = run(r, "--sources-dir", str(r / "sources"), "--now", "2026-10-15T12:00:00Z")
+            v = (r / "v2/tracking/STATUS_VIEW.md").read_text()
+            self.assertIn("## Source freshness", v)
+            self.assertIn("| COMMUNITY | FRESH |", v)
+            self.assertIn("STATUS_ONLY", v)
+            self.assertIn("| CORE | FETCH_FAILED |", v)
+            self.assertEqual(run(r, "--sources-dir", str(r / "sources"), "--check").returncode, 0, p.stderr)

@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-15T17:43:33Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-16T17:22:01Z (freshness of sources is judged at this time)
 - Baseline version: 1 (APPROVED)
 - Accepted engineering progress: 47.52% (48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/30 tasks (repo-reported; not acceptance)
@@ -33,6 +33,15 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 | P0 | FOUNDATION | IN_PROGRESS | NOT_REVIEWED | NOT_RUN | 0% |
 | P1 | STUDIO | NOT_STARTED | — | — | 0% |
 | P2–P8 | — | NOT_STARTED | — | — | 0% |
+
+## Source freshness
+
+Judged at 2026-10-16T17:22:01Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+
+| Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
+|---|---|---|---|---|---|---|
+| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (0h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | FRESH | 2026-10-16T17:21:54Z (0h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 

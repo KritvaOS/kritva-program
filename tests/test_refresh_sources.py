@@ -63,6 +63,15 @@ class Refresh(unittest.TestCase):
         self.run_it(g)
         m = json.loads((self.r / "sources/MANIFEST.json").read_text())["sources"]["CORE"]
         self.assertFalse(m["status_only"])
+        self.assertEqual(m["gap_kind"], "OTHER_FILES")
+
+    def test_status_tooling_gap(self):
+        g = fake(["status/status.json", "scripts/gen_status.py", "scripts/status/test_gen_status.py"],
+                 core_doc=doc("CORE", "KritvaOS/kritva-core"), comm_doc=doc("COMMUNITY", "KritvaOS/kritvaos-community"))
+        self.run_it(g)
+        m = json.loads((self.r / "sources/MANIFEST.json").read_text())["sources"]["CORE"]
+        self.assertEqual(m["gap_kind"], "STATUS_TOOLING")
+        self.assertFalse(m["status_only"])
 
     def test_failed_fetch_keeps_old_snapshot_and_exits_2(self):
         g = fake(["status/status.json"], core_doc=doc("CORE", "KritvaOS/kritva-core"), comm_doc=None)

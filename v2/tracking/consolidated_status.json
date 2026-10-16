@@ -717,7 +717,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-15T17:43:33Z",
+  "generated_at": "2026-10-16T17:22:01Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 30,
@@ -774,6 +774,54 @@
     "basis": "48/101 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
+  "source_freshness": {
+    "rows": [
+      {
+        "age_hours": 0,
+        "ahead_by": 1,
+        "changed_files": [
+          "scripts/gen_status.py",
+          "scripts/test_gen_status.py",
+          "status/README.md",
+          "status/evidence.json",
+          "status/status.json"
+        ],
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-10-16T17:21:54Z",
+        "fetched_head": "794cf195303a5854b63104c91880432d4e905ee2",
+        "freshness": "FRESH",
+        "gap_kind": "STATUS_TOOLING",
+        "relation": "AHEAD",
+        "repo": "KritvaOS/kritvaos-community",
+        "report_source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "status_only": false,
+        "workstream_id": "COMMUNITY"
+      },
+      {
+        "age_hours": 0,
+        "ahead_by": 2,
+        "changed_files": [
+          "scripts/status/gen_status.py",
+          "scripts/status/test_gen_status.py",
+          "status/README.md",
+          "status/evidence.json",
+          "status/status.json"
+        ],
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-10-16T17:21:54Z",
+        "fetched_head": "42c6e840e83abda909c571f2d43c7a21ba8d2021",
+        "freshness": "FRESH",
+        "gap_kind": "STATUS_TOOLING",
+        "relation": "AHEAD",
+        "repo": "KritvaOS/kritva-core",
+        "report_source_commit": "54984ae1d207b2ea3ffe14699b4e9a4b56099642",
+        "status_only": false,
+        "workstream_id": "CORE"
+      }
+    ],
+    "stale_hours": 72,
+    "warn_hours": 24
+  },
   "tasks": [
     {
       "acceptance": "PASS",

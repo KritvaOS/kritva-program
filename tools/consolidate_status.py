@@ -133,6 +133,32 @@ def fetch_sources(cfg):
     return found, problems, meta
 
 
+def source_freshness(sources_dir, now):
+    """Rows from sources/MANIFEST.json (written by refresh_sources.py). Age is judged at the report time."""
+    mp = Path(sources_dir) / "MANIFEST.json" if sources_dir else None
+    if not mp or not mp.exists():
+        return None
+    m = load_json(mp)
+    warn, stale = m.get("warn_hours", 24), m.get("stale_hours", 72)
+    rows = []
+    for ws, e in sorted(m.get("sources", {}).items()):
+        row = {"workstream_id": ws, "repo": e.get("repo"), "fetch_state": e.get("state"),
+               "fetched_at": e.get("fetched_at"), "fetched_head": e.get("fetched_head"),
+               "report_source_commit": e.get("report_source_commit"), "relation": e.get("relation"),
+               "ahead_by": e.get("ahead_by"), "status_only": e.get("status_only"),
+               "gap_kind": e.get("gap_kind") or ("NONE" if e.get("relation") == "IDENTICAL" else
+                                                 {True: "STATUS_ONLY", False: "OTHER_FILES"}.get(e.get("status_only"), "UNKNOWN")),
+               "changed_files": e.get("changed_files", [])}
+        if e.get("state") == "FETCHED" and e.get("fetched_at"):
+            h = (now - parse_ts(e["fetched_at"])).total_seconds() / 3600
+            row["age_hours"] = int(h)
+            row["freshness"] = "FRESH" if h <= warn else ("WARN" if h <= stale else "STALE")
+        else:
+            row["age_hours"], row["freshness"] = None, "FETCH_FAILED"
+        rows.append(row)
+    return {"warn_hours": warn, "stale_hours": stale, "rows": rows}
+
+
 RUN_ID = re.compile(r"(?:actions/runs/)?(\d+)/?$")
 VERIFICATION_FILE = "run_verification.json"
 
@@ -742,6 +768,20 @@ def render(c):
               "complete P0 FOUNDATION or pass the P0 exit review.", "",
               "| Phase | Name | Execution | Review | Acceptance | Accepted progress |", "|---|---|---|---|---|---|"]
         L += [f"| {r['phase']} | {r['name']} | {r['execution']} | {r['review']} | {r['acceptance']} | {r['accepted']} |" for r in ps["phases"]]
+    sf = c.get("source_freshness")
+    if sf:
+        L += ["", "## Source freshness", "",
+              f"Judged at {c['generated_at']}. FRESH up to {sf['warn_hours']}h since the last successful fetch, WARN up to "
+              f"{sf['stale_hours']}h, STALE beyond. A report can only name the commit before the one that contains it, so a "
+              "gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.", "",
+              "| Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |", "|---|---|---|---|---|---|---|"]
+        for r in sf["rows"]:
+            gap = {"IDENTICAL": "none", "AHEAD": f"{r['ahead_by']} commit(s)"}.get(r["relation"], "unknown")
+            touch = {"NONE": "-", "STATUS_ONLY": "STATUS_ONLY", "STATUS_TOOLING": "STATUS_TOOLING (generator and test)",
+                     "OTHER_FILES": "OTHER FILES (review): " + ", ".join(r["changed_files"][:5])}.get(r["gap_kind"], "unknown")
+            L.append(f"| {r['workstream_id']} | {r['freshness']} | {r['fetched_at'] or '-'}"
+                     f"{'' if r['age_hours'] is None else ' (' + str(r['age_hours']) + 'h ago)'} | "
+                     f"{(r['fetched_head'] or '-')[:7]} | {(r['report_source_commit'] or '-')[:7]} | {gap} | {touch} |")
     L += ["", "## Workstreams", "",
           "BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero progress nor missing data. "
           "Source state UNVERIFIED means no status source. The commit is the inspected source revision of the status report; "
@@ -990,6 +1030,7 @@ def main():
          "evidence_health": evidence_health(tasks, out_ws, warnings),
          "errors": sorted(errors), "warnings": sorted(warnings)}
     c["program_status"] = program_status(root)
+    c["source_freshness"] = source_freshness(a.sources_dir, now) if a.sources_dir else None
     epath = root / effort.FILE
     if epath.exists():
         edoc = json.loads(epath.read_text(encoding="utf-8"))
