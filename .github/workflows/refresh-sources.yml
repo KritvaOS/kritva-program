@@ -1,0 +1,44 @@
+name: refresh-sources
+# Daily pull of each engineering repo's status/status.json into sources/, proposed as a pull request.
+# Never edits the baseline, approvals, gate ledgers or the generated report; a human reviews and merges.
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}   # engineering repos are public; use a read-only token if one becomes private
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: fetch and compare
+        id: fetch
+        run: |
+          set +e
+          python3 tools/refresh_sources.py --fail-if-unchanged | tee refresh.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+      - name: open or update the refresh PR
+        if: steps.fetch.outputs.code == '0'
+        run: |
+          python3 tools/consolidate_status.py --sources-dir sources
+          git config user.name "kritva-status-bot"
+          git config user.email "noreply@github.com"
+          git checkout -B bot/refresh-sources
+          git add sources v2/tracking/consolidated_status.json v2/tracking/STATUS_VIEW.md
+          git commit -m "sources: refresh engineering status snapshots"
+          git push --force origin bot/refresh-sources
+          { echo "Automated refresh of committed status snapshots. Review the diff of sources/ and sources/MANIFEST.json."
+            echo; echo '```'; cat refresh.log; echo '```'
+            echo; echo "This PR does not change the baseline, approvals or gate ledgers. Accepted progress changes only through those."; } > body.md
+          gh pr create --base main --head bot/refresh-sources --title "sources: refresh engineering status snapshots" --body-file body.md \
+            || gh pr edit bot/refresh-sources --body-file body.md
+      - name: fail on fetch problems
+        if: steps.fetch.outputs.code == '2'
+        run: |
+          echo "A source failed to fetch or validate; snapshots were not updated."; exit 1

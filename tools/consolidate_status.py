@@ -201,6 +201,8 @@ def run_problem(rec, repo, commit, description):
 def read_dir(path):
     found = {}
     for p in sorted(Path(path).glob("*.json")):
+        if p.name == "MANIFEST.json":  # freshness manifest written by refresh_sources.py, not a status report
+            continue
         d = load_json(p)
         found[d.get("workstream_id", p.stem)] = (p.name, d)
     return found
