@@ -11,6 +11,8 @@ Rules (registration is not credit):
   * no inventory task has a weight, an approval, or a baseline entry under any ID or alias;
   * (repository, workstream_id, task_id) is unique and task_id is unique overall; a legacy alias never collides
     with a canonical ID; one alias may map to several tasks only when every mapping is alias_kind=split;
+  * capability mappings (D-030): a task may list `capabilities`; each must be a workstream with kind CAPABILITY and effort_owner false, and the
+    group's own workstream must be an execution workstream. A mapping never creates a second task, estimate or credit (task identity stays unique);
   * optional --verify-sources DIR: every task_id must appear in the pinned source file found under DIR (sha256 must match).
 Exit 0 ok | 1 problems | 2 usage/IO.
 """
@@ -51,6 +53,8 @@ def check(inv, baseline, approvals, workstreams, sources_dir=None):
     base_ids = {t["id"] for t in baseline.get("tasks", [])}
     approved_ids = {a.get("task_id") for a in approvals.get("approvals", [])}
     ws_ids = {w["id"] for w in workstreams.get("workstreams", [])}
+    ws_by = {w["id"]: w for w in workstreams.get("workstreams", [])}
+    capability_ids = {i for i, w in ws_by.items() if w.get("kind") == "CAPABILITY"}
     if not isinstance(inv, dict) or not isinstance(inv.get("groups"), list) or not inv["groups"]:
         return ["inventory must be an object with a non-empty groups list"]
     if inv.get("classification") != "PLANNING_ONLY":
@@ -88,6 +92,8 @@ def check(inv, baseline, approvals, workstreams, sources_dir=None):
                 for w in prop:
                     if w not in ws_ids:
                         problems.append(f"group {gname}: proposed workstream {w!r} is not in workstreams.json")
+        if wid in capability_ids:
+            problems.append(f"group {gname}: execution owner {wid!r} is a CAPABILITY; capabilities cannot own tasks (D-030)")
         problems += _source_problems(g.get("source"), f"group {gname}")
         if not isinstance(g.get("tasks"), list) or not g.get("tasks"):
             problems.append(f"group {gname}: tasks must be a non-empty list")
@@ -123,6 +129,15 @@ def check(inv, baseline, approvals, workstreams, sources_dir=None):
                 aliases.setdefault(t["legacy_alias"], []).append((tid, t.get("alias_kind")))
             elif t.get("alias_kind"):
                 problems.append(f"{tid}: alias_kind set without legacy_alias")
+            caps = t.get("capabilities", [])
+            if not isinstance(caps, list) or len(set(caps)) != len(caps):
+                problems.append(f"{tid}: capabilities must be a list without duplicates")
+            else:
+                for c in caps:
+                    if c not in capability_ids:
+                        problems.append(f"{tid}: capability {c!r} is not a CAPABILITY in workstreams.json")
+                    elif ws_by[c].get("effort_owner") is not False:
+                        problems.append(f"{tid}: capability {c!r} must have effort_owner false")
             if "weight" in t:
                 problems.append(f"{tid}: inventory tasks must not carry a weight")
             if "credit_eligible" in t and t["credit_eligible"] is not False:
