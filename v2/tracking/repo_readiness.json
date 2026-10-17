@@ -3,7 +3,7 @@
   "readiness_version": 1,
   "target_date": "2026-11-15",
   "report_due": "2026-11-14",
-  "checked_at": "2026-10-17T10:10:00Z",
+  "checked_at": "2026-10-17T16:00:00Z",
   "basis": "Facts read from git (clones of each repo's main) and the committed program files on 2026-10-17. GitHub settings (visibility, rulesets, required checks) are not readable by Claude, so they are ATTESTED, OPEN or marked as owner statements.",
   "repos": [
     {
@@ -11,7 +11,7 @@
       "workstream_ids": [
         "CI_DEV_INFRA"
       ],
-      "checked_head": "b0c049c1d9e168dbd8bdad073dd717f44fa46040",
+      "checked_head": "d6f5525dc6d5877d002d47f15a2b310af69a36f6",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -42,7 +42,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at b0c049c: 45 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at d6f5525: 42 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
         },
         {
           "id": "secret_scan_ci",
@@ -58,13 +58,15 @@
         },
         {
           "id": "license",
-          "status": "OPEN",
-          "detail": "Owner decided the licence is the private proprietary notice (D-040); the LICENSE file is in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": "LICENSE present on main (governance PR merged, D-035, D-040) - proprietary, as decided by owner",
+          "evidence": "file present at d6f5525"
         },
         {
           "id": "security_policy",
-          "status": "OPEN",
-          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
+          "evidence": "file present at d6f5525"
         },
         {
           "id": "codeowners",
@@ -142,7 +144,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history, tags included",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 46bd189: 322 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 46bd189: 319 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
         },
         {
           "id": "secret_scan_ci",
@@ -214,7 +216,7 @@
       "workstream_ids": [
         "COMMUNITY"
       ],
-      "checked_head": "8dc94960bf4b0bcfabf5e8615f5cf40245e5a389",
+      "checked_head": "8ff1dbf210b9bf276d4b715996bdb11d0424be9f",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -245,7 +247,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 8dc9496: 63 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 8ff1dbf: 64 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
         },
         {
           "id": "secret_scan_ci",
@@ -317,7 +319,7 @@
       "workstream_ids": [
         "RAAS"
       ],
-      "checked_head": "ca054f906b067ed4acfcd0327159a074530e7229",
+      "checked_head": "2917d965c2b9afe713c48d7dd2da63e60724bc95",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out; D-036 already states the repo is to become private"
@@ -344,7 +346,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at ca054f9: 128 commits, 0 findings, run 2026-10-17 with .gitleaksignore applied"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 2917d96: 76 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
         },
         {
           "id": "secret_scan_ci",
@@ -360,18 +362,21 @@
         },
         {
           "id": "license",
-          "status": "OPEN",
-          "detail": "Owner decided the licence is the private proprietary notice (D-040); the LICENSE file is in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": "LICENSE present on main (governance PR merged, D-035, D-040) - proprietary, as decided by owner",
+          "evidence": "file present at 2917d96"
         },
         {
           "id": "security_policy",
-          "status": "OPEN",
-          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
+          "evidence": "file present at 2917d96"
         },
         {
           "id": "codeowners",
-          "status": "OPEN",
-          "detail": "No CODEOWNERS yet; added in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": ".github/CODEOWNERS present on main (governance PR merged, D-035, D-040)",
+          "evidence": "file present at 2917d96"
         },
         {
           "id": "agents_md",
@@ -411,7 +416,7 @@
       "workstream_ids": [
         "ACT_INT"
       ],
-      "checked_head": "9aac0766ffc8189dc864fb3ab65246beb47b9bb7",
+      "checked_head": "17905f33848c15f6abb2e87c3561f3d50af51933",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -438,7 +443,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 9aac076: 23 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 17905f3: 20 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
         },
         {
           "id": "secret_scan_ci",
@@ -460,8 +465,9 @@
         },
         {
           "id": "security_policy",
-          "status": "OPEN",
-          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
+          "evidence": "file present at 17905f3"
         },
         {
           "id": "codeowners",
@@ -508,7 +514,7 @@
       "workstream_ids": [
         "ACT_EMB"
       ],
-      "checked_head": "2ceb68ebc322148b3348b28643fbe46de114db04",
+      "checked_head": "4b21100e66ecd082c475263faf8a39309b3d35ba",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -535,7 +541,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 2ceb68e: 12 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 4b21100: 8 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
         },
         {
           "id": "secret_scan_ci",
@@ -557,8 +563,9 @@
         },
         {
           "id": "security_policy",
-          "status": "OPEN",
-          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
+          "evidence": "file present at 4b21100"
         },
         {
           "id": "codeowners",
@@ -605,7 +612,7 @@
       "workstream_ids": [
         "ACT_S"
       ],
-      "checked_head": "21f7d907b95439b33be82e582f1dfc6b6988afcf",
+      "checked_head": "5681991b52f3e93cdd16b2b3e9b6362e37ce7651",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -632,7 +639,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 21f7d90: 8 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 5681991: 6 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
         },
         {
           "id": "secret_scan_ci",
@@ -654,8 +661,9 @@
         },
         {
           "id": "security_policy",
-          "status": "OPEN",
-          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
+          "evidence": "file present at 5681991"
         },
         {
           "id": "codeowners",
@@ -702,7 +710,7 @@
       "workstream_ids": [
         "ACT_M"
       ],
-      "checked_head": "50afcde45a9944f0d51b1df414d7add5550b01b8",
+      "checked_head": "42ef847d7619c9b3d7b19e2ad6eead986b63dc3c",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -729,7 +737,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 50afcde: 8 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 42ef847: 6 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
         },
         {
           "id": "secret_scan_ci",
@@ -751,8 +759,9 @@
         },
         {
           "id": "security_policy",
-          "status": "OPEN",
-          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
+          "evidence": "file present at 42ef847"
         },
         {
           "id": "codeowners",
@@ -799,7 +808,7 @@
       "workstream_ids": [
         "ACT_L"
       ],
-      "checked_head": "de0e86a88f4e4c6c4eeec0d7b4d297e7b96a53b3",
+      "checked_head": "66ee1a8dcc233b720a011a9b15eaf09e27446b06",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -826,7 +835,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at de0e86a: 8 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 66ee1a8: 6 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
         },
         {
           "id": "secret_scan_ci",
@@ -848,8 +857,9 @@
         },
         {
           "id": "security_policy",
-          "status": "OPEN",
-          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
+          "status": "PASS",
+          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
+          "evidence": "file present at 66ee1a8"
         },
         {
           "id": "codeowners",
