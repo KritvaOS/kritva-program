@@ -1,5 +1,5 @@
 {
-  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; tag kritva-core-r1.0 resolves to commit 4acce3b60833abfe33168c4766405ab86ea73edc (verified locally by Dinesh 2026-10-11). KF-CORE-R10-001..009 are seeded in the baseline (D-014), so the closed-milestone guard for KF-CORE-R10 is active. Core R02..R09 are not tracked. RAAS repo name is recorded (confirmed from project context) but RaaS has no verified task IDs, so it is not in sources.json and has no baseline tasks; onboarding follows v2/tracking/ONBOARDING.md (D-017). D-021 (2026-10-15): six workstreams (Device / Endpoint, Nexus / Edge, CI / Dev infrastructure, Electrical / Power, Actuation / Controls, Manufacturing / Fleet) were added so the registry covers the 17 reporting rows agreed with ChatGPT; none has a repo or baseline tasks yet. Studio, Control Plane and Education applications stay registered but are not in the agreed effort table (NOT_ESTIMATED).",
+  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; tag kritva-core-r1.0 resolves to commit 4acce3b60833abfe33168c4766405ab86ea73edc (verified locally by Dinesh 2026-10-11). KF-CORE-R10-001..009 are seeded in the baseline (D-014), so the closed-milestone guard for KF-CORE-R10 is active. Core R02..R09 are not tracked. RAAS repo name is recorded (confirmed from project context) but RaaS has no verified task IDs, so it is not in sources.json and has no baseline tasks; onboarding follows v2/tracking/ONBOARDING.md (D-017). D-021 (2026-10-15): six workstreams (Device / Endpoint, Nexus / Edge, CI / Dev infrastructure, Electrical / Power, Actuation / Controls, Manufacturing / Fleet) were added so the registry covers the 17 reporting rows agreed with ChatGPT; none has a repo or baseline tasks yet. Studio, Control Plane and Education applications stay registered but are not in the agreed effort table (NOT_ESTIMATED). D-030 (2026-10-17): CONTROL_PLANE is a program-level CAPABILITY (no repo, no tasks, no separate effort) implemented by RAAS; RAAS is the sole execution and effort owner for kritva-raas backend tasks. An optional kind/effort_owner field marks this; workstreams without kind are execution workstreams.",
   "workstreams": [
     {
       "id": "CORE",
@@ -58,12 +58,18 @@
     {
       "id": "CONTROL_PLANE",
       "name": "Control Plane",
-      "repo": null
+      "repo": null,
+      "kind": "CAPABILITY",
+      "effort_owner": false,
+      "implementation_owner": "RAAS",
+      "independent_effort": "none_for_mapped_tasks"
     },
     {
       "id": "RAAS",
       "name": "RaaS",
-      "repo": "KritvaOS/kritva-raas"
+      "repo": "KritvaOS/kritva-raas",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": true
     },
     {
       "id": "EDUCATION_APPLICATIONS",

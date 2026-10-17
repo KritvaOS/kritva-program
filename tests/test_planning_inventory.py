@@ -175,5 +175,38 @@ class PlanningInventoryTests(unittest.TestCase):
         self.assertFalse(any(f'"{i}"' in raw for i in ids))
 
 
+    def test_capability_mapping_is_allowed_and_never_a_second_owner(self):
+        inv = self.mut(); inv["groups"][0]["tasks"][0]["capabilities"] = ["CONTROL_PLANE"]
+        self.assertEqual(self.run_check(inv), [])
+        # counted once: identity set is unchanged by mapping
+        ids = [t["task_id"] for g in inv["groups"] for t in g["tasks"]]
+        self.assertEqual(len(ids), len(set(ids)))
+
+    def test_unknown_or_execution_workstream_as_capability_is_rejected(self):
+        inv = self.mut(); inv["groups"][0]["tasks"][0]["capabilities"] = ["NOPE"]
+        self.has(inv, "not a CAPABILITY")
+        inv = self.mut(); inv["groups"][0]["tasks"][0]["capabilities"] = ["RAAS"]
+        self.has(inv, "not a CAPABILITY")
+
+    def test_duplicate_capability_is_rejected(self):
+        inv = self.mut(); inv["groups"][0]["tasks"][0]["capabilities"] = ["CONTROL_PLANE", "CONTROL_PLANE"]
+        self.has(inv, "without duplicates")
+
+    def test_capability_cannot_own_tasks_or_hold_effort(self):
+        inv = self.mut(); inv["groups"][0]["workstream_id"] = "CONTROL_PLANE"
+        self.has(inv, "capabilities cannot own tasks")
+        ws = copy.deepcopy(self.ws)
+        for w in ws["workstreams"]:
+            if w["id"] == "CONTROL_PLANE": w["effort_owner"] = True
+        inv = self.mut(); inv["groups"][0]["tasks"][0]["capabilities"] = ["CONTROL_PLANE"]
+        probs = cpi.check(inv, self.base, self.appr, ws)
+        self.assertTrue(any("effort_owner false" in p for p in probs), probs)
+
+    def test_effort_baseline_has_no_control_plane_estimate(self):
+        e = LOAD("effort_estimates.json")
+        self.assertIn("RAAS", [w["workstream_id"] for w in e["workstreams"]])
+        self.assertNotIn("CONTROL_PLANE", [w["workstream_id"] for w in e["workstreams"]])
+
+
 if __name__ == "__main__":
     unittest.main()
