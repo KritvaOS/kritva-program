@@ -1,5 +1,5 @@
 {
-  "_note": "Planning inventory (D-024). Registration is not credit: every group and task is PLANNING_ONLY and credit_eligible is false. Entries are NOT baseline tasks, carry no weight and cannot receive approvals. A task becomes creditable only by entering an approved baseline version and then following the normal chain (approval PASS + COMPLETE + evidence on the approved commit with a passing CI run). Identity = repository + workstream_id + canonical task_id; a legacy ID is an alias only (alias_kind rename or split). recorded_status is a snapshot read from the pinned source file, with its authority named; NOT_RECORDED means the source has no status. It is never an execution fact and never a program approval. A group whose program workstream is not yet approved has workstream_id null, mapping_status PROPOSED and the source's own label in source_workstream_label. RaaS covers B-INC-001 only; B-INC-002..004 are not yet extracted. Checked by tools/check_planning_inventory.py.",
+  "_note": "Planning inventory (D-024). Registration is not credit: every group and task is PLANNING_ONLY and credit_eligible is false. Entries are NOT baseline tasks, carry no weight and cannot receive approvals. A task becomes creditable only by entering an approved baseline version and then following the normal chain (approval PASS + COMPLETE + evidence on the approved commit with a passing CI run). Identity = repository + workstream_id + canonical task_id; a legacy ID is an alias only (alias_kind rename or split). recorded_status is a snapshot read from the pinned source file, with its authority named; NOT_RECORDED means the source has no status. It is never an execution fact and never a program approval. The five actuator groups were registered under D-034 with their own ACT_* workstream ids (source_workstream_label equals workstream_id); rollup_targets records where their effort rolls up and must equal rolls_up_to in workstreams.json. Registration is identity only. A group whose program workstream is not yet approved would have workstream_id null, mapping_status PROPOSED and the source's own label in source_workstream_label. RaaS covers B-INC-001 only; B-INC-002..004 are not yet extracted. Checked by tools/check_planning_inventory.py.",
   "inventory_version": 2,
   "classification": "PLANNING_ONLY",
   "groups": [
@@ -195,12 +195,9 @@
     },
     {
       "repository": "KritvaOS/kritva-actuator",
-      "workstream_id": null,
-      "mapping_status": "PROPOSED",
+      "workstream_id": "ACT_INT",
+      "mapping_status": "REGISTERED",
       "source_workstream_label": "ACT_INT",
-      "proposed_program_workstreams": [
-        "INTEGRATION_SOFTWARE_VALIDATION"
-      ],
       "classification": "PLANNING_ONLY",
       "credit_eligible": false,
       "source": {
@@ -273,17 +270,16 @@
           "status_authority": "none",
           "migration_initial_status": "new"
         }
+      ],
+      "rollup_targets": [
+        "INTEGRATION_SOFTWARE_VALIDATION"
       ]
     },
     {
       "repository": "KritvaOS/kritva-actuator-embedded",
-      "workstream_id": null,
-      "mapping_status": "PROPOSED",
+      "workstream_id": "ACT_EMB",
+      "mapping_status": "REGISTERED",
       "source_workstream_label": "ACT_EMB",
-      "proposed_program_workstreams": [
-        "ACTUATION_CONTROLS",
-        "ELECTRICAL_POWER"
-      ],
       "classification": "PLANNING_ONLY",
       "credit_eligible": false,
       "source": {
@@ -383,16 +379,17 @@
           "status_authority": "none",
           "migration_initial_status": "inherit"
         }
+      ],
+      "rollup_targets": [
+        "ACTUATION_CONTROLS",
+        "ELECTRICAL_POWER"
       ]
     },
     {
       "repository": "KritvaOS/kritva-actuator-s",
-      "workstream_id": null,
-      "mapping_status": "PROPOSED",
+      "workstream_id": "ACT_S",
+      "mapping_status": "REGISTERED",
       "source_workstream_label": "ACT_S",
-      "proposed_program_workstreams": [
-        "MECHANICAL"
-      ],
       "classification": "PLANNING_ONLY",
       "credit_eligible": false,
       "source": {
@@ -474,16 +471,16 @@
           "status_authority": "none",
           "migration_initial_status": "NOT_STARTED"
         }
+      ],
+      "rollup_targets": [
+        "MECHANICAL"
       ]
     },
     {
       "repository": "KritvaOS/kritva-actuator-m",
-      "workstream_id": null,
-      "mapping_status": "PROPOSED",
+      "workstream_id": "ACT_M",
+      "mapping_status": "REGISTERED",
       "source_workstream_label": "ACT_M",
-      "proposed_program_workstreams": [
-        "MECHANICAL"
-      ],
       "classification": "PLANNING_ONLY",
       "credit_eligible": false,
       "source": {
@@ -565,16 +562,16 @@
           "status_authority": "none",
           "migration_initial_status": "inherit (elbow baseline)"
         }
+      ],
+      "rollup_targets": [
+        "MECHANICAL"
       ]
     },
     {
       "repository": "KritvaOS/kritva-actuator-l",
-      "workstream_id": null,
-      "mapping_status": "PROPOSED",
+      "workstream_id": "ACT_L",
+      "mapping_status": "REGISTERED",
       "source_workstream_label": "ACT_L",
-      "proposed_program_workstreams": [
-        "MECHANICAL"
-      ],
       "classification": "PLANNING_ONLY",
       "credit_eligible": false,
       "source": {
@@ -656,6 +653,9 @@
           "status_authority": "none",
           "migration_initial_status": "NOT_STARTED"
         }
+      ],
+      "rollup_targets": [
+        "MECHANICAL"
       ]
     }
   ]

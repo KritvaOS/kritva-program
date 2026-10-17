@@ -11,6 +11,8 @@ Rules (registration is not credit):
   * no inventory task has a weight, an approval, or a baseline entry under any ID or alias;
   * (repository, workstream_id, task_id) is unique and task_id is unique overall; a legacy alias never collides
     with a canonical ID; one alias may map to several tasks only when every mapping is alias_kind=split;
+  * registry (D-034): a workstream with rolls_up_to has effort_owner false, its targets exist and are effort-bearing, repos are unique; a REGISTERED
+    group's rollup_targets equal the registry's rolls_up_to and its repo matches;
   * capability mappings (D-030): a task may list `capabilities`; each must be a workstream with kind CAPABILITY and effort_owner false, and the
     group's own workstream must be an execution workstream. A mapping never creates a second task, estimate or credit (task identity stays unique);
   * optional --verify-sources DIR: every task_id must appear in the pinned source file found under DIR (sha256 must match).
@@ -48,8 +50,36 @@ def _source_problems(src, where):
     return out
 
 
+def check_registry(workstreams):
+    """D-030/D-034: kinds, effort ownership and roll-up targets in workstreams.json."""
+    out, ws = [], {w.get("id"): w for w in workstreams.get("workstreams", [])}
+    if len(ws) != len(workstreams.get("workstreams", [])):
+        out.append("workstreams.json: duplicate workstream id")
+    for wid, w in ws.items():
+        up = w.get("rolls_up_to")
+        if up is None:
+            continue
+        if w.get("effort_owner") is not False:
+            out.append(f"{wid}: a workstream with rolls_up_to must have effort_owner false")
+        if not isinstance(up, list) or not up or len(set(up)) != len(up):
+            out.append(f"{wid}: rolls_up_to must be a non-empty list without duplicates")
+            continue
+        for t in up:
+            tw = ws.get(t)
+            if tw is None:
+                out.append(f"{wid}: rolls_up_to target {t!r} is not in workstreams.json")
+            elif tw.get("kind") == "CAPABILITY" or tw.get("effort_owner") is False or tw.get("rolls_up_to"):
+                out.append(f"{wid}: rolls_up_to target {t!r} must be an effort-bearing workstream")
+        if not (isinstance(w.get("repo"), str) and REPO.match(w["repo"])):
+            out.append(f"{wid}: rolled-up workstream needs repo KritvaOS/<repo>")
+    repos = [w["repo"] for w in ws.values() if w.get("repo")]
+    if len(repos) != len(set(repos)):
+        out.append("workstreams.json: two workstreams share one repo")
+    return out
+
+
 def check(inv, baseline, approvals, workstreams, sources_dir=None):
-    problems = []
+    problems = check_registry(workstreams)
     base_ids = {t["id"] for t in baseline.get("tasks", [])}
     approved_ids = {a.get("task_id") for a in approvals.get("approvals", [])}
     ws_ids = {w["id"] for w in workstreams.get("workstreams", [])}
@@ -94,6 +124,13 @@ def check(inv, baseline, approvals, workstreams, sources_dir=None):
                         problems.append(f"group {gname}: proposed workstream {w!r} is not in workstreams.json")
         if wid in capability_ids:
             problems.append(f"group {gname}: execution owner {wid!r} is a CAPABILITY; capabilities cannot own tasks (D-030)")
+        if ms == "REGISTERED" and wid in ws_by:
+            if g.get("source_workstream_label") not in (None, wid):
+                problems.append(f"group {gname}: source_workstream_label {g.get('source_workstream_label')!r} does not match workstream_id {wid!r}")
+            if ws_by[wid].get("repo") and ws_by[wid]["repo"] != repo:
+                problems.append(f"group {gname}: registry repo {ws_by[wid]['repo']!r} does not match the group repository")
+            if ws_by[wid].get("rolls_up_to") is not None and g.get("rollup_targets") != ws_by[wid]["rolls_up_to"]:
+                problems.append(f"group {gname}: rollup_targets must equal rolls_up_to in workstreams.json")
         problems += _source_problems(g.get("source"), f"group {gname}")
         if not isinstance(g.get("tasks"), list) or not g.get("tasks"):
             problems.append(f"group {gname}: tasks must be a non-empty list")

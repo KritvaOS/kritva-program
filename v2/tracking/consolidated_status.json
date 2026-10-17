@@ -656,20 +656,20 @@
         "PHASE_EXIT",
         "RELEASE"
       ],
-      "closed_at": "2026-10-17T05:34:17Z",
+      "closed_at": "2026-10-17T07:45:00Z",
       "closed_by": "Dinesh",
       "closure_criteria": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
-      "closure_id": "C005",
-      "closure_limitations": "Claude did not perform or verify the review. The owner named himself as reviewer under D-025 on 2026-10-17; independence from the implementation is NOT stated, so D-025's independent-review requirement is not shown to be met. CI results are supporting evidence only.",
+      "closure_id": "C009",
+      "closure_limitations": "Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.",
       "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
       "frozen_status": "OPEN",
       "gate_id": "GATE-KOS-I3-SAFETY",
       "note": "OPEN per Community MILESTONE_STATUS.md. Scope is the whole milestone as a conservative default; the owner may narrow it to specific task_ids.",
       "owner": "Dinesh",
       "reviewer": {
-        "independent_of_implementation": "not-stated",
-        "name": "Dinesh",
-        "role": "owner and named reviewer (D-025)"
+        "independent_of_implementation": "yes",
+        "name": "Not named to Claude",
+        "role": "Independent reviewer (per owner statement)"
       },
       "scope": {
         "milestone_ids": [
@@ -687,20 +687,20 @@
         "PHASE_EXIT",
         "RELEASE"
       ],
-      "closed_at": "2026-10-17T05:34:17Z",
+      "closed_at": "2026-10-17T07:45:00Z",
       "closed_by": "Dinesh",
       "closure_criteria": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
-      "closure_id": "C006",
-      "closure_limitations": "Claude did not perform or verify the review. The owner named himself as reviewer under D-025 on 2026-10-17; independence from the implementation is NOT stated, so D-025's independent-review requirement is not shown to be met. CI results are supporting evidence only.",
+      "closure_id": "C010",
+      "closure_limitations": "Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.",
       "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
       "frozen_status": "OPEN",
       "gate_id": "GATE-KOS-I4-SAFETY",
       "note": "OPEN per Community MILESTONE_STATUS.md. I4-004..008 are flagged safety-relevant; milestone-wide scope is a conservative default pending owner narrowing.",
       "owner": "Dinesh",
       "reviewer": {
-        "independent_of_implementation": "not-stated",
-        "name": "Dinesh",
-        "role": "owner and named reviewer (D-025)"
+        "independent_of_implementation": "yes",
+        "name": "Not named to Claude",
+        "role": "Independent reviewer (per owner statement)"
       },
       "scope": {
         "milestone_ids": [
@@ -734,7 +734,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T06:06:53Z",
+  "generated_at": "2026-10-17T07:47:15Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -794,7 +794,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 12,
+        "age_hours": 14,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -815,7 +815,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 12,
+        "age_hours": 14,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",
@@ -1705,6 +1705,11 @@
   ],
   "warnings": [
     "ACTUATION_CONTROLS: no status source (UNVERIFIED)",
+    "ACT_EMB: no status source (UNVERIFIED)",
+    "ACT_INT: no status source (UNVERIFIED)",
+    "ACT_L: no status source (UNVERIFIED)",
+    "ACT_M: no status source (UNVERIFIED)",
+    "ACT_S: no status source (UNVERIFIED)",
     "CONTROL_PLANE: no status source (UNVERIFIED)",
     "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
@@ -1727,6 +1732,41 @@
       "commit": "-------",
       "id": "ACTUATION_CONTROLS",
       "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_EMB",
+      "repo": "KritvaOS/kritva-actuator-embedded",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_INT",
+      "repo": "KritvaOS/kritva-actuator",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_L",
+      "repo": "KritvaOS/kritva-actuator-l",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_M",
+      "repo": "KritvaOS/kritva-actuator-m",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_S",
+      "repo": "KritvaOS/kritva-actuator-s",
       "source_state": "UNVERIFIED",
       "tasks_reported": 0
     },

@@ -1039,7 +1039,7 @@ def main():
     epath = root / effort.FILE
     if epath.exists():
         edoc = json.loads(epath.read_text(encoding="utf-8"))
-        eerrs = effort.validate(edoc, set(reg), authorized)
+        eerrs = effort.validate(edoc, set(reg), authorized, {k for k, v in reg.items() if v.get("rolls_up_to")})
         errors += [f"effort_estimates.json: {x}" for x in eerrs]
         c["errors"] = sorted(errors)
         if not eerrs:
