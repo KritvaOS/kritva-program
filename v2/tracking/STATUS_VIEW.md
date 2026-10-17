@@ -11,9 +11,88 @@
 | V2 capability completion | per workstream (see Effort and capability below) | Owner estimate of intended scope delivered; separate from effort spent and from accepted progress |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
+## At a glance
+
+Snapshot of committed data, generated 2026-10-17T17:40:11Z. These charts are views of the records below: they are not approvals, schedule commitments or forecasts, and the three measures are never combined into one health figure.
+
+### Accepted engineering progress (frozen baseline, approval- and CI-evidence-credited)
+
+```text
+48/104 weight  ██████████████░░░░░░░░░░░░░░░░  46.15%
+```
+
+| Workstream | Accepted weight | Baseline weight | Accepted share | Tasks credited / baselined |
+|---|---|---|---|---|
+| COMMUNITY | 18 | 71 | 18/71 = 25.4% | 6/21 |
+| CORE | 30 | 30 | 30/30 = 100.0% | 9/9 |
+| CI_DEV_INFRA | 0 | 3 | 0/3 = 0.0% | 0/1 |
+
+```mermaid
+xychart-beta
+    title "Accepted weight as % of each workstream's baseline weight"
+    x-axis [COMMUNITY, CORE, CI_DEV_INFRA]
+    y-axis "Accepted / baseline weight (%)" 0 --> 100
+    bar [25.4, 100.0, 0.0]
+```
+
+Only the baselined workstreams are shown. Workstreams that are NOT BASELINED have no accepted progress to report; that is not zero progress.
+
+### Estimated effort (owner estimate, person-months)
+
+```text
+~70 PM done of ~245 PM  █████████░░░░░░░░░░░░░░░░░░░░░  ~175 PM remaining
+```
+
+Owner estimates from delivered scope, not timesheets. Effort is not accepted progress and not a schedule forecast (planning horizon stated by the owner: 10-12 months, not a demonstrated schedule).
+
+### Repository readiness for the return to private (display only)
+
+6 of 9 repositories READY. Readiness is an operational checklist; it adds no task credit and does not change the baseline or the progress figure above.
+
+| Repository | Readiness | Open checks | Attested, not verified |
+|---|---|---|---|
+| KritvaOS/kritva-program | READY | - | branch_protection |
+| KritvaOS/kritva-core | NOT_READY | contract_pin | branch_protection |
+| KritvaOS/kritvaos-community | NOT_READY | security_policy | branch_protection |
+| KritvaOS/kritva-raas | NOT_READY | security_disposition | branch_protection |
+| KritvaOS/kritva-actuator | READY | - | branch_protection |
+| KritvaOS/kritva-actuator-embedded | READY | - | branch_protection |
+| KritvaOS/kritva-actuator-s | READY | - | branch_protection |
+| KritvaOS/kritva-actuator-m | READY | - | branch_protection |
+| KritvaOS/kritva-actuator-l | READY | - | branch_protection |
+
+Owners and due dates for open checks are not recorded in the readiness file, so none are shown here.
+
+### Dated governance milestones (approved dates only)
+
+```mermaid
+gantt
+    title Approved dates only (D-037); milestones carry no duration or work estimate
+    dateFormat YYYY-MM-DD
+    axisFormat %d %b
+    todayMarker off
+    section This report
+    Status snapshot :milestone, m0, 2026-10-17, 0d
+    section Return to private
+    Readiness report due :milestone, m1, 2026-11-14, 0d
+    Repositories return to private :milestone, m2, 2026-11-15, 0d
+```
+
+These are deadlines, not the start or length of any work. Open readiness checks are listed in the table above without invented dates.
+
+### Phase sequence (dates not approved)
+
+```mermaid
+flowchart LR
+    P0["P0 FOUNDATION"] --> P1["P1 STUDIO"] --> P2["P2 BUILD #amp; ARTIFACT"] --> P3["P3 CONTROL PLANE"] --> P4["P4 BOOKING #amp; COMMERCIAL"] --> P5["P5 EXECUTION"] --> P6["P6 LAB #amp; ROBOT"] --> P7["P7 LIVE #amp; RESULTS"] --> P8["P8 PRODUCTION"]
+```
+
+Order only. Phase start and end dates, durations and percent complete are TBD in [v2/ROADMAP.md](../ROADMAP.md); none are inferred here.
+
+
 ## Summary
 
-- Generated at: 2026-10-17T17:15:54Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T17:40:11Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,12 +115,12 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T17:15:54Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T17:40:11Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (23h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
-| CORE | FRESH | 2026-10-16T17:21:54Z (23h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
+| COMMUNITY | WARN | 2026-10-16T17:21:54Z (24h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | WARN | 2026-10-16T17:21:54Z (24h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 

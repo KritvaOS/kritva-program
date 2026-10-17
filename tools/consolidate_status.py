@@ -44,6 +44,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import effort  # noqa: E402  (display-only; never read by compute())
 import readiness  # noqa: E402  (display-only; never read by compute())
+import dashboard  # noqa: E402  (display-only; never read by compute())
 
 REPORT_ENUMS = {
     "execution": {"NOT_STARTED", "IN_PROGRESS", "BLOCKED", "COMPLETE"},
@@ -752,6 +753,7 @@ def render(c):
          f"| Program phase (P0-P8) | {ps['current_phase'] if ps and ps['current_phase'] else 'unavailable'} | "
          + (f"Manual status in {ps['source']}, as of {ps['as_of']}; it may lag this report and is not derived from the engineering baseline |"
             if ps else "no program status file |"),
+         *dashboard.render_lines(c, c.get("phase_sequence") or []),
          "", "## Summary", "",
          f"- Generated at: {c['generated_at']} (freshness of sources is judged at this time)",
          f"- Baseline version: {c['baseline_version']} ({'APPROVED' if c['baseline_approved'] else 'DRAFT, not approved'})",
@@ -1038,6 +1040,7 @@ def main():
          "evidence_health": evidence_health(tasks, out_ws, warnings),
          "errors": sorted(errors), "warnings": sorted(warnings)}
     c["program_status"] = program_status(root)
+    c["phase_sequence"] = dashboard.phase_names(root)
     c["source_freshness"] = source_freshness(a.sources_dir, now) if a.sources_dir else None
     epath = root / effort.FILE
     if epath.exists():
