@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-17T13:30:27Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T15:10:26Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,12 +36,12 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T13:30:27Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T15:10:26Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (20h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
-| CORE | FRESH | 2026-10-16T17:21:54Z (20h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
+| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (21h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | FRESH | 2026-10-16T17:21:54Z (21h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 
@@ -202,15 +202,15 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 | Repo | Visibility now | Recommended | Checked head | Readiness | Blocking checks | Attested, not verified |
 |---|---|---|---|---|---|---|
-| KritvaOS/kritva-program | PUBLIC | **PRIVATE** | b0c049c | NOT_READY | 5: license, security_policy, codeowners, agents_md, owner_signoff | branch_protection |
+| KritvaOS/kritva-program | PUBLIC | **PRIVATE** | b0c049c | NOT_READY | 4: license, security_policy, agents_md, owner_signoff | branch_protection |
 | KritvaOS/kritva-core | PUBLIC | **PRIVATE** | 46bd189 | NOT_READY | 2: contract_pin, owner_signoff | branch_protection |
-| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 8dc9496 | NOT_READY | 2: codeowners, owner_signoff | branch_protection |
-| KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | ca054f9 | NOT_READY | 7: license, security_policy, codeowners, agents_md, branch_protection, security_disposition, owner_signoff | - |
-| KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 9aac076 | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
-| KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 2ceb68e | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
-| KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | 21f7d90 | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
-| KritvaOS/kritva-actuator-m | PUBLIC | **PRIVATE** | 50afcde | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
-| KritvaOS/kritva-actuator-l | PUBLIC | **PRIVATE** | de0e86a | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 8dc9496 | NOT_READY | 1: owner_signoff | branch_protection |
+| KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | ca054f9 | NOT_READY | 6: license, security_policy, codeowners, agents_md, security_disposition, owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 9aac076 | NOT_READY | 3: security_policy, agents_md, owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 2ceb68e | NOT_READY | 3: security_policy, agents_md, owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | 21f7d90 | NOT_READY | 3: security_policy, agents_md, owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator-m | PUBLIC | **PRIVATE** | 50afcde | NOT_READY | 3: security_policy, agents_md, owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator-l | PUBLIC | **PRIVATE** | de0e86a | NOT_READY | 3: security_policy, agents_md, owner_signoff | branch_protection |
 
 ### KritvaOS/kritva-program
 
@@ -223,11 +223,11 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at b0c049c: 45 commits, 0 findings, re-run 2026-10-17 after the CI checks merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head b0c049c; merged in PR #8; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 5 commits on main carry one, history not rewritten Evidence: workflow, script and 6 unit tests present at head b0c049c (tests pass on a fresh clone); merged in PR #8
-- [ ] **DECISION** license (LICENSE file): No LICENSE; the owner decides the terms for a private repo
-- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
-- [ ] **OPEN** codeowners (CODEOWNERS): No CODEOWNERS
+- [ ] **OPEN** license (LICENSE file): Owner decided the licence is the private proprietary notice (D-040); the LICENSE file is in the governance PR, pending merge
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md yet; added in the governance PR, pending merge
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya (added by the owner in PR #10) Evidence: file present at head 6e740e4
 - [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
-- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists; the stale bot/refresh-sources branch has been removed (its PR #6 status is not visible to Claude) Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
@@ -248,7 +248,7 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** security_policy (SECURITY.md): SECURITY.md names GitHub private vulnerability reporting and Dinesh as Security Owner (D-035) Evidence: file present at head
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya (D-035) Evidence: file present at head
 - [x] **PASS** agents_md (AGENTS.md): AGENTS.md present Evidence: file present at head
-- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified; the owner still needs to enable 'Require review from Code Owners'
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [ ] **OPEN** contract_pin (Pinned engineering-contract SHA (Core pilot)): The pinned engineering-contract SHA for the Core pilot is not recorded
@@ -267,9 +267,9 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 8dc9496 (tests pass on a fresh clone); merged in PR #1
 - [x] **PASS** license (LICENSE file): Apache License 2.0 Evidence: LICENSE present at head
 - [x] **PASS** security_policy (SECURITY.md): SECURITY.md present (contents not reviewed by Claude) Evidence: file present at head
-- [ ] **OPEN** codeowners (CODEOWNERS): No CODEOWNERS; add one as in kritva-core (D-035)
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya (added by the owner in PR #2); the governance PR only corrects its header and paths Evidence: file present at head 70607a5
 - [x] **PASS** agents_md (AGENTS.md): AGENTS.md present Evidence: file present at head
-- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
@@ -286,11 +286,11 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review Evidence: gitleaks 8.18.4 over all refs of a full clone at ca054f9: 128 commits, 0 findings, run 2026-10-17 with .gitleaksignore applied
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans history Evidence: workflow file present at head; PR #52 merged after the owner reported success
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow, hook and tests are present; 62 historical commits carry session trailers and history is not rewritten Evidence: workflow and script present at head
-- [ ] **DECISION** license (LICENSE file): No LICENSE file; source headers say LicenseRef-KritvaOS-Proprietary. The owner decides the licence and governance baseline
-- [ ] **DECISION** security_policy (SECURITY.md): No SECURITY.md; part of the RaaS governance baseline decision
-- [ ] **DECISION** codeowners (CODEOWNERS): No CODEOWNERS; part of the RaaS governance baseline decision
+- [ ] **OPEN** license (LICENSE file): Owner decided the licence is the private proprietary notice (D-040); the LICENSE file is in the governance PR, pending merge
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md yet; added in the governance PR, pending merge
+- [ ] **OPEN** codeowners (CODEOWNERS): No CODEOWNERS yet; added in the governance PR, pending merge
 - [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; part of the RaaS governance baseline decision
-- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo: the ruleset (24843399) requires source-header-check and docs-check; the owner still needs to add secret-scan and commit-message-check as required checks
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists after the owner removed the second branch (D-036) Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [ ] **OPEN** security_disposition (Every security finding has a recorded disposition): SEC-GATE-001 (a credential-shaped loopback DATABASE_URL example in history) has no Security Owner disposition or deadline yet (D-032)
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
@@ -308,10 +308,10 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 9aac076; merged in PR #4; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 1 historical commit carries one (audit record KA-AUD-EXT-20261016), history not rewritten Evidence: workflow, script and 6 unit tests present at head 9aac076 (tests pass on a fresh clone); merged in PR #4
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md yet; added in the governance PR, pending merge
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
 - [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
-- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
@@ -329,10 +329,10 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 2ceb68e; merged in PR #5; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 2ceb68e (tests pass on a fresh clone); merged in PR #5
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md yet; added in the governance PR, pending merge
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
 - [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
-- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
@@ -350,10 +350,10 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 21f7d90; merged in PR #3; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 21f7d90 (tests pass on a fresh clone); merged in PR #3
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md yet; added in the governance PR, pending merge
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
 - [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
-- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
@@ -371,10 +371,10 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 50afcde; merged in PR #3; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 50afcde (tests pass on a fresh clone); merged in PR #3
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md yet; added in the governance PR, pending merge
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
 - [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
-- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
@@ -392,10 +392,10 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head de0e86a; merged in PR #3; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head de0e86a (tests pass on a fresh clone); merged in PR #3
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md yet; added in the governance PR, pending merge
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
 - [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
-- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
