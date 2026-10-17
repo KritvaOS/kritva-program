@@ -72,6 +72,13 @@ class PlanningInventoryTests(unittest.TestCase):
     def mut(self):
         return copy.deepcopy(self.inv)
 
+    def proposed(self):
+        """The parent actuator group converted back to the PROPOSED shape (still supported for unapproved mappings)."""
+        inv = self.mut(); g = inv["groups"][1]
+        g["mapping_status"], g["workstream_id"] = "PROPOSED", None
+        g["proposed_program_workstreams"] = g.pop("rollup_targets")
+        return inv
+
     def test_all_70_tasks_present_including_parent_group(self):
         n = {g["repository"]: len(g["tasks"]) for g in self.inv["groups"]}
         self.assertEqual(n["KritvaOS/kritva-actuator"], 7)
@@ -82,20 +89,20 @@ class PlanningInventoryTests(unittest.TestCase):
         self.has(inv, "not in workstreams.json")
 
     def test_unmapped_group_must_be_proposed(self):
-        inv = self.mut(); g = inv["groups"][1]
-        g["mapping_status"] = "REGISTERED"
+        inv = self.proposed(); self.assertEqual(self.run_check(inv), [])
+        inv["groups"][1]["mapping_status"] = "REGISTERED"
         self.has(inv, "not in workstreams.json")
 
     def test_proposed_group_with_workstream_id_is_rejected(self):
-        inv = self.mut(); inv["groups"][1]["workstream_id"] = "CORE"
+        inv = self.proposed(); inv["groups"][1]["workstream_id"] = "CORE"
         self.has(inv, "workstream_id null")
 
     def test_proposed_group_with_unknown_proposed_workstream_is_rejected(self):
-        inv = self.mut(); inv["groups"][1]["proposed_program_workstreams"] = ["MADE_UP"]
+        inv = self.proposed(); inv["groups"][1]["proposed_program_workstreams"] = ["MADE_UP"]
         self.has(inv, "proposed workstream")
 
     def test_proposed_group_without_label_is_rejected(self):
-        inv = self.mut(); del inv["groups"][1]["source_workstream_label"]
+        inv = self.proposed(); del inv["groups"][1]["source_workstream_label"]
         self.has(inv, "source_workstream_label")
 
     def test_task_level_credit_and_classification_violations(self):
@@ -206,6 +213,64 @@ class PlanningInventoryTests(unittest.TestCase):
         e = LOAD("effort_estimates.json")
         self.assertIn("RAAS", [w["workstream_id"] for w in e["workstreams"]])
         self.assertNotIn("CONTROL_PLANE", [w["workstream_id"] for w in e["workstreams"]])
+
+
+    # D-034: the five actuator repos are registered execution workstreams with no effort of their own.
+    def test_actuator_workstreams_are_registered_without_effort(self):
+        ws = {w["id"]: w for w in self.ws["workstreams"]}
+        for wid in ("ACT_INT", "ACT_EMB", "ACT_S", "ACT_M", "ACT_L"):
+            self.assertEqual(ws[wid]["kind"], "EXECUTION_WORKSTREAM")
+            self.assertIs(ws[wid]["effort_owner"], False)
+            self.assertTrue(ws[wid]["rolls_up_to"])
+        self.assertEqual(ws["ACT_EMB"]["rolls_up_to"], ["ACTUATION_CONTROLS", "ELECTRICAL_POWER"])
+        groups = {g["workstream_id"]: g for g in self.inv["groups"]}
+        self.assertTrue({"ACT_INT", "ACT_EMB", "ACT_S", "ACT_M", "ACT_L"} <= set(groups))
+        self.assertTrue(all(g["mapping_status"] == "REGISTERED" for g in self.inv["groups"]))
+
+    def reg_problems(self, mutate):
+        ws = copy.deepcopy(self.ws); mutate({w["id"]: w for w in ws["workstreams"]}, ws)
+        return cpi.check(self.inv, self.base, self.appr, ws)
+
+    def test_child_with_effort_ownership_is_rejected(self):
+        p = self.reg_problems(lambda m, w: m["ACT_S"].update(effort_owner=True))
+        self.assertTrue(any("effort_owner false" in x for x in p), p)
+
+    def test_rollup_target_must_exist_and_bear_effort(self):
+        p = self.reg_problems(lambda m, w: m["ACT_S"].update(rolls_up_to=["NOPE"]))
+        self.assertTrue(any("not in workstreams.json" in x for x in p), p)
+        p = self.reg_problems(lambda m, w: m["ACT_S"].update(rolls_up_to=["CONTROL_PLANE"]))
+        self.assertTrue(any("effort-bearing" in x for x in p), p)
+        p = self.reg_problems(lambda m, w: m["ACT_S"].update(rolls_up_to=["ACT_M"]))
+        self.assertTrue(any("effort-bearing" in x for x in p), p)
+
+    def test_duplicate_workstream_or_repo_is_rejected(self):
+        p = self.reg_problems(lambda m, w: w["workstreams"].append(dict(m["ACT_S"])))
+        self.assertTrue(any("duplicate workstream id" in x for x in p), p)
+        p = self.reg_problems(lambda m, w: m["ACT_M"].update(repo=m["ACT_S"]["repo"]))
+        self.assertTrue(any("share one repo" in x for x in p), p)
+
+    def test_group_rollup_must_match_registry(self):
+        inv = self.mut()
+        g = next(x for x in inv["groups"] if x["workstream_id"] == "ACT_EMB"); g["rollup_targets"] = ["MECHANICAL"]
+        self.has(inv, "rollup_targets must equal")
+
+    def test_estimates_for_a_rolled_up_workstream_are_rejected(self):
+        import effort
+        e = LOAD("effort_estimates.json")
+        reg = {w["id"] for w in self.ws["workstreams"]}
+        rolled = {w["id"] for w in self.ws["workstreams"] if w.get("rolls_up_to")}
+        self.assertEqual(effort.validate(e, reg, set(self.appr["authorized_approvers"]), rolled), [])
+        e2 = copy.deepcopy(e); e2["workstreams"].append(dict(e2["workstreams"][0], workstream_id="ACT_S"))
+        errs = effort.validate(e2, reg, set(self.appr["authorized_approvers"]), rolled)
+        self.assertTrue(any("cannot carry its own effort" in x for x in errs), errs)
+
+    def test_registration_changes_neither_total_effort_nor_progress(self):
+        c = LOAD("consolidated_status.json")
+        rows = c["effort"]["rows"]
+        self.assertFalse({"ACT_INT", "ACT_EMB", "ACT_S", "ACT_M", "ACT_L"} & {r["workstream_id"] for r in rows})
+        self.assertEqual(len(rows), 20)  # the pre-registration registry size; roll-up children add no rows
+        self.assertEqual(c["effort"]["sums"]["total"], [203.5, 250.5, 295])
+        self.assertEqual(c["effort"]["sums"]["completed"], [57.5, 71.5, 86])
 
 
 if __name__ == "__main__":

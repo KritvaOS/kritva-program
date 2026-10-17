@@ -1,5 +1,5 @@
 {
-  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; tag kritva-core-r1.0 resolves to commit 4acce3b60833abfe33168c4766405ab86ea73edc (verified locally by Dinesh 2026-10-11). KF-CORE-R10-001..009 are seeded in the baseline (D-014), so the closed-milestone guard for KF-CORE-R10 is active. Core R02..R09 are not tracked. RAAS repo name is recorded (confirmed from project context) but RaaS has no verified task IDs, so it is not in sources.json and has no baseline tasks; onboarding follows v2/tracking/ONBOARDING.md (D-017). D-021 (2026-10-15): six workstreams (Device / Endpoint, Nexus / Edge, CI / Dev infrastructure, Electrical / Power, Actuation / Controls, Manufacturing / Fleet) were added so the registry covers the 17 reporting rows agreed with ChatGPT; none has a repo or baseline tasks yet. Studio, Control Plane and Education applications stay registered but are not in the agreed effort table (NOT_ESTIMATED). D-030 (2026-10-17): CONTROL_PLANE is a program-level CAPABILITY (no repo, no tasks, no separate effort) implemented by RAAS; RAAS is the sole execution and effort owner for kritva-raas backend tasks. An optional kind/effort_owner field marks this; workstreams without kind are execution workstreams.",
+  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; tag kritva-core-r1.0 resolves to commit 4acce3b60833abfe33168c4766405ab86ea73edc (verified locally by Dinesh 2026-10-11). KF-CORE-R10-001..009 are seeded in the baseline (D-014), so the closed-milestone guard for KF-CORE-R10 is active. Core R02..R09 are not tracked. RAAS repo name is recorded (confirmed from project context) but RaaS has no verified task IDs, so it is not in sources.json and has no baseline tasks; onboarding follows v2/tracking/ONBOARDING.md (D-017). D-021 (2026-10-15): six workstreams (Device / Endpoint, Nexus / Edge, CI / Dev infrastructure, Electrical / Power, Actuation / Controls, Manufacturing / Fleet) were added so the registry covers the 17 reporting rows agreed with ChatGPT; none has a repo or baseline tasks yet. Studio, Control Plane and Education applications stay registered but are not in the agreed effort table (NOT_ESTIMATED). D-030 (2026-10-17): CONTROL_PLANE is a program-level CAPABILITY (no repo, no tasks, no separate effort) implemented by RAAS; RAAS is the sole execution and effort owner for kritva-raas backend tasks. An optional kind/effort_owner field marks this; workstreams without kind are execution workstreams. D-034 (2026-10-17): ACT_INT, ACT_EMB, ACT_S, ACT_M and ACT_L are registered as execution/reporting workstreams of the five actuator repos. effort_owner is false: their effort stays in the existing effort rows named in rolls_up_to (classification only, never an allocation). Registration confirms identity, not baseline inclusion, completion or credit.",
   "workstreams": [
     {
       "id": "CORE",
@@ -116,6 +116,57 @@
       "id": "MANUFACTURING_FLEET",
       "name": "Manufacturing / Fleet",
       "repo": null
+    },
+    {
+      "id": "ACT_INT",
+      "name": "Actuator integration (kritva-actuator)",
+      "repo": "KritvaOS/kritva-actuator",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "INTEGRATION_SOFTWARE_VALIDATION"
+      ]
+    },
+    {
+      "id": "ACT_EMB",
+      "name": "Actuator embedded",
+      "repo": "KritvaOS/kritva-actuator-embedded",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "ACTUATION_CONTROLS",
+        "ELECTRICAL_POWER"
+      ]
+    },
+    {
+      "id": "ACT_S",
+      "name": "Actuator S (mechanical)",
+      "repo": "KritvaOS/kritva-actuator-s",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "MECHANICAL"
+      ]
+    },
+    {
+      "id": "ACT_M",
+      "name": "Actuator M (mechanical)",
+      "repo": "KritvaOS/kritva-actuator-m",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "MECHANICAL"
+      ]
+    },
+    {
+      "id": "ACT_L",
+      "name": "Actuator L (mechanical)",
+      "repo": "KritvaOS/kritva-actuator-l",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "MECHANICAL"
+      ]
     }
   ]
 }

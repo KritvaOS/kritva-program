@@ -65,7 +65,7 @@ def _range(r, name, allowed, errs):
     return r["low"], r["base"], r["high"]
 
 
-def validate(doc, registry_ids, authorized):
+def validate(doc, registry_ids, authorized, rolled_up_ids=frozenset()):
     errs = []
     if not isinstance(doc, dict):
         return ["not a JSON object"]
@@ -106,6 +106,8 @@ def validate(doc, registry_ids, authorized):
         errs += [f"{tag}: unknown key {k!r}" for k in sorted(set(w) - WS_KEYS)]
         if wid not in registry_ids:
             errs.append(f"{tag}: not in workstreams.json")
+        if wid in rolled_up_ids:
+            errs.append(f"{tag}: {wid} rolls up to other workstreams and cannot carry its own effort estimate (D-034)")
         if wid in seen:
             errs.append(f"{tag}: duplicate")
         seen.add(wid)
@@ -181,6 +183,7 @@ def _fmt(t):
 def summary(doc, registry, by_workstream):
     """Display data only. `registry` is {id: workstream dict with optional name}; by_workstream is the evidence rollup."""
     est = {w["workstream_id"]: w for w in (doc.get("workstreams") or [])}
+    registry = {k: v for k, v in registry.items() if not ((v or {}).get("effort_owner") is False and (v or {}).get("rolls_up_to"))}
     rows, sums = [], {"completed": [0, 0, 0], "remaining": [0, 0, 0], "total": [0, 0, 0]}
     counted = 0
     for wid in sorted(registry):
@@ -287,7 +290,8 @@ def main():
     doc = json.loads((root / FILE).read_text(encoding="utf-8"))
     reg = {w["id"] for w in json.loads((root / "v2/tracking/workstreams.json").read_text())["workstreams"]}
     authorized = set(json.loads((root / "v2/tracking/approvals.json").read_text()).get("authorized_approvers", []))
-    errs = validate(doc, reg, authorized)
+    rolled = {w["id"] for w in json.loads((root / "v2/tracking/workstreams.json").read_text())["workstreams"] if w.get("rolls_up_to")}
+    errs = validate(doc, reg, authorized, rolled)
     if a.approve:
         if doc["approval"]["status"] == "APPROVED":
             errs.append("already APPROVED: create a new estimate_version instead of re-approving")

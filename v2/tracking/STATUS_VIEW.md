@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-17T06:06:53Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T07:47:15Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,12 +36,12 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T06:06:53Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T07:47:15Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (12h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
-| CORE | FRESH | 2026-10-16T17:21:54Z (12h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
+| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (14h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | FRESH | 2026-10-16T17:21:54Z (14h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 
@@ -50,6 +50,11 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | Workstream | Repo | Baseline | Source state | Tasks reported | Inspected source commit |
 |---|---|---|---|---|---|
 | ACTUATION_CONTROLS | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| ACT_EMB | KritvaOS/kritva-actuator-embedded | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| ACT_INT | KritvaOS/kritva-actuator | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| ACT_L | KritvaOS/kritva-actuator-l | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| ACT_M | KritvaOS/kritva-actuator-m | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| ACT_S | KritvaOS/kritva-actuator-s | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | CI_DEV_INFRA | KritvaOS/kritva-program | BASELINED (1 tasks) | OK | 1 | 8e50865 |
 | COMMUNITY | KritvaOS/kritvaos-community | BASELINED (21 tasks) | OK | 21 | 8256ba3 |
 | CONTROL_PLANE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
@@ -138,11 +143,11 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 
 | Gate | Frozen baseline state | Effective state | Blocks | Scope | Closure record | Reviewed commit | Reviewer (independence) |
 |---|---|---|---|---|---|---|---|
-| GATE-KOS-I3-SAFETY | OPEN | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I3 | C005: 2026-10-17 by Dinesh | 8256ba3 | Dinesh (owner and named reviewer (D-025); independence not-stated) |
-| GATE-KOS-I4-SAFETY | OPEN | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I4 | C006: 2026-10-17 by Dinesh | 8256ba3 | Dinesh (owner and named reviewer (D-025); independence not-stated) |
+| GATE-KOS-I3-SAFETY | OPEN | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I3 | C009: 2026-10-17 by Dinesh | 8256ba3 | Not named to Claude (Independent reviewer (per owner statement); independence yes) |
+| GATE-KOS-I4-SAFETY | OPEN | CLOSED | TASK_CREDIT, PHASE_EXIT, RELEASE | KOS-I4 | C010: 2026-10-17 by Dinesh | 8256ba3 | Not named to Claude (Independent reviewer (per owner statement); independence yes) |
 | GATE-KOS-CI-001 | OPEN | OPEN | RELEASE | KOS-I4 | - | - | - |
-- C005 limitations: Claude did not perform or verify the review. The owner named himself as reviewer under D-025 on 2026-10-17; independence from the implementation is NOT stated, so D-025's independent-review requirement is not shown to be met. CI results are supporting evidence only.
-- C006 limitations: Claude did not perform or verify the review. The owner named himself as reviewer under D-025 on 2026-10-17; independence from the implementation is NOT stated, so D-025's independent-review requirement is not shown to be met. CI results are supporting evidence only.
+- C009 limitations: Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.
+- C010 limitations: Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.
 
 ## Effort and capability (owner estimates; NOT evidence and never part of accepted engineering progress)
 
@@ -205,6 +210,11 @@ Monthly staffing and burn forecast: NOT PLANNED yet. It needs monthly staffing b
 ## Warnings
 
 - ACTUATION_CONTROLS: no status source (UNVERIFIED)
+- ACT_EMB: no status source (UNVERIFIED)
+- ACT_INT: no status source (UNVERIFIED)
+- ACT_L: no status source (UNVERIFIED)
+- ACT_M: no status source (UNVERIFIED)
+- ACT_S: no status source (UNVERIFIED)
 - CONTROL_PLANE: no status source (UNVERIFIED)
 - DEVICE_ENDPOINT: no status source (UNVERIFIED)
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
