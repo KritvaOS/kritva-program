@@ -1,6 +1,6 @@
 {
-  "_note": "DRAFT, NOT APPROVED. Community task IDs seeded from kritvaos-community planning/milestones/*/TASKS.md (read 2026-10-11). Weights are null until the owner approves them, so progress is N/A. Core R1.0 tasks KF-CORE-R10-001..009 are seeded (D-014); Core R02..R09 and RaaS are intentionally not seeded (RaaS IDs UNVERIFIED). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 1,
+  "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 and RaaS are intentionally not seeded; RaaS tasks are in v2/tracking/planning_inventory.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
+  "baseline_version": 2,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -30,6 +30,10 @@
     {
       "id": "KOS-I4",
       "workstream_id": "COMMUNITY"
+    },
+    {
+      "id": "KRP-ENG",
+      "workstream_id": "CI_DEV_INFRA"
     }
   ],
   "tasks": [
@@ -332,6 +336,16 @@
       "requires_physical": false,
       "phase": null,
       "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "KRP-ENG-001",
+      "workstream_id": "CI_DEV_INFRA",
+      "milestone_id": "KRP-ENG",
+      "title": "Establish and enforce the Kritva repository engineering contract",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Owner decision 2026-10-17 (D-022): weight left at the proposed 3. Contract text, AGENTS.md/CLAUDE.md in each repo, compliance report and enforcement checks across the Kritva repos; sized between the 2-3 and 4-5 effort tasks already in the baseline."
     }
   ],
   "gates": [
@@ -405,9 +419,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-10-13T16:44:57Z",
-    "canonical_commit": "11416537a59a7a4015ed1286a2e48b66e963b958",
-    "baseline_sha256": "874abe0bcddfbc90f7d5ab449cd7e7a64408bbcd7d640f37fdca01d74bd50e16",
-    "reason": "Approve baseline v1 weights as proposed: Core R1.0 (9 tasks) and Community I2-I4 (21 tasks)"
+    "approved_at": "2026-10-17T05:31:54Z",
+    "canonical_commit": "0bf15de07f6ac0aed1e0cc412c872baa4baafe4f",
+    "baseline_sha256": "3779e12c261fb910ef82664e458b997108a85f27168676d7db1700f1876ec940",
+    "reason": "Approve baseline v2 as proposed: v1 (Core R1.0, Community I2-I4; 30 tasks, weight 101) plus KRP-ENG-001 at weight 3 (total 104). Owner instruction in chat 2026-10-17 (D-022), recorded by Claude on his instruction."
   }
 }

@@ -302,8 +302,10 @@ def validate_report(doc, reg, base_tasks):
     return e
 
 
-def validate_approvals(ledger, base_tasks, base_version):
-    """Validate the approval ledger. Returns (errors, effective approval per task)."""
+def validate_approvals(ledger, base_tasks, base_version, allow_stale_baseline=False):
+    """Validate the approval ledger. Returns (errors, effective approval per task).
+    allow_stale_baseline is for tools/record_approvals.py only: it lets an effective approval made under an OLDER baseline
+    stand while it is being re-approved on the current one; the consolidator never sets it."""
     e, by_id, authorized = [], {}, set(ledger.get("authorized_approvers", []))
     for a in ledger["approvals"]:
         aid = a.get("approval_id", "?")
@@ -330,8 +332,6 @@ def validate_approvals(ledger, base_tasks, base_version):
             parse_ts(a["approved_at"])
         except (ValueError, AttributeError):
             e.append(f"approval {aid}: approved_at is not ISO-8601")
-        if a["baseline_version"] != base_version:
-            e.append(f"approval {aid}: baseline_version {a['baseline_version']} != current {base_version}")
     superseded = set()
     for aid, a in by_id.items():
         s = a.get("supersedes")
@@ -342,6 +342,11 @@ def validate_approvals(ledger, base_tasks, base_version):
     effective = {}
     for aid, a in by_id.items():  # file order = append order
         if aid not in superseded:
+            # D-027: only an EFFECTIVE approval must be bound to the current baseline version. A superseded record keeps
+            # the version it was made under, so a new baseline can be frozen by re-approving (supersede) instead of
+            # editing the append-only ledger.
+            if a["baseline_version"] != base_version and not allow_stale_baseline:
+                e.append(f"approval {aid}: baseline_version {a['baseline_version']} != current {base_version}")
             effective[a["task_id"]] = a
     return e, effective
 

@@ -40,7 +40,8 @@ def plan(root, tasks, prefix):
     problems, picks = [], []
     if not base.get("baseline_approved"):
         problems.append("baseline is not approved and frozen")
-    errors, effective = cs.validate_approvals(ledger, {b["id"] for b in base["tasks"]}, base["baseline_version"])
+    errors, effective = cs.validate_approvals(ledger, {b["id"] for b in base["tasks"]}, base["baseline_version"],
+                                               allow_stale_baseline=True)
     problems += [f"existing ledger: {x}" for x in errors]
     if not wanted:
         problems.append("no tasks selected (use --tasks or --prefix)")
@@ -50,7 +51,8 @@ def plan(root, tasks, prefix):
             problems.append(f"{tid}: no row in the evidence map (unmapped or unknown)"); continue
         commit = r["evidence"]["commit"]
         old = effective.get(tid)
-        if old and old["source_commit"] == commit and old["acceptance"] == "PASS":
+        if (old and old["source_commit"] == commit and old["acceptance"] == "PASS"
+                and old["baseline_version"] == base["baseline_version"]):
             problems.append(f"{tid}: already approved PASS on {commit[:7]} ({old['approval_id']})"); continue
         picks.append((r, repos[r["workstream_id"]], old))
     return base, ledger, picks, problems
