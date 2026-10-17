@@ -53,13 +53,17 @@ Repositories report implementation facts and evidence. This repository owns prog
 
 ## 3. Status reporting
 
-```mermaid
-flowchart LR
-    R["Each repo: status/status.json (schema 2.0)"] --> S["sources/ (committed snapshots)"]
-    S --> T["tools/consolidate_status.py"]
-    B["baseline, approvals, gates"] --> T
-    T --> J["v2/tracking/consolidated_status.json"]
-    T --> V["v2/tracking/STATUS_VIEW.md"]
+```text
+  each repo: status/status.json (schema 2.0)
+                    |
+                    v
+          sources/  (committed snapshots)
+                    |
+                    v
+   tools/consolidate_status.py  <---  baseline, approvals, gates
+              |             |
+              v             v
+  consolidated_status.json   STATUS_VIEW.md  (generated)
 ```
 
 1. **Repositories report facts.** Each repository's generator writes `status/status.json` (schema 2.0): per task, `execution`, `git_sync`, `readiness` and `evidence`. Reports never contain review or acceptance.
