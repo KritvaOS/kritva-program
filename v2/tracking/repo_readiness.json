@@ -3,7 +3,7 @@
   "readiness_version": 1,
   "target_date": "2026-11-15",
   "report_due": "2026-11-14",
-  "checked_at": "2026-10-17T16:00:00Z",
+  "checked_at": "2026-10-17T18:30:00Z",
   "basis": "Facts read from git (clones of each repo's main) and the committed program files on 2026-10-17. GitHub settings (visibility, rulesets, required checks) are not readable by Claude, so they are ATTESTED, OPEN or marked as owner statements.",
   "repos": [
     {
@@ -11,7 +11,7 @@
       "workstream_ids": [
         "CI_DEV_INFRA"
       ],
-      "checked_head": "d6f5525dc6d5877d002d47f15a2b310af69a36f6",
+      "checked_head": "40515d295133b8366a5a8717b7427736cbd5acf0",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -42,7 +42,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at d6f5525: 42 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 40515d2: 43 commits, 0 findings, re-run 2026-10-17 on current main"
         },
         {
           "id": "secret_scan_ci",
@@ -76,8 +76,9 @@
         },
         {
           "id": "agents_md",
-          "status": "DECISION",
-          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+          "status": "OPEN",
+          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
+          "evidence": "patch prepared; not yet merged"
         },
         {
           "id": "branch_protection",
@@ -144,7 +145,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history, tags included",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 46bd189: 319 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 46bd189: 319 commits, 0 findings, re-run 2026-10-17 on current main"
         },
         {
           "id": "secret_scan_ci",
@@ -247,7 +248,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 8ff1dbf: 64 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 8ff1dbf: 64 commits, 0 findings, re-run 2026-10-17 on current main"
         },
         {
           "id": "secret_scan_ci",
@@ -269,9 +270,9 @@
         },
         {
           "id": "security_policy",
-          "status": "PASS",
-          "detail": "SECURITY.md present (contents not reviewed by Claude)",
-          "evidence": "file present at head"
+          "status": "OPEN",
+          "detail": "SECURITY.md is present but its reporting contact is still the placeholder <SECURITY_EMAIL_TO_BE_DEFINED>. The Security Owner must supply a contact or confirm GitHub private vulnerability reporting is enabled; file presence alone is not a working reporting path",
+          "evidence": "SECURITY.md at 8ff1dbf"
         },
         {
           "id": "codeowners",
@@ -346,7 +347,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 2917d96: 76 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 2917d96: 76 commits, 0 findings, re-run 2026-10-17 on current main"
         },
         {
           "id": "secret_scan_ci",
@@ -380,8 +381,9 @@
         },
         {
           "id": "agents_md",
-          "status": "DECISION",
-          "detail": "No AGENTS.md; part of the RaaS governance baseline decision"
+          "status": "OPEN",
+          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
+          "evidence": "patch prepared; not yet merged"
         },
         {
           "id": "branch_protection",
@@ -443,7 +445,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 17905f3: 20 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 17905f3: 20 commits, 0 findings, re-run 2026-10-17 on current main"
         },
         {
           "id": "secret_scan_ci",
@@ -477,8 +479,9 @@
         },
         {
           "id": "agents_md",
-          "status": "DECISION",
-          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+          "status": "OPEN",
+          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
+          "evidence": "patch prepared; not yet merged"
         },
         {
           "id": "branch_protection",
@@ -541,7 +544,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 4b21100: 8 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 4b21100: 8 commits, 0 findings, re-run 2026-10-17 on current main"
         },
         {
           "id": "secret_scan_ci",
@@ -575,8 +578,9 @@
         },
         {
           "id": "agents_md",
-          "status": "DECISION",
-          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+          "status": "OPEN",
+          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
+          "evidence": "patch prepared; not yet merged"
         },
         {
           "id": "branch_protection",
@@ -639,7 +643,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 5681991: 6 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 5681991: 6 commits, 0 findings, re-run 2026-10-17 on current main"
         },
         {
           "id": "secret_scan_ci",
@@ -673,8 +677,9 @@
         },
         {
           "id": "agents_md",
-          "status": "DECISION",
-          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+          "status": "OPEN",
+          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
+          "evidence": "patch prepared; not yet merged"
         },
         {
           "id": "branch_protection",
@@ -737,7 +742,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 42ef847: 6 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 42ef847: 6 commits, 0 findings, re-run 2026-10-17 on current main"
         },
         {
           "id": "secret_scan_ci",
@@ -771,8 +776,9 @@
         },
         {
           "id": "agents_md",
-          "status": "DECISION",
-          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+          "status": "OPEN",
+          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
+          "evidence": "patch prepared; not yet merged"
         },
         {
           "id": "branch_protection",
@@ -835,7 +841,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 66ee1a8: 6 commits, 0 findings, re-run 2026-10-17 after the governance files merged"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 66ee1a8: 6 commits, 0 findings, re-run 2026-10-17 on current main"
         },
         {
           "id": "secret_scan_ci",
@@ -869,8 +875,9 @@
         },
         {
           "id": "agents_md",
-          "status": "DECISION",
-          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+          "status": "OPEN",
+          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
+          "evidence": "patch prepared; not yet merged"
         },
         {
           "id": "branch_protection",
