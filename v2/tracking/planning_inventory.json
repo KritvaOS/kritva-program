@@ -1,0 +1,514 @@
+{
+  "_note": "Planning inventory (decision D-024). Registration is not credit: every entry is PLANNING_ONLY and credit_eligible is false. Entries are NOT baseline tasks, carry no weight and cannot receive approvals. A task becomes creditable only by being added to an approved baseline version and then following the normal chain (approval PASS + COMPLETE + evidence on the approved commit with a passing CI run). Identity = repository + workstream_id + canonical task_id; legacy IDs are aliases only. recorded_status is a snapshot read from the source repo's own records; it is migration metadata, never an execution fact. DRAFT: not yet in the repo.",
+  "inventory_version": 1,
+  "classification": "PLANNING_ONLY",
+  "generated_from": {
+    "kritva-raas": {
+      "repo": "KritvaOS/kritva-raas",
+      "commit": "20e890567655fba52e65e60e0376265efff0d2f2",
+      "files": [
+        "planning/backend/increments/B-INC-001-SECURE-FOUNDATION/TASKS.md"
+      ],
+      "note": "Only B-INC-001 read so far; B-INC-002..004 dossiers not yet extracted."
+    },
+    "kritva-actuator": {
+      "repo": "KritvaOS/kritva-actuator",
+      "files": [
+        "planning/v2/TASK_ID_MAPPING.csv"
+      ],
+      "note": "Commit not recorded in this draft; pin before committing. Actuator mapping is PROPOSED / NOT_MAPPED."
+    }
+  },
+  "groups": [
+    {
+      "workstream_id": "RAAS",
+      "repository": "KritvaOS/kritva-raas",
+      "increment": "B-INC-001 SECURE FOUNDATION",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "tasks": [
+        {
+          "task_id": "KR-BE-1-001",
+          "title": "Create Control Plane application structure",
+          "recorded_status": "Accepted"
+        },
+        {
+          "task_id": "KR-BE-1-002",
+          "title": "Define backend module boundaries",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BE-1-003",
+          "title": "Establish configuration framework",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BE-1-004",
+          "title": "Establish HTTP transport",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BE-1-005",
+          "title": "Implement request context",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BE-1-006",
+          "title": "Implement API v1 routing",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BE-1-007",
+          "title": "Implement validation/error contract",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BE-1-008",
+          "title": "Implement request correlation",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BE-1-009",
+          "title": "Implement health/readiness endpoints",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BE-1-041",
+          "title": "Implement structured backend logging",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-001",
+          "title": "Decide runtime and language versions",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BINC-001-002",
+          "title": "Decide package manager and lockfile policy",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BINC-001-003",
+          "title": "Decide HTTP framework",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BINC-001-004",
+          "title": "Decide database migration tool",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-005",
+          "title": "Define secret-handling and configuration boundary",
+          "recorded_status": "In Review"
+        },
+        {
+          "task_id": "KR-BINC-001-006",
+          "title": "Establish repository ignore rules",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-007",
+          "title": "Provide safe configuration examples and fix DEVELOPMENT_SETUP placeholder",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-008",
+          "title": "Select secret scanner",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-009",
+          "title": "Configure local secret scanning",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-010",
+          "title": "Add blocking CI secret scanning",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-011",
+          "title": "Assess agreed Git history for secret exposure",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-012",
+          "title": "Document secret-exposure response",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-013",
+          "title": "Test fail-fast configuration validation",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-014",
+          "title": "Test logging redaction",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-015",
+          "title": "Verify scanner exceptions and failure behavior",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-016",
+          "title": "Update security and setup documentation",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-017",
+          "title": "Verify clean-checkout workflow and retain evidence",
+          "recorded_status": "not recorded in TASKS.md"
+        },
+        {
+          "task_id": "KR-BINC-001-018",
+          "title": "Adopt source header standard and CI check",
+          "recorded_status": "Accepted"
+        },
+        {
+          "task_id": "KR-BINC-001-019",
+          "title": "Add repository Makefile for local validation",
+          "recorded_status": "Accepted"
+        }
+      ]
+    },
+    {
+      "workstream_id": "ACTUATOR_PLANNING (program mapping PROPOSED, mechanical HOLD applies)",
+      "repository": "KritvaOS/kritva-actuator*",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "tasks": [
+        {
+          "task_id": "ACT-EMB-001",
+          "legacy_alias": "ACT-01-001",
+          "title": "Define electrical and motor-control requirements",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-EMB-002",
+          "legacy_alias": "ACT-01-002",
+          "title": "Select the MCU and development board; bring up the motor and FOC on the development board",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-EMB-002a",
+          "legacy_alias": "ACT-01-002a",
+          "title": "Development board evaluation and decision",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-EMB-002b",
+          "legacy_alias": "ACT-01-002b",
+          "title": "Motor characterisation (R, L, Kt, pole pairs, thermal)",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-EMB-002c",
+          "legacy_alias": "ACT-01-002c",
+          "title": "FOC current loop and calibration",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-EMB-003",
+          "legacy_alias": "ACT-01-003",
+          "title": "Integrate encoder feedback and implement joint control",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-EMB-004",
+          "legacy_alias": "ACT-01-004",
+          "title": "Diagnostics and fault handling",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-EMB-005",
+          "legacy_alias": "ACT-01-005",
+          "title": "Custom controller PCB (A1)",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-EMB-006",
+          "legacy_alias": "ACT-01-006",
+          "title": "CAN communication firmware (A1)",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-EMB-007",
+          "legacy_alias": "ACT-01-007",
+          "title": "Firmware robustness, regression and release",
+          "repository": "KritvaOS/kritva-actuator-embedded",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-M-001",
+          "legacy_alias": "ACT-02-001",
+          "title": "Define elbow load cases and mechanical requirements",
+          "repository": "KritvaOS/kritva-actuator-m",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit (elbow baseline))",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-S-001",
+          "legacy_alias": "ACT-02-001",
+          "title": "Define elbow load cases and mechanical requirements",
+          "repository": "KritvaOS/kritva-actuator-s",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-L-001",
+          "legacy_alias": "ACT-02-001",
+          "title": "Define elbow load cases and mechanical requirements",
+          "repository": "KritvaOS/kritva-actuator-l",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-M-002",
+          "legacy_alias": "ACT-02-002",
+          "title": "Motor/gearbox interface constraints and gearbox candidate comparison",
+          "repository": "KritvaOS/kritva-actuator-m",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit (elbow baseline))",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-S-002",
+          "legacy_alias": "ACT-02-002",
+          "title": "Motor/gearbox interface constraints and gearbox candidate comparison",
+          "repository": "KritvaOS/kritva-actuator-s",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-L-002",
+          "legacy_alias": "ACT-02-002",
+          "title": "Motor/gearbox interface constraints and gearbox candidate comparison",
+          "repository": "KritvaOS/kritva-actuator-l",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-M-003",
+          "legacy_alias": "ACT-02-003",
+          "title": "Shaft, bearing and housing calculations",
+          "repository": "KritvaOS/kritva-actuator-m",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit (elbow baseline))",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-S-003",
+          "legacy_alias": "ACT-02-003",
+          "title": "Shaft, bearing and housing calculations",
+          "repository": "KritvaOS/kritva-actuator-s",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-L-003",
+          "legacy_alias": "ACT-02-003",
+          "title": "Shaft, bearing and housing calculations",
+          "repository": "KritvaOS/kritva-actuator-l",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-M-004",
+          "legacy_alias": "ACT-02-004",
+          "title": "Mechanical CAD assembly and fabrication drawings",
+          "repository": "KritvaOS/kritva-actuator-m",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit (elbow baseline))",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-S-004",
+          "legacy_alias": "ACT-02-004",
+          "title": "Mechanical CAD assembly and fabrication drawings",
+          "repository": "KritvaOS/kritva-actuator-s",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-L-004",
+          "legacy_alias": "ACT-02-004",
+          "title": "Mechanical CAD assembly and fabrication drawings",
+          "repository": "KritvaOS/kritva-actuator-l",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-M-005",
+          "legacy_alias": "ACT-02-005",
+          "title": "Fabrication and assembly",
+          "repository": "KritvaOS/kritva-actuator-m",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit (elbow baseline))",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-S-005",
+          "legacy_alias": "ACT-02-005",
+          "title": "Fabrication and assembly",
+          "repository": "KritvaOS/kritva-actuator-s",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-L-005",
+          "legacy_alias": "ACT-02-005",
+          "title": "Fabrication and assembly",
+          "repository": "KritvaOS/kritva-actuator-l",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-M-006",
+          "legacy_alias": "ACT-02-006",
+          "title": "Mechanical characterisation (backlash, repeatability, load, thermal support)",
+          "repository": "KritvaOS/kritva-actuator-m",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit (elbow baseline))",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-S-006",
+          "legacy_alias": "ACT-02-006",
+          "title": "Mechanical characterisation (backlash, repeatability, load, thermal support)",
+          "repository": "KritvaOS/kritva-actuator-s",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-L-006",
+          "legacy_alias": "ACT-02-006",
+          "title": "Mechanical characterisation (backlash, repeatability, load, thermal support)",
+          "repository": "KritvaOS/kritva-actuator-l",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-M-007",
+          "legacy_alias": "ACT-02-007",
+          "title": "Test fixture design and build",
+          "repository": "KritvaOS/kritva-actuator-m",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit (elbow baseline))",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-S-007",
+          "legacy_alias": "ACT-02-007",
+          "title": "Test fixture design and build",
+          "repository": "KritvaOS/kritva-actuator-s",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-L-007",
+          "legacy_alias": "ACT-02-007",
+          "title": "Test fixture design and build",
+          "repository": "KritvaOS/kritva-actuator-l",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-M-008",
+          "legacy_alias": "ACT-02-008",
+          "title": "Mechanical fixes, CAD release and documentation",
+          "repository": "KritvaOS/kritva-actuator-m",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit (elbow baseline))",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-S-008",
+          "legacy_alias": "ACT-02-008",
+          "title": "Mechanical fixes, CAD release and documentation",
+          "repository": "KritvaOS/kritva-actuator-s",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-L-008",
+          "legacy_alias": "ACT-02-008",
+          "title": "Mechanical fixes, CAD release and documentation",
+          "repository": "KritvaOS/kritva-actuator-l",
+          "recorded_status": "not credited (migration metadata: initial_status=NOT_STARTED)",
+          "alias_kind": "split"
+        },
+        {
+          "task_id": "ACT-INT-001",
+          "legacy_alias": "ACT-03-001",
+          "title": "Define the actuator software interface and KritvaOS integration contract",
+          "repository": "KritvaOS/kritva-actuator (parent)",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-INT-002",
+          "legacy_alias": "ACT-03-002",
+          "title": "CAN protocol specification",
+          "repository": "KritvaOS/kritva-actuator (parent)",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-INT-003",
+          "legacy_alias": "ACT-03-003",
+          "title": "KritvaOS driver and host tools",
+          "repository": "KritvaOS/kritva-actuator (parent)",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-INT-004",
+          "legacy_alias": "ACT-03-004",
+          "title": "Simulation model (SimulatedActuator)",
+          "repository": "KritvaOS/kritva-actuator (parent)",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-INT-005",
+          "legacy_alias": "ACT-03-005",
+          "title": "System validation and A2 demonstration",
+          "repository": "KritvaOS/kritva-actuator (parent)",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-INT-006",
+          "legacy_alias": "ACT-03-006",
+          "title": "Traceability and audit coordination",
+          "repository": "KritvaOS/kritva-actuator (parent)",
+          "recorded_status": "not credited (migration metadata: initial_status=inherit)",
+          "alias_kind": "rename"
+        },
+        {
+          "task_id": "ACT-INT-007",
+          "legacy_alias": "ACT-02-SIZING",
+          "title": "Common sizing engine golden regression and variant-input handoff (shared work)",
+          "repository": "KritvaOS/kritva-actuator (parent: mechanical/common-sizing)",
+          "recorded_status": "not credited (migration metadata: initial_status=new (shared work inherited from ACT-02; not evidence of S/M/L completion))",
+          "alias_kind": "rename"
+        }
+      ]
+    }
+  ]
+}
