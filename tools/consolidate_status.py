@@ -43,6 +43,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import effort  # noqa: E402  (display-only; never read by compute())
+import readiness  # noqa: E402  (display-only; never read by compute())
 
 REPORT_ENUMS = {
     "execution": {"NOT_STARTED", "IN_PROGRESS", "BLOCKED", "COMPLETE"},
@@ -848,6 +849,8 @@ def render(c):
         L.append("No gates recorded.")
     if c.get("effort"):
         L += effort.render_lines(c["effort"])
+    if c.get("readiness_doc"):
+        L += readiness.render_lines(c["readiness_doc"])
     if c["evidence_health"]:
         L += ["", "## Evidence health", ""] + [f"- {x}" for x in c["evidence_health"]]
     for title, key in (("Validation errors", "errors"), ("Warnings", "warnings")):
@@ -1044,7 +1047,19 @@ def main():
         c["errors"] = sorted(errors)
         if not eerrs:
             c["effort"] = effort.summary(edoc, reg, c["by_workstream"])
-    targets = {root / TRACK / "consolidated_status.json": json.dumps(c, indent=2, sort_keys=True) + "\n",
+    rpath = root / readiness.FILE
+    if rpath.exists():
+        rdoc = json.loads(rpath.read_text(encoding="utf-8"))
+        hashes = ({w: hashlib.sha256((Path(a.sources_dir) / f"{w}.json").read_bytes()).hexdigest()
+                   for w in reg if (Path(a.sources_dir) / f"{w}.json").is_file()} if a.sources_dir else None)
+        rerrs, rwarns = readiness.validate(rdoc, reg, hashes)
+        errors += [f"repo_readiness.json: {x}" for x in rerrs]
+        warnings += [f"repo_readiness.json: {x}" for x in rwarns]
+        c["errors"], c["warnings"] = sorted(errors), sorted(warnings)
+        if not rerrs:
+            c["readiness"] = readiness.summary(rdoc)
+            c["readiness_doc"] = rdoc
+    targets = {root / TRACK / "consolidated_status.json": json.dumps({k: v for k, v in c.items() if k != "readiness_doc"}, indent=2, sort_keys=True) + "\n",
                root / TRACK / "STATUS_VIEW.md": render(c)}
 
     if a.check:

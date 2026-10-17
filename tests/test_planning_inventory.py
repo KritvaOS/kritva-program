@@ -79,10 +79,14 @@ class PlanningInventoryTests(unittest.TestCase):
         g["proposed_program_workstreams"] = g.pop("rollup_targets")
         return inv
 
-    def test_all_70_tasks_present_including_parent_group(self):
-        n = {g["repository"]: len(g["tasks"]) for g in self.inv["groups"]}
+    def test_all_108_tasks_present_including_parent_group(self):
+        n = {g["repository"]: len(g["tasks"]) for g in self.inv["groups"] if g["workstream_id"] != "RAAS"}
         self.assertEqual(n["KritvaOS/kritva-actuator"], 7)
-        self.assertEqual(sum(n.values()), 70)
+        raas = {g["increment"]: len(g["tasks"]) for g in self.inv["groups"] if g["workstream_id"] == "RAAS"}
+        self.assertEqual(raas, {"B-INC-001 SECURE FOUNDATION": 29, "B-INC-002 IDENTITY ORGANIZATION": 14,
+                                "B-INC-003 PROJECTS PLATFORM CATALOG": 11,
+                                "B-INC-004 AUDIT TRANSACTIONS IDEMPOTENCY": 13})
+        self.assertEqual(sum(n.values()) + sum(raas.values()), 108)
 
     def test_registered_group_with_unknown_workstream_is_rejected(self):
         inv = self.mut(); inv["groups"][0]["workstream_id"] = "NOPE"
@@ -173,6 +177,90 @@ class PlanningInventoryTests(unittest.TestCase):
             self.has(inv, "not found in pinned source", sources_dir=d)
             g["source"]["sha256"] = "0" * 64
             self.has(inv, "sha256 does not match", sources_dir=d)
+
+    # B-INC-002..004 extraction (D-038): shared tasks and source completeness.
+    def raas_group(self, inv, prefix):
+        return next(g for g in inv["groups"] if g.get("increment", "").startswith(prefix))
+
+    def test_shared_tasks_are_one_task_that_names_the_other_increment(self):
+        g2 = self.raas_group(self.inv, "B-INC-002")
+        shared = {t["task_id"]: t for t in g2["tasks"] if "also_in_increments" in t}
+        self.assertEqual(sorted(shared), ["KR-BE-1-044", "KR-BE-1-045"])
+        for t in shared.values():
+            self.assertEqual([a["increment"] for a in t["also_in_increments"]], ["B-INC-003 PROJECTS PLATFORM CATALOG"])
+        ids = [t["task_id"] for g in self.inv["groups"] for t in g["tasks"]]
+        self.assertEqual(len(ids), len(set(ids)))
+
+    def test_shared_task_naming_an_unknown_or_own_increment_is_rejected(self):
+        inv = self.mut(); t = self.raas_group(inv, "B-INC-002")["tasks"][-1]
+        t["also_in_increments"][0]["increment"] = "B-INC-009 NOPE"
+        self.has(inv, "not another increment group")
+        inv = self.mut(); t = self.raas_group(inv, "B-INC-002")["tasks"][-1]
+        t["also_in_increments"][0]["increment"] = "B-INC-002 IDENTITY ORGANIZATION"
+        self.has(inv, "not another increment group")
+
+    def test_shared_task_listed_in_both_increments_is_rejected(self):
+        inv = self.mut(); t = self.raas_group(inv, "B-INC-002")["tasks"][-1]
+        self.raas_group(inv, "B-INC-003")["tasks"].append(copy.deepcopy(t))
+        self.has(inv, "one task, in the first increment only")
+
+    def test_malformed_also_in_increments_is_rejected(self):
+        inv = self.mut(); t = self.raas_group(inv, "B-INC-002")["tasks"][-1]
+        t["also_in_increments"] = [{"increment": "B-INC-003 PROJECTS PLATFORM CATALOG"}]
+        self.has(inv, "needs increment and title")
+        inv = self.mut(); t = self.raas_group(inv, "B-INC-002")["tasks"][-1]
+        t["also_in_increments"] = "B-INC-003"
+        self.has(inv, "must be a list")
+
+    def verify_dir(self, inv, bodies):
+        """Write TASKS.md bodies for the three new RaaS groups into a temp sources dir and repin their sha256."""
+        import hashlib, tempfile
+        d = tempfile.TemporaryDirectory(); self.addCleanup(d.cleanup)
+        for prefix, body in bodies.items():
+            g = self.raas_group(inv, prefix)
+            p = Path(d.name) / g["source"]["repo"].replace("/", "__") / g["source"]["path"]
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text(body)
+            g["source"]["sha256"] = hashlib.sha256(body.encode()).hexdigest()
+        return d.name
+
+    def body_for(self, inv, prefix, extra="", status=None):
+        g = self.raas_group(inv, prefix)
+        out = "# T\n\n## 3. Tasks\n\n"
+        for t in g["tasks"]:
+            out += f"### {t['task_id']} — {t['title']}\n\n"
+            if status and t["task_id"] == status[0]:
+                out += f"- **Status:** {status[1]}\n"
+        return out + extra
+
+    def all_bodies(self, inv, **over):
+        shared = {t["task_id"]: a for g in inv["groups"] for t in g["tasks"] for a in t.get("also_in_increments", [])}
+        b = {}
+        for prefix in ("B-INC-001", "B-INC-002", "B-INC-003", "B-INC-004"):
+            b[prefix] = self.body_for(inv, prefix, **over.get(prefix, {}))
+        b["B-INC-003"] += "".join(f"### {tid} — {a['title']}\n\n" for tid, a in shared.items())
+        return b
+
+    def test_verify_sources_accepts_complete_extraction_with_shared_tasks(self):
+        inv = self.mut()
+        every = self.all_bodies(inv)
+        d = self.verify_dir(inv, {k: every[k] for k in ("B-INC-002", "B-INC-003", "B-INC-004")})
+        probs = self.run_check(inv, sources_dir=d)  # other groups' sources are absent here; only extraction rules matter
+        self.assertEqual([p for p in probs if "not extracted" in p or "differs from the source" in p], [])
+        self.assertEqual([p for p in probs if "sha256 does not match" in p or "not found in pinned source" in p], [])
+
+    def test_verify_sources_flags_an_unextracted_source_task(self):
+        inv = self.mut()
+        bodies = {"B-INC-004": self.all_bodies(inv)["B-INC-004"] + "### KR-BE-1-099 — Surprise\n\n"}
+        d = self.verify_dir(inv, bodies)
+        self.has(inv, "source task KR-BE-1-099 is not extracted", sources_dir=d)
+
+    def test_verify_sources_flags_a_status_that_drifted_from_the_source(self):
+        inv = self.mut()
+        tid = self.raas_group(inv, "B-INC-004")["tasks"][0]["task_id"]
+        bodies = {"B-INC-004": self.body_for(inv, "B-INC-004", status=(tid, "Accepted on 2026-11-01."))}
+        d = self.verify_dir(inv, bodies)
+        self.has(inv, f"{tid}: recorded_status 'NOT_RECORDED' differs from the source status 'Accepted'", sources_dir=d)
 
     def test_inventory_never_affects_progress(self):
         import consolidate_status as cs

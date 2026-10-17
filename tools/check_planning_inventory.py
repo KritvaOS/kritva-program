@@ -15,7 +15,12 @@ Rules (registration is not credit):
     group's rollup_targets equal the registry's rolls_up_to and its repo matches;
   * capability mappings (D-030): a task may list `capabilities`; each must be a workstream with kind CAPABILITY and effort_owner false, and the
     group's own workstream must be an execution workstream. A mapping never creates a second task, estimate or credit (task identity stays unique);
-  * optional --verify-sources DIR: every task_id must appear in the pinned source file found under DIR (sha256 must match).
+  * shared tasks (D-038): a task listed in several increments of one source family is ONE task in the first increment and names the
+    others in `also_in_increments` [{increment, title}]; each named increment must be another group of the same repository and
+    workstream, and may not hold the task itself;
+  * optional --verify-sources DIR: every task_id must appear in the pinned source file found under DIR (sha256 must match); for a
+    TASKS.md source every `### KR-...` heading must be a task of the group or named by another group's also_in_increments
+    (extraction is complete), and recorded_status must equal the heading's own `- **Status:**` word (NOT_RECORDED when it has none).
 Exit 0 ok | 1 problems | 2 usage/IO.
 """
 import hashlib
@@ -33,6 +38,25 @@ ALIAS_KINDS = {"rename", "split"}
 STATUS = {"NOT_RECORDED", "NOT_STARTED", "IN_PROGRESS", "COMPLETE", "BLOCKED", "Accepted", "In Review"}
 GROUP_REQUIRED = ("repository", "workstream_id", "mapping_status", "classification", "credit_eligible", "source", "tasks")
 TASK_REQUIRED = ("task_id", "title", "recorded_status", "status_authority")
+SRC_HEADING = re.compile(r"^###\s+(KR-\S+)\s+\S+\s+.+$")
+SRC_STATUS = re.compile(r"^- \*\*Status:\*\*\s*(Accepted|In Review|In Progress|Blocked|Proposed|Ready|Not started)\b", re.I)
+
+
+def _source_tasks(text):
+    """Return {task_id: status word or None} for the `### KR-...` sections of a TASKS.md source."""
+    out, cur = {}, None
+    for line in text.splitlines():
+        m = SRC_HEADING.match(line)
+        if m:
+            cur = m.group(1)
+            out[cur] = None
+        elif line.startswith("## "):
+            cur = None
+        elif cur and out[cur] is None:
+            s = SRC_STATUS.match(line)
+            if s:
+                out[cur] = s.group(1)
+    return out
 
 
 def _source_problems(src, where):
@@ -92,6 +116,10 @@ def check(inv, baseline, approvals, workstreams, sources_dir=None):
     if not isinstance(inv.get("inventory_version"), int):
         problems.append("inventory_version must be an integer")
     seen, canon, aliases, tids = set(), set(), {}, set()
+    group_by_inc, also_ids, src_tasks = {}, {}, {}
+    for g in inv["groups"]:
+        if g.get("increment"):
+            group_by_inc.setdefault((g.get("repository"), g.get("workstream_id"), g["increment"]), g)
     for g in inv["groups"]:
         repo = g.get("repository")
         gname = f"{repo}"
@@ -145,6 +173,8 @@ def check(inv, baseline, approvals, workstreams, sources_dir=None):
                 src_text = raw.decode("utf-8", "replace")
             else:
                 problems.append(f"group {gname}: pinned source file not found for verification: {sp}")
+        if src_text is not None and str(g["source"].get("path", "")).endswith("TASKS.md"):
+            src_tasks[id(g)] = _source_tasks(src_text)
         for t in g["tasks"]:
             tid = t.get("task_id")
             for f in TASK_REQUIRED:
@@ -158,6 +188,20 @@ def check(inv, baseline, approvals, workstreams, sources_dir=None):
             seen.add(key)
             tids.add(tid)
             canon.add(tid)
+            also = t.get("also_in_increments", [])
+            if not isinstance(also, list):
+                problems.append(f"{tid}: also_in_increments must be a list")
+                also = []
+            for a in also:
+                other = group_by_inc.get((repo, wid, a.get("increment"))) if isinstance(a, dict) else None
+                if not isinstance(a, dict) or not a.get("increment") or not a.get("title"):
+                    problems.append(f"{tid}: each also_in_increments entry needs increment and title")
+                elif other is None or other is g:
+                    problems.append(f"{tid}: also_in_increments {a.get('increment')!r} is not another increment group of {repo} / {wid}")
+                elif any(x.get("task_id") == tid for x in other.get("tasks", [])):
+                    problems.append(f"{tid}: also listed in {a['increment']!r}; a shared task is one task, in the first increment only")
+                else:
+                    also_ids.setdefault(id(other), set()).add(tid)
             if t.get("recorded_status") not in STATUS:
                 problems.append(f"{tid}: recorded_status must be one of {sorted(STATUS)}")
             if t.get("legacy_alias"):
@@ -188,6 +232,19 @@ def check(inv, baseline, approvals, workstreams, sources_dir=None):
                     problems.append(f"{tid}: {ident} has an approval record; inventory entries cannot be approved")
             if src_text is not None and tid and tid not in src_text:
                 problems.append(f"{tid}: not found in pinned source {g['source'].get('path')}")
+    for g in inv["groups"]:
+        st = src_tasks.get(id(g))
+        if st is None:
+            continue
+        mine = {x.get("task_id"): x for x in g["tasks"]}
+        for tid, word in st.items():
+            if tid not in mine and tid not in also_ids.get(id(g), set()):
+                problems.append(f"group {g.get('repository')} {g.get('increment')}: source task {tid} is not extracted")
+            elif tid in mine:
+                want = None if word is None else {"accepted": "Accepted", "in review": "In Review"}.get(word.lower(), word)
+                have = mine[tid].get("recorded_status")
+                if (want or "NOT_RECORDED") != have:
+                    problems.append(f"{tid}: recorded_status {have!r} differs from the source status {want or 'NOT_RECORDED'!r}")
     for al, owners in aliases.items():
         if al in canon:
             problems.append(f"alias {al} collides with a canonical task ID")

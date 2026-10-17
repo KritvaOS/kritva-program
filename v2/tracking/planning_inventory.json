@@ -1,5 +1,5 @@
 {
-  "_note": "Planning inventory (D-024). Registration is not credit: every group and task is PLANNING_ONLY and credit_eligible is false. Entries are NOT baseline tasks, carry no weight and cannot receive approvals. A task becomes creditable only by entering an approved baseline version and then following the normal chain (approval PASS + COMPLETE + evidence on the approved commit with a passing CI run). Identity = repository + workstream_id + canonical task_id; a legacy ID is an alias only (alias_kind rename or split). recorded_status is a snapshot read from the pinned source file, with its authority named; NOT_RECORDED means the source has no status. It is never an execution fact and never a program approval. The five actuator groups were registered under D-034 with their own ACT_* workstream ids (source_workstream_label equals workstream_id); rollup_targets records where their effort rolls up and must equal rolls_up_to in workstreams.json. Registration is identity only. A group whose program workstream is not yet approved would have workstream_id null, mapping_status PROPOSED and the source's own label in source_workstream_label. RaaS covers B-INC-001 only; B-INC-002..004 are not yet extracted. Checked by tools/check_planning_inventory.py.",
+  "_note": "Planning inventory (D-024). Registration is not credit: every group and task is PLANNING_ONLY and credit_eligible is false. Entries are NOT baseline tasks, carry no weight and cannot receive approvals. A task becomes creditable only by entering an approved baseline version and then following the normal chain (approval PASS + COMPLETE + evidence on the approved commit with a passing CI run). Identity = repository + workstream_id + canonical task_id; a legacy ID is an alias only (alias_kind rename or split). recorded_status is a snapshot read from the pinned source file, with its authority named; NOT_RECORDED means the source has no status. It is never an execution fact and never a program approval. The five actuator groups were registered under D-034 with their own ACT_* workstream ids (source_workstream_label equals workstream_id); rollup_targets records where their effort rolls up and must equal rolls_up_to in workstreams.json. Registration is identity only. A group whose program workstream is not yet approved would have workstream_id null, mapping_status PROPOSED and the source's own label in source_workstream_label. RaaS covers B-INC-001 to B-INC-004 (D-038), each increment a group pinned to its own TASKS.md. A task listed in two increments (KR-BE-1-044 and 045, slices) is one task in the first increment and names the other in also_in_increments; it is never a second task. Checked by tools/check_planning_inventory.py.",
   "inventory_version": 2,
   "classification": "PLANNING_ONLY",
   "groups": [
@@ -656,6 +656,294 @@
       ],
       "rollup_targets": [
         "MECHANICAL"
+      ]
+    },
+    {
+      "repository": "KritvaOS/kritva-raas",
+      "workstream_id": "RAAS",
+      "mapping_status": "REGISTERED",
+      "increment": "B-INC-002 IDENTITY ORGANIZATION",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "source": {
+        "repo": "KritvaOS/kritva-raas",
+        "commit": "eb8942164132b52412cdf296eacef535b558357b",
+        "path": "planning/backend/increments/B-INC-002-IDENTITY-ORGANIZATION/TASKS.md",
+        "sha256": "cd4022b3552524aada2512070594b34ce87153726137be4f30027a53bad6dfb6"
+      },
+      "tasks": [
+        {
+          "task_id": "KR-BE-1-010",
+          "title": "Define identity domain model",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-011",
+          "title": "Implement UserRepository",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-012",
+          "title": "Implement authentication adapter boundary",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-013",
+          "title": "Implement current-user endpoint",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-014",
+          "title": "Define Organization model",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-015",
+          "title": "Implement OrganizationRepository",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-016",
+          "title": "Implement MembershipRepository",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-017",
+          "title": "Implement OrganizationService",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-018",
+          "title": "Implement organization APIs",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-019",
+          "title": "Define role/permission model",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-020",
+          "title": "Implement authorization policy layer",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-021",
+          "title": "Implement tenant context enforcement",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-044",
+          "title": "Add authorization tests (B-INC-002 identity and organization slice)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "also_in_increments": [
+            {
+              "increment": "B-INC-003 PROJECTS PLATFORM CATALOG",
+              "title": "Add authorization tests (B-INC-003 slice)"
+            }
+          ]
+        },
+        {
+          "task_id": "KR-BE-1-045",
+          "title": "Add tenant-isolation tests (B-INC-002 identity and organization slice)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "also_in_increments": [
+            {
+              "increment": "B-INC-003 PROJECTS PLATFORM CATALOG",
+              "title": "Add tenant-isolation tests (B-INC-003 slice)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "KritvaOS/kritva-raas",
+      "workstream_id": "RAAS",
+      "mapping_status": "REGISTERED",
+      "increment": "B-INC-003 PROJECTS PLATFORM CATALOG",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "source": {
+        "repo": "KritvaOS/kritva-raas",
+        "commit": "eb8942164132b52412cdf296eacef535b558357b",
+        "path": "planning/backend/increments/B-INC-003-PROJECTS-PLATFORM-CATALOG/TASKS.md",
+        "sha256": "d988cd039cdab8121403b30cbdb409af85070c14f56b989c37ce94dac2555bc8"
+      },
+      "tasks": [
+        {
+          "task_id": "KR-BE-1-022",
+          "title": "Define Project domain model",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-023",
+          "title": "Implement ProjectRepository",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-024",
+          "title": "Implement ProjectService",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-025",
+          "title": "Implement project APIs",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-026",
+          "title": "Implement project authorization",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-027",
+          "title": "Define platform catalog model",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-028",
+          "title": "Implement PlatformRepository",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-029",
+          "title": "Implement platform catalog service",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-030",
+          "title": "Implement platform catalog APIs",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-031",
+          "title": "Implement platform administration authorization",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-043",
+          "title": "Add API contract tests (B-INC-003 slice)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        }
+      ]
+    },
+    {
+      "repository": "KritvaOS/kritva-raas",
+      "workstream_id": "RAAS",
+      "mapping_status": "REGISTERED",
+      "increment": "B-INC-004 AUDIT TRANSACTIONS IDEMPOTENCY",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "source": {
+        "repo": "KritvaOS/kritva-raas",
+        "commit": "eb8942164132b52412cdf296eacef535b558357b",
+        "path": "planning/backend/increments/B-INC-004-AUDIT-TRANSACTIONS-IDEMPOTENCY/TASKS.md",
+        "sha256": "147aa136750e3938a15a5d9c1a019b2b87f83fb99a330ec4af0769cfae0ec053"
+      },
+      "tasks": [
+        {
+          "task_id": "KR-BE-1-032",
+          "title": "Implement database migration baseline",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-033",
+          "title": "Implement transaction boundary pattern",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-034",
+          "title": "Implement IdempotencyRepository",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-035",
+          "title": "Implement idempotency middleware/service",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-036",
+          "title": "Define AuditRepository",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-037",
+          "title": "Implement AuditService",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-038",
+          "title": "Add audit hooks to identity operations",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-039",
+          "title": "Add audit hooks to project operations",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-040",
+          "title": "Add audit hooks to platform administration",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-046",
+          "title": "Add audit verification tests",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-047",
+          "title": "Add migration tests",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-048",
+          "title": "Add API integration tests",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        },
+        {
+          "task_id": "KR-BE-1-049",
+          "title": "Add Control Plane E2E test",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none"
+        }
       ]
     }
   ]

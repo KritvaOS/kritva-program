@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-17T07:47:15Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T10:12:05Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,12 +36,12 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T07:47:15Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T10:12:05Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (14h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
-| CORE | FRESH | 2026-10-16T17:21:54Z (14h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
+| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (16h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | FRESH | 2026-10-16T17:21:54Z (16h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 
@@ -193,6 +193,213 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 Sums add the workstream bounds and ignore correlated risk; they cover estimated workstreams only.
 
 Monthly staffing and burn forecast: NOT PLANNED yet. It needs monthly staffing by role and workstream, available versus required capacity, parallelization assumptions, cumulative burn, and whether contractor, vendor and COTS effort is included. Until it exists the 10-12 month horizon is a planning target only.
+
+## Repo readiness for the return to private
+
+Target: 2026-11-15 (D-037); readiness report due 2026-11-14. Checked 2026-10-17T10:10:00Z. Facts read from git (clones of each repo's main) and the committed program files on 2026-10-17. GitHub settings (visibility, rulesets, required checks) are not readable by Claude, so they are ATTESTED, OPEN or marked as owner statements.
+
+Readiness is derived from the checks below: READY only when every check is PASS, ATTESTED (owner-stated, not verified) or NA. The recommended state is advice; the owner switches visibility.
+
+| Repo | Visibility now | Recommended | Checked head | Readiness | Blocking checks | Attested, not verified |
+|---|---|---|---|---|---|---|
+| KritvaOS/kritva-program | PUBLIC | **PRIVATE** | 6401efe | NOT_READY | 8: secret_scan_ci, commit_message_check, license, security_policy, codeowners, agents_md, branch_hygiene, owner_signoff | branch_protection |
+| KritvaOS/kritva-core | PUBLIC | **PRIVATE** | 6835cd0 | NOT_READY | 4: secret_scan_ci, commit_message_check, contract_pin, owner_signoff | branch_protection |
+| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 794cf19 | NOT_READY | 4: secret_scan_ci, commit_message_check, codeowners, owner_signoff | branch_protection |
+| KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | eb89421 | NOT_READY | 8: status_report, license, security_policy, codeowners, agents_md, branch_protection, security_disposition, owner_signoff | - |
+| KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 177645e | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 9ce5069 | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | ef217ec | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritva-actuator-m | PUBLIC | **PRIVATE** | 4bcc0c6 | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritva-actuator-l | PUBLIC | **PRIVATE** | c68501e | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
+
+### KritvaOS/kritva-program
+
+- Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
+- Recommended: **PRIVATE**. D-037. This repo holds the decision log, approvals and gate closures. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
+- Checked head: 6401efeb082f53b6401258109e3160d990eb530b; workstreams: CI_DEV_INFRA; readiness NOT_READY
+
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): KRP-ENG-001 (the only reported task) is a baseline v2 task, NOT_STARTED, uncredited. The committed source copy is byte-identical to status/status.json. The report's source commit 8e50865 trails head by 5 commits (decisions, tooling, tests) Evidence: sha256 of sources/CI_DEV_INFRA.json equals status/status.json on 2026-10-17
+- [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, CI_DEV_INFRA) is committed and checked by the status workflow Evidence: file present at head
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 6401efe: 41 commits, 0 findings, run 2026-10-17
+- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner (workflows: refresh-sources, status)
+- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 5 commits on main carry one, history not rewritten
+- [ ] **DECISION** license (LICENSE file): No LICENSE; the owner decides the terms for a private repo
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [ ] **OPEN** codeowners (CODEOWNERS): No CODEOWNERS
+- [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified
+- [ ] **OPEN** branch_hygiene (No stale or unintended branches): The stale bot/refresh-sources branch still exists next to main; close or rerun it
+- [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
+- [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
+- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+
+### KritvaOS/kritva-core
+
+- Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
+- Recommended: **PRIVATE**. D-037 default. The Apache-2.0 license would permit a public release, but no public-release review exists. Owner action: If a public release is intended, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15.
+- Checked head: 6835cd0714397310b40adb7f75824e78fa6917fb; workstreams: CORE; readiness NOT_READY
+
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 9 reported tasks are the 9 Core R1.0 baseline tasks, all credited. The committed source copy is byte-identical to the repo's status/status.json. The report's source commit 54984ae trails head by 4 commits that touch status tooling and governance files only, no planning records Evidence: sha256 comparison and git diff 54984ae..6835cd0 on 2026-10-17
+- [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, CORE) and status/evidence.json are committed; the status-report workflow checks them Evidence: files present at head
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history, tags included Evidence: gitleaks 8.18.4 over all refs of a full clone at 6835cd0: 321 commits, 0 findings, run 2026-10-17
+- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner (workflows: kritva-core-ci, source-header-check, status-report)
+- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** license (LICENSE file): Apache License 2.0 Evidence: LICENSE present at head
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md names GitHub private vulnerability reporting and Dinesh as Security Owner (D-035) Evidence: file present at head
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya (D-035) Evidence: file present at head
+- [x] **PASS** agents_md (AGENTS.md): AGENTS.md present Evidence: file present at head
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified; the owner still needs to enable 'Require review from Code Owners'
+- [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
+- [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
+- [ ] **OPEN** contract_pin (Pinned engineering-contract SHA (Core pilot)): The pinned engineering-contract SHA for the Core pilot is not recorded
+- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+
+### KritvaOS/kritvaos-community
+
+- Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
+- Recommended: **PRIVATE**. D-037 default, flagged for owner confirmation: the name and the Apache-2.0 license suggest a public community edition, but no public-release review exists. Owner action: Decide whether a public community release is intended. If so, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15.
+- Checked head: 794cf195303a5854b63104c91880432d4e905ee2; workstreams: COMMUNITY; readiness NOT_READY
+
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 21 reported tasks are the 21 Community baseline tasks. I2 (6) is credited; I3 and I4 (15) are uncredited because no task approvals are recorded, and their safety gates were closed on the owner's statement that the D-025 independent review is complete (D-033; reviewer not named, independence unverified). The committed source copy is byte-identical to the repo's status/status.json; the report's source commit 8256ba3 trails head by 1 commit that touches status tooling only Evidence: sha256 comparison and git diff 8256ba3..794cf19 on 2026-10-17
+- [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, COMMUNITY) and status/evidence.json are committed; the status-report workflow checks them Evidence: files present at head
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 794cf19: 61 commits, 0 findings, run 2026-10-17
+- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner (workflows: ci, source-header-check, status-report)
+- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** license (LICENSE file): Apache License 2.0 Evidence: LICENSE present at head
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present (contents not reviewed by Claude) Evidence: file present at head
+- [ ] **OPEN** codeowners (CODEOWNERS): No CODEOWNERS; add one as in kritva-core (D-035)
+- [x] **PASS** agents_md (AGENTS.md): AGENTS.md present Evidence: file present at head
+- [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified
+- [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
+- [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
+- [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
+- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+
+### KritvaOS/kritva-raas
+
+- Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out; D-036 already states the repo is to become private)
+- Recommended: **PRIVATE**. D-036: the owner stated the repo is to be private. Its files carry a proprietary license and an open credential-shaped finding (SEC-GATE-001). Owner action: Record the SEC-GATE-001 disposition and the governance decisions, then switch visibility on or before 2026-11-15.
+- Checked head: eb8942164132b52412cdf296eacef535b558357b; workstreams: RAAS; readiness NOT_READY
+
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): Not in the baseline (D-026 onboarding not started). The planning inventory covers B-INC-001 to B-INC-004 (67 tasks); each group's pinned TASKS.md has the same sha256 as head, and every task heading is extracted Evidence: inventory --verify-sources against a clone at eb89421 on 2026-10-17
+- [ ] **OPEN** status_report (Schema 2.0 status report committed in the repo): The schema 2.0 generator and status/status.json (67 tasks) are in a pending PR; this becomes PASS after it merges and the repo is re-checked
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review Evidence: gitleaks 8.18.4 over all refs of a full clone at eb89421: 126 commits, 0 findings, run 2026-10-17 with .gitleaksignore applied
+- [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans history Evidence: workflow file present at head; PR #52 merged after the owner reported success
+- [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow, hook and tests are present; 62 historical commits carry session trailers and history is not rewritten Evidence: workflow and script present at head
+- [ ] **DECISION** license (LICENSE file): No LICENSE file; source headers say LicenseRef-KritvaOS-Proprietary. The owner decides the licence and governance baseline
+- [ ] **DECISION** security_policy (SECURITY.md): No SECURITY.md; part of the RaaS governance baseline decision
+- [ ] **DECISION** codeowners (CODEOWNERS): No CODEOWNERS; part of the RaaS governance baseline decision
+- [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; part of the RaaS governance baseline decision
+- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo: the ruleset (24843399) requires source-header-check and docs-check; the owner still needs to add secret-scan and commit-message-check as required checks
+- [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists after the owner removed the second branch (D-036) Evidence: git ls-remote --heads on 2026-10-17 lists main only
+- [ ] **OPEN** security_disposition (Every security finding has a recorded disposition): SEC-GATE-001 (a credential-shaped loopback DATABASE_URL example in history) has no Security Owner disposition or deadline yet (D-032)
+- [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
+- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+
+### KritvaOS/kritva-actuator
+
+- Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
+- Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
+- Checked head: 177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca; workstreams: ACT_INT; readiness NOT_READY
+
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 7 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_INT) was generated at 7a059d8 and trails head by 2 commits that touch status/status.json only Evidence: git diff 7a059d8..177645e and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_INT) is committed Evidence: file present at head
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 177645e: 21 commits, 0 findings, run 2026-10-17
+- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
+- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 1 historical commit carries one (audit record KA-AUD-EXT-20261016), history not rewritten
+- [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
+- [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
+- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
+- [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
+- [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
+- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+
+### KritvaOS/kritva-actuator-embedded
+
+- Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
+- Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
+- Checked head: 9ce5069383aa694033b3ae92eea89f741733699a; workstreams: ACT_EMB; readiness NOT_READY
+
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 10 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_EMB) was generated at 240a92a and trails head by 2 commits that touch status/status.json only Evidence: git diff 240a92a..9ce5069 and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_EMB) is committed Evidence: file present at head
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 9ce5069: 10 commits, 0 findings, run 2026-10-17
+- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
+- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
+- [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
+- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
+- [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
+- [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
+- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+
+### KritvaOS/kritva-actuator-s
+
+- Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
+- Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
+- Checked head: ef217ecec0a5d2351807a5206b22c3a5e7b17705; workstreams: ACT_S; readiness NOT_READY
+
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_S) was generated at e9d075f and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it Evidence: git diff e9d075f..ef217ec and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_S) is committed Evidence: file present at head
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at ef217ec: 6 commits, 0 findings, run 2026-10-17
+- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
+- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
+- [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
+- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
+- [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
+- [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
+- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+
+### KritvaOS/kritva-actuator-m
+
+- Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
+- Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
+- Checked head: 4bcc0c637b2393dcaf481a2b41fef5dfdf18570e; workstreams: ACT_M; readiness NOT_READY
+
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_M) was generated at 0344b7d and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it Evidence: git diff 0344b7d..4bcc0c6 and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_M) is committed Evidence: file present at head
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 4bcc0c6: 6 commits, 0 findings, run 2026-10-17
+- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
+- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
+- [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
+- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
+- [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
+- [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
+- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+
+### KritvaOS/kritva-actuator-l
+
+- Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
+- Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
+- Checked head: c68501e0eda46d4feeeaf9a58298494aa6a4ff48; workstreams: ACT_L; readiness NOT_READY
+
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_L) was generated at abf0782 and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it Evidence: git diff abf0782..c68501e and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_L) is committed Evidence: file present at head
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at c68501e: 6 commits, 0 findings, run 2026-10-17
+- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
+- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
+- [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
+- [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
+- [ ] **OPEN** branch_protection (Main-branch protection and required checks): No record of main-branch protection or required checks for this repo
+- [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
+- [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
+- [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
+- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
 
 ## Evidence health
 
