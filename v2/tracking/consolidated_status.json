@@ -734,7 +734,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T13:30:27Z",
+  "generated_at": "2026-10-17T15:10:26Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -801,7 +801,6 @@
         "blocking": [
           "license",
           "security_policy",
-          "codeowners",
           "agents_md",
           "owner_signoff"
         ],
@@ -830,7 +829,6 @@
           "branch_protection"
         ],
         "blocking": [
-          "codeowners",
           "owner_signoff"
         ],
         "checked_head": "8dc94960bf4b0bcfabf5e8615f5cf40245e5a389",
@@ -840,13 +838,14 @@
         "visibility_now": "PUBLIC"
       },
       {
-        "attested": [],
+        "attested": [
+          "branch_protection"
+        ],
         "blocking": [
           "license",
           "security_policy",
           "codeowners",
           "agents_md",
-          "branch_protection",
           "security_disposition",
           "owner_signoff"
         ],
@@ -857,11 +856,12 @@
         "visibility_now": "PUBLIC"
       },
       {
-        "attested": [],
+        "attested": [
+          "branch_protection"
+        ],
         "blocking": [
           "security_policy",
           "agents_md",
-          "branch_protection",
           "owner_signoff"
         ],
         "checked_head": "9aac0766ffc8189dc864fb3ab65246beb47b9bb7",
@@ -871,11 +871,12 @@
         "visibility_now": "PUBLIC"
       },
       {
-        "attested": [],
+        "attested": [
+          "branch_protection"
+        ],
         "blocking": [
           "security_policy",
           "agents_md",
-          "branch_protection",
           "owner_signoff"
         ],
         "checked_head": "2ceb68ebc322148b3348b28643fbe46de114db04",
@@ -885,11 +886,12 @@
         "visibility_now": "PUBLIC"
       },
       {
-        "attested": [],
+        "attested": [
+          "branch_protection"
+        ],
         "blocking": [
           "security_policy",
           "agents_md",
-          "branch_protection",
           "owner_signoff"
         ],
         "checked_head": "21f7d907b95439b33be82e582f1dfc6b6988afcf",
@@ -899,11 +901,12 @@
         "visibility_now": "PUBLIC"
       },
       {
-        "attested": [],
+        "attested": [
+          "branch_protection"
+        ],
         "blocking": [
           "security_policy",
           "agents_md",
-          "branch_protection",
           "owner_signoff"
         ],
         "checked_head": "50afcde45a9944f0d51b1df414d7add5550b01b8",
@@ -913,11 +916,12 @@
         "visibility_now": "PUBLIC"
       },
       {
-        "attested": [],
+        "attested": [
+          "branch_protection"
+        ],
         "blocking": [
           "security_policy",
           "agents_md",
-          "branch_protection",
           "owner_signoff"
         ],
         "checked_head": "de0e86a88f4e4c6c4eeec0d7b4d297e7b96a53b3",
@@ -933,7 +937,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 20,
+        "age_hours": 21,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -954,7 +958,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 20,
+        "age_hours": 21,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",

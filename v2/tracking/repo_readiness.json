@@ -58,18 +58,19 @@
         },
         {
           "id": "license",
-          "status": "DECISION",
-          "detail": "No LICENSE; the owner decides the terms for a private repo"
+          "status": "OPEN",
+          "detail": "Owner decided the licence is the private proprietary notice (D-040); the LICENSE file is in the governance PR, pending merge"
         },
         {
           "id": "security_policy",
           "status": "OPEN",
-          "detail": "No SECURITY.md"
+          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
         },
         {
           "id": "codeowners",
-          "status": "OPEN",
-          "detail": "No CODEOWNERS"
+          "status": "PASS",
+          "detail": "CODEOWNERS assigns * to @dineshannayya (added by the owner in PR #10)",
+          "evidence": "file present at head 6e740e4"
         },
         {
           "id": "agents_md",
@@ -79,7 +80,7 @@
         {
           "id": "branch_protection",
           "status": "ATTESTED",
-          "detail": "Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified"
+          "detail": "Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified"
         },
         {
           "id": "branch_hygiene",
@@ -182,7 +183,7 @@
         {
           "id": "branch_protection",
           "status": "ATTESTED",
-          "detail": "Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified; the owner still needs to enable 'Require review from Code Owners'"
+          "detail": "Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified"
         },
         {
           "id": "branch_hygiene",
@@ -272,8 +273,9 @@
         },
         {
           "id": "codeowners",
-          "status": "OPEN",
-          "detail": "No CODEOWNERS; add one as in kritva-core (D-035)"
+          "status": "PASS",
+          "detail": "CODEOWNERS assigns * to @dineshannayya (added by the owner in PR #2); the governance PR only corrects its header and paths",
+          "evidence": "file present at head 70607a5"
         },
         {
           "id": "agents_md",
@@ -284,7 +286,7 @@
         {
           "id": "branch_protection",
           "status": "ATTESTED",
-          "detail": "Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified"
+          "detail": "Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified"
         },
         {
           "id": "branch_hygiene",
@@ -358,18 +360,18 @@
         },
         {
           "id": "license",
-          "status": "DECISION",
-          "detail": "No LICENSE file; source headers say LicenseRef-KritvaOS-Proprietary. The owner decides the licence and governance baseline"
+          "status": "OPEN",
+          "detail": "Owner decided the licence is the private proprietary notice (D-040); the LICENSE file is in the governance PR, pending merge"
         },
         {
           "id": "security_policy",
-          "status": "DECISION",
-          "detail": "No SECURITY.md; part of the RaaS governance baseline decision"
+          "status": "OPEN",
+          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
         },
         {
           "id": "codeowners",
-          "status": "DECISION",
-          "detail": "No CODEOWNERS; part of the RaaS governance baseline decision"
+          "status": "OPEN",
+          "detail": "No CODEOWNERS yet; added in the governance PR, pending merge"
         },
         {
           "id": "agents_md",
@@ -378,8 +380,8 @@
         },
         {
           "id": "branch_protection",
-          "status": "OPEN",
-          "detail": "No record of main-branch protection or required checks for this repo: the ruleset (24843399) requires source-header-check and docs-check; the owner still needs to add secret-scan and commit-message-check as required checks"
+          "status": "ATTESTED",
+          "detail": "Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified"
         },
         {
           "id": "branch_hygiene",
@@ -459,7 +461,7 @@
         {
           "id": "security_policy",
           "status": "OPEN",
-          "detail": "No SECURITY.md"
+          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
         },
         {
           "id": "codeowners",
@@ -474,8 +476,8 @@
         },
         {
           "id": "branch_protection",
-          "status": "OPEN",
-          "detail": "No record of main-branch protection or required checks for this repo"
+          "status": "ATTESTED",
+          "detail": "Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified"
         },
         {
           "id": "branch_hygiene",
@@ -556,7 +558,7 @@
         {
           "id": "security_policy",
           "status": "OPEN",
-          "detail": "No SECURITY.md"
+          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
         },
         {
           "id": "codeowners",
@@ -571,8 +573,8 @@
         },
         {
           "id": "branch_protection",
-          "status": "OPEN",
-          "detail": "No record of main-branch protection or required checks for this repo"
+          "status": "ATTESTED",
+          "detail": "Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified"
         },
         {
           "id": "branch_hygiene",
@@ -653,7 +655,7 @@
         {
           "id": "security_policy",
           "status": "OPEN",
-          "detail": "No SECURITY.md"
+          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
         },
         {
           "id": "codeowners",
@@ -668,8 +670,8 @@
         },
         {
           "id": "branch_protection",
-          "status": "OPEN",
-          "detail": "No record of main-branch protection or required checks for this repo"
+          "status": "ATTESTED",
+          "detail": "Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified"
         },
         {
           "id": "branch_hygiene",
@@ -750,7 +752,7 @@
         {
           "id": "security_policy",
           "status": "OPEN",
-          "detail": "No SECURITY.md"
+          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
         },
         {
           "id": "codeowners",
@@ -765,8 +767,8 @@
         },
         {
           "id": "branch_protection",
-          "status": "OPEN",
-          "detail": "No record of main-branch protection or required checks for this repo"
+          "status": "ATTESTED",
+          "detail": "Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified"
         },
         {
           "id": "branch_hygiene",
@@ -847,7 +849,7 @@
         {
           "id": "security_policy",
           "status": "OPEN",
-          "detail": "No SECURITY.md"
+          "detail": "No SECURITY.md yet; added in the governance PR, pending merge"
         },
         {
           "id": "codeowners",
@@ -862,8 +864,8 @@
         },
         {
           "id": "branch_protection",
-          "status": "OPEN",
-          "detail": "No record of main-branch protection or required checks for this repo"
+          "status": "ATTESTED",
+          "detail": "Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified"
         },
         {
           "id": "branch_hygiene",
