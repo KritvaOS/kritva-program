@@ -11,7 +11,7 @@
       "workstream_ids": [
         "CI_DEV_INFRA"
       ],
-      "checked_head": "6401efeb082f53b6401258109e3160d990eb530b",
+      "checked_head": "b0c049c1d9e168dbd8bdad073dd717f44fa46040",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -29,7 +29,7 @@
         {
           "id": "milestone_sync",
           "status": "PASS",
-          "detail": "KRP-ENG-001 (the only reported task) is a baseline v2 task, NOT_STARTED, uncredited. The committed source copy is byte-identical to status/status.json. The report's source commit 8e50865 trails head by 5 commits (decisions, tooling, tests)",
+          "detail": "KRP-ENG-001 (the only reported task) is a baseline v2 task, NOT_STARTED, uncredited. The committed source copy is byte-identical to status/status.json. The report's source commit 8e50865 trails head by 12 commits (decisions, tooling, tests, readiness and CI checks)",
           "evidence": "sha256 of sources/CI_DEV_INFRA.json equals status/status.json on 2026-10-17"
         },
         {
@@ -42,17 +42,19 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 6401efe: 41 commits, 0 findings, run 2026-10-17"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at b0c049c: 45 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
         },
         {
           "id": "secret_scan_ci",
-          "status": "OPEN",
-          "detail": "No workflow runs a secret scanner (workflows: refresh-sources, status)"
+          "status": "PASS",
+          "detail": "secret-scan workflow is present and scans the full history",
+          "evidence": "workflow file present at head b0c049c; merged in PR #8; workflow run results are not readable by Claude"
         },
         {
           "id": "commit_message_check",
-          "status": "OPEN",
-          "detail": "No CI check rejects session trailers; 5 commits on main carry one, history not rewritten"
+          "status": "PASS",
+          "detail": "commit-message-check workflow and tests are present; 5 commits on main carry one, history not rewritten",
+          "evidence": "workflow, script and 6 unit tests present at head b0c049c (tests pass on a fresh clone); merged in PR #8"
         },
         {
           "id": "license",
@@ -81,8 +83,9 @@
         },
         {
           "id": "branch_hygiene",
-          "status": "OPEN",
-          "detail": "The stale bot/refresh-sources branch still exists next to main; close or rerun it"
+          "status": "PASS",
+          "detail": "Only main exists; the stale bot/refresh-sources branch has been removed (its PR #6 status is not visible to Claude)",
+          "evidence": "git ls-remote --heads on 2026-10-17 lists main only"
         },
         {
           "id": "security_disposition",
@@ -107,7 +110,7 @@
       "workstream_ids": [
         "CORE"
       ],
-      "checked_head": "6835cd0714397310b40adb7f75824e78fa6917fb",
+      "checked_head": "46bd189abfc932d7f860afb54b16f7772e9a812a",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -125,8 +128,8 @@
         {
           "id": "milestone_sync",
           "status": "PASS",
-          "detail": "The 9 reported tasks are the 9 Core R1.0 baseline tasks, all credited. The committed source copy is byte-identical to the repo's status/status.json. The report's source commit 54984ae trails head by 4 commits that touch status tooling and governance files only, no planning records",
-          "evidence": "sha256 comparison and git diff 54984ae..6835cd0 on 2026-10-17"
+          "detail": "The 9 reported tasks are the 9 Core R1.0 baseline tasks, all credited. The committed source copy is byte-identical to the repo's status/status.json. The report's source commit 54984ae trails head by 6 commits that touch status tooling, governance files and CI checks only, no planning records",
+          "evidence": "sha256 comparison and git diff 54984ae..46bd189 on 2026-10-17"
         },
         {
           "id": "status_report",
@@ -138,17 +141,19 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history, tags included",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 6835cd0: 321 commits, 0 findings, run 2026-10-17"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 46bd189: 322 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
         },
         {
           "id": "secret_scan_ci",
-          "status": "OPEN",
-          "detail": "No workflow runs a secret scanner (workflows: kritva-core-ci, source-header-check, status-report)"
+          "status": "PASS",
+          "detail": "secret-scan workflow is present and scans the full history",
+          "evidence": "workflow file present at head 46bd189; merged in PR #2; workflow run results are not readable by Claude"
         },
         {
           "id": "commit_message_check",
-          "status": "OPEN",
-          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+          "status": "PASS",
+          "detail": "commit-message-check workflow and tests are present; 0 historical commits carry one",
+          "evidence": "workflow, script and 6 unit tests present at head 46bd189 (tests pass on a fresh clone); merged in PR #2"
         },
         {
           "id": "license",
@@ -208,7 +213,7 @@
       "workstream_ids": [
         "COMMUNITY"
       ],
-      "checked_head": "794cf195303a5854b63104c91880432d4e905ee2",
+      "checked_head": "8dc94960bf4b0bcfabf5e8615f5cf40245e5a389",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -226,8 +231,8 @@
         {
           "id": "milestone_sync",
           "status": "PASS",
-          "detail": "The 21 reported tasks are the 21 Community baseline tasks. I2 (6) is credited; I3 and I4 (15) are uncredited because no task approvals are recorded, and their safety gates were closed on the owner's statement that the D-025 independent review is complete (D-033; reviewer not named, independence unverified). The committed source copy is byte-identical to the repo's status/status.json; the report's source commit 8256ba3 trails head by 1 commit that touches status tooling only",
-          "evidence": "sha256 comparison and git diff 8256ba3..794cf19 on 2026-10-17"
+          "detail": "The 21 reported tasks are the 21 Community baseline tasks. I2 (6) is credited; I3 and I4 (15) are uncredited because no task approvals are recorded, and their safety gates were closed on the owner's statement that the D-025 independent review is complete (D-033; reviewer not named, independence unverified). The committed source copy is byte-identical to the repo's status/status.json; the report's source commit 8256ba3 trails head by 3 commits that touch status tooling and CI checks only, no planning records",
+          "evidence": "sha256 comparison and git diff 8256ba3..8dc9496 on 2026-10-17"
         },
         {
           "id": "status_report",
@@ -239,17 +244,19 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 794cf19: 61 commits, 0 findings, run 2026-10-17"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 8dc9496: 63 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
         },
         {
           "id": "secret_scan_ci",
-          "status": "OPEN",
-          "detail": "No workflow runs a secret scanner (workflows: ci, source-header-check, status-report)"
+          "status": "PASS",
+          "detail": "secret-scan workflow is present and scans the full history",
+          "evidence": "workflow file present at head 8dc9496; merged in PR #1; workflow run results are not readable by Claude"
         },
         {
           "id": "commit_message_check",
-          "status": "OPEN",
-          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+          "status": "PASS",
+          "detail": "commit-message-check workflow and tests are present; 0 historical commits carry one",
+          "evidence": "workflow, script and 6 unit tests present at head 8dc9496 (tests pass on a fresh clone); merged in PR #1"
         },
         {
           "id": "license",
@@ -402,7 +409,7 @@
       "workstream_ids": [
         "ACT_INT"
       ],
-      "checked_head": "177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca",
+      "checked_head": "9aac0766ffc8189dc864fb3ab65246beb47b9bb7",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -416,8 +423,8 @@
         {
           "id": "milestone_sync",
           "status": "PASS",
-          "detail": "PLANNING_ONLY, not in the baseline. The 7 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_INT) was generated at 7a059d8 and trails head by 2 commits that touch status/status.json only",
-          "evidence": "git diff 7a059d8..177645e and the inventory --verify-sources check on 2026-10-17"
+          "detail": "PLANNING_ONLY, not in the baseline. The 7 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_INT) was generated at 7a059d8 and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks)",
+          "evidence": "git diff 7a059d8..9aac076 and the inventory --verify-sources check on 2026-10-17"
         },
         {
           "id": "status_report",
@@ -429,17 +436,19 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 177645e: 21 commits, 0 findings, run 2026-10-17"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 9aac076: 23 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
         },
         {
           "id": "secret_scan_ci",
-          "status": "OPEN",
-          "detail": "No workflow runs a secret scanner"
+          "status": "PASS",
+          "detail": "secret-scan workflow is present and scans the full history",
+          "evidence": "workflow file present at head 9aac076; merged in PR #4; workflow run results are not readable by Claude"
         },
         {
           "id": "commit_message_check",
-          "status": "OPEN",
-          "detail": "No CI check rejects session trailers; 1 historical commit carries one (audit record KA-AUD-EXT-20261016), history not rewritten"
+          "status": "PASS",
+          "detail": "commit-message-check workflow and tests are present; 1 historical commit carries one (audit record KA-AUD-EXT-20261016), history not rewritten",
+          "evidence": "workflow, script and 6 unit tests present at head 9aac076 (tests pass on a fresh clone); merged in PR #4"
         },
         {
           "id": "license",
@@ -497,7 +506,7 @@
       "workstream_ids": [
         "ACT_EMB"
       ],
-      "checked_head": "9ce5069383aa694033b3ae92eea89f741733699a",
+      "checked_head": "2ceb68ebc322148b3348b28643fbe46de114db04",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -511,8 +520,8 @@
         {
           "id": "milestone_sync",
           "status": "PASS",
-          "detail": "PLANNING_ONLY, not in the baseline. The 10 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_EMB) was generated at 240a92a and trails head by 2 commits that touch status/status.json only",
-          "evidence": "git diff 240a92a..9ce5069 and the inventory --verify-sources check on 2026-10-17"
+          "detail": "PLANNING_ONLY, not in the baseline. The 10 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_EMB) was generated at 240a92a and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks)",
+          "evidence": "git diff 240a92a..2ceb68e and the inventory --verify-sources check on 2026-10-17"
         },
         {
           "id": "status_report",
@@ -524,17 +533,19 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 9ce5069: 10 commits, 0 findings, run 2026-10-17"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 2ceb68e: 12 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
         },
         {
           "id": "secret_scan_ci",
-          "status": "OPEN",
-          "detail": "No workflow runs a secret scanner"
+          "status": "PASS",
+          "detail": "secret-scan workflow is present and scans the full history",
+          "evidence": "workflow file present at head 2ceb68e; merged in PR #5; workflow run results are not readable by Claude"
         },
         {
           "id": "commit_message_check",
-          "status": "OPEN",
-          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+          "status": "PASS",
+          "detail": "commit-message-check workflow and tests are present; 0 historical commits carry one",
+          "evidence": "workflow, script and 6 unit tests present at head 2ceb68e (tests pass on a fresh clone); merged in PR #5"
         },
         {
           "id": "license",
@@ -592,7 +603,7 @@
       "workstream_ids": [
         "ACT_S"
       ],
-      "checked_head": "ef217ecec0a5d2351807a5206b22c3a5e7b17705",
+      "checked_head": "21f7d907b95439b33be82e582f1dfc6b6988afcf",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -606,8 +617,8 @@
         {
           "id": "milestone_sync",
           "status": "PASS",
-          "detail": "PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_S) was generated at e9d075f and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it",
-          "evidence": "git diff e9d075f..ef217ec and the inventory --verify-sources check on 2026-10-17"
+          "detail": "PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_S) was generated at e9d075f and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it",
+          "evidence": "git diff e9d075f..21f7d90 and the inventory --verify-sources check on 2026-10-17"
         },
         {
           "id": "status_report",
@@ -619,17 +630,19 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at ef217ec: 6 commits, 0 findings, run 2026-10-17"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 21f7d90: 8 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
         },
         {
           "id": "secret_scan_ci",
-          "status": "OPEN",
-          "detail": "No workflow runs a secret scanner"
+          "status": "PASS",
+          "detail": "secret-scan workflow is present and scans the full history",
+          "evidence": "workflow file present at head 21f7d90; merged in PR #3; workflow run results are not readable by Claude"
         },
         {
           "id": "commit_message_check",
-          "status": "OPEN",
-          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+          "status": "PASS",
+          "detail": "commit-message-check workflow and tests are present; 0 historical commits carry one",
+          "evidence": "workflow, script and 6 unit tests present at head 21f7d90 (tests pass on a fresh clone); merged in PR #3"
         },
         {
           "id": "license",
@@ -687,7 +700,7 @@
       "workstream_ids": [
         "ACT_M"
       ],
-      "checked_head": "4bcc0c637b2393dcaf481a2b41fef5dfdf18570e",
+      "checked_head": "50afcde45a9944f0d51b1df414d7add5550b01b8",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -701,8 +714,8 @@
         {
           "id": "milestone_sync",
           "status": "PASS",
-          "detail": "PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_M) was generated at 0344b7d and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it",
-          "evidence": "git diff 0344b7d..4bcc0c6 and the inventory --verify-sources check on 2026-10-17"
+          "detail": "PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_M) was generated at 0344b7d and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it",
+          "evidence": "git diff 0344b7d..50afcde and the inventory --verify-sources check on 2026-10-17"
         },
         {
           "id": "status_report",
@@ -714,17 +727,19 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 4bcc0c6: 6 commits, 0 findings, run 2026-10-17"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 50afcde: 8 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
         },
         {
           "id": "secret_scan_ci",
-          "status": "OPEN",
-          "detail": "No workflow runs a secret scanner"
+          "status": "PASS",
+          "detail": "secret-scan workflow is present and scans the full history",
+          "evidence": "workflow file present at head 50afcde; merged in PR #3; workflow run results are not readable by Claude"
         },
         {
           "id": "commit_message_check",
-          "status": "OPEN",
-          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+          "status": "PASS",
+          "detail": "commit-message-check workflow and tests are present; 0 historical commits carry one",
+          "evidence": "workflow, script and 6 unit tests present at head 50afcde (tests pass on a fresh clone); merged in PR #3"
         },
         {
           "id": "license",
@@ -782,7 +797,7 @@
       "workstream_ids": [
         "ACT_L"
       ],
-      "checked_head": "c68501e0eda46d4feeeaf9a58298494aa6a4ff48",
+      "checked_head": "de0e86a88f4e4c6c4eeec0d7b4d297e7b96a53b3",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -796,8 +811,8 @@
         {
           "id": "milestone_sync",
           "status": "PASS",
-          "detail": "PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_L) was generated at abf0782 and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it",
-          "evidence": "git diff abf0782..c68501e and the inventory --verify-sources check on 2026-10-17"
+          "detail": "PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_L) was generated at abf0782 and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it",
+          "evidence": "git diff abf0782..de0e86a and the inventory --verify-sources check on 2026-10-17"
         },
         {
           "id": "status_report",
@@ -809,17 +824,19 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at c68501e: 6 commits, 0 findings, run 2026-10-17"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at de0e86a: 8 commits, 0 findings, re-run 2026-10-17 after the CI checks merged"
         },
         {
           "id": "secret_scan_ci",
-          "status": "OPEN",
-          "detail": "No workflow runs a secret scanner"
+          "status": "PASS",
+          "detail": "secret-scan workflow is present and scans the full history",
+          "evidence": "workflow file present at head de0e86a; merged in PR #3; workflow run results are not readable by Claude"
         },
         {
           "id": "commit_message_check",
-          "status": "OPEN",
-          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+          "status": "PASS",
+          "detail": "commit-message-check workflow and tests are present; 0 historical commits carry one",
+          "evidence": "workflow, script and 6 unit tests present at head de0e86a (tests pass on a fresh clone); merged in PR #3"
         },
         {
           "id": "license",

@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-17T12:47:12Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T13:30:27Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,12 +36,12 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T12:47:12Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T13:30:27Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (19h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
-| CORE | FRESH | 2026-10-16T17:21:54Z (19h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
+| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (20h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | FRESH | 2026-10-16T17:21:54Z (20h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 
@@ -202,33 +202,33 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 | Repo | Visibility now | Recommended | Checked head | Readiness | Blocking checks | Attested, not verified |
 |---|---|---|---|---|---|---|
-| KritvaOS/kritva-program | PUBLIC | **PRIVATE** | 6401efe | NOT_READY | 8: secret_scan_ci, commit_message_check, license, security_policy, codeowners, agents_md, branch_hygiene, owner_signoff | branch_protection |
-| KritvaOS/kritva-core | PUBLIC | **PRIVATE** | 6835cd0 | NOT_READY | 4: secret_scan_ci, commit_message_check, contract_pin, owner_signoff | branch_protection |
-| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 794cf19 | NOT_READY | 4: secret_scan_ci, commit_message_check, codeowners, owner_signoff | branch_protection |
+| KritvaOS/kritva-program | PUBLIC | **PRIVATE** | b0c049c | NOT_READY | 5: license, security_policy, codeowners, agents_md, owner_signoff | branch_protection |
+| KritvaOS/kritva-core | PUBLIC | **PRIVATE** | 46bd189 | NOT_READY | 2: contract_pin, owner_signoff | branch_protection |
+| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 8dc9496 | NOT_READY | 2: codeowners, owner_signoff | branch_protection |
 | KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | ca054f9 | NOT_READY | 7: license, security_policy, codeowners, agents_md, branch_protection, security_disposition, owner_signoff | - |
-| KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 177645e | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
-| KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 9ce5069 | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
-| KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | ef217ec | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
-| KritvaOS/kritva-actuator-m | PUBLIC | **PRIVATE** | 4bcc0c6 | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
-| KritvaOS/kritva-actuator-l | PUBLIC | **PRIVATE** | c68501e | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 9aac076 | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 2ceb68e | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | 21f7d90 | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritva-actuator-m | PUBLIC | **PRIVATE** | 50afcde | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
+| KritvaOS/kritva-actuator-l | PUBLIC | **PRIVATE** | de0e86a | NOT_READY | 4: security_policy, agents_md, branch_protection, owner_signoff | - |
 
 ### KritvaOS/kritva-program
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037. This repo holds the decision log, approvals and gate closures. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 6401efeb082f53b6401258109e3160d990eb530b; workstreams: CI_DEV_INFRA; readiness NOT_READY
+- Checked head: b0c049c1d9e168dbd8bdad073dd717f44fa46040; workstreams: CI_DEV_INFRA; readiness NOT_READY
 
-- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): KRP-ENG-001 (the only reported task) is a baseline v2 task, NOT_STARTED, uncredited. The committed source copy is byte-identical to status/status.json. The report's source commit 8e50865 trails head by 5 commits (decisions, tooling, tests) Evidence: sha256 of sources/CI_DEV_INFRA.json equals status/status.json on 2026-10-17
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): KRP-ENG-001 (the only reported task) is a baseline v2 task, NOT_STARTED, uncredited. The committed source copy is byte-identical to status/status.json. The report's source commit 8e50865 trails head by 12 commits (decisions, tooling, tests, readiness and CI checks) Evidence: sha256 of sources/CI_DEV_INFRA.json equals status/status.json on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, CI_DEV_INFRA) is committed and checked by the status workflow Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 6401efe: 41 commits, 0 findings, run 2026-10-17
-- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner (workflows: refresh-sources, status)
-- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 5 commits on main carry one, history not rewritten
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at b0c049c: 45 commits, 0 findings, re-run 2026-10-17 after the CI checks merged
+- [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head b0c049c; merged in PR #8; workflow run results are not readable by Claude
+- [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 5 commits on main carry one, history not rewritten Evidence: workflow, script and 6 unit tests present at head b0c049c (tests pass on a fresh clone); merged in PR #8
 - [ ] **DECISION** license (LICENSE file): No LICENSE; the owner decides the terms for a private repo
 - [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
 - [ ] **OPEN** codeowners (CODEOWNERS): No CODEOWNERS
 - [ ] **DECISION** agents_md (AGENTS.md): No AGENTS.md; the owner decides whether the repo needs one
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified
-- [ ] **OPEN** branch_hygiene (No stale or unintended branches): The stale bot/refresh-sources branch still exists next to main; close or rerun it
+- [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists; the stale bot/refresh-sources branch has been removed (its PR #6 status is not visible to Claude) Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
 - [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
@@ -237,13 +237,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 default. The Apache-2.0 license would permit a public release, but no public-release review exists. Owner action: If a public release is intended, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15.
-- Checked head: 6835cd0714397310b40adb7f75824e78fa6917fb; workstreams: CORE; readiness NOT_READY
+- Checked head: 46bd189abfc932d7f860afb54b16f7772e9a812a; workstreams: CORE; readiness NOT_READY
 
-- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 9 reported tasks are the 9 Core R1.0 baseline tasks, all credited. The committed source copy is byte-identical to the repo's status/status.json. The report's source commit 54984ae trails head by 4 commits that touch status tooling and governance files only, no planning records Evidence: sha256 comparison and git diff 54984ae..6835cd0 on 2026-10-17
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 9 reported tasks are the 9 Core R1.0 baseline tasks, all credited. The committed source copy is byte-identical to the repo's status/status.json. The report's source commit 54984ae trails head by 6 commits that touch status tooling, governance files and CI checks only, no planning records Evidence: sha256 comparison and git diff 54984ae..46bd189 on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, CORE) and status/evidence.json are committed; the status-report workflow checks them Evidence: files present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history, tags included Evidence: gitleaks 8.18.4 over all refs of a full clone at 6835cd0: 321 commits, 0 findings, run 2026-10-17
-- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner (workflows: kritva-core-ci, source-header-check, status-report)
-- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history, tags included Evidence: gitleaks 8.18.4 over all refs of a full clone at 46bd189: 322 commits, 0 findings, re-run 2026-10-17 after the CI checks merged
+- [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 46bd189; merged in PR #2; workflow run results are not readable by Claude
+- [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 46bd189 (tests pass on a fresh clone); merged in PR #2
 - [x] **PASS** license (LICENSE file): Apache License 2.0 Evidence: LICENSE present at head
 - [x] **PASS** security_policy (SECURITY.md): SECURITY.md names GitHub private vulnerability reporting and Dinesh as Security Owner (D-035) Evidence: file present at head
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya (D-035) Evidence: file present at head
@@ -258,13 +258,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 default, flagged for owner confirmation: the name and the Apache-2.0 license suggest a public community edition, but no public-release review exists. Owner action: Decide whether a public community release is intended. If so, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15.
-- Checked head: 794cf195303a5854b63104c91880432d4e905ee2; workstreams: COMMUNITY; readiness NOT_READY
+- Checked head: 8dc94960bf4b0bcfabf5e8615f5cf40245e5a389; workstreams: COMMUNITY; readiness NOT_READY
 
-- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 21 reported tasks are the 21 Community baseline tasks. I2 (6) is credited; I3 and I4 (15) are uncredited because no task approvals are recorded, and their safety gates were closed on the owner's statement that the D-025 independent review is complete (D-033; reviewer not named, independence unverified). The committed source copy is byte-identical to the repo's status/status.json; the report's source commit 8256ba3 trails head by 1 commit that touches status tooling only Evidence: sha256 comparison and git diff 8256ba3..794cf19 on 2026-10-17
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 21 reported tasks are the 21 Community baseline tasks. I2 (6) is credited; I3 and I4 (15) are uncredited because no task approvals are recorded, and their safety gates were closed on the owner's statement that the D-025 independent review is complete (D-033; reviewer not named, independence unverified). The committed source copy is byte-identical to the repo's status/status.json; the report's source commit 8256ba3 trails head by 3 commits that touch status tooling and CI checks only, no planning records Evidence: sha256 comparison and git diff 8256ba3..8dc9496 on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, COMMUNITY) and status/evidence.json are committed; the status-report workflow checks them Evidence: files present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 794cf19: 61 commits, 0 findings, run 2026-10-17
-- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner (workflows: ci, source-header-check, status-report)
-- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 8dc9496: 63 commits, 0 findings, re-run 2026-10-17 after the CI checks merged
+- [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 8dc9496; merged in PR #1; workflow run results are not readable by Claude
+- [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 8dc9496 (tests pass on a fresh clone); merged in PR #1
 - [x] **PASS** license (LICENSE file): Apache License 2.0 Evidence: LICENSE present at head
 - [x] **PASS** security_policy (SECURITY.md): SECURITY.md present (contents not reviewed by Claude) Evidence: file present at head
 - [ ] **OPEN** codeowners (CODEOWNERS): No CODEOWNERS; add one as in kritva-core (D-035)
@@ -300,13 +300,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca; workstreams: ACT_INT; readiness NOT_READY
+- Checked head: 9aac0766ffc8189dc864fb3ab65246beb47b9bb7; workstreams: ACT_INT; readiness NOT_READY
 
-- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 7 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_INT) was generated at 7a059d8 and trails head by 2 commits that touch status/status.json only Evidence: git diff 7a059d8..177645e and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 7 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_INT) was generated at 7a059d8 and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks) Evidence: git diff 7a059d8..9aac076 and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_INT) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 177645e: 21 commits, 0 findings, run 2026-10-17
-- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
-- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 1 historical commit carries one (audit record KA-AUD-EXT-20261016), history not rewritten
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 9aac076: 23 commits, 0 findings, re-run 2026-10-17 after the CI checks merged
+- [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 9aac076; merged in PR #4; workflow run results are not readable by Claude
+- [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 1 historical commit carries one (audit record KA-AUD-EXT-20261016), history not rewritten Evidence: workflow, script and 6 unit tests present at head 9aac076 (tests pass on a fresh clone); merged in PR #4
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
 - [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
@@ -321,13 +321,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 9ce5069383aa694033b3ae92eea89f741733699a; workstreams: ACT_EMB; readiness NOT_READY
+- Checked head: 2ceb68ebc322148b3348b28643fbe46de114db04; workstreams: ACT_EMB; readiness NOT_READY
 
-- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 10 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_EMB) was generated at 240a92a and trails head by 2 commits that touch status/status.json only Evidence: git diff 240a92a..9ce5069 and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 10 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_EMB) was generated at 240a92a and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks) Evidence: git diff 240a92a..2ceb68e and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_EMB) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 9ce5069: 10 commits, 0 findings, run 2026-10-17
-- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
-- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 2ceb68e: 12 commits, 0 findings, re-run 2026-10-17 after the CI checks merged
+- [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 2ceb68e; merged in PR #5; workflow run results are not readable by Claude
+- [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 2ceb68e (tests pass on a fresh clone); merged in PR #5
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
 - [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
@@ -342,13 +342,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: ef217ecec0a5d2351807a5206b22c3a5e7b17705; workstreams: ACT_S; readiness NOT_READY
+- Checked head: 21f7d907b95439b33be82e582f1dfc6b6988afcf; workstreams: ACT_S; readiness NOT_READY
 
-- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_S) was generated at e9d075f and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it Evidence: git diff e9d075f..ef217ec and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_S) was generated at e9d075f and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it Evidence: git diff e9d075f..21f7d90 and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_S) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at ef217ec: 6 commits, 0 findings, run 2026-10-17
-- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
-- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 21f7d90: 8 commits, 0 findings, re-run 2026-10-17 after the CI checks merged
+- [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 21f7d90; merged in PR #3; workflow run results are not readable by Claude
+- [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 21f7d90 (tests pass on a fresh clone); merged in PR #3
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
 - [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
@@ -363,13 +363,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 4bcc0c637b2393dcaf481a2b41fef5dfdf18570e; workstreams: ACT_M; readiness NOT_READY
+- Checked head: 50afcde45a9944f0d51b1df414d7add5550b01b8; workstreams: ACT_M; readiness NOT_READY
 
-- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_M) was generated at 0344b7d and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it Evidence: git diff 0344b7d..4bcc0c6 and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_M) was generated at 0344b7d and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it Evidence: git diff 0344b7d..50afcde and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_M) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 4bcc0c6: 6 commits, 0 findings, run 2026-10-17
-- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
-- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 50afcde: 8 commits, 0 findings, re-run 2026-10-17 after the CI checks merged
+- [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 50afcde; merged in PR #3; workflow run results are not readable by Claude
+- [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 50afcde (tests pass on a fresh clone); merged in PR #3
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
 - [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
@@ -384,13 +384,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: c68501e0eda46d4feeeaf9a58298494aa6a4ff48; workstreams: ACT_L; readiness NOT_READY
+- Checked head: de0e86a88f4e4c6c4eeec0d7b4d297e7b96a53b3; workstreams: ACT_L; readiness NOT_READY
 
-- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_L) was generated at abf0782 and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it Evidence: git diff abf0782..c68501e and the inventory --verify-sources check on 2026-10-17
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_L) was generated at abf0782 and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it Evidence: git diff abf0782..de0e86a and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_L) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at c68501e: 6 commits, 0 findings, run 2026-10-17
-- [ ] **OPEN** secret_scan_ci (Blocking secret scan in CI): No workflow runs a secret scanner
-- [ ] **OPEN** commit_message_check (CI rejects AI session trailers in new commits): No CI check rejects session trailers; 0 historical commits carry one
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at de0e86a: 8 commits, 0 findings, re-run 2026-10-17 after the CI checks merged
+- [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head de0e86a; merged in PR #3; workflow run results are not readable by Claude
+- [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head de0e86a (tests pass on a fresh clone); merged in PR #3
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
 - [ ] **OPEN** security_policy (SECURITY.md): No SECURITY.md
 - [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
