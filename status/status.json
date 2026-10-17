@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0",
+  "workstream_id": "CI_DEV_INFRA",
+  "repo": "KritvaOS/kritva-program",
+  "source": {
+    "branch": "main",
+    "commit": "8e5086513ff12a7a20473314878111238f06a4d2",
+    "tag": null
+  },
+  "tasks": [
+    {
+      "task_id": "KRP-ENG-001",
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": []
+    }
+  ],
+  "updated_at": "2026-10-17T12:00:00Z"
+}

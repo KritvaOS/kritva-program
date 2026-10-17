@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-17T05:34:17Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T06:06:53Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,7 +36,7 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T05:34:17Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T06:06:53Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
@@ -50,7 +50,7 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | Workstream | Repo | Baseline | Source state | Tasks reported | Inspected source commit |
 |---|---|---|---|---|---|
 | ACTUATION_CONTROLS | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| CI_DEV_INFRA | UNVERIFIED | BASELINED (1 tasks) | UNVERIFIED | 0 | ------- |
+| CI_DEV_INFRA | KritvaOS/kritva-program | BASELINED (1 tasks) | OK | 1 | 8e50865 |
 | COMMUNITY | KritvaOS/kritvaos-community | BASELINED (21 tasks) | OK | 21 | 8256ba3 |
 | CONTROL_PLANE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | CORE | KritvaOS/kritva-core | BASELINED (9 tasks) | OK | 9 | 54984ae |
@@ -130,7 +130,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | KF-CORE-R10-007 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task f212e46), run 37192914607 | yes | weight 3 x approval A028 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 | KF-CORE-R10-008 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task c0edf1f), run 37192914607 | yes | weight 3 x approval A029 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 | KF-CORE-R10-009 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task af16847), run 37192914607 | yes | weight 3 x approval A030 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KRP-ENG-001 | CI_DEV_INFRA | 3 | - | NOT_RUN | no | - | - | no current report from the owning workstream |
+| KRP-ENG-001 | CI_DEV_INFRA | 3 | NOT_STARTED | NOT_RUN | no | - | - | no central approval recorded |
 
 ## Gates
 
@@ -200,18 +200,16 @@ Monthly staffing and burn forecast: NOT PLANNED yet. It needs monthly staffing b
 - I4-006: evidence reported (OWN, run 37497496804 at 94aa01d; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
 - I4-007: evidence reported (OWN, run 37507901354 at cd51be8; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
 - I4-008: evidence reported (RERUN, run 37561636952 at 79f4daf; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved
-- KRP-ENG-001: no current report from the owning workstream
+- KRP-ENG-001: the repo reports no commit-bound CI evidence
 
 ## Warnings
 
 - ACTUATION_CONTROLS: no status source (UNVERIFIED)
-- CI_DEV_INFRA: no status source (UNVERIFIED)
 - CONTROL_PLANE: no status source (UNVERIFIED)
 - DEVICE_ENDPOINT: no status source (UNVERIFIED)
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
 - ELECTRICAL_POWER: no status source (UNVERIFIED)
 - INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)
-- KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)
 - MANUFACTURING_FLEET: no status source (UNVERIFIED)
 - MECHANICAL: no status source (UNVERIFIED)
 - MIND: no status source (UNVERIFIED)

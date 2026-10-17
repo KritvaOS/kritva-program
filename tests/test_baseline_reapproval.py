@@ -85,5 +85,30 @@ class ReapprovalOnNewBaseline(unittest.TestCase):
         self.assertEqual(len(ledger(self.r)), 2)
 
 
+class SelfReportedProgramTaskTests(unittest.TestCase):
+    """KRP-ENG-001 reports itself from this repo; a self-report must never be credit without an approval."""
+
+    def test_self_reported_complete_earns_no_credit(self):
+        import shutil
+        from support import ROOT, fresh_ts
+        with tempfile.TemporaryDirectory() as d:
+            r = make_root(d + "/kp", real=True)
+            shutil.copytree(ROOT / "sources", r / "sources")
+            p = r / "sources/CI_DEV_INFRA.json"
+            doc = json.loads(p.read_text())
+            doc["source"]["commit"] = SHA
+            doc["updated_at"] = fresh_ts()
+            doc["tasks"][0].update(execution="COMPLETE", evidence=[{
+                "type": "software", "uri": "u", "description": "d", "commit": SHA,
+                "ci_run": "https://example.invalid/run/1", "report_sha256": None, "result": "PASS"}])
+            p.write_text(json.dumps(doc))
+            out = run(r, "--sources-dir", str(r / "sources"))
+            self.assertEqual(out.returncode, 0, out.stderr)
+            t = row(r, "KRP-ENG-001")
+            self.assertEqual(t["execution"], "COMPLETE")
+            self.assertIs(t["credit"], False, t)
+            self.assertEqual(t["credit_reason"], "no central approval recorded")
+
+
 if __name__ == "__main__":
     unittest.main()

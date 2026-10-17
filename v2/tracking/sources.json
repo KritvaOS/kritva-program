@@ -12,6 +12,11 @@
       "workstream_id": "COMMUNITY",
       "repo": "KritvaOS/kritvaos-community",
       "ref": "main"
+    },
+    {
+      "workstream_id": "CI_DEV_INFRA",
+      "repo": "KritvaOS/kritva-program",
+      "ref": "main"
     }
   ],
   "require_run_verification": true

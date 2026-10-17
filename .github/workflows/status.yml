@@ -11,6 +11,8 @@ jobs:
       # Switch to --fetch with a least-privilege read token once engineering repos publish status/status.json.
       - name: status-generated-check
         run: python3 tools/consolidate_status.py --sources-dir sources --check
+      - name: planning-inventory-check
+        run: python3 tools/check_planning_inventory.py .
       - name: status-validate (example sources, scratch copy)
         run: |
           cp -r . "$RUNNER_TEMP/kp"

@@ -94,7 +94,7 @@
     {
       "id": "CI_DEV_INFRA",
       "name": "CI / Dev infrastructure",
-      "repo": null
+      "repo": "KritvaOS/kritva-program"
     },
     {
       "id": "ELECTRICAL_POWER",
