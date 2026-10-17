@@ -137,7 +137,7 @@ class RunVerification(unittest.TestCase):
             go(r, gh_map(), "--verify-runs")
             x = row(r, "I2-001")
             self.assertEqual((x["evidence_class"], x["tested_commit"], x["task_commit"]), ("MILESTONE", SHA, OTHER))
-            view = (r / "v2/tracking/STATUS_VIEW.md").read_text()
+            view = (r / "v2/tracking/STATUS_VIEW.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text()
             self.assertIn("Evidence classes of credited tasks: MILESTONE 1", view)
             self.assertIn("Evidence qualification", view)
             self.assertIn("with the CI run confirmed against GitHub", view)
@@ -145,7 +145,7 @@ class RunVerification(unittest.TestCase):
             r = make_root(d)
             setup(r, mode="OWN")
             go(r, gh_map(), "--verify-runs")
-            view = (r / "v2/tracking/STATUS_VIEW.md").read_text()
+            view = (r / "v2/tracking/STATUS_VIEW.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text()
             self.assertIn("OWN 1", view)
             self.assertNotIn("Evidence qualification", view)
 

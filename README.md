@@ -63,13 +63,13 @@ Repositories report implementation facts and evidence. This repository owns prog
    tools/consolidate_status.py  <---  baseline, approvals, gates
               |             |
               v             v
-  consolidated_status.json   STATUS_VIEW.md  (generated)
+  consolidated_status.json   STATUS_VIEW.md (summary)   STATUS_DETAIL.md (full tables)
 ```
 
 1. **Repositories report facts.** Each repository's generator writes `status/status.json` (schema 2.0): per task, `execution`, `git_sync`, `readiness` and `evidence`. Reports never contain review or acceptance.
 2. **Snapshots.** The `refresh-sources` workflow proposes daily pull requests that update `sources/` from each repository; a human reviews and merges.
 3. **Consolidation.** `tools/consolidate_status.py` validates every report against the baseline and approvals and computes progress. Stale, missing or unverified inputs earn no credit and are never silently passed.
-4. **Generated view.** [v2/tracking/STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) starts with an at-a-glance dashboard (progress, effort, readiness, dated milestones, phase sequence) followed by the detailed tables. It is generated: edit the inputs or the tools, never the output.
+4. **Generated views.** [v2/tracking/STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) is the short summary: owner actions and blockers, what changed since the previous snapshot, the three measures, progress by workstream, the readiness matrix, dated milestones, phase order and a data-quality summary. [v2/tracking/STATUS_DETAIL.md](v2/tracking/STATUS_DETAIL.md) holds the full tables (workstreams, tasks, gates, effort, per-repo readiness, evidence health, warnings). Both are plain Markdown, generated: edit the inputs or the tools, never the output.
 
 ### Three measures, never combined
 
@@ -89,7 +89,7 @@ None of these is a delivery date, and they are not averaged into a "health" figu
 
 ```bash
 python3 -m unittest discover -s tests
-python3 tools/consolidate_status.py --sources-dir sources            # regenerate JSON and STATUS_VIEW.md
+python3 tools/consolidate_status.py --sources-dir sources            # regenerate JSON, STATUS_VIEW.md and STATUS_DETAIL.md
 python3 tools/consolidate_status.py --sources-dir sources --check    # fail if committed output is out of date
 python3 tools/check_planning_inventory.py .                          # planning inventory rules
 ```
@@ -107,4 +107,4 @@ Change an input (baseline, approvals, gates, sources, effort, readiness, plannin
 
 ## Where to start
 
-[v2/README.md](v2/README.md) (dashboard and document index), [v2/tracking/STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) (generated status), [v2/DECISIONS.md](v2/DECISIONS.md) (decisions).
+[v2/README.md](v2/README.md) (dashboard and document index), [v2/tracking/STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) (generated summary; detail in [STATUS_DETAIL.md](v2/tracking/STATUS_DETAIL.md)), [v2/DECISIONS.md](v2/DECISIONS.md) (decisions).

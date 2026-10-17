@@ -71,7 +71,7 @@ class Rendering(unittest.TestCase):
         write_sources(r)
         p = run(r, "--sources-dir", str(r / "sources"))
         self.assertEqual(p.returncode, 0, p.stderr)
-        return d, r, (r / "v2/tracking/STATUS_VIEW.md").read_text(), json.loads((r / "v2/tracking/consolidated_status.json").read_text())
+        return d, r, (r / "v2/tracking/STATUS_VIEW.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text(), json.loads((r / "v2/tracking/consolidated_status.json").read_text())
 
     def test_three_measures_and_phase_caveat(self):
         d, r, view, c = self.build()
@@ -93,7 +93,7 @@ class Rendering(unittest.TestCase):
         p = run(r, "--sources-dir", str(r / "sources"))
         with d:
             self.assertEqual(p.returncode, 0, p.stderr)
-            view = (r / "v2/tracking/STATUS_VIEW.md").read_text()
+            view = (r / "v2/tracking/STATUS_VIEW.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text()
             self.assertIn("Program-level rounded planning reference", view)
             self.assertIn("Sum of workstream point estimates", view)
             self.assertIn("Variance, workstream sum minus planning reference", view)
@@ -132,7 +132,7 @@ class SourceFreshness(unittest.TestCase):
             r = make_root(t + "/kp")
             write_sources(r)
             run(r, "--sources-dir", str(r / "sources"), "--now", "2026-10-15T12:00:00Z")
-            self.assertNotIn("## Source freshness", (r / "v2/tracking/STATUS_VIEW.md").read_text())
+            self.assertNotIn("## Source freshness", (r / "v2/tracking/STATUS_VIEW.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text())
             m = {"warn_hours": 24, "stale_hours": 72, "sources": {
                 "COMMUNITY": {"repo": "KritvaOS/kritvaos-community", "state": "FETCHED", "fetched_at": "2026-10-15T00:00:00Z",
                               "fetched_head": "e" * 40, "report_source_commit": "d" * 40, "relation": "AHEAD",
@@ -140,7 +140,7 @@ class SourceFreshness(unittest.TestCase):
                 "CORE": {"repo": "KritvaOS/kritva-core", "state": "FETCH_FAILED"}}}
             (r / "sources/MANIFEST.json").write_text(json.dumps(m))
             p = run(r, "--sources-dir", str(r / "sources"), "--now", "2026-10-15T12:00:00Z")
-            v = (r / "v2/tracking/STATUS_VIEW.md").read_text()
+            v = (r / "v2/tracking/STATUS_VIEW.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text()
             self.assertIn("## Source freshness", v)
             self.assertIn("| COMMUNITY | FRESH |", v)
             self.assertIn("STATUS_ONLY", v)
