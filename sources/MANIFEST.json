@@ -1,6 +1,38 @@
 {
   "_note": "Written by tools/refresh_sources.py. Records which revision each committed source copy was fetched from. STATUS_ONLY means the commits between the report's inspected commit and the fetched head touch only the status path; STATUS_TOOLING also touches the repo's own status generator and its test; OTHER_FILES means review the listed files. It is a freshness aid, not acceptance.",
   "sources": {
+    "CI_DEV_INFRA": {
+      "ahead_by": 3,
+      "changed_files": [
+        ".github/workflows/status.yml",
+        "sources/CI_DEV_INFRA.json",
+        "status/README.md",
+        "status/status.json",
+        "tests/support.py",
+        "tests/test_baseline_reapproval.py",
+        "tests/test_planning_inventory.py",
+        "tools/check_planning_inventory.py",
+        "v2/DECISIONS.md",
+        "v2/tracking/STATUS_VIEW.md",
+        "v2/tracking/consolidated_status.json",
+        "v2/tracking/planning_inventory.json",
+        "v2/tracking/sources.json",
+        "v2/tracking/workstreams.json"
+      ],
+      "changed_files_truncated": false,
+      "fetched_at": "2026-10-17T07:51:07Z",
+      "fetched_head": "444d8e45012c4f356cd5a2759e8f7d55c8fc127c",
+      "gap_kind": "OTHER_FILES",
+      "last_attempt_at": "2026-10-17T07:51:07Z",
+      "ref": "main",
+      "relation": "AHEAD",
+      "repo": "KritvaOS/kritva-program",
+      "report_source_commit": "8e5086513ff12a7a20473314878111238f06a4d2",
+      "report_updated_at": "2026-10-17T12:00:00Z",
+      "state": "FETCHED",
+      "status_only": false,
+      "tasks": 1
+    },
     "COMMUNITY": {
       "ahead_by": 1,
       "changed_files": [
@@ -11,10 +43,10 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-10-16T17:21:54Z",
+      "fetched_at": "2026-10-17T07:51:07Z",
       "fetched_head": "794cf195303a5854b63104c91880432d4e905ee2",
       "gap_kind": "STATUS_TOOLING",
-      "last_attempt_at": "2026-10-16T17:21:54Z",
+      "last_attempt_at": "2026-10-17T07:51:07Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritvaos-community",
@@ -34,10 +66,10 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-10-16T17:21:54Z",
+      "fetched_at": "2026-10-17T07:51:07Z",
       "fetched_head": "42c6e840e83abda909c571f2d43c7a21ba8d2021",
       "gap_kind": "STATUS_TOOLING",
-      "last_attempt_at": "2026-10-16T17:21:54Z",
+      "last_attempt_at": "2026-10-17T07:51:07Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-core",

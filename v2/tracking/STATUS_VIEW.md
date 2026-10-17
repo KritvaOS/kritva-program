@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-17T06:06:53Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T07:51:12Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,12 +36,13 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T06:06:53Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T07:51:12Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (12h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
-| CORE | FRESH | 2026-10-16T17:21:54Z (12h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
+| CI_DEV_INFRA | FRESH | 2026-10-17T07:51:07Z (0h ago) | 444d8e4 | 8e50865 | 3 commit(s) | OTHER FILES (review): .github/workflows/status.yml, sources/CI_DEV_INFRA.json, status/README.md, status/status.json, tests/support.py |
+| COMMUNITY | FRESH | 2026-10-17T07:51:07Z (0h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | FRESH | 2026-10-17T07:51:07Z (0h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 
