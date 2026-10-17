@@ -734,7 +734,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T15:30:54Z",
+  "generated_at": "2026-10-17T16:40:57Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -791,7 +791,7 @@
     "basis": "48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "readiness": {
-    "checked_at": "2026-10-17T16:00:00Z",
+    "checked_at": "2026-10-17T18:30:00Z",
     "report_due": "2026-11-14",
     "repos": [
       {
@@ -802,7 +802,7 @@
           "agents_md",
           "owner_signoff"
         ],
-        "checked_head": "d6f5525dc6d5877d002d47f15a2b310af69a36f6",
+        "checked_head": "40515d295133b8366a5a8717b7427736cbd5acf0",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-program",
@@ -827,6 +827,7 @@
           "branch_protection"
         ],
         "blocking": [
+          "security_policy",
           "owner_signoff"
         ],
         "checked_head": "8ff1dbf210b9bf276d4b715996bdb11d0424be9f",
@@ -927,7 +928,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 22,
+        "age_hours": 23,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -948,7 +949,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 22,
+        "age_hours": 23,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",
