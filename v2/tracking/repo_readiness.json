@@ -308,7 +308,7 @@
       "workstream_ids": [
         "RAAS"
       ],
-      "checked_head": "eb8942164132b52412cdf296eacef535b558357b",
+      "checked_head": "ca054f906b067ed4acfcd0327159a074530e7229",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out; D-036 already states the repo is to become private"
@@ -322,19 +322,20 @@
         {
           "id": "milestone_sync",
           "status": "PASS",
-          "detail": "Not in the baseline (D-026 onboarding not started). The planning inventory covers B-INC-001 to B-INC-004 (67 tasks); each group's pinned TASKS.md has the same sha256 as head, and every task heading is extracted",
+          "detail": "Not in the baseline (D-026 onboarding not started). The planning inventory covers B-INC-001 to B-INC-004 (67 tasks); each group's pinned TASKS.md has the same sha256 as head, and every task heading is extracted. The RAAS status report (source eb89421, 1 merge commit behind head) lists the same 67 tasks as the inventory",
           "evidence": "inventory --verify-sources against a clone at eb89421 on 2026-10-17"
         },
         {
           "id": "status_report",
-          "status": "OPEN",
-          "detail": "The schema 2.0 generator and status/status.json (67 tasks) are in a pending PR; this becomes PASS after it merges and the repo is re-checked"
+          "status": "PASS",
+          "detail": "status/status.json (schema 2.0, RAAS, 67 tasks) and the generator are merged (PR #53); the status-report workflow checks them",
+          "evidence": "files present at head ca054f9; python3 scripts/status/gen_status.py --check-facts passes on a fresh clone, 2026-10-17; this repo alone was re-checked at ca054f9 after PR #53 merged"
         },
         {
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at eb89421: 126 commits, 0 findings, run 2026-10-17 with .gitleaksignore applied"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at ca054f9: 128 commits, 0 findings, run 2026-10-17 with .gitleaksignore applied"
         },
         {
           "id": "secret_scan_ci",
