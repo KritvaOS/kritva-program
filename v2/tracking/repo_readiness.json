@@ -3,7 +3,7 @@
   "readiness_version": 1,
   "target_date": "2026-11-15",
   "report_due": "2026-11-14",
-  "checked_at": "2026-10-17T18:30:00Z",
+  "checked_at": "2026-10-17T20:00:00Z",
   "basis": "Facts read from git (clones of each repo's main) and the committed program files on 2026-10-17. GitHub settings (visibility, rulesets, required checks) are not readable by Claude, so they are ATTESTED, OPEN or marked as owner statements.",
   "repos": [
     {
@@ -11,7 +11,7 @@
       "workstream_ids": [
         "CI_DEV_INFRA"
       ],
-      "checked_head": "40515d295133b8366a5a8717b7427736cbd5acf0",
+      "checked_head": "c59a4a77dfd71a5ed814f5327b853048a836d581",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -42,7 +42,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 40515d2: 43 commits, 0 findings, re-run 2026-10-17 on current main"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at c59a4a7: 44 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged"
         },
         {
           "id": "secret_scan_ci",
@@ -65,20 +65,20 @@
         {
           "id": "security_policy",
           "status": "PASS",
-          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
-          "evidence": "file present at d6f5525"
+          "detail": "SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified",
+          "evidence": "SECURITY.md at c59a4a7"
         },
         {
           "id": "codeowners",
           "status": "PASS",
-          "detail": "CODEOWNERS assigns * to @dineshannayya (added by the owner in PR #10)",
-          "evidence": "file present at head 6e740e4"
+          "detail": "CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested",
+          "evidence": "CODEOWNERS at c59a4a7"
         },
         {
           "id": "agents_md",
-          "status": "OPEN",
-          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
-          "evidence": "patch prepared; not yet merged"
+          "status": "PASS",
+          "detail": "Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries",
+          "evidence": "AGENTS.md present at c59a4a7"
         },
         {
           "id": "branch_protection",
@@ -114,7 +114,7 @@
       "workstream_ids": [
         "CORE"
       ],
-      "checked_head": "46bd189abfc932d7f860afb54b16f7772e9a812a",
+      "checked_head": "e2bf60cd0f50699fb7d6bb3a83cc2ca4168c50e4",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -145,7 +145,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history, tags included",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 46bd189: 319 commits, 0 findings, re-run 2026-10-17 on current main"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at e2bf60c: 320 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged"
         },
         {
           "id": "secret_scan_ci",
@@ -168,14 +168,14 @@
         {
           "id": "security_policy",
           "status": "PASS",
-          "detail": "SECURITY.md names GitHub private vulnerability reporting and Dinesh as Security Owner (D-035)",
-          "evidence": "file present at head"
+          "detail": "SECURITY.md present. Private vulnerability reporting setting not verified",
+          "evidence": "SECURITY.md at e2bf60c"
         },
         {
           "id": "codeowners",
           "status": "PASS",
-          "detail": "CODEOWNERS assigns * to @dineshannayya (D-035)",
-          "evidence": "file present at head"
+          "detail": "CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested",
+          "evidence": "CODEOWNERS at e2bf60c"
         },
         {
           "id": "agents_md",
@@ -217,7 +217,7 @@
       "workstream_ids": [
         "COMMUNITY"
       ],
-      "checked_head": "8ff1dbf210b9bf276d4b715996bdb11d0424be9f",
+      "checked_head": "6886095d5c17986be93858b0a04597c7a26e6fef",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -248,7 +248,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 8ff1dbf: 64 commits, 0 findings, re-run 2026-10-17 on current main"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 6886095: 65 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged"
         },
         {
           "id": "secret_scan_ci",
@@ -272,13 +272,13 @@
           "id": "security_policy",
           "status": "OPEN",
           "detail": "SECURITY.md is present but its reporting contact is still the placeholder <SECURITY_EMAIL_TO_BE_DEFINED>. The Security Owner must supply a contact or confirm GitHub private vulnerability reporting is enabled; file presence alone is not a working reporting path",
-          "evidence": "SECURITY.md at 8ff1dbf"
+          "evidence": "SECURITY.md at 6886095"
         },
         {
           "id": "codeowners",
           "status": "PASS",
-          "detail": "CODEOWNERS assigns * to @dineshannayya (added by the owner in PR #2); the governance PR only corrects its header and paths",
-          "evidence": "file present at head 70607a5"
+          "detail": "CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested",
+          "evidence": "CODEOWNERS at 6886095"
         },
         {
           "id": "agents_md",
@@ -320,7 +320,7 @@
       "workstream_ids": [
         "RAAS"
       ],
-      "checked_head": "2917d965c2b9afe713c48d7dd2da63e60724bc95",
+      "checked_head": "a0be181cd2e5e3def0a11abe4ec46e99f564066c",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out; D-036 already states the repo is to become private"
@@ -347,7 +347,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 2917d96: 76 commits, 0 findings, re-run 2026-10-17 on current main"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at a0be181: 77 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged"
         },
         {
           "id": "secret_scan_ci",
@@ -370,20 +370,20 @@
         {
           "id": "security_policy",
           "status": "PASS",
-          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
-          "evidence": "file present at 2917d96"
+          "detail": "SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified",
+          "evidence": "SECURITY.md at a0be181"
         },
         {
           "id": "codeowners",
           "status": "PASS",
-          "detail": ".github/CODEOWNERS present on main (governance PR merged, D-035, D-040)",
-          "evidence": "file present at 2917d96"
+          "detail": "CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested",
+          "evidence": "CODEOWNERS at a0be181"
         },
         {
           "id": "agents_md",
-          "status": "OPEN",
-          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
-          "evidence": "patch prepared; not yet merged"
+          "status": "PASS",
+          "detail": "Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries",
+          "evidence": "AGENTS.md present at a0be181"
         },
         {
           "id": "branch_protection",
@@ -418,7 +418,7 @@
       "workstream_ids": [
         "ACT_INT"
       ],
-      "checked_head": "17905f33848c15f6abb2e87c3561f3d50af51933",
+      "checked_head": "923d71a50505ddc06fc21800df4e8a13807e1f4c",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -445,7 +445,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 17905f3: 20 commits, 0 findings, re-run 2026-10-17 on current main"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 923d71a: 21 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged"
         },
         {
           "id": "secret_scan_ci",
@@ -468,20 +468,20 @@
         {
           "id": "security_policy",
           "status": "PASS",
-          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
-          "evidence": "file present at 17905f3"
+          "detail": "SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified",
+          "evidence": "SECURITY.md at 923d71a"
         },
         {
           "id": "codeowners",
           "status": "PASS",
-          "detail": "CODEOWNERS assigns * to @dineshannayya",
-          "evidence": "file present at head"
+          "detail": "CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested",
+          "evidence": "CODEOWNERS at 923d71a"
         },
         {
           "id": "agents_md",
-          "status": "OPEN",
-          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
-          "evidence": "patch prepared; not yet merged"
+          "status": "PASS",
+          "detail": "Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD",
+          "evidence": "AGENTS.md present at 923d71a"
         },
         {
           "id": "branch_protection",
@@ -517,7 +517,7 @@
       "workstream_ids": [
         "ACT_EMB"
       ],
-      "checked_head": "4b21100e66ecd082c475263faf8a39309b3d35ba",
+      "checked_head": "4508d45cadefa0610882e190ad9cebd78e0dcbbb",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -544,7 +544,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 4b21100: 8 commits, 0 findings, re-run 2026-10-17 on current main"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 4508d45: 9 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged"
         },
         {
           "id": "secret_scan_ci",
@@ -567,20 +567,20 @@
         {
           "id": "security_policy",
           "status": "PASS",
-          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
-          "evidence": "file present at 4b21100"
+          "detail": "SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified",
+          "evidence": "SECURITY.md at 4508d45"
         },
         {
           "id": "codeowners",
           "status": "PASS",
-          "detail": "CODEOWNERS assigns * to @dineshannayya",
-          "evidence": "file present at head"
+          "detail": "CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested",
+          "evidence": "CODEOWNERS at 4508d45"
         },
         {
           "id": "agents_md",
-          "status": "OPEN",
-          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
-          "evidence": "patch prepared; not yet merged"
+          "status": "PASS",
+          "detail": "Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD",
+          "evidence": "AGENTS.md present at 4508d45"
         },
         {
           "id": "branch_protection",
@@ -616,7 +616,7 @@
       "workstream_ids": [
         "ACT_S"
       ],
-      "checked_head": "5681991b52f3e93cdd16b2b3e9b6362e37ce7651",
+      "checked_head": "bb8e3f5dfbd31a2c5ac7bc4f27b17b785a2c7f12",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -643,7 +643,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 5681991: 6 commits, 0 findings, re-run 2026-10-17 on current main"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at bb8e3f5: 7 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged"
         },
         {
           "id": "secret_scan_ci",
@@ -666,20 +666,20 @@
         {
           "id": "security_policy",
           "status": "PASS",
-          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
-          "evidence": "file present at 5681991"
+          "detail": "SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified",
+          "evidence": "SECURITY.md at bb8e3f5"
         },
         {
           "id": "codeowners",
           "status": "PASS",
-          "detail": "CODEOWNERS assigns * to @dineshannayya",
-          "evidence": "file present at head"
+          "detail": "CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested",
+          "evidence": "CODEOWNERS at bb8e3f5"
         },
         {
           "id": "agents_md",
-          "status": "OPEN",
-          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
-          "evidence": "patch prepared; not yet merged"
+          "status": "PASS",
+          "detail": "Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD",
+          "evidence": "AGENTS.md present at bb8e3f5"
         },
         {
           "id": "branch_protection",
@@ -715,7 +715,7 @@
       "workstream_ids": [
         "ACT_M"
       ],
-      "checked_head": "42ef847d7619c9b3d7b19e2ad6eead986b63dc3c",
+      "checked_head": "5b94ede135e5a25fc716d9eb011bd4992c3240c8",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -742,7 +742,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 42ef847: 6 commits, 0 findings, re-run 2026-10-17 on current main"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 5b94ede: 7 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged"
         },
         {
           "id": "secret_scan_ci",
@@ -765,20 +765,20 @@
         {
           "id": "security_policy",
           "status": "PASS",
-          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
-          "evidence": "file present at 42ef847"
+          "detail": "SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified",
+          "evidence": "SECURITY.md at 5b94ede"
         },
         {
           "id": "codeowners",
           "status": "PASS",
-          "detail": "CODEOWNERS assigns * to @dineshannayya",
-          "evidence": "file present at head"
+          "detail": "CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested",
+          "evidence": "CODEOWNERS at 5b94ede"
         },
         {
           "id": "agents_md",
-          "status": "OPEN",
-          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
-          "evidence": "patch prepared; not yet merged"
+          "status": "PASS",
+          "detail": "Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD",
+          "evidence": "AGENTS.md present at 5b94ede"
         },
         {
           "id": "branch_protection",
@@ -814,7 +814,7 @@
       "workstream_ids": [
         "ACT_L"
       ],
-      "checked_head": "66ee1a8dcc233b720a011a9b15eaf09e27446b06",
+      "checked_head": "5c17e463dd6ed7cdbf24c299c28dcb5bcb734975",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -841,7 +841,7 @@
           "id": "history_secret_scan",
           "status": "PASS",
           "detail": "No secret findings in history",
-          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 66ee1a8: 6 commits, 0 findings, re-run 2026-10-17 on current main"
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 5c17e46: 7 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged"
         },
         {
           "id": "secret_scan_ci",
@@ -864,20 +864,20 @@
         {
           "id": "security_policy",
           "status": "PASS",
-          "detail": "SECURITY.md present on main (governance PR merged, D-035, D-040)",
-          "evidence": "file present at 66ee1a8"
+          "detail": "SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified",
+          "evidence": "SECURITY.md at 5c17e46"
         },
         {
           "id": "codeowners",
           "status": "PASS",
-          "detail": "CODEOWNERS assigns * to @dineshannayya",
-          "evidence": "file present at head"
+          "detail": "CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested",
+          "evidence": "CODEOWNERS at 5c17e46"
         },
         {
           "id": "agents_md",
-          "status": "OPEN",
-          "detail": "Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head",
-          "evidence": "patch prepared; not yet merged"
+          "status": "PASS",
+          "detail": "Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD",
+          "evidence": "AGENTS.md present at 5c17e46"
         },
         {
           "id": "branch_protection",
