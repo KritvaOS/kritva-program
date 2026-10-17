@@ -734,7 +734,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T17:15:54Z",
+  "generated_at": "2026-10-17T17:40:11Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -754,6 +754,44 @@
       "uncredited_tasks": 16
     }
   },
+  "phase_sequence": [
+    [
+      "P0",
+      "FOUNDATION"
+    ],
+    [
+      "P1",
+      "STUDIO"
+    ],
+    [
+      "P2",
+      "BUILD & ARTIFACT"
+    ],
+    [
+      "P3",
+      "CONTROL PLANE"
+    ],
+    [
+      "P4",
+      "BOOKING & COMMERCIAL"
+    ],
+    [
+      "P5",
+      "EXECUTION"
+    ],
+    [
+      "P6",
+      "LAB & ROBOT"
+    ],
+    [
+      "P7",
+      "LIVE & RESULTS"
+    ],
+    [
+      "P8",
+      "PRODUCTION"
+    ]
+  ],
   "program_status": {
     "accepted_progress": "0% of the P0 baseline (no tasks defined or accepted yet)",
     "as_of": "2026-10-09",
@@ -906,7 +944,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 23,
+        "age_hours": 24,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -918,7 +956,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-10-16T17:21:54Z",
         "fetched_head": "794cf195303a5854b63104c91880432d4e905ee2",
-        "freshness": "FRESH",
+        "freshness": "WARN",
         "gap_kind": "STATUS_TOOLING",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritvaos-community",
@@ -927,7 +965,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 23,
+        "age_hours": 24,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",
@@ -939,7 +977,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-10-16T17:21:54Z",
         "fetched_head": "42c6e840e83abda909c571f2d43c7a21ba8d2021",
-        "freshness": "FRESH",
+        "freshness": "WARN",
         "gap_kind": "STATUS_TOOLING",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-core",
