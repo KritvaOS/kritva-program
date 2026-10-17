@@ -39,8 +39,10 @@ class ReadinessTests(unittest.TestCase):
         for ws in ("CORE", "COMMUNITY", "RAAS", "CI_DEV_INFRA", "ACT_INT", "ACT_EMB", "ACT_S", "ACT_M", "ACT_L"):
             self.assertIn(self.reg[ws]["repo"], listed)
 
-    def test_no_repo_is_ready_before_owner_signoff(self):
-        for r in self.doc["repos"]:
+    def test_no_repo_is_ready_without_owner_signoff(self):
+        doc = copy.deepcopy(self.doc)
+        for r in doc["repos"]:
+            self.check(r, "owner_signoff")["status"] = "DECISION"
             state, blocking = R.readiness(r)
             self.assertEqual(state, "NOT_READY")
             self.assertIn("owner_signoff", blocking)
@@ -71,7 +73,9 @@ class ReadinessTests(unittest.TestCase):
 
     def test_signoff_without_evidence_is_rejected(self):
         doc = copy.deepcopy(self.doc)
-        self.check(self.repo(doc, "KritvaOS/kritva-core"), "owner_signoff")["status"] = "PASS"
+        c = self.check(self.repo(doc, "KritvaOS/kritva-core"), "owner_signoff")
+        c["status"] = "PASS"
+        c.pop("evidence", None)
         self.assertTrue(any("owner_signoff" in p for p in self.errs(doc)[0]))
 
     def test_structure_errors(self):
@@ -120,7 +124,9 @@ class ReadinessTests(unittest.TestCase):
         self.assertNotIn("readiness_doc", c)
 
     def test_render_lists_every_repo_with_checklist_marks(self):
-        text = "\n".join(R.render_lines(self.doc))
+        doc = copy.deepcopy(self.doc)
+        self.check(self.repo(doc, "KritvaOS/kritva-core"), "owner_signoff")["status"] = "DECISION"
+        text = "\n".join(R.render_lines(doc))
         for r in self.doc["repos"]:
             self.assertIn(f"### {r['repo']}", text)
         self.assertIn("- [x] **PASS** history_secret_scan", text)
