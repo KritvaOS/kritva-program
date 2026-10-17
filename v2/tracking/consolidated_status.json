@@ -734,7 +734,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T10:12:05Z",
+  "generated_at": "2026-10-17T12:47:12Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -849,7 +849,6 @@
       {
         "attested": [],
         "blocking": [
-          "status_report",
           "license",
           "security_policy",
           "codeowners",
@@ -858,7 +857,7 @@
           "security_disposition",
           "owner_signoff"
         ],
-        "checked_head": "eb8942164132b52412cdf296eacef535b558357b",
+        "checked_head": "ca054f906b067ed4acfcd0327159a074530e7229",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-raas",
@@ -951,7 +950,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 16,
+        "age_hours": 19,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -972,7 +971,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 16,
+        "age_hours": 19,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",

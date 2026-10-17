@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-17T10:12:05Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T12:47:12Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,12 +36,12 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T10:12:05Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T12:47:12Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (16h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
-| CORE | FRESH | 2026-10-16T17:21:54Z (16h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
+| COMMUNITY | FRESH | 2026-10-16T17:21:54Z (19h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | FRESH | 2026-10-16T17:21:54Z (19h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 
@@ -205,7 +205,7 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 | KritvaOS/kritva-program | PUBLIC | **PRIVATE** | 6401efe | NOT_READY | 8: secret_scan_ci, commit_message_check, license, security_policy, codeowners, agents_md, branch_hygiene, owner_signoff | branch_protection |
 | KritvaOS/kritva-core | PUBLIC | **PRIVATE** | 6835cd0 | NOT_READY | 4: secret_scan_ci, commit_message_check, contract_pin, owner_signoff | branch_protection |
 | KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 794cf19 | NOT_READY | 4: secret_scan_ci, commit_message_check, codeowners, owner_signoff | branch_protection |
-| KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | eb89421 | NOT_READY | 8: status_report, license, security_policy, codeowners, agents_md, branch_protection, security_disposition, owner_signoff | - |
+| KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | ca054f9 | NOT_READY | 7: license, security_policy, codeowners, agents_md, branch_protection, security_disposition, owner_signoff | - |
 | KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 177645e | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
 | KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 9ce5069 | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
 | KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | ef217ec | NOT_READY | 6: secret_scan_ci, commit_message_check, security_policy, agents_md, branch_protection, owner_signoff | - |
@@ -279,11 +279,11 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out; D-036 already states the repo is to become private)
 - Recommended: **PRIVATE**. D-036: the owner stated the repo is to be private. Its files carry a proprietary license and an open credential-shaped finding (SEC-GATE-001). Owner action: Record the SEC-GATE-001 disposition and the governance decisions, then switch visibility on or before 2026-11-15.
-- Checked head: eb8942164132b52412cdf296eacef535b558357b; workstreams: RAAS; readiness NOT_READY
+- Checked head: ca054f906b067ed4acfcd0327159a074530e7229; workstreams: RAAS; readiness NOT_READY
 
-- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): Not in the baseline (D-026 onboarding not started). The planning inventory covers B-INC-001 to B-INC-004 (67 tasks); each group's pinned TASKS.md has the same sha256 as head, and every task heading is extracted Evidence: inventory --verify-sources against a clone at eb89421 on 2026-10-17
-- [ ] **OPEN** status_report (Schema 2.0 status report committed in the repo): The schema 2.0 generator and status/status.json (67 tasks) are in a pending PR; this becomes PASS after it merges and the repo is re-checked
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review Evidence: gitleaks 8.18.4 over all refs of a full clone at eb89421: 126 commits, 0 findings, run 2026-10-17 with .gitleaksignore applied
+- [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): Not in the baseline (D-026 onboarding not started). The planning inventory covers B-INC-001 to B-INC-004 (67 tasks); each group's pinned TASKS.md has the same sha256 as head, and every task heading is extracted. The RAAS status report (source eb89421, 1 merge commit behind head) lists the same 67 tasks as the inventory Evidence: inventory --verify-sources against a clone at eb89421 on 2026-10-17
+- [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, RAAS, 67 tasks) and the generator are merged (PR #53); the status-report workflow checks them Evidence: files present at head ca054f9; python3 scripts/status/gen_status.py --check-facts passes on a fresh clone, 2026-10-17; this repo alone was re-checked at ca054f9 after PR #53 merged
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review Evidence: gitleaks 8.18.4 over all refs of a full clone at ca054f9: 128 commits, 0 findings, run 2026-10-17 with .gitleaksignore applied
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans history Evidence: workflow file present at head; PR #52 merged after the owner reported success
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow, hook and tests are present; 62 historical commits carry session trailers and history is not rewritten Evidence: workflow and script present at head
 - [ ] **DECISION** license (LICENSE file): No LICENSE file; source headers say LicenseRef-KritvaOS-Proprietary. The owner decides the licence and governance baseline
