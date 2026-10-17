@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""At-a-glance charts for v2/tracking/STATUS_VIEW.md (display only).
+"""Executive sections for v2/tracking/STATUS_VIEW.md (display only; plain Markdown, no Mermaid).
 
 Everything here is derived from the already-validated consolidated data. It never feeds credit, the
 baseline, approvals or readiness. Rules (aligned with the external review, 2026-10-17):
@@ -10,10 +10,14 @@ baseline, approvals or readiness. Rules (aligned with the external review, 2026-
 * Every progress figure shows its numerator and denominator; every effort figure shows PM units and
   the estimate caveat.
 * If totals do not reconcile, the chart is replaced by a NOT_VERIFIED line instead of being drawn.
-* Charts are snapshots, not approvals, schedule commitments or forecasts.
+* Views are snapshots, not approvals, schedule commitments or forecasts.
+* Plain Markdown tables and text only: no Mermaid or other rich-display blocks (the owner's viewer did not render them).
+* Nothing is invented: owners and dates appear only where a program record holds them; otherwise "not recorded".
 """
 import re
 from pathlib import Path
+
+import readiness as _rd
 
 BAR_WIDTH = 30
 
@@ -58,75 +62,225 @@ def _fmt(x):
     return f"{x:g}"
 
 
-def render_lines(c, phases):
-    L = ["", "## At a glance", "",
-         f"Snapshot of committed data, generated {c['generated_at']}. These charts are views of the records below: "
-         "they are not approvals, schedule commitments or forecasts, and the three measures are never combined into one health figure.", ""]
+SEVERITY = {"FAIL": 0, "DECISION": 1, "OPEN": 2}
+CODE = {"PASS": "PASS", "ATTESTED": "ATT", "OPEN": "OPEN", "FAIL": "FAIL", "DECISION": "DEC", "NA": "NA"}
+UNVERIFIED = re.compile(r"^(?P<w>[A-Z0-9_]+): no status source \(UNVERIFIED\)$")
+
+
+def short_repo(name):
+    n = name.split("/")[-1]
+    for pre in ("kritva-actuator-", "kritvaos-", "kritva-"):
+        if n.startswith(pre) and n != pre:
+            return n[len(pre):]
+    return n
+
+
+def _pct(v):
+    return f"{100 * v['accepted_weight'] / v['weight']:.1f}%" if v["weight"] else "n/a"
+
+
+def header_lines(c):
+    errs, warns = len(c["errors"]), len(c["warnings"])
+    return [f"Snapshot generated {c['generated_at']} from committed data. Baseline v{c['baseline_version']} "
+            f"({'APPROVED' if c['baseline_approved'] else 'DRAFT, not approved'}). "
+            f"Validation: {errs} error(s), {warns} warning(s) (see Data quality). "
+            "Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).", "",
+            "Views are snapshots of the records, not approvals, schedule commitments or forecasts. "
+            "The three measures are never combined into one health figure.", ""]
+
+
+def owner_action_rows(c):
+    """Open items taken from program records only. Returns [(item, why, owner, record)]."""
+    rows = []
+    rd = c.get("readiness_doc")
+    if rd:
+        found = []
+        for r in rd["repos"]:
+            for ch in r["checks"]:
+                if ch["status"] in SEVERITY:
+                    found.append((SEVERITY[ch["status"]], r["repo"], ch))
+        for _, repo, ch in sorted(found, key=lambda x: (x[0], x[1], x[2]["id"])):
+            rows.append((f"{short_repo(repo)}: {ch['id']} is {ch['status']}", ch["detail"], "not recorded per check",
+                         "v2/tracking/repo_readiness.json"))
+    for g in c["gates"]:
+        if g["status"] != "CLOSED":
+            rows.append((f"{g['gate_id']} is {g['status']}", f"{g['title']}. Blocks {', '.join(g['blocking_effect'])}",
+                         g.get("owner") or "not recorded", "v2/GATE_REGISTER.md, v2/tracking/gate_closures.json"))
+    waiting = sorted(t["task_id"] for t in c["tasks"] if t.get("evidence_state") == "REPORTED_AWAITING_APPROVAL")
+    if waiting:
+        rows.append((f"{len(waiting)} task(s) have reported CI evidence awaiting central approval",
+                     f"Zero credit until an approval is recorded: {', '.join(waiting)}", "not recorded", "v2/tracking/approvals.json"))
+    return rows
+
+
+def owner_actions_lines(c):
+    L = ["## Owner actions and blockers", ""]
+    rows = owner_action_rows(c)
+    if not rows:
+        return L + ["None recorded.", ""]
+    L += ["Open items derived from the program records. Owners and due dates appear only where a record holds them. "
+          "Pending decisions are tracked in [v2/DECISIONS.md](../DECISIONS.md) and are not parsed here.", "",
+          "| # | Item | Why it matters | Recorded owner | Record |", "|---|---|---|---|---|"]
+    for i, (a, b, o, r) in enumerate(rows, 1):
+        L.append(f"| {i} | {a} | {b.replace('|', '/')} | {o} | {r} |")
+    return L + [""]
+
+
+def facts(c):
+    rd = c.get("readiness") or {"repos": []}
+    ef = (c.get("effort") or {}).get("program_planning") or {}
+    return {"progress": c["progress"].get("basis"), "progress_pct": c["progress"].get("accepted_progress_pct"),
+            "credited": sorted(t["task_id"] for t in c["tasks"] if t["credit"]),
+            "gates": {g["gate_id"]: g["status"] for g in c["gates"]},
+            "readiness": {r["repo"]: [r["readiness"], sorted(r["blocking"])] for r in rd["repos"]},
+            "effort_completed": ef.get("completed"), "effort_remaining": ef.get("remaining"),
+            "errors": len(c["errors"]), "warnings": len(c["warnings"])}
+
+
+def diff_facts(old, new):
+    out = []
+    if old["progress"] != new["progress"]:
+        out.append(f"Accepted progress: {old['progress']} -> {new['progress']}")
+    a, b = set(old["credited"]), set(new["credited"])
+    if a != b:
+        out.append("Credited tasks: " + "; ".join(x for x in (
+            f"added {', '.join(sorted(b - a))}" if b - a else "", f"removed {', '.join(sorted(a - b))}" if a - b else "") if x))
+    for k in sorted(set(old["gates"]) | set(new["gates"])):
+        if old["gates"].get(k) != new["gates"].get(k):
+            out.append(f"Gate {k}: {old['gates'].get(k, 'absent')} -> {new['gates'].get(k, 'absent')}")
+    for k in sorted(set(old["readiness"]) | set(new["readiness"])):
+        o, n = old["readiness"].get(k), new["readiness"].get(k)
+        if o != n:
+            out.append(f"Readiness {short_repo(k)}: {o[0] if o else 'absent'} -> {n[0] if n else 'absent'}"
+                       + (f" (open: {', '.join(n[1]) or 'none'})" if n else ""))
+    for key, lab in (("effort_completed", "Effort completed (PM)"), ("effort_remaining", "Effort remaining (PM)")):
+        if old[key] != new[key]:
+            out.append(f"{lab}: {old[key]} -> {new[key]}")
+    for key, lab in (("errors", "Validation errors"), ("warnings", "Warnings")):
+        if old[key] != new[key]:
+            out.append(f"{lab}: {old[key]} -> {new[key]}")
+    return out
+
+
+def changes_record(prev, new_facts, generated_at):
+    """prev: the previous consolidated_status.json (or None). Idempotent: unchanged facts carry the earlier record over."""
+    pf = (prev or {}).get("status_facts")
+    if pf is None:
+        return {"since": None, "recorded_at": generated_at, "items": []}
+    if pf == new_facts:
+        return prev.get("changes") or {"since": None, "recorded_at": generated_at, "items": []}
+    return {"since": prev.get("generated_at"), "recorded_at": generated_at, "items": diff_facts(pf, new_facts)}
+
+
+def changes_lines(c):
+    ch = c.get("changes")
+    L = ["## What changed", ""]
+    if not ch or ch.get("since") is None:
+        return L + ["No earlier snapshot facts are recorded; changes are tracked from this snapshot onward.", ""]
+    L += [f"Compared with the snapshot generated {ch['since']} (recorded {ch['recorded_at']}). "
+          "The record is replaced only when a tracked fact changes.", ""]
+    return L + ([f"- {x}" for x in ch["items"]] if ch["items"] else ["No tracked fact changed."]) + [""]
+
+
+def progress_lines(c):
+    L = ["## Accepted engineering progress by workstream", ""]
     probs = check(c)
-    # 1. accepted progress by workstream
-    L += ["### Accepted engineering progress (frozen baseline, approval- and CI-evidence-credited)", ""]
     parts = _progress_parts(c)
     bw = c.get("by_workstream") or {}
     if probs or not parts or not bw:
-        L += [f"NOT_VERIFIED: {'; '.join(probs) or 'no baseline data'}. The chart is not drawn.", ""]
-    else:
-        pct = c["progress"]["accepted_progress_pct"]
-        L += ["```text", f"{_fmt(parts[0])}/{_fmt(parts[1])} weight  {bar(parts[0], parts[1])}  {pct}%", "```", "",
-              "| Workstream | Accepted weight | Baseline weight | Accepted share | Tasks credited / baselined |", "|---|---|---|---|---|"]
-        order = sorted(bw, key=lambda k: (-bw[k]["weight"], k))
-        for k in order:
-            v = bw[k]
-            L.append(f"| {k} | {_fmt(v['accepted_weight'])} | {_fmt(v['weight'])} | "
-                     f"{_fmt(v['accepted_weight'])}/{_fmt(v['weight'])} = {100 * v['accepted_weight'] / v['weight']:.1f}% | "
-                     f"{v['credited']}/{v['tasks']} |")
-        L += ["", "```mermaid", "xychart-beta",
-              "    title \"Accepted weight as % of each workstream's baseline weight\"",
-              "    x-axis [" + ", ".join(order) + "]",
-              "    y-axis \"Accepted / baseline weight (%)\" 0 --> 100",
-              "    bar [" + ", ".join(f"{100 * bw[k]['accepted_weight'] / bw[k]['weight']:.1f}" for k in order) + "]",
-              "```", "",
-              "Only the baselined workstreams are shown. Workstreams that are NOT BASELINED have no accepted progress to report; that is not zero progress.", ""]
-    # 2. effort
-    ef = (c.get("effort") or {}).get("program_planning")
-    L += ["### Estimated effort (owner estimate, person-months)", ""]
-    if not ef or any("effort" in p for p in probs):
-        L += ["NOT_VERIFIED: no approved effort estimate, or its totals do not reconcile.", ""]
-    else:
-        L += ["```text", f"~{ef['completed']} PM done of ~{ef['total']} PM  {bar(ef['completed'], ef['total'])}  ~{ef['remaining']} PM remaining", "```", "",
-              "Owner estimates from delivered scope, not timesheets. Effort is not accepted progress and not a schedule forecast "
-              f"(planning horizon stated by the owner: {ef.get('horizon_months', 'n/a')} months, not a demonstrated schedule).", ""]
-    # 3. readiness
-    rd = c.get("readiness")
-    L += ["### Repository readiness for the return to private (display only)", ""]
-    if not rd:
-        L += ["NOT_VERIFIED: no readiness record.", ""]
-    else:
-        ready = [r for r in rd["repos"] if r["readiness"] == "READY"]
-        L += [f"{len(ready)} of {len(rd['repos'])} repositories READY. Readiness is an operational checklist; it adds no task credit and does not change the baseline or the progress figure above.", "",
-              "| Repository | Readiness | Open checks | Attested, not verified |", "|---|---|---|---|"]
-        for r in rd["repos"]:
-            L.append(f"| {r['repo']} | {r['readiness']} | {', '.join(r['blocking']) or '-'} | {', '.join(r['attested']) or '-'} |")
-        L += ["", "Owners and due dates for open checks are not recorded in the readiness file, so none are shown here.", ""]
-    # 4. dated milestones
-    L += ["### Dated governance milestones (approved dates only)", ""]
-    if not rd:
-        L += ["NOT_VERIFIED: dates come from the readiness record, which is missing.", ""]
-    else:
-        snap = c["generated_at"][:10]
-        L += ["```mermaid", "gantt",
-              "    title Approved dates only (D-037); milestones carry no duration or work estimate",
-              "    dateFormat YYYY-MM-DD", "    axisFormat %d %b", "    todayMarker off",
-              "    section This report", f"    Status snapshot :milestone, m0, {snap}, 0d",
-              "    section Return to private", f"    Readiness report due :milestone, m1, {rd['report_due']}, 0d",
-              f"    Repositories return to private :milestone, m2, {rd['target_date']}, 0d",
-              "```", "",
-              "These are deadlines, not the start or length of any work. Open readiness checks are listed in the table above without invented dates.", ""]
-    # 5. phase sequence
-    L += ["### Phase sequence (dates not approved)", ""]
-    if not phases:
-        L += ["NOT_VERIFIED: the frozen phase names could not be read from v2/PROGRAM_PLAN.md.", ""]
-    else:
-        nodes = " --> ".join(f"{p}[\"{p} {n.replace('&', '#amp;')}\"]" for p, n in phases)
-        L += ["```mermaid", "flowchart LR", f"    {nodes}", "```", "",
-              "Order only. Phase start and end dates, durations and percent complete are TBD in [v2/ROADMAP.md](../ROADMAP.md); none are inferred here.", ""]
+        return L + [f"NOT_VERIFIED: {'; '.join(probs) or 'no baseline data'}. The breakdown is not shown.", ""]
+    pct = c["progress"]["accepted_progress_pct"]
+    L += ["```text", f"{_fmt(parts[0])}/{_fmt(parts[1])} weight  {bar(parts[0], parts[1])}  {pct}%", "```", ""]
+    L += ["| Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |", "|---|---|---|---|"]
+    for k in sorted(bw, key=lambda k: (-bw[k]["weight"], k)):
+        v = bw[k]
+        L.append(f"| {k} | {_fmt(v['accepted_weight'])}/{_fmt(v['weight'])} | {_pct(v)} | {v['credited']}/{v['tasks']} |")
+    L += ["", "Frozen baseline; credit needs a recorded approval and verified CI evidence. Only baselined workstreams are listed. "
+          "A workstream that is NOT BASELINED has no accepted progress to report; that is not zero progress.", ""]
     return L
+
+
+def effort_lines(c):
+    ef = (c.get("effort") or {}).get("program_planning")
+    L = ["## Estimated effort (owner estimate, person-months)", ""]
+    if not ef or any("effort" in p for p in check(c)):
+        return L + ["NOT_VERIFIED: no approved effort estimate, or its totals do not reconcile.", ""]
+    return L + ["```text", f"~{ef['completed']:g} PM done of ~{ef['total']:g} PM  {bar(ef['completed'], ef['total'])}  ~{ef['remaining']:g} PM remaining", "```", "",
+                "Owner estimates from delivered scope, not timesheets. Effort is not accepted progress and not a schedule forecast "
+                f"(planning horizon stated by the owner: {ef.get('horizon_months', 'n/a')} months, not a demonstrated schedule).", ""]
+
+
+def readiness_lines(c):
+    doc = c.get("readiness_doc")
+    L = ["## Repository readiness for the return to private", ""]
+    if not doc:
+        return L + ["NOT_VERIFIED: no readiness record.", ""]
+    repos = doc["repos"]
+    ready = [r for r in repos if _rd.readiness(r)[0] == "READY"]
+    L += [f"{len(ready)} of {len(repos)} repositories READY. Display only: readiness adds no task credit and does not change the baseline or the progress figure. "
+          "READY needs every check PASS, ATT (attested by the owner, not verified) or NA.", "",
+          "| Check | " + " | ".join(short_repo(r["repo"]) for r in repos) + " |", "|---|" + "---|" * len(repos)]
+    for cid in _rd.CHECK_IDS:
+        cells = []
+        for r in repos:
+            ch = next((x for x in r["checks"] if x["id"] == cid), None)
+            cells.append(CODE[ch["status"]] if ch else "-")
+        L.append(f"| {cid} | " + " | ".join(cells) + " |")
+    L.append("| **Readiness** | " + " | ".join("**" + _rd.readiness(r)[0] + "**" for r in repos) + " |")
+    L += ["", "Codes: PASS verified from git; ATT owner-attested; OPEN work remains; FAIL verified problem; DEC owner decision needed; NA not applicable. "
+          "Per-repo detail is in STATUS_DETAIL.md.", ""]
+    return L
+
+
+def milestones_lines(c):
+    rd = c.get("readiness")
+    L = ["## Dated milestones (approved dates only)", ""]
+    if not rd:
+        return L + ["NOT_VERIFIED: dates come from the readiness record, which is missing.", ""]
+    return L + ["| Date | Milestone | Record |", "|---|---|---|",
+                f"| {c['generated_at'][:10]} | This status snapshot | generated |",
+                f"| {rd['report_due']} | Readiness report due | D-037, repo_readiness.json |",
+                f"| {rd['target_date']} | Repositories return to private | D-037, repo_readiness.json |", "",
+                "These are deadlines, not the start or length of any work. Phase dates are not approved.", ""]
+
+
+def phase_lines(phases):
+    L = ["## Phase order (dates not approved)", ""]
+    if not phases:
+        return L + ["NOT_VERIFIED: the frozen phase names could not be read from v2/PROGRAM_PLAN.md.", ""]
+    return L + [" > ".join(f"{p} {n}" for p, n in phases), "",
+                "Order only. Start and end dates, durations and percent complete are TBD in [v2/ROADMAP.md](../ROADMAP.md); none are inferred here.", ""]
+
+
+def quality_lines(c):
+    L = ["## Data quality", ""]
+    unv, other = [], []
+    for w in c["warnings"]:
+        m = UNVERIFIED.match(w)
+        (unv if m else other).append(m.group("w") if m else w)
+    wsn = len(c["workstreams"])
+    base = len(c.get("by_workstream") or {})
+    L += ["| Measure | Value |", "|---|---|",
+          f"| Validation errors | {len(c['errors'])} |",
+          f"| Warnings | {len(c['warnings'])} |",
+          f"| Workstreams registered / baselined | {wsn} / {base} |",
+          f"| Workstreams with no status source (UNVERIFIED) | {len(unv)} |"]
+    sf = c.get("source_freshness")
+    if sf:
+        from collections import Counter
+        L.append("| Source freshness | " + ", ".join(f"{k} {v}" for k, v in sorted(Counter(r["freshness"] for r in sf["rows"]).items())) + " |")
+    L += [""]
+    if c["errors"]:
+        L += ["Errors:", ""] + [f"- {x}" for x in c["errors"]] + [""]
+    if unv:
+        L += [f"No status source, so no evidence and no credit (not zero progress): {', '.join(sorted(unv))}.", ""]
+    if other:
+        L += ["Other warnings:", ""] + [f"- {x}" for x in other] + [""]
+    return L
+
+
+def render_view_lines(c, phases, measures_table):
+    """measures_table: list of lines for the three-measures table, built by the consolidator."""
+    return [*header_lines(c), *owner_actions_lines(c), *changes_lines(c),
+            "## Three separate measures (never blended)", "", *measures_table, "",
+            *progress_lines(c), *effort_lines(c), *readiness_lines(c), *milestones_lines(c), *phase_lines(phases), *quality_lines(c)]

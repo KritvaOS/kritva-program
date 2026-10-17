@@ -54,7 +54,7 @@ class GateClosures(unittest.TestCase):
             self.assertEqual(consolidate(r).returncode, 0)
             x = row(r, "I3-001")
             self.assertTrue(x["credit"], x["credit_reason"])
-            view = (r / "v2/tracking/STATUS_VIEW.md").read_text()
+            view = (r / "v2/tracking/STATUS_VIEW.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text()
             self.assertIn("C001", view)
             # the other safety gate is untouched: I4 tasks stay blocked
             gates = {g["gate_id"]: g["status"] for g in json.loads((r / "v2/tracking/consolidated_status.json").read_text())["gates"]}

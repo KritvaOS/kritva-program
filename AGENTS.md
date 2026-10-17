@@ -25,7 +25,7 @@ These instructions apply to the `kritva-program` repository, the program's singl
     python3 tools/consolidate_status.py --sources-dir sources --check
     python3 tools/check_planning_inventory.py . --verify-sources <sources-dir>   # when the inventory changes
 
-Regenerate `v2/tracking/consolidated_status.json` and `STATUS_VIEW.md` with `tools/consolidate_status.py` after changing any tracking input; do not edit them by hand.
+Regenerate `v2/tracking/consolidated_status.json`, `STATUS_VIEW.md` and `STATUS_DETAIL.md` with `tools/consolidate_status.py` after changing any tracking input; do not edit them by hand.
 
 ## Secrets and data
 

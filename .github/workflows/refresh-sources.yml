@@ -30,7 +30,7 @@ jobs:
           git config user.name "kritva-status-bot"
           git config user.email "noreply@github.com"
           git checkout -B bot/refresh-sources
-          git add sources v2/tracking/consolidated_status.json v2/tracking/STATUS_VIEW.md
+          git add sources v2/tracking/consolidated_status.json v2/tracking/STATUS_VIEW.md v2/tracking/STATUS_DETAIL.md
           git commit -m "sources: refresh engineering status snapshots"
           git push --force origin bot/refresh-sources
           { echo "Automated refresh of committed status snapshots. Review the diff of sources/ and sources/MANIFEST.json."

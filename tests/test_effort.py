@@ -126,7 +126,7 @@ class Integration(unittest.TestCase):
             p = run(r, "--sources-dir", str(r / "sources"))
             self.assertEqual(p.returncode, 0, p.stderr)
             self.assertEqual(self.snapshot(r), before)
-            view = (r / "v2/tracking/STATUS_VIEW.md").read_text()
+            view = (r / "v2/tracking/STATUS_VIEW.md").read_text() + (r / "v2/tracking/STATUS_DETAIL.md").read_text()
             self.assertIn("Effort and capability", view)
             self.assertIn("NOT_ESTIMATED", view)
             self.assertIn("16 (13-19)", view)

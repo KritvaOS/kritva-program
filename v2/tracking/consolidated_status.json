@@ -79,6 +79,11 @@
       "weighted": true
     }
   },
+  "changes": {
+    "items": [],
+    "recorded_at": "2026-10-17T17:58:28Z",
+    "since": null
+  },
   "effort": {
     "capability_definition": "the owner's estimate of the share of the workstream's intended V2 scope that is delivered at the reporting cutoff. Denominator: the intended V2 scope of that workstream as the owner understands it; no formal capability inventory or weighting exists yet. Complete means delivered and working in software or documented design, never physical or safety validation. Evidence: owner judgement informed by repository state; it is not derived from PM spent or from accepted baseline weight. Owner: Dinesh. As of the reporting cutoff. A formal capability inventory with weights and completion criteria is still to be defined",
     "crosswalk_undecided": [],
@@ -734,7 +739,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T17:40:11Z",
+  "generated_at": "2026-10-17T17:58:28Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -988,6 +993,80 @@
     ],
     "stale_hours": 72,
     "warn_hours": 24
+  },
+  "status_facts": {
+    "credited": [
+      "I2-001",
+      "I2-002",
+      "I2-003",
+      "I2-004",
+      "I2-005",
+      "I2-006",
+      "KF-CORE-R10-001",
+      "KF-CORE-R10-002",
+      "KF-CORE-R10-003",
+      "KF-CORE-R10-004",
+      "KF-CORE-R10-005",
+      "KF-CORE-R10-006",
+      "KF-CORE-R10-007",
+      "KF-CORE-R10-008",
+      "KF-CORE-R10-009"
+    ],
+    "effort_completed": 70,
+    "effort_remaining": 175,
+    "errors": 0,
+    "gates": {
+      "GATE-KOS-CI-001": "OPEN",
+      "GATE-KOS-I3-SAFETY": "CLOSED",
+      "GATE-KOS-I4-SAFETY": "CLOSED"
+    },
+    "progress": "48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 46.15,
+    "readiness": {
+      "KritvaOS/kritva-actuator": [
+        "READY",
+        []
+      ],
+      "KritvaOS/kritva-actuator-embedded": [
+        "READY",
+        []
+      ],
+      "KritvaOS/kritva-actuator-l": [
+        "READY",
+        []
+      ],
+      "KritvaOS/kritva-actuator-m": [
+        "READY",
+        []
+      ],
+      "KritvaOS/kritva-actuator-s": [
+        "READY",
+        []
+      ],
+      "KritvaOS/kritva-core": [
+        "NOT_READY",
+        [
+          "contract_pin"
+        ]
+      ],
+      "KritvaOS/kritva-program": [
+        "READY",
+        []
+      ],
+      "KritvaOS/kritva-raas": [
+        "NOT_READY",
+        [
+          "security_disposition"
+        ]
+      ],
+      "KritvaOS/kritvaos-community": [
+        "NOT_READY",
+        [
+          "security_policy"
+        ]
+      ]
+    },
+    "warnings": 22
   },
   "tasks": [
     {
