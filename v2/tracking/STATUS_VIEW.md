@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-17T17:10:01Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T17:15:54Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,7 +36,7 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T17:10:01Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T17:15:54Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
@@ -202,21 +202,21 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 | Repo | Visibility now | Recommended | Checked head | Readiness | Blocking checks | Attested, not verified |
 |---|---|---|---|---|---|---|
-| KritvaOS/kritva-program | PUBLIC | **PRIVATE** | c59a4a7 | NOT_READY | 1: owner_signoff | branch_protection |
-| KritvaOS/kritva-core | PUBLIC | **PRIVATE** | e2bf60c | NOT_READY | 2: contract_pin, owner_signoff | branch_protection |
-| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 6886095 | NOT_READY | 2: security_policy, owner_signoff | branch_protection |
-| KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | a0be181 | NOT_READY | 2: security_disposition, owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 923d71a | NOT_READY | 1: owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 4508d45 | NOT_READY | 1: owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | bb8e3f5 | NOT_READY | 1: owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator-m | PUBLIC | **PRIVATE** | 5b94ede | NOT_READY | 1: owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator-l | PUBLIC | **PRIVATE** | 5c17e46 | NOT_READY | 1: owner_signoff | branch_protection |
+| KritvaOS/kritva-program | PUBLIC | **PRIVATE** | 798061b | READY | 0: - | branch_protection |
+| KritvaOS/kritva-core | PUBLIC | **PRIVATE** | e2bf60c | NOT_READY | 1: contract_pin | branch_protection |
+| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 6886095 | NOT_READY | 1: security_policy | branch_protection |
+| KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | a0be181 | NOT_READY | 1: security_disposition | branch_protection |
+| KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 923d71a | READY | 0: - | branch_protection |
+| KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 4508d45 | READY | 0: - | branch_protection |
+| KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | bb8e3f5 | READY | 0: - | branch_protection |
+| KritvaOS/kritva-actuator-m | PUBLIC | **PRIVATE** | 5b94ede | READY | 0: - | branch_protection |
+| KritvaOS/kritva-actuator-l | PUBLIC | **PRIVATE** | 5c17e46 | READY | 0: - | branch_protection |
 
 ### KritvaOS/kritva-program
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037. This repo holds the decision log, approvals and gate closures. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: c59a4a77dfd71a5ed814f5327b853048a836d581; workstreams: CI_DEV_INFRA; readiness NOT_READY
+- Checked head: 798061b075d3787c5135e75799e977ec43947a52; workstreams: CI_DEV_INFRA; readiness READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): KRP-ENG-001 (the only reported task) is a baseline v2 task, NOT_STARTED, uncredited. The committed source copy is byte-identical to status/status.json. The report's source commit 8e50865 trails head by 12 commits (decisions, tooling, tests, readiness and CI checks) Evidence: sha256 of sources/CI_DEV_INFRA.json equals status/status.json on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, CI_DEV_INFRA) is committed and checked by the status workflow Evidence: file present at head
@@ -231,7 +231,7 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists; the stale bot/refresh-sources branch has been removed (its PR #6 status is not visible to Claude) Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
-- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+- [x] **PASS** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15. Evidence: D-042; reviewed head 798061b
 
 ### KritvaOS/kritva-core
 
@@ -252,7 +252,7 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [ ] **OPEN** contract_pin (Pinned engineering-contract SHA (Core pilot)): The pinned engineering-contract SHA for the Core pilot is not recorded
-- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+- [x] **PASS** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. Sign-off does not waive the other open checks (contract_pin): no exception is recorded, so readiness stays NOT_READY until they are closed or the owner records an exception. The visibility switch itself is still the owner's action on or before 2026-11-15. Evidence: D-042; reviewed head e2bf60c
 
 ### KritvaOS/kritvaos-community
 
@@ -273,7 +273,7 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
-- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+- [x] **PASS** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. Sign-off does not waive the other open checks (security_policy): no exception is recorded, so readiness stays NOT_READY until they are closed or the owner records an exception. The visibility switch itself is still the owner's action on or before 2026-11-15. Evidence: D-042; reviewed head 6886095
 
 ### KritvaOS/kritva-raas
 
@@ -294,13 +294,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists after the owner removed the second branch (D-036) Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [ ] **OPEN** security_disposition (Every security finding has a recorded disposition): SEC-GATE-001 (a credential-shaped loopback DATABASE_URL example in history) has no Security Owner disposition or deadline yet (D-032)
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
-- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+- [x] **PASS** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. Sign-off does not waive the other open checks (security_disposition): no exception is recorded, so readiness stays NOT_READY until they are closed or the owner records an exception. The visibility switch itself is still the owner's action on or before 2026-11-15. Evidence: D-042; reviewed head a0be181
 
 ### KritvaOS/kritva-actuator
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 923d71a50505ddc06fc21800df4e8a13807e1f4c; workstreams: ACT_INT; readiness NOT_READY
+- Checked head: 923d71a50505ddc06fc21800df4e8a13807e1f4c; workstreams: ACT_INT; readiness READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 7 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_INT) was generated at 7a059d8 and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks) Evidence: git diff 7a059d8..9aac076 and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_INT) is committed Evidence: file present at head
@@ -315,13 +315,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
-- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+- [x] **PASS** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15. Evidence: D-042; reviewed head 923d71a
 
 ### KritvaOS/kritva-actuator-embedded
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 4508d45cadefa0610882e190ad9cebd78e0dcbbb; workstreams: ACT_EMB; readiness NOT_READY
+- Checked head: 4508d45cadefa0610882e190ad9cebd78e0dcbbb; workstreams: ACT_EMB; readiness READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 10 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_EMB) was generated at 240a92a and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks) Evidence: git diff 240a92a..2ceb68e and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_EMB) is committed Evidence: file present at head
@@ -336,13 +336,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
-- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+- [x] **PASS** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15. Evidence: D-042; reviewed head 4508d45
 
 ### KritvaOS/kritva-actuator-s
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: bb8e3f5dfbd31a2c5ac7bc4f27b17b785a2c7f12; workstreams: ACT_S; readiness NOT_READY
+- Checked head: bb8e3f5dfbd31a2c5ac7bc4f27b17b785a2c7f12; workstreams: ACT_S; readiness READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_S) was generated at e9d075f and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it Evidence: git diff e9d075f..21f7d90 and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_S) is committed Evidence: file present at head
@@ -357,13 +357,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
-- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+- [x] **PASS** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15. Evidence: D-042; reviewed head bb8e3f5
 
 ### KritvaOS/kritva-actuator-m
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 5b94ede135e5a25fc716d9eb011bd4992c3240c8; workstreams: ACT_M; readiness NOT_READY
+- Checked head: 5b94ede135e5a25fc716d9eb011bd4992c3240c8; workstreams: ACT_M; readiness READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_M) was generated at 0344b7d and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it Evidence: git diff 0344b7d..50afcde and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_M) is committed Evidence: file present at head
@@ -378,13 +378,13 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
-- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+- [x] **PASS** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15. Evidence: D-042; reviewed head 5b94ede
 
 ### KritvaOS/kritva-actuator-l
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 5c17e463dd6ed7cdbf24c299c28dcb5bcb734975; workstreams: ACT_L; readiness NOT_READY
+- Checked head: 5c17e463dd6ed7cdbf24c299c28dcb5bcb734975; workstreams: ACT_L; readiness READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_L) was generated at abf0782 and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it Evidence: git diff abf0782..de0e86a and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_L) is committed Evidence: file present at head
@@ -399,7 +399,7 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
 - [x] **NA** contract_pin (Pinned engineering-contract SHA (Core pilot)): Tracks the Core pilot's engineering contract only
-- [ ] **DECISION** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh has not yet authorised the visibility change for this repo (D-037)
+- [x] **PASS** owner_signoff (Owner authorises the visibility change (D-037)): Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15. Evidence: D-042; reviewed head 5c17e46
 
 ## Evidence health
 

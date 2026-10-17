@@ -11,7 +11,7 @@
       "workstream_ids": [
         "CI_DEV_INFRA"
       ],
-      "checked_head": "c59a4a77dfd71a5ed814f5327b853048a836d581",
+      "checked_head": "798061b075d3787c5135e75799e977ec43947a52",
       "visibility_now": {
         "state": "PUBLIC",
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
@@ -104,8 +104,9 @@
         },
         {
           "id": "owner_signoff",
-          "status": "DECISION",
-          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+          "status": "PASS",
+          "detail": "Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15.",
+          "evidence": "D-042; reviewed head 798061b"
         }
       ]
     },
@@ -207,8 +208,9 @@
         },
         {
           "id": "owner_signoff",
-          "status": "DECISION",
-          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+          "status": "PASS",
+          "detail": "Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. Sign-off does not waive the other open checks (contract_pin): no exception is recorded, so readiness stays NOT_READY until they are closed or the owner records an exception. The visibility switch itself is still the owner's action on or before 2026-11-15.",
+          "evidence": "D-042; reviewed head e2bf60c"
         }
       ]
     },
@@ -310,8 +312,9 @@
         },
         {
           "id": "owner_signoff",
-          "status": "DECISION",
-          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+          "status": "PASS",
+          "detail": "Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. Sign-off does not waive the other open checks (security_policy): no exception is recorded, so readiness stays NOT_READY until they are closed or the owner records an exception. The visibility switch itself is still the owner's action on or before 2026-11-15.",
+          "evidence": "D-042; reviewed head 6886095"
         }
       ]
     },
@@ -408,8 +411,9 @@
         },
         {
           "id": "owner_signoff",
-          "status": "DECISION",
-          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+          "status": "PASS",
+          "detail": "Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. Sign-off does not waive the other open checks (security_disposition): no exception is recorded, so readiness stays NOT_READY until they are closed or the owner records an exception. The visibility switch itself is still the owner's action on or before 2026-11-15.",
+          "evidence": "D-042; reviewed head a0be181"
         }
       ]
     },
@@ -507,8 +511,9 @@
         },
         {
           "id": "owner_signoff",
-          "status": "DECISION",
-          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+          "status": "PASS",
+          "detail": "Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15.",
+          "evidence": "D-042; reviewed head 923d71a"
         }
       ]
     },
@@ -606,8 +611,9 @@
         },
         {
           "id": "owner_signoff",
-          "status": "DECISION",
-          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+          "status": "PASS",
+          "detail": "Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15.",
+          "evidence": "D-042; reviewed head 4508d45"
         }
       ]
     },
@@ -705,8 +711,9 @@
         },
         {
           "id": "owner_signoff",
-          "status": "DECISION",
-          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+          "status": "PASS",
+          "detail": "Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15.",
+          "evidence": "D-042; reviewed head bb8e3f5"
         }
       ]
     },
@@ -804,8 +811,9 @@
         },
         {
           "id": "owner_signoff",
-          "status": "DECISION",
-          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+          "status": "PASS",
+          "detail": "Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15.",
+          "evidence": "D-042; reviewed head 5b94ede"
         }
       ]
     },
@@ -903,8 +911,9 @@
         },
         {
           "id": "owner_signoff",
-          "status": "DECISION",
-          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+          "status": "PASS",
+          "detail": "Dinesh (owner) authorised owner sign-off for this repo in chat on 2026-10-17 (D-042), reviewed at the head below, and asked Claude to record it. The visibility switch itself is still the owner's action on or before 2026-11-15.",
+          "evidence": "D-042; reviewed head 5c17e46"
         }
       ]
     }

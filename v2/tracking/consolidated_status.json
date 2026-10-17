@@ -734,7 +734,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T17:10:01Z",
+  "generated_at": "2026-10-17T17:15:54Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -798,11 +798,9 @@
         "attested": [
           "branch_protection"
         ],
-        "blocking": [
-          "owner_signoff"
-        ],
-        "checked_head": "c59a4a77dfd71a5ed814f5327b853048a836d581",
-        "readiness": "NOT_READY",
+        "blocking": [],
+        "checked_head": "798061b075d3787c5135e75799e977ec43947a52",
+        "readiness": "READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-program",
         "visibility_now": "PUBLIC"
@@ -812,8 +810,7 @@
           "branch_protection"
         ],
         "blocking": [
-          "contract_pin",
-          "owner_signoff"
+          "contract_pin"
         ],
         "checked_head": "e2bf60cd0f50699fb7d6bb3a83cc2ca4168c50e4",
         "readiness": "NOT_READY",
@@ -826,8 +823,7 @@
           "branch_protection"
         ],
         "blocking": [
-          "security_policy",
-          "owner_signoff"
+          "security_policy"
         ],
         "checked_head": "6886095d5c17986be93858b0a04597c7a26e6fef",
         "readiness": "NOT_READY",
@@ -840,8 +836,7 @@
           "branch_protection"
         ],
         "blocking": [
-          "security_disposition",
-          "owner_signoff"
+          "security_disposition"
         ],
         "checked_head": "a0be181cd2e5e3def0a11abe4ec46e99f564066c",
         "readiness": "NOT_READY",
@@ -853,11 +848,9 @@
         "attested": [
           "branch_protection"
         ],
-        "blocking": [
-          "owner_signoff"
-        ],
+        "blocking": [],
         "checked_head": "923d71a50505ddc06fc21800df4e8a13807e1f4c",
-        "readiness": "NOT_READY",
+        "readiness": "READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator",
         "visibility_now": "PUBLIC"
@@ -866,11 +859,9 @@
         "attested": [
           "branch_protection"
         ],
-        "blocking": [
-          "owner_signoff"
-        ],
+        "blocking": [],
         "checked_head": "4508d45cadefa0610882e190ad9cebd78e0dcbbb",
-        "readiness": "NOT_READY",
+        "readiness": "READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator-embedded",
         "visibility_now": "PUBLIC"
@@ -879,11 +870,9 @@
         "attested": [
           "branch_protection"
         ],
-        "blocking": [
-          "owner_signoff"
-        ],
+        "blocking": [],
         "checked_head": "bb8e3f5dfbd31a2c5ac7bc4f27b17b785a2c7f12",
-        "readiness": "NOT_READY",
+        "readiness": "READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator-s",
         "visibility_now": "PUBLIC"
@@ -892,11 +881,9 @@
         "attested": [
           "branch_protection"
         ],
-        "blocking": [
-          "owner_signoff"
-        ],
+        "blocking": [],
         "checked_head": "5b94ede135e5a25fc716d9eb011bd4992c3240c8",
-        "readiness": "NOT_READY",
+        "readiness": "READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator-m",
         "visibility_now": "PUBLIC"
@@ -905,11 +892,9 @@
         "attested": [
           "branch_protection"
         ],
-        "blocking": [
-          "owner_signoff"
-        ],
+        "blocking": [],
         "checked_head": "5c17e463dd6ed7cdbf24c299c28dcb5bcb734975",
-        "readiness": "NOT_READY",
+        "readiness": "READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator-l",
         "visibility_now": "PUBLIC"
