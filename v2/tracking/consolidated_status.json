@@ -734,7 +734,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T16:40:57Z",
+  "generated_at": "2026-10-17T17:10:01Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -791,7 +791,7 @@
     "basis": "48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "readiness": {
-    "checked_at": "2026-10-17T18:30:00Z",
+    "checked_at": "2026-10-17T20:00:00Z",
     "report_due": "2026-11-14",
     "repos": [
       {
@@ -799,10 +799,9 @@
           "branch_protection"
         ],
         "blocking": [
-          "agents_md",
           "owner_signoff"
         ],
-        "checked_head": "40515d295133b8366a5a8717b7427736cbd5acf0",
+        "checked_head": "c59a4a77dfd71a5ed814f5327b853048a836d581",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-program",
@@ -816,7 +815,7 @@
           "contract_pin",
           "owner_signoff"
         ],
-        "checked_head": "46bd189abfc932d7f860afb54b16f7772e9a812a",
+        "checked_head": "e2bf60cd0f50699fb7d6bb3a83cc2ca4168c50e4",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-core",
@@ -830,7 +829,7 @@
           "security_policy",
           "owner_signoff"
         ],
-        "checked_head": "8ff1dbf210b9bf276d4b715996bdb11d0424be9f",
+        "checked_head": "6886095d5c17986be93858b0a04597c7a26e6fef",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritvaos-community",
@@ -841,11 +840,10 @@
           "branch_protection"
         ],
         "blocking": [
-          "agents_md",
           "security_disposition",
           "owner_signoff"
         ],
-        "checked_head": "2917d965c2b9afe713c48d7dd2da63e60724bc95",
+        "checked_head": "a0be181cd2e5e3def0a11abe4ec46e99f564066c",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-raas",
@@ -856,10 +854,9 @@
           "branch_protection"
         ],
         "blocking": [
-          "agents_md",
           "owner_signoff"
         ],
-        "checked_head": "17905f33848c15f6abb2e87c3561f3d50af51933",
+        "checked_head": "923d71a50505ddc06fc21800df4e8a13807e1f4c",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator",
@@ -870,10 +867,9 @@
           "branch_protection"
         ],
         "blocking": [
-          "agents_md",
           "owner_signoff"
         ],
-        "checked_head": "4b21100e66ecd082c475263faf8a39309b3d35ba",
+        "checked_head": "4508d45cadefa0610882e190ad9cebd78e0dcbbb",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator-embedded",
@@ -884,10 +880,9 @@
           "branch_protection"
         ],
         "blocking": [
-          "agents_md",
           "owner_signoff"
         ],
-        "checked_head": "5681991b52f3e93cdd16b2b3e9b6362e37ce7651",
+        "checked_head": "bb8e3f5dfbd31a2c5ac7bc4f27b17b785a2c7f12",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator-s",
@@ -898,10 +893,9 @@
           "branch_protection"
         ],
         "blocking": [
-          "agents_md",
           "owner_signoff"
         ],
-        "checked_head": "42ef847d7619c9b3d7b19e2ad6eead986b63dc3c",
+        "checked_head": "5b94ede135e5a25fc716d9eb011bd4992c3240c8",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator-m",
@@ -912,10 +906,9 @@
           "branch_protection"
         ],
         "blocking": [
-          "agents_md",
           "owner_signoff"
         ],
-        "checked_head": "66ee1a8dcc233b720a011a9b15eaf09e27446b06",
+        "checked_head": "5c17e463dd6ed7cdbf24c299c28dcb5bcb734975",
         "readiness": "NOT_READY",
         "recommended": "PRIVATE",
         "repo": "KritvaOS/kritva-actuator-l",

@@ -13,7 +13,7 @@
 
 ## Summary
 
-- Generated at: 2026-10-17T16:40:57Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-17T17:10:01Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -36,7 +36,7 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-17T16:40:57Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-17T17:10:01Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
@@ -196,37 +196,37 @@ Monthly staffing and burn forecast: NOT PLANNED yet. It needs monthly staffing b
 
 ## Repo readiness for the return to private
 
-Target: 2026-11-15 (D-037); readiness report due 2026-11-14. Checked 2026-10-17T18:30:00Z. Facts read from git (clones of each repo's main) and the committed program files on 2026-10-17. GitHub settings (visibility, rulesets, required checks) are not readable by Claude, so they are ATTESTED, OPEN or marked as owner statements.
+Target: 2026-11-15 (D-037); readiness report due 2026-11-14. Checked 2026-10-17T20:00:00Z. Facts read from git (clones of each repo's main) and the committed program files on 2026-10-17. GitHub settings (visibility, rulesets, required checks) are not readable by Claude, so they are ATTESTED, OPEN or marked as owner statements.
 
 Readiness is derived from the checks below: READY only when every check is PASS, ATTESTED (owner-stated, not verified) or NA. The recommended state is advice; the owner switches visibility.
 
 | Repo | Visibility now | Recommended | Checked head | Readiness | Blocking checks | Attested, not verified |
 |---|---|---|---|---|---|---|
-| KritvaOS/kritva-program | PUBLIC | **PRIVATE** | 40515d2 | NOT_READY | 2: agents_md, owner_signoff | branch_protection |
-| KritvaOS/kritva-core | PUBLIC | **PRIVATE** | 46bd189 | NOT_READY | 2: contract_pin, owner_signoff | branch_protection |
-| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 8ff1dbf | NOT_READY | 2: security_policy, owner_signoff | branch_protection |
-| KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | 2917d96 | NOT_READY | 3: agents_md, security_disposition, owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 17905f3 | NOT_READY | 2: agents_md, owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 4b21100 | NOT_READY | 2: agents_md, owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | 5681991 | NOT_READY | 2: agents_md, owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator-m | PUBLIC | **PRIVATE** | 42ef847 | NOT_READY | 2: agents_md, owner_signoff | branch_protection |
-| KritvaOS/kritva-actuator-l | PUBLIC | **PRIVATE** | 66ee1a8 | NOT_READY | 2: agents_md, owner_signoff | branch_protection |
+| KritvaOS/kritva-program | PUBLIC | **PRIVATE** | c59a4a7 | NOT_READY | 1: owner_signoff | branch_protection |
+| KritvaOS/kritva-core | PUBLIC | **PRIVATE** | e2bf60c | NOT_READY | 2: contract_pin, owner_signoff | branch_protection |
+| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 6886095 | NOT_READY | 2: security_policy, owner_signoff | branch_protection |
+| KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | a0be181 | NOT_READY | 2: security_disposition, owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 923d71a | NOT_READY | 1: owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 4508d45 | NOT_READY | 1: owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator-s | PUBLIC | **PRIVATE** | bb8e3f5 | NOT_READY | 1: owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator-m | PUBLIC | **PRIVATE** | 5b94ede | NOT_READY | 1: owner_signoff | branch_protection |
+| KritvaOS/kritva-actuator-l | PUBLIC | **PRIVATE** | 5c17e46 | NOT_READY | 1: owner_signoff | branch_protection |
 
 ### KritvaOS/kritva-program
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037. This repo holds the decision log, approvals and gate closures. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 40515d295133b8366a5a8717b7427736cbd5acf0; workstreams: CI_DEV_INFRA; readiness NOT_READY
+- Checked head: c59a4a77dfd71a5ed814f5327b853048a836d581; workstreams: CI_DEV_INFRA; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): KRP-ENG-001 (the only reported task) is a baseline v2 task, NOT_STARTED, uncredited. The committed source copy is byte-identical to status/status.json. The report's source commit 8e50865 trails head by 12 commits (decisions, tooling, tests, readiness and CI checks) Evidence: sha256 of sources/CI_DEV_INFRA.json equals status/status.json on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, CI_DEV_INFRA) is committed and checked by the status workflow Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 40515d2: 43 commits, 0 findings, re-run 2026-10-17 on current main
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at c59a4a7: 44 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head b0c049c; merged in PR #8; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 5 commits on main carry one, history not rewritten Evidence: workflow, script and 6 unit tests present at head b0c049c (tests pass on a fresh clone); merged in PR #8
 - [x] **PASS** license (LICENSE file): LICENSE present on main (governance PR merged, D-035, D-040) - proprietary, as decided by owner Evidence: file present at d6f5525
-- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present on main (governance PR merged, D-035, D-040) Evidence: file present at d6f5525
-- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya (added by the owner in PR #10) Evidence: file present at head 6e740e4
-- [ ] **OPEN** agents_md (AGENTS.md): Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head Evidence: patch prepared; not yet merged
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified Evidence: SECURITY.md at c59a4a7
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested Evidence: CODEOWNERS at c59a4a7
+- [x] **PASS** agents_md (AGENTS.md): Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries Evidence: AGENTS.md present at c59a4a7
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists; the stale bot/refresh-sources branch has been removed (its PR #6 status is not visible to Claude) Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
@@ -237,16 +237,16 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 default. The Apache-2.0 license would permit a public release, but no public-release review exists. Owner action: If a public release is intended, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15.
-- Checked head: 46bd189abfc932d7f860afb54b16f7772e9a812a; workstreams: CORE; readiness NOT_READY
+- Checked head: e2bf60cd0f50699fb7d6bb3a83cc2ca4168c50e4; workstreams: CORE; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 9 reported tasks are the 9 Core R1.0 baseline tasks, all credited. The committed source copy is byte-identical to the repo's status/status.json. The report's source commit 54984ae trails head by 6 commits that touch status tooling, governance files and CI checks only, no planning records Evidence: sha256 comparison and git diff 54984ae..46bd189 on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, CORE) and status/evidence.json are committed; the status-report workflow checks them Evidence: files present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history, tags included Evidence: gitleaks 8.18.4 over all refs of a full clone at 46bd189: 319 commits, 0 findings, re-run 2026-10-17 on current main
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history, tags included Evidence: gitleaks 8.18.4 over all refs of a full clone at e2bf60c: 320 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 46bd189; merged in PR #2; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 46bd189 (tests pass on a fresh clone); merged in PR #2
 - [x] **PASS** license (LICENSE file): Apache License 2.0 Evidence: LICENSE present at head
-- [x] **PASS** security_policy (SECURITY.md): SECURITY.md names GitHub private vulnerability reporting and Dinesh as Security Owner (D-035) Evidence: file present at head
-- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya (D-035) Evidence: file present at head
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present. Private vulnerability reporting setting not verified Evidence: SECURITY.md at e2bf60c
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested Evidence: CODEOWNERS at e2bf60c
 - [x] **PASS** agents_md (AGENTS.md): AGENTS.md present Evidence: file present at head
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
@@ -258,16 +258,16 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 default, flagged for owner confirmation: the name and the Apache-2.0 license suggest a public community edition, but no public-release review exists. Owner action: Decide whether a public community release is intended. If so, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15.
-- Checked head: 8ff1dbf210b9bf276d4b715996bdb11d0424be9f; workstreams: COMMUNITY; readiness NOT_READY
+- Checked head: 6886095d5c17986be93858b0a04597c7a26e6fef; workstreams: COMMUNITY; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 21 reported tasks are the 21 Community baseline tasks. I2 (6) is credited; I3 and I4 (15) are uncredited because no task approvals are recorded, and their safety gates were closed on the owner's statement that the D-025 independent review is complete (D-033; reviewer not named, independence unverified). The committed source copy is byte-identical to the repo's status/status.json; the report's source commit 8256ba3 trails head by 3 commits that touch status tooling and CI checks only, no planning records Evidence: sha256 comparison and git diff 8256ba3..8dc9496 on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, COMMUNITY) and status/evidence.json are committed; the status-report workflow checks them Evidence: files present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 8ff1dbf: 64 commits, 0 findings, re-run 2026-10-17 on current main
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 6886095: 65 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 8dc9496; merged in PR #1; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 8dc9496 (tests pass on a fresh clone); merged in PR #1
 - [x] **PASS** license (LICENSE file): Apache License 2.0 Evidence: LICENSE present at head
-- [ ] **OPEN** security_policy (SECURITY.md): SECURITY.md is present but its reporting contact is still the placeholder <SECURITY_EMAIL_TO_BE_DEFINED>. The Security Owner must supply a contact or confirm GitHub private vulnerability reporting is enabled; file presence alone is not a working reporting path Evidence: SECURITY.md at 8ff1dbf
-- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya (added by the owner in PR #2); the governance PR only corrects its header and paths Evidence: file present at head 70607a5
+- [ ] **OPEN** security_policy (SECURITY.md): SECURITY.md is present but its reporting contact is still the placeholder <SECURITY_EMAIL_TO_BE_DEFINED>. The Security Owner must supply a contact or confirm GitHub private vulnerability reporting is enabled; file presence alone is not a working reporting path Evidence: SECURITY.md at 6886095
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested Evidence: CODEOWNERS at 6886095
 - [x] **PASS** agents_md (AGENTS.md): AGENTS.md present Evidence: file present at head
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
@@ -279,17 +279,17 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out; D-036 already states the repo is to become private)
 - Recommended: **PRIVATE**. D-036: the owner stated the repo is to be private. Its files carry a proprietary license and an open credential-shaped finding (SEC-GATE-001). Owner action: Record the SEC-GATE-001 disposition and the governance decisions, then switch visibility on or before 2026-11-15.
-- Checked head: 2917d965c2b9afe713c48d7dd2da63e60724bc95; workstreams: RAAS; readiness NOT_READY
+- Checked head: a0be181cd2e5e3def0a11abe4ec46e99f564066c; workstreams: RAAS; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): Not in the baseline (D-026 onboarding not started). The planning inventory covers B-INC-001 to B-INC-004 (67 tasks); each group's pinned TASKS.md has the same sha256 as head, and every task heading is extracted. The RAAS status report (source eb89421, 1 merge commit behind head) lists the same 67 tasks as the inventory Evidence: inventory --verify-sources against a clone at eb89421 on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, RAAS, 67 tasks) and the generator are merged (PR #53); the status-report workflow checks them Evidence: files present at head ca054f9; python3 scripts/status/gen_status.py --check-facts passes on a fresh clone, 2026-10-17; this repo alone was re-checked at ca054f9 after PR #53 merged
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review Evidence: gitleaks 8.18.4 over all refs of a full clone at 2917d96: 76 commits, 0 findings, re-run 2026-10-17 on current main
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review Evidence: gitleaks 8.18.4 over all refs of a full clone at a0be181: 77 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans history Evidence: workflow file present at head; PR #52 merged after the owner reported success
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow, hook and tests are present; 62 historical commits carry session trailers and history is not rewritten Evidence: workflow and script present at head
 - [x] **PASS** license (LICENSE file): LICENSE present on main (governance PR merged, D-035, D-040) - proprietary, as decided by owner Evidence: file present at 2917d96
-- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present on main (governance PR merged, D-035, D-040) Evidence: file present at 2917d96
-- [x] **PASS** codeowners (CODEOWNERS): .github/CODEOWNERS present on main (governance PR merged, D-035, D-040) Evidence: file present at 2917d96
-- [ ] **OPEN** agents_md (AGENTS.md): Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head Evidence: patch prepared; not yet merged
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified Evidence: SECURITY.md at a0be181
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested Evidence: CODEOWNERS at a0be181
+- [x] **PASS** agents_md (AGENTS.md): Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries Evidence: AGENTS.md present at a0be181
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists after the owner removed the second branch (D-036) Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [ ] **OPEN** security_disposition (Every security finding has a recorded disposition): SEC-GATE-001 (a credential-shaped loopback DATABASE_URL example in history) has no Security Owner disposition or deadline yet (D-032)
@@ -300,17 +300,17 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 17905f33848c15f6abb2e87c3561f3d50af51933; workstreams: ACT_INT; readiness NOT_READY
+- Checked head: 923d71a50505ddc06fc21800df4e8a13807e1f4c; workstreams: ACT_INT; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 7 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_INT) was generated at 7a059d8 and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks) Evidence: git diff 7a059d8..9aac076 and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_INT) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 17905f3: 20 commits, 0 findings, re-run 2026-10-17 on current main
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 923d71a: 21 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 9aac076; merged in PR #4; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 1 historical commit carries one (audit record KA-AUD-EXT-20261016), history not rewritten Evidence: workflow, script and 6 unit tests present at head 9aac076 (tests pass on a fresh clone); merged in PR #4
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present on main (governance PR merged, D-035, D-040) Evidence: file present at 17905f3
-- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
-- [ ] **OPEN** agents_md (AGENTS.md): Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head Evidence: patch prepared; not yet merged
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified Evidence: SECURITY.md at 923d71a
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested Evidence: CODEOWNERS at 923d71a
+- [x] **PASS** agents_md (AGENTS.md): Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD Evidence: AGENTS.md present at 923d71a
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
@@ -321,17 +321,17 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 4b21100e66ecd082c475263faf8a39309b3d35ba; workstreams: ACT_EMB; readiness NOT_READY
+- Checked head: 4508d45cadefa0610882e190ad9cebd78e0dcbbb; workstreams: ACT_EMB; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 10 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_EMB) was generated at 240a92a and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks) Evidence: git diff 240a92a..2ceb68e and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_EMB) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 4b21100: 8 commits, 0 findings, re-run 2026-10-17 on current main
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 4508d45: 9 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 2ceb68e; merged in PR #5; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 2ceb68e (tests pass on a fresh clone); merged in PR #5
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present on main (governance PR merged, D-035, D-040) Evidence: file present at 4b21100
-- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
-- [ ] **OPEN** agents_md (AGENTS.md): Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head Evidence: patch prepared; not yet merged
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified Evidence: SECURITY.md at 4508d45
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested Evidence: CODEOWNERS at 4508d45
+- [x] **PASS** agents_md (AGENTS.md): Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD Evidence: AGENTS.md present at 4508d45
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
@@ -342,17 +342,17 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 5681991b52f3e93cdd16b2b3e9b6362e37ce7651; workstreams: ACT_S; readiness NOT_READY
+- Checked head: bb8e3f5dfbd31a2c5ac7bc4f27b17b785a2c7f12; workstreams: ACT_S; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_S) was generated at e9d075f and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it Evidence: git diff e9d075f..21f7d90 and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_S) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 5681991: 6 commits, 0 findings, re-run 2026-10-17 on current main
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at bb8e3f5: 7 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 21f7d90; merged in PR #3; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 21f7d90 (tests pass on a fresh clone); merged in PR #3
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present on main (governance PR merged, D-035, D-040) Evidence: file present at 5681991
-- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
-- [ ] **OPEN** agents_md (AGENTS.md): Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head Evidence: patch prepared; not yet merged
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified Evidence: SECURITY.md at bb8e3f5
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested Evidence: CODEOWNERS at bb8e3f5
+- [x] **PASS** agents_md (AGENTS.md): Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD Evidence: AGENTS.md present at bb8e3f5
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
@@ -363,17 +363,17 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 42ef847d7619c9b3d7b19e2ad6eead986b63dc3c; workstreams: ACT_M; readiness NOT_READY
+- Checked head: 5b94ede135e5a25fc716d9eb011bd4992c3240c8; workstreams: ACT_M; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_M) was generated at 0344b7d and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it Evidence: git diff 0344b7d..50afcde and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_M) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 42ef847: 6 commits, 0 findings, re-run 2026-10-17 on current main
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 5b94ede: 7 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head 50afcde; merged in PR #3; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head 50afcde (tests pass on a fresh clone); merged in PR #3
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present on main (governance PR merged, D-035, D-040) Evidence: file present at 42ef847
-- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
-- [ ] **OPEN** agents_md (AGENTS.md): Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head Evidence: patch prepared; not yet merged
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified Evidence: SECURITY.md at 5b94ede
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested Evidence: CODEOWNERS at 5b94ede
+- [x] **PASS** agents_md (AGENTS.md): Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD Evidence: AGENTS.md present at 5b94ede
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
@@ -384,17 +384,17 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
 - Recommended: **PRIVATE**. D-037 return to private. Hardware design with open safety gates and mechanical on HOLD. Owner action: Confirm ready or record an exception, then switch visibility on or before 2026-11-15.
-- Checked head: 66ee1a8dcc233b720a011a9b15eaf09e27446b06; workstreams: ACT_L; readiness NOT_READY
+- Checked head: 5c17e463dd6ed7cdbf24c299c28dcb5bcb734975; workstreams: ACT_L; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_L) was generated at abf0782 and trails head by 4 commits (status regeneration and the secret-scan and commit-message checks); mechanical stays on HOLD until the owner lifts it Evidence: git diff abf0782..de0e86a and the inventory --verify-sources check on 2026-10-17
 - [x] **PASS** status_report (Schema 2.0 status report committed in the repo): status/status.json (schema 2.0, workstream ACT_L) is committed Evidence: file present at head
-- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 66ee1a8: 6 commits, 0 findings, re-run 2026-10-17 on current main
+- [x] **PASS** history_secret_scan (History-aware secret scan of all refs): No secret findings in history Evidence: gitleaks 8.18.4 over all refs of a full clone at 5c17e46: 7 commits, 0 findings, re-run 2026-10-17 after the wording PRs merged
 - [x] **PASS** secret_scan_ci (Blocking secret scan in CI): secret-scan workflow is present and scans the full history Evidence: workflow file present at head de0e86a; merged in PR #3; workflow run results are not readable by Claude
 - [x] **PASS** commit_message_check (CI rejects AI session trailers in new commits): commit-message-check workflow and tests are present; 0 historical commits carry one Evidence: workflow, script and 6 unit tests present at head de0e86a (tests pass on a fresh clone); merged in PR #3
 - [x] **PASS** license (LICENSE file): LICENSE is proprietary, all rights reserved Evidence: LICENSE present at head
-- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present on main (governance PR merged, D-035, D-040) Evidence: file present at 66ee1a8
-- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS assigns * to @dineshannayya Evidence: file present at head
-- [ ] **OPEN** agents_md (AGENTS.md): Owner decided to add a tailored AGENTS.md (D-041). The file is in the governance-wording PR for this repo and turns PASS once it merges and is re-checked at the new head Evidence: patch prepared; not yet merged
+- [x] **PASS** security_policy (SECURITY.md): SECURITY.md present; wording corrected to say the repo is temporarily public (D-028, D-037). Private vulnerability reporting setting not verified Evidence: SECURITY.md at 5c17e46
+- [x] **PASS** codeowners (CODEOWNERS): CODEOWNERS present; stale placeholder text removed and the single-owner self-approval note added (D-040). Ruleset enforcement remains owner-attested Evidence: CODEOWNERS at 5c17e46
+- [x] **PASS** agents_md (AGENTS.md): Tailored AGENTS.md merged (D-041): secret hygiene, no session trailers, baseline and status boundaries, mechanical HOLD Evidence: AGENTS.md present at 5c17e46
 - [ ] **ATTESTED** branch_protection (Main-branch protection and required checks): Owner stated the main-branch rulesets are updated on all nine repos, with secret-scan and commit-message-check required and 'Require review from Code Owners' enabled (D-040). Rulesets are not readable by Claude, so this is unverified
 - [x] **PASS** branch_hygiene (No stale or unintended branches): Only main exists Evidence: git ls-remote --heads on 2026-10-17 lists main only
 - [x] **PASS** security_disposition (Every security finding has a recorded disposition): No security finding is recorded and the history scan found none Evidence: history scan above
