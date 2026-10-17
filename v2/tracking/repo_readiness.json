@@ -1,0 +1,875 @@
+{
+  "_note": "Per-repo readiness checklist for the return to private (D-037, D-038). Display only: it never changes credit, baseline or approvals. Readiness is derived by tools/readiness.py, never asserted. See that module for the status values.",
+  "readiness_version": 1,
+  "target_date": "2026-11-15",
+  "report_due": "2026-11-14",
+  "checked_at": "2026-10-17T10:10:00Z",
+  "basis": "Facts read from git (clones of each repo's main) and the committed program files on 2026-10-17. GitHub settings (visibility, rulesets, required checks) are not readable by Claude, so they are ATTESTED, OPEN or marked as owner statements.",
+  "repos": [
+    {
+      "repo": "KritvaOS/kritva-program",
+      "workstream_ids": [
+        "CI_DEV_INFRA"
+      ],
+      "checked_head": "6401efeb082f53b6401258109e3160d990eb530b",
+      "visibility_now": {
+        "state": "PUBLIC",
+        "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
+      },
+      "recommended": {
+        "state": "PRIVATE",
+        "rationale": "D-037. This repo holds the decision log, approvals and gate closures.",
+        "owner_action": "Confirm ready or record an exception, then switch visibility on or before 2026-11-15."
+      },
+      "program_copy": {
+        "workstream_id": "CI_DEV_INFRA",
+        "sha256": "49a2dc2bebd6f443a44884e450f5e831df78bec6a8e16201dcbfce4e88d480c3"
+      },
+      "checks": [
+        {
+          "id": "milestone_sync",
+          "status": "PASS",
+          "detail": "KRP-ENG-001 (the only reported task) is a baseline v2 task, NOT_STARTED, uncredited. The committed source copy is byte-identical to status/status.json. The report's source commit 8e50865 trails head by 5 commits (decisions, tooling, tests)",
+          "evidence": "sha256 of sources/CI_DEV_INFRA.json equals status/status.json on 2026-10-17"
+        },
+        {
+          "id": "status_report",
+          "status": "PASS",
+          "detail": "status/status.json (schema 2.0, CI_DEV_INFRA) is committed and checked by the status workflow",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "history_secret_scan",
+          "status": "PASS",
+          "detail": "No secret findings in history",
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 6401efe: 41 commits, 0 findings, run 2026-10-17"
+        },
+        {
+          "id": "secret_scan_ci",
+          "status": "OPEN",
+          "detail": "No workflow runs a secret scanner (workflows: refresh-sources, status)"
+        },
+        {
+          "id": "commit_message_check",
+          "status": "OPEN",
+          "detail": "No CI check rejects session trailers; 5 commits on main carry one, history not rewritten"
+        },
+        {
+          "id": "license",
+          "status": "DECISION",
+          "detail": "No LICENSE; the owner decides the terms for a private repo"
+        },
+        {
+          "id": "security_policy",
+          "status": "OPEN",
+          "detail": "No SECURITY.md"
+        },
+        {
+          "id": "codeowners",
+          "status": "OPEN",
+          "detail": "No CODEOWNERS"
+        },
+        {
+          "id": "agents_md",
+          "status": "DECISION",
+          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+        },
+        {
+          "id": "branch_protection",
+          "status": "ATTESTED",
+          "detail": "Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified"
+        },
+        {
+          "id": "branch_hygiene",
+          "status": "OPEN",
+          "detail": "The stale bot/refresh-sources branch still exists next to main; close or rerun it"
+        },
+        {
+          "id": "security_disposition",
+          "status": "PASS",
+          "detail": "No security finding is recorded and the history scan found none",
+          "evidence": "history scan above"
+        },
+        {
+          "id": "contract_pin",
+          "status": "NA",
+          "detail": "Tracks the Core pilot's engineering contract only"
+        },
+        {
+          "id": "owner_signoff",
+          "status": "DECISION",
+          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+        }
+      ]
+    },
+    {
+      "repo": "KritvaOS/kritva-core",
+      "workstream_ids": [
+        "CORE"
+      ],
+      "checked_head": "6835cd0714397310b40adb7f75824e78fa6917fb",
+      "visibility_now": {
+        "state": "PUBLIC",
+        "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
+      },
+      "recommended": {
+        "state": "PRIVATE",
+        "rationale": "D-037 default. The Apache-2.0 license would permit a public release, but no public-release review exists.",
+        "owner_action": "If a public release is intended, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15."
+      },
+      "program_copy": {
+        "workstream_id": "CORE",
+        "sha256": "238665812cda87214eb8bdee73446dd2d9b744417eae51ee68fcda15db9fc3ad"
+      },
+      "checks": [
+        {
+          "id": "milestone_sync",
+          "status": "PASS",
+          "detail": "The 9 reported tasks are the 9 Core R1.0 baseline tasks, all credited. The committed source copy is byte-identical to the repo's status/status.json. The report's source commit 54984ae trails head by 4 commits that touch status tooling and governance files only, no planning records",
+          "evidence": "sha256 comparison and git diff 54984ae..6835cd0 on 2026-10-17"
+        },
+        {
+          "id": "status_report",
+          "status": "PASS",
+          "detail": "status/status.json (schema 2.0, CORE) and status/evidence.json are committed; the status-report workflow checks them",
+          "evidence": "files present at head"
+        },
+        {
+          "id": "history_secret_scan",
+          "status": "PASS",
+          "detail": "No secret findings in history, tags included",
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 6835cd0: 321 commits, 0 findings, run 2026-10-17"
+        },
+        {
+          "id": "secret_scan_ci",
+          "status": "OPEN",
+          "detail": "No workflow runs a secret scanner (workflows: kritva-core-ci, source-header-check, status-report)"
+        },
+        {
+          "id": "commit_message_check",
+          "status": "OPEN",
+          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+        },
+        {
+          "id": "license",
+          "status": "PASS",
+          "detail": "Apache License 2.0",
+          "evidence": "LICENSE present at head"
+        },
+        {
+          "id": "security_policy",
+          "status": "PASS",
+          "detail": "SECURITY.md names GitHub private vulnerability reporting and Dinesh as Security Owner (D-035)",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "codeowners",
+          "status": "PASS",
+          "detail": "CODEOWNERS assigns * to @dineshannayya (D-035)",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "agents_md",
+          "status": "PASS",
+          "detail": "AGENTS.md present",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "branch_protection",
+          "status": "ATTESTED",
+          "detail": "Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified; the owner still needs to enable 'Require review from Code Owners'"
+        },
+        {
+          "id": "branch_hygiene",
+          "status": "PASS",
+          "detail": "Only main exists",
+          "evidence": "git ls-remote --heads on 2026-10-17 lists main only"
+        },
+        {
+          "id": "security_disposition",
+          "status": "PASS",
+          "detail": "No security finding is recorded and the history scan found none",
+          "evidence": "history scan above"
+        },
+        {
+          "id": "contract_pin",
+          "status": "OPEN",
+          "detail": "The pinned engineering-contract SHA for the Core pilot is not recorded"
+        },
+        {
+          "id": "owner_signoff",
+          "status": "DECISION",
+          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+        }
+      ]
+    },
+    {
+      "repo": "KritvaOS/kritvaos-community",
+      "workstream_ids": [
+        "COMMUNITY"
+      ],
+      "checked_head": "794cf195303a5854b63104c91880432d4e905ee2",
+      "visibility_now": {
+        "state": "PUBLIC",
+        "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
+      },
+      "recommended": {
+        "state": "PRIVATE",
+        "rationale": "D-037 default, flagged for owner confirmation: the name and the Apache-2.0 license suggest a public community edition, but no public-release review exists.",
+        "owner_action": "Decide whether a public community release is intended. If so, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15."
+      },
+      "program_copy": {
+        "workstream_id": "COMMUNITY",
+        "sha256": "6df6c3259a64986661da23170a7a96fcbc8584807a631ae5a95c4358228fe196"
+      },
+      "checks": [
+        {
+          "id": "milestone_sync",
+          "status": "PASS",
+          "detail": "The 21 reported tasks are the 21 Community baseline tasks. I2 (6) is credited; I3 and I4 (15) are uncredited because no task approvals are recorded, and their safety gates were closed on the owner's statement that the D-025 independent review is complete (D-033; reviewer not named, independence unverified). The committed source copy is byte-identical to the repo's status/status.json; the report's source commit 8256ba3 trails head by 1 commit that touches status tooling only",
+          "evidence": "sha256 comparison and git diff 8256ba3..794cf19 on 2026-10-17"
+        },
+        {
+          "id": "status_report",
+          "status": "PASS",
+          "detail": "status/status.json (schema 2.0, COMMUNITY) and status/evidence.json are committed; the status-report workflow checks them",
+          "evidence": "files present at head"
+        },
+        {
+          "id": "history_secret_scan",
+          "status": "PASS",
+          "detail": "No secret findings in history",
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 794cf19: 61 commits, 0 findings, run 2026-10-17"
+        },
+        {
+          "id": "secret_scan_ci",
+          "status": "OPEN",
+          "detail": "No workflow runs a secret scanner (workflows: ci, source-header-check, status-report)"
+        },
+        {
+          "id": "commit_message_check",
+          "status": "OPEN",
+          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+        },
+        {
+          "id": "license",
+          "status": "PASS",
+          "detail": "Apache License 2.0",
+          "evidence": "LICENSE present at head"
+        },
+        {
+          "id": "security_policy",
+          "status": "PASS",
+          "detail": "SECURITY.md present (contents not reviewed by Claude)",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "codeowners",
+          "status": "OPEN",
+          "detail": "No CODEOWNERS; add one as in kritva-core (D-035)"
+        },
+        {
+          "id": "agents_md",
+          "status": "PASS",
+          "detail": "AGENTS.md present",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "branch_protection",
+          "status": "ATTESTED",
+          "detail": "Owner stated main protection was added (D-031); rulesets are not readable by Claude, so required checks and review rules are unverified"
+        },
+        {
+          "id": "branch_hygiene",
+          "status": "PASS",
+          "detail": "Only main exists",
+          "evidence": "git ls-remote --heads on 2026-10-17 lists main only"
+        },
+        {
+          "id": "security_disposition",
+          "status": "PASS",
+          "detail": "No security finding is recorded and the history scan found none",
+          "evidence": "history scan above"
+        },
+        {
+          "id": "contract_pin",
+          "status": "NA",
+          "detail": "Tracks the Core pilot's engineering contract only"
+        },
+        {
+          "id": "owner_signoff",
+          "status": "DECISION",
+          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+        }
+      ]
+    },
+    {
+      "repo": "KritvaOS/kritva-raas",
+      "workstream_ids": [
+        "RAAS"
+      ],
+      "checked_head": "eb8942164132b52412cdf296eacef535b558357b",
+      "visibility_now": {
+        "state": "PUBLIC",
+        "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out; D-036 already states the repo is to become private"
+      },
+      "recommended": {
+        "state": "PRIVATE",
+        "rationale": "D-036: the owner stated the repo is to be private. Its files carry a proprietary license and an open credential-shaped finding (SEC-GATE-001).",
+        "owner_action": "Record the SEC-GATE-001 disposition and the governance decisions, then switch visibility on or before 2026-11-15."
+      },
+      "checks": [
+        {
+          "id": "milestone_sync",
+          "status": "PASS",
+          "detail": "Not in the baseline (D-026 onboarding not started). The planning inventory covers B-INC-001 to B-INC-004 (67 tasks); each group's pinned TASKS.md has the same sha256 as head, and every task heading is extracted",
+          "evidence": "inventory --verify-sources against a clone at eb89421 on 2026-10-17"
+        },
+        {
+          "id": "status_report",
+          "status": "OPEN",
+          "detail": "The schema 2.0 generator and status/status.json (67 tasks) are in a pending PR; this becomes PASS after it merges and the repo is re-checked"
+        },
+        {
+          "id": "history_secret_scan",
+          "status": "PASS",
+          "detail": "No unreviewed findings in history; 2 example idempotency keys are allowlisted by fingerprint in .gitleaksignore after review",
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at eb89421: 126 commits, 0 findings, run 2026-10-17 with .gitleaksignore applied"
+        },
+        {
+          "id": "secret_scan_ci",
+          "status": "PASS",
+          "detail": "secret-scan workflow is present and scans history",
+          "evidence": "workflow file present at head; PR #52 merged after the owner reported success"
+        },
+        {
+          "id": "commit_message_check",
+          "status": "PASS",
+          "detail": "commit-message-check workflow, hook and tests are present; 62 historical commits carry session trailers and history is not rewritten",
+          "evidence": "workflow and script present at head"
+        },
+        {
+          "id": "license",
+          "status": "DECISION",
+          "detail": "No LICENSE file; source headers say LicenseRef-KritvaOS-Proprietary. The owner decides the licence and governance baseline"
+        },
+        {
+          "id": "security_policy",
+          "status": "DECISION",
+          "detail": "No SECURITY.md; part of the RaaS governance baseline decision"
+        },
+        {
+          "id": "codeowners",
+          "status": "DECISION",
+          "detail": "No CODEOWNERS; part of the RaaS governance baseline decision"
+        },
+        {
+          "id": "agents_md",
+          "status": "DECISION",
+          "detail": "No AGENTS.md; part of the RaaS governance baseline decision"
+        },
+        {
+          "id": "branch_protection",
+          "status": "OPEN",
+          "detail": "No record of main-branch protection or required checks for this repo: the ruleset (24843399) requires source-header-check and docs-check; the owner still needs to add secret-scan and commit-message-check as required checks"
+        },
+        {
+          "id": "branch_hygiene",
+          "status": "PASS",
+          "detail": "Only main exists after the owner removed the second branch (D-036)",
+          "evidence": "git ls-remote --heads on 2026-10-17 lists main only"
+        },
+        {
+          "id": "security_disposition",
+          "status": "OPEN",
+          "detail": "SEC-GATE-001 (a credential-shaped loopback DATABASE_URL example in history) has no Security Owner disposition or deadline yet (D-032)"
+        },
+        {
+          "id": "contract_pin",
+          "status": "NA",
+          "detail": "Tracks the Core pilot's engineering contract only"
+        },
+        {
+          "id": "owner_signoff",
+          "status": "DECISION",
+          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+        }
+      ]
+    },
+    {
+      "repo": "KritvaOS/kritva-actuator",
+      "workstream_ids": [
+        "ACT_INT"
+      ],
+      "checked_head": "177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca",
+      "visibility_now": {
+        "state": "PUBLIC",
+        "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
+      },
+      "recommended": {
+        "state": "PRIVATE",
+        "rationale": "D-037 return to private. Hardware design with open safety gates.",
+        "owner_action": "Confirm ready or record an exception, then switch visibility on or before 2026-11-15."
+      },
+      "checks": [
+        {
+          "id": "milestone_sync",
+          "status": "PASS",
+          "detail": "PLANNING_ONLY, not in the baseline. The 7 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_INT) was generated at 7a059d8 and trails head by 2 commits that touch status/status.json only",
+          "evidence": "git diff 7a059d8..177645e and the inventory --verify-sources check on 2026-10-17"
+        },
+        {
+          "id": "status_report",
+          "status": "PASS",
+          "detail": "status/status.json (schema 2.0, workstream ACT_INT) is committed",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "history_secret_scan",
+          "status": "PASS",
+          "detail": "No secret findings in history",
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 177645e: 21 commits, 0 findings, run 2026-10-17"
+        },
+        {
+          "id": "secret_scan_ci",
+          "status": "OPEN",
+          "detail": "No workflow runs a secret scanner"
+        },
+        {
+          "id": "commit_message_check",
+          "status": "OPEN",
+          "detail": "No CI check rejects session trailers; 1 historical commit carries one (audit record KA-AUD-EXT-20261016), history not rewritten"
+        },
+        {
+          "id": "license",
+          "status": "PASS",
+          "detail": "LICENSE is proprietary, all rights reserved",
+          "evidence": "LICENSE present at head"
+        },
+        {
+          "id": "security_policy",
+          "status": "OPEN",
+          "detail": "No SECURITY.md"
+        },
+        {
+          "id": "codeowners",
+          "status": "PASS",
+          "detail": "CODEOWNERS assigns * to @dineshannayya",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "agents_md",
+          "status": "DECISION",
+          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+        },
+        {
+          "id": "branch_protection",
+          "status": "OPEN",
+          "detail": "No record of main-branch protection or required checks for this repo"
+        },
+        {
+          "id": "branch_hygiene",
+          "status": "PASS",
+          "detail": "Only main exists",
+          "evidence": "git ls-remote --heads on 2026-10-17 lists main only"
+        },
+        {
+          "id": "security_disposition",
+          "status": "PASS",
+          "detail": "No security finding is recorded and the history scan found none",
+          "evidence": "history scan above"
+        },
+        {
+          "id": "contract_pin",
+          "status": "NA",
+          "detail": "Tracks the Core pilot's engineering contract only"
+        },
+        {
+          "id": "owner_signoff",
+          "status": "DECISION",
+          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+        }
+      ]
+    },
+    {
+      "repo": "KritvaOS/kritva-actuator-embedded",
+      "workstream_ids": [
+        "ACT_EMB"
+      ],
+      "checked_head": "9ce5069383aa694033b3ae92eea89f741733699a",
+      "visibility_now": {
+        "state": "PUBLIC",
+        "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
+      },
+      "recommended": {
+        "state": "PRIVATE",
+        "rationale": "D-037 return to private. Hardware design with open safety gates.",
+        "owner_action": "Confirm ready or record an exception, then switch visibility on or before 2026-11-15."
+      },
+      "checks": [
+        {
+          "id": "milestone_sync",
+          "status": "PASS",
+          "detail": "PLANNING_ONLY, not in the baseline. The 10 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_EMB) was generated at 240a92a and trails head by 2 commits that touch status/status.json only",
+          "evidence": "git diff 240a92a..9ce5069 and the inventory --verify-sources check on 2026-10-17"
+        },
+        {
+          "id": "status_report",
+          "status": "PASS",
+          "detail": "status/status.json (schema 2.0, workstream ACT_EMB) is committed",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "history_secret_scan",
+          "status": "PASS",
+          "detail": "No secret findings in history",
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 9ce5069: 10 commits, 0 findings, run 2026-10-17"
+        },
+        {
+          "id": "secret_scan_ci",
+          "status": "OPEN",
+          "detail": "No workflow runs a secret scanner"
+        },
+        {
+          "id": "commit_message_check",
+          "status": "OPEN",
+          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+        },
+        {
+          "id": "license",
+          "status": "PASS",
+          "detail": "LICENSE is proprietary, all rights reserved",
+          "evidence": "LICENSE present at head"
+        },
+        {
+          "id": "security_policy",
+          "status": "OPEN",
+          "detail": "No SECURITY.md"
+        },
+        {
+          "id": "codeowners",
+          "status": "PASS",
+          "detail": "CODEOWNERS assigns * to @dineshannayya",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "agents_md",
+          "status": "DECISION",
+          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+        },
+        {
+          "id": "branch_protection",
+          "status": "OPEN",
+          "detail": "No record of main-branch protection or required checks for this repo"
+        },
+        {
+          "id": "branch_hygiene",
+          "status": "PASS",
+          "detail": "Only main exists",
+          "evidence": "git ls-remote --heads on 2026-10-17 lists main only"
+        },
+        {
+          "id": "security_disposition",
+          "status": "PASS",
+          "detail": "No security finding is recorded and the history scan found none",
+          "evidence": "history scan above"
+        },
+        {
+          "id": "contract_pin",
+          "status": "NA",
+          "detail": "Tracks the Core pilot's engineering contract only"
+        },
+        {
+          "id": "owner_signoff",
+          "status": "DECISION",
+          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+        }
+      ]
+    },
+    {
+      "repo": "KritvaOS/kritva-actuator-s",
+      "workstream_ids": [
+        "ACT_S"
+      ],
+      "checked_head": "ef217ecec0a5d2351807a5206b22c3a5e7b17705",
+      "visibility_now": {
+        "state": "PUBLIC",
+        "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
+      },
+      "recommended": {
+        "state": "PRIVATE",
+        "rationale": "D-037 return to private. Hardware design with open safety gates and mechanical on HOLD.",
+        "owner_action": "Confirm ready or record an exception, then switch visibility on or before 2026-11-15."
+      },
+      "checks": [
+        {
+          "id": "milestone_sync",
+          "status": "PASS",
+          "detail": "PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_S) was generated at e9d075f and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it",
+          "evidence": "git diff e9d075f..ef217ec and the inventory --verify-sources check on 2026-10-17"
+        },
+        {
+          "id": "status_report",
+          "status": "PASS",
+          "detail": "status/status.json (schema 2.0, workstream ACT_S) is committed",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "history_secret_scan",
+          "status": "PASS",
+          "detail": "No secret findings in history",
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at ef217ec: 6 commits, 0 findings, run 2026-10-17"
+        },
+        {
+          "id": "secret_scan_ci",
+          "status": "OPEN",
+          "detail": "No workflow runs a secret scanner"
+        },
+        {
+          "id": "commit_message_check",
+          "status": "OPEN",
+          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+        },
+        {
+          "id": "license",
+          "status": "PASS",
+          "detail": "LICENSE is proprietary, all rights reserved",
+          "evidence": "LICENSE present at head"
+        },
+        {
+          "id": "security_policy",
+          "status": "OPEN",
+          "detail": "No SECURITY.md"
+        },
+        {
+          "id": "codeowners",
+          "status": "PASS",
+          "detail": "CODEOWNERS assigns * to @dineshannayya",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "agents_md",
+          "status": "DECISION",
+          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+        },
+        {
+          "id": "branch_protection",
+          "status": "OPEN",
+          "detail": "No record of main-branch protection or required checks for this repo"
+        },
+        {
+          "id": "branch_hygiene",
+          "status": "PASS",
+          "detail": "Only main exists",
+          "evidence": "git ls-remote --heads on 2026-10-17 lists main only"
+        },
+        {
+          "id": "security_disposition",
+          "status": "PASS",
+          "detail": "No security finding is recorded and the history scan found none",
+          "evidence": "history scan above"
+        },
+        {
+          "id": "contract_pin",
+          "status": "NA",
+          "detail": "Tracks the Core pilot's engineering contract only"
+        },
+        {
+          "id": "owner_signoff",
+          "status": "DECISION",
+          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+        }
+      ]
+    },
+    {
+      "repo": "KritvaOS/kritva-actuator-m",
+      "workstream_ids": [
+        "ACT_M"
+      ],
+      "checked_head": "4bcc0c637b2393dcaf481a2b41fef5dfdf18570e",
+      "visibility_now": {
+        "state": "PUBLIC",
+        "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
+      },
+      "recommended": {
+        "state": "PRIVATE",
+        "rationale": "D-037 return to private. Hardware design with open safety gates and mechanical on HOLD.",
+        "owner_action": "Confirm ready or record an exception, then switch visibility on or before 2026-11-15."
+      },
+      "checks": [
+        {
+          "id": "milestone_sync",
+          "status": "PASS",
+          "detail": "PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_M) was generated at 0344b7d and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it",
+          "evidence": "git diff 0344b7d..4bcc0c6 and the inventory --verify-sources check on 2026-10-17"
+        },
+        {
+          "id": "status_report",
+          "status": "PASS",
+          "detail": "status/status.json (schema 2.0, workstream ACT_M) is committed",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "history_secret_scan",
+          "status": "PASS",
+          "detail": "No secret findings in history",
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at 4bcc0c6: 6 commits, 0 findings, run 2026-10-17"
+        },
+        {
+          "id": "secret_scan_ci",
+          "status": "OPEN",
+          "detail": "No workflow runs a secret scanner"
+        },
+        {
+          "id": "commit_message_check",
+          "status": "OPEN",
+          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+        },
+        {
+          "id": "license",
+          "status": "PASS",
+          "detail": "LICENSE is proprietary, all rights reserved",
+          "evidence": "LICENSE present at head"
+        },
+        {
+          "id": "security_policy",
+          "status": "OPEN",
+          "detail": "No SECURITY.md"
+        },
+        {
+          "id": "codeowners",
+          "status": "PASS",
+          "detail": "CODEOWNERS assigns * to @dineshannayya",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "agents_md",
+          "status": "DECISION",
+          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+        },
+        {
+          "id": "branch_protection",
+          "status": "OPEN",
+          "detail": "No record of main-branch protection or required checks for this repo"
+        },
+        {
+          "id": "branch_hygiene",
+          "status": "PASS",
+          "detail": "Only main exists",
+          "evidence": "git ls-remote --heads on 2026-10-17 lists main only"
+        },
+        {
+          "id": "security_disposition",
+          "status": "PASS",
+          "detail": "No security finding is recorded and the history scan found none",
+          "evidence": "history scan above"
+        },
+        {
+          "id": "contract_pin",
+          "status": "NA",
+          "detail": "Tracks the Core pilot's engineering contract only"
+        },
+        {
+          "id": "owner_signoff",
+          "status": "DECISION",
+          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+        }
+      ]
+    },
+    {
+      "repo": "KritvaOS/kritva-actuator-l",
+      "workstream_ids": [
+        "ACT_L"
+      ],
+      "checked_head": "c68501e0eda46d4feeeaf9a58298494aa6a4ff48",
+      "visibility_now": {
+        "state": "PUBLIC",
+        "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
+      },
+      "recommended": {
+        "state": "PRIVATE",
+        "rationale": "D-037 return to private. Hardware design with open safety gates and mechanical on HOLD.",
+        "owner_action": "Confirm ready or record an exception, then switch visibility on or before 2026-11-15."
+      },
+      "checks": [
+        {
+          "id": "milestone_sync",
+          "status": "PASS",
+          "detail": "PLANNING_ONLY, not in the baseline. The 8 inventory tasks are pinned to planning/v2/TASK_ID_MAPPING.csv of kritva-actuator at 177645e, which is the parent's head. The status report (ACT_L) was generated at abf0782 and trails head by 2 commits that touch status/status.json only; mechanical stays on HOLD until the owner lifts it",
+          "evidence": "git diff abf0782..c68501e and the inventory --verify-sources check on 2026-10-17"
+        },
+        {
+          "id": "status_report",
+          "status": "PASS",
+          "detail": "status/status.json (schema 2.0, workstream ACT_L) is committed",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "history_secret_scan",
+          "status": "PASS",
+          "detail": "No secret findings in history",
+          "evidence": "gitleaks 8.18.4 over all refs of a full clone at c68501e: 6 commits, 0 findings, run 2026-10-17"
+        },
+        {
+          "id": "secret_scan_ci",
+          "status": "OPEN",
+          "detail": "No workflow runs a secret scanner"
+        },
+        {
+          "id": "commit_message_check",
+          "status": "OPEN",
+          "detail": "No CI check rejects session trailers; 0 historical commits carry one"
+        },
+        {
+          "id": "license",
+          "status": "PASS",
+          "detail": "LICENSE is proprietary, all rights reserved",
+          "evidence": "LICENSE present at head"
+        },
+        {
+          "id": "security_policy",
+          "status": "OPEN",
+          "detail": "No SECURITY.md"
+        },
+        {
+          "id": "codeowners",
+          "status": "PASS",
+          "detail": "CODEOWNERS assigns * to @dineshannayya",
+          "evidence": "file present at head"
+        },
+        {
+          "id": "agents_md",
+          "status": "DECISION",
+          "detail": "No AGENTS.md; the owner decides whether the repo needs one"
+        },
+        {
+          "id": "branch_protection",
+          "status": "OPEN",
+          "detail": "No record of main-branch protection or required checks for this repo"
+        },
+        {
+          "id": "branch_hygiene",
+          "status": "PASS",
+          "detail": "Only main exists",
+          "evidence": "git ls-remote --heads on 2026-10-17 lists main only"
+        },
+        {
+          "id": "security_disposition",
+          "status": "PASS",
+          "detail": "No security finding is recorded and the history scan found none",
+          "evidence": "history scan above"
+        },
+        {
+          "id": "contract_pin",
+          "status": "NA",
+          "detail": "Tracks the Core pilot's engineering contract only"
+        },
+        {
+          "id": "owner_signoff",
+          "status": "DECISION",
+          "detail": "Dinesh has not yet authorised the visibility change for this repo (D-037)"
+        }
+      ]
+    }
+  ]
+}

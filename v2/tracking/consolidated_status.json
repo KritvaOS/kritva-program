@@ -734,7 +734,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T07:47:15Z",
+  "generated_at": "2026-10-17T10:12:05Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -790,11 +790,168 @@
     "accepted_progress_pct": 46.15,
     "basis": "48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
+  "readiness": {
+    "checked_at": "2026-10-17T10:10:00Z",
+    "report_due": "2026-11-14",
+    "repos": [
+      {
+        "attested": [
+          "branch_protection"
+        ],
+        "blocking": [
+          "secret_scan_ci",
+          "commit_message_check",
+          "license",
+          "security_policy",
+          "codeowners",
+          "agents_md",
+          "branch_hygiene",
+          "owner_signoff"
+        ],
+        "checked_head": "6401efeb082f53b6401258109e3160d990eb530b",
+        "readiness": "NOT_READY",
+        "recommended": "PRIVATE",
+        "repo": "KritvaOS/kritva-program",
+        "visibility_now": "PUBLIC"
+      },
+      {
+        "attested": [
+          "branch_protection"
+        ],
+        "blocking": [
+          "secret_scan_ci",
+          "commit_message_check",
+          "contract_pin",
+          "owner_signoff"
+        ],
+        "checked_head": "6835cd0714397310b40adb7f75824e78fa6917fb",
+        "readiness": "NOT_READY",
+        "recommended": "PRIVATE",
+        "repo": "KritvaOS/kritva-core",
+        "visibility_now": "PUBLIC"
+      },
+      {
+        "attested": [
+          "branch_protection"
+        ],
+        "blocking": [
+          "secret_scan_ci",
+          "commit_message_check",
+          "codeowners",
+          "owner_signoff"
+        ],
+        "checked_head": "794cf195303a5854b63104c91880432d4e905ee2",
+        "readiness": "NOT_READY",
+        "recommended": "PRIVATE",
+        "repo": "KritvaOS/kritvaos-community",
+        "visibility_now": "PUBLIC"
+      },
+      {
+        "attested": [],
+        "blocking": [
+          "status_report",
+          "license",
+          "security_policy",
+          "codeowners",
+          "agents_md",
+          "branch_protection",
+          "security_disposition",
+          "owner_signoff"
+        ],
+        "checked_head": "eb8942164132b52412cdf296eacef535b558357b",
+        "readiness": "NOT_READY",
+        "recommended": "PRIVATE",
+        "repo": "KritvaOS/kritva-raas",
+        "visibility_now": "PUBLIC"
+      },
+      {
+        "attested": [],
+        "blocking": [
+          "secret_scan_ci",
+          "commit_message_check",
+          "security_policy",
+          "agents_md",
+          "branch_protection",
+          "owner_signoff"
+        ],
+        "checked_head": "177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca",
+        "readiness": "NOT_READY",
+        "recommended": "PRIVATE",
+        "repo": "KritvaOS/kritva-actuator",
+        "visibility_now": "PUBLIC"
+      },
+      {
+        "attested": [],
+        "blocking": [
+          "secret_scan_ci",
+          "commit_message_check",
+          "security_policy",
+          "agents_md",
+          "branch_protection",
+          "owner_signoff"
+        ],
+        "checked_head": "9ce5069383aa694033b3ae92eea89f741733699a",
+        "readiness": "NOT_READY",
+        "recommended": "PRIVATE",
+        "repo": "KritvaOS/kritva-actuator-embedded",
+        "visibility_now": "PUBLIC"
+      },
+      {
+        "attested": [],
+        "blocking": [
+          "secret_scan_ci",
+          "commit_message_check",
+          "security_policy",
+          "agents_md",
+          "branch_protection",
+          "owner_signoff"
+        ],
+        "checked_head": "ef217ecec0a5d2351807a5206b22c3a5e7b17705",
+        "readiness": "NOT_READY",
+        "recommended": "PRIVATE",
+        "repo": "KritvaOS/kritva-actuator-s",
+        "visibility_now": "PUBLIC"
+      },
+      {
+        "attested": [],
+        "blocking": [
+          "secret_scan_ci",
+          "commit_message_check",
+          "security_policy",
+          "agents_md",
+          "branch_protection",
+          "owner_signoff"
+        ],
+        "checked_head": "4bcc0c637b2393dcaf481a2b41fef5dfdf18570e",
+        "readiness": "NOT_READY",
+        "recommended": "PRIVATE",
+        "repo": "KritvaOS/kritva-actuator-m",
+        "visibility_now": "PUBLIC"
+      },
+      {
+        "attested": [],
+        "blocking": [
+          "secret_scan_ci",
+          "commit_message_check",
+          "security_policy",
+          "agents_md",
+          "branch_protection",
+          "owner_signoff"
+        ],
+        "checked_head": "c68501e0eda46d4feeeaf9a58298494aa6a4ff48",
+        "readiness": "NOT_READY",
+        "recommended": "PRIVATE",
+        "repo": "KritvaOS/kritva-actuator-l",
+        "visibility_now": "PUBLIC"
+      }
+    ],
+    "target_date": "2026-11-15"
+  },
   "require_run_verification": true,
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 14,
+        "age_hours": 16,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -815,7 +972,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 14,
+        "age_hours": 16,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",
