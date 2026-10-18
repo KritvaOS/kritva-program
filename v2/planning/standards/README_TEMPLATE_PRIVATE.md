@@ -56,7 +56,7 @@ A label names a role, not an approval. Show the document's status (DRAFT, SKELET
 |---|---|---|---|
 | <path> | <what it controls or records> | <AUTHORITATIVE / INPUT / GENERATED / SNAPSHOT / EVIDENCE / REFERENCE / MIXED> | <yes / no> |
 
-A directory with files of several labels is MIXED: list its principal files.
+A directory with files of several labels is MIXED: list its principal files. Mark each principal capability and tree entry with its implementation state (IMPLEMENTED, PLANNED, PROPOSED, REFERENCE-ONLY, EVIDENCE or NOT YET IMPLEMENTED); a scaffold-only folder says so.
 
 ## 6. Toolchain and Development Workflow
 
@@ -106,6 +106,8 @@ This repository's approved convention: branch rule, commit format, PR requiremen
 ## 13. Safety and Security
 
 Safety requirements and open gates (hardware repositories). The route for reporting a vulnerability (link SECURITY.md, or write `Not yet defined` and name the owner who will define it); never ask for details of an unfixed vulnerability in a public issue or PR. Secrets. State that software tests do not prove physical safety.
+
+For a hardware, firmware or mechanical repository add: the statement that software checks, calculations and simulation do not prove physical safety or design acceptance; an open-gate summary table (gate, activity controlled, authority and status, evidence required, approver, prohibited while open); and the evidence scope for any validation claim (README_STANDARD section 8). Do not call a device or design validated or safe from software evidence; describe a future validated unit as conditional on the physical tests and gates. If the reporting route has not been verified, write `Reporting route: not yet verified`, name the owner and give the minimal safe first-contact instruction.
 
 ## 14. Release and Versioning
 

@@ -106,7 +106,7 @@ This repository's approved convention: branch rule, commit format, PR requiremen
 
 ## 13. Safety and Security
 
-Safety requirements and open gates (hardware repositories). The route for reporting a vulnerability (link SECURITY.md, or write `Not yet defined` and name the owner who will define it); never ask for details of an unfixed vulnerability in a public issue or PR. Secrets. State that software tests do not prove physical safety.
+Safety requirements and open gates (hardware repositories). A hardware repository states that software checks, calculations and simulation do not prove physical safety, and gives an open-gate summary (README_STANDARD section 8). The route for reporting a vulnerability (link SECURITY.md, or write `Not yet defined` and name the owner who will define it); never ask for details of an unfixed vulnerability in a public issue or PR. Secrets. State that software tests do not prove physical safety.
 
 ## 14. Release and Versioning
 

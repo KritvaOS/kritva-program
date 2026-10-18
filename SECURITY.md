@@ -13,7 +13,7 @@ This is a private repository. Its GitHub setting is temporarily public (D-028) a
 
 ## 3. Reporting
 
-Tell the Security Owner directly through your existing Kritva channel and ask for a private place to share the details; do not put details in the first message. If GitHub private vulnerability reporting is enabled for this repository (Security tab, "Report a vulnerability"), you may use it instead.
+Reporting route: not yet verified. A dedicated, monitored private channel has not been confirmed for this repository, and this policy does not claim one. Until the Security Owner (Dinesh, D-032) records one here, contact the Security Owner directly through your existing Kritva channel, say only that you have a security report, and ask for a private place to share the details; do not put details in the first message. If GitHub private vulnerability reporting is enabled for this repository (Security tab, "Report a vulnerability"), you may use it instead; whether it is enabled has not been verified.
 
 Include: the affected file, component or commit, a description, steps to reproduce, observed and expected behaviour, the potential impact, and any mitigation you know of. Please leave out personal, customer, credential or production data.
 
