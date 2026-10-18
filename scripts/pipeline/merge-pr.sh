@@ -41,12 +41,11 @@ done
 gh pr checks "$PR" -R "$SLUG" --watch --interval 15 || { echo "   checks failed or were cancelled: not merging"; exit 1; }
 reqs=$(python3 "$HERE/manifest.py" checks "$REPO" --manifest "$MANIFEST") || { echo "   cannot read the required checks: not merging"; exit 1; }
 [ -n "$reqs" ] || { echo "   the manifest lists no required checks for $REPO: not merging"; exit 1; }
-for c in $reqs; do
-  st=$(gh pr checks "$PR" -R "$SLUG" --json workflow,state -q ".[] | select(.workflow==\"$c\") | .state" 2>/dev/null)
-  if [ -z "$st" ] || [ -n "$(printf '%s\n' "$st" | grep -vx SUCCESS)" ]; then
-    echo "   required check '$c' is '$(printf '%s' "$st" | tr '\n' ' ')' (empty means missing): not merging"; exit 1
-  fi
-done
+rf=$(mktemp); cf=$(mktemp)
+gh pr view "$PR" -R "$SLUG" --json statusCheckRollup > "$rf" 2>/dev/null
+gh pr checks "$PR" -R "$SLUG" --json name,workflow,state > "$cf" 2>/dev/null || gh pr checks "$PR" -R "$SLUG" --json name,state > "$cf" 2>/dev/null
+python3 "$HERE/manifest.py" verify-checks "$REPO" --manifest "$MANIFEST" --rollup "$rf" --checks "$cf" || { rm -f "$rf" "$cf"; echo "   a required check is missing or not SUCCESS: not merging"; exit 1; }
+rm -f "$rf" "$cf"
 
 # 2. gate report (after the checks have run, so R06 sees them): REJECT stops here
 GATE=$(python3 "$HERE/pr_gate.py" remote --manifest "$MANIFEST" --repo "$REPO" --pr "$PR"); RC=$?

@@ -7,6 +7,8 @@
   manifest.py checks REPO [--manifest FILE]     print the required GitHub check names, one per line
   manifest.py tag-ok REPO TAG [--manifest FILE] exit 0 only if TAG is an acceptable annotated SemVer tag for REPO
   manifest.py closed REPO MILESTONE --repo-dir D  exit 0 only if D has a COMPLETION_RECORD.md naming MILESTONE
+  manifest.py verify-checks REPO --rollup F [--checks F]  exit 0 only if every required check is present and SUCCESS in the
+                                                gh JSON files (pr view --json statusCheckRollup; pr checks --json name,workflow,state)
 
 Rules enforced: unknown repositories, duplicate ids, missing dependencies, dependency cycles, unknown checks and unknown
 approval roles are rejected. Role holders are read from the manifest; nothing is guessed. Stdlib only.
@@ -57,12 +59,53 @@ def closed(repo_dir, milestone):
     return bool(re.search(rf"^\s*Milestone(?: ID)?\s*:\s*{re.escape(milestone)}\s*$", t, re.M | re.I))
 
 
+def _entries(rollup, checks):
+    """Normalise gh output to (names, state). A check matches by workflow name or job name, so a gh version that leaves
+    one of the fields empty still works."""
+    out = []
+    for c in (rollup or {}).get("statusCheckRollup", []) if isinstance(rollup, dict) else (rollup or []):
+        names = {c.get("workflowName"), c.get("name"), c.get("context")} - {None, ""}
+        state = (c.get("conclusion") or c.get("state") or c.get("status") or "").upper()
+        out.append((names, state))
+    for c in checks or []:
+        names = {c.get("workflow"), c.get("name")} - {None, ""}
+        out.append((names, (c.get("state") or "").upper()))
+    return out
+
+
+def verify_checks(required, rollup, checks):
+    """-> (ok, lines). Every run that matches a required check must be SUCCESS; no match means missing."""
+    ents = _entries(rollup, checks)
+    ok, lines = True, []
+    for c in required:
+        st = [s for n, s in ents if c in n]
+        if not st:
+            ok = False
+            seen = sorted({x for n, _ in ents for x in n})
+            lines.append(f"required check '{c}' is missing; checks seen: {', '.join(seen) or 'none'}")
+        elif any(s != "SUCCESS" for s in st):
+            ok = False
+            lines.append(f"required check '{c}' is {', '.join(sorted(set(st)))} (needs SUCCESS)")
+        else:
+            lines.append(f"required check '{c}': SUCCESS ({len(st)} run(s))")
+    return ok, lines
+
+
+def _load(path):
+    try:
+        t = Path(path).read_text(encoding="utf-8").strip() if path else ""
+        return json.loads(t) if t else None
+    except (OSError, ValueError):
+        return None
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cmd", choices=["validate", "order", "info", "checks", "tag-ok", "closed"])
+    ap.add_argument("cmd", choices=["validate", "order", "info", "checks", "tag-ok", "closed", "verify-checks"])
     ap.add_argument("args", nargs="*")
     ap.add_argument("--manifest")
     ap.add_argument("--repo-dir")
+    ap.add_argument("--rollup"); ap.add_argument("--checks")
     a = ap.parse_args(argv)
     data = load_all(a.manifest)
     if a.cmd == "validate":
@@ -90,6 +133,13 @@ def main(argv=None):
         print(json.dumps(r, indent=2, sort_keys=True))
     elif a.cmd == "checks":
         print("\n".join(r["required_github_checks"]))
+    elif a.cmd == "verify-checks":
+        if not r["required_github_checks"]:
+            print(f"the manifest lists no required checks for {a.args[0]}", file=sys.stderr)
+            return 1
+        ok, lines = verify_checks(r["required_github_checks"], _load(a.rollup), _load(a.checks))
+        print("\n".join("   " + x for x in lines))
+        return 0 if ok else 1
     elif a.cmd == "tag-ok":
         if len(a.args) < 2:
             ap.error("tag argument required")

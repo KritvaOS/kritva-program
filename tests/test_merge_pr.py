@@ -12,10 +12,12 @@ case "$1 $2" in
   "pr view")
      if echo "$*" | grep -q "state,baseRefName"; then echo "${FAKE_PR_STATE:-OPEN main feat/x}"; exit 0; fi
      if echo "$*" | grep -q "\-q .state"; then echo MERGED; exit 0; fi
-     echo '{"author":{"login":"someone"},"headRefOid":"'$(printf 'a%.0s' $(seq 40))'","baseRefName":"main","commits":[{"oid":"a","messageHeadline":"'"${FAKE_MSG:-feat(sense): x}"'","messageBody":"Task: KOS-SENSE-001"}],"reviews":[],"statusCheckRollup":[{"workflowName":"secret-scan","conclusion":"SUCCESS","status":"COMPLETED"},{"workflowName":"commit-message-check","conclusion":"SUCCESS","status":"COMPLETED"},{"workflowName":"pr-acceptance-gate","conclusion":"SUCCESS","status":"COMPLETED"}]}'; exit 0;;
+     roll=""; for w in secret-scan commit-message-check pr-acceptance-gate; do [ "$w" = "${FAKE_BAD:-none}" ] || roll="$roll{\"workflowName\":\"$w\",\"conclusion\":\"SUCCESS\",\"status\":\"COMPLETED\"},"; done
+     echo '{"author":{"login":"someone"},"headRefOid":"'$(printf 'a%.0s' $(seq 40))'","baseRefName":"main","commits":[{"oid":"a","messageHeadline":"'"${FAKE_MSG:-feat(sense): x}"'","messageBody":"Task: KOS-SENSE-001"}],"reviews":[],"statusCheckRollup":['"${roll%,}"']}'; exit 0;;
   "pr checks")
      if echo "$*" | grep -q "\-\-json"; then
-        w=$(echo "$*" | sed -n 's/.*workflow=="\([^"]*\)".*/\1/p'); [ "$w" = "${FAKE_BAD:-none}" ] || echo SUCCESS; exit 0; fi
+        [ -n "${FAKE_NO_WORKFLOW_FIELD:-}" ] && echo "$*" | grep -q "workflow" && exit 1
+        echo '[{"name":"x","workflow":"","state":"SUCCESS"}]'; exit 0; fi
      echo "all good"; exit 0;;
   "api -X"|"api repos/KritvaOS/kritva-sense/pulls/7/files") ;;
 esac
@@ -74,6 +76,15 @@ class Merge(unittest.TestCase):
         p, log = run("--repo", "kritva-sense", "--pr", "7", bad="secret-scan")
         self.assertEqual(p.returncode, 1)
         self.assertNotIn("pr merge", log)
+
+    def test_old_gh_without_workflow_field_still_works(self):
+        os.environ["FAKE_NO_WORKFLOW_FIELD"] = "1"
+        try:
+            p, log = run("--repo", "kritva-sense", "--pr", "7")
+        finally:
+            del os.environ["FAKE_NO_WORKFLOW_FIELD"]
+        self.assertEqual(p.returncode, 0, p.stdout + p.stderr)
+        self.assertIn("pr merge 7", log)
 
     def test_closed_pr_and_wrong_base_refused(self):
         self.assertEqual(run("--repo", "kritva-sense", "--pr", "7", state="MERGED main b")[0].returncode, 2)

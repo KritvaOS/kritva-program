@@ -135,7 +135,7 @@ def remote_rules(gate, manifest, pr):
     """pr: {author, head_sha, checks: [{workflow, state}], reviews: [{login, state, commit}]}."""
     res = []
     for wf in gate["required_github_checks"]:
-        st = [c["state"] for c in pr["checks"] if c.get("workflow") == wf]
+        st = [c["state"] for c in pr["checks"] if wf in (c.get("workflow"), c.get("job"))]
         if not st:
             res.append(R("R06", HUMAN if wf == "pr-acceptance-gate" else FAIL, f"required workflow {wf} has no run on head {pr['head_sha'][:7]}" + (" (not rolled out in this repo yet)" if wf == "pr-acceptance-gate" else "")))
         elif all(s == "SUCCESS" for s in st):
@@ -227,7 +227,7 @@ def remote_inputs(repo, pr, run=sh):
             return None
         return base64.b64decode(json.loads(out)["content"]).decode("utf-8")
     pr_info = {"author": v["author"]["login"], "head_sha": head,
-               "checks": [{"workflow": c.get("workflowName"), "state": c.get("conclusion") or c.get("status") or ""} for c in v["statusCheckRollup"]],
+               "checks": [{"workflow": c.get("workflowName") or c.get("name") or c.get("context"), "job": c.get("name"), "state": c.get("conclusion") or c.get("status") or ""} for c in v["statusCheckRollup"]],
                "reviews": [{"login": r["author"]["login"], "state": r["state"], "commit": (r.get("commit") or {}).get("oid")} for r in v["reviews"]]}
     for c in pr_info["checks"]:
         c["state"] = {"success": "SUCCESS", "failure": "FAILURE", "completed": "SUCCESS"}.get(c["state"].lower(), c["state"].upper())

@@ -168,10 +168,10 @@ class ShipScript(unittest.TestCase):
         self.assertIn("cannot read the required checks from the manifest: not merging", self.text)
         self.assertIn("lists no required checks", self.text)
 
-    def test_checks_match_on_workflow_name_and_require_all_runs_success(self):
-        self.assertIn("--json workflow,state", self.text)
-        self.assertIn('select(.workflow==', self.text)
-        self.assertIn("grep -vx SUCCESS", self.text)
+    def test_checks_are_verified_by_manifest_py_from_gh_json(self):
+        self.assertIn("verify-checks", self.text)
+        self.assertIn("--json statusCheckRollup", self.text)
+        self.assertIn("--json name,workflow,state", self.text)
 
     def test_checks_run_from_another_directory(self):
         with tempfile.TemporaryDirectory() as t:
@@ -287,3 +287,41 @@ class CommitFormat(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class VerifyChecks(unittest.TestCase):
+    sys.path.insert(0, str(ROOT / "scripts" / "pipeline"))
+    import manifest as M
+
+    def test_matches_workflow_or_job_name_and_needs_success(self):
+        roll = {"statusCheckRollup": [{"workflowName": "status", "name": "status-validate", "conclusion": "SUCCESS", "status": "COMPLETED"},
+                                       {"workflowName": "", "name": "secret-scan", "conclusion": "SUCCESS", "status": "COMPLETED"}]}
+        ok, lines = self.M.verify_checks(["status", "secret-scan"], roll, None)
+        self.assertTrue(ok, lines)
+        ok, lines = self.M.verify_checks(["status-validate"], roll, None)
+        self.assertTrue(ok)
+
+    def test_missing_failed_and_pending_are_not_ok(self):
+        roll = {"statusCheckRollup": [{"workflowName": "status", "conclusion": "FAILURE"}, {"workflowName": "secret-scan", "conclusion": "", "status": "IN_PROGRESS"}]}
+        ok, lines = self.M.verify_checks(["status", "secret-scan", "commit-message-check"], roll, None)
+        self.assertFalse(ok)
+        text = "\n".join(lines)
+        self.assertIn("FAILURE", text)
+        self.assertIn("IN_PROGRESS", text)
+        self.assertIn("commit-message-check' is missing; checks seen: secret-scan, status", text)
+
+    def test_every_run_must_pass_and_pr_checks_json_is_accepted(self):
+        checks = [{"name": "status-validate", "workflow": "status", "state": "SUCCESS"}, {"name": "status-validate", "workflow": "status", "state": "FAILURE"}]
+        self.assertFalse(self.M.verify_checks(["status"], None, checks)[0])
+        self.assertTrue(self.M.verify_checks(["status"], None, checks[:1])[0])
+        self.assertFalse(self.M.verify_checks(["status"], None, None)[0])
+
+    def test_cli(self):
+        with tempfile.TemporaryDirectory() as t:
+            f = Path(t) / "r.json"
+            f.write_text(json.dumps({"statusCheckRollup": [{"workflowName": w, "conclusion": "SUCCESS"} for w in ("status", "secret-scan", "commit-message-check")]}))
+            run = lambda: subprocess.run([sys.executable, str(ROOT / "scripts/pipeline/manifest.py"), "verify-checks", "kritva-program", "--manifest",
+                                          str(ROOT / "v2/planning/repo-pipeline.json"), "--rollup", str(f)], capture_output=True, text=True)
+            self.assertEqual(run().returncode, 0)
+            f.write_text("{}")
+            self.assertEqual(run().returncode, 1)

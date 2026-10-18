@@ -133,16 +133,14 @@ ship() {
 
   # 3b. every check the manifest requires must be present and successful on this PR
   if [ -n "$MANIFEST" ]; then
-    local need c state reqs
+    local need reqs rf cf
     reqs=$(python3 "$MSCRIPT" checks "$r" --manifest "$MANIFEST") || { echo "   cannot read the required checks from the manifest: not merging"; return 1; }
     [ -n "$reqs" ] || { echo "   the manifest lists no required checks for $r: not merging"; return 1; }
-    for c in $reqs; do
-      # match on the workflow name (the manifest names workflows); every run of it must be SUCCESS
-      state=$(gh pr checks "$n" -R "$slug" --json workflow,state -q ".[] | select(.workflow==\"$c\") | .state" 2>/dev/null)
-      if [ -z "$state" ] || [ -n "$(printf '%s\n' "$state" | grep -vx SUCCESS)" ]; then
-        echo "   required check '$c' is '$(printf '%s' "$state" | tr '\n' ' ')' (empty means missing), not all SUCCESS: not merging"; return 1
-      fi
-    done
+    rf=$(mktemp); cf=$(mktemp)
+    gh pr view "$n" -R "$slug" --json statusCheckRollup > "$rf" 2>/dev/null
+    gh pr checks "$n" -R "$slug" --json name,workflow,state > "$cf" 2>/dev/null || gh pr checks "$n" -R "$slug" --json name,state > "$cf" 2>/dev/null
+    python3 "$MSCRIPT" verify-checks "$r" --manifest "$MANIFEST" --rollup "$rf" --checks "$cf" || { rm -f "$rf" "$cf"; echo "   a required check is missing or not SUCCESS: not merging"; return 1; }
+    rm -f "$rf" "$cf"
   fi
 
   # 4. merge + delete remote branch
