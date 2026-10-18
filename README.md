@@ -23,7 +23,7 @@ This repository records program-level truth. It does **not** contain engineering
 | Pending decisions and reviews | Generated queues from structured records, not from text | [PENDING_DECISIONS.md](v2/planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](v2/planning/PENDING_REVIEWS.md) |
 | Dependencies, risks | Provider/consumer map, critical path, risk register | [DEPENDENCY_MAP](v2/DEPENDENCY_MAP.md), [CRITICAL_PATH](v2/CRITICAL_PATH.md), [RISK_REGISTER](v2/RISK_REGISTER.md) |
 
-Phase dates are **not approved** (see the roadmap); no schedule is implied anywhere in this repository. Mechanical work is on HOLD (D-003) until the owner reopens it. The program dashboard and document index are in [v2/README.md](v2/README.md).
+Phase dates are **not approved** (see the roadmap); no schedule is implied anywhere in this repository. Mechanical work is on HOLD (D-003), lifted for the actuator workstreams by D-051 (2026-10-18); the actuator local gates still apply. The program dashboard and document index are in [v2/README.md](v2/README.md).
 
 ## 2. Repository layout
 
@@ -113,7 +113,7 @@ Change an input (baseline, approvals, gates, sources, effort, readiness, plannin
 
 1. Engineering repositories stay authoritative for implementation; reconcile against them before planning.
 2. Use the frozen phase names exactly ([v2/PROGRAM_PLAN.md](v2/PROGRAM_PLAN.md)).
-3. Mechanical work is on HOLD until explicitly reopened.
+3. Mechanical work is on HOLD until explicitly reopened (reopened for the actuator workstreams by D-051; the actuator local gates still apply).
 4. Status is evidence-backed. A commit is not acceptance.
 5. Do not create empty future plans.
 6. Never edit `baseline.json`, `approvals.json`, `gate_closures.json` or the generated status files by hand; the decision log is append-only. See [AGENTS.md](AGENTS.md) and [SECURITY.md](SECURITY.md).

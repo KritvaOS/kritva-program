@@ -8,7 +8,7 @@ step is a reviewed commit. Do not create status sources for workstreams that hav
 1. The repo exists and its owning workstream ID is in `workstreams.json` with the real `repo` name.
 2. Its tasks have stable IDs recorded in the repo's own planning records (not invented here).
 3. Task IDs are verified by reading those records; unverified IDs are marked UNVERIFIED, never guessed.
-4. Mechanical stays on HOLD until the owner reopens it by decision.
+4. Mechanical stays on HOLD until the owner reopens it by decision (reopened for the actuator workstreams by D-051).
 
 ## Steps
 

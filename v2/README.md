@@ -11,7 +11,7 @@ Executive view only. Detail lives in the linked authoritative documents; do not 
 | Current phase | P0 FOUNDATION (planning baseline) |
 | Overall health | Not yet assessed — baseline reconciliation pending |
 | Accepted progress | Not yet baselined (see [tracking/STATUS.md](tracking/STATUS.md)) |
-| Mechanical work | **HOLD** |
+| Mechanical work | **HOLD**, lifted for the actuator workstreams by D-051 (machine-readable flags pending owner regeneration) |
 | Next gate | P0 exit gate ([GATE_REGISTER.md](GATE_REGISTER.md)) |
 
 ## Phases (frozen names)

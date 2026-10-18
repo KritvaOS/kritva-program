@@ -20,7 +20,7 @@ Status fields follow the model in [PROGRAM_PLAN.md](PROGRAM_PLAN.md) §6. "Postu
 | RaaS | Continue | TBD | TBD | TBD | TBD | Reconcile |
 | Education applications | Continue | TBD | TBD | TBD | TBD | Reconcile |
 | Integration & software validation | Continue | TBD | TBD | TBD | TBD | P0 contracts |
-| Mechanical (CAD, actuators, BOM, quotes, procurement, fabrication, prototype) | **HOLD** | NOT_STARTED / held | — | — | — | None until reopened |
+| Mechanical (CAD, actuators, BOM, quotes, procurement, fabrication, prototype) | **HOLD** (lifted for the actuator workstreams by D-051; gates still apply) | NOT_STARTED / held | — | — | — | None until reopened |
 
 ## Maintenance
 
