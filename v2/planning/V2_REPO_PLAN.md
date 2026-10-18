@@ -18,7 +18,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 
 ## PR approval sequence
 
-| # | Repository | Kind | Depends on | Required approvals | Required GitHub checks | Local gates | Phase milestones |
+| # | Repository | Kind | Depends on | Required approvals | Required GitHub checks (workflow names) | Local gates | Phase milestones |
 |---|---|---|---|---|---|---|---|
 | 1 | kritva-program | program | - | PROGRAM_OWNER | status, secret-scan, commit-message-check | make check | V2-M0, V2-M8 |
 | 2 | kritva-core | library | kritva-program | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check | make check, make test-unit, make test-regression | V2-M0, V2-M2, V2-M8 |

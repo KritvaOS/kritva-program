@@ -1,5 +1,5 @@
 {
-  "_note": "Single source for the repository registry and the PR approval sequence (D-044). Consumed by scripts/pipeline/manifest.py and ship-prs.sh. Sequence is a default topological order, not permission to merge regardless of readiness.",
+  "_note": "Single source for the repository registry and the PR approval sequence (D-044). Consumed by scripts/pipeline/manifest.py and ship-prs.sh. Required GitHub checks are workflow names as `gh pr checks --json workflow` reports them. Sequence is a default topological order, not permission to merge regardless of readiness.",
   "schema_version": "1.0",
   "manifest_id": "KOS-V2-PR-PIPELINE",
   "status": "PROPOSED",

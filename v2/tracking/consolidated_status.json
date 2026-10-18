@@ -742,7 +742,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-18T02:47:41Z",
+  "generated_at": "2026-10-18T03:00:00Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,

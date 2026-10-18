@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-10-18T02:47:41Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-18T03:00:00Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -29,7 +29,7 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-18T02:47:41Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-18T03:00:00Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
