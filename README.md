@@ -103,6 +103,7 @@ python3 scripts/pipeline/manifest.py validate                        # PR pipeli
 python3 scripts/pipeline/pr_gate.py remote --manifest v2/planning/repo-pipeline.json --repo kritva-sense --pr 7   # report on one PR (read-only)
 make pr_check all                                                    # sweep the REPOS list in the Makefile; approves the clear ones (DRY=1 to only report)
 make pr_check REPO=kritva-sense PR=7                                 # one PR
+make ship TAR=~/Downloads/x.tar.gz BRANCH=feat/x                     # ship a patch tarball: PR, checks, merge, sync (DRY=1 to preview)
 ```
 
 Change an input (baseline, approvals, gates, sources, effort, readiness, planning inventory, v2/planning records), regenerate, and commit the generated files in the same pull request. CI runs the same checks, plus `secret-scan` and `commit-message-check`.
