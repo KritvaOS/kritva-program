@@ -741,7 +741,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-18T05:57:01Z",
+  "generated_at": "2026-10-18T07:53:25Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -951,7 +951,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 36,
+        "age_hours": 38,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -972,7 +972,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 36,
+        "age_hours": 38,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",

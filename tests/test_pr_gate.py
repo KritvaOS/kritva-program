@@ -165,6 +165,49 @@ class Remote(unittest.TestCase):
         self.assertEqual(G.verdict(res), "NEEDS_HUMAN")
 
 
+BASELINE = json.dumps({"tasks": [{"id": "KRP-ENG-001"}, {"id": "KF-CORE-R10-001"}, {"id": "I3-001"}]})
+INVENTORY = json.dumps({"groups": [{"repository": "KritvaOS/kritva-actuator", "tasks": [{"task_id": "ACT-INT-006"}]},
+                                   {"repository": "KritvaOS/kritva-actuator-s", "tasks": [{"task_id": "ACT-S-008"}]}]})
+
+
+def run_reg(repo, task, program=True):
+    gate = G.gate_for(MANIFEST, repo)
+    files = {"program": {"v2/tracking/baseline.json": BASELINE, "v2/tracking/planning_inventory.json": INVENTORY} if program else {}}
+    msg = f"docs(x): y\n\nTask: {task}\n"
+    res = G.static_rules(gate, [{"sha": SHA, "message": msg}], [{"path": "AGENTS.md", "status": "added"}], lambda w, p: files.get(w, {}).get(p))
+    return [r for r in res if r["rule"] == "R02"]
+
+
+class TaskRegistries(unittest.TestCase):
+    def test_program_baseline_task_passes_and_unknown_fails(self):
+        self.assertEqual(run_reg("kritva-program", "KRP-ENG-001")[0]["level"], "PASS")
+        self.assertEqual(run_reg("kritva-core", "KF-CORE-R10-001")[0]["level"], "PASS")
+        self.assertEqual(run_reg("kritvaos-community", "I3-001")[0]["level"], "PASS")
+        self.assertEqual(run_reg("kritva-program", "KRP-ENG-999")[0]["level"], "FAIL")
+
+    def test_actuator_ids_come_from_the_inventory_for_that_repo(self):
+        self.assertEqual(run_reg("kritva-actuator", "ACT-INT-006")[0]["level"], "NEEDS_HUMAN")
+        self.assertEqual(run_reg("kritva-actuator", "ACT-INT-099")[0]["level"], "FAIL")
+        self.assertEqual(run_reg("kritva-actuator", "ACT-S-008")[0]["level"], "FAIL")  # another repo's task
+        self.assertEqual(run_reg("kritva-actuator-s", "ACT-S-008")[0]["level"], "NEEDS_HUMAN")
+
+    def test_registry_unreadable_is_needs_human_not_reject(self):
+        self.assertEqual(run_reg("kritva-program", "KRP-ENG-001", program=False)[0]["level"], "NEEDS_HUMAN")
+        self.assertEqual(run_reg("kritva-actuator", "ACT-INT-006", program=False)[0]["level"], "NEEDS_HUMAN")
+
+    def test_registry_none_and_actuator_prefixes_match_inventory(self):
+        gate = copy.deepcopy(G.gate_for(MANIFEST, "kritva-actuator")); gate["task_registry"] = {"type": "none"}
+        res = G.static_rules(gate, [{"sha": SHA, "message": "docs(x): y\n\nTask: Z-1\n"}], [], lambda w, p: None)
+        self.assertEqual([r["level"] for r in res if r["rule"] == "R02"], ["NEEDS_HUMAN"])
+        inv = json.loads(INVENTORY)
+        for repo, pre in (("kritva-actuator", "ACT-INT"), ("kritva-actuator-s", "ACT-S"), ("kritva-actuator-m", "ACT-M")):
+            self.assertEqual(G.gate_for(MANIFEST, repo)["task_prefix"], pre)
+
+    def test_new_repos_keep_the_tasks_md_registry(self):
+        for r in ("kritva-sense", "kritva-motion", "kritva-mind", "kritva-skill"):
+            self.assertEqual(G.gate_for(MANIFEST, r)["task_registry"]["type"], "repo-tasks-md")
+
+
 class Cli(unittest.TestCase):
     def test_static_cli_on_a_temp_repo(self):
         with tempfile.TemporaryDirectory() as t:

@@ -101,7 +101,10 @@
         "v2/tracking/approvals.json",
         "v2/tracking/gate_closures.json",
         "v2/planning/repo-pipeline.json"
-      ]
+      ],
+      "task_registry": {
+        "type": "program-baseline"
+      }
     },
     {
       "repo_id": "kritva-core",
@@ -147,7 +150,10 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "program-baseline"
+      }
     },
     {
       "repo_id": "kritvaos-community",
@@ -195,7 +201,10 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "program-baseline"
+      }
     },
     {
       "repo_id": "kritva-sense",
@@ -248,7 +257,11 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "repo-tasks-md",
+        "path": "planning/TASKS.md"
+      }
     },
     {
       "repo_id": "kritva-motion",
@@ -300,7 +313,11 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "repo-tasks-md",
+        "path": "planning/TASKS.md"
+      }
     },
     {
       "repo_id": "kritva-mind",
@@ -352,7 +369,11 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "repo-tasks-md",
+        "path": "planning/TASKS.md"
+      }
     },
     {
       "repo_id": "kritva-skill",
@@ -406,7 +427,11 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "repo-tasks-md",
+        "path": "planning/TASKS.md"
+      }
     },
     {
       "repo_id": "kritva-raas",
@@ -459,7 +484,10 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      }
     },
     {
       "repo_id": "kritva-actuator",
@@ -471,7 +499,7 @@
         "kritva-motion"
       ],
       "workstream_id": "ACT_INT",
-      "task_prefix": "KOS-ACT",
+      "task_prefix": "ACT-INT",
       "kind": "hardware-interface",
       "baselined": false,
       "required_approvals": [
@@ -507,7 +535,10 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      }
     },
     {
       "repo_id": "kritva-actuator-embedded",
@@ -518,7 +549,7 @@
         "kritva-actuator"
       ],
       "workstream_id": "ACT_EMB",
-      "task_prefix": "KOS-ACT-EMB",
+      "task_prefix": "ACT-EMB",
       "kind": "firmware",
       "baselined": false,
       "required_approvals": [
@@ -551,7 +582,10 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      }
     },
     {
       "repo_id": "kritva-actuator-s",
@@ -562,7 +596,7 @@
         "kritva-actuator"
       ],
       "workstream_id": "ACT_S",
-      "task_prefix": "KOS-ACT-S",
+      "task_prefix": "ACT-S",
       "kind": "mechanical",
       "baselined": false,
       "required_approvals": [
@@ -594,7 +628,10 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      }
     },
     {
       "repo_id": "kritva-actuator-m",
@@ -605,7 +642,7 @@
         "kritva-actuator"
       ],
       "workstream_id": "ACT_M",
-      "task_prefix": "KOS-ACT-M",
+      "task_prefix": "ACT-M",
       "kind": "mechanical",
       "baselined": false,
       "required_approvals": [
@@ -637,7 +674,10 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      }
     },
     {
       "repo_id": "kritva-actuator-l",
@@ -648,7 +688,7 @@
         "kritva-actuator"
       ],
       "workstream_id": "ACT_L",
-      "task_prefix": "KOS-ACT-L",
+      "task_prefix": "ACT-L",
       "kind": "mechanical",
       "baselined": false,
       "required_approvals": [
@@ -680,7 +720,10 @@
         "Makefile",
         "scripts/pipeline/",
         "scripts/security/"
-      ]
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      }
     }
   ],
   "people": {
