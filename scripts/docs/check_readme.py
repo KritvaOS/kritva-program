@@ -6,7 +6,7 @@
 Implemented checks, and nothing more: the metadata table has every required field and none is empty;
 every topic of the standard appears as a heading (matched by keyword, so a broad match can pass);
 every relative Markdown link [text](path) points to an existing file or directory (the #fragment is
-not checked; image links and absolute URLs are skipped); no placeholder text is left outside code.
+not checked; image links and absolute URLs are skipped); no placeholder text is left outside code (fenced blocks, inline code and lines indented by four spaces or a tab are code; links are still checked on indented lines).
 A PASS does not show that content is accurate, a command works, an external URL is reachable, an
 anchor exists or anything is approved; that is review work
 (v2/planning/standards/README_REVIEW_CHECKLIST.md). Exit 0 if it passes, 1 if not. Stdlib only.
@@ -73,7 +73,8 @@ def check(readme: Path, root: Path):
         if not any(re.search(rx, h, re.I) for h in heads):
             problems.append(f"no heading for: {topic}")
     for n, line in enumerate(text.splitlines(), 1):
-        for m in PLACEHOLDER.finditer(line):
+        indented = line.startswith(("    ", "\t"))  # an indented code block may show a template on purpose
+        for m in ([] if indented else PLACEHOLDER.finditer(line)):
             problems.append(f"line {n}: placeholder left: {m.group(0)}")
         for m in LINK.finditer(line):
             target = m.group(1)

@@ -165,7 +165,7 @@ kritva-program uses a program layout in its own README (it adds governance, prog
 - the metadata block has every required field of section 4 and none is empty;
 - every topic of section 5 appears as a heading (matched by keyword, so a broad match can pass; order is a review item);
 - every relative Markdown link `[text](path)` points to an existing file or directory (the part after `#` is not checked, image links and absolute URLs are skipped);
-- no placeholder text such as `<repository-name>` or `TODO` remains outside code.
+- no placeholder text such as `<repository-name>` or `TODO` remains outside code (fenced blocks, inline code and lines indented by four spaces or a tab count as code, so an example commit message can show `<TASK-ID>`).
 
 A PASS means those implemented checks passed. It does not show that the content is accurate or complete, that a command works, that an external URL is reachable, that a heading anchor exists, that a link is relevant, or that anything is approved. Those are review items in [README_REVIEW_CHECKLIST.md](README_REVIEW_CHECKLIST.md).
 
