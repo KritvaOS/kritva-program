@@ -457,6 +457,38 @@
       "supersedes": [],
       "approval_ref": null,
       "source": "D-045"
+    },
+    {
+      "record_id": "PD-019",
+      "record_type": "DECISION",
+      "title": "Roll out the commit standard (Conventional Commits and a Task footer) to the older repositories",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0"
+        ],
+        "repo_ids": [
+          "kritva-core",
+          "kritvaos-community",
+          "kritva-raas",
+          "kritva-actuator",
+          "kritva-actuator-embedded",
+          "kritva-actuator-s",
+          "kritva-actuator-m",
+          "kritva-actuator-l"
+        ]
+      },
+      "required_action": "Until a repo adopts the standard, the PR gate reports a missing Task footer or malformed commit as NEEDS_HUMAN, not REJECT. When you roll the standard out to a repo (CONTRIBUTING, AGENTS.md, commit-format CI), set commit_standard.adopted to true for it in v2/planning/repo-pipeline.json.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "first live make pr_check sweep (kritva-raas #57, #58)"
     }
   ]
 }
