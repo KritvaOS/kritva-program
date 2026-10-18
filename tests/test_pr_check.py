@@ -135,7 +135,7 @@ class Sweep(unittest.TestCase):
 
 
 class Cli(unittest.TestCase):
-    def test_all_skips_on_hold_repos_and_needs_target(self):
+    def test_needs_target(self):
         r = subprocess.run([sys.executable, str(ROOT / "scripts/pipeline/pr_check.py")], capture_output=True, text=True)
         self.assertEqual(r.returncode, 2)
         r = subprocess.run([sys.executable, str(ROOT / "scripts/pipeline/pr_check.py"), "--pr", "3"], capture_output=True, text=True)
@@ -154,7 +154,7 @@ class Cli(unittest.TestCase):
         mk = (ROOT / "Makefile").read_text(encoding="utf-8")
         block = re.search(r"^REPOS := \\\n((?:\t[\w-]+(?: \\)?\n)+)", mk, re.M).group(1)
         listed = block.replace("\\", " ").split()
-        active = [r["repo_id"] for r in MANIFEST["repositories"] if not r.get("on_hold")]
+        active = [r["repo_id"] for r in MANIFEST["repositories"]]
         self.assertEqual(listed, active)
 
     def test_makefile_passes_the_array(self):

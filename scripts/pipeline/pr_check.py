@@ -2,7 +2,7 @@
 """Sweep open pull requests through the PR acceptance gate and, where it is clear, approve them (D-046).
 
   pr_check.py all                          every repository in the list, every open PR
-  pr_check.py all --repos a,b,c            the list given here (the Makefile passes its REPOS array); default: every manifest repo not on hold
+  pr_check.py all --repos a,b,c            the list given here (the Makefile passes its REPOS array); default: every manifest repo
   pr_check.py --repo kritva-sense          every open PR of one repository
   pr_check.py --repo kritva-sense --pr 7   one PR
   --no-approve                             report only; never submit a review
@@ -127,7 +127,7 @@ def main(argv=None):
     if a.repos and not a.target:
         ap.error("--repos goes with `all`")
     if a.target:
-        repos = a.repos.replace(",", " ").split() if a.repos else [r["repo_id"] for r in manifest["repositories"] if not r.get("on_hold")]
+        repos = a.repos.replace(",", " ").split() if a.repos else [r["repo_id"] for r in manifest["repositories"]]
         if not repos:
             ap.error("the repository list is empty")
         known = {r["repo_id"] for r in manifest["repositories"]}
