@@ -25,7 +25,7 @@ These instructions apply to the `kritva-program` repository, the program's singl
     python3 tools/consolidate_status.py --sources-dir sources --check
     python3 tools/check_planning_inventory.py . --verify-sources <sources-dir>   # when the inventory changes
 
-Regenerate `v2/tracking/consolidated_status.json`, `STATUS_VIEW.md` and `STATUS_DETAIL.md` with `tools/consolidate_status.py` after changing any tracking input; do not edit them by hand.
+Regenerate `v2/tracking/consolidated_status.json`, `STATUS_VIEW.md` and `STATUS_DETAIL.md` and the generated files in `v2/planning/` (V2_MILESTONE_PLAN.md, V2_REPO_PLAN.md, PENDING_DECISIONS.md, PENDING_REVIEWS.md) with `tools/consolidate_status.py` after changing any tracking or planning input; do not edit them by hand. The V2 plan under `v2/planning/` is a planning layer: never put its milestones into `baseline.json`, never give them weights or credit, and keep proposed dates labelled PROPOSED until the owner approves them.
 
 ## Secrets and data
 

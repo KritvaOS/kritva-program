@@ -80,9 +80,12 @@
     }
   },
   "changes": {
-    "items": [],
-    "recorded_at": "2026-10-17T17:58:28Z",
-    "since": null
+    "items": [
+      "Pending decisions: not tracked -> 17",
+      "Pending reviews: not tracked -> 7"
+    ],
+    "recorded_at": "2026-10-18T02:46:00Z",
+    "since": "2026-10-17T17:58:28Z"
   },
   "effort": {
     "capability_definition": "the owner's estimate of the share of the workstream's intended V2 scope that is delivered at the reporting cutoff. Denominator: the intended V2 scope of that workstream as the owner understands it; no formal capability inventory or weighting exists yet. Complete means delivered and working in software or documented design, never physical or safety validation. Evidence: owner judgement informed by repository state; it is not derived from PM spent or from accepted baseline weight. Owner: Dinesh. As of the reporting cutoff. A formal capability inventory with weights and completion criteria is still to be defined",
@@ -739,7 +742,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-17T17:58:28Z",
+  "generated_at": "2026-10-18T02:47:41Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -949,7 +952,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 24,
+        "age_hours": 33,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -970,7 +973,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 24,
+        "age_hours": 33,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",
@@ -1020,6 +1023,8 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
+    "pending_decisions": 17,
+    "pending_reviews": 7,
     "progress": "48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 46.15,
     "readiness": {
@@ -1932,6 +1937,80 @@
       "workstream_id": "CI_DEV_INFRA"
     }
   ],
+  "v2_plan": {
+    "blocking_decisions": 8,
+    "horizon_end": "2027-09-13",
+    "milestones": [
+      {
+        "closed": false,
+        "id": "V2-M0",
+        "phase": "P0 FOUNDATION",
+        "schedule_status": "PROPOSED",
+        "target_date": "2026-10-30"
+      },
+      {
+        "closed": false,
+        "id": "V2-M1",
+        "phase": "P1 STUDIO",
+        "schedule_status": "PROPOSED",
+        "target_date": "2026-11-30"
+      },
+      {
+        "closed": false,
+        "id": "V2-M2",
+        "phase": "P2 BUILD & ARTIFACT",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-01-15"
+      },
+      {
+        "closed": false,
+        "id": "V2-M3",
+        "phase": "P3 CONTROL PLANE",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-03-15"
+      },
+      {
+        "closed": false,
+        "id": "V2-M4",
+        "phase": "P4 BOOKING & COMMERCIAL",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-04-30"
+      },
+      {
+        "closed": false,
+        "id": "V2-M5",
+        "phase": "P5 EXECUTION",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-06-15"
+      },
+      {
+        "closed": false,
+        "id": "V2-M6",
+        "phase": "P6 LAB & ROBOT",
+        "schedule_status": "HOLD",
+        "target_date": null
+      },
+      {
+        "closed": false,
+        "id": "V2-M7",
+        "phase": "P7 LIVE & RESULTS",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-08-15"
+      },
+      {
+        "closed": false,
+        "id": "V2-M8",
+        "phase": "P8 PRODUCTION",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-09-13"
+      }
+    ],
+    "pending_decisions": 17,
+    "pending_reviews": 7,
+    "plan_status": "PROPOSED",
+    "program_start": "2026-09-14",
+    "repositories": 13
+  },
   "warnings": [
     "ACTUATION_CONTROLS: no status source (UNVERIFIED)",
     "ACT_EMB: no status source (UNVERIFIED)",

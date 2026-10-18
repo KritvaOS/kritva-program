@@ -44,6 +44,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import effort  # noqa: E402  (display-only; never read by compute())
 import readiness  # noqa: E402  (display-only; never read by compute())
+import planning  # noqa: E402  (display-only; never read by compute())
 import dashboard  # noqa: E402  (display-only; never read by compute())
 
 REPORT_ENUMS = {
@@ -1075,6 +1076,16 @@ def main():
         if not rerrs:
             c["readiness"] = readiness.summary(rdoc)
             c["readiness_doc"] = rdoc
+    plan_files = {}
+    if (root / planning.PLAN / "milestones.json").exists():
+        pdata = planning.load(root)
+        perrs = planning.validate(pdata)
+        errors += [f"v2/planning: {x}" for x in perrs]
+        c["errors"] = sorted(errors)
+        if not perrs:
+            c["v2_plan"] = planning.summary(pdata)
+            c["v2_plan_data"] = pdata
+            plan_files = {root / planning.PLAN / n: t for n, t in planning.render_all(pdata).items()}
     prev_c = None
     if prev_out.exists():
         try:
@@ -1083,9 +1094,9 @@ def main():
             prev_c = None
     c["status_facts"] = dashboard.facts(c)
     c["changes"] = dashboard.changes_record(prev_c, c["status_facts"], c["generated_at"])
-    targets = {root / TRACK / "consolidated_status.json": json.dumps({k: v for k, v in c.items() if k != "readiness_doc"}, indent=2, sort_keys=True) + "\n",
+    targets = {root / TRACK / "consolidated_status.json": json.dumps({k: v for k, v in c.items() if k not in ("readiness_doc", "v2_plan_data")}, indent=2, sort_keys=True) + "\n",
                root / TRACK / "STATUS_VIEW.md": render_view(c),
-               root / TRACK / "STATUS_DETAIL.md": render(c)}
+               root / TRACK / "STATUS_DETAIL.md": render(c), **plan_files}
 
     if a.check:
         drift = [str(p) for p, txt in targets.items() if not p.exists() or p.read_text(encoding="utf-8") != txt]

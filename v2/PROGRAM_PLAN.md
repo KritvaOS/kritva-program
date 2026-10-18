@@ -39,7 +39,7 @@ Phase scope beyond the names above is intentionally left to each phase's own pla
 4. Software acceptance (simulation, mocks, versioned interfaces) is never represented as physical hardware or safety validation.
 5. Mechanical work is on HOLD (see [PRODUCT_SCOPE.md](PRODUCT_SCOPE.md)).
 6. Status is evidence-backed; commit counts are not effort or acceptance.
-7. No empty future plans or pre-created empty folders.
+7. No empty future plans or pre-created empty folders. (D-044 adds proposed top-level milestones in `v2/planning/` only: no tasks, weights or placeholder folders.)
 8. One document, one responsibility; link instead of copying.
 
 ## 5. Governance

@@ -2,13 +2,13 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-10-17T17:58:28Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-10-18T02:47:41Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The three measures are never combined into one health figure.
 
 ## Owner actions and blockers
 
-Open items derived from the program records. Owners and due dates appear only where a record holds them. Pending decisions are tracked in [v2/DECISIONS.md](../DECISIONS.md) and are not parsed here.
+Open items derived from the program records. Owners and due dates appear only where a record holds them. Blocking items from the V2 decision queue ([PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md)) are included; the append-only log [v2/DECISIONS.md](../DECISIONS.md) is not parsed.
 
 | # | Item | Why it matters | Recorded owner | Record |
 |---|---|---|---|---|
@@ -16,11 +16,23 @@ Open items derived from the program records. Owners and due dates appear only wh
 | 2 | raas: security_disposition is OPEN | SEC-GATE-001 (a credential-shaped loopback DATABASE_URL example in history) has no Security Owner disposition or deadline yet (D-032) | not recorded per check | v2/tracking/repo_readiness.json |
 | 3 | community: security_policy is OPEN | SECURITY.md is present but its reporting contact is still the placeholder <SECURITY_EMAIL_TO_BE_DEFINED>. The Security Owner must supply a contact or confirm GitHub private vulnerability reporting is enabled; file presence alone is not a working reporting path | not recorded per check | v2/tracking/repo_readiness.json |
 | 4 | GATE-KOS-CI-001 is OPEN | KOS-CI-001 Release/ASan/UBSan CI. Blocks RELEASE | Dinesh | v2/GATE_REGISTER.md, v2/tracking/gate_closures.json |
-| 5 | 15 task(s) have reported CI evidence awaiting central approval | Zero credit until an approval is recorded: I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008 | not recorded | v2/tracking/approvals.json |
+| 5 | PD-001: Approve the nine V2 phase milestone target dates | Confirm, revise or leave UNSCHEDULED each proposed date in v2/planning/milestones.json; state whether they are planning targets or commitments. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 6 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 7 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 8 | PD-005: Approve the acceptance and test policy | Set required checks per repository kind, coverage thresholds if any, waiver authority and safety and security approval roles (v2/planning/ACCEPTANCE_STANDARD.md). | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 9 | PD-007: Approve the PR reviewer-role mapping | Name holders for ARCHITECTURE_REVIEWER and SAFETY_REVIEWER, which are not recorded; PROGRAM_OWNER, REPO_CODE_OWNER and SECURITY_OWNER are Dinesh today. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 10 | PD-011: Confirm team capacity for the 12-month horizon | 170.5 to 175 PM remaining over about 11.9 months needs roughly 14 to 15 person-months of effort per calendar month. State the real capacity so dates can be derived from effort. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 11 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 12 | PD-016: Answer the RaaS SEC-GATE-001 questions | Was kritva:kritva ever a real credential, must it be rotated, and what is the disposition deadline. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 13 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
+| 14 | 15 task(s) have reported CI evidence awaiting central approval | Zero credit until an approval is recorded: I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008 | not recorded | v2/tracking/approvals.json |
 
 ## What changed
 
-No earlier snapshot facts are recorded; changes are tracked from this snapshot onward.
+Compared with the snapshot generated 2026-10-17T17:58:28Z (recorded 2026-10-18T02:46:00Z). The record is replaced only when a tracked fact changes.
+
+- Pending decisions: not tracked -> 17
+- Pending reviews: not tracked -> 7
 
 ## Three separate measures (never blended)
 
@@ -77,11 +89,29 @@ Owner estimates from delivered scope, not timesheets. Effort is not accepted pro
 
 Codes: PASS verified from git; ATT owner-attested; OPEN work remains; FAIL verified problem; DEC owner decision needed; NA not applicable. Per-repo detail is in STATUS_DETAIL.md.
 
+## V2 milestone plan (proposed; not the baseline)
+
+Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-044). Phase dates are PROPOSED targets until decision PD-001 is made; they were not derived from a recorded capacity. P6 LAB & ROBOT is on HOLD and has no date. This plan adds no tasks, weights or credit and does not change accepted progress.
+
+| Milestone | Phase | Target | Schedule status | Closed |
+|---|---|---|---|---|
+| V2-M0 | P0 FOUNDATION | 2026-10-30 | PROPOSED | no |
+| V2-M1 | P1 STUDIO | 2026-11-30 | PROPOSED | no |
+| V2-M2 | P2 BUILD & ARTIFACT | 2027-01-15 | PROPOSED | no |
+| V2-M3 | P3 CONTROL PLANE | 2027-03-15 | PROPOSED | no |
+| V2-M4 | P4 BOOKING & COMMERCIAL | 2027-04-30 | PROPOSED | no |
+| V2-M5 | P5 EXECUTION | 2027-06-15 | PROPOSED | no |
+| V2-M6 | P6 LAB & ROBOT | NO DATE (HOLD) | HOLD | no |
+| V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | PROPOSED | no |
+| V2-M8 | P8 PRODUCTION | 2027-09-13 | PROPOSED | no |
+
+Pending: 17 decisions (8 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+
 ## Dated milestones (approved dates only)
 
 | Date | Milestone | Record |
 |---|---|---|
-| 2026-10-17 | This status snapshot | generated |
+| 2026-10-18 | This status snapshot | generated |
 | 2026-11-14 | Readiness report due | D-037, repo_readiness.json |
 | 2026-11-15 | Repositories return to private | D-037, repo_readiness.json |
 
