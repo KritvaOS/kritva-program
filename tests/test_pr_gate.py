@@ -208,6 +208,32 @@ class TaskRegistries(unittest.TestCase):
             self.assertEqual(G.gate_for(MANIFEST, r)["task_registry"]["type"], "repo-tasks-md")
 
 
+class CommitStandardAdoption(unittest.TestCase):
+    def levels(self, repo, msg):
+        gate = G.gate_for(MANIFEST, repo)
+        res = G.static_rules(gate, [{"sha": SHA, "message": msg}], [], lambda w, p: None)
+        return {r["rule"]: r for r in res if r["rule"] in ("R01", "R02")}
+
+    def test_adopted_repo_rejects_a_missing_footer(self):
+        r = self.levels("kritva-sense", "feat(sense): x\n")
+        self.assertEqual((r["R01"]["level"], r["R02"]["level"]), ("FAIL", "FAIL"))
+
+    def test_older_repo_needs_a_human_not_reject_and_says_why(self):
+        r = self.levels("kritva-raas", "KR-BE-1-044: do the thing\n")
+        self.assertEqual((r["R01"]["level"], r["R02"]["level"]), ("NEEDS_HUMAN", "NEEDS_HUMAN"))
+        self.assertIn("has not adopted the commit standard yet (PD-019)", r["R01"]["message"])
+        self.assertEqual(G.verdict(list(r.values())), "NEEDS_HUMAN")
+
+    def test_claude_session_trailer_is_still_blocked_by_its_own_check_not_relaxed(self):
+        gate = G.gate_for(MANIFEST, "kritva-raas")
+        self.assertFalse(gate["commit_standard"]["adopted"])
+
+    def test_flags_in_the_manifest(self):
+        want = {"kritva-program": True, "kritva-sense": True, "kritva-motion": True, "kritva-mind": True, "kritva-skill": True}
+        for r in MANIFEST["repositories"]:
+            self.assertEqual(r["commit_standard"]["adopted"], want.get(r["repo_id"], False), r["repo_id"])
+
+
 class Cli(unittest.TestCase):
     def test_static_cli_on_a_temp_repo(self):
         with tempfile.TemporaryDirectory() as t:

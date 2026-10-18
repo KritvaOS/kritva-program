@@ -61,6 +61,9 @@ def static_rules(gate, commits, files, read, registry_note=None):
     """commits: [{sha, message}], files: [{path, status}], read(which, path) -> text|None with which in base/head."""
     res = []
     code, prefix = gate["code"], gate["task_prefix"]
+    adopted = (gate.get("commit_standard") or {}).get("adopted", True)
+    soft = "" if adopted else "this repository has not adopted the commit standard yet (PD-019): "
+    miss = FAIL if adopted else HUMAN
     # R01 commit format and R02 task
     bad, tasks = [], []
     for c in commits:
@@ -73,13 +76,13 @@ def static_rules(gate, commits, files, read, registry_note=None):
     if not commits:
         res.append(R("R01", NOTEVAL, "no commits found for this PR"))
     elif bad:
-        res.append(R("R01", FAIL, "commit format: " + " | ".join(bad)))
+        res.append(R("R01", miss, soft + "commit format: " + " | ".join(bad)))
     else:
         res.append(R("R01", PASS, f"{len(commits)} commit(s) follow Conventional Commits with one Task footer"))
     ids = sorted({t for _, t in tasks})
     reg = (gate.get("task_registry") or {}).get("type", "repo-tasks-md")
     if not ids:
-        res.append(R("R02", FAIL if commits else NOTEVAL, "no Task: ID to check"))
+        res.append(R("R02", miss if commits else NOTEVAL, soft + "no Task: ID to check"))
     elif reg == "program-baseline":
         b = read("program", "v2/tracking/baseline.json")
         known = {t["id"] for t in json.loads(b)["tasks"]} if b else None
@@ -265,7 +268,7 @@ def gate_for(manifest, repo):
     for r in manifest["repositories"]:
         if repo in (r["repo_id"], r["github_repo"]):
             return {"repo_id": r["repo_id"], "github_repo": r["github_repo"], "code": r["code"], "task_prefix": r["task_prefix"], "kind": r["kind"],
-                    "depends_on": r["depends_on"], "task_registry": r.get("task_registry", {"type": "repo-tasks-md"}), "required_github_checks": r["required_github_checks"], "required_approvals": r["required_approvals"],
+                    "depends_on": r["depends_on"], "task_registry": r.get("task_registry", {"type": "repo-tasks-md"}), "commit_standard": r.get("commit_standard", {"adopted": True}), "required_github_checks": r["required_github_checks"], "required_approvals": r["required_approvals"],
                     "protected_paths": r.get("protected_paths", []), "manifest_id": manifest["manifest_id"], "manifest_status": manifest["status"]}
     raise SystemExit(f"unknown repository {repo!r}")
 
