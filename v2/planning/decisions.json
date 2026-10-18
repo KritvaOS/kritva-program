@@ -224,7 +224,7 @@
       "record_id": "PD-010",
       "record_type": "DECISION",
       "title": "Choose the merge method",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-10-18",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -233,12 +233,12 @@
         "phase_ids": [],
         "repo_ids": []
       },
-      "required_action": "The pipeline manifest says merge commit, matching history; ChatGPT proposed squash so the Task footer is in the final protected-branch commit. Decide before enforcing the Task footer.",
+      "required_action": "Resolved by D-053: merge commit. The raas BRANCHING_STRATEGY preference for squash is not adopted until the D-023 contract text is pinned.",
       "blocking": false,
       "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-053",
       "source": "ChatGPT advice 2026-10-18 (advisory)"
     },
     {

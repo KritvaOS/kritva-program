@@ -70,9 +70,7 @@ def static_rules(gate, commits, files, read, registry_note=None):
         probs = CF.problems(c["message"])
         if probs:
             bad.append(f"{c['sha'][:10]}: {'; '.join(probs)}")
-        for ln in c["message"].splitlines():
-            if CF.TASK.match(ln):
-                tasks.append((c["sha"], ln.split(": ", 1)[1]))
+        tasks += [(c["sha"], t) for t in CF.task_ids(c["message"])]
     if not commits:
         res.append(R("R01", NOTEVAL, "no commits found for this PR"))
     elif bad:
@@ -81,7 +79,9 @@ def static_rules(gate, commits, files, read, registry_note=None):
         res.append(R("R01", PASS, f"{len(commits)} commit(s) follow Conventional Commits with one Task footer"))
     ids = sorted({t for _, t in tasks})
     reg = (gate.get("task_registry") or {}).get("type", "repo-tasks-md")
-    if not ids:
+    if not ids and commits and all(CF.declares_none(c["message"]) for c in commits):
+        res.append(R("R02", PASS, "every commit declares 'Tasks: None' (docs or chore with a stated reason): no task to check"))
+    elif not ids:
         res.append(R("R02", miss if commits else NOTEVAL, soft + "no Task: ID to check"))
     elif reg == "program-baseline":
         b = read("program", "v2/tracking/baseline.json")
