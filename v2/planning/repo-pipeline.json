@@ -44,7 +44,8 @@
   "known_github_checks": [
     "status",
     "secret-scan",
-    "commit-message-check"
+    "commit-message-check",
+    "pr-acceptance-gate"
   ],
   "known_local_gates": [
     "make check",
@@ -87,7 +88,16 @@
         "V2-M0",
         "V2-M8"
       ],
-      "on_hold": false
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "v2/tracking/baseline.json",
+        "v2/tracking/approvals.json",
+        "v2/tracking/gate_closures.json",
+        "v2/planning/repo-pipeline.json"
+      ]
     },
     {
       "repo_id": "kritva-core",
@@ -124,7 +134,16 @@
         "V2-M2",
         "V2-M8"
       ],
-      "on_hold": false
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritvaos-community",
@@ -163,7 +182,16 @@
         "V2-M7",
         "V2-M8"
       ],
-      "on_hold": false
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-sense",
@@ -184,7 +212,8 @@
       ],
       "required_github_checks": [
         "secret-scan",
-        "commit-message-check"
+        "commit-message-check",
+        "pr-acceptance-gate"
       ],
       "local_gates": [
         "make check",
@@ -206,7 +235,16 @@
         "V2-M7",
         "V2-M8"
       ],
-      "on_hold": false
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-motion",
@@ -227,7 +265,8 @@
       ],
       "required_github_checks": [
         "secret-scan",
-        "commit-message-check"
+        "commit-message-check",
+        "pr-acceptance-gate"
       ],
       "local_gates": [
         "make check",
@@ -248,7 +287,16 @@
         "V2-M5",
         "V2-M8"
       ],
-      "on_hold": false
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-mind",
@@ -269,7 +317,8 @@
       ],
       "required_github_checks": [
         "secret-scan",
-        "commit-message-check"
+        "commit-message-check",
+        "pr-acceptance-gate"
       ],
       "local_gates": [
         "make check",
@@ -290,7 +339,16 @@
         "V2-M5",
         "V2-M8"
       ],
-      "on_hold": false
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-skill",
@@ -312,7 +370,8 @@
       ],
       "required_github_checks": [
         "secret-scan",
-        "commit-message-check"
+        "commit-message-check",
+        "pr-acceptance-gate"
       ],
       "local_gates": [
         "make check",
@@ -334,7 +393,16 @@
         "V2-M5",
         "V2-M8"
       ],
-      "on_hold": false
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-raas",
@@ -378,7 +446,16 @@
         "V2-M7",
         "V2-M8"
       ],
-      "on_hold": false
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-actuator",
@@ -417,7 +494,16 @@
         "V2-M5",
         "V2-M6"
       ],
-      "on_hold": false
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-actuator-embedded",
@@ -452,7 +538,16 @@
       "phase_milestones": [
         "V2-M6"
       ],
-      "on_hold": true
+      "on_hold": true,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-actuator-s",
@@ -486,7 +581,16 @@
       "phase_milestones": [
         "V2-M6"
       ],
-      "on_hold": true
+      "on_hold": true,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-actuator-m",
@@ -520,7 +624,16 @@
       "phase_milestones": [
         "V2-M6"
       ],
-      "on_hold": true
+      "on_hold": true,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     },
     {
       "repo_id": "kritva-actuator-l",
@@ -554,7 +667,39 @@
       "phase_milestones": [
         "V2-M6"
       ],
-      "on_hold": true
+      "on_hold": true,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
     }
-  ]
+  ],
+  "people": {
+    "Dinesh": {
+      "github_login": "dineshannayya",
+      "basis": "CODEOWNERS (D-035, D-040)"
+    }
+  },
+  "pr_gate": {
+    "status": "PROPOSED",
+    "mode": "REPORT_ONLY",
+    "check_name": "pr-acceptance-gate",
+    "decision": "D-045",
+    "task_states_open_for_work": [
+      "READY",
+      "IN_PROGRESS",
+      "IN_REVIEW",
+      "CHANGES_REQUESTED"
+    ],
+    "task_states_closed": [
+      "ACCEPTED",
+      "CANCELLED",
+      "DEFERRED"
+    ]
+  }
 }

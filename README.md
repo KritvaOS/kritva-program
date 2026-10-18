@@ -54,7 +54,7 @@ Repositories report implementation facts and evidence. This repository owns prog
 | [tools/](tools/) | The consolidator and helpers (see below) |
 | [tests/](tests/) | Unit tests for the tools |
 | [scripts/security/](scripts/security/) | Commit-message check used by CI; commit-format checker (Conventional Commits and Task footer, not yet enforced) |
-| [scripts/pipeline/](scripts/pipeline/) | `ship-prs.sh` (open, check, merge and tag PRs in manifest order) and `manifest.py` |
+| [scripts/pipeline/](scripts/pipeline/) | `ship-prs.sh` (open, check, merge and tag PRs in manifest order), `manifest.py`, and `pr_gate.py` (report-only PR acceptance gate, D-045) |
 | [.github/](.github/) | Workflows and CODEOWNERS |
 
 ## 3. Status reporting
@@ -100,6 +100,7 @@ python3 tools/consolidate_status.py --sources-dir sources --check    # fail if c
 python3 tools/check_planning_inventory.py .                          # planning inventory rules
 python3 tools/planning.py --check                                    # V2 planning records and generated views (also covered by consolidate_status --check)
 python3 scripts/pipeline/manifest.py validate                        # PR pipeline manifest
+python3 scripts/pipeline/pr_gate.py remote --repo kritva-sense --pr 7   # report on an open PR (read-only)
 ```
 
 Change an input (baseline, approvals, gates, sources, effort, readiness, planning inventory, v2/planning records), regenerate, and commit the generated files in the same pull request. CI runs the same checks, plus `secret-scan` and `commit-message-check`.
