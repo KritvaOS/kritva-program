@@ -149,6 +149,27 @@ class Cli(unittest.TestCase):
         self.assertEqual(w[2:], ["--repo", "kritva-sense", "--pr", "7", "--no-approve"])
         self.assertNotIn("all", w)
 
+    def test_makefile_repo_array_matches_manifest(self):
+        import re
+        mk = (ROOT / "Makefile").read_text(encoding="utf-8")
+        block = re.search(r"^REPOS := \\\n((?:\t[\w-]+(?: \\)?\n)+)", mk, re.M).group(1)
+        listed = block.replace("\\", " ").split()
+        active = [r["repo_id"] for r in MANIFEST["repositories"] if not r.get("on_hold")]
+        self.assertEqual(listed, active)
+
+    def test_makefile_passes_the_array(self):
+        out = subprocess.run(["make", "-n", "-s", "pr_check", "all"], cwd=ROOT, capture_output=True, text=True).stdout
+        self.assertIn('--repos "kritva-program kritva-core', out)
+        out = subprocess.run(["make", "-n", "-s", "pr_check", "all", "REPOS=kritva-sense kritva-mind"], cwd=ROOT, capture_output=True, text=True).stdout
+        self.assertIn('--repos "kritva-sense kritva-mind"', out)
+
+    def test_repos_option_is_validated(self):
+        run = lambda *a: subprocess.run([sys.executable, str(ROOT / "scripts/pipeline/pr_check.py"), *a], capture_output=True, text=True)
+        r = run("all", "--repos", "kritva-sense,nope")
+        self.assertEqual(r.returncode, 2)
+        self.assertIn("not in the manifest: nope", r.stderr)
+        self.assertEqual(run("--repo", "kritva-sense", "--repos", "kritva-mind").returncode, 2)
+
 
 if __name__ == "__main__":
     unittest.main()
