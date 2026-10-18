@@ -12,6 +12,8 @@
 #   make merge REPO=kritva-sense PR=7                  merge a PR you pushed yourself: gate, checks, --admin merge, sync local main
 #   make merge REPO=kritva-sense PR=7 DRY=1            everything except the merge
 #
+#   make readme_check                              check README.md against the README standard (D-055); README=path for another file
+#
 # GNU make takes "--repo" and "--pr" as its own options, so use REPO= and PR=.
 # The script can also be called directly: python3 scripts/pipeline/pr_check.py --repo kritva-sense --pr 7
 
@@ -33,10 +35,10 @@ REPOS := \
 	kritva-actuator-m \
 	kritva-actuator-l
 
-.PHONY: help pr_check all ship merge
+.PHONY: help pr_check all ship merge readme_check
 
 help:
-	@sed -n '3,14p' Makefile
+	@sed -n '3,16p' Makefile
 
 # "all" is only a word after pr_check, so it must not build anything.
 all:
@@ -52,3 +54,7 @@ ship:
 # Merge an already open PR (see scripts/pipeline/merge-pr.sh). Options: REPO, PR, DRY=1, NOADMIN=1.
 merge:
 	@scripts/pipeline/merge-pr.sh $(if $(REPO),--repo "$(REPO)") $(if $(PR),--pr "$(PR)") $(if $(DRY),--dry) $(if $(NOADMIN),--no-admin)
+
+# README structure, metadata and local links (v2/planning/standards/README_STANDARD.md).
+readme_check:
+	@python3 scripts/docs/check_readme.py $(or $(README),README.md)
