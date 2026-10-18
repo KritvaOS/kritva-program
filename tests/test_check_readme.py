@@ -49,6 +49,8 @@ class CheckReadme(unittest.TestCase):
         self.assertTrue(any("placeholder" in p for p in self.run_check(GOOD + "\nSee <repository-name>\n")))
         self.assertTrue(any("placeholder" in p for p in self.run_check(GOOD + "\nTODO\n")))
         self.assertEqual(self.run_check(GOOD + "\n```\n<repo> [x](nope.md) TODO\n```\nand `<y>` `[z](nope)`\n"), [])
+        self.assertEqual(self.run_check(GOOD + "\nExample:\n\n    feat(x): <imperative summary> [<TASK-ID>]\n"), [])
+        self.assertTrue(any("does not resolve" in p for p in self.run_check(GOOD + "\n    see [a](nope.md)\n")))
 
 
 class Repository(unittest.TestCase):
