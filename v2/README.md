@@ -33,6 +33,7 @@ Executive view only. Detail lives in the linked authoritative documents; do not 
 | Document | Responsibility |
 |---|---|
 | [PROGRAM_PLAN.md](PROGRAM_PLAN.md) | Objectives, scope, governance, phases, planning rules |
+| [planning/V2_MILESTONE_PLAN.md](planning/V2_MILESTONE_PLAN.md) | Proposed V2 milestones per phase and repository (D-044); also the repository plan, acceptance standard and pending decision and review queues in [planning/](planning/) |
 | [PRODUCT_SCOPE.md](PRODUCT_SCOPE.md) | In/out-of-scope boundaries |
 | [PRS.md](PRS.md) | Product requirements and acceptance expectations |
 | [SYSTEM_ARCHITECTURE.md](SYSTEM_ARCHITECTURE.md) | System-level components and interactions |

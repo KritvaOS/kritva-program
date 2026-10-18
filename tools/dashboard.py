@@ -17,6 +17,7 @@ baseline, approvals or readiness. Rules (aligned with the external review, 2026-
 import re
 from pathlib import Path
 
+import planning as _pl
 import readiness as _rd
 
 BAR_WIDTH = 30
@@ -106,6 +107,17 @@ def owner_action_rows(c):
         if g["status"] != "CLOSED":
             rows.append((f"{g['gate_id']} is {g['status']}", f"{g['title']}. Blocks {', '.join(g['blocking_effect'])}",
                          g.get("owner") or "not recorded", "v2/GATE_REGISTER.md, v2/tracking/gate_closures.json"))
+    pd = c.get("v2_plan_data")
+    if pd:
+        for x in _pl.pending_decisions(pd):
+            if x.get("blocking"):
+                rows.append((f"{x['record_id']}: {x['title']}", x["required_action"], x.get("decision_authority") or "not recorded",
+                             "v2/planning/PENDING_DECISIONS.md"))
+        rv = _pl.pending_reviews(pd)
+        if rv:
+            rows.append((f"{len(rv)} review(s) pending ({', '.join(x['record_id'] for x in rv)})",
+                         "Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet" if all(not x.get("reviewer") for x in rv) else "See the queue",
+                         "UNASSIGNED" if all(not x.get("reviewer") for x in rv) else "see queue", "v2/planning/PENDING_REVIEWS.md"))
     waiting = sorted(t["task_id"] for t in c["tasks"] if t.get("evidence_state") == "REPORTED_AWAITING_APPROVAL")
     if waiting:
         rows.append((f"{len(waiting)} task(s) have reported CI evidence awaiting central approval",
@@ -119,7 +131,7 @@ def owner_actions_lines(c):
     if not rows:
         return L + ["None recorded.", ""]
     L += ["Open items derived from the program records. Owners and due dates appear only where a record holds them. "
-          "Pending decisions are tracked in [v2/DECISIONS.md](../DECISIONS.md) and are not parsed here.", "",
+          "Blocking items from the V2 decision queue ([PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md)) are included; the append-only log [v2/DECISIONS.md](../DECISIONS.md) is not parsed.", "",
           "| # | Item | Why it matters | Recorded owner | Record |", "|---|---|---|---|---|"]
     for i, (a, b, o, r) in enumerate(rows, 1):
         L.append(f"| {i} | {a} | {b.replace('|', '/')} | {o} | {r} |")
@@ -134,7 +146,8 @@ def facts(c):
             "gates": {g["gate_id"]: g["status"] for g in c["gates"]},
             "readiness": {r["repo"]: [r["readiness"], sorted(r["blocking"])] for r in rd["repos"]},
             "effort_completed": ef.get("completed"), "effort_remaining": ef.get("remaining"),
-            "errors": len(c["errors"]), "warnings": len(c["warnings"])}
+            "errors": len(c["errors"]), "warnings": len(c["warnings"]),
+            "pending_decisions": (c.get("v2_plan") or {}).get("pending_decisions"), "pending_reviews": (c.get("v2_plan") or {}).get("pending_reviews")}
 
 
 def diff_facts(old, new):
@@ -156,9 +169,11 @@ def diff_facts(old, new):
     for key, lab in (("effort_completed", "Effort completed (PM)"), ("effort_remaining", "Effort remaining (PM)")):
         if old[key] != new[key]:
             out.append(f"{lab}: {old[key]} -> {new[key]}")
-    for key, lab in (("errors", "Validation errors"), ("warnings", "Warnings")):
-        if old[key] != new[key]:
-            out.append(f"{lab}: {old[key]} -> {new[key]}")
+    for key, lab in (("errors", "Validation errors"), ("warnings", "Warnings"), ("pending_decisions", "Pending decisions"), ("pending_reviews", "Pending reviews")):
+        if key not in old and new.get(key) is None:
+            continue
+        if old.get(key) != new.get(key):
+            out.append(f"{lab}: {old.get(key, 'not tracked')} -> {new.get(key)}")
     return out
 
 
@@ -232,6 +247,22 @@ def readiness_lines(c):
     return L
 
 
+def plan_lines(c):
+    L = ["## V2 milestone plan (proposed; not the baseline)", ""]
+    vp, pdd = c.get("v2_plan"), c.get("v2_plan_data")
+    if not vp:
+        return L + ["NOT_VERIFIED: v2/planning records are missing or invalid.", ""]
+    L += [f"Program start {vp['program_start']} and a horizon ending {vp['horizon_end']} are owner-approved (D-044). Phase dates are PROPOSED targets until decision PD-001 is made; "
+          "they were not derived from a recorded capacity. P6 LAB & ROBOT is on HOLD and has no date. This plan adds no tasks, weights or credit and does not change accepted progress.", "",
+          "| Milestone | Phase | Target | Schedule status | Closed |", "|---|---|---|---|---|"]
+    for m in vp["milestones"]:
+        L.append(f"| {m['id']} | {m['phase']} | {m['target_date'] or 'NO DATE (HOLD)'} | {m['schedule_status']} | {'yes' if m['closed'] else 'no'} |")
+    L += ["", f"Pending: {vp['pending_decisions']} decisions ({vp['blocking_decisions']} blocking) and {vp['pending_reviews']} reviews. "
+          "See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), "
+          "[V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).", ""]
+    return L
+
+
 def milestones_lines(c):
     rd = c.get("readiness")
     L = ["## Dated milestones (approved dates only)", ""]
@@ -283,4 +314,4 @@ def render_view_lines(c, phases, measures_table):
     """measures_table: list of lines for the three-measures table, built by the consolidator."""
     return [*header_lines(c), *owner_actions_lines(c), *changes_lines(c),
             "## Three separate measures (never blended)", "", *measures_table, "",
-            *progress_lines(c), *effort_lines(c), *readiness_lines(c), *milestones_lines(c), *phase_lines(phases), *quality_lines(c)]
+            *progress_lines(c), *effort_lines(c), *readiness_lines(c), *plan_lines(c), *milestones_lines(c), *phase_lines(phases), *quality_lines(c)]

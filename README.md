@@ -17,6 +17,10 @@ This repository records program-level truth. It does **not** contain engineering
 | Gates | Open safety and release gates that give zero credit to the tasks in their scope | [v2/GATE_REGISTER.md](v2/GATE_REGISTER.md), [gate_closures.json](v2/tracking/gate_closures.json) |
 | Planning inventory | Tasks that are planned but not baselined (RaaS and actuators). Planning only: no weights, no credit | [v2/tracking/planning_inventory.json](v2/tracking/planning_inventory.json) |
 | Decisions | Append-only log with rationale and status (D-001 onward) | [v2/DECISIONS.md](v2/DECISIONS.md) |
+| V2 milestone plan | Nine proposed phase milestones (V2-M0 to V2-M8, start 2026-09-14, horizon to 2027-09-13) with per-repository milestones. A planning layer: no tasks, weights or credit, separate from the baseline | [v2/planning/V2_MILESTONE_PLAN.md](v2/planning/V2_MILESTONE_PLAN.md) |
+| Repository plan and PR sequence | Dependency-ordered registry of all 13 repositories with approval roles and required checks, read by `scripts/pipeline/ship-prs.sh` | [V2_REPO_PLAN.md](v2/planning/V2_REPO_PLAN.md), [repo-pipeline.json](v2/planning/repo-pipeline.json) |
+| Acceptance standard | Task and milestone definition of done, test gates, commit format, git tags (proposed, pending approval) | [ACCEPTANCE_STANDARD.md](v2/planning/ACCEPTANCE_STANDARD.md) |
+| Pending decisions and reviews | Generated queues from structured records, not from text | [PENDING_DECISIONS.md](v2/planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](v2/planning/PENDING_REVIEWS.md) |
 | Dependencies, risks | Provider/consumer map, critical path, risk register | [DEPENDENCY_MAP](v2/DEPENDENCY_MAP.md), [CRITICAL_PATH](v2/CRITICAL_PATH.md), [RISK_REGISTER](v2/RISK_REGISTER.md) |
 
 Phase dates are **not approved** (see the roadmap); no schedule is implied anywhere in this repository. Mechanical work is on HOLD (D-003) until the owner reopens it. The program dashboard and document index are in [v2/README.md](v2/README.md).
@@ -43,12 +47,14 @@ Repositories report implementation facts and evidence. This repository owns prog
 |---|---|
 | [v2/](v2/) | Program documents: plan, scope, roadmap, gates, risks, decisions, reviews |
 | [v2/tracking/](v2/tracking/) | Machine-readable program records and the generated status view |
+| [v2/planning/](v2/planning/) | V2 milestones, repository pipeline, pending decision and review records, acceptance standard, and their generated views |
 | [sources/](sources/) | Committed copies of each repository's `status/status.json`, with provenance in `MANIFEST.json` |
 | [status/](status/) | This repository's own status report (workstream CI_DEV_INFRA) |
 | [schema/](schema/) | `status.schema.json`, the status report schema (version 2.0) |
 | [tools/](tools/) | The consolidator and helpers (see below) |
 | [tests/](tests/) | Unit tests for the tools |
-| [scripts/security/](scripts/security/) | Commit-message check used by CI |
+| [scripts/security/](scripts/security/) | Commit-message check used by CI; commit-format checker (Conventional Commits and Task footer, not yet enforced) |
+| [scripts/pipeline/](scripts/pipeline/) | `ship-prs.sh` (open, check, merge and tag PRs in manifest order) and `manifest.py` |
 | [.github/](.github/) | Workflows and CODEOWNERS |
 
 ## 3. Status reporting
@@ -92,9 +98,11 @@ python3 -m unittest discover -s tests
 python3 tools/consolidate_status.py --sources-dir sources            # regenerate JSON, STATUS_VIEW.md and STATUS_DETAIL.md
 python3 tools/consolidate_status.py --sources-dir sources --check    # fail if committed output is out of date
 python3 tools/check_planning_inventory.py .                          # planning inventory rules
+python3 tools/planning.py --check                                    # V2 planning records and generated views (also covered by consolidate_status --check)
+python3 scripts/pipeline/manifest.py validate                        # PR pipeline manifest
 ```
 
-Change an input (baseline, approvals, gates, sources, effort, readiness, planning inventory), regenerate, and commit the generated files in the same pull request. CI runs the same checks, plus `secret-scan` and `commit-message-check`.
+Change an input (baseline, approvals, gates, sources, effort, readiness, planning inventory, v2/planning records), regenerate, and commit the generated files in the same pull request. CI runs the same checks, plus `secret-scan` and `commit-message-check`.
 
 ## 5. Rules
 
