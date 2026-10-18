@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Sweep open pull requests through the PR acceptance gate and, where it is clear, approve them (D-046).
 
-  pr_check.py all                          every repository in the manifest, every open PR
+  pr_check.py all                          every repository in the list, every open PR
+  pr_check.py all --repos a,b,c            the list given here (the Makefile passes its REPOS array); default: every manifest repo not on hold
   pr_check.py --repo kritva-sense          every open PR of one repository
   pr_check.py --repo kritva-sense --pr 7   one PR
   --no-approve                             report only; never submit a review
@@ -114,6 +115,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("target", nargs="?", choices=["all"])
     ap.add_argument("--repo"); ap.add_argument("--pr")
+    ap.add_argument("--repos", help="comma or space separated repo ids for `all`; each must exist in the manifest")
     ap.add_argument("--no-approve", action="store_true")
     ap.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
     a = ap.parse_args(argv)
@@ -122,7 +124,18 @@ def main(argv=None):
     if a.pr and not a.repo:
         ap.error("--pr needs --repo")
     manifest = json.loads(Path(a.manifest).read_text(encoding="utf-8"))
-    repos = [r["repo_id"] for r in manifest["repositories"] if not r.get("on_hold")] if a.target else [a.repo]
+    if a.repos and not a.target:
+        ap.error("--repos goes with `all`")
+    if a.target:
+        repos = a.repos.replace(",", " ").split() if a.repos else [r["repo_id"] for r in manifest["repositories"] if not r.get("on_hold")]
+        if not repos:
+            ap.error("the repository list is empty")
+        known = {r["repo_id"] for r in manifest["repositories"]}
+        unknown = [r for r in repos if r not in known]
+        if unknown:
+            ap.error(f"not in the manifest: {', '.join(unknown)}")
+    else:
+        repos = [a.repo]
     return sweep(manifest, repos, a.pr, not a.no_approve)
 
 

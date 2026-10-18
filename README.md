@@ -101,7 +101,7 @@ python3 tools/check_planning_inventory.py .                          # planning 
 python3 tools/planning.py --check                                    # V2 planning records and generated views (also covered by consolidate_status --check)
 python3 scripts/pipeline/manifest.py validate                        # PR pipeline manifest
 python3 scripts/pipeline/pr_gate.py remote --manifest v2/planning/repo-pipeline.json --repo kritva-sense --pr 7   # report on one PR (read-only)
-make pr_check all                                                    # sweep every repo's open PRs; approves the clear ones (DRY=1 to only report)
+make pr_check all                                                    # sweep the REPOS list in the Makefile; approves the clear ones (DRY=1 to only report)
 make pr_check REPO=kritva-sense PR=7                                 # one PR
 ```
 
