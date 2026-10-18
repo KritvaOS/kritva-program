@@ -30,8 +30,8 @@ class CheckReadme(unittest.TestCase):
         self.assertEqual(self.run_check(GOOD), [])
 
     def test_missing_metadata_field_fails(self):
-        bad = GOOD.replace("| Target Visibility | value |\n", "")
-        self.assertIn("metadata field missing: Target Visibility", self.run_check(bad))
+        bad = GOOD.replace("| GitHub Setting | value |\n", "")
+        self.assertIn("metadata field missing: GitHub Setting", self.run_check(bad))
 
     def test_empty_metadata_field_fails(self):
         bad = GOOD.replace("| Tasks | value |", "| Tasks |  |")

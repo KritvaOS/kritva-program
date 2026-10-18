@@ -1,21 +1,22 @@
 # kritva-program
 
-> Program-level planning, governance and status reporting for the Kritva OS ecosystem: the decision log, the frozen baseline, approvals, release gates, risks, roadmap and the consolidated status view.
+> Program-level planning, governance and status reporting for the Kritva OS ecosystem: the decision log, the frozen baseline, approvals, release gates, risks, roadmap and the consolidated status view. This is a private repository.
 
 | Property | Value |
 |---|---|
 | Project | KritvaOS |
 | Repository | `KritvaOS/kritva-program` |
 | Repository Type | Program governance |
-| Current Visibility | PUBLIC (verified 2026-10-18; temporary, D-028) |
-| Target Visibility | PRIVATE (D-037, planned 2026-11-15) |
+| Visibility Class | PRIVATE (future private; D-037, D-039) |
+| GitHub Setting | PUBLIC (verified 2026-10-18; temporary, D-028: owner action returns it to private) |
 | Lifecycle Status | ACTIVE |
-| Repository Owner | Dinesh (owner and Security Owner) |
-| Architecture | [v2/SYSTEM_ARCHITECTURE.md](v2/SYSTEM_ARCHITECTURE.md) and [v2/PLATFORM_ARCHITECTURE.md](v2/PLATFORM_ARCHITECTURE.md) |
-| Milestones | [v2/planning/V2_MILESTONE_PLAN.md](v2/planning/V2_MILESTONE_PLAN.md) |
+| Repository Owner | Dinesh (owner) |
+| Security Owner | Dinesh ([SECURITY.md](SECURITY.md), D-032) |
+| Architecture | [v2/SYSTEM_ARCHITECTURE.md](v2/SYSTEM_ARCHITECTURE.md) and [v2/PLATFORM_ARCHITECTURE.md](v2/PLATFORM_ARCHITECTURE.md) (both SKELETON: no architecture is asserted yet) |
+| Milestones | [v2/planning/V2_MILESTONE_PLAN.md](v2/planning/V2_MILESTONE_PLAN.md) (PROPOSED targets, not approved delivery commitments) |
 | Tasks | [v2/tracking/baseline.json](v2/tracking/baseline.json) (baselined) and [v2/tracking/planning_inventory.json](v2/tracking/planning_inventory.json) (planning only) |
-| Acceptance Criteria | [v2/planning/ACCEPTANCE_STANDARD.md](v2/planning/ACCEPTANCE_STANDARD.md) |
-| Status Reporting | [v2/tracking/STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) and [schema/status.schema.json](schema/status.schema.json) |
+| Acceptance Criteria | [v2/planning/ACCEPTANCE_STANDARD.md](v2/planning/ACCEPTANCE_STANDARD.md) (PROPOSED) |
+| Status Reporting | [v2/tracking/STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) (generated snapshot) and [schema/status.schema.json](schema/status.schema.json) |
 | License | [LICENSE](LICENSE) (proprietary, all rights reserved) |
 
 This README follows the [Kritva README standard](v2/planning/standards/README_STANDARD.md) (D-055). It is the entry point; the documents it links own the detail.
@@ -38,7 +39,7 @@ It does **not** contain engineering source code, and it is not the authority for
 
 ## 3. KritvaOS Ecosystem Overview
 
-Thirteen repositories, in the dependency order that `scripts/pipeline/ship-prs.sh` uses. All are temporarily public (D-028) for alignment and review and are planned to return to private on 2026-11-15 (D-037). The per-repository visibility target is part of each repository's own README.
+The repositories of the program, for navigation. The roster, the dependency order, the approval roles and the required checks are owned by [repo-pipeline.json](v2/planning/repo-pipeline.json) (read by `scripts/pipeline/ship-prs.sh`), not by this table. kritva-program, kritva-raas and the kritva-actuator repositories are future private repositories and are written up as private. Each repository's visibility class and readiness are in [repo_readiness.json](v2/tracking/repo_readiness.json); the temporary public arrangement and its end are decided in D-028 and D-037, not restated here.
 
 | Repository | Role |
 |---|---|
@@ -51,7 +52,7 @@ Thirteen repositories, in the dependency order that `scripts/pipeline/ship-prs.s
 | [kritva-actuator-embedded](https://github.com/KritvaOS/kritva-actuator-embedded) | Firmware and electronics for the actuator family (planning only; HOLD lifted by D-052) |
 | [kritva-actuator-s](https://github.com/KritvaOS/kritva-actuator-s), [-m](https://github.com/KritvaOS/kritva-actuator-m), [-l](https://github.com/KritvaOS/kritva-actuator-l) | Mechanical design of the S, M and L variants (planning only; HOLD lifted by D-052) |
 
-The order, the approval roles and the required checks of each repository are in [V2_REPO_PLAN.md](v2/planning/V2_REPO_PLAN.md) and its source [repo-pipeline.json](v2/planning/repo-pipeline.json).
+The generated view of that roster, with order, approval roles and required checks, is [V2_REPO_PLAN.md](v2/planning/V2_REPO_PLAN.md).
 
 Two kinds of relationship are kept apart. An **implementation dependency** is one repository consuming another's code, artifact or interface. A **governance dependency** is a repository reporting status and evidence to this one under the program schema. A dependency that is not yet established is labelled PROPOSED or PLANNED in [DEPENDENCY_MAP](v2/DEPENDENCY_MAP.md).
 
@@ -72,12 +73,12 @@ Two kinds of relationship are kept apart. An **implementation dependency** is on
 
 | Layer | Responsibility | Where |
 |---|---|---|
-| Program plan | Goals, scope, phases, governance | [v2/PROGRAM_PLAN.md](v2/PROGRAM_PLAN.md) |
-| System and platform architecture | Components and how they fit | [SYSTEM_ARCHITECTURE](v2/SYSTEM_ARCHITECTURE.md), [PLATFORM_ARCHITECTURE](v2/PLATFORM_ARCHITECTURE.md), [PRODUCT_SCOPE](v2/PRODUCT_SCOPE.md) |
+| Program plan (DRAFT) | Goals, scope, phases, governance | [v2/PROGRAM_PLAN.md](v2/PROGRAM_PLAN.md) |
+| System and platform architecture (SKELETON) | Component names only; relationships and interfaces are not documented yet | [SYSTEM_ARCHITECTURE](v2/SYSTEM_ARCHITECTURE.md), [PLATFORM_ARCHITECTURE](v2/PLATFORM_ARCHITECTURE.md), [PRODUCT_SCOPE](v2/PRODUCT_SCOPE.md) |
 | Baseline and approvals | Approved tasks, weights and acceptance records | [v2/tracking/](v2/tracking/) |
 | Evidence | Committed snapshots of repository status | [sources/](sources/) |
 | Status computation | Validation and consolidated progress | [tools/](tools/) |
-| Status presentation | Generated summary and detail | [STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md), [STATUS_DETAIL.md](v2/tracking/STATUS_DETAIL.md) |
+| Status presentation | Generated snapshots of the inputs above; they can lag them | [STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md), [STATUS_DETAIL.md](v2/tracking/STATUS_DETAIL.md) |
 
 Engineering repositories report implementation facts. This repository owns baseline credit and approvals. A repository edit never creates credit.
 
@@ -89,9 +90,9 @@ Engineering repositories report implementation facts. This repository owns basel
 | Workstreams | Registered areas of work, each owned by a repository where one exists | [v2/tracking/workstreams.json](v2/tracking/workstreams.json) |
 | Baseline | The approved, frozen set of tasks and weights that progress is measured against | [v2/tracking/baseline.json](v2/tracking/baseline.json), [baselines/](v2/tracking/baselines/) |
 | Planning inventory | Tasks planned but not baselined (RaaS, actuators, capability repositories). Planning only: no weights, no credit | [v2/tracking/planning_inventory.json](v2/tracking/planning_inventory.json) |
-| V2 milestone plan | Nine proposed phase milestones (V2-M0 to V2-M8, start 2026-09-14, horizon to 2027-09-13) with per-repository milestones. A planning layer: no tasks, weights or credit, separate from the baseline | [v2/planning/V2_MILESTONE_PLAN.md](v2/planning/V2_MILESTONE_PLAN.md) |
+| V2 milestone plan | Nine proposed phase milestones (V2-M0 to V2-M8) with per-repository milestones and proposed target dates. PROPOSED planning targets, not a committed delivery schedule; the start and horizon are owner answers recorded in D-044. A planning layer: no tasks, weights or credit, separate from the baseline | [v2/planning/V2_MILESTONE_PLAN.md](v2/planning/V2_MILESTONE_PLAN.md) |
 
-Planning is not acceptance. Proposed milestones, newly drafted tasks, finished implementation and passing tests do not by themselves change the baseline or earn credit. Phase dates are **not approved** (see the roadmap); no schedule is implied anywhere in this repository. Mechanical work is on HOLD (D-003); D-052 lifts it for the actuator workstreams, and the actuator local gates still apply.
+Planning is not acceptance. Proposed milestones, newly drafted tasks, finished implementation and passing tests do not by themselves change the baseline or earn credit. Phase baseline dates are **not approved** ([ROADMAP](v2/ROADMAP.md)); the dates in the milestone plan are proposed targets and are not delivery commitments. Mechanical work is on HOLD (D-003); D-052 lifts it for the actuator workstreams, and the actuator local gates still apply.
 
 ## 6. Repository Structure and Responsibilities
 
@@ -101,9 +102,9 @@ Planning is not acceptance. Proposed milestones, newly drafted tasks, finished i
 | [AGENTS.md](AGENTS.md) | Rules for agents working here | AUTHORITATIVE | owner decision |
 | [SECURITY.md](SECURITY.md) | Vulnerability reporting and secrets policy | AUTHORITATIVE | owner decision |
 | [Makefile](Makefile) | Program helpers: `pr_check`, `ship`, `merge`, `readme_check` | INPUT | yes, with tests |
-| [v2/](v2/) | Program documents: plan, scope, roadmap, gates, risks, decisions, reviews | AUTHORITATIVE per document | per document |
-| [v2/tracking/](v2/tracking/) | Baseline, approvals, gate closures, effort, readiness, and the generated status view | INPUT and GENERATED, per file | see section 17 |
-| [v2/planning/](v2/planning/) | V2 milestones, repository pipeline, pending decisions and reviews, acceptance standard, README standard | INPUT and GENERATED, per file | see section 17 |
+| [v2/](v2/) | Program documents: plan, scope, roadmap, gates, risks, decisions, reviews | MIXED: each document has its own label (section 7) | per document |
+| [v2/tracking/](v2/tracking/) | Baseline, approvals, gate closures, effort, readiness (INPUT: the JSON files); the status view and `consolidated_status.json` (GENERATED) | MIXED: INPUT and GENERATED, per file | see section 17 |
+| [v2/planning/](v2/planning/) | Repository pipeline, milestones and decision records (INPUT: the JSON files); V2_MILESTONE_PLAN, V2_REPO_PLAN, PENDING_* (GENERATED); ACCEPTANCE_STANDARD and the README standard (AUTHORITATIVE, PROPOSED) | MIXED: INPUT, GENERATED and AUTHORITATIVE, per file | see section 17 |
 | [sources/](sources/) | Copies of each repository's `status/status.json`, provenance in `MANIFEST.json` | SNAPSHOT | no: refresh |
 | [status/](status/) | This repository's own status report (workstream CI_DEV_INFRA) | INPUT | via its generator |
 | [schema/](schema/) | `status.schema.json`, the status report schema (version 2.0) | AUTHORITATIVE | owner decision |
@@ -116,44 +117,46 @@ Planning is not acceptance. Proposed milestones, newly drafted tasks, finished i
 
 ## 7. Program-of-Record Documents
 
-| Document | Label | What it answers |
+| Document | Label, status | What it answers |
 |---|---|---|
-| [v2/README.md](v2/README.md) | REFERENCE | Program dashboard and planning document index |
-| [v2/PROGRAM_PLAN.md](v2/PROGRAM_PLAN.md) | AUTHORITATIVE | Scope, phases, operating model |
-| [v2/ROADMAP.md](v2/ROADMAP.md) | AUTHORITATIVE | Phase order and forecast rules |
-| [v2/DECISIONS.md](v2/DECISIONS.md) | AUTHORITATIVE | What was decided and why (D-001 onward) |
-| [v2/tracking/baseline.json](v2/tracking/baseline.json) | INPUT | Approved tasks and weights |
-| [v2/tracking/approvals.json](v2/tracking/approvals.json) | EVIDENCE | Review and acceptance records |
+| [v2/README.md](v2/README.md) | REFERENCE | Program dashboard and planning document index (not an alternative source of architecture) |
+| [v2/PROGRAM_PLAN.md](v2/PROGRAM_PLAN.md) | AUTHORITATIVE, DRAFT | Scope, phases, operating model |
+| [v2/ROADMAP.md](v2/ROADMAP.md) | AUTHORITATIVE; phase dates not approved | Phase order and forecast rules |
+| [v2/DECISIONS.md](v2/DECISIONS.md) | AUTHORITATIVE, append-only | What was decided and why (D-001 onward) |
+| [v2/tracking/baseline.json](v2/tracking/baseline.json) | INPUT, frozen baseline | Approved tasks and weights |
+| [v2/tracking/approvals.json](v2/tracking/approvals.json) | EVIDENCE, append-only | Review and acceptance records |
 | [v2/GATE_REGISTER.md](v2/GATE_REGISTER.md) | AUTHORITATIVE | Gates, entry and exit criteria, required evidence |
-| [v2/planning/ACCEPTANCE_STANDARD.md](v2/planning/ACCEPTANCE_STANDARD.md) | AUTHORITATIVE (proposed) | Definition of done, test gates, commit format, tags |
+| [v2/planning/ACCEPTANCE_STANDARD.md](v2/planning/ACCEPTANCE_STANDARD.md) | AUTHORITATIVE role, PROPOSED | Definition of done, test gates, commit format, tags. Section 4 (commit text) is enforced in this repository (D-053); the standard is not approved for all repositories (PD-019) |
 | [v2/REPOSITORY_BASELINE.md](v2/REPOSITORY_BASELINE.md) | REFERENCE | Reconciliation of repositories against evidence |
 | [v2/REQUIREMENT_TRACEABILITY.md](v2/REQUIREMENT_TRACEABILITY.md) | REFERENCE | Requirement to task traceability |
 | [v2/tracking/ONBOARDING.md](v2/tracking/ONBOARDING.md) | REFERENCE | How a repository starts reporting |
 
 ## 8. Workstream Dependencies and Critical Path
 
-[v2/DEPENDENCY_MAP.md](v2/DEPENDENCY_MAP.md) lists provider and consumer relationships and [v2/CRITICAL_PATH.md](v2/CRITICAL_PATH.md) the chain that controls sequencing. The PR order of the thirteen repositories is in [V2_REPO_PLAN.md](v2/planning/V2_REPO_PLAN.md).
+[v2/DEPENDENCY_MAP.md](v2/DEPENDENCY_MAP.md) lists provider and consumer relationships and [v2/CRITICAL_PATH.md](v2/CRITICAL_PATH.md) the chain that controls sequencing. The PR order of the repositories is in [V2_REPO_PLAN.md](v2/planning/V2_REPO_PLAN.md).
 
 ## 9. Status Reporting and Consolidation
 
-1. **Repositories report facts.** Each repository's generator writes `status/status.json` (schema 2.0): per task, `execution`, `git_sync`, `readiness` and `evidence`. Reports never contain review or acceptance. [v2/tracking/ONBOARDING.md](v2/tracking/ONBOARDING.md) describes how a repository joins.
+1. **Repositories report facts.** Each repository's generator writes `status/status.json` (schema 2.0): per task, `execution`, `git_sync`, `readiness` and `evidence`. A report carries facts only: it never contains review, acceptance, approval or program credit. [v2/tracking/ONBOARDING.md](v2/tracking/ONBOARDING.md) describes how a repository joins.
 2. **Snapshots.** The `refresh-sources` workflow proposes daily pull requests that update `sources/` from each repository; a human reviews and merges.
 3. **Consolidation.** `tools/consolidate_status.py` validates every report against the baseline and approvals and computes progress. Stale, missing or unverified inputs earn no credit and are never silently passed.
 4. **Generated views.** [STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) is the short summary (owner actions and blockers, changes since the last snapshot, the three measures, progress by workstream, readiness, dated milestones, data quality). [STATUS_DETAIL.md](v2/tracking/STATUS_DETAIL.md) holds the full tables.
 
-Read the current numbers in the generated views. They are not copied here.
+A workstream's existence, or a task in the planning inventory, does not put it in the weighted baseline. Only tasks admitted through the baseline governance process (a decision and a baseline amendment) affect accepted progress.
+
+Read the current numbers in the generated views. They are not copied here, and the views are derived snapshots: they can lag their inputs and they print their own warnings and freshness gaps.
 
 ## 10. Acceptance, Evidence and Approval
 
-Four things are kept apart and never merged into one flag: **reported execution** (a repository says the work is done), **evidence** (verified commit and CI records), **accepted progress** (an approval in the ledger) and **release readiness** (the gates). Code written, a commit, a merged PR, a passing local test or a status file saying PASS is not acceptance.
+Four things are kept apart and never merged into one flag: **reported execution** (a repository says the work is done), **evidence** (commit and CI records, with their scope), **accepted progress** (an approval in the ledger) and **release readiness** (the gates). Code written, a commit, a merged PR, a passing local test or a status file saying PASS is not acceptance.
 
 | Measure | Definition | Source |
 |---|---|---|
-| Accepted engineering progress | Accepted weight over baseline weight of the frozen baseline. Credit needs an approval and verified CI evidence | baseline, approvals, status reports |
+| Accepted engineering progress | Accepted weight over baseline weight of the frozen baseline. Credit needs an approval and CI evidence under the program's evidence rule | baseline, approvals, status reports |
 | Estimated effort | Owner-estimated person-months done and remaining. Not timesheets, not progress, not a schedule | [effort_estimates.json](v2/tracking/effort_estimates.json) |
 | Capability completion | Owner estimate of delivered scope per workstream; no formal inventory yet | effort estimates |
 
-None of these is a delivery date and they are not averaged into a health figure.
+None of these is a delivery date and they are not averaged into a health figure. Before reading a task as verified, read its evidence scope and commit in [STATUS_DETAIL.md](v2/tracking/STATUS_DETAIL.md): some evidence is a milestone-level run on a later commit, not a run on the task's own commit.
 
 [v2/tracking/repo_readiness.json](v2/tracking/repo_readiness.json) holds a per-repository checklist for the return to private (D-037, D-039). It is display only and adds no credit. A check is READY only when PASS, ATTESTED (owner-stated, not verified) or NA. GitHub settings such as rulesets cannot be read by tooling, so they stay ATTESTED.
 
@@ -171,8 +174,11 @@ Open safety and release gates give zero credit to the tasks in their scope: [GAT
 
 Change an input (baseline, approvals, gates, sources, effort, readiness, planning inventory, v2/planning records), regenerate, and commit the generated files in the same pull request.
 
+> **Privileged commands.** `make pr_check` submits an approving review as the signed-in `gh` user unless you add `DRY=1`. `make ship` and `make merge` merge pull requests with `--admin` and sync your local `main`. Run `DRY=1` first and check the repository and PR number. `generate` commands write files locally; `check` commands only read.
+
 ```bash
-python3 tools/consolidate_status.py --sources-dir sources            # regenerate JSON, STATUS_VIEW.md and STATUS_DETAIL.md
+python3 tools/consolidate_status.py --sources-dir sources            # generate: regenerate JSON, STATUS_VIEW.md and STATUS_DETAIL.md
+make pr_check all DRY=1                                              # check: report only, no review is submitted
 make pr_check all                                                    # sweep the REPOS list in the Makefile; approves the clear ones (DRY=1 to only report)
 make pr_check REPO=kritva-sense PR=7                                 # one PR
 make ship TAR=~/Downloads/x.tar.gz BRANCH=feat/x                     # ship a patch tarball: PR, checks, merge, sync (DRY=1 to preview)
@@ -199,7 +205,7 @@ Regression tests live in [tests/](tests/); a defect fixed in a tool gets a test 
 ## 14. Git Workflow and Change Control
 
 - Changes go through a pull request. Required checks and approval roles are in [V2_REPO_PLAN.md](v2/planning/V2_REPO_PLAN.md).
-- **Commit text** (D-053, [ACCEPTANCE_STANDARD](v2/planning/ACCEPTANCE_STANDARD.md) section 4): header `type(scope): summary [optional TASK-ID]` of at most 90 characters; types feat, fix, docs, refactor, test, build, ci, chore, perf, revert, security; then one footer line `Task: ID` or `Tasks: ID, ID`; `Tasks: None (reason)` only on docs or chore commits. AI session trailers and claude.ai session links are rejected.
+- **Commit text** (adopted and enforced in this repository, D-053; other repositories adopt it one by one, PD-019; [ACCEPTANCE_STANDARD](v2/planning/ACCEPTANCE_STANDARD.md) section 4 is PROPOSED): header `type(scope): summary [optional TASK-ID]` of at most 90 characters; types feat, fix, docs, refactor, test, build, ci, chore, perf, revert, security; then one footer line `Task: ID` or `Tasks: ID, ID`; `Tasks: None (reason)` only on docs or chore commits. AI session trailers and claude.ai session links are rejected.
 - **Merge method:** merge commit (D-053).
 - **Releases:** annotated SemVer tags created only after the approved merge. A tag is evidence, not milestone closure.
 - **PR text:** [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md).
@@ -233,8 +239,9 @@ See section 3 for the list and [DEPENDENCY_MAP](v2/DEPENDENCY_MAP.md) for the re
 
 - Start here: [v2/README.md](v2/README.md) (dashboard and document index), [STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) (generated summary), [DECISIONS.md](v2/DECISIONS.md).
 - Plans: [PROGRAM_PLAN](v2/PROGRAM_PLAN.md), [ROADMAP](v2/ROADMAP.md), [V2_MILESTONE_PLAN](v2/planning/V2_MILESTONE_PLAN.md), [V2_REPO_PLAN](v2/planning/V2_REPO_PLAN.md).
-- Rules: [ACCEPTANCE_STANDARD](v2/planning/ACCEPTANCE_STANDARD.md), [README_STANDARD](v2/planning/standards/README_STANDARD.md), [DOCUMENT_HEADER_STANDARD](v2/planning/standards/DOCUMENT_HEADER_STANDARD.md), [README_REVIEW_CHECKLIST](v2/planning/standards/README_REVIEW_CHECKLIST.md), [AGENTS](AGENTS.md), [SECURITY](SECURITY.md).
-- Templates: [PR template](v2/planning/templates/PULL_REQUEST_TEMPLATE.md), [acceptance criteria](v2/planning/templates/ACCEPTANCE_CRITERIA.template.md), [completion record](v2/planning/templates/COMPLETION_RECORD.template.md), [README public](v2/planning/standards/README_TEMPLATE_PUBLIC.md), [README private](v2/planning/standards/README_TEMPLATE_PRIVATE.md).
+- Rules: [ACCEPTANCE_STANDARD](v2/planning/ACCEPTANCE_STANDARD.md), [AGENTS](AGENTS.md), [SECURITY](SECURITY.md).
+- README rollout standards (one package): [README_STANDARD](v2/planning/standards/README_STANDARD.md), [README_TEMPLATE_PUBLIC](v2/planning/standards/README_TEMPLATE_PUBLIC.md), [README_TEMPLATE_PRIVATE](v2/planning/standards/README_TEMPLATE_PRIVATE.md), [DOCUMENT_HEADER_STANDARD](v2/planning/standards/DOCUMENT_HEADER_STANDARD.md), [README_REVIEW_CHECKLIST](v2/planning/standards/README_REVIEW_CHECKLIST.md), [README_MIGRATION_PLAN](v2/planning/standards/README_MIGRATION_PLAN.md).
+- Other templates: [PR template](v2/planning/templates/PULL_REQUEST_TEMPLATE.md), [acceptance criteria](v2/planning/templates/ACCEPTANCE_CRITERIA.template.md), [completion record](v2/planning/templates/COMPLETION_RECORD.template.md).
 
 ## 20. License
 

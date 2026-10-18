@@ -1,4 +1,7 @@
-<!-- KritvaOS README template, PRIVATE repositories (kritva-program, kritva-raas, kritva-actuator*).
+<!-- KritvaOS README template, PRIVATE repositories.
+     Use it for every repository whose approved Visibility Class is PRIVATE, whatever its GitHub setting is today
+     (a temporary public setting does not change the template). The class of each repository is recorded in the
+     visibility decision and in v2/tracking/repo_readiness.json in kritva-program, not in this comment.
      Standard: v2/planning/standards/README_STANDARD.md in kritva-program.
      Copy below the line. Replace every <placeholder>. Link existing files only; write "Not yet defined" otherwise.
      Delete these comments. Check with: python3 scripts/docs/check_readme.py README.md -->
@@ -7,17 +10,19 @@
 
 # <Repository name>
 
-> <One sentence: what this repository is for.>
+> <One sentence: what this repository is for. It is a private repository.>
 
 | Property | Value |
 |---|---|
 | Project | KritvaOS |
 | Repository | `KritvaOS/<name>` |
 | Repository Type | <Program / Platform / Library / Capability / Service / Firmware / Mechanical / Tooling / Documentation> |
-| Current Visibility | <PUBLIC / PRIVATE> (verified <YYYY-MM-DD>) |
-| Target Visibility | <PRIVATE> (<decision ID>; planned return <date>) |
+| Visibility Class | <PRIVATE> (<decision ID>) |
+| GitHub Setting | <PUBLIC or PRIVATE> (verified <YYYY-MM-DD>; <temporary, decision ID, if it differs from the class>) |
 | Lifecycle Status | <PLANNING / ACTIVE / ON_HOLD / ARCHIVED> |
 | Repository Owner | <person or team> |
+| Technical Owner | <optional: person, team or link; required when it differs from the owner> |
+| Security Owner | <optional: person, team or link; required for hardware safety, credentials, private data or security gates> |
 | Architecture | <link or Not yet defined> |
 | Milestones | <link or Not yet defined> |
 | Tasks | <link or Not yet defined> |
@@ -35,19 +40,23 @@ Where it sits, what it consumes, what it produces. Link [kritva-program](https:/
 
 ## 3. Architecture
 
-Short overview and a diagram if it helps. Link the detailed documents; do not copy them.
+Short overview and a diagram if it helps. Link the detailed documents and show each one's status (a skeleton is not an architecture). Do not copy them.
 
 ## 4. Documents to Read First
 
-| Document | Label | What it answers |
+| Document | Label, status | What it answers |
 |---|---|---|
-| <link> | AUTHORITATIVE | <question> |
+| <link> | <AUTHORITATIVE, APPROVED> | <question> |
+
+A label names a role, not an approval. Show the document's status (DRAFT, SKELETON, PROPOSED, APPROVED) beside it.
 
 ## 5. Repository Structure and File Responsibilities
 
-| Path | Responsibility | Label | Edit by hand? |
+| Path | Responsibility | Label, status | Edit by hand? |
 |---|---|---|---|
-| <path> | <what it controls or records> | <AUTHORITATIVE / INPUT / GENERATED / SNAPSHOT / EVIDENCE / REFERENCE> | <yes / no> |
+| <path> | <what it controls or records> | <AUTHORITATIVE / INPUT / GENERATED / SNAPSHOT / EVIDENCE / REFERENCE / MIXED> | <yes / no> |
+
+A directory with files of several labels is MIXED: list its principal files.
 
 ## 6. Toolchain and Development Workflow
 
@@ -55,7 +64,11 @@ Short overview and a diagram if it helps. Link the detailed documents; do not co
 |---|---|---|---|
 | <tool> | <purpose> | <version> | `<command>` |
 
-Setup, build and generation commands that exist in this repository.
+| Command | Effect | Needs | Preview |
+|---|---|---|---|
+| `<command>` | <check / generate / modify / merge / deploy / publish> | <permission or credential, never the secret> | <dry-run option or none> |
+
+Put a one-line warning before any command that modifies, merges, deploys or publishes.
 
 ## 7. Dependencies and Interfaces
 
@@ -65,10 +78,10 @@ Setup, build and generation commands that exist in this repository.
 
 ## 8. Milestones and Implementation Plan
 
-| Item | Document | Purpose |
+| Item | Document | Status and meaning of dates |
 |---|---|---|
-| Roadmap | <link> | Development sequence |
-| Milestones | <link> | Milestones, deliverables, gates |
+| Roadmap | <link> | <for example: DRAFT, proposed targets, not approved delivery commitments> |
+| Milestones | <link> | <status> |
 
 ## 9. Tasks and Acceptance Criteria
 
@@ -76,23 +89,23 @@ Where tasks live, how an ID is registered, and where the acceptance criteria are
 
 ## 10. Status Reporting and Program Integration
 
-Status file and schema version, the tool that writes it, how kritva-program consumes it, what each state means.
+Status file and schema version, the tool that writes it, how kritva-program consumes it. State the four things apart: execution (what the repository reports), evidence (commit, result and scope), acceptance (decided by the acceptance authority, not by this repository's report) and release readiness (the gates). A generated view is a derived snapshot that can lag its inputs. A repository that reports to kritva-program sends facts only and claims no approval or credit.
 
 ## 11. Build, Test, Regression and Validation
 
-| Check | Command | Runs in CI? | Expected |
-|---|---|---|---|
-| <check> | `<command>` | <yes / no> | <result> |
+| Check | Command | Effect | Runs in CI? | Expected |
+|---|---|---|---|---|
+| <check> | `<command>` | check | <yes / no> | <result> |
 
 A test that is not implemented is listed as not implemented, never as passing.
 
 ## 12. Git Workflow and Review
 
-Commit format (`type(scope): summary` and a `Task:` or `Tasks:` footer, see kritva-program ACCEPTANCE_STANDARD section 4), branch rule, PR requirements, required checks, merge method.
+This repository's approved convention: branch rule, commit format, PR requirements, required checks, merge method. If the Kritva commit standard has been formally adopted for this repository, say so and follow its current specification (see kritva-program v2/planning/ACCEPTANCE_STANDARD.md section 4); if not, say that and give the rule that applies.
 
 ## 13. Safety and Security
 
-Safety requirements and open gates (hardware repositories), security reporting, secrets. State that software tests do not prove physical safety.
+Safety requirements and open gates (hardware repositories). The route for reporting a vulnerability (link SECURITY.md, or write `Not yet defined` and name the owner who will define it); never ask for details of an unfixed vulnerability in a public issue or PR. Secrets. State that software tests do not prove physical safety.
 
 ## 14. Release and Versioning
 

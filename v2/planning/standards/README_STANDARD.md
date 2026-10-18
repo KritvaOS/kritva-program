@@ -5,9 +5,9 @@
 | Document ID | KOS-STD-README |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Standard |
-| Status | PROPOSED (pilot in kritva-program, D-055); becomes APPROVED when the owner records it |
+| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit round 1, D-056); becomes APPROVED when the owner records it |
 | Owner | Dinesh (program owner) |
-| Authority | AUTHORITATIVE for README layout; ChatGPT review is advisory only |
+| Authority | AUTHORITATIVE role for README layout (role, not approval). ChatGPT review is advisory only |
 | Related | [README_TEMPLATE_PUBLIC.md](README_TEMPLATE_PUBLIC.md), [README_TEMPLATE_PRIVATE.md](README_TEMPLATE_PRIVATE.md), [DOCUMENT_HEADER_STANDARD.md](DOCUMENT_HEADER_STANDARD.md), [README_REVIEW_CHECKLIST.md](README_REVIEW_CHECKLIST.md), [README_MIGRATION_PLAN.md](README_MIGRATION_PLAN.md) |
 
 ## 1. Purpose
@@ -19,18 +19,19 @@ The README explains the repository and links to the documents that own the detai
 ## 2. Rules
 
 1. **Navigation hub.** Link to the authoritative document; do not duplicate it.
-2. **Existing files only.** A link points to a file or directory that exists on the default branch. A document that is planned but not written is listed as `Not yet defined` with no link. `scripts/docs/check_readme.py` fails on a link that does not resolve.
-3. **Real commands only.** Every command in the README exists in that repository and has been run. A command is never copied from another repository without being checked.
+2. **Existing files only.** A link points to a file or directory that exists on the default branch. A document that is planned but not written is listed as `Not yet defined` with no link.
+3. **Real commands only.** Every command in the README exists in that repository and has been run. A command is never copied from another repository without being checked. A command that modifies state, merges, publishes or deploys says so and shows a safe preview option where one exists (section 6).
 4. **No stale numbers.** Task counts, progress percentages, test counts and gate states are not written into the README. Point to the generated status view.
-5. **Execution is not acceptance.** The README never implies that work is done because code exists, a commit exists, a PR merged, a local test passed or a status file says PASS. The repository's acceptance process decides. Where the repository reports into kritva-program, the README keeps reported execution, evidence, accepted progress and release readiness apart.
-6. **Unknown stays unknown.** An unverified fact is labelled `UNVERIFIED`, `PROPOSED`, `PLANNED` or `ATTESTED`. It is not written as established. A test that is not implemented is not shown as passing.
+5. **Status invariants.** Where a README covers status, acceptance or release, it keeps four things apart and never merges them into one flag, badge or percentage (section 7).
+6. **Unknown stays unknown.** An unverified fact is labelled `UNVERIFIED`, `PROPOSED`, `PLANNED` or `ATTESTED`. A document that is a skeleton or draft is linked with that status beside it. A test that is not implemented is not shown as passing.
 7. **Safety is not software.** A repository that moves hardware states its open safety gates and says that software tests and simulation do not prove physical safety.
 8. **No secrets.** Private visibility does not make credentials, tokens or keys safe to commit.
-9. **Stricter rule wins.** A repository's own approved rule (for example its `AGENTS.md`, an acceptance standard or a safety gate) takes precedence over this standard when it is stricter. A conflict is resolved in writing, in section 9, never by silently replacing an approved rule.
+9. **Stricter rule wins.** A repository's own approved rule (its `AGENTS.md`, an acceptance standard, a safety gate) takes precedence when it is stricter. A conflict is resolved in writing, in section 11, never by silently replacing an approved rule.
+10. **Rules of another repository are not imposed.** A README states the convention this repository has approved. Where the Kritva commit standard has been formally adopted for the repository, it says so and follows the current specification; where it has not (see PD-019 in kritva-program), it says that instead.
 
-## 3. Document classification
+## 3. Document classification and status
 
-Each important file or directory in the README's structure and document tables carries one of these labels.
+Each important file or directory in the structure and document tables carries a label (its role) and, where known, its lifecycle status.
 
 | Label | Meaning | Edit by hand? |
 |---|---|---|
@@ -40,20 +41,21 @@ Each important file or directory in the README's structure and document tables c
 | SNAPSHOT | A committed copy of facts owned by another repository | No: refresh from the source |
 | EVIDENCE | Supports a test, review, acceptance or release claim | Append only |
 | REFERENCE | Background or navigation; governs nothing | Yes |
+| MIXED | A directory with files of several labels | Per file; list the principal files |
 
-A label does not approve anything. A document marked PROPOSED stays proposed until the authorised approval process changes it.
+A label names a responsibility, not an approval. Status is `DRAFT`, `SKELETON`, `PROPOSED`, `APPROVED` or `DEPRECATED`, and is shown beside the label wherever it is known (`AUTHORITATIVE, PROPOSED`). A document is not approved because it is authoritative for its subject.
 
 ## 4. Repository metadata block
 
-The README starts with the title, a one-sentence description and this table. Fields are the same in every repository.
+The README starts with the title, a one-sentence description and this table. The required fields are the same in every repository.
 
 | Field | Values and rule |
 |---|---|
 | Project | `KritvaOS` |
 | Repository | `KritvaOS/<name>` |
 | Repository Type | Program, Platform, Library, Capability, Service, Firmware, Mechanical, Tooling or Documentation |
-| Current Visibility | `PUBLIC` or `PRIVATE`: the GitHub setting as last verified, with the date |
-| Target Visibility | `PUBLIC` or `PRIVATE`: the approved end state, with the decision ID |
+| Visibility Class | `PRIVATE` or `PUBLIC`: the class the owner approved for this repository, with the decision ID. A future-private repository says `PRIVATE`. If no class is approved yet, write `Not yet decided` and link the pending decision |
+| GitHub Setting | `PUBLIC` or `PRIVATE`: the actual GitHub setting as last verified, with the date. When it differs from the class, say so and why (for example `PUBLIC, temporary, D-028`) |
 | Lifecycle Status | `PLANNING`, `ACTIVE`, `ON_HOLD` or `ARCHIVED`. Independent of visibility |
 | Repository Owner | Person or team |
 | Architecture | Link, or `Not yet defined` |
@@ -63,12 +65,15 @@ The README starts with the title, a one-sentence description and this table. Fie
 | Status Reporting | Link, or `Not yet defined` |
 | License | Link to `LICENSE` and the license's real name. Do not copy a license identifier from another repository |
 
-Visibility rules:
+Optional rows, required when they apply: **Technical Owner** and **Security Owner**. Add them when the owners differ from the Repository Owner, or when the repository handles hardware safety, credentials, private user or customer data, or security gates. Where ownership is established in one place (CODEOWNERS, SECURITY.md), link that place instead of repeating a name.
 
-- Current and Target are separate fields so a repository can be public today and private later without rewriting its README.
-- The header is documentation. It is not proof of the GitHub setting, which tooling in this program cannot read. The owner attests the setting, and the readiness record shows it as ATTESTED.
-- **Temporary public review (D-028, D-037).** Every repository is currently public so the architecture can be reviewed and aligned, including by external audit. This also holds for a repository that is private by design: it is made temporarily public for alignment and review, then returned to private. Such a repository records `Current Visibility: PUBLIC`, `Target Visibility: PRIVATE` and the planned return date. Making a repository private or public again is an owner action recorded in the decision log.
-- Planned end state at the time of writing: kritva-program, kritva-raas and the five kritva-actuator repositories return to private. Other repositories use their own approved target. A repository with no approved target writes `Target Visibility: Not yet decided` and links the pending decision.
+### Visibility rules
+
+- **The class decides the wording and the template.** A repository whose approved class is PRIVATE is written up as a private repository in every document and uses the private template, whatever its GitHub setting is today. The public template is for repositories whose approved class is PUBLIC.
+- **The GitHub setting is an operational fact, not the class.** It is documentation, not proof: tooling in this program cannot read it, so it is ATTESTED by the owner (see `repo_readiness.json` in kritva-program).
+- **Temporary public exposure is an owner decision, scoped to the repositories it names.** D-028 and D-037 in kritva-program record the current arrangement and the return date. A README does not generalise it to the whole organisation and does not repeat the return date; it links the decision or the readiness record that owns it. Other repositories keep their own approved class.
+- **Audit access.** A future-private repository is reviewed through whatever access the owner approves. Making it temporarily public for review, and returning it to private, are separate owner actions tracked in the decision log. A repository does not need to be public for its README to be written, reviewed or marked done.
+- Planned classes at the time of writing: kritva-program, kritva-raas and the five kritva-actuator repositories are future private. The authoritative source for every repository's class is the visibility decision and `v2/tracking/repo_readiness.json` in kritva-program, not this list.
 
 ## 5. Section order
 
@@ -81,15 +86,15 @@ The common baseline for every repository. A section that does not apply says `No
 | 3 | Position in the KritvaOS ecosystem | required | required |
 | 4 | Architecture overview, with links to the detailed documents | required | required |
 | 5 | Documents to read first | required | required |
-| 6 | Repository structure and file responsibilities (with classification) | required | required |
+| 6 | Repository structure and file responsibilities (label and status) | required | required |
 | 7 | Tool and development workflow (toolchain table, setup, build) | required | required |
 | 8 | Dependencies and interfaces (upstream, downstream, status of each) | required | required |
-| 9 | Milestones and implementation plan | link to roadmap | required |
+| 9 | Milestones and implementation plan | link | required |
 | 10 | Tasks and acceptance criteria | link | required |
 | 11 | Status reporting and program integration | summary | required |
 | 12 | Build, test, regression and validation | required | required |
-| 13 | Git workflow and contribution rules (commit format, PR, merge) | required | required |
-| 14 | Safety and security | required where it applies | required where it applies |
+| 13 | Git workflow and contribution rules (this repository's approved convention) | required | required |
+| 14 | Safety and security (with a reporting route) | required where it applies | required where it applies |
 | 15 | Release and versioning | required | required |
 | 16 | Ownership and support | required | required |
 | 17 | Related repositories and references | required | required |
@@ -97,7 +102,48 @@ The common baseline for every repository. A section that does not apply says `No
 
 A public README helps an outside user understand and use the project. It does not expose internal planning detail, private infrastructure, confidential assessments or credentials. A private README may carry more internal navigation.
 
-## 6. Compliance levels
+### Template mapping
+
+| Baseline topic | Private template | Public template |
+|---|---|---|
+| 1 Title and metadata | title and table | title and table |
+| 2 Purpose and scope | 1 | 1 |
+| 3 Ecosystem | 2 | 2 |
+| 4 Architecture | 3 | 3 |
+| 5 Documents to read | 4 | 4 |
+| 6 Structure | 5 | 5 |
+| 7 Tools and workflow | 6 | 6 |
+| 8 Dependencies | 7 | 7 |
+| 9 Milestones | 8 | 8 (Roadmap) |
+| 10 Tasks and acceptance | 9 | 9 |
+| 11 Status reporting | 10 | 10 |
+| 12 Validation | 11 | 11 |
+| 13 Git workflow | 12 | 12 |
+| 14 Safety and security | 13 | 13 |
+| 15 Release | 14 | 14 |
+| 16 Ownership | 15 | 15 |
+| 17 Related repositories | 16 | 16 |
+| 18 License | 17 | 17 |
+
+A repository may use a different layout where its domain needs one, as long as every topic is covered and the README says where. `Not applicable` is allowed only with a reason.
+
+## 6. Commands and effects
+
+The tool and validation tables label each command by effect: **check** (read only), **generate** (writes files locally), **modify** (changes repository or remote state), **merge** or **deploy** or **publish** (changes shared state). A command with a non-local, destructive, privileged, merge, deploy or publish effect carries a one-line warning before it, names the permission or credential it needs (never the secret), and shows a dry run or preview option when one exists.
+
+## 7. Status invariants
+
+Wherever a README covers status, acceptance or release:
+
+- **Execution** is the repository's reported implementation state.
+- **Evidence** names the commit and the validation result behind a claim, and its scope. Evidence from a milestone-level run is not evidence from the task's own commit.
+- **Acceptance** is decided by the repository's approved acceptance authority, not by the repository's own report.
+- **Release readiness** is the result of the applicable gates.
+- A status file or generated view never approves its own work, and a generated view is a derived snapshot that can lag its inputs.
+- A repository that reports to kritva-program sends facts only. It does not claim central approval or program credit. A repository without central reporting documents its own acceptance process and does not imply that the program flow applies to it.
+- A roadmap or milestone pointer states the plan's status and what its dates mean (for example `proposed targets, not approved delivery commitments`).
+
+## 8. Compliance levels
 
 | Level | Applies to | Adds |
 |---|---|---|
@@ -105,25 +151,25 @@ A public README helps an outside user understand and use the project. It does no
 | 2. Domain | By repository type | Software: APIs, data formats, service dependencies. Firmware: MCU, toolchain, fault handling, hardware validation. Mechanical: requirements, BOM, sizing, verification. Each lists its open safety gates |
 | 3. Program | kritva-program only | Baseline, approvals, gates, source snapshots, consolidated status, program-level acceptance |
 
-kritva-program uses a program layout in its own README (it adds governance, program architecture, gates and generated-report sections and still covers every topic of section 5) and keeps `v2/README.md` as the detailed dashboard. The root README does not duplicate the dashboard.
+kritva-program uses a program layout in its own README (it adds governance, program architecture, gates and generated-report sections and still covers every topic of section 5) and keeps `v2/README.md` as the detailed dashboard.
 
-## 7. Source and document headers
+## 9. Source and document headers
 
 - Source files keep the header each repository's lint already enforces (for example the SPDX block checked by `check_source_headers.py` in core, community and raas). This standard adds no second source-header block.
-- Detailed Markdown documents use the document header in [DOCUMENT_HEADER_STANDARD.md](DOCUMENT_HEADER_STANDARD.md).
+- Detailed human-maintained Markdown documents use the header in [DOCUMENT_HEADER_STANDARD.md](DOCUMENT_HEADER_STANDARD.md). Generated files and structured records keep their own schema and markers.
 
-## 8. Automated check
+## 10. Automated check
 
-`python3 scripts/docs/check_readme.py README.md` (also `make readme_check`) verifies the structure that a machine can verify:
+`python3 scripts/docs/check_readme.py README.md` (also `make readme_check`) runs these structural checks and nothing else:
 
-- the metadata block has every field in section 4;
-- every topic in section 5 appears as a heading (matched by keyword, not exact title); order is a review item;
-- every relative link resolves to a file or directory;
-- no placeholder text such as `<repository-name>` or `TODO` remains.
+- the metadata block has every required field of section 4 and none is empty;
+- every topic of section 5 appears as a heading (matched by keyword, so a broad match can pass; order is a review item);
+- every relative Markdown link `[text](path)` points to an existing file or directory (the part after `#` is not checked, image links and absolute URLs are skipped);
+- no placeholder text such as `<repository-name>` or `TODO` remains outside code.
 
-It cannot judge whether an architecture is right or an acceptance criterion is adequate. That is review work ([README_REVIEW_CHECKLIST.md](README_REVIEW_CHECKLIST.md)).
+A PASS means those implemented checks passed. It does not show that the content is accurate or complete, that a command works, that an external URL is reachable, that a heading anchor exists, that a link is relevant, or that anything is approved. Those are review items in [README_REVIEW_CHECKLIST.md](README_REVIEW_CHECKLIST.md).
 
-## 9. Exceptions
+## 11. Exceptions
 
 A repository that cannot follow this standard records the deviation here, with the repository, the rule, the reason, the approving decision and a review date. No exception is recorded yet.
 

@@ -5,14 +5,18 @@
 | Document ID | KOS-STD-DOCHDR |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Standard |
-| Status | PROPOSED (pilot in kritva-program, D-055) |
+| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit round 1, D-056) |
 | Owner | Dinesh (program owner) |
 | Authority | AUTHORITATIVE for the header of detailed Markdown documents |
 | Related | [README_STANDARD.md](README_STANDARD.md) |
 
 ## 1. Scope
 
-The README standard covers a repository's root `README.md`. This standard covers the header of a detailed Markdown document that a README links to: an architecture document, specification, plan, procedure or report. It is a baseline. A document that already carries stronger metadata (the decision log, an approval ledger, a gate register) keeps it.
+The README standard covers a repository's root `README.md`. This standard covers the header of a detailed, **human-maintained** Markdown document that a README links to: an architecture document, specification, plan, procedure or report. It is a default for those documents, not a universal wrapper.
+
+- A **generated** file keeps its generator marker and gets no second status or authority line. Its provenance is the marker.
+- A **structured or controlled record** (the decision log, an approval ledger, a gate register, a JSON input) keeps the schema and fields it already has. Do not add a status or authority declaration that could contradict the record's own governance.
+- Apply this header only where it is compatible with the owning document's rules.
 
 Existing documents are not rewritten in one sweep. A document gets this header when it is next edited for another reason.
 
