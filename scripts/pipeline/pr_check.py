@@ -47,7 +47,7 @@ def classify(manifest, gate, results, pr, me):
         return v, ""
     rest = [r for r in results if r["rule"] != "R07"]
     if G.verdict(rest) != "APPROVE":
-        return "NEEDS_HUMAN", "a rule other than the approvals needs a person"
+        return "NEEDS_HUMAN", first_failure(rest)
     mine = [role for role in gate["required_approvals"] if me in role_logins(manifest, role)]
     if not mine:
         return "NEEDS_HUMAN", f"{me or 'the signed-in user'} holds none of the required roles"

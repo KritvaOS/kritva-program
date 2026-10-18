@@ -94,6 +94,11 @@ class Sweep(unittest.TestCase):
         self.assertEqual(gh.posted, [])
         self.assertIn("NEEDS_HUMAN", out)
 
+    def test_needs_human_detail_names_the_rule(self):
+        gh = Gh(files=[{"filename": ".github/workflows/x.yml", "status": "added"}])
+        rc, out = sweep(MANIFEST, gh)
+        self.assertIn("R04: protected paths changed", out)
+
     def test_own_pr_is_not_self_approved(self):
         gh = Gh(author="dineshannayya")
         rc, out = sweep(MANIFEST, gh)
