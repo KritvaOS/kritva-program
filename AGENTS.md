@@ -25,6 +25,8 @@ These instructions apply to the `kritva-program` repository, the program's singl
     python3 tools/consolidate_status.py --sources-dir sources --check
     python3 tools/check_planning_inventory.py . --verify-sources <sources-dir>   # when the inventory changes
 
+When `README.md` or a file under `v2/planning/standards/` changes, run `make readme_check` (D-055): it checks the metadata block, the section topics and every local link. Keep the README a navigation page: link the document that owns a fact instead of copying it, and do not write task counts, percentages or gate states into it.
+
 Regenerate `v2/tracking/consolidated_status.json`, `STATUS_VIEW.md` and `STATUS_DETAIL.md` and the generated files in `v2/planning/` (V2_MILESTONE_PLAN.md, V2_REPO_PLAN.md, PENDING_DECISIONS.md, PENDING_REVIEWS.md) with `tools/consolidate_status.py` after changing any tracking or planning input; do not edit them by hand. The V2 plan under `v2/planning/` is a planning layer: never put its milestones into `baseline.json`, never give them weights or credit, and keep proposed dates labelled PROPOSED until the owner approves them.
 
 ## Secrets and data
