@@ -13,8 +13,8 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 | PROGRAM_OWNER | Dinesh | D-040 single Code Owner |
 | REPO_CODE_OWNER | Dinesh | D-040 single Code Owner |
 | SECURITY_OWNER | Dinesh | D-032 |
-| ARCHITECTURE_REVIEWER | UNASSIGNED | not recorded (PD-007) |
-| SAFETY_REVIEWER | UNASSIGNED | not recorded (PD-007, D-025) |
+| ARCHITECTURE_REVIEWER | Dinesh | D-047 interim: owner assigned himself on 2026-10-18; not an independent reviewer |
+| SAFETY_REVIEWER | Dinesh | D-047 interim: owner assigned himself on 2026-10-18; not an independent reviewer |
 
 ## PR approval sequence
 

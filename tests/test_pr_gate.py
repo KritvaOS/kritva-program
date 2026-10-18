@@ -112,7 +112,7 @@ class Remote(unittest.TestCase):
         self.assertIn("FAIL", [r["level"] for r in G.remote_rules(GATE, MANIFEST, mixed) if r["rule"] == "R06"])
 
     def test_unassigned_role_blocks_approve(self):
-        res = G.remote_rules(GATE, MANIFEST, pr(reviews=[{"login": "dineshannayya", "state": "APPROVED", "commit": SHA}]))
+        res = G.remote_rules(GATE, manifest_with([]), pr(reviews=[{"login": "dineshannayya", "state": "APPROVED", "commit": SHA}]))
         r7 = [r for r in res if r["rule"] == "R07"]
         self.assertIn("NEEDS_HUMAN", [r["level"] for r in r7])
         self.assertTrue(any("UNASSIGNED" in r["message"] for r in r7))

@@ -116,10 +116,11 @@ class Pipeline(unittest.TestCase):
         d = copy.deepcopy(data()); d["pipeline"]["repositories"].append(copy.deepcopy(d["pipeline"]["repositories"][0]))
         self.assertTrue(any("duplicate" in e for e in P.validate(d)))
 
-    def test_unassigned_roles_stay_unassigned(self):
+    def test_reviewer_roles_are_interim_owner_not_independent(self):
         roles = data()["pipeline"]["roles"]
-        self.assertEqual(roles["ARCHITECTURE_REVIEWER"]["holders"], [])
-        self.assertEqual(roles["SAFETY_REVIEWER"]["holders"], [])
+        for r in ("ARCHITECTURE_REVIEWER", "SAFETY_REVIEWER"):
+            self.assertEqual(roles[r]["holders"], ["Dinesh"])
+            self.assertIn("not an independent reviewer", roles[r]["basis"])
 
     def test_hardware_repos_are_on_hold_and_last(self):
         by = {r["repo_id"]: r for r in data()["pipeline"]["repositories"]}

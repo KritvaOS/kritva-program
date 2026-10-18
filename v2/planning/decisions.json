@@ -161,7 +161,7 @@
       "record_id": "PD-007",
       "record_type": "DECISION",
       "title": "Approve the PR reviewer-role mapping",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-10-18",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -170,14 +170,12 @@
         "phase_ids": [],
         "repo_ids": []
       },
-      "required_action": "Name holders for ARCHITECTURE_REVIEWER and SAFETY_REVIEWER, which are not recorded; PROGRAM_OWNER, REPO_CODE_OWNER and SECURITY_OWNER are Dinesh today.",
-      "blocking": true,
-      "blocks": [
-        "V2-M0"
-      ],
+      "required_action": "Resolved on an interim basis by D-047: Dinesh (dineshannayya) holds ARCHITECTURE_REVIEWER and SAFETY_REVIEWER. Name an independent holder when one exists.",
+      "blocking": false,
+      "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-047",
       "source": "ChatGPT advice 2026-10-18 (advisory)"
     },
     {

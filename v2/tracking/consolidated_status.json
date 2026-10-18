@@ -81,10 +81,10 @@
   },
   "changes": {
     "items": [
-      "Pending decisions: 17 -> 18"
+      "Pending decisions: 18 -> 17"
     ],
-    "recorded_at": "2026-10-18T03:12:03Z",
-    "since": "2026-10-18T03:11:38Z"
+    "recorded_at": "2026-10-18T05:39:29Z",
+    "since": "2026-10-18T03:58:21Z"
   },
   "effort": {
     "capability_definition": "the owner's estimate of the share of the workstream's intended V2 scope that is delivered at the reporting cutoff. Denominator: the intended V2 scope of that workstream as the owner understands it; no formal capability inventory or weighting exists yet. Complete means delivered and working in software or documented design, never physical or safety validation. Evidence: owner judgement informed by repository state; it is not derived from PM spent or from accepted baseline weight. Owner: Dinesh. As of the reporting cutoff. A formal capability inventory with weights and completion criteria is still to be defined",
@@ -741,7 +741,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-18T03:58:21Z",
+  "generated_at": "2026-10-18T05:40:07Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -951,7 +951,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 34,
+        "age_hours": 36,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -972,7 +972,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 34,
+        "age_hours": 36,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",
@@ -1022,7 +1022,7 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 18,
+    "pending_decisions": 17,
     "pending_reviews": 7,
     "progress": "48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 46.15,
@@ -1937,7 +1937,7 @@
     }
   ],
   "v2_plan": {
-    "blocking_decisions": 8,
+    "blocking_decisions": 7,
     "horizon_end": "2027-09-13",
     "milestones": [
       {
@@ -2004,7 +2004,7 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 18,
+    "pending_decisions": 17,
     "pending_reviews": 7,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
