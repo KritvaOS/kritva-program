@@ -3,9 +3,12 @@
 
   check_readme.py README.md [--root DIR]
 
-Verifies what a machine can: the metadata table has every required field, every topic of the
-standard appears as a heading, every relative link resolves to a file or directory, and no
-placeholder text is left. It cannot judge whether the content is right; that is review work
+Implemented checks, and nothing more: the metadata table has every required field and none is empty;
+every topic of the standard appears as a heading (matched by keyword, so a broad match can pass);
+every relative Markdown link [text](path) points to an existing file or directory (the #fragment is
+not checked; image links and absolute URLs are skipped); no placeholder text is left outside code.
+A PASS does not show that content is accurate, a command works, an external URL is reachable, an
+anchor exists or anything is approved; that is review work
 (v2/planning/standards/README_REVIEW_CHECKLIST.md). Exit 0 if it passes, 1 if not. Stdlib only.
 """
 import argparse
@@ -13,7 +16,7 @@ import re
 import sys
 from pathlib import Path
 
-FIELDS = ["Project", "Repository", "Repository Type", "Current Visibility", "Target Visibility", "Lifecycle Status",
+FIELDS = ["Project", "Repository", "Repository Type", "Visibility Class", "GitHub Setting", "Lifecycle Status",
           "Repository Owner", "Architecture", "Milestones", "Tasks", "Acceptance Criteria", "Status Reporting", "License"]
 
 # topic -> regex matched against the heading text (case-insensitive)
