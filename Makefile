@@ -6,6 +6,9 @@
 #   make pr_check all REPOS="kritva-sense kritva-mind"   only these repos
 #   make pr_check all DRY=1                        report only, no review is submitted
 #
+#   make ship TAR=~/Downloads/x.tar.gz BRANCH=feat/x   open, check, merge and sync one PR per repo in the tarball (dependency order)
+#   make ship PATCHES=/tmp/rr BRANCH=feat/x ONLY=kritva-program   an extracted folder; ONLY limits the repos; add DRY=1 to preview
+#
 # GNU make takes "--repo" and "--pr" as its own options, so use REPO= and PR=.
 # The script can also be called directly: python3 scripts/pipeline/pr_check.py --repo kritva-sense --pr 7
 
@@ -27,10 +30,10 @@ REPOS := \
 	kritva-actuator-m \
 	kritva-actuator-l
 
-.PHONY: help pr_check all
+.PHONY: help pr_check all ship
 
 help:
-	@sed -n '3,10p' Makefile
+	@sed -n '3,12p' Makefile
 
 # "all" is only a word after pr_check, so it must not build anything.
 all:
@@ -38,3 +41,7 @@ all:
 
 pr_check:
 	@python3 scripts/pipeline/pr_check.py $(if $(filter all,$(MAKECMDGOALS)),all --repos "$(REPOS)") $(if $(REPO),--repo $(REPO)) $(if $(PR),--pr $(PR)) $(if $(DRY),--no-approve)
+
+# Wraps scripts/pipeline/ship-prs.sh (always --admin, manifest order). Options: TAR or PATCHES, BRANCH, ONLY, BODY, TAG + MILESTONE, DRY=1.
+ship:
+	@scripts/pipeline/ship.sh $(if $(BRANCH),--branch "$(BRANCH)") $(if $(TAR),--tar "$(TAR)") $(if $(PATCHES),--patches "$(PATCHES)") $(if $(ONLY),--only "$(ONLY)") $(if $(BODY),--body "$(BODY)") $(if $(TAG),--tag "$(TAG)" --milestone "$(MILESTONE)") $(if $(DRY),--dry)
