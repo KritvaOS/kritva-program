@@ -20,7 +20,7 @@ Status fields follow the model in [PROGRAM_PLAN.md](PROGRAM_PLAN.md) §6. "Postu
 | RaaS | Continue | TBD | TBD | TBD | TBD | Reconcile |
 | Education applications | Continue | TBD | TBD | TBD | TBD | Reconcile |
 | Integration & software validation | Continue | TBD | TBD | TBD | TBD | P0 contracts |
-| Mechanical (CAD, actuators, BOM, quotes, procurement, fabrication, prototype) | **HOLD** | NOT_STARTED / held | — | — | — | None until reopened |
+| Mechanical (CAD, actuators, BOM, quotes, procurement, fabrication, prototype) | **HOLD** (decision D-052 lifts it for the actuator workstreams, owner confirmation pending; this generated-status row is unchanged until the owner regenerates) | NOT_STARTED / held | — | — | — | None until reopened |
 
 ## Maintenance
 
