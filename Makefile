@@ -10,7 +10,8 @@
 # The script can also be called directly: python3 scripts/pipeline/pr_check.py --repo kritva-sense --pr 7
 
 # Repositories that `make pr_check all` reviews. Edit this list to add or drop a repo; each name must be a repo_id in
-# v2/planning/repo-pipeline.json (a test keeps this list and the manifest in step). The four actuator sub-repos are on hold.
+# v2/planning/repo-pipeline.json (a test keeps this list and the manifest in step).
+# A phase HOLD in the manifest (the actuator sub-repos, P6) delays milestones, not PR review, so those repos are listed too.
 REPOS := \
 	kritva-program \
 	kritva-core \
@@ -20,8 +21,11 @@ REPOS := \
 	kritva-mind \
 	kritva-skill \
 	kritva-raas \
-	kritva-actuator
-# on hold, not reviewed: kritva-actuator-embedded kritva-actuator-s kritva-actuator-m kritva-actuator-l
+	kritva-actuator \
+	kritva-actuator-embedded \
+	kritva-actuator-s \
+	kritva-actuator-m \
+	kritva-actuator-l
 
 .PHONY: help pr_check all
 
