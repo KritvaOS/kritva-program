@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-10-18T03:58:21Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-10-18T05:40:07Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The three measures are never combined into one health figure.
 
@@ -20,18 +20,17 @@ Open items derived from the program records. Owners and due dates appear only wh
 | 6 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
 | 7 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh | v2/planning/PENDING_DECISIONS.md |
 | 8 | PD-005: Approve the acceptance and test policy | Set required checks per repository kind, coverage thresholds if any, waiver authority and safety and security approval roles (v2/planning/ACCEPTANCE_STANDARD.md). | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 9 | PD-007: Approve the PR reviewer-role mapping | Name holders for ARCHITECTURE_REVIEWER and SAFETY_REVIEWER, which are not recorded; PROGRAM_OWNER, REPO_CODE_OWNER and SECURITY_OWNER are Dinesh today. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 10 | PD-011: Confirm team capacity for the 12-month horizon | 170.5 to 175 PM remaining over about 11.9 months needs roughly 14 to 15 person-months of effort per calendar month. State the real capacity so dates can be derived from effort. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 11 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 12 | PD-016: Answer the RaaS SEC-GATE-001 questions | Was kritva:kritva ever a real credential, must it be rotated, and what is the disposition deadline. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 13 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
-| 14 | 15 task(s) have reported CI evidence awaiting central approval | Zero credit until an approval is recorded: I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008 | not recorded | v2/tracking/approvals.json |
+| 9 | PD-011: Confirm team capacity for the 12-month horizon | 170.5 to 175 PM remaining over about 11.9 months needs roughly 14 to 15 person-months of effort per calendar month. State the real capacity so dates can be derived from effort. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 10 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 11 | PD-016: Answer the RaaS SEC-GATE-001 questions | Was kritva:kritva ever a real credential, must it be rotated, and what is the disposition deadline. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 12 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
+| 13 | 15 task(s) have reported CI evidence awaiting central approval | Zero credit until an approval is recorded: I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008 | not recorded | v2/tracking/approvals.json |
 
 ## What changed
 
-Compared with the snapshot generated 2026-10-18T03:11:38Z (recorded 2026-10-18T03:12:03Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-10-18T03:58:21Z (recorded 2026-10-18T05:39:29Z). The record is replaced only when a tracked fact changes.
 
-- Pending decisions: 17 -> 18
+- Pending decisions: 18 -> 17
 
 ## Three separate measures (never blended)
 
@@ -104,7 +103,7 @@ Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-0
 | V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | PROPOSED | no |
 | V2-M8 | P8 PRODUCTION | 2027-09-13 | PROPOSED | no |
 
-Pending: 18 decisions (8 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 17 decisions (7 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 

@@ -45,9 +45,9 @@ class Gh:
         raise RuntimeError("not found: " + j)
 
 
-def manifest_with_reviewer():
+def unassigned():
     m = copy.deepcopy(MANIFEST)
-    m["roles"]["ARCHITECTURE_REVIEWER"]["holders"] = ["Dinesh"]
+    m["roles"]["ARCHITECTURE_REVIEWER"]["holders"] = []
     return m
 
 
@@ -60,7 +60,7 @@ def sweep(m, gh, only_pr=None, do_approve=True, repos=("kritva-sense",)):
 class Sweep(unittest.TestCase):
     def test_approves_clear_pr_pinned_to_head_and_never_merges(self):
         gh = Gh()
-        rc, out = sweep(manifest_with_reviewer(), gh)
+        rc, out = sweep(MANIFEST, gh)
         self.assertEqual(rc, 0)
         self.assertEqual(len(gh.posted), 1)
         self.assertIn(f"commit_id={SHA}", gh.posted[0])
@@ -70,51 +70,51 @@ class Sweep(unittest.TestCase):
 
     def test_unassigned_role_stays_needs_human_after_my_approval(self):
         gh = Gh()
-        rc, out = sweep(MANIFEST, gh)
+        rc, out = sweep(unassigned(), gh)
         self.assertEqual(len(gh.posted), 1)
         self.assertIn("NEEDS_HUMAN", out)
         self.assertIn("UNASSIGNED", out)
 
     def test_dry_run_posts_nothing(self):
         gh = Gh()
-        rc, out = sweep(manifest_with_reviewer(), gh, do_approve=False)
+        rc, out = sweep(MANIFEST, gh, do_approve=False)
         self.assertEqual(gh.posted, [])
         self.assertIn("would approve", out)
 
     def test_reject_is_left_alone_and_exits_1(self):
         gh = Gh(msg="update stuff\n\nTask: KOS-SENSE-001")
-        rc, out = sweep(manifest_with_reviewer(), gh)
+        rc, out = sweep(MANIFEST, gh)
         self.assertEqual(rc, 1)
         self.assertEqual(gh.posted, [])
         self.assertIn("REJECT", out)
 
     def test_protected_path_needs_human_not_approved(self):
         gh = Gh(files=[{"filename": ".github/workflows/x.yml", "status": "added"}])
-        rc, out = sweep(manifest_with_reviewer(), gh)
+        rc, out = sweep(MANIFEST, gh)
         self.assertEqual(gh.posted, [])
         self.assertIn("NEEDS_HUMAN", out)
 
     def test_own_pr_is_not_self_approved(self):
         gh = Gh(author="dineshannayya")
-        rc, out = sweep(manifest_with_reviewer(), gh)
+        rc, out = sweep(MANIFEST, gh)
         self.assertEqual(gh.posted, [])
         self.assertIn("self-approval", out)
 
     def test_user_without_role_does_not_approve(self):
         gh = Gh(me="stranger")
-        rc, out = sweep(manifest_with_reviewer(), gh)
+        rc, out = sweep(MANIFEST, gh)
         self.assertEqual(gh.posted, [])
         self.assertIn("holds none of the required roles", out)
 
     def test_draft_is_not_approved(self):
         gh = Gh(draft=True)
-        rc, out = sweep(manifest_with_reviewer(), gh)
+        rc, out = sweep(MANIFEST, gh)
         self.assertEqual(gh.posted, [])
         self.assertIn("draft", out)
 
     def test_failed_required_check_is_reject(self):
         gh = Gh(checks=[{"workflowName": "secret-scan", "conclusion": "FAILURE", "status": "COMPLETED"}] + OK[1:])
-        rc, out = sweep(manifest_with_reviewer(), gh)
+        rc, out = sweep(MANIFEST, gh)
         self.assertEqual((rc, gh.posted), (1, []))
 
     def test_unreadable_repo_is_reported_and_exit_2(self):

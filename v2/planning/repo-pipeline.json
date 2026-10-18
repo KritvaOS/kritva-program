@@ -33,12 +33,16 @@
       "basis": "D-032"
     },
     "ARCHITECTURE_REVIEWER": {
-      "holders": [],
-      "basis": "not recorded (PD-007)"
+      "holders": [
+        "Dinesh"
+      ],
+      "basis": "D-047 interim: owner assigned himself on 2026-10-18; not an independent reviewer"
     },
     "SAFETY_REVIEWER": {
-      "holders": [],
-      "basis": "not recorded (PD-007, D-025)"
+      "holders": [
+        "Dinesh"
+      ],
+      "basis": "D-047 interim: owner assigned himself on 2026-10-18; not an independent reviewer"
     }
   },
   "known_github_checks": [

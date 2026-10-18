@@ -4,7 +4,7 @@
 
 Generated from structured records only (status, owner, due date and blocking state are fields, not parsed text). Missing owners and dates are shown as UNASSIGNED and NO_DUE_DATE_RECORDED. Superseded records are excluded. Open gates are tracked separately in the Gates section of [tracking/STATUS_DETAIL.md](../tracking/STATUS_DETAIL.md), not here.
 
-18 pending, 8 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
+17 pending, 7 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
 
 | ID | Decision needed | Status | Blocking | Blocks | Scope | Owner | Due | Required action |
 |---|---|---|---|---|---|---|---|---|
@@ -14,7 +14,6 @@ Generated from structured records only (status, owner, due date and blocking sta
 | PD-004 | Approve the repository and task ID registry | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm the prefixes in repo-pipeline.json (KOS-SENSE, KOS-MOTION, KOS-MIND, KOS-SKILL and the existing ones) and that task IDs are globally unique. |
 | PD-005 | Approve the acceptance and test policy | PROPOSED | yes | V2-M0 | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Set required checks per repository kind, coverage thresholds if any, waiver authority and safety and security approval roles (v2/planning/ACCEPTANCE_STANDARD.md). |
 | PD-006 | Approve the tag policy | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm annotated SemVer tags, the restricted use of milestone prerelease tags and who may create release tags. |
-| PD-007 | Approve the PR reviewer-role mapping | PROPOSED | yes | V2-M0 | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Name holders for ARCHITECTURE_REVIEWER and SAFETY_REVIEWER, which are not recorded; PROGRAM_OWNER, REPO_CODE_OWNER and SECURITY_OWNER are Dinesh today. |
 | PD-008 | Reconcile the 4.5 PM effort difference | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Remaining workstream estimates sum to 170.5 PM against the 175 PM planning reference. Keep UNALLOCATED, or assign to contingency, overhead or omitted work. |
 | PD-009 | Approve the status schema and record ownership | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm the canonical locations of decision, review, gate and milestone records in v2/planning and the generated report locations. |
 | PD-010 | Choose the merge method | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | The pipeline manifest says merge commit, matching history; ChatGPT proposed squash so the Task footer is in the final protected-branch commit. Decide before enforcing the Task footer. |
