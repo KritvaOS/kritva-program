@@ -156,6 +156,29 @@ class Pipeline(unittest.TestCase):
         self.assertEqual(run("tag-ok", "kritva-core", "1.0").returncode, 1)
 
 
+class ShipScript(unittest.TestCase):
+    text = (ROOT / "scripts/pipeline/ship-prs.sh").read_text(encoding="utf-8")
+
+    def test_manifest_path_is_made_absolute_before_cd(self):
+        self.assertIn('MANIFEST="$(cd "$(dirname "$MANIFEST")" && pwd)/$(basename "$MANIFEST")"', self.text)
+        self.assertLess(self.text.index('MANIFEST="$(cd'), self.text.index("ship() {"))
+
+    def test_unreadable_or_empty_required_checks_stop_the_merge(self):
+        self.assertIn("cannot read the required checks from the manifest: not merging", self.text)
+        self.assertIn("lists no required checks", self.text)
+
+    def test_checks_match_on_workflow_name_and_require_all_runs_success(self):
+        self.assertIn("--json workflow,state", self.text)
+        self.assertIn('select(.workflow==', self.text)
+        self.assertIn("grep -vx SUCCESS", self.text)
+
+    def test_checks_run_from_another_directory(self):
+        with tempfile.TemporaryDirectory() as t:
+            r = subprocess.run([sys.executable, str(ROOT / "scripts/pipeline/manifest.py"), "checks", "kritva-sense",
+                                "--manifest", str(ROOT / "v2/planning/repo-pipeline.json")], capture_output=True, text=True, cwd=t)
+            self.assertEqual(r.stdout.split(), ["secret-scan", "commit-message-check"])
+
+
 class Queues(unittest.TestCase):
     def test_pending_lists_come_from_status_fields(self):
         d = copy.deepcopy(data())

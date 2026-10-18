@@ -55,6 +55,8 @@ gh auth status >/dev/null 2>&1 || { echo "gh is not logged in: run 'gh auth logi
 # ---- manifest (optional): order, membership, required checks, tag rules
 MSCRIPT=""
 if [ -n "$MANIFEST" ]; then
+  [ -f "$MANIFEST" ] || { echo "manifest not found: $MANIFEST" >&2; exit 2; }
+  MANIFEST="$(cd "$(dirname "$MANIFEST")" && pwd)/$(basename "$MANIFEST")"   # absolute: the script cd's into each repo
   MSCRIPT="$(cd "$(dirname "$MANIFEST")/../.." 2>/dev/null && pwd)/scripts/pipeline/manifest.py"
   [ -f "$MSCRIPT" ] || { echo "manifest.py not found next to the manifest ($MSCRIPT)" >&2; exit 2; }
   command -v python3 >/dev/null || { echo "python3 not found" >&2; exit 2; }
@@ -131,10 +133,15 @@ ship() {
 
   # 3b. every check the manifest requires must be present and successful on this PR
   if [ -n "$MANIFEST" ]; then
-    local need c state
-    for c in $(python3 "$MSCRIPT" checks "$r" --manifest "$MANIFEST"); do
-      state=$(gh pr checks "$n" -R "$slug" --json name,state -q ".[] | select(.name==\"$c\") | .state" 2>/dev/null | head -1)
-      [ "$state" = "SUCCESS" ] || { echo "   required check '$c' is '${state:-missing}', not SUCCESS: not merging"; return 1; }
+    local need c state reqs
+    reqs=$(python3 "$MSCRIPT" checks "$r" --manifest "$MANIFEST") || { echo "   cannot read the required checks from the manifest: not merging"; return 1; }
+    [ -n "$reqs" ] || { echo "   the manifest lists no required checks for $r: not merging"; return 1; }
+    for c in $reqs; do
+      # match on the workflow name (the manifest names workflows); every run of it must be SUCCESS
+      state=$(gh pr checks "$n" -R "$slug" --json workflow,state -q ".[] | select(.workflow==\"$c\") | .state" 2>/dev/null)
+      if [ -z "$state" ] || [ -n "$(printf '%s\n' "$state" | grep -vx SUCCESS)" ]; then
+        echo "   required check '$c' is '$(printf '%s' "$state" | tr '\n' ' ')' (empty means missing), not all SUCCESS: not merging"; return 1
+      fi
     done
   fi
 

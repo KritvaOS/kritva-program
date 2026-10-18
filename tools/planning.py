@@ -312,7 +312,7 @@ def render_repos(data):
     for k, v in p["roles"].items():
         L.append(f"| {k} | {', '.join(v['holders']) or 'UNASSIGNED'} | {v['basis']} |")
     L += ["", "## PR approval sequence", "",
-          "| # | Repository | Kind | Depends on | Required approvals | Required GitHub checks | Local gates | Phase milestones |", "|---|---|---|---|---|---|---|---|"]
+          "| # | Repository | Kind | Depends on | Required approvals | Required GitHub checks (workflow names) | Local gates | Phase milestones |", "|---|---|---|---|---|---|---|---|"]
     for i, rid in enumerate(order, 1):
         r = by[rid]
         L.append(f"| {i} | {rid}{' (HOLD)' if r['on_hold'] else ''} | {r['kind']} | {', '.join(r['depends_on']) or '-'} | {', '.join(r['required_approvals'])} | "
