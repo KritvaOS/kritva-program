@@ -76,14 +76,38 @@ def static_rules(gate, commits, files, read, registry_note=None):
         res.append(R("R01", FAIL, "commit format: " + " | ".join(bad)))
     else:
         res.append(R("R01", PASS, f"{len(commits)} commit(s) follow Conventional Commits with one Task footer"))
-    base_tasks = task_table(read("base", "planning/TASKS.md"), prefix)
-    reg_src = "base"
-    if not base_tasks:
-        base_tasks, reg_src = task_table(read("head", "planning/TASKS.md"), prefix), "head"
     ids = sorted({t for _, t in tasks})
+    reg = (gate.get("task_registry") or {}).get("type", "repo-tasks-md")
     if not ids:
         res.append(R("R02", FAIL if commits else NOTEVAL, "no Task: ID to check"))
+    elif reg == "program-baseline":
+        b = read("program", "v2/tracking/baseline.json")
+        known = {t["id"] for t in json.loads(b)["tasks"]} if b else None
+        for t in ids:
+            if known is None:
+                res.append(R("R02", HUMAN, f"{t}: the program baseline could not be read here, so the task was not checked"))
+            elif t in known:
+                res.append(R("R02", PASS, f"{t} is a task in the kritva-program baseline"))
+            else:
+                res.append(R("R02", FAIL, f"{t} is not a task in v2/tracking/baseline.json (kritva-program)"))
+    elif reg == "program-inventory":
+        b = read("program", "v2/tracking/planning_inventory.json")
+        known = ({x["task_id"] for g in json.loads(b)["groups"] if g["repository"] == gate["github_repo"] for x in g.get("tasks", [])} if b else None)
+        for t in ids:
+            if known is None:
+                res.append(R("R02", HUMAN, f"{t}: the planning inventory could not be read here, so the task was not checked"))
+            elif t in known:
+                res.append(R("R02", HUMAN, f"{t} is registered in the planning inventory (planning only, no credit); the owner decides whether it is started"))
+            else:
+                res.append(R("R02", FAIL, f"{t} is not in v2/tracking/planning_inventory.json for {gate['github_repo']}"))
+    elif reg == "none":
+        for t in ids:
+            res.append(R("R02", HUMAN, f"{t}: this repository has no machine-readable task registry registered yet (PD-004), so the task was not checked"))
     else:
+        base_tasks = task_table(read("base", "planning/TASKS.md"), prefix)
+        reg_src = "base"
+        if not base_tasks:
+            base_tasks, reg_src = task_table(read("head", "planning/TASKS.md"), prefix), "head"
         for t in ids:
             if not t.startswith(prefix + "-"):
                 res.append(R("R02", FAIL, f"{t} does not use this repository's task prefix {prefix}"))
@@ -222,7 +246,10 @@ def remote_inputs(repo, pr, run=sh):
 
     def read(which, path):
         try:
-            out = run("gh", "api", f"repos/{repo}/contents/{path}?ref={base if which == 'base' else head}")
+            if which == "program":
+                out = run("gh", "api", f"repos/KritvaOS/kritva-program/contents/{path}?ref=main")
+            else:
+                out = run("gh", "api", f"repos/{repo}/contents/{path}?ref={base if which == 'base' else head}")
         except RuntimeError:
             return None
         return base64.b64decode(json.loads(out)["content"]).decode("utf-8")
@@ -238,7 +265,7 @@ def gate_for(manifest, repo):
     for r in manifest["repositories"]:
         if repo in (r["repo_id"], r["github_repo"]):
             return {"repo_id": r["repo_id"], "github_repo": r["github_repo"], "code": r["code"], "task_prefix": r["task_prefix"], "kind": r["kind"],
-                    "depends_on": r["depends_on"], "required_github_checks": r["required_github_checks"], "required_approvals": r["required_approvals"],
+                    "depends_on": r["depends_on"], "task_registry": r.get("task_registry", {"type": "repo-tasks-md"}), "required_github_checks": r["required_github_checks"], "required_approvals": r["required_approvals"],
                     "protected_paths": r.get("protected_paths", []), "manifest_id": manifest["manifest_id"], "manifest_status": manifest["status"]}
     raise SystemExit(f"unknown repository {repo!r}")
 

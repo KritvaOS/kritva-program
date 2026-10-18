@@ -46,11 +46,11 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 | kritva-mind | MIND | MIND | KOS-MIND | no (planning only) |
 | kritva-skill | SKILL | SKILL | KOS-SKILL | no (planning only) |
 | kritva-raas | RAAS | RAAS | B-INC | no (planning only) |
-| kritva-actuator | ACTUATOR | ACT_INT | KOS-ACT | no (planning only) |
-| kritva-actuator-embedded | EMBEDDED | ACT_EMB | KOS-ACT-EMB | no (planning only) |
-| kritva-actuator-l | ACTL | ACT_L | KOS-ACT-L | no (planning only) |
-| kritva-actuator-m | ACTM | ACT_M | KOS-ACT-M | no (planning only) |
-| kritva-actuator-s | ACTS | ACT_S | KOS-ACT-S | no (planning only) |
+| kritva-actuator | ACTUATOR | ACT_INT | ACT-INT | no (planning only) |
+| kritva-actuator-embedded | EMBEDDED | ACT_EMB | ACT-EMB | no (planning only) |
+| kritva-actuator-l | ACTL | ACT_L | ACT-L | no (planning only) |
+| kritva-actuator-m | ACTM | ACT_M | ACT-M | no (planning only) |
+| kritva-actuator-s | ACTS | ACT_S | ACT-S | no (planning only) |
 
 ## Per-repository milestones
 

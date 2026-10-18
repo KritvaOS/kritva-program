@@ -165,6 +165,9 @@ def validate(data):
             if h not in people or not people[h].get("github_login"):
                 errs.append(f"role {role}: holder {h!r} has no github_login in people")
     for x in repos:
+        tr = x.get("task_registry") or {"type": "repo-tasks-md"}
+        if tr.get("type") not in ("repo-tasks-md", "program-baseline", "program-inventory", "none"):
+            errs.append(f"{x.get('repo_id')}: unknown task_registry type {tr.get('type')!r}")
         for q in x.get("protected_paths", []):
             if not isinstance(q, str) or q.startswith("/") or ".." in q:
                 errs.append(f"{x.get('repo_id')}: protected path {q!r} must be a relative path")
