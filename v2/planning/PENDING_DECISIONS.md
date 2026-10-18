@@ -4,7 +4,7 @@
 
 Generated from structured records only (status, owner, due date and blocking state are fields, not parsed text). Missing owners and dates are shown as UNASSIGNED and NO_DUE_DATE_RECORDED. Superseded records are excluded. Open gates are tracked separately in the Gates section of [tracking/STATUS_DETAIL.md](../tracking/STATUS_DETAIL.md), not here.
 
-17 pending, 8 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
+18 pending, 8 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
 
 | ID | Decision needed | Status | Blocking | Blocks | Scope | Owner | Due | Required action |
 |---|---|---|---|---|---|---|---|---|
@@ -25,3 +25,4 @@ Generated from structured records only (status, owner, due date and blocking sta
 | PD-015 | Approve drafting the Core engineering contract | PROPOSED | yes | V2-M0 | kritva-core, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. |
 | PD-016 | Answer the RaaS SEC-GATE-001 questions | PROPOSED | yes | V2-M0 | kritva-raas, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | Was kritva:kritva ever a real credential, must it be rotated, and what is the disposition deadline. |
 | PD-017 | Test the Community security mailbox | PROPOSED | no | - | kritvaos-community, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | After the SECURITY.md contact patch merges, send a test email to dinesh@kritvaos.in so security_policy can move from OPEN to ATTESTED. |
+| PD-018 | Make pr-acceptance-gate a required check in each repo ruleset | PROPOSED | no | - | kritva-sense, kritva-motion, kritva-mind, kritva-skill, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | After the gate workflow has run once on a PR in each repo, add pr-acceptance-gate to the required status checks of the main ruleset (GitHub settings, owner action). The gate is report-only: REJECT blocks merge, NEEDS_HUMAN and APPROVE do not. Rollout to the other nine repos follows once the gate has run on the four new repos. |

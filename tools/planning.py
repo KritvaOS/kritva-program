@@ -159,6 +159,15 @@ def validate(data):
                 errs.append(f"{n}: unknown phase milestone {pm!r}")
         if (x.get("release_policy") or {}).get("annotated") is not True:
             errs.append(f"{n}: release tags must be annotated")
+    people = p.get("people") or {}
+    for role, info in (p.get("roles") or {}).items():
+        for h in info.get("holders", []):
+            if h not in people or not people[h].get("github_login"):
+                errs.append(f"role {role}: holder {h!r} has no github_login in people")
+    for x in repos:
+        for q in x.get("protected_paths", []):
+            if not isinstance(q, str) or q.startswith("/") or ".." in q:
+                errs.append(f"{x.get('repo_id')}: protected path {q!r} must be a relative path")
     _, terrs = topo(repos)
     errs += terrs
     if p.get("merge_policy", {}).get("method") not in ("merge", "squash", "rebase"):

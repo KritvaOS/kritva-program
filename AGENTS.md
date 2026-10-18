@@ -40,6 +40,8 @@ Regenerate `v2/tracking/consolidated_status.json`, `STATUS_VIEW.md` and `STATUS_
 - Do not add `Claude-Session:` or session-URL trailers to commit messages or pull request descriptions. The `commit-message-check` workflow rejects them. A `Co-Authored-By:` line is allowed.
 - `main` is protected by a ruleset that requires `secret-scan`, `commit-message-check` and Code Owner review (owner statement, D-040; not independently verified). With one owner, the PR author cannot self-approve: ask the owner to merge using the bypass or add a second reviewer.
 
+- Pull requests are judged by the report-only `pr-acceptance-gate` (D-045, `scripts/pipeline/pr_gate.py`). It reports REJECT, NEEDS_HUMAN or APPROVE and approves, merges and changes nothing. Do not edit the gate, its config or the protected paths to make a PR pass; changes there need the owner.
+
 ## When unsure
 
 Say what you do not know and ask the owner. Do not invent evidence, test results, hardware behaviour or approvals, and do not claim a check passed unless you ran it.

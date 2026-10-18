@@ -431,6 +431,34 @@
       "supersedes": [],
       "approval_ref": null,
       "source": "readiness check security_policy"
+    },
+    {
+      "record_id": "PD-018",
+      "record_type": "DECISION",
+      "title": "Make pr-acceptance-gate a required check in each repo ruleset",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0"
+        ],
+        "repo_ids": [
+          "kritva-sense",
+          "kritva-motion",
+          "kritva-mind",
+          "kritva-skill"
+        ]
+      },
+      "required_action": "After the gate workflow has run once on a PR in each repo, add pr-acceptance-gate to the required status checks of the main ruleset (GitHub settings, owner action). The gate is report-only: REJECT blocks merge, NEEDS_HUMAN and APPROVE do not. Rollout to the other nine repos follows once the gate has run on the four new repos.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "D-045"
     }
   ]
 }
