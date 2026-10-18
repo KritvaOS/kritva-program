@@ -47,21 +47,28 @@ Regression policy: the regression suite must pass unchanged before and after eve
 ## 4. Commit format
 
 ```text
-type(scope): summary of at most 72 characters
+type(scope): summary of at most 90 characters [TASK-ID]
 
 Optional body.
 
 Task: KOS-SENSE-001
 ```
 
-- Types: feat, fix, docs, refactor, test, build, ci, chore, perf, revert. Scope is lower-case.
-- Exactly one `Task:` footer. The ID is upper-case segments joined by hyphens, from the repository's prefix in `repo-pipeline.json` (for example KOS-SENSE-001, KRP-ENG-001, KF-CORE-R10-001, B-INC-002, I2-001).
+- Types: feat, fix, docs, refactor, test, build, ci, chore, perf, revert, security. Scope is lower-case and free-form; the vocabulary in use is `backend` (backend code), `repo`, `planning`, `governance`, `docs`, `security` and the repository's own area names.
+- Exactly one footer line, `Task:` or `Tasks:`, with one or more comma-separated IDs (`Tasks: KR-BE-1-044, KR-BE-1-045`). An ID is upper-case segments joined by hyphens, from the repository's task record (examples: KOS-SENSE-001, KRP-ENG-001, KF-CORE-R10-001, B-INC-002, I2-001, KR-BE-1-044).
+- A commit that implements no task (a record correction, a docs-only change) is a `docs` or `chore` commit with `Tasks: None (reason)`. The reason is mandatory and no other type may use it.
+- The subject suffix `[TASK-ID]` is optional and not enforced. If present it must be one of the footer IDs and cannot go with `Tasks: None`.
 - The ID should exist in the repository's task record; `scripts/security/check_commit_format.py --registry` rejects unknown IDs.
+- Other trailers are allowed. kritva-raas requires Acceptance, Tests, Security-Gates and Evidence trailers under its own traceability checker (its GIT_COMMIT_STEP.md); that is a repository rule on top of this standard, not part of it.
 - No AI-session trailer or link (`Claude-Session:`, claude.ai session URLs); the existing `commit-message-check` already rejects these. Ordinary Git metadata, `Co-Authored-By` and `Signed-off-by` are allowed.
-- The format is checked on the commit that lands on the protected branch. With merge commits (the current method) the checked commits are the PR's own commits; with squash (decision PD-010) it is the squash message.
-- Every commit needs a task. If a change belongs to no existing task, create the task in the repository's task record first; do not reuse an unrelated ID and do not invent one.
+- The merge method is a merge commit (D-053, resolving PD-010), so the checked commits are the PR's own commits. The PR title follows the same `type(scope): summary` style.
+- Every other commit needs a task. If a change belongs to no existing task, create the task in the repository's task record first; do not reuse an unrelated ID and do not invent one.
 
 Checker: `python3 scripts/security/check_commit_format.py --range origin/main..HEAD`. Enforcement in CI starts only after dry runs on representative PRs.
+
+### PR description
+
+Every repository carries `.github/PULL_REQUEST_TEMPLATE.md`, the template in [templates/PULL_REQUEST_TEMPLATE.md](templates/PULL_REQUEST_TEMPLATE.md). It combines the raas README list (summary, scope and exclusions, commits, task and test table, validation, what is pending) with the ten BRANCHING_STRATEGY headings. A heading that does not apply says "Not applicable". The body is not checked by the gate.
 
 ## 5. Git tags
 

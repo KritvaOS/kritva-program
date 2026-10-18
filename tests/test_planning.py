@@ -265,13 +265,13 @@ class CommitFormat(unittest.TestCase):
         self.assertEqual(C.problems("fix(core): x\n\nTask: KF-CORE-R10-001\n"), [])
 
     def test_missing_malformed_duplicate_task(self):
-        self.assertIn("missing Task: footer", C.problems("feat: x\n"))
+        self.assertTrue(any("missing Task: footer" in p for p in C.problems("feat: x\n")))
         self.assertTrue(any("malformed" in p for p in C.problems("feat: x\n\nTask: kos-sense-001\n")))
         self.assertTrue(any("malformed" in p for p in C.problems("feat: x\n\nTask: SENSE\n")))
         self.assertTrue(any("more than one" in p for p in C.problems("feat: x\n\nTask: KOS-A-001\nTask: KOS-A-002\n")))
 
     def test_header_rules(self):
-        for bad in ("Update stuff\n\nTask: KOS-A-001", "feat(Sense): x\n\nTask: KOS-A-001", "feat: " + "x" * 80 + "\n\nTask: KOS-A-001", "wip: x\n\nTask: KOS-A-001"):
+        for bad in ("Update stuff\n\nTask: KOS-A-001", "feat(Sense): x\n\nTask: KOS-A-001", "feat: " + "x" * 95 + "\n\nTask: KOS-A-001", "wip: x\n\nTask: KOS-A-001"):
             self.assertTrue(any("header" in p for p in C.problems(bad)), bad)
 
     def test_ai_session_trailers_rejected(self):
@@ -283,6 +283,33 @@ class CommitFormat(unittest.TestCase):
 
     def test_merge_commits_are_exempt(self):
         self.assertEqual(C.problems("Merge pull request #1 from x/y\n"), [])
+
+    def test_tasks_list_footer_and_security_type(self):
+        self.assertEqual(C.problems("security(backend): harden headers\n\nTasks: KR-BE-1-044, KR-BE-1-045\n"), [])
+        self.assertEqual(C.problems("feat(sense): x\n\nTasks: KOS-SENSE-001,KOS-SENSE-002\n"), [])
+        self.assertEqual(C.task_ids("feat(sense): x\n\nTasks: KOS-A-001, KOS-A-002\n"), ["KOS-A-001", "KOS-A-002"])
+        self.assertTrue(any("unknown task" in p for p in C.problems("feat: x\n\nTasks: KOS-A-001, KOS-A-002\n", {"KOS-A-001"})))
+
+    def test_none_footer_only_for_docs_or_chore_with_a_reason(self):
+        self.assertEqual(C.problems("docs(backend): fix record\n\nTasks: None (record correction)\n"), [])
+        self.assertEqual(C.problems("chore(repo): tidy\n\nTask: None (housekeeping)\n"), [])
+        self.assertTrue(any("only for docs or chore" in p for p in C.problems("feat(x): y\n\nTasks: None (no reason to)\n")))
+        self.assertTrue(any("malformed" in p for p in C.problems("docs: y\n\nTasks: None\n")))
+        self.assertTrue(C.declares_none("docs: y\n\nTasks: None (r)\n"))
+        self.assertEqual(C.task_ids("docs: y\n\nTasks: None (r)\n"), [])
+
+    def test_subject_suffix_is_optional_but_must_match_the_footer(self):
+        self.assertEqual(C.problems("feat(backend): add thing [KR-BE-1-044]\n\nTasks: KR-BE-1-044\n"), [])
+        self.assertEqual(C.problems("feat(backend): add thing\n\nTasks: KR-BE-1-044\n"), [])
+        self.assertTrue(any("not in the footer" in p for p in C.problems("feat(backend): add thing [KR-BE-1-099]\n\nTasks: KR-BE-1-044\n")))
+        self.assertTrue(any("cannot go with" in p for p in C.problems("docs(backend): x [KR-BE-1-044]\n\nTasks: None (r)\n")))
+
+    def test_raas_style_extra_trailers_are_allowed(self):
+        m = "feat(backend): add thing [KR-BE-1-044]\n\nbody\n\nTasks: KR-BE-1-044\nAcceptance: AC-1\nTests: unit\nSecurity-Gates: SG-1\nEvidence: run 1\n"
+        self.assertEqual(C.problems(m), [])
+
+    def test_one_footer_line_only(self):
+        self.assertTrue(any("more than one" in p for p in C.problems("feat: x\n\nTask: KOS-A-001\nTasks: KOS-A-002\n")))
 
 
 if __name__ == "__main__":

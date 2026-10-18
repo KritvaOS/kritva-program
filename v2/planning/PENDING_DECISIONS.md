@@ -4,7 +4,7 @@
 
 Generated from structured records only (status, owner, due date and blocking state are fields, not parsed text). Missing owners and dates are shown as UNASSIGNED and NO_DUE_DATE_RECORDED. Superseded records are excluded. Open gates are tracked separately in the Gates section of [tracking/STATUS_DETAIL.md](../tracking/STATUS_DETAIL.md), not here.
 
-18 pending, 7 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
+17 pending, 7 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
 
 | ID | Decision needed | Status | Blocking | Blocks | Scope | Owner | Due | Required action |
 |---|---|---|---|---|---|---|---|---|
@@ -16,7 +16,6 @@ Generated from structured records only (status, owner, due date and blocking sta
 | PD-006 | Approve the tag policy | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm annotated SemVer tags, the restricted use of milestone prerelease tags and who may create release tags. |
 | PD-008 | Reconcile the 4.5 PM effort difference | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Remaining workstream estimates sum to 170.5 PM against the 175 PM planning reference. Keep UNALLOCATED, or assign to contingency, overhead or omitted work. |
 | PD-009 | Approve the status schema and record ownership | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm the canonical locations of decision, review, gate and milestone records in v2/planning and the generated report locations. |
-| PD-010 | Choose the merge method | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | The pipeline manifest says merge commit, matching history; ChatGPT proposed squash so the Task footer is in the final protected-branch commit. Decide before enforcing the Task footer. |
 | PD-011 | Confirm team capacity for the 12-month horizon | PROPOSED | yes | V2-M0 | V2-M0, V2-M8 | UNASSIGNED | NO_DUE_DATE_RECORDED | 170.5 to 175 PM remaining over about 11.9 months needs roughly 14 to 15 person-months of effort per calendar month. State the real capacity so dates can be derived from effort. |
 | PD-012 | Include the four new repositories in the return-to-private plan and readiness checklist | PROPOSED | no | - | kritva-mind, kritva-sense, kritva-skill, kritva-motion, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | They are not in repo_readiness.json or D-037. Decide their target visibility and add them. |
 | PD-013 | Choose the licence for the four new repositories | PROPOSED | no | - | kritva-mind, kritva-sense, kritva-skill, kritva-motion, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | They carry Apache-2.0 from creation; Core and Community are Apache-2.0, RaaS and the program repository are proprietary. Decide before any code is added. |

@@ -208,6 +208,26 @@ class TaskRegistries(unittest.TestCase):
             self.assertEqual(G.gate_for(MANIFEST, r)["task_registry"]["type"], "repo-tasks-md")
 
 
+class NoTaskCommits(unittest.TestCase):
+    def test_none_footer_passes_r02_and_other_commits_still_need_a_task(self):
+        gate = G.gate_for(MANIFEST, "kritva-sense")
+        none = "docs(sense): fix record\n\nTasks: None (record correction)\n"
+        res = G.static_rules(gate, [{"sha": SHA, "message": none}], [], lambda w, p: None)
+        self.assertEqual([r["level"] for r in res if r["rule"] in ("R01", "R02")], ["PASS", "PASS"])
+        res = G.static_rules(gate, [{"sha": SHA, "message": none}, {"sha": SHA, "message": "feat(sense): x\n"}], [], lambda w, p: None)
+        self.assertIn("FAIL", [r["level"] for r in res if r["rule"] in ("R01", "R02")])
+        feat = "feat(sense): x\n\nTasks: None (nope)\n"
+        res = G.static_rules(gate, [{"sha": SHA, "message": feat}], [], lambda w, p: None)
+        self.assertEqual(next(r for r in res if r["rule"] == "R01")["level"], "FAIL")
+
+    def test_pr_template_copy_matches_the_canonical_one(self):
+        self.assertEqual((ROOT / ".github/PULL_REQUEST_TEMPLATE.md").read_text(), (ROOT / "v2/planning/templates/PULL_REQUEST_TEMPLATE.md").read_text())
+        text = (ROOT / ".github/PULL_REQUEST_TEMPLATE.md").read_text()
+        for h in ("Summary", "Scope and exclusions", "Architecture impact", "Contract impact", "Database impact", "Security impact", "Testing",
+                  "Documentation", "Risks and known limitations", "Acceptance criteria", "Commits", "Tasks and milestone", "Pending"):
+            self.assertIn("## " + h, text)
+
+
 class CommitStandardAdoption(unittest.TestCase):
     def levels(self, repo, msg):
         gate = G.gate_for(MANIFEST, repo)

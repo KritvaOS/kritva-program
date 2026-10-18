@@ -36,7 +36,7 @@ Regenerate `v2/tracking/consolidated_status.json`, `STATUS_VIEW.md` and `STATUS_
 ## Commits and pull requests
 
 - Work on a branch and open a pull request. Do not push to `main`. Do not force-push shared branches or rewrite history without the owner's explicit approval.
-- Use short imperative messages in the repository's existing style (`type(scope): summary`).
+- Commit format (D-053): `type(scope): summary` with one `Task:` or `Tasks:` footer (`Tasks: None (reason)` only on docs or chore); see v2/planning/ACCEPTANCE_STANDARD.md section 4. Merge method is a merge commit. PRs use `.github/PULL_REQUEST_TEMPLATE.md`.
 - Do not add `Claude-Session:` or session-URL trailers to commit messages or pull request descriptions. The `commit-message-check` workflow rejects them. A `Co-Authored-By:` line is allowed.
 - `main` is protected by a ruleset that requires `secret-scan`, `commit-message-check` and Code Owner review (owner statement, D-040; not independently verified). With one owner, the PR author cannot self-approve: ask the owner to merge using the bypass or add a second reviewer.
 
