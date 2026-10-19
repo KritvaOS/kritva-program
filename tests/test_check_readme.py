@@ -52,6 +52,15 @@ class CheckReadme(unittest.TestCase):
         self.assertEqual(self.run_check(GOOD + "\nExample:\n\n    feat(x): <imperative summary> [<TASK-ID>]\n"), [])
         self.assertTrue(any("does not resolve" in p for p in self.run_check(GOOD + "\n    see [a](nope.md)\n")))
 
+    def test_tilde_fence_is_code_and_a_mismatched_fence_does_not_close(self):
+        self.assertEqual(self.run_check(GOOD + "\n~~~\n<repo> [x](nope.md) TODO\n~~~\n"), [])
+        # a ``` block closed by ~~~ is still open, so the text after it is checked, not skipped
+        self.assertTrue(self.run_check(GOOD + "\n```\ncode\n~~~\nTODO\n"))
+
+    def test_link_after_a_closed_fence_is_still_checked(self):
+        problems = self.run_check(GOOD + "\n```\ncode\n```\n[a](nope.md)\n")
+        self.assertTrue(any("does not resolve" in p for p in problems))
+
 
 class Repository(unittest.TestCase):
     def test_program_readme_passes(self):

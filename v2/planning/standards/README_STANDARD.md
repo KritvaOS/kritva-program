@@ -5,7 +5,7 @@
 | Document ID | KOS-STD-README |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Standard |
-| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit round 1, D-056); becomes APPROVED when the owner records it |
+| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 3, D-056 and D-057); becomes APPROVED when the owner records it |
 | Owner | Dinesh (program owner) |
 | Authority | AUTHORITATIVE role for README layout (role, not approval). ChatGPT review is advisory only |
 | Related | [README_TEMPLATE_PUBLIC.md](README_TEMPLATE_PUBLIC.md), [README_TEMPLATE_PRIVATE.md](README_TEMPLATE_PRIVATE.md), [DOCUMENT_HEADER_STANDARD.md](DOCUMENT_HEADER_STANDARD.md), [README_REVIEW_CHECKLIST.md](README_REVIEW_CHECKLIST.md), [README_MIGRATION_PLAN.md](README_MIGRATION_PLAN.md) |
@@ -20,14 +20,14 @@ The README explains the repository and links to the documents that own the detai
 
 1. **Navigation hub.** Link to the authoritative document; do not duplicate it.
 2. **Existing files only.** A link points to a file or directory that exists on the default branch. A document that is planned but not written is listed as `Not yet defined` with no link.
-3. **Real commands only.** Every command in the README exists in that repository and has been run. A command is never copied from another repository without being checked. A command that modifies state, merges, publishes or deploys says so and shows a safe preview option where one exists (section 6).
+3. **Real commands only.** Every command in the README exists in that repository and has been run. A command is never copied from another repository without being checked. A command that modifies state, merges, publishes or deploys says so and shows a safe preview option where one exists (section 6). Every command the README advertises has an effect label, checked against the real Makefile or task runner; a blanket statement such as "no command modifies state" is made only for a stated, inspected set of commands.
 4. **No stale numbers.** Task counts, progress percentages, test counts and gate states are not written into the README. Point to the generated status view.
 5. **Status invariants.** Where a README covers status, acceptance or release, it keeps four things apart and never merges them into one flag, badge or percentage (section 7).
 6. **Unknown stays unknown.** An unverified fact is labelled `UNVERIFIED`, `PROPOSED`, `PLANNED` or `ATTESTED`. A document that is a skeleton or draft is linked with that status beside it. A test that is not implemented is not shown as passing.
-7. **Safety is not software.** A repository that moves hardware states its open safety gates and says that software tests and simulation do not prove physical safety.
+7. **Safety is not software.** A repository that moves hardware states that software checks, analytical calculations and simulation validate only the stated model, inputs and software properties, and do not prove physical safety, component suitability, design acceptance or readiness for human use. It gives an open-gate summary (section 8). It never calls a device, design or actuator "validated" or "safe" on the strength of code, calculation, simulation or a passing software test; a future deliverable such as a validated unit is described as conditional on the physical tests and gates, not as the current state.
 8. **No secrets.** Private visibility does not make credentials, tokens or keys safe to commit.
-9. **Stricter rule wins.** A repository's own approved rule (its `AGENTS.md`, an acceptance standard, a safety gate) takes precedence when it is stricter. A conflict is resolved in writing, in section 11, never by silently replacing an approved rule.
-10. **Rules of another repository are not imposed.** A README states the convention this repository has approved. Where the Kritva commit standard has been formally adopted for the repository, it says so and follows the current specification; where it has not (see PD-019 in kritva-program), it says that instead.
+9. **Stricter rule wins.** A repository's own approved rule (its `AGENTS.md`, an acceptance standard, a safety gate) takes precedence when it is stricter. A conflict is resolved in writing, in section 12, never by silently replacing an approved rule.
+10. **Rules of another repository are not imposed.** A README names one controlling commit and pull request contract for the repository, the validator or workflow that enforces it (or says nothing enforces it), and whether the Kritva commit standard has been formally adopted. A rule that is not adopted is advisory reference, never a second mandatory format. A README states the convention this repository has approved. Where the Kritva commit standard has been formally adopted for the repository, it says so and follows the current specification; where it has not (see PD-019 in kritva-program), it says that instead.
 
 ## 3. Document classification and status
 
@@ -43,7 +43,7 @@ Each important file or directory in the structure and document tables carries a 
 | REFERENCE | Background or navigation; governs nothing | Yes |
 | MIXED | A directory with files of several labels | Per file; list the principal files |
 
-A label names a responsibility, not an approval. Status is `DRAFT`, `SKELETON`, `PROPOSED`, `APPROVED` or `DEPRECATED`, and is shown beside the label wherever it is known (`AUTHORITATIVE, PROPOSED`). A document is not approved because it is authoritative for its subject.
+AUTHORITATIVE always says what the document is authoritative for. A label names a responsibility, not an approval. Status is `DRAFT`, `SKELETON`, `PROPOSED`, `APPROVED` or `DEPRECATED`, and is shown beside the label wherever it is known (`AUTHORITATIVE, PROPOSED`). A document is not approved because it is authoritative for its subject.
 
 ## 4. Repository metadata block
 
@@ -94,7 +94,7 @@ The common baseline for every repository. A section that does not apply says `No
 | 11 | Status reporting and program integration | summary | required |
 | 12 | Build, test, regression and validation | required | required |
 | 13 | Git workflow and contribution rules (this repository's approved convention) | required | required |
-| 14 | Safety and security (with a reporting route) | required where it applies | required where it applies |
+| 14 | Safety and security (with a verified reporting route, or `not yet verified` with its owner) | required where it applies | required where it applies |
 | 15 | Release and versioning | required | required |
 | 16 | Ownership and support | required | required |
 | 17 | Related repositories and references | required | required |
@@ -143,22 +143,31 @@ Wherever a README covers status, acceptance or release:
 - A repository that reports to kritva-program sends facts only. It does not claim central approval or program credit. A repository without central reporting documents its own acceptance process and does not imply that the program flow applies to it.
 - A roadmap or milestone pointer states the plan's status and what its dates mean (for example `proposed targets, not approved delivery commitments`).
 
-## 8. Compliance levels
+## 8. Hardware, firmware and mechanical repositories
+
+In addition to the common rules, a repository that moves, drives or builds hardware:
+
+- **Open-gate summary.** A table (or a link to one in the repository's own record) that names, for each safety or release gate: the activity it controls, its authority and current status, the evidence it requires, who reviews and approves it, and what is prohibited while it is open. Lifting a hold or passing one gate does not approve a design, waive another gate or authorise physical operation.
+- **Evidence scope.** Evidence is stated by type (software test, calculation, simulation, bench measurement, independently accepted physical test), with the tested revision or configuration, the procedure or command, the result and the scope. Software and model evidence is never offered as physical test evidence, and a generated status report or a passing subset of tests never approves a gate or a release.
+- **Implementation state.** Every principal capability and every significant structure or tree entry is labelled `IMPLEMENTED`, `PLANNED`, `PROPOSED`, `REFERENCE-ONLY`, `EVIDENCE` or `NOT YET IMPLEMENTED`; a folder that exists only as scaffolding says so. A capability described as implemented points to its entry point and the command that checks it. A reviewer cross-checks the labels against the source files, scripts, submodule pointers, CI and test results. This applies to software repositories as well: a folder map or a target architecture must not read as an inventory of what exists.
+- **Submodules and child repositories.** A configured submodule, a recorded pointer, an initialised checkout and a verified child implementation are different states; the README says which of them holds.
+
+## 9. Compliance levels
 
 | Level | Applies to | Adds |
 |---|---|---|
 | 1. Common | Every repository | Sections 1 to 18 above |
-| 2. Domain | By repository type | Software: APIs, data formats, service dependencies. Firmware: MCU, toolchain, fault handling, hardware validation. Mechanical: requirements, BOM, sizing, verification. Each lists its open safety gates |
+| 2. Domain | By repository type | Software: APIs, data formats, service dependencies. Firmware: MCU, toolchain, fault handling, hardware validation. Mechanical: requirements, BOM, sizing, verification. Each hardware type follows section 8, including its open-gate summary |
 | 3. Program | kritva-program only | Baseline, approvals, gates, source snapshots, consolidated status, program-level acceptance |
 
 kritva-program uses a program layout in its own README (it adds governance, program architecture, gates and generated-report sections and still covers every topic of section 5) and keeps `v2/README.md` as the detailed dashboard.
 
-## 9. Source and document headers
+## 10. Source and document headers
 
 - Source files keep the header each repository's lint already enforces (for example the SPDX block checked by `check_source_headers.py` in core, community and raas). This standard adds no second source-header block.
 - Detailed human-maintained Markdown documents use the header in [DOCUMENT_HEADER_STANDARD.md](DOCUMENT_HEADER_STANDARD.md). Generated files and structured records keep their own schema and markers.
 
-## 10. Automated check
+## 11. Automated check
 
 `python3 scripts/docs/check_readme.py README.md` (also `make readme_check`) runs these structural checks and nothing else:
 
@@ -167,9 +176,9 @@ kritva-program uses a program layout in its own README (it adds governance, prog
 - every relative Markdown link `[text](path)` points to an existing file or directory (the part after `#` is not checked, image links and absolute URLs are skipped);
 - no placeholder text such as `<repository-name>` or `TODO` remains outside code (fenced blocks, inline code and lines indented by four spaces or a tab count as code, so an example commit message can show `<TASK-ID>`).
 
-A PASS means those implemented checks passed. It does not show that the content is accurate or complete, that a command works, that an external URL is reachable, that a heading anchor exists, that a link is relevant, or that anything is approved. Those are review items in [README_REVIEW_CHECKLIST.md](README_REVIEW_CHECKLIST.md).
+A PASS means those implemented checks passed. A structural PASS and a completed manual review (the checklist, including the hardware items) are separate results and a pull request reports both. The checker's code-block and link handling has regression tests (`tests/test_check_readme.py`).  It does not show that the content is accurate or complete, that a command works, that an external URL is reachable, that a heading anchor exists, that a link is relevant, or that anything is approved. Those are review items in [README_REVIEW_CHECKLIST.md](README_REVIEW_CHECKLIST.md).
 
-## 11. Exceptions
+## 12. Exceptions
 
 A repository that cannot follow this standard records the deviation here, with the repository, the rule, the reason, the approving decision and a review date. No exception is recorded yet.
 
