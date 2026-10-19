@@ -5,7 +5,7 @@
 | Document ID | KOS-STD-README-CHECK |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Checklist |
-| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 4, D-056, D-057 and D-058) |
+| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 6, D-056, D-057, D-058, D-059 and D-060) |
 | Authority | REFERENCE: applies [README_STANDARD.md](README_STANDARD.md) |
 
 Run the machine check first, then review the rest by hand.
@@ -61,6 +61,8 @@ A PASS means the implemented structural checks passed (metadata fields, section 
 
 - [ ] When several repositories are built from one template (for example kritva-actuator-s, -m and -l), the reviewer cross-checks each README's class, range, owner role, identifier prefixes (BOM, tasks), task namespace, input provenance and sibling and clone URLs against that repository's own files and the parent's source of truth. Shared wording is not evidence that a variant's values are valid.
 - [ ] Input values copied from a sibling are labelled placeholders, not a validated baseline for the variant, until the variant's own record says otherwise.
+
+- [ ] An aggregate command (such as `make check`) is explained by what it really runs: implemented checks are separated from placeholder or no-op targets, a command that does not run the tests says so, and its success message does not imply that unexecuted tests or unimplemented analysis passed. The README and the command's own output agree.
 
 ## Git
 

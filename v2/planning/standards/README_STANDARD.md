@@ -5,7 +5,7 @@
 | Document ID | KOS-STD-README |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Standard |
-| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 4, D-056, D-057 and D-058); becomes APPROVED when the owner records it |
+| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 6, D-056, D-057, D-058, D-059 and D-060); becomes APPROVED when the owner records it |
 | Owner | Dinesh (program owner) |
 | Authority | AUTHORITATIVE role for README layout (role, not approval). ChatGPT review is advisory only |
 | Related | [README_TEMPLATE_PUBLIC.md](README_TEMPLATE_PUBLIC.md), [README_TEMPLATE_PRIVATE.md](README_TEMPLATE_PRIVATE.md), [DOCUMENT_HEADER_STANDARD.md](DOCUMENT_HEADER_STANDARD.md), [README_REVIEW_CHECKLIST.md](README_REVIEW_CHECKLIST.md), [README_MIGRATION_PLAN.md](README_MIGRATION_PLAN.md) |
