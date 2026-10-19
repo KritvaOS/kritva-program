@@ -159,8 +159,8 @@
         "type": "program-baseline"
       },
       "commit_standard": {
-        "adopted": false,
-        "basis": "not yet rolled out to this repository (PD-019)"
+        "adopted": true,
+        "basis": "D-061 (owner decision 2026-10-19); D-053 format enforced in commit-message-check"
       }
     },
     {
@@ -214,8 +214,8 @@
         "type": "program-baseline"
       },
       "commit_standard": {
-        "adopted": false,
-        "basis": "not yet rolled out to this repository (PD-019)"
+        "adopted": true,
+        "basis": "D-061 (owner decision 2026-10-19); D-053 format enforced in commit-message-check"
       }
     },
     {

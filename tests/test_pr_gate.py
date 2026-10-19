@@ -249,7 +249,7 @@ class CommitStandardAdoption(unittest.TestCase):
         self.assertFalse(gate["commit_standard"]["adopted"])
 
     def test_flags_in_the_manifest(self):
-        want = {"kritva-program": True, "kritva-sense": True, "kritva-motion": True, "kritva-mind": True, "kritva-skill": True}
+        want = {"kritva-program": True, "kritva-core": True, "kritvaos-community": True, "kritva-sense": True, "kritva-motion": True, "kritva-mind": True, "kritva-skill": True}  # core and community: D-061
         for r in MANIFEST["repositories"]:
             self.assertEqual(r["commit_standard"]["adopted"], want.get(r["repo_id"], False), r["repo_id"])
 
