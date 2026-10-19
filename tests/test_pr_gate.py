@@ -229,8 +229,10 @@ class NoTaskCommits(unittest.TestCase):
 
 
 class CommitStandardAdoption(unittest.TestCase):
-    def levels(self, repo, msg):
+    def levels(self, repo, msg, adopted=None):
         gate = G.gate_for(MANIFEST, repo)
+        if adopted is not None:  # a fixture for a repository that has not adopted the standard (none is left after D-070)
+            gate = dict(gate, commit_standard={"adopted": adopted, "basis": "test fixture"})
         res = G.static_rules(gate, [{"sha": SHA, "message": msg}], [], lambda w, p: None)
         return {r["rule"]: r for r in res if r["rule"] in ("R01", "R02")}
 
@@ -239,17 +241,20 @@ class CommitStandardAdoption(unittest.TestCase):
         self.assertEqual((r["R01"]["level"], r["R02"]["level"]), ("FAIL", "FAIL"))
 
     def test_older_repo_needs_a_human_not_reject_and_says_why(self):
-        r = self.levels("kritva-raas", "KR-BE-1-044: do the thing\n")
+        r = self.levels("kritva-raas", "KR-BE-1-044: do the thing\n", adopted=False)
         self.assertEqual((r["R01"]["level"], r["R02"]["level"]), ("NEEDS_HUMAN", "NEEDS_HUMAN"))
         self.assertIn("has not adopted the commit standard yet (PD-019)", r["R01"]["message"])
         self.assertEqual(G.verdict(list(r.values())), "NEEDS_HUMAN")
 
-    def test_claude_session_trailer_is_still_blocked_by_its_own_check_not_relaxed(self):
+    def test_raas_is_adopted_after_d070_and_rejects_a_missing_footer(self):
         gate = G.gate_for(MANIFEST, "kritva-raas")
-        self.assertFalse(gate["commit_standard"]["adopted"])
+        self.assertTrue(gate["commit_standard"]["adopted"])
+        r = self.levels("kritva-raas", "feat(backend): x\n")
+        self.assertEqual((r["R01"]["level"], r["R02"]["level"]), ("FAIL", "FAIL"))
 
     def test_flags_in_the_manifest(self):
-        want = {"kritva-program": True, "kritva-core": True, "kritvaos-community": True, "kritva-sense": True, "kritva-motion": True, "kritva-mind": True, "kritva-skill": True}  # core and community: D-061
+        want = {"kritva-program": True, "kritva-core": True, "kritvaos-community": True, "kritva-sense": True, "kritva-motion": True, "kritva-mind": True, "kritva-skill": True,
+                "kritva-raas": True, "kritva-actuator": True, "kritva-actuator-embedded": True, "kritva-actuator-s": True, "kritva-actuator-m": True, "kritva-actuator-l": True}  # core and community: D-061; the other six: D-070
         for r in MANIFEST["repositories"]:
             self.assertEqual(r["commit_standard"]["adopted"], want.get(r["repo_id"], False), r["repo_id"])
 

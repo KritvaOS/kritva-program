@@ -126,7 +126,7 @@ Planning is not acceptance. Proposed milestones, newly drafted tasks, finished i
 | [v2/tracking/baseline.json](v2/tracking/baseline.json) | INPUT, frozen baseline | Approved tasks and weights |
 | [v2/tracking/approvals.json](v2/tracking/approvals.json) | EVIDENCE, append-only | Review and acceptance records |
 | [v2/GATE_REGISTER.md](v2/GATE_REGISTER.md) | AUTHORITATIVE | Gates, entry and exit criteria, required evidence |
-| [v2/planning/ACCEPTANCE_STANDARD.md](v2/planning/ACCEPTANCE_STANDARD.md) | AUTHORITATIVE role, PROPOSED | Definition of done, test gates, commit format, tags. Section 4 (commit text) is enforced in this repository (D-053); the standard is not approved for all repositories (PD-019) |
+| [v2/planning/ACCEPTANCE_STANDARD.md](v2/planning/ACCEPTANCE_STANDARD.md) | AUTHORITATIVE role, PROPOSED | Definition of done, test gates, commit format, tags. Section 4 (commit text) is enforced in every repository (D-053, D-061, D-070); the standard as a whole is still PROPOSED (PD-005) |
 | [v2/REPOSITORY_BASELINE.md](v2/REPOSITORY_BASELINE.md) | REFERENCE | Reconciliation of repositories against evidence |
 | [v2/REQUIREMENT_TRACEABILITY.md](v2/REQUIREMENT_TRACEABILITY.md) | REFERENCE | Requirement to task traceability |
 | [v2/tracking/ONBOARDING.md](v2/tracking/ONBOARDING.md) | REFERENCE | How a repository starts reporting |
@@ -205,7 +205,7 @@ Regression tests live in [tests/](tests/); a defect fixed in a tool gets a test 
 ## 14. Git Workflow and Change Control
 
 - Changes go through a pull request. Required checks and approval roles are in [V2_REPO_PLAN.md](v2/planning/V2_REPO_PLAN.md).
-- **Commit text** (adopted and enforced in this repository, D-053; kritva-core and kritvaos-community adopted it under D-061, the other repositories adopt it one by one, PD-019; [ACCEPTANCE_STANDARD](v2/planning/ACCEPTANCE_STANDARD.md) section 4 is PROPOSED): header `type(scope): summary [optional TASK-ID]` of at most 90 characters; types feat, fix, docs, refactor, test, build, ci, chore, perf, revert, security; then one footer line `Task: ID` or `Tasks: ID, ID`; `Tasks: None (reason)` only on docs or chore commits. AI session trailers and claude.ai session links are rejected.
+- **Commit text** (adopted and enforced in this repository, D-053; every other repository adopted it under D-061 and D-070 (PD-019 is closed); [ACCEPTANCE_STANDARD](v2/planning/ACCEPTANCE_STANDARD.md) section 4 is PROPOSED): header `type(scope): summary [optional TASK-ID]` of at most 90 characters; types feat, fix, docs, refactor, test, build, ci, chore, perf, revert, security; then one footer line `Task: ID` or `Tasks: ID, ID`; `Tasks: None (reason)` only on docs or chore commits. AI session trailers and claude.ai session links are rejected.
 - **Merge method:** merge commit (D-053).
 - **Releases:** annotated SemVer tags created only after the approved merge. A tag is evidence, not milestone closure.
 - **PR text:** [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md).
