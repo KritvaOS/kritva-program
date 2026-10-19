@@ -5,7 +5,7 @@
 | Document ID | KOS-STD-README-MIGRATION |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Plan |
-| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 6, D-056, D-057, D-058, D-059 and D-060) |
+| Status | APPROVED with the README standard (D-066, 2026-10-19); revised by audit rounds 1 to 6 (D-056 to D-060) |
 | Owner | Dinesh (program owner) |
 | Authority | INPUT: the owner updates the table as each repository finishes |
 | Related | [README_STANDARD.md](README_STANDARD.md) |
@@ -14,11 +14,11 @@
 
 One repository at a time. For each: read its current README and files, restructure it to the standard (keeping its local governance and safety rules), run `check_readme.py`, open a PR, then have ChatGPT audit it through an access path the owner approves. The audit is advisory. The owner decides. Findings that belong in the shared standard or templates are fixed once there and reach every repository; findings about one repository are fixed in that repository. Do not copy a template over an existing README without reading it first: it may hold local rules.
 
-Visibility is separate from this work. Today the owner has made the repositories listed in D-028 and D-037 temporarily public, which gives ChatGPT access. A future-private repository is still written up as private. Temporary exposure and the return to private are owner actions recorded in the decision log, not steps of this plan, and no repository needs to be public for its README to be done.
+Visibility is separate from this work. Today the owner has made the repositories listed in D-028 and D-037 temporarily public, which gives ChatGPT access. kritva-core, kritvaos-community and the four capability repositories are the exception: they are PUBLIC and stay public (D-063). A future-private repository is still written up as private. Temporary exposure and the return to private are owner actions recorded in the decision log, not steps of this plan, and no repository needs to be public for its README to be done.
 
 A repository is marked DONE only when its PR is merged, `check_readme.py` passes on `main` and the owner has accepted the audit result. Copying a template in is not DONE.
 
-**Register.** The table below is the maintained migration register. Owner: Dinesh. Last reviewed: 2026-10-18. The roster and each repository's visibility class come from `v2/planning/repo-pipeline.json` and `v2/tracking/repo_readiness.json`, not from this table. A new repository, or a change of a visibility class, is added here through the decision process. The numbers are a sequencing aid, not a repository count.
+**Register.** The table below is the maintained migration register. Owner: Dinesh. Last reviewed: 2026-10-19. The roster and each repository's visibility class come from `v2/planning/repo-pipeline.json` and `v2/tracking/repo_readiness.json`, not from this table. A new repository, or a change of a visibility class, is added here through the decision process. The numbers are a sequencing aid, not a repository count.
 
 ## Order
 
@@ -37,5 +37,6 @@ After repositories 2 to 4 the standard is reviewed against a service, a firmware
 
 ## Later
 
-- Add `check_readme.py` to each repository's CI once its README passes (a workflow change, so an owner decision per repository).
+- Done in the round after D-067: each repository has a `readme-check` workflow (a separate workflow, not a required check). Make it a required check only after it has run cleanly on a few pull requests; that is a separate owner decision per repository.
+- Close the audit gap recorded in D-066: full audits of kritva-actuator-s, -m and -l, and a complete pass of the rounds that were PARTIAL, in small batches.
 - Fill the exceptions table (section 11 of the standard) for any repository that needs a deviation.

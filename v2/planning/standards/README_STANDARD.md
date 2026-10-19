@@ -5,7 +5,7 @@
 | Document ID | KOS-STD-README |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Standard |
-| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 6, D-056, D-057, D-058, D-059 and D-060); becomes APPROVED when the owner records it |
+| Status | APPROVED by the owner (D-066, 2026-10-19); piloted in kritva-program (D-055) and revised by audit rounds 1 to 6 (D-056 to D-060) |
 | Owner | Dinesh (program owner) |
 | Authority | AUTHORITATIVE role for README layout (role, not approval). ChatGPT review is advisory only |
 | Related | [README_TEMPLATE_PUBLIC.md](README_TEMPLATE_PUBLIC.md), [README_TEMPLATE_PRIVATE.md](README_TEMPLATE_PRIVATE.md), [DOCUMENT_HEADER_STANDARD.md](DOCUMENT_HEADER_STANDARD.md), [README_REVIEW_CHECKLIST.md](README_REVIEW_CHECKLIST.md), [README_MIGRATION_PLAN.md](README_MIGRATION_PLAN.md) |
@@ -73,7 +73,7 @@ Optional rows, required when they apply: **Technical Owner** and **Security Owne
 - **The GitHub setting is an operational fact, not the class.** It is documentation, not proof: tooling in this program cannot read it, so it is ATTESTED by the owner (see `repo_readiness.json` in kritva-program).
 - **Temporary public exposure is an owner decision, scoped to the repositories it names.** D-028 and D-037 in kritva-program record the current arrangement and the return date. A README does not generalise it to the whole organisation and does not repeat the return date; it links the decision or the readiness record that owns it. Other repositories keep their own approved class.
 - **Audit access.** A future-private repository is reviewed through whatever access the owner approves. Making it temporarily public for review, and returning it to private, are separate owner actions tracked in the decision log. A repository does not need to be public for its README to be written, reviewed or marked done.
-- Planned classes at the time of writing: kritva-program, kritva-raas and the five kritva-actuator repositories are future private. The authoritative source for every repository's class is the visibility decision and `v2/tracking/repo_readiness.json` in kritva-program, not this list.
+- Approved classes at the time of writing: kritva-program, kritva-raas and the five kritva-actuator repositories are future private; kritva-core, kritvaos-community, kritva-sense, kritva-motion, kritva-mind and kritva-skill are PUBLIC (D-063). The authoritative source for every repository's class is the visibility decision and `v2/tracking/repo_readiness.json` in kritva-program, not this list.
 
 ## 5. Section order
 
