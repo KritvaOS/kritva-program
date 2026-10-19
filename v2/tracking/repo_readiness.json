@@ -121,9 +121,9 @@
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
       },
       "recommended": {
-        "state": "PRIVATE",
-        "rationale": "D-037 default. The Apache-2.0 license would permit a public release, but no public-release review exists.",
-        "owner_action": "If a public release is intended, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15."
+        "state": "PUBLIC",
+        "rationale": "D-063: the owner decided that this repository is PUBLIC and stays public. This is the exception to the D-037 return to private; no release review is recorded.",
+        "owner_action": "None for visibility. The GitHub setting stays PUBLIC; this repository is no longer part of the 2026-11-15 return to private."
       },
       "program_copy": {
         "workstream_id": "CORE",
@@ -225,9 +225,9 @@
         "basis": "owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out"
       },
       "recommended": {
-        "state": "PRIVATE",
-        "rationale": "D-037 default, flagged for owner confirmation: the name and the Apache-2.0 license suggest a public community edition, but no public-release review exists.",
-        "owner_action": "Decide whether a public community release is intended. If so, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15."
+        "state": "PUBLIC",
+        "rationale": "D-063: the owner decided that this repository is PUBLIC and stays public. This is the exception to the D-037 return to private; no release review is recorded.",
+        "owner_action": "None for visibility. The GitHub setting stays PUBLIC; this repository is no longer part of the 2026-11-15 return to private."
       },
       "program_copy": {
         "workstream_id": "COMMUNITY",

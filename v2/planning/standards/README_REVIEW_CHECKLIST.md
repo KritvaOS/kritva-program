@@ -5,7 +5,7 @@
 | Document ID | KOS-STD-README-CHECK |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Checklist |
-| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 6, D-056, D-057, D-058, D-059 and D-060) |
+| Status | APPROVED with the README standard (D-066, 2026-10-19); revised by audit rounds 1 to 6 (D-056 to D-060) |
 | Authority | REFERENCE: applies [README_STANDARD.md](README_STANDARD.md) |
 
 Run the machine check first, then review the rest by hand.

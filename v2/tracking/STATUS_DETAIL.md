@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-10-18T14:31:43Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-19T05:05:36Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -29,12 +29,12 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-18T14:31:43Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-19T05:05:36Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| COMMUNITY | WARN | 2026-10-16T17:21:54Z (45h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
-| CORE | WARN | 2026-10-16T17:21:54Z (45h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
+| COMMUNITY | WARN | 2026-10-16T17:21:54Z (59h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | WARN | 2026-10-16T17:21:54Z (59h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 
@@ -196,8 +196,8 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 | Repo | Visibility now | Recommended | Checked head | Readiness | Blocking checks | Attested, not verified |
 |---|---|---|---|---|---|---|
 | KritvaOS/kritva-program | PUBLIC | **PRIVATE** | 798061b | READY | 0: - | branch_protection |
-| KritvaOS/kritva-core | PUBLIC | **PRIVATE** | e2bf60c | NOT_READY | 1: contract_pin | branch_protection |
-| KritvaOS/kritvaos-community | PUBLIC | **PRIVATE** | 6886095 | NOT_READY | 1: security_policy | branch_protection |
+| KritvaOS/kritva-core | PUBLIC | **PUBLIC** | e2bf60c | NOT_READY | 1: contract_pin | branch_protection |
+| KritvaOS/kritvaos-community | PUBLIC | **PUBLIC** | 6886095 | NOT_READY | 1: security_policy | branch_protection |
 | KritvaOS/kritva-raas | PUBLIC | **PRIVATE** | a0be181 | NOT_READY | 1: security_disposition | branch_protection |
 | KritvaOS/kritva-actuator | PUBLIC | **PRIVATE** | 923d71a | READY | 0: - | branch_protection |
 | KritvaOS/kritva-actuator-embedded | PUBLIC | **PRIVATE** | 4508d45 | READY | 0: - | branch_protection |
@@ -229,7 +229,7 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 ### KritvaOS/kritva-core
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
-- Recommended: **PRIVATE**. D-037 default. The Apache-2.0 license would permit a public release, but no public-release review exists. Owner action: If a public release is intended, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15.
+- Recommended: **PUBLIC**. D-063: the owner decided that this repository is PUBLIC and stays public. This is the exception to the D-037 return to private; no release review is recorded. Owner action: None for visibility. The GitHub setting stays PUBLIC; this repository is no longer part of the 2026-11-15 return to private.
 - Checked head: e2bf60cd0f50699fb7d6bb3a83cc2ca4168c50e4; workstreams: CORE; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 9 reported tasks are the 9 Core R1.0 baseline tasks, all credited. The committed source copy is byte-identical to the repo's status/status.json. The report's source commit 54984ae trails head by 6 commits that touch status tooling, governance files and CI checks only, no planning records Evidence: sha256 comparison and git diff 54984ae..46bd189 on 2026-10-17
@@ -250,7 +250,7 @@ Readiness is derived from the checks below: READY only when every check is PASS,
 ### KritvaOS/kritvaos-community
 
 - Visibility now: PUBLIC (owner statement (D-028); the repo head was also readable from this session without credentials on 2026-10-17, though proxy credentials are not ruled out)
-- Recommended: **PRIVATE**. D-037 default, flagged for owner confirmation: the name and the Apache-2.0 license suggest a public community edition, but no public-release review exists. Owner action: Decide whether a public community release is intended. If so, record an exception to D-037 and review for release first; otherwise switch to private on or before 2026-11-15.
+- Recommended: **PUBLIC**. D-063: the owner decided that this repository is PUBLIC and stays public. This is the exception to the D-037 return to private; no release review is recorded. Owner action: None for visibility. The GitHub setting stays PUBLIC; this repository is no longer part of the 2026-11-15 return to private.
 - Checked head: 6886095d5c17986be93858b0a04597c7a26e6fef; workstreams: COMMUNITY; readiness NOT_READY
 
 - [x] **PASS** milestone_sync (Milestone alignment: program view of this repo matches the repo and the baseline or inventory): The 21 reported tasks are the 21 Community baseline tasks. I2 (6) is credited; I3 and I4 (15) are uncredited because no task approvals are recorded, and their safety gates were closed on the owner's statement that the D-025 independent review is complete (D-033; reviewer not named, independence unverified). The committed source copy is byte-identical to the repo's status/status.json; the report's source commit 8256ba3 trails head by 3 commits that touch status tooling and CI checks only, no planning records Evidence: sha256 comparison and git diff 8256ba3..8dc9496 on 2026-10-17

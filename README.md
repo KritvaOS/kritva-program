@@ -104,7 +104,7 @@ Planning is not acceptance. Proposed milestones, newly drafted tasks, finished i
 | [Makefile](Makefile) | Program helpers: `pr_check`, `ship`, `merge`, `readme_check` | INPUT | yes, with tests |
 | [v2/](v2/) | Program documents: plan, scope, roadmap, gates, risks, decisions, reviews | MIXED: each document has its own label (section 7) | per document |
 | [v2/tracking/](v2/tracking/) | Baseline, approvals, gate closures, effort, readiness (INPUT: the JSON files); the status view and `consolidated_status.json` (GENERATED) | MIXED: INPUT and GENERATED, per file | see section 17 |
-| [v2/planning/](v2/planning/) | Repository pipeline, milestones and decision records (INPUT: the JSON files); V2_MILESTONE_PLAN, V2_REPO_PLAN, PENDING_* (GENERATED); ACCEPTANCE_STANDARD and the README standard (AUTHORITATIVE, PROPOSED) | MIXED: INPUT, GENERATED and AUTHORITATIVE, per file | see section 17 |
+| [v2/planning/](v2/planning/) | Repository pipeline, milestones and decision records (INPUT: the JSON files); V2_MILESTONE_PLAN, V2_REPO_PLAN, PENDING_* (GENERATED); ACCEPTANCE_STANDARD (AUTHORITATIVE, PROPOSED) and the README standard (AUTHORITATIVE, APPROVED, D-066) | MIXED: INPUT, GENERATED and AUTHORITATIVE, per file | see section 17 |
 | [sources/](sources/) | Copies of each repository's `status/status.json`, provenance in `MANIFEST.json` | SNAPSHOT | no: refresh |
 | [status/](status/) | This repository's own status report (workstream CI_DEV_INFRA) | INPUT | via its generator |
 | [schema/](schema/) | `status.schema.json`, the status report schema (version 2.0) | AUTHORITATIVE | owner decision |
@@ -113,7 +113,7 @@ Planning is not acceptance. Proposed milestones, newly drafted tasks, finished i
 | [scripts/pipeline/](scripts/pipeline/) | `ship-prs.sh`, `manifest.py`, `pr_gate.py` (report-only PR gate, D-045), `pr_check.py` (D-046) | INPUT | yes, with tests |
 | [scripts/docs/](scripts/docs/) | `check_readme.py`, the README standard check | INPUT | yes, with tests |
 | [tests/](tests/) | Unit tests for the tools | EVIDENCE | extend with changes |
-| [.github/](.github/) | Workflows, PR template and CODEOWNERS | AUTHORITATIVE | owner review |
+| [.github/](.github/) | Workflows (`commit-message-check`, `readme-check`, `refresh-sources`, `secret-scan`, `status`), PR template and CODEOWNERS | AUTHORITATIVE | owner review |
 
 ## 7. Program-of-Record Documents
 
@@ -196,7 +196,7 @@ make merge REPO=kritva-sense PR=7                                    # merge a P
 | Planning inventory rules | `python3 tools/check_planning_inventory.py .` | yes (`status`) |
 | V2 planning records and generated views | `python3 tools/planning.py --check` (also covered by `consolidate_status --check`) | yes (`status`) |
 | PR pipeline manifest | `python3 scripts/pipeline/manifest.py validate` | no, run locally |
-| README standard | `make readme_check` | no, run locally |
+| README standard | `make readme_check` (the workflow runs the checker's tests and the same check) | yes (`readme-check`; not a required check yet, D-067) |
 | Commit text | `python3 scripts/security/check_commit_messages.py` and `check_commit_format.py` | yes (`commit-message-check`) |
 | Secrets | `secret-scan` workflow | yes |
 
@@ -205,7 +205,7 @@ Regression tests live in [tests/](tests/); a defect fixed in a tool gets a test 
 ## 14. Git Workflow and Change Control
 
 - Changes go through a pull request. Required checks and approval roles are in [V2_REPO_PLAN.md](v2/planning/V2_REPO_PLAN.md).
-- **Commit text** (adopted and enforced in this repository, D-053; other repositories adopt it one by one, PD-019; [ACCEPTANCE_STANDARD](v2/planning/ACCEPTANCE_STANDARD.md) section 4 is PROPOSED): header `type(scope): summary [optional TASK-ID]` of at most 90 characters; types feat, fix, docs, refactor, test, build, ci, chore, perf, revert, security; then one footer line `Task: ID` or `Tasks: ID, ID`; `Tasks: None (reason)` only on docs or chore commits. AI session trailers and claude.ai session links are rejected.
+- **Commit text** (adopted and enforced in this repository, D-053; kritva-core and kritvaos-community adopted it under D-061, the other repositories adopt it one by one, PD-019; [ACCEPTANCE_STANDARD](v2/planning/ACCEPTANCE_STANDARD.md) section 4 is PROPOSED): header `type(scope): summary [optional TASK-ID]` of at most 90 characters; types feat, fix, docs, refactor, test, build, ci, chore, perf, revert, security; then one footer line `Task: ID` or `Tasks: ID, ID`; `Tasks: None (reason)` only on docs or chore commits. AI session trailers and claude.ai session links are rejected.
 - **Merge method:** merge commit (D-053).
 - **Releases:** annotated SemVer tags created only after the approved merge. A tag is evidence, not milestone closure.
 - **PR text:** [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md).

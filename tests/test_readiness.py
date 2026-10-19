@@ -32,7 +32,9 @@ class ReadinessTests(unittest.TestCase):
         self.assertEqual(len(self.doc["repos"]), 9)
         for r in self.doc["repos"]:
             self.assertEqual([c["id"] for c in r["checks"]], R.CHECK_IDS)
-            self.assertEqual(r["recommended"]["state"], "PRIVATE")
+            # kritva-core and kritvaos-community are PUBLIC under D-063; every other repository is recommended PRIVATE
+            want = "PUBLIC" if r["repo"] in ("KritvaOS/kritva-core", "KritvaOS/kritvaos-community") else "PRIVATE"
+            self.assertEqual(r["recommended"]["state"], want, r["repo"])
 
     def test_every_registered_repo_is_listed(self):
         listed = {r["repo"] for r in self.doc["repos"]}
