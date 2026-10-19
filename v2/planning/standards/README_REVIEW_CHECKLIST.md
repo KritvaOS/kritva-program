@@ -57,6 +57,11 @@ A PASS means the implemented structural checks passed (metadata fields, section 
 - [ ] A submodule or child repository is described by its real state: configured, pointer recorded, checked out, verified. A pointer is not described as verified unless the README names the commit that was checked.
 - [ ] For a child repository, each gate-summary row names the controlling parent record, says whether it is the child's contribution or the complete gate, matches that record's prohibited activities, and does not imply that a child-level check closes the parent gate.
 
+## Families of sibling repositories
+
+- [ ] When several repositories are built from one template (for example kritva-actuator-s, -m and -l), the reviewer cross-checks each README's class, range, owner role, identifier prefixes (BOM, tasks), task namespace, input provenance and sibling and clone URLs against that repository's own files and the parent's source of truth. Shared wording is not evidence that a variant's values are valid.
+- [ ] Input values copied from a sibling are labelled placeholders, not a validated baseline for the variant, until the variant's own record says otherwise.
+
 ## Git
 
 - [ ] Commit format and merge method are this repository's approved rules, with one controlling contract named, the validator or workflow that enforces it (or a statement that none does) and the adoption status of the Kritva commit standard. A non-adopted rule is advisory and is not offered as a second mandatory format. The README, AGENTS.md and CONTRIBUTING.md agree. Where more than one subject form is allowed, one controlling statement names them, what CI enforces and that local style checks are advisory.
@@ -69,6 +74,10 @@ A PASS means the implemented structural checks passed (metadata fields, section 
 - [ ] No secrets, private infrastructure or confidential assessments (public README).
 - [ ] A vulnerability reporting route is given and was verified as monitored and usable, or is marked `not yet verified` (or `Not yet defined`) with its owner and the minimal safe first-contact instruction. A platform feature such as private vulnerability reporting is not described as available until its setting has been checked.
 - [ ] License matches the repository's real license.
+
+## Audit scope record
+
+An audit (human or advisory tool) records: each repository and commit inspected, the files retrieved, the tests actually run, the parent links opened and not opened, and any repository not audited. A round is PARTIAL until every required check is completed or formally excepted, and a partial round is never reported as a completed rollout.
 
 ## Result
 
