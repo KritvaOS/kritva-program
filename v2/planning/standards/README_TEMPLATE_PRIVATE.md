@@ -56,7 +56,7 @@ A label names a role, not an approval. Show the document's status (DRAFT, SKELET
 |---|---|---|---|
 | <path> | <what it controls or records> | <AUTHORITATIVE / INPUT / GENERATED / SNAPSHOT / EVIDENCE / REFERENCE / MIXED> | <yes / no> |
 
-A directory with files of several labels is MIXED: list its principal files. Mark each principal capability and tree entry with its implementation state (IMPLEMENTED, PLANNED, PROPOSED, REFERENCE-ONLY, EVIDENCE or NOT YET IMPLEMENTED); a scaffold-only folder says so.
+A directory with files of several labels is MIXED: list its principal files. In the document tables show the role first and the declared status after it. Mark each principal capability and tree entry with its implementation state (IMPLEMENTED, PLANNED, PROPOSED, REFERENCE-ONLY, EVIDENCE or NOT YET IMPLEMENTED); a scaffold-only folder says so.
 
 ## 6. Toolchain and Development Workflow
 

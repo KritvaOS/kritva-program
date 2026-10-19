@@ -5,7 +5,7 @@
 | Document ID | KOS-STD-README-MIGRATION |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Plan |
-| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 3, D-056 and D-057) |
+| Status | PROPOSED (pilot in kritva-program, D-055, revised by audit rounds 1 to 4, D-056, D-057 and D-058) |
 | Owner | Dinesh (program owner) |
 | Authority | INPUT: the owner updates the table as each repository finishes |
 | Related | [README_STANDARD.md](README_STANDARD.md) |
@@ -26,9 +26,9 @@ A repository is marked DONE only when its PR is merged, `check_readme.py` passes
 |---|---|---|---|---|
 | 1 | kritva-program | Program | Reference implementation | PILOT MERGED (D-055); audit round 1 applied (D-056), awaiting owner acceptance; aligned to D-057 |
 | 2 | kritva-raas | Service | Software example | MERGED; audit round 2 applied |
-| 3 | kritva-actuator | Hardware interface | Parent of the actuator family | MERGED; audit round 3 findings being applied (D-057) |
-| 4 | kritva-actuator-embedded | Firmware | Tests the standard on firmware and hardware validation | IN PROGRESS |
-| 5 | kritva-actuator-s, -m, -l | Mechanical | Same template, three variants | NOT STARTED |
+| 3 | kritva-actuator | Hardware interface | Parent of the actuator family | MERGED; audit round 3 applied (D-057) |
+| 4 | kritva-actuator-embedded | Firmware | Tests the standard on firmware and hardware validation | MERGED; audit round 4 applied (D-058) |
+| 5 | kritva-actuator-s, -m, -l | Mechanical | Same template, three variants | IN PROGRESS (shared template applied; audit pending) |
 | 6 | kritva-core | Library | Strict source-header lint applies | NOT STARTED |
 | 7 | kritvaos-community | Library | Source-header lint applies | NOT STARTED |
 | 8 | kritva-sense, -motion, -mind, -skill | Capability | Each carries a PR gate | NOT STARTED |
