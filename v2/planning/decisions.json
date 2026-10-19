@@ -450,12 +450,12 @@
           "kritva-skill"
         ]
       },
-      "required_action": "Accepted by D-061. Owner action still open: add pr-acceptance-gate to the required status checks of the main ruleset in kritva-sense, kritva-motion, kritva-mind and kritva-skill (GitHub settings; not verified from this repository). The gate stays report-only: REJECT blocks merge, NEEDS_HUMAN and APPROVE do not.",
+      "required_action": "Accepted by D-061. The owner states that pr-acceptance-gate was added to the required status checks of the main ruleset in kritva-sense, kritva-motion, kritva-mind and kritva-skill (D-069; owner-attested, not verified from this repository). The gate stays report-only: REJECT blocks merge, NEEDS_HUMAN and APPROVE do not.",
       "blocking": false,
       "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": "D-061",
+      "approval_ref": "D-061, D-069",
       "source": "D-045"
     },
     {
