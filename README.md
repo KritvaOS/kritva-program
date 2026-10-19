@@ -213,7 +213,7 @@ Regression tests live in [tests/](tests/); a defect fixed in a tool gets a test 
 
 ## 15. Security and Safety
 
-- Vulnerabilities: report to the Security Owner as described in [SECURITY.md](SECURITY.md); its private reporting route is not yet verified, and it says so. Do not put details of an unfixed vulnerability in an issue, PR or commit.
+- Vulnerabilities: Report as described in [SECURITY.md](SECURITY.md): GitHub private vulnerability reporting first, with a direct-contact fallback. The Security Owner reports having tested the route on 18 October 2026 (D-068); that is ATTESTED, not independently verified. Never put details of an unfixed vulnerability in a public issue, pull request or commit message.
 - Secrets: never commit credentials, tokens, private keys or production data, public or private. The `secret-scan` workflow runs on every PR.
 - This repository holds no hardware and runs no actuators. Safety is tracked here as gates: an open safety gate gives zero credit to its tasks (section 11), and software tests or simulation never close a physical safety gate. Mechanical HOLD (D-003) and its lift for the actuator workstreams (D-052) are decisions in the log.
 
