@@ -30,8 +30,8 @@ A repository is marked DONE only when its PR is merged, `check_readme.py` passes
 | 4 | kritva-actuator-embedded | Firmware | Tests the standard on firmware and hardware validation | MERGED; audit round 4 applied (D-058) |
 | 5 | kritva-actuator-s, -m, -l | Mechanical | Same template, three variants | MERGED; audit round 5 PARTIAL (D-059): S and L not yet audited |
 | 6 | kritva-core | Library | Strict source-header lint applies | MERGED; audit round 6 applied (D-060, PARTIAL) |
-| 7 | kritvaos-community | Platform integration | Source-header lint applies; parent of the core submodule | MERGED; audit round 7 pending |
-| 8 | kritva-sense, -motion, -mind, -skill | Capability | Each carries a PR gate | NOT STARTED |
+| 7 | kritvaos-community | Platform integration | Source-header lint applies; parent of the core submodule | MERGED; audit round 7 applied |
+| 8 | kritva-sense, -motion, -mind, -skill | Capability | Each carries a PR gate | MERGED; audit round 8 applied (PARTIAL; sense audited in full, the others by variant check) |
 
 After repositories 2 to 4 the standard is reviewed against a service, a firmware and a mechanical repository, and changed if it did not fit. Later repositories use the revised standard.
 
