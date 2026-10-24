@@ -1,0 +1,473 @@
+{
+  "_note": "Append-only approval ledger (D-011). Never edit or delete records; a changed decision adds a record whose `supersedes` names the old approval_id. A PASS applies only to the exact task and source_commit reviewed. authorized_approvers lists who may approve (owner-stated: Dinesh). Approver values in records must match exactly.",
+  "authorized_approvers": [
+    "Dinesh"
+  ],
+  "approvals": [
+    {
+      "approval_id": "A001",
+      "task_id": "I2-001",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A002",
+      "task_id": "I2-002",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A003",
+      "task_id": "I2-003",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A004",
+      "task_id": "I2-004",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A005",
+      "task_id": "I2-005",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A006",
+      "task_id": "I2-006",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A007",
+      "task_id": "KF-CORE-R10-001",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A008",
+      "task_id": "KF-CORE-R10-002",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A009",
+      "task_id": "KF-CORE-R10-003",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A010",
+      "task_id": "KF-CORE-R10-004",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A011",
+      "task_id": "KF-CORE-R10-005",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A012",
+      "task_id": "KF-CORE-R10-006",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A013",
+      "task_id": "KF-CORE-R10-007",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A014",
+      "task_id": "KF-CORE-R10-008",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A015",
+      "task_id": "KF-CORE-R10-009",
+      "baseline_version": 1,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-13T17:03:45Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-13, recorded by Claude on his instruction. Basis: evidence-map rows (successful CI run on the evidence commit; milestone-level, accepted as of that commit)."
+    },
+    {
+      "approval_id": "A016",
+      "task_id": "I2-001",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A001"
+    },
+    {
+      "approval_id": "A017",
+      "task_id": "I2-002",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A002"
+    },
+    {
+      "approval_id": "A018",
+      "task_id": "I2-003",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A003"
+    },
+    {
+      "approval_id": "A019",
+      "task_id": "I2-004",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A004"
+    },
+    {
+      "approval_id": "A020",
+      "task_id": "I2-005",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A005"
+    },
+    {
+      "approval_id": "A021",
+      "task_id": "I2-006",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A006"
+    },
+    {
+      "approval_id": "A022",
+      "task_id": "KF-CORE-R10-001",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A007"
+    },
+    {
+      "approval_id": "A023",
+      "task_id": "KF-CORE-R10-002",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A008"
+    },
+    {
+      "approval_id": "A024",
+      "task_id": "KF-CORE-R10-003",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A009"
+    },
+    {
+      "approval_id": "A025",
+      "task_id": "KF-CORE-R10-004",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A010"
+    },
+    {
+      "approval_id": "A026",
+      "task_id": "KF-CORE-R10-005",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A011"
+    },
+    {
+      "approval_id": "A027",
+      "task_id": "KF-CORE-R10-006",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A012"
+    },
+    {
+      "approval_id": "A028",
+      "task_id": "KF-CORE-R10-007",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A013"
+    },
+    {
+      "approval_id": "A029",
+      "task_id": "KF-CORE-R10-008",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A014"
+    },
+    {
+      "approval_id": "A030",
+      "task_id": "KF-CORE-R10-009",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-17T05:32:38Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
+      "supersedes": "A015"
+    }
+  ]
+}

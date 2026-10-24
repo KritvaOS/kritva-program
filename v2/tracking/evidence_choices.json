@@ -1,0 +1,35 @@
+{
+  "_note": "Owner choices for how each task is evidenced. Read by tools/build_evidence_map.py. Proposal inputs only; no credit.",
+  "COMMUNITY": {
+    "default": {
+      "mode": "MILESTONE",
+      "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "ci_run": 38158709895,
+      "workflow": "KritvaOS CI",
+      "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+    },
+    "tasks": {
+      "I4-001": {"mode": "OWN", "workflow": "KritvaOS CI"},
+      "I4-002": {"mode": "OWN", "workflow": "KritvaOS CI", "task_commit": "52218f484"},
+      "I4-003": {"mode": "OWN", "workflow": "KritvaOS CI", "task_commit": "c40fbb23a"},
+      "I4-004": {"mode": "OWN", "workflow": "KritvaOS CI"},
+      "I4-005": {"mode": "OWN", "workflow": "KritvaOS CI"},
+      "I4-006": {"mode": "OWN", "workflow": "KritvaOS CI"},
+      "I4-007": {"mode": "OWN", "workflow": "KritvaOS CI"},
+      "I4-008": {"mode": "RERUN", "ci_run": 37561636952, "workflow": "KritvaOS CI",
+                 "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952"}
+    }
+  },
+  "CORE": {
+    "default": {
+      "mode": "MILESTONE",
+      "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "ci_run": 37192914607,
+      "workflow": "Kritva Core CI",
+      "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+    },
+    "tasks": {
+      "KF-CORE-R10-007": {"task_commit": "f212e469b"}
+    }
+  }
+}

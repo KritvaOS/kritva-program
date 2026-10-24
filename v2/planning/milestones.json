@@ -1,0 +1,494 @@
+{
+  "_note": "V2 planning layer (D-044). PROPOSED targets only: not baseline commitments, no weights, no credit. Never read by the credit computation.",
+  "schema_version": "1.0",
+  "plan_id": "KOS-V2-PLAN",
+  "status": "PROPOSED",
+  "program_start": {
+    "date": "2026-09-14",
+    "status": "APPROVED",
+    "approval": "Dinesh, chat, 2026-10-18 (D-044)"
+  },
+  "horizon": {
+    "months": 12,
+    "end": "2027-09-13",
+    "status": "APPROVED",
+    "approval": "Dinesh, chat, 2026-10-18 (D-044)"
+  },
+  "date_status_note": "Dates below are proposed targets until the owner approves them (pending decision PD-001). They were not derived from a recorded capacity.",
+  "milestones": [
+    {
+      "id": "V2-M0",
+      "phase_id": "P0",
+      "phase_name": "FOUNDATION",
+      "target_date": "2026-10-30",
+      "schedule_status": "PROPOSED",
+      "depends_on": [],
+      "outcome": "Governance contracts, status schemas, repository ownership, CI and PR conventions and evidence requirements are consistent and checked in every repository.",
+      "exit_conditions": [
+        "Frozen baseline v2 unchanged and reconciled",
+        "Acceptance standard, commit and tag policy approved and enforced in CI",
+        "Core engineering contract pinned (contract_pin)"
+      ],
+      "owner": null,
+      "approval": null,
+      "closure_record": null
+    },
+    {
+      "id": "V2-M1",
+      "phase_id": "P1",
+      "phase_name": "STUDIO",
+      "target_date": "2026-11-30",
+      "schedule_status": "PROPOSED",
+      "depends_on": [
+        "V2-M0"
+      ],
+      "outcome": "Studio scope and the capability interfaces it consumes are defined; the first capability contracts (Sense, Motion, Mind, Skill) are reviewed.",
+      "exit_conditions": [
+        "P0 exit review passed (DEP-001)",
+        "Contract task 001 of each capability repository reviewed and tagged v0.1.0",
+        "Studio ownership location (repo or component) decided"
+      ],
+      "owner": null,
+      "approval": null,
+      "closure_record": null
+    },
+    {
+      "id": "V2-M2",
+      "phase_id": "P2",
+      "phase_name": "BUILD & ARTIFACT",
+      "target_date": "2027-01-15",
+      "schedule_status": "PROPOSED",
+      "depends_on": [
+        "V2-M1"
+      ],
+      "outcome": "Versioned build and artifact flow works with reproducible metadata, integrity checks and compatibility rules; capability repositories pass contract validation with synthetic data.",
+      "exit_conditions": [
+        "Artifact contract versioned and compatibility-tested",
+        "Unit, integration and regression gates pass for each capability repository",
+        "Sim and SDK ownership location decided"
+      ],
+      "owner": null,
+      "approval": null,
+      "closure_record": null
+    },
+    {
+      "id": "V2-M3",
+      "phase_id": "P3",
+      "phase_name": "CONTROL PLANE",
+      "target_date": "2027-03-15",
+      "schedule_status": "PROPOSED",
+      "depends_on": [
+        "V2-M2"
+      ],
+      "outcome": "Control Plane lifecycle, job and run state, artifact references, authorisation boundaries and API contracts pass integration tests.",
+      "exit_conditions": [
+        "API contracts versioned",
+        "Authorisation boundary reviewed by the Security Owner",
+        "Integration tests pass on the exact closing commits"
+      ],
+      "owner": null,
+      "approval": null,
+      "closure_record": null
+    },
+    {
+      "id": "V2-M4",
+      "phase_id": "P4",
+      "phase_name": "BOOKING & COMMERCIAL",
+      "target_date": "2027-04-30",
+      "schedule_status": "PROPOSED",
+      "depends_on": [
+        "V2-M3"
+      ],
+      "outcome": "Booking, credits and commercial flows and their audit records are validated end to end.",
+      "exit_conditions": [
+        "Audit records verified",
+        "Failure paths tested",
+        "No payment credentials handled outside an approved processor"
+      ],
+      "owner": null,
+      "approval": null,
+      "closure_record": null
+    },
+    {
+      "id": "V2-M5",
+      "phase_id": "P5",
+      "phase_name": "EXECUTION",
+      "target_date": "2027-06-15",
+      "schedule_status": "PROPOSED",
+      "depends_on": [
+        "V2-M3"
+      ],
+      "outcome": "Jobs execute through the defined runtime and control path against simulated labs and robots; results and failures are observable and reproducible.",
+      "exit_conditions": [
+        "Simulated execution replayable from recorded inputs",
+        "Simulated acceptance is labelled as simulation, never as physical or safety validation (DEP-004)"
+      ],
+      "owner": null,
+      "approval": null,
+      "closure_record": null
+    },
+    {
+      "id": "V2-M6",
+      "phase_id": "P6",
+      "phase_name": "LAB & ROBOT",
+      "target_date": null,
+      "schedule_status": "HOLD",
+      "depends_on": [
+        "V2-M5"
+      ],
+      "outcome": "Physical Lab Agent and robot work. On HOLD: mechanical scope is not reopened (D-003), so no date is proposed.",
+      "exit_conditions": [
+        "Explicit reopening decision recorded in DECISIONS.md",
+        "Approved mechanical and safety scope with an evidence-based estimate",
+        "Independent safety review path defined (D-025)"
+      ],
+      "owner": null,
+      "approval": null,
+      "closure_record": null
+    },
+    {
+      "id": "V2-M7",
+      "phase_id": "P7",
+      "phase_name": "LIVE & RESULTS",
+      "target_date": "2027-08-15",
+      "schedule_status": "PROPOSED",
+      "depends_on": [
+        "V2-M4",
+        "V2-M5"
+      ],
+      "outcome": "Live service and result flow validated in the available environment (software scope only); physical-robot claims remain gated on V2-M6.",
+      "exit_conditions": [
+        "Telemetry and results flow validated in the available environment",
+        "Any physical-robot criterion stays BLOCKED by V2-M6"
+      ],
+      "owner": null,
+      "approval": null,
+      "closure_record": null
+    },
+    {
+      "id": "V2-M8",
+      "phase_id": "P8",
+      "phase_name": "PRODUCTION",
+      "target_date": "2027-09-13",
+      "schedule_status": "PROPOSED",
+      "depends_on": [
+        "V2-M7"
+      ],
+      "outcome": "Production-readiness evidence, security disposition, release and recovery procedures, operational documentation and accepted residual risks are reviewed.",
+      "exit_conditions": [
+        "Every security finding has a recorded disposition",
+        "Release and recovery procedures exercised",
+        "Residual risks accepted by the owner"
+      ],
+      "owner": null,
+      "approval": null,
+      "closure_record": null
+    }
+  ],
+  "repo_milestones": [
+    {
+      "id": "V2-M0-PROGRAM-001",
+      "milestone_id": "V2-M0",
+      "repo_code": "PROGRAM",
+      "outcome": "Plan, registry, schemas, acceptance standard and pipeline manifest approved; status views generated from them.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M0-CORE-001",
+      "milestone_id": "V2-M0",
+      "repo_code": "CORE",
+      "outcome": "Engineering contract approved and pinned; contract_pin check closed.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M0-COMMUNITY-001",
+      "milestone_id": "V2-M0",
+      "repo_code": "COMMUNITY",
+      "outcome": "Security reporting path working (SECURITY.md contact tested).",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M0-SENSE-001",
+      "milestone_id": "V2-M0",
+      "repo_code": "SENSE",
+      "outcome": "Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M0-MOTION-001",
+      "milestone_id": "V2-M0",
+      "repo_code": "MOTION",
+      "outcome": "Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M0-MIND-001",
+      "milestone_id": "V2-M0",
+      "repo_code": "MIND",
+      "outcome": "Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M0-SKILL-001",
+      "milestone_id": "V2-M0",
+      "repo_code": "SKILL",
+      "outcome": "Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M1-SENSE-001",
+      "milestone_id": "V2-M1",
+      "repo_code": "SENSE",
+      "outcome": "Sense architecture and data contract (task 001) reviewed and tagged v0.1.0.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M1-MOTION-001",
+      "milestone_id": "V2-M1",
+      "repo_code": "MOTION",
+      "outcome": "Motion command and state contract (task 001) reviewed and tagged v0.1.0.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M1-MIND-001",
+      "milestone_id": "V2-M1",
+      "repo_code": "MIND",
+      "outcome": "Mind request, context and result contract (task 001) reviewed and tagged v0.1.0.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M1-SKILL-001",
+      "milestone_id": "V2-M1",
+      "repo_code": "SKILL",
+      "outcome": "Skill manifest and execution contract (task 001) reviewed and tagged v0.1.0.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M1-COMMUNITY-001",
+      "milestone_id": "V2-M1",
+      "repo_code": "COMMUNITY",
+      "outcome": "Public architecture description matches the approved capability contracts.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M2-SENSE-001",
+      "milestone_id": "V2-M2",
+      "repo_code": "SENSE",
+      "outcome": "Contract validation and synthetic-data tests pass; unit, integration and regression gates implemented.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M2-MOTION-001",
+      "milestone_id": "V2-M2",
+      "repo_code": "MOTION",
+      "outcome": "Command validation, limit enforcement and fault-path tests pass; gates implemented.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M2-MIND-001",
+      "milestone_id": "V2-M2",
+      "repo_code": "MIND",
+      "outcome": "Schema validation, cancellation and error-path tests pass; gates implemented.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M2-SKILL-001",
+      "milestone_id": "V2-M2",
+      "repo_code": "SKILL",
+      "outcome": "Manifest validation and lifecycle conformance tests pass; gates implemented.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M2-CORE-001",
+      "milestone_id": "V2-M2",
+      "repo_code": "CORE",
+      "outcome": "Artifact and compatibility contract published as a versioned release.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M3-SKILL-001",
+      "milestone_id": "V2-M3",
+      "repo_code": "SKILL",
+      "outcome": "Skill execution exposed through the control-plane contract.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M3-COMMUNITY-001",
+      "milestone_id": "V2-M3",
+      "repo_code": "COMMUNITY",
+      "outcome": "Public integration guide matches the control-plane contract.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M5-SKILL-001",
+      "milestone_id": "V2-M5",
+      "repo_code": "SKILL",
+      "outcome": "Skills execute through the runtime against simulated capabilities.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M5-MIND-001",
+      "milestone_id": "V2-M5",
+      "repo_code": "MIND",
+      "outcome": "Mind results reproducible in simulated execution.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M5-MOTION-001",
+      "milestone_id": "V2-M5",
+      "repo_code": "MOTION",
+      "outcome": "Motion commands validated against a simulated actuator interface.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M5-SENSE-001",
+      "milestone_id": "V2-M5",
+      "repo_code": "SENSE",
+      "outcome": "Sense frames validated in simulated execution.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M5-ACTUATOR-001",
+      "milestone_id": "V2-M5",
+      "repo_code": "ACTUATOR",
+      "outcome": "Shared actuator interface verified in software only (no physical claim).",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M6-ACTUATOR-001",
+      "milestone_id": "V2-M6",
+      "repo_code": "ACTUATOR",
+      "outcome": "On HOLD: physical integration scope not defined until the mechanical HOLD is reopened.",
+      "status": "ON_HOLD",
+      "tasks": []
+    },
+    {
+      "id": "V2-M6-EMBEDDED-001",
+      "milestone_id": "V2-M6",
+      "repo_code": "EMBEDDED",
+      "outcome": "On HOLD: firmware and electronics hardware validation not scheduled.",
+      "status": "ON_HOLD",
+      "tasks": []
+    },
+    {
+      "id": "V2-M6-ACTS-001",
+      "milestone_id": "V2-M6",
+      "repo_code": "ACTS",
+      "outcome": "On HOLD: S variant mechanical design not scheduled.",
+      "status": "ON_HOLD",
+      "tasks": []
+    },
+    {
+      "id": "V2-M6-ACTM-001",
+      "milestone_id": "V2-M6",
+      "repo_code": "ACTM",
+      "outcome": "On HOLD: M variant mechanical design not scheduled.",
+      "status": "ON_HOLD",
+      "tasks": []
+    },
+    {
+      "id": "V2-M6-ACTL-001",
+      "milestone_id": "V2-M6",
+      "repo_code": "ACTL",
+      "outcome": "On HOLD: L variant mechanical design not scheduled.",
+      "status": "ON_HOLD",
+      "tasks": []
+    },
+    {
+      "id": "V2-M7-SENSE-001",
+      "milestone_id": "V2-M7",
+      "repo_code": "SENSE",
+      "outcome": "Telemetry stream contract validated end to end (software scope).",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M7-COMMUNITY-001",
+      "milestone_id": "V2-M7",
+      "repo_code": "COMMUNITY",
+      "outcome": "Public documentation reflects the live and results interfaces.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M8-PROGRAM-001",
+      "milestone_id": "V2-M8",
+      "repo_code": "PROGRAM",
+      "outcome": "Production-readiness review, residual risks and visibility decisions recorded.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M8-CORE-001",
+      "milestone_id": "V2-M8",
+      "repo_code": "CORE",
+      "outcome": "Release, security disposition and recovery documentation reviewed.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M8-COMMUNITY-001",
+      "milestone_id": "V2-M8",
+      "repo_code": "COMMUNITY",
+      "outcome": "Release, security disposition and licence review complete.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M8-SENSE-001",
+      "milestone_id": "V2-M8",
+      "repo_code": "SENSE",
+      "outcome": "Release and security review complete.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M8-MOTION-001",
+      "milestone_id": "V2-M8",
+      "repo_code": "MOTION",
+      "outcome": "Release and security review complete.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M8-MIND-001",
+      "milestone_id": "V2-M8",
+      "repo_code": "MIND",
+      "outcome": "Release and security review complete.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M8-SKILL-001",
+      "milestone_id": "V2-M8",
+      "repo_code": "SKILL",
+      "outcome": "Release and security review complete.",
+      "status": "PROPOSED",
+      "tasks": []
+    }
+  ]
+}

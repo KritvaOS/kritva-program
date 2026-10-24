@@ -1,0 +1,179 @@
+{
+  "_note": "Canonical review queue (D-044). commit_sha stays null until the reviewed revision exists.",
+  "schema_version": "1.0",
+  "records": [
+    {
+      "record_id": "REV-001",
+      "record_type": "REVIEW",
+      "title": "Review the V2 milestone plan",
+      "status": "PENDING",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "review_role": "PROGRAM_OWNER",
+      "reviewer": null,
+      "due_date": null,
+      "artifact": {
+        "repo": "KritvaOS/kritva-program",
+        "path": "v2/planning/milestones.json",
+        "commit_sha": null
+      },
+      "required_checks": [
+        "tools/planning.py --check",
+        "status-generation-check"
+      ],
+      "evidence_refs": [],
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ]
+    },
+    {
+      "record_id": "REV-002",
+      "record_type": "REVIEW",
+      "title": "Review the pipeline manifest and approval roles",
+      "status": "PENDING",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "review_role": "PROGRAM_OWNER",
+      "reviewer": null,
+      "due_date": null,
+      "artifact": {
+        "repo": "KritvaOS/kritva-program",
+        "path": "v2/planning/repo-pipeline.json",
+        "commit_sha": null
+      },
+      "required_checks": [
+        "scripts/pipeline/manifest.py validate"
+      ],
+      "evidence_refs": [],
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ]
+    },
+    {
+      "record_id": "REV-003",
+      "record_type": "REVIEW",
+      "title": "Review the acceptance standard",
+      "status": "PENDING",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "review_role": "ARCHITECTURE_REVIEWER",
+      "reviewer": null,
+      "due_date": null,
+      "artifact": {
+        "repo": "KritvaOS/kritva-program",
+        "path": "v2/planning/ACCEPTANCE_STANDARD.md",
+        "commit_sha": null
+      },
+      "required_checks": [
+        "docs-check"
+      ],
+      "evidence_refs": [],
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ]
+    },
+    {
+      "record_id": "REV-004",
+      "record_type": "REVIEW",
+      "title": "Review kritva-sense governance baseline and contract task",
+      "status": "PENDING",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "review_role": "ARCHITECTURE_REVIEWER",
+      "reviewer": null,
+      "due_date": null,
+      "artifact": {
+        "repo": "KritvaOS/kritva-sense",
+        "path": "ACCEPTANCE_CRITERIA.md",
+        "commit_sha": null
+      },
+      "required_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "evidence_refs": [],
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ]
+    },
+    {
+      "record_id": "REV-005",
+      "record_type": "REVIEW",
+      "title": "Review kritva-motion governance baseline and contract task",
+      "status": "PENDING",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "review_role": "ARCHITECTURE_REVIEWER",
+      "reviewer": null,
+      "due_date": null,
+      "artifact": {
+        "repo": "KritvaOS/kritva-motion",
+        "path": "ACCEPTANCE_CRITERIA.md",
+        "commit_sha": null
+      },
+      "required_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "evidence_refs": [],
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ]
+    },
+    {
+      "record_id": "REV-006",
+      "record_type": "REVIEW",
+      "title": "Review kritva-mind governance baseline and contract task",
+      "status": "PENDING",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "review_role": "ARCHITECTURE_REVIEWER",
+      "reviewer": null,
+      "due_date": null,
+      "artifact": {
+        "repo": "KritvaOS/kritva-mind",
+        "path": "ACCEPTANCE_CRITERIA.md",
+        "commit_sha": null
+      },
+      "required_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "evidence_refs": [],
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ]
+    },
+    {
+      "record_id": "REV-007",
+      "record_type": "REVIEW",
+      "title": "Review kritva-skill governance baseline and contract task",
+      "status": "PENDING",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "review_role": "ARCHITECTURE_REVIEWER",
+      "reviewer": null,
+      "due_date": null,
+      "artifact": {
+        "repo": "KritvaOS/kritva-skill",
+        "path": "ACCEPTANCE_CRITERIA.md",
+        "commit_sha": null
+      },
+      "required_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "evidence_refs": [],
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ]
+    }
+  ]
+}

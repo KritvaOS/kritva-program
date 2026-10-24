@@ -1,0 +1,160 @@
+{
+  "schema_version": "2.0",
+  "workstream_id": "COMMUNITY",
+  "repo": "KritvaOS/kritvaos-community",
+  "source": {
+    "branch": "main",
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tag": null
+  },
+  "tasks": [
+    {
+      "task_id": "I2-001",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I2-002",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I2-003",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I2-004",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I2-005",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I2-006",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I3-001",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I3-002",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I3-003",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I3-004",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I3-005",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I3-006",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I3-007",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I4-001",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I4-002",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I4-003",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I4-004",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I4-005",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I4-006",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I4-007",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "I4-008",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_COMMITTED",
+      "readiness": "PLANNABLE",
+      "evidence": []
+    }
+  ],
+  "updated_at": "2026-10-11T00:00:00Z"
+}

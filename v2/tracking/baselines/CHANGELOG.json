@@ -1,0 +1,22 @@
+[
+  {
+    "from_version": 0,
+    "to_version": 1,
+    "approver": "Dinesh",
+    "approved_at": "2026-10-13T16:44:57Z",
+    "canonical_commit": "11416537a59a7a4015ed1286a2e48b66e963b958",
+    "reason": "Approve baseline v1 weights as proposed: Core R1.0 (9 tasks) and Community I2-I4 (21 tasks)",
+    "baseline_sha256": "a56838d7f7765e1f88b230722b9a73b455b479eb6484b36acf60966a50c75bb7",
+    "note_edit": "Wording-only edit of the baseline note on the owner's instruction (D-072, 2026-10-24); tasks, weights and approvals are unchanged. Hash before the edit: 874abe0bcddfbc90f7d5ab449cd7e7a64408bbcd7d640f37fdca01d74bd50e16."
+  },
+  {
+    "from_version": 1,
+    "to_version": 2,
+    "approver": "Dinesh",
+    "approved_at": "2026-10-17T05:31:54Z",
+    "canonical_commit": "0bf15de07f6ac0aed1e0cc412c872baa4baafe4f",
+    "reason": "Approve baseline v2 as proposed: v1 (Core R1.0, Community I2-I4; 30 tasks, weight 101) plus KRP-ENG-001 at weight 3 (total 104). Owner instruction in chat 2026-10-17 (D-022), recorded by Claude on his instruction.",
+    "baseline_sha256": "fa4f01636bea8d73af0098688881c09954f7d6710ac9bd8c96731351373aeceb",
+    "note_edit": "Wording-only edit of the baseline note on the owner's instruction (D-072, 2026-10-24); tasks, weights and approvals are unchanged. Hash before the edit: 3779e12c261fb910ef82664e458b997108a85f27168676d7db1700f1876ec940."
+  }
+]

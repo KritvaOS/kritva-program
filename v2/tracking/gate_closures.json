@@ -1,0 +1,253 @@
+{
+  "closures": [
+    {
+      "closure_id": "C001",
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "disposition": "CLOSED",
+      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "closed_at": "2026-10-13T17:28:06Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner and reviewer",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "findings": "Not provided to Claude; the review record is held by the owner.",
+      "limitations": "Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-10-13. Reviewer independence from the implementation is not stated. CI results are supporting evidence only.",
+      "rationale": "Dinesh stated in chat on 2026-10-13 that he completed the human safety reviews of KOS-I3 and KOS-I4 (including the I4 actuator write path) at Community commit 8256ba3; recorded by Claude at his instruction.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ]
+    },
+    {
+      "closure_id": "C002",
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "disposition": "CLOSED",
+      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "closed_at": "2026-10-13T17:28:06Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner and reviewer",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "findings": "Not provided to Claude; the review record is held by the owner.",
+      "limitations": "Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-10-13. Reviewer independence from the implementation is not stated. CI results are supporting evidence only.",
+      "rationale": "Dinesh stated in chat on 2026-10-13 that he completed the human safety reviews of KOS-I3 and KOS-I4 (including the I4 actuator write path) at Community commit 8256ba3; recorded by Claude at his instruction.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ]
+    },
+    {
+      "closure_id": "C003",
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "disposition": "REOPENED",
+      "evidence_commit": null,
+      "closed_at": "2026-10-17T05:34:17Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "findings": "none (administrative re-opening to record the reviewer named under D-025; no new safety finding)",
+      "limitations": "Claude did not perform or verify any safety review. Re-opened by Dinesh in chat on 2026-10-17 so that a closure naming the D-025 reviewer can be appended; C001 and C002 are unchanged.",
+      "rationale": "Dinesh instructed in chat on 2026-10-17 to record himself as the reviewer for C001 and C002 under D-025; recorded by Claude on his instruction.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it."
+    },
+    {
+      "closure_id": "C004",
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "disposition": "REOPENED",
+      "evidence_commit": null,
+      "closed_at": "2026-10-17T05:34:17Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "findings": "none (administrative re-opening to record the reviewer named under D-025; no new safety finding)",
+      "limitations": "Claude did not perform or verify any safety review. Re-opened by Dinesh in chat on 2026-10-17 so that a closure naming the D-025 reviewer can be appended; C001 and C002 are unchanged.",
+      "rationale": "Dinesh instructed in chat on 2026-10-17 to record himself as the reviewer for C001 and C002 under D-025; recorded by Claude on his instruction.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it."
+    },
+    {
+      "closure_id": "C005",
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "disposition": "CLOSED",
+      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "closed_at": "2026-10-17T05:34:17Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner and named reviewer (D-025)",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "findings": "Not provided to Claude; the review record is held by the owner.",
+      "limitations": "Claude did not perform or verify the review. The owner named himself as reviewer under D-025 on 2026-10-17; independence from the implementation is NOT stated, so D-025's independent-review requirement is not shown to be met. CI results are supporting evidence only.",
+      "rationale": "Dinesh stated in chat on 2026-10-17 that the reviewer for the I3 and I4 safety gate closures is Dinesh; recorded by Claude on his instruction. Same evidence commit as C001 and C002.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ]
+    },
+    {
+      "closure_id": "C006",
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "disposition": "CLOSED",
+      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "closed_at": "2026-10-17T05:34:17Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner and named reviewer (D-025)",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "findings": "Not provided to Claude; the review record is held by the owner.",
+      "limitations": "Claude did not perform or verify the review. The owner named himself as reviewer under D-025 on 2026-10-17; independence from the implementation is NOT stated, so D-025's independent-review requirement is not shown to be met. CI results are supporting evidence only.",
+      "rationale": "Dinesh stated in chat on 2026-10-17 that the reviewer for the I3 and I4 safety gate closures is Dinesh; recorded by Claude on his instruction. Same evidence commit as C001 and C002.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ]
+    },
+    {
+      "closure_id": "C007",
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "disposition": "REOPENED",
+      "evidence_commit": null,
+      "closed_at": "2026-10-17T07:44:00Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "findings": "none (administrative re-opening so that the owner's D-025 independent-review declaration can be appended; no new safety finding)",
+      "limitations": "Claude did not perform or verify any safety review. Prior closures are unchanged history.",
+      "rationale": "Dinesh stated in chat on 2026-10-17 that the D-025 independent review is complete; re-opened only so a closure recording that statement can be appended",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it."
+    },
+    {
+      "closure_id": "C008",
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "disposition": "REOPENED",
+      "evidence_commit": null,
+      "closed_at": "2026-10-17T07:44:00Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "findings": "none (administrative re-opening so that the owner's D-025 independent-review declaration can be appended; no new safety finding)",
+      "limitations": "Claude did not perform or verify any safety review. Prior closures are unchanged history.",
+      "rationale": "Dinesh stated in chat on 2026-10-17 that the D-025 independent review is complete; re-opened only so a closure recording that statement can be appended",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it."
+    },
+    {
+      "closure_id": "C009",
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "disposition": "CLOSED",
+      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "closed_at": "2026-10-17T07:45:00Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Not named to Claude",
+        "role": "Independent reviewer (per owner statement)",
+        "independent_of_implementation": "yes"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "findings": "Not provided to Claude; the review record is held by the owner.",
+      "limitations": "Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.",
+      "rationale": "Dinesh stated in chat on 2026-10-17 that the D-025 independent review of KOS-I3 and KOS-I4 is complete; recorded by Claude at his instruction",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ]
+    },
+    {
+      "closure_id": "C010",
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "disposition": "CLOSED",
+      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "closed_at": "2026-10-17T07:45:00Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Not named to Claude",
+        "role": "Independent reviewer (per owner statement)",
+        "independent_of_implementation": "yes"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "findings": "Not provided to Claude; the review record is held by the owner.",
+      "limitations": "Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.",
+      "rationale": "Dinesh stated in chat on 2026-10-17 that the D-025 independent review of KOS-I3 and KOS-I4 is complete; recorded by Claude at his instruction",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ]
+    }
+  ],
+  "_note": "Append-only gate-closure ledger. Never edit or delete records; the last record per gate wins. CLOSED records the owner's human safety review (D-016, D-019)."
+}

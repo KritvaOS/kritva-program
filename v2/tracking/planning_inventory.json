@@ -1,0 +1,472 @@
+{
+  "_note": "Planning inventory (D-024). Registration is not credit: every group and task is PLANNING_ONLY and credit_eligible is false. Entries are NOT baseline tasks, carry no weight and cannot receive approvals. A task becomes creditable only by entering an approved baseline version and then following the normal chain (approval PASS + COMPLETE + evidence on the approved commit with a passing CI run). Identity = repository + workstream_id + canonical task_id; a legacy ID is an alias only (alias_kind rename or split). recorded_status is a snapshot read from the pinned source file, with its authority named; NOT_RECORDED means the source has no status. It is never an execution fact and never a program approval. The five actuator groups were registered under D-034 with their own ACT_* workstream ids (source_workstream_label equals workstream_id); rollup_targets records where their effort rolls up and must equal rolls_up_to in workstreams.json. Registration is identity only. A group whose program workstream is not yet approved would have workstream_id null, mapping_status PROPOSED and the source's own label in source_workstream_label. Checked by tools/check_planning_inventory.py.",
+  "inventory_version": 2,
+  "classification": "PLANNING_ONLY",
+  "groups": [
+    {
+      "repository": "KritvaOS/kritva-actuator",
+      "workstream_id": "ACT_INT",
+      "mapping_status": "REGISTERED",
+      "source_workstream_label": "ACT_INT",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "source": {
+        "repo": "KritvaOS/kritva-actuator",
+        "commit": "177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca",
+        "path": "planning/v2/TASK_ID_MAPPING.csv",
+        "sha256": "1aaaca027b850732010889dea67624fb469ea5b84a345d81f35e0772e905584c"
+      },
+      "tasks": [
+        {
+          "task_id": "ACT-INT-001",
+          "legacy_alias": "ACT-03-001",
+          "alias_kind": "rename",
+          "title": "Define the actuator software interface and KritvaOS integration contract",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-INT-002",
+          "legacy_alias": "ACT-03-002",
+          "alias_kind": "rename",
+          "title": "CAN protocol specification",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-INT-003",
+          "legacy_alias": "ACT-03-003",
+          "alias_kind": "rename",
+          "title": "KritvaOS driver and host tools",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-INT-004",
+          "legacy_alias": "ACT-03-004",
+          "alias_kind": "rename",
+          "title": "Simulation model (SimulatedActuator)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-INT-005",
+          "legacy_alias": "ACT-03-005",
+          "alias_kind": "rename",
+          "title": "System validation and A2 demonstration",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-INT-006",
+          "legacy_alias": "ACT-03-006",
+          "alias_kind": "rename",
+          "title": "Traceability and audit coordination",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-INT-007",
+          "legacy_alias": "ACT-02-SIZING",
+          "alias_kind": "rename",
+          "title": "Common sizing engine golden regression and variant-input handoff (shared work)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "new"
+        }
+      ],
+      "rollup_targets": [
+        "INTEGRATION_SOFTWARE_VALIDATION"
+      ]
+    },
+    {
+      "repository": "KritvaOS/kritva-actuator-embedded",
+      "workstream_id": "ACT_EMB",
+      "mapping_status": "REGISTERED",
+      "source_workstream_label": "ACT_EMB",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "source": {
+        "repo": "KritvaOS/kritva-actuator",
+        "commit": "177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca",
+        "path": "planning/v2/TASK_ID_MAPPING.csv",
+        "sha256": "1aaaca027b850732010889dea67624fb469ea5b84a345d81f35e0772e905584c"
+      },
+      "tasks": [
+        {
+          "task_id": "ACT-EMB-001",
+          "legacy_alias": "ACT-01-001",
+          "alias_kind": "rename",
+          "title": "Define electrical and motor-control requirements",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-EMB-002",
+          "legacy_alias": "ACT-01-002",
+          "alias_kind": "rename",
+          "title": "Select the MCU and development board; bring up the motor and FOC on the development board",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-EMB-002a",
+          "legacy_alias": "ACT-01-002a",
+          "alias_kind": "rename",
+          "title": "Development board evaluation and decision",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-EMB-002b",
+          "legacy_alias": "ACT-01-002b",
+          "alias_kind": "rename",
+          "title": "Motor characterisation (R, L, Kt, pole pairs, thermal)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-EMB-002c",
+          "legacy_alias": "ACT-01-002c",
+          "alias_kind": "rename",
+          "title": "FOC current loop and calibration",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-EMB-003",
+          "legacy_alias": "ACT-01-003",
+          "alias_kind": "rename",
+          "title": "Integrate encoder feedback and implement joint control",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-EMB-004",
+          "legacy_alias": "ACT-01-004",
+          "alias_kind": "rename",
+          "title": "Diagnostics and fault handling",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-EMB-005",
+          "legacy_alias": "ACT-01-005",
+          "alias_kind": "rename",
+          "title": "Custom controller PCB (A1)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-EMB-006",
+          "legacy_alias": "ACT-01-006",
+          "alias_kind": "rename",
+          "title": "CAN communication firmware (A1)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        },
+        {
+          "task_id": "ACT-EMB-007",
+          "legacy_alias": "ACT-01-007",
+          "alias_kind": "rename",
+          "title": "Firmware robustness, regression and release",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit"
+        }
+      ],
+      "rollup_targets": [
+        "ACTUATION_CONTROLS",
+        "ELECTRICAL_POWER"
+      ]
+    },
+    {
+      "repository": "KritvaOS/kritva-actuator-s",
+      "workstream_id": "ACT_S",
+      "mapping_status": "REGISTERED",
+      "source_workstream_label": "ACT_S",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "source": {
+        "repo": "KritvaOS/kritva-actuator",
+        "commit": "177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca",
+        "path": "planning/v2/TASK_ID_MAPPING.csv",
+        "sha256": "1aaaca027b850732010889dea67624fb469ea5b84a345d81f35e0772e905584c"
+      },
+      "tasks": [
+        {
+          "task_id": "ACT-S-001",
+          "legacy_alias": "ACT-02-001",
+          "alias_kind": "split",
+          "title": "Define elbow load cases and mechanical requirements",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-S-002",
+          "legacy_alias": "ACT-02-002",
+          "alias_kind": "split",
+          "title": "Motor/gearbox interface constraints and gearbox candidate comparison",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-S-003",
+          "legacy_alias": "ACT-02-003",
+          "alias_kind": "split",
+          "title": "Shaft, bearing and housing calculations",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-S-004",
+          "legacy_alias": "ACT-02-004",
+          "alias_kind": "split",
+          "title": "Mechanical CAD assembly and fabrication drawings",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-S-005",
+          "legacy_alias": "ACT-02-005",
+          "alias_kind": "split",
+          "title": "Fabrication and assembly",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-S-006",
+          "legacy_alias": "ACT-02-006",
+          "alias_kind": "split",
+          "title": "Mechanical characterisation (backlash, repeatability, load, thermal support)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-S-007",
+          "legacy_alias": "ACT-02-007",
+          "alias_kind": "split",
+          "title": "Test fixture design and build",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-S-008",
+          "legacy_alias": "ACT-02-008",
+          "alias_kind": "split",
+          "title": "Mechanical fixes, CAD release and documentation",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        }
+      ],
+      "rollup_targets": [
+        "MECHANICAL"
+      ]
+    },
+    {
+      "repository": "KritvaOS/kritva-actuator-m",
+      "workstream_id": "ACT_M",
+      "mapping_status": "REGISTERED",
+      "source_workstream_label": "ACT_M",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "source": {
+        "repo": "KritvaOS/kritva-actuator",
+        "commit": "177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca",
+        "path": "planning/v2/TASK_ID_MAPPING.csv",
+        "sha256": "1aaaca027b850732010889dea67624fb469ea5b84a345d81f35e0772e905584c"
+      },
+      "tasks": [
+        {
+          "task_id": "ACT-M-001",
+          "legacy_alias": "ACT-02-001",
+          "alias_kind": "split",
+          "title": "Define elbow load cases and mechanical requirements",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit (elbow baseline)"
+        },
+        {
+          "task_id": "ACT-M-002",
+          "legacy_alias": "ACT-02-002",
+          "alias_kind": "split",
+          "title": "Motor/gearbox interface constraints and gearbox candidate comparison",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit (elbow baseline)"
+        },
+        {
+          "task_id": "ACT-M-003",
+          "legacy_alias": "ACT-02-003",
+          "alias_kind": "split",
+          "title": "Shaft, bearing and housing calculations",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit (elbow baseline)"
+        },
+        {
+          "task_id": "ACT-M-004",
+          "legacy_alias": "ACT-02-004",
+          "alias_kind": "split",
+          "title": "Mechanical CAD assembly and fabrication drawings",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit (elbow baseline)"
+        },
+        {
+          "task_id": "ACT-M-005",
+          "legacy_alias": "ACT-02-005",
+          "alias_kind": "split",
+          "title": "Fabrication and assembly",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit (elbow baseline)"
+        },
+        {
+          "task_id": "ACT-M-006",
+          "legacy_alias": "ACT-02-006",
+          "alias_kind": "split",
+          "title": "Mechanical characterisation (backlash, repeatability, load, thermal support)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit (elbow baseline)"
+        },
+        {
+          "task_id": "ACT-M-007",
+          "legacy_alias": "ACT-02-007",
+          "alias_kind": "split",
+          "title": "Test fixture design and build",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit (elbow baseline)"
+        },
+        {
+          "task_id": "ACT-M-008",
+          "legacy_alias": "ACT-02-008",
+          "alias_kind": "split",
+          "title": "Mechanical fixes, CAD release and documentation",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "inherit (elbow baseline)"
+        }
+      ],
+      "rollup_targets": [
+        "MECHANICAL"
+      ]
+    },
+    {
+      "repository": "KritvaOS/kritva-actuator-l",
+      "workstream_id": "ACT_L",
+      "mapping_status": "REGISTERED",
+      "source_workstream_label": "ACT_L",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "source": {
+        "repo": "KritvaOS/kritva-actuator",
+        "commit": "177645ea0178bfe1e5c4cdbb9e2cf0580c0cefca",
+        "path": "planning/v2/TASK_ID_MAPPING.csv",
+        "sha256": "1aaaca027b850732010889dea67624fb469ea5b84a345d81f35e0772e905584c"
+      },
+      "tasks": [
+        {
+          "task_id": "ACT-L-001",
+          "legacy_alias": "ACT-02-001",
+          "alias_kind": "split",
+          "title": "Define elbow load cases and mechanical requirements",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-L-002",
+          "legacy_alias": "ACT-02-002",
+          "alias_kind": "split",
+          "title": "Motor/gearbox interface constraints and gearbox candidate comparison",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-L-003",
+          "legacy_alias": "ACT-02-003",
+          "alias_kind": "split",
+          "title": "Shaft, bearing and housing calculations",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-L-004",
+          "legacy_alias": "ACT-02-004",
+          "alias_kind": "split",
+          "title": "Mechanical CAD assembly and fabrication drawings",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-L-005",
+          "legacy_alias": "ACT-02-005",
+          "alias_kind": "split",
+          "title": "Fabrication and assembly",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-L-006",
+          "legacy_alias": "ACT-02-006",
+          "alias_kind": "split",
+          "title": "Mechanical characterisation (backlash, repeatability, load, thermal support)",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-L-007",
+          "legacy_alias": "ACT-02-007",
+          "alias_kind": "split",
+          "title": "Test fixture design and build",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        },
+        {
+          "task_id": "ACT-L-008",
+          "legacy_alias": "ACT-02-008",
+          "alias_kind": "split",
+          "title": "Mechanical fixes, CAD release and documentation",
+          "recorded_status": "NOT_RECORDED",
+          "status_authority": "none",
+          "migration_initial_status": "NOT_STARTED"
+        }
+      ],
+      "rollup_targets": [
+        "MECHANICAL"
+      ]
+    }
+  ]
+}

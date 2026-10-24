@@ -1,0 +1,164 @@
+{
+  "_note": "Canonical workstream registry (D-009). Initial roster = the 14 workstreams in WORKSTREAM_STATUS.md. Repos UNVERIFIED (null) until reconciled. protected_ids/closed_ids are MILESTONE IDs (D-012). CORE: Core R1.0 = milestone KF-CORE-R10 / tag kritva-core-r1.0 per Core's own MILESTONE.md and R10_RELEASE_GATE.md; tag kritva-core-r1.0 resolves to commit 4acce3b60833abfe33168c4766405ab86ea73edc (verified locally by Dinesh 2026-10-11). KF-CORE-R10-001..009 are seeded in the baseline (D-014), so the closed-milestone guard for KF-CORE-R10 is active. Core R02..R09 are not tracked.",
+  "workstreams": [
+    {
+      "id": "CORE",
+      "name": "Core",
+      "repo": "KritvaOS/kritva-core",
+      "closed_release": "R1.0",
+      "closed_ids": [
+        "KF-CORE-R10"
+      ]
+    },
+    {
+      "id": "COMMUNITY",
+      "name": "Community",
+      "repo": "KritvaOS/kritvaos-community",
+      "protected_ids": [
+        "KOS-I2",
+        "KOS-I3",
+        "KOS-I4"
+      ]
+    },
+    {
+      "id": "SENSE",
+      "name": "Sense",
+      "repo": null
+    },
+    {
+      "id": "MOTION",
+      "name": "Motion",
+      "repo": null
+    },
+    {
+      "id": "SKILL",
+      "name": "Skill",
+      "repo": null
+    },
+    {
+      "id": "MIND",
+      "name": "Mind",
+      "repo": null
+    },
+    {
+      "id": "SIM",
+      "name": "Sim",
+      "repo": null
+    },
+    {
+      "id": "SDK",
+      "name": "SDK",
+      "repo": null
+    },
+    {
+      "id": "STUDIO",
+      "name": "Studio",
+      "repo": null
+    },
+    {
+      "id": "CONTROL_PLANE",
+      "name": "Control Plane",
+      "repo": null,
+      "kind": "CAPABILITY",
+      "effort_owner": false,
+      "independent_effort": "none_for_mapped_tasks"
+    },
+    {
+      "id": "EDUCATION_APPLICATIONS",
+      "name": "Education applications",
+      "repo": null
+    },
+    {
+      "id": "INTEGRATION_SOFTWARE_VALIDATION",
+      "name": "Integration & software validation",
+      "repo": null
+    },
+    {
+      "id": "MECHANICAL",
+      "name": "Mechanical",
+      "repo": null,
+      "hold": true
+    },
+    {
+      "id": "DEVICE_ENDPOINT",
+      "name": "Device / Endpoint",
+      "repo": null
+    },
+    {
+      "id": "NEXUS_EDGE",
+      "name": "Nexus / Edge",
+      "repo": null
+    },
+    {
+      "id": "CI_DEV_INFRA",
+      "name": "CI / Dev infrastructure",
+      "repo": "KritvaOS/kritva-program"
+    },
+    {
+      "id": "ELECTRICAL_POWER",
+      "name": "Electrical / Power",
+      "repo": null
+    },
+    {
+      "id": "ACTUATION_CONTROLS",
+      "name": "Actuation / Controls",
+      "repo": null
+    },
+    {
+      "id": "MANUFACTURING_FLEET",
+      "name": "Manufacturing / Fleet",
+      "repo": null
+    },
+    {
+      "id": "ACT_INT",
+      "name": "Actuator integration (kritva-actuator)",
+      "repo": "KritvaOS/kritva-actuator",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "INTEGRATION_SOFTWARE_VALIDATION"
+      ]
+    },
+    {
+      "id": "ACT_EMB",
+      "name": "Actuator embedded",
+      "repo": "KritvaOS/kritva-actuator-embedded",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "ACTUATION_CONTROLS",
+        "ELECTRICAL_POWER"
+      ]
+    },
+    {
+      "id": "ACT_S",
+      "name": "Actuator S (mechanical)",
+      "repo": "KritvaOS/kritva-actuator-s",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "MECHANICAL"
+      ]
+    },
+    {
+      "id": "ACT_M",
+      "name": "Actuator M (mechanical)",
+      "repo": "KritvaOS/kritva-actuator-m",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "MECHANICAL"
+      ]
+    },
+    {
+      "id": "ACT_L",
+      "name": "Actuator L (mechanical)",
+      "repo": "KritvaOS/kritva-actuator-l",
+      "kind": "EXECUTION_WORKSTREAM",
+      "effort_owner": false,
+      "rolls_up_to": [
+        "MECHANICAL"
+      ]
+    }
+  ]
+}

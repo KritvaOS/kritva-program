@@ -1,0 +1,411 @@
+{
+  "_note": "Canonical decision queue for the V2 planning layer (D-044). Status and ownership come from these fields only; PENDING_DECISIONS.md is generated from them. Accepted decisions also get a row in v2/DECISIONS.md.",
+  "schema_version": "1.0",
+  "records": [
+    {
+      "record_id": "PD-001",
+      "record_type": "DECISION",
+      "title": "Approve the nine V2 phase milestone target dates",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0",
+          "V2-M1",
+          "V2-M2",
+          "V2-M3",
+          "V2-M4",
+          "V2-M5",
+          "V2-M7",
+          "V2-M8"
+        ],
+        "repo_ids": []
+      },
+      "required_action": "Confirm, revise or leave UNSCHEDULED each proposed date in v2/planning/milestones.json; state whether they are planning targets or commitments.",
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-002",
+      "record_type": "DECISION",
+      "title": "Define P6 LAB & ROBOT reopening criteria",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M6"
+        ],
+        "repo_ids": [
+          "kritva-actuator",
+          "kritva-actuator-embedded",
+          "kritva-actuator-s",
+          "kritva-actuator-m",
+          "kritva-actuator-l"
+        ]
+      },
+      "required_action": "Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6.",
+      "blocking": true,
+      "blocks": [
+        "V2-M6"
+      ],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-003",
+      "record_type": "DECISION",
+      "title": "Decide where Sim, SDK, Studio and Control Plane live",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M1",
+          "V2-M2",
+          "V2-M3"
+        ],
+        "repo_ids": []
+      },
+      "required_action": "Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them.",
+      "blocking": true,
+      "blocks": [
+        "V2-M1"
+      ],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-004",
+      "record_type": "DECISION",
+      "title": "Approve the repository and task ID registry",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [],
+        "repo_ids": []
+      },
+      "required_action": "Confirm the prefixes in repo-pipeline.json (KOS-SENSE, KOS-MOTION, KOS-MIND, KOS-SKILL and the existing ones) and that task IDs are globally unique.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-005",
+      "record_type": "DECISION",
+      "title": "Approve the acceptance and test policy",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [],
+        "repo_ids": []
+      },
+      "required_action": "Set required checks per repository kind, coverage thresholds if any, waiver authority and safety and security approval roles (v2/planning/ACCEPTANCE_STANDARD.md).",
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-006",
+      "record_type": "DECISION",
+      "title": "Approve the tag policy",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [],
+        "repo_ids": []
+      },
+      "required_action": "Confirm annotated SemVer tags, the restricted use of milestone prerelease tags and who may create release tags.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-007",
+      "record_type": "DECISION",
+      "title": "Approve the PR reviewer-role mapping",
+      "status": "ACCEPTED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [],
+        "repo_ids": []
+      },
+      "required_action": "Resolved on an interim basis by D-047: Dinesh (dineshannayya) holds ARCHITECTURE_REVIEWER and SAFETY_REVIEWER. Name an independent holder when one exists.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": "D-047",
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-009",
+      "record_type": "DECISION",
+      "title": "Approve the status schema and record ownership",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [],
+        "repo_ids": []
+      },
+      "required_action": "Confirm the canonical locations of decision, review, gate and milestone records in v2/planning and the generated report locations.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-010",
+      "record_type": "DECISION",
+      "title": "Choose the merge method",
+      "status": "ACCEPTED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [],
+        "repo_ids": []
+      },
+      "required_action": "Resolved; see v2/DECISIONS.md.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": "D-053",
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-012",
+      "record_type": "DECISION",
+      "title": "Include the four new repositories in the return-to-private plan and readiness checklist",
+      "status": "ACCEPTED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0"
+        ],
+        "repo_ids": [
+          "kritva-mind",
+          "kritva-sense",
+          "kritva-skill",
+          "kritva-motion"
+        ]
+      },
+      "required_action": "Resolved by D-063: kritva-core, kritvaos-community, kritva-sense, kritva-motion, kritva-mind and kritva-skill are PUBLIC and stay public; the four capability repositories are not part of the return-to-private plan.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": "D-063",
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-013",
+      "record_type": "DECISION",
+      "title": "Choose the licence for the four new repositories",
+      "status": "ACCEPTED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0"
+        ],
+        "repo_ids": [
+          "kritva-mind",
+          "kritva-sense",
+          "kritva-skill",
+          "kritva-motion"
+        ]
+      },
+      "required_action": "Resolved by D-064: Apache-2.0 is confirmed for the four repositories, core and community.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": "D-064",
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-014",
+      "record_type": "DECISION",
+      "title": "Register the four new repositories on their workstreams",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0"
+        ],
+        "repo_ids": [
+          "kritva-mind",
+          "kritva-sense",
+          "kritva-skill",
+          "kritva-motion"
+        ]
+      },
+      "required_action": "workstreams.json has SENSE, MOTION, SKILL and MIND with no repository. Recording the repository changes a program record, so it needs your approval (as D-034 did for the actuators).",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
+    },
+    {
+      "record_id": "PD-015",
+      "record_type": "DECISION",
+      "title": "Approve drafting the Core engineering contract",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0"
+        ],
+        "repo_ids": [
+          "kritva-core"
+        ]
+      },
+      "required_action": "Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check.",
+      "blocking": true,
+      "blocks": [
+        "V2-M0"
+      ],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "readiness check contract_pin"
+    },
+    {
+      "record_id": "PD-017",
+      "record_type": "DECISION",
+      "title": "Test the Community security mailbox",
+      "status": "PROPOSED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0"
+        ],
+        "repo_ids": [
+          "kritvaos-community"
+        ]
+      },
+      "required_action": "After the SECURITY.md contact patch merges, send a test email to the Security Owner's mailbox so security_policy can move from OPEN to ATTESTED.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "readiness check security_policy"
+    },
+    {
+      "record_id": "PD-018",
+      "record_type": "DECISION",
+      "title": "Make pr-acceptance-gate a required check in each repo ruleset",
+      "status": "ACCEPTED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0"
+        ],
+        "repo_ids": [
+          "kritva-sense",
+          "kritva-motion",
+          "kritva-mind",
+          "kritva-skill"
+        ]
+      },
+      "required_action": "Accepted by D-061. The owner states that pr-acceptance-gate was added to the required status checks of the main ruleset in kritva-sense, kritva-motion, kritva-mind and kritva-skill (D-069; owner-attested, not verified from this repository). The gate stays report-only: REJECT blocks merge, NEEDS_HUMAN and APPROVE do not.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": "D-061, D-069",
+      "source": "D-045"
+    },
+    {
+      "record_id": "PD-019",
+      "record_type": "DECISION",
+      "title": "Roll out the commit standard (Conventional Commits and a Task footer) to the older repositories",
+      "status": "ACCEPTED",
+      "created_at": "2026-10-18",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M0"
+        ],
+        "repo_ids": []
+      },
+      "required_action": "Resolved; see v2/DECISIONS.md.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [],
+      "supersedes": [],
+      "approval_ref": "D-061, D-070",
+      "source": "program PR review"
+    }
+  ]
+}

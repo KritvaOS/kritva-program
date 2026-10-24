@@ -1,0 +1,1493 @@
+{
+  "baseline_approved": true,
+  "baseline_version": 2,
+  "by_milestone": {
+    "KF-CORE-R10": {
+      "accepted_weight": 30,
+      "complete": 9,
+      "credited": 9,
+      "tasks": 9,
+      "weight": 30,
+      "weighted": true
+    },
+    "KOS-I2": {
+      "accepted_weight": 18,
+      "complete": 6,
+      "credited": 6,
+      "tasks": 6,
+      "weight": 18,
+      "weighted": true
+    },
+    "KOS-I3": {
+      "accepted_weight": 0,
+      "complete": 7,
+      "credited": 0,
+      "tasks": 7,
+      "weight": 23,
+      "weighted": true
+    },
+    "KOS-I4": {
+      "accepted_weight": 0,
+      "complete": 8,
+      "credited": 0,
+      "tasks": 8,
+      "weight": 30,
+      "weighted": true
+    },
+    "KRP-ENG": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 3,
+      "weighted": true
+    }
+  },
+  "by_phase": {
+    "UNMAPPED": {
+      "accepted_weight": 48,
+      "complete": 30,
+      "credited": 15,
+      "tasks": 31,
+      "weight": 104,
+      "weighted": true
+    }
+  },
+  "by_workstream": {
+    "CI_DEV_INFRA": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 3,
+      "weighted": true
+    },
+    "COMMUNITY": {
+      "accepted_weight": 18,
+      "complete": 21,
+      "credited": 6,
+      "tasks": 21,
+      "weight": 71,
+      "weighted": true
+    },
+    "CORE": {
+      "accepted_weight": 30,
+      "complete": 9,
+      "credited": 9,
+      "tasks": 9,
+      "weight": 30,
+      "weighted": true
+    }
+  },
+  "changes": {
+    "items": [],
+    "recorded_at": "2026-10-24T17:47:12Z",
+    "since": null
+  },
+  "errors": [],
+  "evidence_health": [
+    "I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007: evidence reported (MILESTONE, run 38158709895 at 8256ba3; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-001: evidence reported (OWN, run 37253855540 at d2f8936; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-002: evidence reported (OWN, run 37256868535 at 52218f4; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-003: evidence reported (OWN, run 37347653023 at c40fbb2; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-004: evidence reported (OWN, run 37405212290 at 3c535b6; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-005: evidence reported (OWN, run 37407633177 at a690520; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-006: evidence reported (OWN, run 37497496804 at 94aa01d; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-007: evidence reported (OWN, run 37507901354 at cd51be8; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "I4-008: evidence reported (RERUN, run 37561636952 at 79f4daf; run confirmed against GitHub) but no central approval is recorded, so zero credit until approved",
+    "KRP-ENG-001: the repo reports no commit-bound CI evidence"
+  ],
+  "gates": [
+    {
+      "approval_required": true,
+      "blocking_effect": [
+        "TASK_CREDIT",
+        "PHASE_EXIT",
+        "RELEASE"
+      ],
+      "closed_at": "2026-10-17T07:45:00Z",
+      "closed_by": "Dinesh",
+      "closure_criteria": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
+      "closure_id": "C009",
+      "closure_limitations": "Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.",
+      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "frozen_status": "OPEN",
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "note": "OPEN per Community MILESTONE_STATUS.md. Scope is the whole milestone as a conservative default; the owner may narrow it to specific task_ids.",
+      "owner": "Dinesh",
+      "reviewer": {
+        "independent_of_implementation": "yes",
+        "name": "Not named to Claude",
+        "role": "Independent reviewer (per owner statement)"
+      },
+      "scope": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "status": "CLOSED",
+      "title": "KOS-I3 human safety review"
+    },
+    {
+      "approval_required": true,
+      "blocking_effect": [
+        "TASK_CREDIT",
+        "PHASE_EXIT",
+        "RELEASE"
+      ],
+      "closed_at": "2026-10-17T07:45:00Z",
+      "closed_by": "Dinesh",
+      "closure_criteria": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
+      "closure_id": "C010",
+      "closure_limitations": "Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.",
+      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "frozen_status": "OPEN",
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "note": "OPEN per Community MILESTONE_STATUS.md. I4-004..008 are flagged safety-relevant; milestone-wide scope is a conservative default pending owner narrowing.",
+      "owner": "Dinesh",
+      "reviewer": {
+        "independent_of_implementation": "yes",
+        "name": "Not named to Claude",
+        "role": "Independent reviewer (per owner statement)"
+      },
+      "scope": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "status": "CLOSED",
+      "title": "KOS-I4 human safety review"
+    },
+    {
+      "approval_required": true,
+      "blocking_effect": [
+        "RELEASE"
+      ],
+      "closed_at": null,
+      "closed_by": null,
+      "closure_criteria": "Reviewed evidence that the release, ASan and UBSan CI variants ran green on the closing commit, and the owner closes the gate. A CI job existing does not close it.",
+      "evidence_commit": null,
+      "frozen_status": "OPEN",
+      "gate_id": "GATE-KOS-CI-001",
+      "note": "Community docs say deferred; kritvaos-community ci.yml already has a variants job. Its results are UNVERIFIED. Scope (KOS-I4, release only) is UNVERIFIED.",
+      "owner": "Dinesh",
+      "scope": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "status": "OPEN",
+      "title": "KOS-CI-001 Release/ASan/UBSan CI"
+    }
+  ],
+  "generated_at": "2026-10-24T17:47:12Z",
+  "measures": {
+    "evidence_coverage": {
+      "tasks_total": 31,
+      "tasks_with_github_verified_run": 15,
+      "tasks_with_verified_evidence": 15
+    },
+    "execution_complete": {
+      "note": "reported by repos; not acceptance",
+      "tasks_complete": 30,
+      "tasks_total": 31
+    },
+    "release_readiness": {
+      "open_release_gates": [
+        "GATE-KOS-CI-001"
+      ],
+      "state": "NOT_READY",
+      "uncredited_tasks": 16
+    }
+  },
+  "phase_sequence": [
+    [
+      "P0",
+      "FOUNDATION"
+    ],
+    [
+      "P1",
+      "STUDIO"
+    ],
+    [
+      "P2",
+      "BUILD & ARTIFACT"
+    ],
+    [
+      "P3",
+      "CONTROL PLANE"
+    ],
+    [
+      "P4",
+      "BOOKING & COMMERCIAL"
+    ],
+    [
+      "P5",
+      "EXECUTION"
+    ],
+    [
+      "P6",
+      "LAB & ROBOT"
+    ],
+    [
+      "P7",
+      "LIVE & RESULTS"
+    ],
+    [
+      "P8",
+      "PRODUCTION"
+    ]
+  ],
+  "program_status": {
+    "accepted_progress": "0% of the P0 baseline (no tasks defined or accepted yet)",
+    "as_of": "2026-10-09",
+    "current_phase": "P0 FOUNDATION",
+    "phases": [
+      {
+        "acceptance": "NOT_RUN",
+        "accepted": "0%",
+        "execution": "IN_PROGRESS",
+        "name": "FOUNDATION",
+        "phase": "P0",
+        "review": "NOT_REVIEWED"
+      },
+      {
+        "acceptance": "\u2014",
+        "accepted": "0%",
+        "execution": "NOT_STARTED",
+        "name": "STUDIO",
+        "phase": "P1",
+        "review": "\u2014"
+      },
+      {
+        "acceptance": "\u2014",
+        "accepted": "0%",
+        "execution": "NOT_STARTED",
+        "name": "\u2014",
+        "phase": "P2\u2013P8",
+        "review": "\u2014"
+      }
+    ],
+    "source": "v2/tracking/STATUS.md"
+  },
+  "progress": {
+    "accepted_progress_pct": 46.15,
+    "basis": "48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+  },
+  "require_run_verification": true,
+  "source_freshness": {
+    "rows": [
+      {
+        "age_hours": 192,
+        "ahead_by": 1,
+        "changed_files": [
+          "scripts/gen_status.py",
+          "scripts/test_gen_status.py",
+          "status/README.md",
+          "status/evidence.json",
+          "status/status.json"
+        ],
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-10-16T17:21:54Z",
+        "fetched_head": "794cf195303a5854b63104c91880432d4e905ee2",
+        "freshness": "STALE",
+        "gap_kind": "STATUS_TOOLING",
+        "relation": "AHEAD",
+        "repo": "KritvaOS/kritvaos-community",
+        "report_source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "status_only": false,
+        "workstream_id": "COMMUNITY"
+      },
+      {
+        "age_hours": 192,
+        "ahead_by": 2,
+        "changed_files": [
+          "scripts/status/gen_status.py",
+          "scripts/status/test_gen_status.py",
+          "status/README.md",
+          "status/evidence.json",
+          "status/status.json"
+        ],
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-10-16T17:21:54Z",
+        "fetched_head": "42c6e840e83abda909c571f2d43c7a21ba8d2021",
+        "freshness": "STALE",
+        "gap_kind": "STATUS_TOOLING",
+        "relation": "AHEAD",
+        "repo": "KritvaOS/kritva-core",
+        "report_source_commit": "54984ae1d207b2ea3ffe14699b4e9a4b56099642",
+        "status_only": false,
+        "workstream_id": "CORE"
+      }
+    ],
+    "stale_hours": 72,
+    "warn_hours": 24
+  },
+  "status_facts": {
+    "credited": [
+      "I2-001",
+      "I2-002",
+      "I2-003",
+      "I2-004",
+      "I2-005",
+      "I2-006",
+      "KF-CORE-R10-001",
+      "KF-CORE-R10-002",
+      "KF-CORE-R10-003",
+      "KF-CORE-R10-004",
+      "KF-CORE-R10-005",
+      "KF-CORE-R10-006",
+      "KF-CORE-R10-007",
+      "KF-CORE-R10-008",
+      "KF-CORE-R10-009"
+    ],
+    "effort_completed": null,
+    "effort_remaining": null,
+    "errors": 0,
+    "gates": {
+      "GATE-KOS-CI-001": "OPEN",
+      "GATE-KOS-I3-SAFETY": "CLOSED",
+      "GATE-KOS-I4-SAFETY": "CLOSED"
+    },
+    "pending_decisions": 10,
+    "pending_reviews": 7,
+    "progress": "48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 46.15,
+    "readiness": {},
+    "warnings": 21
+  },
+  "tasks": [
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 4 x approval A016 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I2",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "150d21161ce22676a23c76adbc5758222421f948"
+      },
+      "run_verified": true,
+      "task_commit": "150d21161ce22676a23c76adbc5758222421f948",
+      "task_id": "I2-001",
+      "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "weight": 4,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A017 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I2",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "e2851fdae3229e7a0139841ee1c099dab2ad218d"
+      },
+      "run_verified": true,
+      "task_commit": "e2851fdae3229e7a0139841ee1c099dab2ad218d",
+      "task_id": "I2-002",
+      "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "weight": 3,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A018 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I2",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "ae0de753d1e240a71da9e1411efc30cbfe9a109e"
+      },
+      "run_verified": true,
+      "task_commit": "ae0de753d1e240a71da9e1411efc30cbfe9a109e",
+      "task_id": "I2-003",
+      "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "weight": 3,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A019 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I2",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "bfa2b29aee7fcfcd34bf9b870b6249e556e32333"
+      },
+      "run_verified": true,
+      "task_commit": "bfa2b29aee7fcfcd34bf9b870b6249e556e32333",
+      "task_id": "I2-004",
+      "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "weight": 3,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A020 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I2",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "e8ad7937366455c758c9cd0add35fb17d8593b3c"
+      },
+      "run_verified": true,
+      "task_commit": "e8ad7937366455c758c9cd0add35fb17d8593b3c",
+      "task_id": "I2-005",
+      "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "weight": 3,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 2 x approval A021 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "38158709895",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I2",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "69521ef3c164847e8956ef509d2f8f6a308f24b1"
+      },
+      "run_verified": true,
+      "task_commit": "69521ef3c164847e8956ef509d2f8f6a308f24b1",
+      "task_id": "I2-006",
+      "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "weight": 2,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I3",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "39780ccb8f93719471ee982299f6f43f2cee6196"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I3-001",
+      "tested_commit": null,
+      "weight": 4,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I3",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "a7e08e518257d657ae0b1a1ac8696241cc8844d2"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I3-002",
+      "tested_commit": null,
+      "weight": 3,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I3",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "97ab51870a122019a80acf7507bd916a4bef3a3b"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I3-003",
+      "tested_commit": null,
+      "weight": 4,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I3",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "f98067542476258b3e346353115bf663760b5491"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I3-004",
+      "tested_commit": null,
+      "weight": 3,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I3",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I3-005",
+      "tested_commit": null,
+      "weight": 3,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I3",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "46b91fabac8bd4a9df00797ca23313717127c325"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I3-006",
+      "tested_commit": null,
+      "weight": 4,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I3",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "github_verified": true,
+        "run": "38158709895",
+        "task_commit": "d8cd3150867a7e71111579a9cac6d37a5832731e"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I3-007",
+      "tested_commit": null,
+      "weight": 2,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I4",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "github_verified": true,
+        "run": "37253855540",
+        "task_commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I4-001",
+      "tested_commit": null,
+      "weight": 4,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I4",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "github_verified": true,
+        "run": "37256868535",
+        "task_commit": "52218f484f29ea58813b848008d187aeab98a0bf"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I4-002",
+      "tested_commit": null,
+      "weight": 4,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I4",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "github_verified": true,
+        "run": "37347653023",
+        "task_commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I4-003",
+      "tested_commit": null,
+      "weight": 3,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I4",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "3c535b64ebae626065032e7315e679e474f6853b",
+        "github_verified": true,
+        "run": "37405212290",
+        "task_commit": "3c535b64ebae626065032e7315e679e474f6853b"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I4-004",
+      "tested_commit": null,
+      "weight": 4,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I4",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "a6905207441abdc13ec6238272e7681093c50180",
+        "github_verified": true,
+        "run": "37407633177",
+        "task_commit": "a6905207441abdc13ec6238272e7681093c50180"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I4-005",
+      "tested_commit": null,
+      "weight": 4,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I4",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "github_verified": true,
+        "run": "37497496804",
+        "task_commit": "94aa01d8ed99561acf77020257e6c517b15a369d"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I4-006",
+      "tested_commit": null,
+      "weight": 5,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I4",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "github_verified": true,
+        "run": "37507901354",
+        "task_commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I4-007",
+      "tested_commit": null,
+      "weight": 4,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
+      "evidence_verified": false,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KOS-I4",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "RERUN",
+        "commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "github_verified": true,
+        "run": "37561636952",
+        "task_commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9"
+      },
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "I4-008",
+      "tested_commit": null,
+      "weight": 2,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A022 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "1dba57166dfef312f6c204b8dd759c93ec309c99"
+      },
+      "run_verified": true,
+      "task_commit": "1dba57166dfef312f6c204b8dd759c93ec309c99",
+      "task_id": "KF-CORE-R10-001",
+      "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "weight": 3,
+      "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 4 x approval A023 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "bbe10b6cb67165834d91b1cd0fe428579af5136d"
+      },
+      "run_verified": true,
+      "task_commit": "bbe10b6cb67165834d91b1cd0fe428579af5136d",
+      "task_id": "KF-CORE-R10-002",
+      "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "weight": 4,
+      "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A024 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "559d75f7d7b57ef0dd6652e6f9d751b732e2d90d"
+      },
+      "run_verified": true,
+      "task_commit": "559d75f7d7b57ef0dd6652e6f9d751b732e2d90d",
+      "task_id": "KF-CORE-R10-003",
+      "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "weight": 3,
+      "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 4 x approval A025 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "a121c24f3987e97e4f7650effd45da638932e54e"
+      },
+      "run_verified": true,
+      "task_commit": "a121c24f3987e97e4f7650effd45da638932e54e",
+      "task_id": "KF-CORE-R10-004",
+      "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "weight": 4,
+      "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A026 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "2882cd2083591011d8556eec582eb777b6936dc3"
+      },
+      "run_verified": true,
+      "task_commit": "2882cd2083591011d8556eec582eb777b6936dc3",
+      "task_id": "KF-CORE-R10-005",
+      "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "weight": 3,
+      "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 4 x approval A027 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "b44b14be9ac32a75b7fcf0568ddabfb14bedb1d1"
+      },
+      "run_verified": true,
+      "task_commit": "b44b14be9ac32a75b7fcf0568ddabfb14bedb1d1",
+      "task_id": "KF-CORE-R10-006",
+      "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "weight": 4,
+      "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A028 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "f212e469bb764cc0e27b3e40dfe8d67e9cd241d0"
+      },
+      "run_verified": true,
+      "task_commit": "f212e469bb764cc0e27b3e40dfe8d67e9cd241d0",
+      "task_id": "KF-CORE-R10-007",
+      "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "weight": 3,
+      "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A029 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "c0edf1f0e1fa75dd90172e280776ea5fd27ac8eb"
+      },
+      "run_verified": true,
+      "task_commit": "c0edf1f0e1fa75dd90172e280776ea5fd27ac8eb",
+      "task_id": "KF-CORE-R10-008",
+      "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "weight": 3,
+      "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "PASS",
+      "blocked_by": [],
+      "credit": true,
+      "credit_reason": "weight 3 x approval A030 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "37192914607",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
+      "milestone_id": "KF-CORE-R10",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "github_verified": true,
+        "run": "37192914607",
+        "task_commit": "af168478fa223b9c5bf4790984849cdf23964642"
+      },
+      "run_verified": true,
+      "task_commit": "af168478fa223b9c5bf4790984849cdf23964642",
+      "task_id": "KF-CORE-R10-009",
+      "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "weight": 3,
+      "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no central approval recorded",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_EVIDENCE_REPORTED",
+      "evidence_verified": false,
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
+      "milestone_id": "KRP-ENG",
+      "phase": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KRP-ENG-001",
+      "tested_commit": null,
+      "weight": 3,
+      "workstream_id": "CI_DEV_INFRA"
+    }
+  ],
+  "v2_plan": {
+    "blocking_decisions": 5,
+    "horizon_end": "2027-09-13",
+    "milestones": [
+      {
+        "closed": false,
+        "id": "V2-M0",
+        "phase": "P0 FOUNDATION",
+        "schedule_status": "PROPOSED",
+        "target_date": "2026-10-30"
+      },
+      {
+        "closed": false,
+        "id": "V2-M1",
+        "phase": "P1 STUDIO",
+        "schedule_status": "PROPOSED",
+        "target_date": "2026-11-30"
+      },
+      {
+        "closed": false,
+        "id": "V2-M2",
+        "phase": "P2 BUILD & ARTIFACT",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-01-15"
+      },
+      {
+        "closed": false,
+        "id": "V2-M3",
+        "phase": "P3 CONTROL PLANE",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-03-15"
+      },
+      {
+        "closed": false,
+        "id": "V2-M4",
+        "phase": "P4 BOOKING & COMMERCIAL",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-04-30"
+      },
+      {
+        "closed": false,
+        "id": "V2-M5",
+        "phase": "P5 EXECUTION",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-06-15"
+      },
+      {
+        "closed": false,
+        "id": "V2-M6",
+        "phase": "P6 LAB & ROBOT",
+        "schedule_status": "HOLD",
+        "target_date": null
+      },
+      {
+        "closed": false,
+        "id": "V2-M7",
+        "phase": "P7 LIVE & RESULTS",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-08-15"
+      },
+      {
+        "closed": false,
+        "id": "V2-M8",
+        "phase": "P8 PRODUCTION",
+        "schedule_status": "PROPOSED",
+        "target_date": "2027-09-13"
+      }
+    ],
+    "pending_decisions": 10,
+    "pending_reviews": 7,
+    "plan_status": "PROPOSED",
+    "program_start": "2026-09-14",
+    "repositories": 12
+  },
+  "warnings": [
+    "ACTUATION_CONTROLS: no status source (UNVERIFIED)",
+    "ACT_EMB: no status source (UNVERIFIED)",
+    "ACT_INT: no status source (UNVERIFIED)",
+    "ACT_L: no status source (UNVERIFIED)",
+    "ACT_M: no status source (UNVERIFIED)",
+    "ACT_S: no status source (UNVERIFIED)",
+    "CONTROL_PLANE: no status source (UNVERIFIED)",
+    "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
+    "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
+    "ELECTRICAL_POWER: no status source (UNVERIFIED)",
+    "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
+    "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
+    "MECHANICAL: no status source (UNVERIFIED)",
+    "MIND: no status source (UNVERIFIED)",
+    "MOTION: no status source (UNVERIFIED)",
+    "NEXUS_EDGE: no status source (UNVERIFIED)",
+    "SDK: no status source (UNVERIFIED)",
+    "SENSE: no status source (UNVERIFIED)",
+    "SIM: no status source (UNVERIFIED)",
+    "SKILL: no status source (UNVERIFIED)",
+    "STUDIO: no status source (UNVERIFIED)"
+  ],
+  "workstreams": [
+    {
+      "commit": "-------",
+      "id": "ACTUATION_CONTROLS",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_EMB",
+      "repo": "KritvaOS/kritva-actuator-embedded",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_INT",
+      "repo": "KritvaOS/kritva-actuator",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_L",
+      "repo": "KritvaOS/kritva-actuator-l",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_M",
+      "repo": "KritvaOS/kritva-actuator-m",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ACT_S",
+      "repo": "KritvaOS/kritva-actuator-s",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "8e5086513ff12a7a20473314878111238f06a4d2",
+      "id": "CI_DEV_INFRA",
+      "repo": "KritvaOS/kritva-program",
+      "source_state": "OK",
+      "tasks_reported": 1
+    },
+    {
+      "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "id": "COMMUNITY",
+      "repo": "KritvaOS/kritvaos-community",
+      "source_state": "OK",
+      "tasks_reported": 21
+    },
+    {
+      "commit": "-------",
+      "id": "CONTROL_PLANE",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "54984ae1d207b2ea3ffe14699b4e9a4b56099642",
+      "id": "CORE",
+      "repo": "KritvaOS/kritva-core",
+      "source_state": "OK",
+      "tasks_reported": 9
+    },
+    {
+      "commit": "-------",
+      "id": "DEVICE_ENDPOINT",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "EDUCATION_APPLICATIONS",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "ELECTRICAL_POWER",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "INTEGRATION_SOFTWARE_VALIDATION",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "MANUFACTURING_FLEET",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "MECHANICAL",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "MIND",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "MOTION",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "NEXUS_EDGE",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "SDK",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "SENSE",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "SIM",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "SKILL",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "STUDIO",
+      "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    }
+  ]
+}

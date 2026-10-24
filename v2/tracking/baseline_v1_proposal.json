@@ -1,0 +1,126 @@
+{
+  "_note": "PROPOSAL ONLY, prepared by Claude for the owner's review. Weights are relative effort on an integer 1-8 scale. Core weights derive from the ED ranges in KF-CORE-R10 TASK_MANIFEST.md; Community weights are judgement and must be revised by the owner. Weights say nothing about importance, completion or safety. Nothing here is approved: baseline.json stays DRAFT until the owner runs tools/freeze_baseline.py --approve.",
+  "scale": "1 = smallest task ... 8 = largest; compare against explicit scope, not importance or current completion",
+  "weights": {
+    "I2-001": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-002": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-003": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-004": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-005": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-006": {
+      "weight": 2,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-001": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-002": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-003": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-004": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-005": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-006": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-007": {
+      "weight": 2,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-001": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-002": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-003": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-004": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-005": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-006": {
+      "weight": 5,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-007": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-008": {
+      "weight": 2,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "KF-CORE-R10-001": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-002": {
+      "weight": 4,
+      "rationale": "Planning ED 3-4; midpoint 3.5 rounded up"
+    },
+    "KF-CORE-R10-003": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-004": {
+      "weight": 4,
+      "rationale": "Planning ED 3-4; midpoint 3.5 rounded up"
+    },
+    "KF-CORE-R10-005": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-006": {
+      "weight": 4,
+      "rationale": "Planning ED 3-4; midpoint 3.5 rounded up"
+    },
+    "KF-CORE-R10-007": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-008": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-009": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    }
+  }
+}

@@ -1,0 +1,1345 @@
+{
+  "repo_head": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+  "note": "CANDIDATES ONLY. Not evidence until reviewed and approved centrally.",
+  "tasks": {
+    "I2-001": [
+      {
+        "short": "150d211",
+        "full": "150d21161ce22676a23c76adbc5758222421f948",
+        "source": "planning/MILESTONE_STATUS.md:13",
+        "subject": "KOS-I2: implement runtime host",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37197903287,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37197903287",
+            "head_sha": "8d3cb6b1b69277e38f33888ba4776dd91da5da58",
+            "event": "push",
+            "commits_after": 6,
+            "task_files_changed_after": [
+              "examples/kritva_demo/CMakeLists.txt",
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/CMakeLists.txt",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/run_demo_sanity.cmake"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 43,
+            "task_files_changed": [
+              "examples/CMakeLists.txt",
+              "examples/kritva_demo/CMakeLists.txt",
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/CMakeLists.txt",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/runtime_host_integration_test.cpp",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/run_demo_sanity.cmake",
+              "tests/runtime/unit/runtime_host_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I2-002": [
+      {
+        "short": "e2851fd",
+        "full": "e2851fdae3229e7a0139841ee1c099dab2ad218d",
+        "source": "planning/MILESTONE_STATUS.md:14",
+        "subject": "KOS-I2: implement component composition",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37197903287,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37197903287",
+            "head_sha": "8d3cb6b1b69277e38f33888ba4776dd91da5da58",
+            "event": "push",
+            "commits_after": 5,
+            "task_files_changed_after": [
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/sanity/run_composition_sanity.cmake"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 42,
+            "task_files_changed": [
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/component_composition_integration_test.cpp",
+              "tests/runtime/sanity/composition_sanity.cpp",
+              "tests/runtime/sanity/run_composition_sanity.cmake",
+              "tests/runtime/unit/component_composition_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I2-003": [
+      {
+        "short": "ae0de75",
+        "full": "ae0de753d1e240a71da9e1411efc30cbfe9a109e",
+        "source": "planning/MILESTONE_STATUS.md:15",
+        "subject": "KOS-I2: implement runtime configuration",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37197903287,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37197903287",
+            "head_sha": "8d3cb6b1b69277e38f33888ba4776dd91da5da58",
+            "event": "push",
+            "commits_after": 4,
+            "task_files_changed_after": [
+              "examples/kritva_demo/kritva_demo.conf",
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/CMakeLists.txt",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/run_configuration_sanity.cmake"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 41,
+            "task_files_changed": [
+              "examples/kritva_demo/kritva_demo.conf",
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/CMakeLists.txt",
+              "runtime/include/kritva/runtime/configuration.hpp",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/configuration.cpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/configuration_integration_test.cpp",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/run_configuration_sanity.cmake",
+              "tests/runtime/unit/configuration_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I2-004": [
+      {
+        "short": "bfa2b29",
+        "full": "bfa2b29aee7fcfcd34bf9b870b6249e556e32333",
+        "source": "planning/MILESTONE_STATUS.md:16",
+        "subject": "KOS-I2: implement runtime observation",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37197903287,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37197903287",
+            "head_sha": "8d3cb6b1b69277e38f33888ba4776dd91da5da58",
+            "event": "push",
+            "commits_after": 3,
+            "task_files_changed_after": [
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/include/kritva/runtime/observation.hpp",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/probe_component.hpp"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 40,
+            "task_files_changed": [
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/include/kritva/runtime/observation.hpp",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/observation_integration_test.cpp",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/observation_sanity.cpp",
+              "tests/runtime/unit/observation_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I2-005": [
+      {
+        "short": "e8ad793",
+        "full": "e8ad7937366455c758c9cd0add35fb17d8593b3c",
+        "source": "planning/MILESTONE_STATUS.md:17",
+        "subject": "KOS-I2: implement failure handling",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37197903287,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37197903287",
+            "head_sha": "8d3cb6b1b69277e38f33888ba4776dd91da5da58",
+            "event": "push",
+            "commits_after": 2,
+            "task_files_changed_after": [
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/sanity/run_failure_sanity.cmake"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 39,
+            "task_files_changed": [
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "planning/milestones/KOS-I2/TASKS.md",
+              "runtime/include/kritva/runtime/runtime_host.hpp",
+              "runtime/src/runtime_host.cpp",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/failure_handling_integration_test.cpp",
+              "tests/runtime/probe_component.hpp",
+              "tests/runtime/sanity/failure_sanity.cpp",
+              "tests/runtime/sanity/run_failure_sanity.cmake",
+              "tests/runtime/unit/failure_handling_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I2-006": [
+      {
+        "short": "69521ef",
+        "full": "69521ef3c164847e8956ef509d2f8f6a308f24b1",
+        "source": "planning/MILESTONE_STATUS.md:18",
+        "subject": "KOS-I2: add reference runtime demo",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37197903287,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37197903287",
+            "head_sha": "8d3cb6b1b69277e38f33888ba4776dd91da5da58",
+            "event": "push",
+            "commits_after": 1,
+            "task_files_changed_after": [
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/demo_application_test.cpp",
+              "tests/runtime/sanity/run_demo_reference_sanity.cmake"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 38,
+            "task_files_changed": [
+              "examples/kritva_demo/demo_app.cpp",
+              "examples/kritva_demo/demo_app.hpp",
+              "examples/kritva_demo/main.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I2/CHANGELOG.md",
+              "tests/CMakeLists.txt",
+              "tests/runtime/integration/demo_application_test.cpp",
+              "tests/runtime/sanity/run_configuration_sanity.cmake",
+              "tests/runtime/sanity/run_demo_reference_sanity.cmake",
+              "tests/runtime/unit/demo_components_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I3-001": [
+      {
+        "short": "39780cc",
+        "full": "39780ccb8f93719471ee982299f6f43f2cee6196",
+        "source": "planning/milestones/KOS-I3/IMPLEMENTATION_PLAN.md:48",
+        "subject": "KOS-I3: implement device and endpoint contracts",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37220929151,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37220929151",
+            "head_sha": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+            "event": "push",
+            "commits_after": 8,
+            "task_files_changed_after": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/CMakeLists.txt",
+              "hardware/abstraction/CMakeLists.txt",
+              "hardware/abstraction/include/kritva/hardware/device.hpp",
+              "hardware/abstraction/include/kritva/hardware/endpoint.hpp",
+              "hardware/abstraction/include/kritva/hardware/sensor_endpoint.hpp",
+              "hardware/abstraction/src/device.cpp",
+              "hardware/abstraction/src/endpoint.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/conformance/endpoint_conformance.hpp",
+              "tests/hardware/support/test_endpoints.hpp",
+              "tests/hardware/unit/endpoint_test.cpp"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 31,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/CMakeLists.txt",
+              "hardware/abstraction/CMakeLists.txt",
+              "hardware/abstraction/include/kritva/hardware/device.hpp",
+              "hardware/abstraction/include/kritva/hardware/endpoint.hpp",
+              "hardware/abstraction/include/kritva/hardware/sensor_endpoint.hpp",
+              "hardware/abstraction/src/device.cpp",
+              "hardware/abstraction/src/endpoint.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-001/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/conformance/endpoint_conformance.hpp",
+              "tests/hardware/support/test_endpoints.hpp",
+              "tests/hardware/unit/endpoint_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I3-002": [
+      {
+        "short": "a7e08e5",
+        "full": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
+        "source": "planning/milestones/KOS-I3/IMPLEMENTATION_PLAN.md:52",
+        "subject": "KOS-I3: implement device and endpoint registry",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37220929151,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37220929151",
+            "head_sha": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+            "event": "push",
+            "commits_after": 7,
+            "task_files_changed_after": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/CMakeLists.txt",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/support/test_endpoints.hpp"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 30,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/CMakeLists.txt",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-002/ACCEPTANCE_CRITERIA.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/support/test_endpoints.hpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I3-003": [
+      {
+        "short": "97ab518",
+        "full": "97ab51870a122019a80acf7507bd916a4bef3a3b",
+        "source": "planning/milestones/KOS-I3/IMPLEMENTATION_PLAN.md:56",
+        "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37220929151,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37220929151",
+            "head_sha": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+            "event": "push",
+            "commits_after": 6,
+            "task_files_changed_after": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/CMakeLists.txt",
+              "hardware/abstraction/include/kritva/hardware/device_manager.hpp",
+              "hardware/abstraction/include/kritva/hardware/endpoint.hpp",
+              "hardware/abstraction/src/device_manager.cpp",
+              "hardware/abstraction/src/endpoint.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/conformance/endpoint_conformance.hpp",
+              "tests/hardware/support/test_endpoints.hpp",
+              "tests/hardware/unit/device_manager_test.cpp"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 29,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/CMakeLists.txt",
+              "hardware/abstraction/include/kritva/hardware/device_manager.hpp",
+              "hardware/abstraction/include/kritva/hardware/endpoint.hpp",
+              "hardware/abstraction/src/device_manager.cpp",
+              "hardware/abstraction/src/endpoint.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-003/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/conformance/endpoint_conformance.hpp",
+              "tests/hardware/support/test_endpoints.hpp",
+              "tests/hardware/unit/device_manager_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I3-004": [
+      {
+        "short": "f980675",
+        "full": "f98067542476258b3e346353115bf663760b5491",
+        "source": "planning/milestones/KOS-I3/IMPLEMENTATION_PLAN.md:60",
+        "subject": "KOS-I3: implement typed sensor and actuator interfaces",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37220929151,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37220929151",
+            "head_sha": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+            "event": "push",
+            "commits_after": 5,
+            "task_files_changed_after": [
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/include/kritva/hardware/samples.hpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "tests/CMakeLists.txt"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 28,
+            "task_files_changed": [
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/include/kritva/hardware/samples.hpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-004/ACCEPTANCE_CRITERIA.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I3-005": [
+      {
+        "short": "cd1a35c",
+        "full": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
+        "source": "planning/milestones/KOS-I3/IMPLEMENTATION_PLAN.md:64",
+        "subject": "KOS-I3: implement mock device and endpoint library",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37220929151,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37220929151",
+            "head_sha": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+            "event": "push",
+            "commits_after": 4,
+            "task_files_changed_after": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/mock/include/kritva/hardware/mock/mock_motor.hpp",
+              "hardware/mock/src/mock_motor.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/unit/mock_test.cpp"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 27,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/CMakeLists.txt",
+              "hardware/mock/include/kritva/hardware/mock/mock_motor.hpp",
+              "hardware/mock/src/mock_motor.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-005/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/unit/mock_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I3-006": [
+      {
+        "short": "46b91fa",
+        "full": "46b91fabac8bd4a9df00797ca23313717127c325",
+        "source": "planning/milestones/KOS-I3/IMPLEMENTATION_PLAN.md:68",
+        "subject": "KOS-I3: implement observation diagnostics and fault handling",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37220929151,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37220929151",
+            "head_sha": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+            "event": "push",
+            "commits_after": 3,
+            "task_files_changed_after": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/include/kritva/hardware/device_manager.hpp",
+              "hardware/abstraction/include/kritva/hardware/diagnostics.hpp",
+              "hardware/abstraction/src/device_manager.cpp",
+              "hardware/abstraction/src/diagnostics.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/unit/diagnostics_test.cpp"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 26,
+            "task_files_changed": [
+              "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "hardware/abstraction/include/kritva/hardware/device_manager.hpp",
+              "hardware/abstraction/include/kritva/hardware/diagnostics.hpp",
+              "hardware/abstraction/src/device_manager.cpp",
+              "hardware/abstraction/src/diagnostics.cpp",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-006/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/unit/diagnostics_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I3-007": [
+      {
+        "short": "d8cd315",
+        "full": "d8cd3150867a7e71111579a9cac6d37a5832731e",
+        "source": "planning/milestones/KOS-I3/IMPLEMENTATION_PLAN.md:72",
+        "subject": "KOS-I3: add reference device demo",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37220929151,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37220929151",
+            "head_sha": "9912e3cf81f50da99edc4e8885130ad79ec6b9d6",
+            "event": "push",
+            "commits_after": 2,
+            "task_files_changed_after": [
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-007/ACCEPTANCE_CRITERIA.md"
+            ]
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 25,
+            "task_files_changed": [
+              "docs/verification/KOS-I3_VERIFICATION.md",
+              "examples/CMakeLists.txt",
+              "planning/MILESTONE_STATUS.md",
+              "planning/milestones/KOS-I3/CHANGELOG.md",
+              "planning/milestones/KOS-I3/I3-007/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I3/TASKS.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I4-001": [
+      {
+        "short": "d2f8936",
+        "full": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "source": "planning/milestones/KOS-I4/TASKS.md:26",
+        "subject": "KOS-I4 I4-001 admit responses by correlation",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-05T02:03:33Z",
+            "databaseId": 37253855597,
+            "event": "push",
+            "headSha": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37253855597",
+            "workflowName": "Source Header Check"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-05T02:03:33Z",
+            "databaseId": 37253855540,
+            "event": "push",
+            "headSha": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37253855540",
+            "workflowName": "KritvaOS CI"
+          }
+        ],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37253855540,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37253855540",
+            "head_sha": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+            "event": "push",
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 14,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_PROTOCOL.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I4-002": [
+      {
+        "short": "52218f4",
+        "full": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "source": "planning/milestones/KOS-I4/TASKS.md:27",
+        "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-05T02:48:58Z",
+            "databaseId": 37256868559,
+            "event": "push",
+            "headSha": "52218f484f29ea58813b848008d187aeab98a0bf",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37256868559",
+            "workflowName": "Source Header Check"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-05T02:48:58Z",
+            "databaseId": 37256868535,
+            "event": "push",
+            "headSha": "52218f484f29ea58813b848008d187aeab98a0bf",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37256868535",
+            "workflowName": "KritvaOS CI"
+          }
+        ],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37256868535,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37256868535",
+            "head_sha": "52218f484f29ea58813b848008d187aeab98a0bf",
+            "event": "push",
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 13,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_TRANSPORT_ARCHITECTURE.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/transport/CMakeLists.txt",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/I4-002/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      },
+      {
+        "short": "15c1781",
+        "full": "15c17813adebcc99eacb8a59b402c9e9ff7761c4",
+        "source": "planning/MILESTONE_STATUS.md:53",
+        "subject": "KOS-I4 I4-003 implement deterministic simulated transport",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-05T17:14:40Z",
+            "databaseId": 37346957754,
+            "event": "push",
+            "headSha": "15c17813adebcc99eacb8a59b402c9e9ff7761c4",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37346957754",
+            "workflowName": "KritvaOS CI"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-05T17:14:40Z",
+            "databaseId": 37346957734,
+            "event": "push",
+            "headSha": "15c17813adebcc99eacb8a59b402c9e9ff7761c4",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37346957734",
+            "workflowName": "Source Header Check"
+          }
+        ],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37346957754,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37346957754",
+            "head_sha": "15c17813adebcc99eacb8a59b402c9e9ff7761c4",
+            "event": "push",
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 12,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_TRANSPORT_ARCHITECTURE.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/transport/include/kritva/hardware/transport/transport.hpp",
+              "hardware/transport/src/simulated_transport.cpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/I4-003/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/integration/frame_transport_test.cpp",
+              "tests/hardware/unit/transport_hygiene_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I4-003": [
+      {
+        "short": "c40fbb2",
+        "full": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "source": "planning/milestones/KOS-I4/TASKS.md:28",
+        "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-05T17:20:12Z",
+            "databaseId": 37347653160,
+            "event": "push",
+            "headSha": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37347653160",
+            "workflowName": "Source Header Check"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-05T17:20:12Z",
+            "databaseId": 37347653023,
+            "event": "push",
+            "headSha": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37347653023",
+            "workflowName": "KritvaOS CI"
+          }
+        ],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37347653023,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37347653023",
+            "head_sha": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+            "event": "push",
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 11,
+            "task_files_changed": [],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I4-004": [
+      {
+        "short": "3c535b6",
+        "full": "3c535b64ebae626065032e7315e679e474f6853b",
+        "source": "planning/milestones/KOS-I4/TASKS.md:29",
+        "subject": "KOS-I4 I4-004 implement edge host and remote service",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-06T02:39:44Z",
+            "databaseId": 37405212290,
+            "event": "push",
+            "headSha": "3c535b64ebae626065032e7315e679e474f6853b",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37405212290",
+            "workflowName": "KritvaOS CI"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-06T02:39:44Z",
+            "databaseId": 37405212053,
+            "event": "push",
+            "headSha": "3c535b64ebae626065032e7315e679e474f6853b",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37405212053",
+            "workflowName": "Source Header Check"
+          }
+        ],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37405212290,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37405212290",
+            "head_sha": "3c535b64ebae626065032e7315e679e474f6853b",
+            "event": "push",
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 10,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_PROTOCOL.md",
+              "docs/architecture/KOS-I4_REMOTE_ARCHITECTURE.md",
+              "docs/requirements/KOS-I4/REQUIREMENTS.md",
+              "docs/requirements/KOS-I4/SR.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/remote/CMakeLists.txt",
+              "hardware/remote/include/kritva/hardware/remote/edge_host.hpp",
+              "hardware/remote/src/edge_host.cpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/integration/edge_transport_test.cpp",
+              "tests/hardware/support/edge_rig.hpp",
+              "tests/hardware/unit/remote_hygiene_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I4-005": [
+      {
+        "short": "a690520",
+        "full": "a6905207441abdc13ec6238272e7681093c50180",
+        "source": "planning/milestones/KOS-I4/TASKS.md:30",
+        "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-06T03:09:18Z",
+            "databaseId": 37407633190,
+            "event": "push",
+            "headSha": "a6905207441abdc13ec6238272e7681093c50180",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37407633190",
+            "workflowName": "Source Header Check"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-06T03:09:18Z",
+            "databaseId": 37407633177,
+            "event": "push",
+            "headSha": "a6905207441abdc13ec6238272e7681093c50180",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37407633177",
+            "workflowName": "KritvaOS CI"
+          }
+        ],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37407633177,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37407633177",
+            "head_sha": "a6905207441abdc13ec6238272e7681093c50180",
+            "event": "push",
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 9,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_REMOTE_ARCHITECTURE.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/remote/CMakeLists.txt",
+              "hardware/remote/include/kritva/hardware/remote/remote_endpoint.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_node.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_session.hpp",
+              "hardware/remote/src/remote_endpoint.cpp",
+              "hardware/remote/src/remote_node.cpp",
+              "hardware/remote/src/remote_session.cpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/I4-006/ACCEPTANCE_CRITERIA.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt",
+              "tests/hardware/integration/nexus_edge_test.cpp",
+              "tests/hardware/unit/remote_endpoint_test.cpp",
+              "tests/hardware/unit/remote_hygiene_test.cpp",
+              "tests/hardware/unit/remote_session_test.cpp"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I4-006": [
+      {
+        "short": "94aa01d",
+        "full": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "source": "planning/milestones/KOS-I4/TASKS.md:31",
+        "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-06T16:40:03Z",
+            "databaseId": 37497496721,
+            "event": "push",
+            "headSha": "94aa01d8ed99561acf77020257e6c517b15a369d",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37497496721",
+            "workflowName": "Source Header Check"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-06T16:40:03Z",
+            "databaseId": 37497496804,
+            "event": "push",
+            "headSha": "94aa01d8ed99561acf77020257e6c517b15a369d",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37497496804",
+            "workflowName": "KritvaOS CI"
+          }
+        ],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37497496804,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37497496804",
+            "head_sha": "94aa01d8ed99561acf77020257e6c517b15a369d",
+            "event": "push",
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 8,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_REMOTE_ARCHITECTURE.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/remote/include/kritva/hardware/remote/edge_host.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_endpoint.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_node.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_session.hpp",
+              "hardware/remote/src/remote_node.cpp",
+              "hardware/remote/src/remote_session.cpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I4-007": [
+      {
+        "short": "cd51be8",
+        "full": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "source": "planning/milestones/KOS-I4/TASKS.md:32",
+        "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-06T18:00:11Z",
+            "databaseId": 37507901398,
+            "event": "push",
+            "headSha": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37507901398",
+            "workflowName": "Source Header Check"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-06T18:00:11Z",
+            "databaseId": 37507901354,
+            "event": "push",
+            "headSha": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37507901354",
+            "workflowName": "KritvaOS CI"
+          }
+        ],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37507901354,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37507901354",
+            "head_sha": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+            "event": "push",
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 7,
+            "task_files_changed": [
+              "docs/architecture/KOS-I4_REMOTE_ARCHITECTURE.md",
+              "docs/requirements/KOS-I4/DR.md",
+              "docs/verification/KOS-I4_VERIFICATION.md",
+              "hardware/remote/include/kritva/hardware/remote/remote_diagnostics.hpp",
+              "hardware/remote/include/kritva/hardware/remote/remote_node.hpp",
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/TASKS.md",
+              "tests/CMakeLists.txt"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ],
+    "I4-008": [
+      {
+        "short": "79f4daf",
+        "full": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "source": "planning/milestones/KOS-I4/TASKS.md:33",
+        "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+        "ancestor_of_origin_main": true,
+        "ci_runs": [
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-07T02:22:02Z",
+            "databaseId": 37561636953,
+            "event": "push",
+            "headSha": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636953",
+            "workflowName": "Source Header Check"
+          },
+          {
+            "conclusion": "success",
+            "createdAt": "2026-10-07T02:22:02Z",
+            "databaseId": 37561636952,
+            "event": "push",
+            "headSha": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+            "status": "completed",
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952",
+            "workflowName": "KritvaOS CI"
+          }
+        ],
+        "covering_runs": [
+          {
+            "workflow": "KritvaOS CI",
+            "run_id": 37561636952,
+            "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952",
+            "head_sha": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+            "event": "push",
+            "commits_after": 0,
+            "task_files_changed_after": []
+          }
+        ],
+        "against": {
+          "8256ba331f4e09472fa6afc09dadef5ddabdc032": {
+            "state": "DESCENDANT",
+            "commits_after": 6,
+            "task_files_changed": [
+              "planning/milestones/KOS-I4/CHANGELOG.md",
+              "planning/milestones/KOS-I4/TASKS.md"
+            ],
+            "task_files_deleted": []
+          }
+        }
+      }
+    ]
+  },
+  "unresolved_or_ambiguous": [],
+  "tags": {},
+  "milestone_level_commits": {
+    "39780ccb8f93719471ee982299f6f43f2cee6196": {
+      "short": "39780cc",
+      "subject": "KOS-I3: implement device and endpoint contracts",
+      "sources": [
+        "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "97ab51870a122019a80acf7507bd916a4bef3a3b": {
+      "short": "97ab518",
+      "subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+      "sources": [
+        "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
+        "planning/milestones/KOS-I3/CHANGELOG.md:21",
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "46b91fabac8bd4a9df00797ca23313717127c325": {
+      "short": "46b91fa",
+      "subject": "KOS-I3: implement observation diagnostics and fault handling",
+      "sources": [
+        "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "d8cd3150867a7e71111579a9cac6d37a5832731e": {
+      "short": "d8cd315",
+      "subject": "KOS-I3: add reference device demo",
+      "sources": [
+        "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce": {
+      "short": "cd1a35c",
+      "subject": "KOS-I3: implement mock device and endpoint library",
+      "sources": [
+        "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "a7e08e518257d657ae0b1a1ac8696241cc8844d2": {
+      "short": "a7e08e5",
+      "subject": "KOS-I3: implement device and endpoint registry",
+      "sources": [
+        "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "f98067542476258b3e346353115bf663760b5491": {
+      "short": "f980675",
+      "subject": "KOS-I3: implement typed sensor and actuator interfaces",
+      "sources": [
+        "planning/milestones/KOS-I3/ACCEPTANCE_CRITERIA.md:61",
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "e61814e4ded6dca1b526a6e037a2bf0356a06752": {
+      "short": "e61814e",
+      "subject": "KOS-I3: align final planning records",
+      "sources": [
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "40a6940680ea9da650026239c353712b5c4ce40c": {
+      "short": "40a6940",
+      "subject": "KOS-I3: address audit findings",
+      "sources": [
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "9912e3cf81f50da99edc4e8885130ad79ec6b9d6": {
+      "short": "9912e3c",
+      "subject": "KOS-I3: address re-audit findings",
+      "sources": [
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "ecc0ca37eb5b6d93db299218bf3485688b309420": {
+      "short": "ecc0ca3",
+      "subject": "KOS-I3: close milestone acceptance record",
+      "sources": [
+        "planning/milestones/KOS-I3/REVIEW_CHECKLIST.md:56"
+      ]
+    },
+    "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a": {
+      "short": "c40fbb2",
+      "subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+      "sources": [
+        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
+      ]
+    },
+    "cd51be85152ef6014796d1856fb0e7e962e28ccf": {
+      "short": "cd51be8",
+      "subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+      "sources": [
+        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "planning/milestones/KOS-I4/TASKS.md:20"
+      ]
+    },
+    "94aa01d8ed99561acf77020257e6c517b15a369d": {
+      "short": "94aa01d",
+      "subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+      "sources": [
+        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
+      ]
+    },
+    "3c535b64ebae626065032e7315e679e474f6853b": {
+      "short": "3c535b6",
+      "subject": "KOS-I4 I4-004 implement edge host and remote service",
+      "sources": [
+        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
+      ]
+    },
+    "d2f893622db2479efe37ca8bbbdcab37d8f151c3": {
+      "short": "d2f8936",
+      "subject": "KOS-I4 I4-001 admit responses by correlation",
+      "sources": [
+        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
+      ]
+    },
+    "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9": {
+      "short": "79f4daf",
+      "subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+      "sources": [
+        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16",
+        "planning/milestones/KOS-I4/CHANGELOG.md:3"
+      ]
+    },
+    "52218f484f29ea58813b848008d187aeab98a0bf": {
+      "short": "52218f4",
+      "subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+      "sources": [
+        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
+      ]
+    },
+    "a6905207441abdc13ec6238272e7681093c50180": {
+      "short": "a690520",
+      "subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+      "sources": [
+        "planning/milestones/KOS-I4/ACCEPTANCE_CRITERIA.md:16"
+      ]
+    }
+  }
+}

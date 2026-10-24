@@ -1,0 +1,805 @@
+{
+  "_note": "PROPOSAL ONLY. Grants no credit. Approval is Dinesh's decision in approvals.json.",
+  "rows": [
+    {
+      "task_id": "KF-CORE-R10-001",
+      "workstream_id": "CORE",
+      "task_commit": "1dba57166dfef312f6c204b8dd759c93ec309c99",
+      "task_subject": "docs(core): inventory and classify R1.0 public API",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "ci_run": 37192914607,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607",
+        "workflow": "Kritva Core CI"
+      },
+      "task_files_changed_after": [
+        "CHANGELOG.md",
+        "CMakeLists.txt",
+        "Makefile",
+        "REQUIREMENTS.md",
+        "TESTING.md",
+        "docs/api/README.md",
+        "docs/compatibility/API_INVENTORY.md",
+        "planning/milestones/KF-CORE-R10/tasks/KF-CORE-R10-001/ACCEPTANCE_CRITERIA.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-002",
+      "workstream_id": "CORE",
+      "task_commit": "bbe10b6cb67165834d91b1cd0fe428579af5136d",
+      "task_subject": "docs(core): define source and semantic compatibility contract",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "ci_run": 37192914607,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607",
+        "workflow": "Kritva Core CI"
+      },
+      "task_files_changed_after": [
+        "CHANGELOG.md",
+        "CMakeLists.txt",
+        "Makefile",
+        "REQUIREMENTS.md",
+        "TESTING.md",
+        "docs/api/API_GUIDELINES.md",
+        "docs/api/README.md",
+        "docs/compatibility/COMPATIBILITY_POLICY.md",
+        "scripts/audit/check_compat_policy.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-003",
+      "workstream_id": "CORE",
+      "task_commit": "559d75f7d7b57ef0dd6652e6f9d751b732e2d90d",
+      "task_subject": "docs(core): define R1.0 ABI compatibility policy",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "ci_run": 37192914607,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607",
+        "workflow": "Kritva Core CI"
+      },
+      "task_files_changed_after": [
+        "CHANGELOG.md",
+        "REQUIREMENTS.md",
+        "TESTING.md",
+        "docs/api/API_GUIDELINES.md",
+        "docs/api/README.md",
+        "docs/compatibility/ABI_POLICY.md",
+        "scripts/audit/check_compat_policy.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-004",
+      "workstream_id": "CORE",
+      "task_commit": "a121c24f3987e97e4f7650effd45da638932e54e",
+      "task_subject": "docs(core): define versioning and API evolution policy",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "ci_run": 37192914607,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607",
+        "workflow": "Kritva Core CI"
+      },
+      "task_files_changed_after": [
+        "CHANGELOG.md",
+        "REQUIREMENTS.md",
+        "TESTING.md",
+        "docs/api/API_GUIDELINES.md",
+        "docs/api/README.md",
+        "docs/compatibility/COMPATIBILITY_POLICY.md",
+        "docs/compatibility/VERSIONING_POLICY.md",
+        "scripts/audit/check_compat_policy.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-005",
+      "workstream_id": "CORE",
+      "task_commit": "2882cd2083591011d8556eec582eb777b6936dc3",
+      "task_subject": "docs(core): define API deprecation and migration policy",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "ci_run": 37192914607,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607",
+        "workflow": "Kritva Core CI"
+      },
+      "task_files_changed_after": [
+        "CHANGELOG.md",
+        "REQUIREMENTS.md",
+        "TESTING.md",
+        "docs/compatibility/DEPRECATION_POLICY.md",
+        "scripts/audit/check_compat_policy.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-006",
+      "workstream_id": "CORE",
+      "task_commit": "b44b14be9ac32a75b7fcf0568ddabfb14bedb1d1",
+      "task_subject": "test(core): add R1.0 compatibility boundary harness",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "ci_run": 37192914607,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607",
+        "workflow": "Kritva Core CI"
+      },
+      "task_files_changed_after": [
+        "CHANGELOG.md",
+        "CMakeLists.txt",
+        "Makefile",
+        "REQUIREMENTS.md",
+        "TESTING.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-007",
+      "workstream_id": "CORE",
+      "task_commit": "f212e469bb764cc0e27b3e40dfe8d67e9cd241d0",
+      "task_subject": "test(core): validate R1.0 package compatibility",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "ci_run": 37192914607,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607",
+        "workflow": "Kritva Core CI"
+      },
+      "task_files_changed_after": [
+        "CHANGELOG.md",
+        "CMakeLists.txt",
+        "REQUIREMENTS.md",
+        "TESTING.md",
+        "scripts/audit/check_compat_policy.py",
+        "tests/install/consumer/CMakeLists.txt"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-008",
+      "workstream_id": "CORE",
+      "task_commit": "c0edf1f0e1fa75dd90172e280776ea5fd27ac8eb",
+      "task_subject": "test(core): validate R1.0 documentation security and traceability",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "ci_run": 37192914607,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607",
+        "workflow": "Kritva Core CI"
+      },
+      "task_files_changed_after": [
+        "API.md",
+        "CHANGELOG.md",
+        "CMakeLists.txt",
+        "REQUIREMENTS.md",
+        "planning/milestones/KF-CORE-R10/R10_SECURITY_REVIEW.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KF-CORE-R10-009",
+      "workstream_id": "CORE",
+      "task_commit": "af168478fa223b9c5bf4790984849cdf23964642",
+      "task_subject": "build(core): prepare 1.0.0 release candidate",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+        "ci_run": 37192914607,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607",
+        "workflow": "Kritva Core CI"
+      },
+      "task_files_changed_after": [],
+      "review_flags": [
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I2-001",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "150d21161ce22676a23c76adbc5758222421f948",
+      "task_subject": "KOS-I2: implement runtime host",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "examples/CMakeLists.txt",
+        "examples/kritva_demo/CMakeLists.txt",
+        "examples/kritva_demo/main.cpp",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I2/CHANGELOG.md",
+        "planning/milestones/KOS-I2/TASKS.md",
+        "runtime/CMakeLists.txt",
+        "runtime/include/kritva/runtime/runtime_host.hpp",
+        "runtime/src/runtime_host.cpp",
+        "tests/CMakeLists.txt",
+        "tests/runtime/integration/runtime_host_integration_test.cpp",
+        "tests/runtime/probe_component.hpp",
+        "tests/runtime/sanity/run_demo_sanity.cmake",
+        "tests/runtime/unit/runtime_host_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I2-002",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "e2851fdae3229e7a0139841ee1c099dab2ad218d",
+      "task_subject": "KOS-I2: implement component composition",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I2/CHANGELOG.md",
+        "planning/milestones/KOS-I2/TASKS.md",
+        "runtime/include/kritva/runtime/runtime_host.hpp",
+        "runtime/src/runtime_host.cpp",
+        "tests/CMakeLists.txt",
+        "tests/runtime/integration/component_composition_integration_test.cpp",
+        "tests/runtime/sanity/composition_sanity.cpp",
+        "tests/runtime/sanity/run_composition_sanity.cmake",
+        "tests/runtime/unit/component_composition_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I2-003",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "ae0de753d1e240a71da9e1411efc30cbfe9a109e",
+      "task_subject": "KOS-I2: implement runtime configuration",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "examples/kritva_demo/kritva_demo.conf",
+        "examples/kritva_demo/main.cpp",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I2/CHANGELOG.md",
+        "planning/milestones/KOS-I2/TASKS.md",
+        "runtime/CMakeLists.txt",
+        "runtime/include/kritva/runtime/configuration.hpp",
+        "runtime/include/kritva/runtime/runtime_host.hpp",
+        "runtime/src/configuration.cpp",
+        "runtime/src/runtime_host.cpp",
+        "tests/CMakeLists.txt",
+        "tests/runtime/integration/configuration_integration_test.cpp",
+        "tests/runtime/probe_component.hpp",
+        "tests/runtime/sanity/run_configuration_sanity.cmake",
+        "tests/runtime/unit/configuration_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I2-004",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "bfa2b29aee7fcfcd34bf9b870b6249e556e32333",
+      "task_subject": "KOS-I2: implement runtime observation",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "examples/kritva_demo/main.cpp",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I2/CHANGELOG.md",
+        "planning/milestones/KOS-I2/TASKS.md",
+        "runtime/include/kritva/runtime/observation.hpp",
+        "runtime/include/kritva/runtime/runtime_host.hpp",
+        "runtime/src/runtime_host.cpp",
+        "tests/CMakeLists.txt",
+        "tests/runtime/integration/observation_integration_test.cpp",
+        "tests/runtime/probe_component.hpp",
+        "tests/runtime/sanity/observation_sanity.cpp",
+        "tests/runtime/unit/observation_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I2-005",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "e8ad7937366455c758c9cd0add35fb17d8593b3c",
+      "task_subject": "KOS-I2: implement failure handling",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I2/CHANGELOG.md",
+        "planning/milestones/KOS-I2/TASKS.md",
+        "runtime/include/kritva/runtime/runtime_host.hpp",
+        "runtime/src/runtime_host.cpp",
+        "tests/CMakeLists.txt",
+        "tests/runtime/integration/failure_handling_integration_test.cpp",
+        "tests/runtime/probe_component.hpp",
+        "tests/runtime/sanity/failure_sanity.cpp",
+        "tests/runtime/sanity/run_failure_sanity.cmake",
+        "tests/runtime/unit/failure_handling_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I2-006",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "69521ef3c164847e8956ef509d2f8f6a308f24b1",
+      "task_subject": "KOS-I2: add reference runtime demo",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "examples/kritva_demo/demo_app.cpp",
+        "examples/kritva_demo/demo_app.hpp",
+        "examples/kritva_demo/main.cpp",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I2/CHANGELOG.md",
+        "tests/CMakeLists.txt",
+        "tests/runtime/integration/demo_application_test.cpp",
+        "tests/runtime/sanity/run_configuration_sanity.cmake",
+        "tests/runtime/sanity/run_demo_reference_sanity.cmake",
+        "tests/runtime/unit/demo_components_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I3-001",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "39780ccb8f93719471ee982299f6f43f2cee6196",
+      "task_subject": "KOS-I3: implement device and endpoint contracts",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "hardware/CMakeLists.txt",
+        "hardware/abstraction/CMakeLists.txt",
+        "hardware/abstraction/include/kritva/hardware/device.hpp",
+        "hardware/abstraction/include/kritva/hardware/endpoint.hpp",
+        "hardware/abstraction/include/kritva/hardware/sensor_endpoint.hpp",
+        "hardware/abstraction/src/device.cpp",
+        "hardware/abstraction/src/endpoint.cpp",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I3/CHANGELOG.md",
+        "planning/milestones/KOS-I3/I3-001/ACCEPTANCE_CRITERIA.md",
+        "planning/milestones/KOS-I3/TASKS.md",
+        "tests/CMakeLists.txt",
+        "tests/hardware/conformance/endpoint_conformance.hpp",
+        "tests/hardware/support/test_endpoints.hpp",
+        "tests/hardware/unit/endpoint_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I3-002",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
+      "task_subject": "KOS-I3: implement device and endpoint registry",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "hardware/abstraction/CMakeLists.txt",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I3/CHANGELOG.md",
+        "planning/milestones/KOS-I3/I3-002/ACCEPTANCE_CRITERIA.md",
+        "tests/CMakeLists.txt",
+        "tests/hardware/support/test_endpoints.hpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I3-003",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "97ab51870a122019a80acf7507bd916a4bef3a3b",
+      "task_subject": "KOS-I3: implement endpoint lifecycle and runtime integration",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "hardware/abstraction/CMakeLists.txt",
+        "hardware/abstraction/include/kritva/hardware/device_manager.hpp",
+        "hardware/abstraction/include/kritva/hardware/endpoint.hpp",
+        "hardware/abstraction/src/device_manager.cpp",
+        "hardware/abstraction/src/endpoint.cpp",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I3/CHANGELOG.md",
+        "planning/milestones/KOS-I3/I3-003/ACCEPTANCE_CRITERIA.md",
+        "planning/milestones/KOS-I3/TASKS.md",
+        "tests/CMakeLists.txt",
+        "tests/hardware/conformance/endpoint_conformance.hpp",
+        "tests/hardware/support/test_endpoints.hpp",
+        "tests/hardware/unit/device_manager_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I3-004",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "f98067542476258b3e346353115bf663760b5491",
+      "task_subject": "KOS-I3: implement typed sensor and actuator interfaces",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "hardware/abstraction/include/kritva/hardware/samples.hpp",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I3/CHANGELOG.md",
+        "planning/milestones/KOS-I3/I3-004/ACCEPTANCE_CRITERIA.md",
+        "tests/CMakeLists.txt"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I3-005",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
+      "task_subject": "KOS-I3: implement mock device and endpoint library",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "hardware/CMakeLists.txt",
+        "hardware/mock/include/kritva/hardware/mock/mock_motor.hpp",
+        "hardware/mock/src/mock_motor.cpp",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I3/CHANGELOG.md",
+        "planning/milestones/KOS-I3/I3-005/ACCEPTANCE_CRITERIA.md",
+        "planning/milestones/KOS-I3/TASKS.md",
+        "tests/CMakeLists.txt",
+        "tests/hardware/unit/mock_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I3-006",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "46b91fabac8bd4a9df00797ca23313717127c325",
+      "task_subject": "KOS-I3: implement observation diagnostics and fault handling",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "docs/architecture/hardware/DEVICE_ENDPOINT_ARCHITECTURE.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "hardware/abstraction/include/kritva/hardware/device_manager.hpp",
+        "hardware/abstraction/include/kritva/hardware/diagnostics.hpp",
+        "hardware/abstraction/src/device_manager.cpp",
+        "hardware/abstraction/src/diagnostics.cpp",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I3/CHANGELOG.md",
+        "planning/milestones/KOS-I3/I3-006/ACCEPTANCE_CRITERIA.md",
+        "planning/milestones/KOS-I3/TASKS.md",
+        "tests/CMakeLists.txt",
+        "tests/hardware/unit/diagnostics_test.cpp"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I3-007",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "d8cd3150867a7e71111579a9cac6d37a5832731e",
+      "task_subject": "KOS-I3: add reference device demo",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+        "ci_run": 38158709895,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": [
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "examples/CMakeLists.txt",
+        "planning/MILESTONE_STATUS.md",
+        "planning/milestones/KOS-I3/CHANGELOG.md",
+        "planning/milestones/KOS-I3/I3-007/ACCEPTANCE_CRITERIA.md",
+        "planning/milestones/KOS-I3/TASKS.md",
+        "tests/CMakeLists.txt"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "I4-001",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+      "task_subject": "KOS-I4 I4-001 admit responses by correlation",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+        "ci_run": 37253855540,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37253855540",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "I4-002",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "52218f484f29ea58813b848008d187aeab98a0bf",
+      "task_subject": "KOS-I4 I4-002 implement frame format and protocol codec",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "52218f484f29ea58813b848008d187aeab98a0bf",
+        "ci_run": 37256868535,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37256868535",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "I4-003",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+      "task_subject": "KOS-I4 I4-003 remove transport dependency on the protocol contract",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+        "ci_run": 37347653023,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37347653023",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "I4-004",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "3c535b64ebae626065032e7315e679e474f6853b",
+      "task_subject": "KOS-I4 I4-004 implement edge host and remote service",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "3c535b64ebae626065032e7315e679e474f6853b",
+        "ci_run": 37405212290,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37405212290",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "I4-005",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "a6905207441abdc13ec6238272e7681093c50180",
+      "task_subject": "KOS-I4 I4-005 implement remote device and remote endpoint",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "a6905207441abdc13ec6238272e7681093c50180",
+        "ci_run": 37407633177,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37407633177",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "I4-006",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
+      "task_subject": "KOS-I4 I4-006 implement distributed failure handling and actuator safety",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
+        "ci_run": 37497496804,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37497496804",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "I4-007",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+      "task_subject": "KOS-I4 I4-007 implement runtime integration and diagnostics",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+        "ci_run": 37507901354,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37507901354",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "I4-008",
+      "workstream_id": "COMMUNITY",
+      "task_commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+      "task_subject": "KOS-I4 I4-008 implement nexus edge reference demo",
+      "mode": "RERUN",
+      "evidence": {
+        "commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+        "ci_run": 37561636952,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952",
+        "workflow": "KritvaOS CI"
+      },
+      "task_files_changed_after": null,
+      "review_flags": [
+        "RERUN_ATTEMPT_REPORTED_BY_OWNER_NOT_CHECKED"
+      ]
+    }
+  ],
+  "unmapped": []
+}

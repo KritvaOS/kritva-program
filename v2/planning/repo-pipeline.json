@@ -1,0 +1,744 @@
+{
+  "_note": "Single source for the repository registry and the PR approval sequence (D-044). Consumed by scripts/pipeline/manifest.py and ship-prs.sh. Required GitHub checks are workflow names as `gh pr checks --json workflow` reports them. Sequence is a default topological order, not permission to merge regardless of readiness.",
+  "schema_version": "1.0",
+  "manifest_id": "KOS-V2-PR-PIPELINE",
+  "status": "PROPOSED",
+  "default_branch": "main",
+  "merge_policy": {
+    "method": "merge",
+    "method_decision": "PD-010",
+    "require_pr": true,
+    "require_task_footer": true,
+    "require_required_checks": true,
+    "tag_after_merge": true,
+    "tag_requires_completion_record": true
+  },
+  "roles": {
+    "PROGRAM_OWNER": {
+      "holders": [
+        "Dinesh"
+      ],
+      "basis": "D-040 single Code Owner"
+    },
+    "REPO_CODE_OWNER": {
+      "holders": [
+        "Dinesh"
+      ],
+      "basis": "D-040 single Code Owner"
+    },
+    "SECURITY_OWNER": {
+      "holders": [
+        "Dinesh"
+      ],
+      "basis": "D-032"
+    },
+    "ARCHITECTURE_REVIEWER": {
+      "holders": [
+        "Dinesh"
+      ],
+      "basis": "D-047 interim: owner assigned himself on 2026-10-18; not an independent reviewer"
+    },
+    "SAFETY_REVIEWER": {
+      "holders": [
+        "Dinesh"
+      ],
+      "basis": "D-047 interim: owner assigned himself on 2026-10-18; not an independent reviewer"
+    }
+  },
+  "known_github_checks": [
+    "status",
+    "secret-scan",
+    "commit-message-check",
+    "pr-acceptance-gate"
+  ],
+  "known_local_gates": [
+    "make check",
+    "make lint",
+    "make test-unit",
+    "make test-integration",
+    "make test-regression",
+    "make test",
+    "make docs-check",
+    "make acceptance"
+  ],
+  "repositories": [
+    {
+      "repo_id": "kritva-program",
+      "code": "PROGRAM",
+      "github_repo": "KritvaOS/kritva-program",
+      "sequence": 10,
+      "depends_on": [],
+      "workstream_id": "CI_DEV_INFRA",
+      "task_prefix": "KRP-ENG",
+      "kind": "program",
+      "baselined": true,
+      "required_approvals": [
+        "PROGRAM_OWNER"
+      ],
+      "required_github_checks": [
+        "status",
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "local_gates": [
+        "make check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M0",
+        "V2-M8"
+      ],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "v2/tracking/baseline.json",
+        "v2/tracking/approvals.json",
+        "v2/tracking/gate_closures.json",
+        "v2/planning/repo-pipeline.json"
+      ],
+      "task_registry": {
+        "type": "program-baseline"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-044 format; new repo or program"
+      }
+    },
+    {
+      "repo_id": "kritva-core",
+      "code": "CORE",
+      "github_repo": "KritvaOS/kritva-core",
+      "sequence": 20,
+      "depends_on": [
+        "kritva-program"
+      ],
+      "workstream_id": "CORE",
+      "task_prefix": "KF-CORE-R10",
+      "kind": "library",
+      "baselined": true,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "ARCHITECTURE_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "local_gates": [
+        "make check",
+        "make test-unit",
+        "make test-regression"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M0",
+        "V2-M2",
+        "V2-M8"
+      ],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "program-baseline"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-061 (owner decision 2026-10-19); D-053 format enforced in commit-message-check"
+      }
+    },
+    {
+      "repo_id": "kritvaos-community",
+      "code": "COMMUNITY",
+      "github_repo": "KritvaOS/kritvaos-community",
+      "sequence": 30,
+      "depends_on": [
+        "kritva-core"
+      ],
+      "workstream_id": "COMMUNITY",
+      "task_prefix": "I",
+      "kind": "library",
+      "baselined": true,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "ARCHITECTURE_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "local_gates": [
+        "make check",
+        "make test-unit",
+        "make test-regression"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M0",
+        "V2-M1",
+        "V2-M3",
+        "V2-M7",
+        "V2-M8"
+      ],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "program-baseline"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-061 (owner decision 2026-10-19); D-053 format enforced in commit-message-check"
+      }
+    },
+    {
+      "repo_id": "kritva-sense",
+      "code": "SENSE",
+      "github_repo": "KritvaOS/kritva-sense",
+      "sequence": 40,
+      "depends_on": [
+        "kritva-core",
+        "kritvaos-community"
+      ],
+      "workstream_id": "SENSE",
+      "task_prefix": "KOS-SENSE",
+      "kind": "capability",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "ARCHITECTURE_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check",
+        "pr-acceptance-gate"
+      ],
+      "local_gates": [
+        "make check",
+        "make test-unit",
+        "make test-integration",
+        "make test-regression",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M0",
+        "V2-M1",
+        "V2-M2",
+        "V2-M5",
+        "V2-M7",
+        "V2-M8"
+      ],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "repo-tasks-md",
+        "path": "planning/TASKS.md"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-044 format; new repo or program"
+      }
+    },
+    {
+      "repo_id": "kritva-motion",
+      "code": "MOTION",
+      "github_repo": "KritvaOS/kritva-motion",
+      "sequence": 40,
+      "depends_on": [
+        "kritva-core",
+        "kritvaos-community"
+      ],
+      "workstream_id": "MOTION",
+      "task_prefix": "KOS-MOTION",
+      "kind": "capability",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "ARCHITECTURE_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check",
+        "pr-acceptance-gate"
+      ],
+      "local_gates": [
+        "make check",
+        "make test-unit",
+        "make test-integration",
+        "make test-regression",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M0",
+        "V2-M1",
+        "V2-M2",
+        "V2-M5",
+        "V2-M8"
+      ],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "repo-tasks-md",
+        "path": "planning/TASKS.md"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-044 format; new repo or program"
+      }
+    },
+    {
+      "repo_id": "kritva-mind",
+      "code": "MIND",
+      "github_repo": "KritvaOS/kritva-mind",
+      "sequence": 50,
+      "depends_on": [
+        "kritva-core",
+        "kritva-sense"
+      ],
+      "workstream_id": "MIND",
+      "task_prefix": "KOS-MIND",
+      "kind": "capability",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "ARCHITECTURE_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check",
+        "pr-acceptance-gate"
+      ],
+      "local_gates": [
+        "make check",
+        "make test-unit",
+        "make test-integration",
+        "make test-regression",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M0",
+        "V2-M1",
+        "V2-M2",
+        "V2-M5",
+        "V2-M8"
+      ],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "repo-tasks-md",
+        "path": "planning/TASKS.md"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-044 format; new repo or program"
+      }
+    },
+    {
+      "repo_id": "kritva-skill",
+      "code": "SKILL",
+      "github_repo": "KritvaOS/kritva-skill",
+      "sequence": 60,
+      "depends_on": [
+        "kritva-core",
+        "kritva-mind",
+        "kritva-motion"
+      ],
+      "workstream_id": "SKILL",
+      "task_prefix": "KOS-SKILL",
+      "kind": "capability",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "ARCHITECTURE_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check",
+        "pr-acceptance-gate"
+      ],
+      "local_gates": [
+        "make check",
+        "make test-unit",
+        "make test-integration",
+        "make test-regression",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M0",
+        "V2-M1",
+        "V2-M2",
+        "V2-M3",
+        "V2-M5",
+        "V2-M8"
+      ],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "repo-tasks-md",
+        "path": "planning/TASKS.md"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-044 format; new repo or program"
+      }
+    },
+    {
+      "repo_id": "kritva-actuator",
+      "code": "ACTUATOR",
+      "github_repo": "KritvaOS/kritva-actuator",
+      "sequence": 80,
+      "depends_on": [
+        "kritva-core",
+        "kritva-motion"
+      ],
+      "workstream_id": "ACT_INT",
+      "task_prefix": "ACT-INT",
+      "kind": "hardware-interface",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "ARCHITECTURE_REVIEWER",
+        "SAFETY_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "local_gates": [
+        "make check",
+        "make test-unit",
+        "make test-regression",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M5",
+        "V2-M6"
+      ],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-070 (owner decision 2026-10-19); D-053 format enforced in commit-message-check"
+      }
+    },
+    {
+      "repo_id": "kritva-actuator-embedded",
+      "code": "EMBEDDED",
+      "github_repo": "KritvaOS/kritva-actuator-embedded",
+      "sequence": 90,
+      "depends_on": [
+        "kritva-actuator"
+      ],
+      "workstream_id": "ACT_EMB",
+      "task_prefix": "ACT-EMB",
+      "kind": "firmware",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "SAFETY_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "local_gates": [
+        "make check",
+        "make test-unit",
+        "make test-regression"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M6"
+      ],
+      "on_hold": true,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-070 (owner decision 2026-10-19); D-053 format enforced in commit-message-check"
+      }
+    },
+    {
+      "repo_id": "kritva-actuator-s",
+      "code": "ACTS",
+      "github_repo": "KritvaOS/kritva-actuator-s",
+      "sequence": 90,
+      "depends_on": [
+        "kritva-actuator"
+      ],
+      "workstream_id": "ACT_S",
+      "task_prefix": "ACT-S",
+      "kind": "mechanical",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "SAFETY_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "local_gates": [
+        "make check",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M6"
+      ],
+      "on_hold": true,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-070 (owner decision 2026-10-19); D-053 format enforced in commit-message-check"
+      }
+    },
+    {
+      "repo_id": "kritva-actuator-m",
+      "code": "ACTM",
+      "github_repo": "KritvaOS/kritva-actuator-m",
+      "sequence": 90,
+      "depends_on": [
+        "kritva-actuator"
+      ],
+      "workstream_id": "ACT_M",
+      "task_prefix": "ACT-M",
+      "kind": "mechanical",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "SAFETY_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "local_gates": [
+        "make check",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M6"
+      ],
+      "on_hold": true,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-070 (owner decision 2026-10-19); D-053 format enforced in commit-message-check"
+      }
+    },
+    {
+      "repo_id": "kritva-actuator-l",
+      "code": "ACTL",
+      "github_repo": "KritvaOS/kritva-actuator-l",
+      "sequence": 90,
+      "depends_on": [
+        "kritva-actuator"
+      ],
+      "workstream_id": "ACT_L",
+      "task_prefix": "ACT-L",
+      "kind": "mechanical",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "SAFETY_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check"
+      ],
+      "local_gates": [
+        "make check",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M6"
+      ],
+      "on_hold": true,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "program-inventory"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-070 (owner decision 2026-10-19); D-053 format enforced in commit-message-check"
+      }
+    }
+  ],
+  "people": {
+    "Dinesh": {
+      "github_login": "dineshannayya",
+      "basis": "CODEOWNERS (D-035, D-040)"
+    }
+  },
+  "pr_gate": {
+    "status": "PROPOSED",
+    "mode": "REPORT_ONLY",
+    "check_name": "pr-acceptance-gate",
+    "decision": "D-045",
+    "task_states_open_for_work": [
+      "READY",
+      "IN_PROGRESS",
+      "IN_REVIEW",
+      "CHANGES_REQUESTED"
+    ],
+    "task_states_closed": [
+      "ACCEPTED",
+      "CANCELLED",
+      "DEFERRED"
+    ]
+  }
+}
