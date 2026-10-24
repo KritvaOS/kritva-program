@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-10-19T08:05:04Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-10-24T08:10:53Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The three measures are never combined into one health figure.
 
@@ -109,7 +109,7 @@ Pending: 13 decisions (7 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../
 
 | Date | Milestone | Record |
 |---|---|---|
-| 2026-10-19 | This status snapshot | generated |
+| 2026-10-24 | This status snapshot | generated |
 | 2026-11-14 | Readiness report due | D-037, repo_readiness.json |
 | 2026-11-15 | Repositories return to private | D-037, repo_readiness.json |
 
@@ -129,6 +129,6 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Warnings | 22 |
 | Workstreams registered / baselined | 25 / 3 |
 | Workstreams with no status source (UNVERIFIED) | 22 |
-| Source freshness | WARN 2 |
+| Source freshness | FRESH 3 |
 
 No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, MOTION, NEXUS_EDGE, RAAS, SDK, SENSE, SIM, SKILL, STUDIO.
