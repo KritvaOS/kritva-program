@@ -17,7 +17,7 @@
 | Tasks | [v2/tracking/baseline.json](v2/tracking/baseline.json) (baselined) and [v2/tracking/planning_inventory.json](v2/tracking/planning_inventory.json) (planning only) |
 | Acceptance Criteria | [v2/planning/ACCEPTANCE_STANDARD.md](v2/planning/ACCEPTANCE_STANDARD.md) (PROPOSED) |
 | Status Reporting | [v2/tracking/STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) (generated snapshot) and [schema/status.schema.json](schema/status.schema.json) |
-| License | [LICENSE](LICENSE) (proprietary, all rights reserved) |
+| License | [LICENSE](LICENSE) (Apache-2.0; D-074) |
 
 This README follows the [Kritva README standard](v2/planning/standards/README_STANDARD.md) (D-055). It is the entry point; the documents it links own the detail.
 
@@ -240,4 +240,4 @@ See section 3 for the list and [DEPENDENCY_MAP](v2/DEPENDENCY_MAP.md) for the re
 
 ## 20. License
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved. See [LICENSE](LICENSE).
+Licensed under the Apache License, Version 2.0. Copyright (c) 2026 Kritvaos. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
