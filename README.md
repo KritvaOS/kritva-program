@@ -8,7 +8,7 @@
 | Repository | `KritvaOS/kritva-program` |
 | Repository Type | Program governance |
 | Visibility Class | PUBLIC |
-| GitHub Setting | PUBLIC (owner to verify and date this when the repository is created; D-072) |
+| GitHub Setting | PUBLIC (verified 2026-10-25; D-072) |
 | Lifecycle Status | ACTIVE |
 | Repository Owner | Dinesh (owner) |
 | Security Owner | Dinesh ([SECURITY.md](SECURITY.md), D-032) |
