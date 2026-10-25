@@ -112,7 +112,7 @@ Planning is not acceptance. Proposed milestones, newly drafted tasks, finished i
 | [scripts/pipeline/](scripts/pipeline/) | `ship-prs.sh`, `manifest.py`, `pr_gate.py` (report-only PR gate, D-045), `pr_check.py` (D-046) | INPUT | yes, with tests |
 | [scripts/docs/](scripts/docs/) | `check_readme.py`, the README standard check | INPUT | yes, with tests |
 | [tests/](tests/) | Unit tests for the tools | EVIDENCE | extend with changes |
-| [.github/](.github/) | Workflows (`commit-message-check`, `readme-check`, `refresh-sources`, `secret-scan`, `status`), PR template and CODEOWNERS | AUTHORITATIVE | owner review |
+| [.github/](.github/) | Workflows (`commit-message-check`, `readme-check`, `secret-scan`, `status`), PR template and CODEOWNERS | AUTHORITATIVE | owner review |
 
 ## 7. Program-of-Record Documents
 
@@ -137,7 +137,7 @@ Planning is not acceptance. Proposed milestones, newly drafted tasks, finished i
 ## 9. Status Reporting and Consolidation
 
 1. **Repositories report facts.** Each repository's generator writes `status/status.json` (schema 2.0): per task, `execution`, `git_sync`, `readiness` and `evidence`. A report carries facts only: it never contains review, acceptance, approval or program credit. [v2/tracking/ONBOARDING.md](v2/tracking/ONBOARDING.md) describes how a repository joins.
-2. **Snapshots.** The `refresh-sources` workflow proposes daily pull requests that update `sources/` from each repository; a human reviews and merges.
+2. **Snapshots.** `sources/` holds committed copies of each repository's status. They change when the public record is republished from the private program record, not by a workflow in this repository (D-075); a human reviews and merges.
 3. **Consolidation.** `tools/consolidate_status.py` validates every report against the baseline and approvals and computes progress. Stale, missing or unverified inputs earn no credit and are never silently passed.
 4. **Generated views.** [STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) is the short summary (owner actions and blockers, changes since the last snapshot, the measures, progress by workstream, readiness, dated milestones, data quality). [STATUS_DETAIL.md](v2/tracking/STATUS_DETAIL.md) holds the full tables.
 
@@ -222,7 +222,7 @@ This repository is not released as a product. Program baselines are frozen versi
 |---|---|---|---|
 | [consolidated_status.json](v2/tracking/consolidated_status.json), [STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md), [STATUS_DETAIL.md](v2/tracking/STATUS_DETAIL.md) | GENERATED | `tools/consolidate_status.py` | editing the inputs, then regenerating |
 | [V2_MILESTONE_PLAN.md](v2/planning/V2_MILESTONE_PLAN.md), [V2_REPO_PLAN.md](v2/planning/V2_REPO_PLAN.md), [PENDING_DECISIONS.md](v2/planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](v2/planning/PENDING_REVIEWS.md) | GENERATED | `tools/planning.py` from `v2/planning/*.json` | editing the JSON, then regenerating |
-| [sources/](sources/) | SNAPSHOT | the `refresh-sources` workflow | refreshing from the source repository |
+| [sources/](sources/) | SNAPSHOT | republishing the public record (D-075) | republishing from the private program record |
 
 Editing a generated view is not changing the baseline, and editing a snapshot is not new evidence from the engineering repository.
 
