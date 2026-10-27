@@ -254,8 +254,8 @@ def plan_lines(c):
     vp, pdd = c.get("v2_plan"), c.get("v2_plan_data")
     if not vp:
         return L + ["NOT_VERIFIED: v2/planning records are missing or invalid.", ""]
-    L += [f"Program start {vp['program_start']} and a horizon ending {vp['horizon_end']} are owner-approved (D-044). Phase dates are PROPOSED targets until decision PD-001 is made; "
-          "they were not derived from a recorded capacity. P6 LAB & ROBOT is on HOLD and has no date. This plan adds no tasks, weights or credit and does not change accepted progress.", "",
+    L += [f"Program start {vp['program_start']} and a horizon ending {vp['horizon_end']} are owner-approved (D-044). " + ("Phase dates are owner-approved planning dates (D-076, PD-001); " if all(m['schedule_status'] == 'APPROVED' for m in vp['milestones'] if m['target_date']) else "Phase dates are PROPOSED targets until decision PD-001 is made; ")
+          + "they were not derived from a recorded capacity. P6 LAB & ROBOT is on HOLD and has no date. This plan adds no tasks, weights or credit and does not change accepted progress.", "",
           "| Milestone | Phase | Target | Schedule status | Closed |", "|---|---|---|---|---|"]
     for m in vp["milestones"]:
         L.append(f"| {m['id']} | {m['phase']} | {m['target_date'] or 'NO DATE (HOLD)'} | {m['schedule_status']} | {'yes' if m['closed'] else 'no'} |")

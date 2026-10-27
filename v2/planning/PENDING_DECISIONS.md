@@ -4,15 +4,16 @@
 
 Generated from structured records only (status, owner, due date and blocking state are fields, not parsed text). Missing owners and dates are shown as UNASSIGNED and NO_DUE_DATE_RECORDED. Superseded records are excluded. Open gates are tracked separately in the Gates section of [tracking/STATUS_DETAIL.md](../tracking/STATUS_DETAIL.md), not here.
 
-8 pending, 5 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
+9 pending, 4 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
 
 | ID | Decision needed | Status | Blocking | Blocks | Scope | Owner | Due | Required action |
 |---|---|---|---|---|---|---|---|---|
-| PD-001 | Approve the nine V2 phase milestone target dates | PROPOSED | yes | V2-M0 | V2-M0, V2-M1, V2-M2, V2-M3, V2-M4, V2-M5, V2-M7, V2-M8 | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm, revise or leave UNSCHEDULED each proposed date in v2/planning/milestones.json; state whether they are planning targets or commitments. |
 | PD-002 | Define P6 LAB & ROBOT reopening criteria | PROPOSED | yes | V2-M6 | kritva-actuator, kritva-actuator-embedded, kritva-actuator-s, kritva-actuator-m, kritva-actuator-l, V2-M6 | UNASSIGNED | NO_DUE_DATE_RECORDED | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. |
 | PD-003 | Decide where Sim, SDK, Studio and Control Plane live | PROPOSED | yes | V2-M1 | V2-M1, V2-M2, V2-M3 | UNASSIGNED | NO_DUE_DATE_RECORDED | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. |
+| PD-004 | Approve the repository and task ID registry | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm the prefixes in repo-pipeline.json (KOS-SENSE, KOS-MOTION, KOS-MIND, KOS-SKILL and the existing ones) and that task IDs are globally unique. |
 | PD-005 | Approve the acceptance and test policy | PROPOSED | yes | V2-M0 | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Set required checks per repository kind, coverage thresholds if any, waiver authority and safety and security approval roles (v2/planning/ACCEPTANCE_STANDARD.md). |
 | PD-006 | Approve the tag policy | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm annotated SemVer tags, the restricted use of milestone prerelease tags and who may create release tags. |
 | PD-009 | Approve the status schema and record ownership | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm the canonical locations of decision, review, gate and milestone records in v2/planning and the generated report locations. |
+| PD-014 | Register the four new repositories on their workstreams | PROPOSED | no | - | kritva-mind, kritva-sense, kritva-skill, kritva-motion, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | workstreams.json has SENSE, MOTION, SKILL and MIND with no repository. Recording the repository changes a program record, so it needs your approval (as D-034 did for the actuators). |
 | PD-015 | Approve drafting the Core engineering contract | PROPOSED | yes | V2-M0 | kritva-core, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. |
 | PD-017 | Test the Community security mailbox | PROPOSED | no | - | kritvaos-community, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | After the SECURITY.md contact patch merges, send a test email to the Security Owner's mailbox so security_policy can move from OPEN to ATTESTED. |

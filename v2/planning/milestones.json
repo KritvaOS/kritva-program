@@ -14,14 +14,14 @@
     "status": "APPROVED",
     "approval": "Dinesh, chat, 2026-10-18 (D-044)"
   },
-  "date_status_note": "Dates below are proposed targets until the owner approves them (pending decision PD-001). They were not derived from a recorded capacity.",
+  "date_status_note": "The eight dated phase milestones carry owner-approved planning dates (decision D-076, PD-001, 2026-10-26); V2-M6 stays on HOLD without a date. The dates were not derived from a recorded capacity (PD-011 is still open) and the owner did not say they are commitments, so they add no baseline tasks, weights or credit.",
   "milestones": [
     {
       "id": "V2-M0",
       "phase_id": "P0",
       "phase_name": "FOUNDATION",
       "target_date": "2026-10-30",
-      "schedule_status": "PROPOSED",
+      "schedule_status": "APPROVED",
       "depends_on": [],
       "outcome": "Governance contracts, status schemas, repository ownership, CI and PR conventions and evidence requirements are consistent and checked in every repository.",
       "exit_conditions": [
@@ -30,7 +30,7 @@
         "Core engineering contract pinned (contract_pin)"
       ],
       "owner": null,
-      "approval": null,
+      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001)",
       "closure_record": null
     },
     {
@@ -38,7 +38,7 @@
       "phase_id": "P1",
       "phase_name": "STUDIO",
       "target_date": "2026-11-30",
-      "schedule_status": "PROPOSED",
+      "schedule_status": "APPROVED",
       "depends_on": [
         "V2-M0"
       ],
@@ -49,7 +49,7 @@
         "Studio ownership location (repo or component) decided"
       ],
       "owner": null,
-      "approval": null,
+      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001)",
       "closure_record": null
     },
     {
@@ -57,7 +57,7 @@
       "phase_id": "P2",
       "phase_name": "BUILD & ARTIFACT",
       "target_date": "2027-01-15",
-      "schedule_status": "PROPOSED",
+      "schedule_status": "APPROVED",
       "depends_on": [
         "V2-M1"
       ],
@@ -68,7 +68,7 @@
         "Sim and SDK ownership location decided"
       ],
       "owner": null,
-      "approval": null,
+      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001)",
       "closure_record": null
     },
     {
@@ -76,7 +76,7 @@
       "phase_id": "P3",
       "phase_name": "CONTROL PLANE",
       "target_date": "2027-03-15",
-      "schedule_status": "PROPOSED",
+      "schedule_status": "APPROVED",
       "depends_on": [
         "V2-M2"
       ],
@@ -87,7 +87,7 @@
         "Integration tests pass on the exact closing commits"
       ],
       "owner": null,
-      "approval": null,
+      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001)",
       "closure_record": null
     },
     {
@@ -95,7 +95,7 @@
       "phase_id": "P4",
       "phase_name": "BOOKING & COMMERCIAL",
       "target_date": "2027-04-30",
-      "schedule_status": "PROPOSED",
+      "schedule_status": "APPROVED",
       "depends_on": [
         "V2-M3"
       ],
@@ -106,7 +106,7 @@
         "No payment credentials handled outside an approved processor"
       ],
       "owner": null,
-      "approval": null,
+      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001)",
       "closure_record": null
     },
     {
@@ -114,7 +114,7 @@
       "phase_id": "P5",
       "phase_name": "EXECUTION",
       "target_date": "2027-06-15",
-      "schedule_status": "PROPOSED",
+      "schedule_status": "APPROVED",
       "depends_on": [
         "V2-M3"
       ],
@@ -124,7 +124,7 @@
         "Simulated acceptance is labelled as simulation, never as physical or safety validation (DEP-004)"
       ],
       "owner": null,
-      "approval": null,
+      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001)",
       "closure_record": null
     },
     {
@@ -151,7 +151,7 @@
       "phase_id": "P7",
       "phase_name": "LIVE & RESULTS",
       "target_date": "2027-08-15",
-      "schedule_status": "PROPOSED",
+      "schedule_status": "APPROVED",
       "depends_on": [
         "V2-M4",
         "V2-M5"
@@ -162,7 +162,7 @@
         "Any physical-robot criterion stays BLOCKED by V2-M6"
       ],
       "owner": null,
-      "approval": null,
+      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001)",
       "closure_record": null
     },
     {
@@ -170,7 +170,7 @@
       "phase_id": "P8",
       "phase_name": "PRODUCTION",
       "target_date": "2027-09-13",
-      "schedule_status": "PROPOSED",
+      "schedule_status": "APPROVED",
       "depends_on": [
         "V2-M7"
       ],
@@ -181,7 +181,7 @@
         "Residual risks accepted by the owner"
       ],
       "owner": null,
-      "approval": null,
+      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001)",
       "closure_record": null
     }
   ],

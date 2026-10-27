@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-10-27T07:21:32Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 21 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-10-26T17:27:20Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 21 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -12,37 +12,32 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 | # | Item | Why it matters | Recorded owner | Record |
 |---|---|---|---|---|
-| 1 | GATE-KOS-CI-001 is OPEN | KOS-CI-001 Release/ASan/UBSan CI. Blocks RELEASE | Dinesh | v2/GATE_REGISTER.md, v2/tracking/gate_closures.json |
-| 2 | PD-001: Approve the nine V2 phase milestone target dates | Confirm, revise or leave UNSCHEDULED each proposed date in v2/planning/milestones.json; state whether they are planning targets or commitments. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 3 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 4 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 5 | PD-005: Approve the acceptance and test policy | Set required checks per repository kind, coverage thresholds if any, waiver authority and safety and security approval roles (v2/planning/ACCEPTANCE_STANDARD.md). | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 6 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 7 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
-| 8 | 15 task(s) have reported CI evidence awaiting central approval | Zero credit until an approval is recorded: I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008 | not recorded | v2/tracking/approvals.json |
+| 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 3 | PD-005: Approve the acceptance and test policy | Set required checks per repository kind, coverage thresholds if any, waiver authority and safety and security approval roles (v2/planning/ACCEPTANCE_STANDARD.md). | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 4 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 5 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
 
 ## What changed
 
-Compared with the snapshot generated 2026-10-24T17:47:12Z (recorded 2026-10-27T07:21:32Z). The record is replaced only when a tracked fact changes.
-
-- Pending decisions: 10 -> 8
+No earlier snapshot facts are recorded; changes are tracked from this snapshot onward.
 
 ## Measures (never blended)
 
 | Measure | Value | Scope and basis |
 |---|---|---|
-| Accepted engineering progress | 46.15% (48/104 weight) | Frozen baseline v2: only the 31 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
+| Accepted engineering progress | 97.12% (101/104 weight) | Frozen baseline v2: only the 31 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
 ## Accepted engineering progress by workstream
 
 ```text
-48/104 weight  ██████████████░░░░░░░░░░░░░░░░  46.15%
+101/104 weight  █████████████████████████████░  97.12%
 ```
 
 | Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |
 |---|---|---|---|
-| COMMUNITY | 18/71 | 25.4% | 6/21 |
+| COMMUNITY | 71/71 | 100.0% | 21/21 |
 | CORE | 30/30 | 100.0% | 9/9 |
 | CI_DEV_INFRA | 0/3 | 0.0% | 0/1 |
 
@@ -50,21 +45,21 @@ Frozen baseline; credit needs a recorded approval and verified CI evidence. Only
 
 ## V2 milestone plan (proposed; not the baseline)
 
-Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-044). Phase dates are PROPOSED targets until decision PD-001 is made; they were not derived from a recorded capacity. P6 LAB & ROBOT is on HOLD and has no date. This plan adds no tasks, weights or credit and does not change accepted progress.
+Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-044). Phase dates are owner-approved planning dates (D-076, PD-001); they were not derived from a recorded capacity. P6 LAB & ROBOT is on HOLD and has no date. This plan adds no tasks, weights or credit and does not change accepted progress.
 
 | Milestone | Phase | Target | Schedule status | Closed |
 |---|---|---|---|---|
-| V2-M0 | P0 FOUNDATION | 2026-10-30 | PROPOSED | no |
-| V2-M1 | P1 STUDIO | 2026-11-30 | PROPOSED | no |
-| V2-M2 | P2 BUILD & ARTIFACT | 2027-01-15 | PROPOSED | no |
-| V2-M3 | P3 CONTROL PLANE | 2027-03-15 | PROPOSED | no |
-| V2-M4 | P4 BOOKING & COMMERCIAL | 2027-04-30 | PROPOSED | no |
-| V2-M5 | P5 EXECUTION | 2027-06-15 | PROPOSED | no |
+| V2-M0 | P0 FOUNDATION | 2026-10-30 | APPROVED | no |
+| V2-M1 | P1 STUDIO | 2026-11-30 | APPROVED | no |
+| V2-M2 | P2 BUILD & ARTIFACT | 2027-01-15 | APPROVED | no |
+| V2-M3 | P3 CONTROL PLANE | 2027-03-15 | APPROVED | no |
+| V2-M4 | P4 BOOKING & COMMERCIAL | 2027-04-30 | APPROVED | no |
+| V2-M5 | P5 EXECUTION | 2027-06-15 | APPROVED | no |
 | V2-M6 | P6 LAB & ROBOT | NO DATE (HOLD) | HOLD | no |
-| V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | PROPOSED | no |
-| V2-M8 | P8 PRODUCTION | 2027-09-13 | PROPOSED | no |
+| V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | no |
+| V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | no |
 
-Pending: 8 decisions (5 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 9 decisions (4 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 
@@ -84,6 +79,6 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Warnings | 21 |
 | Workstreams registered / baselined | 24 / 3 |
 | Workstreams with no status source (UNVERIFIED) | 21 |
-| Source freshness | STALE 2 |
+| Source freshness | FRESH 3 |
 
 No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, MOTION, NEXUS_EDGE, SDK, SENSE, SIM, SKILL, STUDIO.
