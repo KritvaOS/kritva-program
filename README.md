@@ -100,7 +100,7 @@ Planning is not acceptance. Proposed milestones, newly drafted tasks, finished i
 | [README.md](README.md) | Entry point and navigation | REFERENCE | yes |
 | [AGENTS.md](AGENTS.md) | Rules for agents working here | AUTHORITATIVE | owner decision |
 | [SECURITY.md](SECURITY.md) | Vulnerability reporting and secrets policy | AUTHORITATIVE | owner decision |
-| [Makefile](Makefile) | Program helpers: `pr_check`, `ship`, `merge`, `readme_check` | INPUT | yes, with tests |
+| [Makefile](Makefile) | Program helpers: `pr_open`, `pr_watch`, `pr_land`, `sync`, `test`, `regen`, `verify`, `pr_check`, `ship`, `merge`, `readme_check` (`make help` lists them) | INPUT | yes, with tests |
 | [v2/](v2/) | Program documents: plan, scope, roadmap, gates, risks, decisions, reviews | MIXED: each document has its own label (section 7) | per document |
 | [v2/tracking/](v2/tracking/) | Baseline, approvals and gate closures (INPUT: the JSON files); the status view and `consolidated_status.json` (GENERATED) | MIXED: INPUT and GENERATED, per file | see section 17 |
 | [v2/planning/](v2/planning/) | Repository pipeline, milestones and decision records (INPUT: the JSON files); V2_MILESTONE_PLAN, V2_REPO_PLAN, PENDING_* (GENERATED); ACCEPTANCE_STANDARD (AUTHORITATIVE, PROPOSED) and the README standard (AUTHORITATIVE, APPROVED, D-066) | MIXED: INPUT, GENERATED and AUTHORITATIVE, per file | see section 17 |
@@ -164,15 +164,20 @@ Open safety and release gates give zero credit to the tasks in their scope: [GAT
 | Tool | Purpose | Check |
 |---|---|---|
 | Python 3 (standard library only) | Tools, tests and pipeline scripts | `python3 --version` |
-| GitHub CLI `gh`, signed in | `pr_check`, `ship`, `merge` | `gh auth status` |
+| GitHub CLI `gh`, signed in | `pr_open`, `pr_land`, `pr_check`, `ship`, `merge` | `gh auth status` |
 | GNU make | Front end for the helpers | `make help` |
 
 Change an input (baseline, approvals, gates, sources, planning inventory, v2/planning records), regenerate, and commit the generated files in the same pull request.
 
-> **Privileged commands.** `make pr_check` submits an approving review as the signed-in `gh` user unless you add `DRY=1`. `make ship` and `make merge` merge pull requests with `--admin` and sync your local `main`. Run `DRY=1` first and check the repository and PR number. `generate` commands write files locally; `check` commands only read.
+> **Privileged commands.** `make pr_check` submits an approving review as the signed-in `gh` user unless you add `DRY=1`. `make pr_land`, `make ship` and `make merge` merge pull requests with `--admin` and sync your local `main`. Run `DRY=1` first and check the repository and PR number. `generate` commands write files locally; `check` commands only read.
 
 ```bash
-python3 tools/consolidate_status.py --sources-dir sources            # generate: regenerate JSON, STATUS_VIEW.md and STATUS_DETAIL.md
+make help                                                            # list every command
+make regen                                                           # generate: regenerate JSON, STATUS_VIEW.md and STATUS_DETAIL.md (the same as the python3 tools/consolidate_status.py --sources-dir sources line)
+make verify                                                          # check: the committed status files match their inputs
+make pr_open TAR=~/Downloads/x.tar.gz BRANCH=chore/x MSG="chore(x): ..."   # handoff tarball to PR: branch, extract, test, commit, push, open (DRY=1 to preview)
+make pr_watch                                                        # wait for the PR's checks
+make pr_land                                                         # merge the current branch's PR (--admin) after the checks pass, back to an updated main
 make pr_check all DRY=1                                              # check: report only, no review is submitted
 make pr_check all                                                    # sweep the REPOS list in the Makefile; approves the clear ones (DRY=1 to only report)
 make pr_check REPO=kritva-sense PR=7                                 # one PR

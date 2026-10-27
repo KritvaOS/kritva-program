@@ -468,6 +468,231 @@
       ],
       "rationale": "Re-approval on baseline v2 (D-027). Dinesh instructed in chat on 2026-10-17 to re-approve these 15 tasks on baseline v2; recorded by Claude on his instruction. Evidence commit, CI run and review flags are unchanged from the superseded v1 record; the tasks, weights and acceptance basis did not change between v1 and v2.",
       "supersedes": "A015"
+    },
+    {
+      "approval_id": "A031",
+      "task_id": "I3-001",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A032",
+      "task_id": "I3-002",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A033",
+      "task_id": "I3-003",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A034",
+      "task_id": "I3-004",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A035",
+      "task_id": "I3-005",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A036",
+      "task_id": "I3-006",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A037",
+      "task_id": "I3-007",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A038",
+      "task_id": "I4-001",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37253855540"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A039",
+      "task_id": "I4-002",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "52218f484f29ea58813b848008d187aeab98a0bf",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37256868535"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A040",
+      "task_id": "I4-003",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37347653023"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A041",
+      "task_id": "I4-004",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "3c535b64ebae626065032e7315e679e474f6853b",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37405212290"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A042",
+      "task_id": "I4-005",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "a6905207441abdc13ec6238272e7681093c50180",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37407633177"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A043",
+      "task_id": "I4-006",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37497496804"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A044",
+      "task_id": "I4-007",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37507901354"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
+    },
+    {
+      "approval_id": "A045",
+      "task_id": "I4-008",
+      "baseline_version": 2,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-26T16:54:23Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952"
+      ],
+      "rationale": "Owner approval given by Dinesh in chat on 2026-10-26 (all 15 I3/I4 tasks), recorded by Claude on his instruction. Basis: evidence-map rows (CI run on the evidence commit); I3 rows are milestone-level, accepted as of that commit."
     }
   ]
 }

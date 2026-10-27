@@ -6,7 +6,7 @@
       "record_id": "PD-001",
       "record_type": "DECISION",
       "title": "Approve the nine V2 phase milestone target dates",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-10-18",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -24,14 +24,12 @@
         ],
         "repo_ids": []
       },
-      "required_action": "Confirm, revise or leave UNSCHEDULED each proposed date in v2/planning/milestones.json; state whether they are planning targets or commitments.",
-      "blocking": true,
-      "blocks": [
-        "V2-M0"
-      ],
+      "required_action": "Resolved by D-076: the owner approved the proposed dates for V2-M0..M5, M7 and M8 as written; V2-M6 stays on HOLD without a date. Whether they are planning targets or commitments was not stated, so they are recorded as planning dates only.",
+      "blocking": false,
+      "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-076",
       "source": "ChatGPT advice 2026-10-18 (advisory)"
     },
     {
@@ -96,27 +94,22 @@
       "record_id": "PD-004",
       "record_type": "DECISION",
       "title": "Approve the repository and task ID registry",
-      "status": "ACCEPTED",
+      "status": "PROPOSED",
       "created_at": "2026-10-18",
-      "owner": "Dinesh",
+      "owner": null,
       "decision_authority": "Dinesh",
       "due_date": null,
       "scope": {
         "phase_ids": [],
-        "repo_ids": [
-          "kritva-sense",
-          "kritva-motion",
-          "kritva-mind",
-          "kritva-skill"
-        ]
+        "repo_ids": []
       },
-      "required_action": "Accepted by D-076: reserve KOS-SENSE, KOS-MOTION, KOS-MIND and KOS-SKILL as distinct task-ID namespaces; preserve existing prefixes and require global task-ID uniqueness. This approves namespace reservation only; it does not baseline the repositories or grant progress credit.",
+      "required_action": "Confirm the prefixes in repo-pipeline.json (KOS-SENSE, KOS-MOTION, KOS-MIND, KOS-SKILL and the existing ones) and that task IDs are globally unique.",
       "blocking": false,
       "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": "D-076",
-      "source": "Owner approval in ChatGPT conversation, 2026-10-27"
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
     },
     {
       "record_id": "PD-005",
@@ -285,9 +278,9 @@
       "record_id": "PD-014",
       "record_type": "DECISION",
       "title": "Register the four new repositories on their workstreams",
-      "status": "ACCEPTED",
+      "status": "PROPOSED",
       "created_at": "2026-10-18",
-      "owner": "Dinesh",
+      "owner": null,
       "decision_authority": "Dinesh",
       "due_date": null,
       "scope": {
@@ -301,13 +294,13 @@
           "kritva-motion"
         ]
       },
-      "required_action": "Accepted by D-076: register KritvaOS/kritva-sense, KritvaOS/kritva-motion, KritvaOS/kritva-mind and KritvaOS/kritva-skill on the SENSE, MOTION, MIND and SKILL workstreams respectively. Repository pipeline entries remain baselined:false until a separate baseline decision and required evidence are accepted.",
+      "required_action": "workstreams.json has SENSE, MOTION, SKILL and MIND with no repository. Recording the repository changes a program record, so it needs your approval (as D-034 did for the actuators).",
       "blocking": false,
       "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": "D-076",
-      "source": "Owner approval in ChatGPT conversation, 2026-10-27"
+      "approval_ref": null,
+      "source": "ChatGPT advice 2026-10-18 (advisory)"
     },
     {
       "record_id": "PD-015",

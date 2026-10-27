@@ -34,9 +34,11 @@ class Records(unittest.TestCase):
         self.assertEqual(dates, sorted(dates))
         self.assertTrue("2026-09-14" <= dates[0] and dates[-1] <= "2027-09-13")
 
-    def test_proposed_dates_are_not_marked_approved(self):
+    def test_only_dated_milestones_with_a_recorded_approval_are_approved(self):
         for m in data()["milestones"]["milestones"]:
-            self.assertNotEqual(m["schedule_status"], "APPROVED")
+            if m["schedule_status"] == "APPROVED":
+                self.assertTrue(m["target_date"] and m["approval"] and "D-076" in m["approval"], m["id"])
+            self.assertNotEqual(m["id"] == "V2-M6" and m["schedule_status"], "APPROVED")
             self.assertIsNone(m["owner"])
             self.assertIsNone(m["closure_record"])
 
@@ -74,7 +76,7 @@ class Records(unittest.TestCase):
         self.assertTrue(any("outside the program horizon" in e for e in P.validate(d)))
 
     def test_approved_schedule_needs_approval_record(self):
-        d = copy.deepcopy(data()); d["milestones"]["milestones"][0]["schedule_status"] = "APPROVED"
+        d = copy.deepcopy(data()); d["milestones"]["milestones"][0]["approval"] = None  # V2-M0 is APPROVED since D-076
         self.assertTrue(any("approval record" in e for e in P.validate(d)))
 
     def test_placeholder_task_is_rejected(self):
@@ -96,6 +98,7 @@ class Pipeline(unittest.TestCase):
                 self.assertLess(order.index(dep), i)
         self.assertEqual(order[0], "kritva-program")
         self.assertEqual(len(order), 12)
+
 
     def test_all_twelve_repos_present_with_unique_codes(self):
         repos = data()["pipeline"]["repositories"]
@@ -184,7 +187,7 @@ class Queues(unittest.TestCase):
     def test_pending_lists_come_from_status_fields(self):
         d = copy.deepcopy(data())
         n = len(P.pending_decisions(d))
-        d["decisions"]["records"][0]["status"] = "ACCEPTED"; d["decisions"]["records"][0]["approval_ref"] = "D-999"
+        d["decisions"]["records"][1]["status"] = "ACCEPTED"; d["decisions"]["records"][1]["approval_ref"] = "D-999"  # PD-002, still open
         self.assertEqual(len(P.pending_decisions(d)), n - 1)
         r = len(P.pending_reviews(d))
         d["reviews"]["records"][0]["status"] = "APPROVED"
@@ -193,10 +196,10 @@ class Queues(unittest.TestCase):
     def test_superseded_records_leave_the_queue(self):
         d = copy.deepcopy(data())
         recs = d["decisions"]["records"]
-        new = copy.deepcopy(recs[0]); new["record_id"] = "PD-900"; new["supersedes"] = [recs[0]["record_id"]]
+        new = copy.deepcopy(recs[1]); new["record_id"] = "PD-900"; new["supersedes"] = [recs[1]["record_id"]]
         recs.append(new)
         ids = [x["record_id"] for x in P.pending_decisions(d)]
-        self.assertNotIn(recs[0]["record_id"], ids)
+        self.assertNotIn(recs[1]["record_id"], ids)
         self.assertIn("PD-900", ids)
         self.assertEqual(P.validate(d), [])
 
@@ -212,7 +215,7 @@ class Queues(unittest.TestCase):
         self.assertTrue(any("placeholders" in e for e in P.validate(d)))
 
     def test_accepted_decision_needs_approval_ref_and_duplicates_rejected(self):
-        d = copy.deepcopy(data()); d["decisions"]["records"][0]["status"] = "ACCEPTED"
+        d = copy.deepcopy(data()); d["decisions"]["records"][0]["approval_ref"] = None  # PD-001 is ACCEPTED since D-076
         self.assertTrue(any("approval_ref" in e for e in P.validate(d)))
         d = copy.deepcopy(data()); d["decisions"]["records"].append(copy.deepcopy(d["decisions"]["records"][0]))
         self.assertTrue(any("duplicate" in e for e in P.validate(d)))
@@ -247,12 +250,12 @@ class Generated(unittest.TestCase):
         v = (ROOT / "v2/tracking/STATUS_VIEW.md").read_text(encoding="utf-8")
         self.assertIn("## V2 milestone plan (proposed; not the baseline)", v)
         self.assertIn("| V2-M6 | P6 LAB & ROBOT | NO DATE (HOLD) | HOLD | no |", v)
-        self.assertIn("| V2-M0 | P0 FOUNDATION | 2026-10-30 | PROPOSED | no |", v)
+        self.assertIn("| V2-M0 | P0 FOUNDATION | 2026-10-30 | APPROVED | no |", v)
 
     def test_plan_does_not_change_credit(self):
         c = json.loads((ROOT / "v2/tracking/consolidated_status.json").read_text(encoding="utf-8"))
         self.assertEqual(c["progress"]["basis"], "48/104 weight (accepted/baseline)" if False else c["progress"]["basis"])
-        self.assertTrue(c["progress"]["basis"].startswith("48/104 weight"))
+        self.assertTrue(c["progress"]["basis"].startswith("101/104 weight"))
 
 
 class CommitFormat(unittest.TestCase):
