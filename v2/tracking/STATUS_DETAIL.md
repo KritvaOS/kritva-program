@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-10-24T17:47:12Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-27T07:21:32Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 46.15% (48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -29,12 +29,12 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-24T17:47:12Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-27T07:21:32Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| COMMUNITY | STALE | 2026-10-16T17:21:54Z (192h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
-| CORE | STALE | 2026-10-16T17:21:54Z (192h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
+| COMMUNITY | STALE | 2026-10-16T17:21:54Z (253h ago) | 794cf19 | 8256ba3 | 1 commit(s) | STATUS_TOOLING (generator and test) |
+| CORE | STALE | 2026-10-16T17:21:54Z (253h ago) | 42c6e84 | 54984ae | 2 commit(s) | STATUS_TOOLING (generator and test) |
 
 ## Workstreams
 
@@ -58,13 +58,13 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | INTEGRATION_SOFTWARE_VALIDATION | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MANUFACTURING_FLEET | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MECHANICAL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| MIND | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| MOTION | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| MIND | KritvaOS/kritva-mind | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| MOTION | KritvaOS/kritva-motion | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | NEXUS_EDGE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SDK | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| SENSE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| SENSE | KritvaOS/kritva-sense | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SIM | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| SKILL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| SKILL | KritvaOS/kritva-skill | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | STUDIO | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 
 ## Rollup by phase (P0-P8)

@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-10-24T17:47:12Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 21 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-10-27T07:21:32Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 21 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -23,7 +23,9 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-No earlier snapshot facts are recorded; changes are tracked from this snapshot onward.
+Compared with the snapshot generated 2026-10-24T17:47:12Z (recorded 2026-10-27T07:21:32Z). The record is replaced only when a tracked fact changes.
+
+- Pending decisions: 10 -> 8
 
 ## Measures (never blended)
 
@@ -62,7 +64,7 @@ Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-0
 | V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | PROPOSED | no |
 | V2-M8 | P8 PRODUCTION | 2027-09-13 | PROPOSED | no |
 
-Pending: 10 decisions (5 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 8 decisions (5 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 

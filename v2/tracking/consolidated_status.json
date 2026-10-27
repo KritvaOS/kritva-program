@@ -80,9 +80,11 @@
     }
   },
   "changes": {
-    "items": [],
-    "recorded_at": "2026-10-24T17:47:12Z",
-    "since": null
+    "items": [
+      "Pending decisions: 10 -> 8"
+    ],
+    "recorded_at": "2026-10-27T07:21:32Z",
+    "since": "2026-10-24T17:47:12Z"
   },
   "errors": [],
   "evidence_health": [
@@ -183,7 +185,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-24T17:47:12Z",
+  "generated_at": "2026-10-27T07:21:32Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -281,7 +283,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 192,
+        "age_hours": 253,
         "ahead_by": 1,
         "changed_files": [
           "scripts/gen_status.py",
@@ -302,7 +304,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 192,
+        "age_hours": 253,
         "ahead_by": 2,
         "changed_files": [
           "scripts/status/gen_status.py",
@@ -352,7 +354,7 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 10,
+    "pending_decisions": 8,
     "pending_reviews": 7,
     "progress": "48/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 46.15,
@@ -1291,7 +1293,7 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 10,
+    "pending_decisions": 8,
     "pending_reviews": 7,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
@@ -1436,14 +1438,14 @@
     {
       "commit": "-------",
       "id": "MIND",
-      "repo": null,
+      "repo": "KritvaOS/kritva-mind",
       "source_state": "UNVERIFIED",
       "tasks_reported": 0
     },
     {
       "commit": "-------",
       "id": "MOTION",
-      "repo": null,
+      "repo": "KritvaOS/kritva-motion",
       "source_state": "UNVERIFIED",
       "tasks_reported": 0
     },
@@ -1464,7 +1466,7 @@
     {
       "commit": "-------",
       "id": "SENSE",
-      "repo": null,
+      "repo": "KritvaOS/kritva-sense",
       "source_state": "UNVERIFIED",
       "tasks_reported": 0
     },
@@ -1478,7 +1480,7 @@
     {
       "commit": "-------",
       "id": "SKILL",
-      "repo": null,
+      "repo": "KritvaOS/kritva-skill",
       "source_state": "UNVERIFIED",
       "tasks_reported": 0
     },
