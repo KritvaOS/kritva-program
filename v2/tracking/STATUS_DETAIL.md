@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-10-28T02:11:18Z (freshness of sources is judged at this time)
+- Generated at: 2026-10-28T02:34:51Z (freshness of sources is judged at this time)
 - Baseline version: 2 (APPROVED)
 - Accepted engineering progress: 97.12% (101/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 30/31 tasks (repo-reported; not acceptance)
@@ -29,14 +29,14 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-10-28T02:11:18Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-10-28T02:34:51Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | WARN | 2026-10-26T16:23:10Z (33h ago) | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
-| COMMUNITY | WARN | 2026-10-26T16:23:10Z (33h ago) | 27ed961 | 8256ba3 | 25 commit(s) | OTHER FILES (review): .githooks/commit-msg, .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/README.md, .github/workflows/commit-message-check.yml |
-| CORE | WARN | 2026-10-26T16:23:10Z (33h ago) | f181f4a | be8889e | 2 commit(s) | STATUS_ONLY |
-| SENSE | FRESH | 2026-10-28T02:10:47Z (0h ago) | a700a1d | 2448708 | 2 commit(s) | STATUS_ONLY |
+| CI_DEV_INFRA | WARN | 2026-10-26T16:23:10Z (34h ago) | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
+| COMMUNITY | WARN | 2026-10-26T16:23:10Z (34h ago) | 27ed961 | 8256ba3 | 25 commit(s) | OTHER FILES (review): .githooks/commit-msg, .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/README.md, .github/workflows/commit-message-check.yml |
+| CORE | WARN | 2026-10-26T16:23:10Z (34h ago) | f181f4a | be8889e | 2 commit(s) | STATUS_ONLY |
+| SENSE | FRESH | 2026-10-28T02:33:09Z (0h ago) | 36ac1db | 2448708 | 4 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, status/status.json |
 
 ## Workstreams
 

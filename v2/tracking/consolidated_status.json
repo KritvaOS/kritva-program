@@ -183,7 +183,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-28T02:11:18Z",
+  "generated_at": "2026-10-28T02:34:51Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 31,
@@ -279,7 +279,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 33,
+        "age_hours": 34,
         "ahead_by": 104,
         "changed_files": [
           ".github/CODEOWNERS",
@@ -345,7 +345,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 33,
+        "age_hours": 34,
         "ahead_by": 25,
         "changed_files": [
           ".githooks/commit-msg",
@@ -386,7 +386,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 33,
+        "age_hours": 34,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
@@ -404,19 +404,22 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 2,
+        "ahead_by": 4,
         "changed_files": [
+          "README.md",
+          "planning/CHANGELOG.md",
+          "planning/MILESTONE_STATUS.md",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-10-28T02:10:47Z",
-        "fetched_head": "a700a1df67cb16d5e1908e20e7121d30d0c2f572",
+        "fetched_at": "2026-10-28T02:33:09Z",
+        "fetched_head": "36ac1dbc98cc572f5c85cefff83ae3f883eeac0b",
         "freshness": "FRESH",
-        "gap_kind": "STATUS_ONLY",
+        "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-sense",
         "report_source_commit": "244870835375ea29951128e698b6d3d8025198f0",
-        "status_only": true,
+        "status_only": false,
         "workstream_id": "SENSE"
       }
     ],

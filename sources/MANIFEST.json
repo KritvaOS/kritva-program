@@ -132,22 +132,25 @@
       "tasks": 9
     },
     "SENSE": {
-      "ahead_by": 2,
+      "ahead_by": 4,
       "changed_files": [
+        "README.md",
+        "planning/CHANGELOG.md",
+        "planning/MILESTONE_STATUS.md",
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-10-28T02:10:47Z",
-      "fetched_head": "a700a1df67cb16d5e1908e20e7121d30d0c2f572",
-      "gap_kind": "STATUS_ONLY",
-      "last_attempt_at": "2026-10-28T02:10:47Z",
+      "fetched_at": "2026-10-28T02:33:09Z",
+      "fetched_head": "36ac1dbc98cc572f5c85cefff83ae3f883eeac0b",
+      "gap_kind": "OTHER_FILES",
+      "last_attempt_at": "2026-10-28T02:33:09Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-sense",
       "report_source_commit": "244870835375ea29951128e698b6d3d8025198f0",
       "report_updated_at": "2026-10-27T07:38:57Z",
       "state": "FETCHED",
-      "status_only": true,
+      "status_only": false,
       "tasks": 0
     }
   },
