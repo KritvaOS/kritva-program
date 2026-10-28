@@ -26,10 +26,23 @@ step is a reviewed commit. Do not create status sources for workstreams that hav
    reports for those exact commits, record them in the repo's report, then review and approve centrally.
 6. **History**: after a successful reconciliation, `--snapshot` appends to `v2/history/`.
 
+## Registering an empty-report source (D-077)
+
+SENSE is registered with `tasks: []` before any task is baselined. This is an exception to precondition 2, approved
+for Stage 1 only. For such a source:
+
+1. Merge the repo's `status/status.json` (schema 2.0, `tasks: []`, full commit SHA) to its `main` first.
+2. Register it in a separate reviewed change: `sources.json`, the repo name in `workstreams.json`, an example file.
+3. Run `python3 tools/refresh_sources.py`; check the source reads FETCHED and the gap is STATUS_ONLY.
+4. Run `python3 tools/consolidate_status.py --sources-dir sources` and compare the generated files before and after.
+   Baseline, approvals, gates, weights and other workstreams must be unchanged.
+5. A failed fetch, identity mismatch or ancestry error stays a reported failure; never record it as an empty report.
+
 ## Current roster state
 
 | Workstream | State |
 |---|---|
 | CORE | Reporting (KF-CORE-R10-001..009 only; R02..R09 not tracked, D-014) |
 | COMMUNITY | Reporting (I2-001..I4-008) |
+| SENSE | Reporting with an empty task list (D-077, [STATUS_INGESTION_PLAN.md](../planning/STATUS_INGESTION_PLAN.md)); KOS-SENSE-001 is proposed and not in the baseline; no credit |
 | All others | Roster entries only; no repo or task records verified |
