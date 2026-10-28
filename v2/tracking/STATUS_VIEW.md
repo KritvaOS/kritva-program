@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-10-26T17:27:20Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 21 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-10-28T02:34:51Z from committed data. Baseline v2 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -20,7 +20,9 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-No earlier snapshot facts are recorded; changes are tracked from this snapshot onward.
+Compared with the snapshot generated 2026-10-26T17:27:20Z (recorded 2026-10-28T02:11:18Z). The record is replaced only when a tracked fact changes.
+
+- Warnings: 21 -> 20
 
 ## Measures (never blended)
 
@@ -76,9 +78,9 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Measure | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 21 |
+| Warnings | 20 |
 | Workstreams registered / baselined | 24 / 3 |
-| Workstreams with no status source (UNVERIFIED) | 21 |
-| Source freshness | FRESH 3 |
+| Workstreams with no status source (UNVERIFIED) | 20 |
+| Source freshness | FRESH 1, WARN 3 |
 
-No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, MOTION, NEXUS_EDGE, SDK, SENSE, SIM, SKILL, STUDIO.
+No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, MOTION, NEXUS_EDGE, SDK, SIM, SKILL, STUDIO.

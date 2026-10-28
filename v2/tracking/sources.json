@@ -17,6 +17,11 @@
       "workstream_id": "CI_DEV_INFRA",
       "repo": "KritvaOS/kritva-program",
       "ref": "main"
+    },
+    {
+      "workstream_id": "SENSE",
+      "repo": "KritvaOS/kritva-sense",
+      "ref": "main"
     }
   ],
   "require_run_verification": true
