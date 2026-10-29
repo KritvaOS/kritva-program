@@ -1,5 +1,5 @@
 {
-  "_note": "Where to fetch each workstream's status.json. ref should be pinned to a commit/tag for reproducible runs. All UNVERIFIED until repos are reconciled. require_run_verification: credit needs each cited CI run confirmed against the GitHub Actions API (run consolidate_status.py --verify-runs; facts are kept in run_verification.json).",
+  "_note": "Where to fetch each workstream's status.json. ref may be a branch (a live source) or a commit/tag (pinned). A live source is reproducible through the committed copy under sources/ and the fetched head recorded in sources/MANIFEST.json; a pinned ref is advanced by a reviewed change (Stage 1 plan). All UNVERIFIED until repos are reconciled. require_run_verification: credit needs each cited CI run confirmed against the GitHub Actions API (run consolidate_status.py --verify-runs; facts are kept in run_verification.json).",
   "status_path": "status/status.json",
   "freshness_days": 14,
   "sources": [
