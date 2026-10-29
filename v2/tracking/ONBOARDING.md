@@ -33,7 +33,7 @@ for Stage 1 only. For such a source:
 
 1. Merge the repo's `status/status.json` (schema 2.0, `tasks: []`, full commit SHA) to its `main` first.
 2. Register it in a separate reviewed change: `sources.json`, the repo name in `workstreams.json`, an example file.
-3. Run `python3 tools/refresh_sources.py`; check the source reads FETCHED and the gap is STATUS_ONLY.
+3. Run `python3 tools/refresh_sources.py`; check the source reads FETCHED. A gap of STATUS_ONLY is accepted as it is. A gap of OTHER_FILES is accepted when every listed file is reviewed documentation, a planning record or the status report; otherwise a reviewer reads the change first (see the gap rule in the Stage 1 plan).
 4. Run `python3 tools/consolidate_status.py --sources-dir sources` and compare the generated files before and after.
    Baseline, approvals, gates, weights and other workstreams must be unchanged.
 5. A failed fetch, identity mismatch or ancestry error stays a reported failure; never record it as an empty report.
