@@ -1,0 +1,455 @@
+{
+  "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
+  "baseline_version": 3,
+  "baseline_approved": true,
+  "mechanical_hold_reopened_by_decision": null,
+  "phases": [
+    "FOUNDATION",
+    "STUDIO",
+    "BUILD & ARTIFACT",
+    "CONTROL PLANE",
+    "BOOKING & COMMERCIAL",
+    "EXECUTION",
+    "LAB & ROBOT",
+    "LIVE & RESULTS",
+    "PRODUCTION"
+  ],
+  "milestones": [
+    {
+      "id": "KF-CORE-R10",
+      "workstream_id": "CORE"
+    },
+    {
+      "id": "KOS-I2",
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "id": "KOS-I3",
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "id": "KOS-I4",
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "id": "KRP-ENG",
+      "workstream_id": "CI_DEV_INFRA"
+    },
+    {
+      "id": "V2-M1-SENSE-001",
+      "workstream_id": "SENSE"
+    },
+    {
+      "id": "V2-M2-SENSE-001",
+      "workstream_id": "SENSE"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "KF-CORE-R10-001",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Public API Inventory & Compatibility Classification",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    {
+      "id": "KF-CORE-R10-002",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Source & Semantic Compatibility Contract",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Planning ED 3-4; midpoint 3.5 rounded up"
+    },
+    {
+      "id": "KF-CORE-R10-003",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "ABI / Binary Compatibility Policy",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    {
+      "id": "KF-CORE-R10-004",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Versioning & API Evolution Policy",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Planning ED 3-4; midpoint 3.5 rounded up"
+    },
+    {
+      "id": "KF-CORE-R10-005",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Deprecation & Migration Policy",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    {
+      "id": "KF-CORE-R10-006",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Compatibility & Boundary Validation Harness",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Planning ED 3-4; midpoint 3.5 rounded up"
+    },
+    {
+      "id": "KF-CORE-R10-007",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Package / Install Compatibility",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    {
+      "id": "KF-CORE-R10-008",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Documentation / Security / Traceability Validation",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    {
+      "id": "KF-CORE-R10-009",
+      "workstream_id": "CORE",
+      "milestone_id": "KF-CORE-R10",
+      "title": "Full Validation & Release Candidate",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    {
+      "id": "I2-001",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I2",
+      "title": "Runtime Host",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I2-002",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I2",
+      "title": "Component Composition",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I2-003",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I2",
+      "title": "Configuration",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I2-004",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I2",
+      "title": "Runtime Observation",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I2-005",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I2",
+      "title": "Failure Handling",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I2-006",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I2",
+      "title": "Reference Demo",
+      "weight": 2,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I3-001",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I3",
+      "title": "Device / Endpoint architecture and contracts",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I3-002",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I3",
+      "title": "Device and Endpoint registry",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I3-003",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I3",
+      "title": "Endpoint lifecycle and Runtime integration",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I3-004",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I3",
+      "title": "Typed sensor / actuator data interfaces",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I3-005",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I3",
+      "title": "Mock Device / Endpoint implementation",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I3-006",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I3",
+      "title": "Observation, diagnostics and fault handling",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I3-007",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I3",
+      "title": "Reference Device/Endpoint demo",
+      "weight": 2,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I4-001",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I4",
+      "title": "Architecture, Node Identity & Protocol Contract",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I4-002",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I4",
+      "title": "Frame Format & Protocol Codec",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I4-003",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I4",
+      "title": "Deterministic Simulated Transport",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I4-004",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I4",
+      "title": "EdgeHost & Remote Service",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I4-005",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I4",
+      "title": "RemoteDevice & RemoteEndpoint",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I4-006",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I4",
+      "title": "Distributed Failure & Actuator Safety",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I4-007",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I4",
+      "title": "Runtime Integration & Diagnostics",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "I4-008",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "KOS-I4",
+      "title": "Nexus-Edge Reference Demo",
+      "weight": 2,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    {
+      "id": "KRP-ENG-001",
+      "workstream_id": "CI_DEV_INFRA",
+      "milestone_id": "KRP-ENG",
+      "title": "Establish and enforce the Kritva repository engineering contract",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Owner decision 2026-10-17 (D-022): weight left at the proposed 3. Contract text, AGENTS.md/CLAUDE.md in each repo, compliance report and enforcement checks across the Kritva repos; sized between the 2-3 and 4-5 effort tasks already in the baseline."
+    },
+    {
+      "id": "KOS-SENSE-001",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M1-SENSE-001",
+      "title": "Sense architecture and data contract",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-078), not a recorded engineering estimate: 4 to 5 effort days, midpoint rounded up. Architecture, data model, schema and compatibility boundaries across AC-001..AC-005; the foundation for KOS-SENSE-002. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SENSE-002",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M2-SENSE-001",
+      "title": "Contract validation and synthetic-data tests",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-078), not a recorded engineering estimate: 3 to 4 effort days, midpoint rounded up. Reference validator, synthetic fixtures, negative cases and a repeatable make test-unit gate (AC-201..AC-206); consumes the contract of KOS-SENSE-001. Depends on KOS-SENSE-001. Scale 1-8. To be revised as work proceeds."
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "title": "KOS-I3 human safety review",
+      "status": "OPEN",
+      "owner": "Dinesh",
+      "scope": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "blocking_effect": [
+        "TASK_CREDIT",
+        "PHASE_EXIT",
+        "RELEASE"
+      ],
+      "closure_criteria": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
+      "approval_required": true,
+      "evidence_commit": null,
+      "closed_at": null,
+      "closed_by": null,
+      "note": "OPEN per Community MILESTONE_STATUS.md. Scope is the whole milestone as a conservative default; the owner may narrow it to specific task_ids."
+    },
+    {
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "title": "KOS-I4 human safety review",
+      "status": "OPEN",
+      "owner": "Dinesh",
+      "scope": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "blocking_effect": [
+        "TASK_CREDIT",
+        "PHASE_EXIT",
+        "RELEASE"
+      ],
+      "closure_criteria": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
+      "approval_required": true,
+      "evidence_commit": null,
+      "closed_at": null,
+      "closed_by": null,
+      "note": "OPEN per Community MILESTONE_STATUS.md. I4-004..008 are flagged safety-relevant; milestone-wide scope is a conservative default pending owner narrowing."
+    },
+    {
+      "gate_id": "GATE-KOS-CI-001",
+      "title": "KOS-CI-001 Release/ASan/UBSan CI",
+      "status": "OPEN",
+      "owner": "Dinesh",
+      "scope": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "blocking_effect": [
+        "RELEASE"
+      ],
+      "closure_criteria": "Reviewed evidence that the release, ASan and UBSan CI variants ran green on the closing commit, and the owner closes the gate. A CI job existing does not close it.",
+      "approval_required": true,
+      "evidence_commit": null,
+      "closed_at": null,
+      "closed_by": null,
+      "note": "Community docs say deferred; kritvaos-community ci.yml already has a variants job. Its results are UNVERIFIED. Scope (KOS-I4, release only) is UNVERIFIED."
+    }
+  ],
+  "approval": {
+    "approver": "Dinesh",
+    "approved_at": "2026-10-30T02:38:49Z",
+    "canonical_commit": "f416ad7f4b452e71021c22e7643d7aac6d9a9df7",
+    "baseline_sha256": "ff15915b4274fdc0530261b2befdb614d10a61e522e1f6df88c4a01208cd8315",
+    "reason": "D-078: baseline KOS-SENSE-001 (weight 5) and KOS-SENSE-002 (weight 4); initial planning weights"
+  }
+}

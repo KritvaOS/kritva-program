@@ -1,6 +1,6 @@
 {
   "baseline_approved": true,
-  "baseline_version": 2,
+  "baseline_version": 3,
   "by_milestone": {
     "KF-CORE-R10": {
       "accepted_weight": 30,
@@ -41,6 +41,22 @@
       "tasks": 1,
       "weight": 3,
       "weighted": true
+    },
+    "V2-M1-SENSE-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 5,
+      "weighted": true
+    },
+    "V2-M2-SENSE-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 4,
+      "weighted": true
     }
   },
   "by_phase": {
@@ -48,8 +64,8 @@
       "accepted_weight": 101,
       "complete": 30,
       "credited": 30,
-      "tasks": 31,
-      "weight": 104,
+      "tasks": 33,
+      "weight": 113,
       "weighted": true
     }
   },
@@ -77,17 +93,27 @@
       "tasks": 9,
       "weight": 30,
       "weighted": true
+    },
+    "SENSE": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 2,
+      "weight": 9,
+      "weighted": true
     }
   },
   "changes": {
     "items": [
-      "Warnings: 21 -> 20"
+      "Accepted progress: 101/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Warnings: 20 -> 22"
     ],
-    "recorded_at": "2026-10-28T02:11:18Z",
-    "since": "2026-10-26T17:27:20Z"
+    "recorded_at": "2026-10-30T02:38:49Z",
+    "since": "2026-10-30T02:36:13Z"
   },
   "errors": [],
   "evidence_health": [
+    "KOS-SENSE-001, KOS-SENSE-002: no current report from the owning workstream",
     "KRP-ENG-001: the repo reports no commit-bound CI evidence"
   ],
   "gates": [
@@ -183,22 +209,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-30T02:36:13Z",
+  "generated_at": "2026-10-30T02:38:49Z",
   "measures": {
     "evidence_coverage": {
-      "tasks_total": 31,
+      "tasks_total": 33,
       "tasks_with_github_verified_run": 30,
       "tasks_with_verified_evidence": 30
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
       "tasks_complete": 30,
-      "tasks_total": 31
+      "tasks_total": 33
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 1
+      "uncredited_tasks": 3
     }
   },
   "phase_sequence": [
@@ -272,8 +298,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 97.12,
-    "basis": "101/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 89.38,
+    "basis": "101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "source_freshness": {
@@ -488,17 +514,17 @@
     },
     "pending_decisions": 9,
     "pending_reviews": 7,
-    "progress": "101/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 97.12,
+    "progress": "101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 89.38,
     "readiness": {},
-    "warnings": 20
+    "warnings": 22
   },
   "tasks": [
     {
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A016 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 4 x approval A046 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -526,7 +552,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A017 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A047 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -554,7 +580,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A018 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A048 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -582,7 +608,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A019 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A049 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -610,7 +636,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A020 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A050 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -638,7 +664,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 2 x approval A021 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 2 x approval A051 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -666,7 +692,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A031 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 4 x approval A061 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -694,7 +720,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A032 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A062 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -722,7 +748,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A033 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 4 x approval A063 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -750,7 +776,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A034 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A064 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -778,7 +804,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A035 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A065 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -806,7 +832,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A036 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 4 x approval A066 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -834,7 +860,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 2 x approval A037 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 2 x approval A067 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -862,7 +888,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A038 (PASS, APPROVED) on commit d2f8936 with PASS evidence",
+      "credit_reason": "weight 4 x approval A068 (PASS, APPROVED) on commit d2f8936 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37253855540",
       "evidence_state": "VERIFIED",
@@ -890,7 +916,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A039 (PASS, APPROVED) on commit 52218f4 with PASS evidence",
+      "credit_reason": "weight 4 x approval A069 (PASS, APPROVED) on commit 52218f4 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37256868535",
       "evidence_state": "VERIFIED",
@@ -918,7 +944,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A040 (PASS, APPROVED) on commit c40fbb2 with PASS evidence",
+      "credit_reason": "weight 3 x approval A070 (PASS, APPROVED) on commit c40fbb2 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37347653023",
       "evidence_state": "VERIFIED",
@@ -946,7 +972,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A041 (PASS, APPROVED) on commit 3c535b6 with PASS evidence",
+      "credit_reason": "weight 4 x approval A071 (PASS, APPROVED) on commit 3c535b6 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37405212290",
       "evidence_state": "VERIFIED",
@@ -974,7 +1000,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A042 (PASS, APPROVED) on commit a690520 with PASS evidence",
+      "credit_reason": "weight 4 x approval A072 (PASS, APPROVED) on commit a690520 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37407633177",
       "evidence_state": "VERIFIED",
@@ -1002,7 +1028,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A043 (PASS, APPROVED) on commit 94aa01d with PASS evidence",
+      "credit_reason": "weight 5 x approval A073 (PASS, APPROVED) on commit 94aa01d with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37497496804",
       "evidence_state": "VERIFIED",
@@ -1030,7 +1056,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A044 (PASS, APPROVED) on commit cd51be8 with PASS evidence",
+      "credit_reason": "weight 4 x approval A074 (PASS, APPROVED) on commit cd51be8 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37507901354",
       "evidence_state": "VERIFIED",
@@ -1058,7 +1084,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 2 x approval A045 (PASS, APPROVED) on commit 79f4daf with PASS evidence",
+      "credit_reason": "weight 2 x approval A075 (PASS, APPROVED) on commit 79f4daf with PASS evidence",
       "evidence_class": "RERUN",
       "evidence_run": "37561636952",
       "evidence_state": "VERIFIED",
@@ -1086,7 +1112,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A022 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A052 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -1114,7 +1140,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A023 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 4 x approval A053 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -1142,7 +1168,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A024 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A054 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -1170,7 +1196,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A025 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 4 x approval A055 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -1198,7 +1224,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A026 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A056 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -1226,7 +1252,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A027 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 4 x approval A057 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -1254,7 +1280,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A028 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A058 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -1282,7 +1308,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A029 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A059 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -1310,7 +1336,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A030 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A060 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -1333,6 +1359,50 @@
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
       "weight": 3,
       "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M1-SENSE-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-SENSE-001",
+      "tested_commit": null,
+      "weight": 5,
+      "workstream_id": "SENSE"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M2-SENSE-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-SENSE-002",
+      "tested_commit": null,
+      "weight": 4,
+      "workstream_id": "SENSE"
     },
     {
       "acceptance": "NOT_RUN",
@@ -1443,6 +1513,8 @@
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
+    "KOS-SENSE-001: not reported by SENSE (no credit)",
+    "KOS-SENSE-002: not reported by SENSE (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
     "MIND: no status source (UNVERIFIED)",

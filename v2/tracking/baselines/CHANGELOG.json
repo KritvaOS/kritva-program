@@ -18,5 +18,14 @@
     "reason": "Approve baseline v2 as proposed: v1 (Core R1.0, Community I2-I4; 30 tasks, weight 101) plus KRP-ENG-001 at weight 3 (total 104). Owner instruction in chat 2026-10-17 (D-022), recorded by Claude on his instruction.",
     "baseline_sha256": "fa4f01636bea8d73af0098688881c09954f7d6710ac9bd8c96731351373aeceb",
     "note_edit": "Wording-only edit of the baseline note on the owner's instruction (D-072, 2026-10-24); tasks, weights and approvals are unchanged. Hash before the edit: 3779e12c261fb910ef82664e458b997108a85f27168676d7db1700f1876ec940."
+  },
+  {
+    "from_version": 2,
+    "to_version": 3,
+    "approver": "Dinesh",
+    "approved_at": "2026-10-30T02:38:49Z",
+    "canonical_commit": "f416ad7f4b452e71021c22e7643d7aac6d9a9df7",
+    "reason": "D-078: baseline KOS-SENSE-001 (weight 5) and KOS-SENSE-002 (weight 4); initial planning weights",
+    "baseline_sha256": "ff15915b4274fdc0530261b2befdb614d10a61e522e1f6df88c4a01208cd8315"
   }
 ]
