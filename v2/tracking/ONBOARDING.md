@@ -33,7 +33,7 @@ for Stage 1 only. For such a source:
 
 1. Merge the repo's `status/status.json` (schema 2.0, `tasks: []`, full commit SHA) to its `main` first.
 2. Register it in a separate reviewed change: `sources.json`, the repo name in `workstreams.json`, an example file.
-3. Run `python3 tools/refresh_sources.py`; check the source reads FETCHED. A gap of STATUS_ONLY is accepted as it is. A gap of OTHER_FILES is accepted when every listed file is reviewed documentation, a planning record or the status report; otherwise a reviewer reads the change first (see the gap rule in the Stage 1 plan).
+3. Run `python3 tools/refresh_sources.py`; check the source reads FETCHED. A gap of STATUS_ONLY is accepted as it is. A gap of OTHER_FILES is accepted when every listed file is reviewed documentation, a planning record or the status report (the SENSE exception is D-079); otherwise a reviewer reads the change first (see the gap rule in the Stage 1 plan).
 4. Run `python3 tools/consolidate_status.py --sources-dir sources` and compare the generated files before and after.
    Baseline, approvals, gates, weights and other workstreams must be unchanged.
 5. A failed fetch, identity mismatch or ancestry error stays a reported failure; never record it as an empty report.
@@ -44,5 +44,5 @@ for Stage 1 only. For such a source:
 |---|---|
 | CORE | Reporting (KF-CORE-R10-001..009 only; R02..R09 not tracked, D-014) |
 | COMMUNITY | Reporting (I2-001..I4-008) |
-| SENSE | Reporting with an empty task list (D-077, [STATUS_INGESTION_PLAN.md](../planning/STATUS_INGESTION_PLAN.md)); KOS-SENSE-001 is proposed and not in the baseline; no credit |
+| SENSE | Reporting with an empty task list (D-077, [STATUS_INGESTION_PLAN.md](../planning/STATUS_INGESTION_PLAN.md)); KOS-SENSE-001 (weight 5) and KOS-SENSE-002 (weight 4) are baselined in v3 under D-078 but have no approval, so no credit; the code and test files in the SENSE gap are an accepted exception (D-079); no credit |
 | All others | Roster entries only; no repo or task records verified |
