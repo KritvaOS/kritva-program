@@ -5,10 +5,10 @@
 | Document ID | KOS-PLAN-SENSE-BASELINE-001 |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Plan |
-| Status | APPROVED to proceed (D-078, 2026-10-30); baseline v3 not yet frozen |
+| Status | APPROVED to proceed (D-078, 2026-10-30); baseline v3 frozen by pull request #13 (2026-10-30) |
 | Owner | Dinesh (program owner) |
 | Reviewer / Approver | Dinesh |
-| Version | 0.2 |
+| Version | 0.3 |
 | Last Updated | 2026-10-30 |
 | Authority | REFERENCE: it governs no baseline, weight, approval or gate |
 | Related Tasks / Milestones | KOS-SENSE-001, KOS-SENSE-002 (DRAFT), V2-M1-SENSE-001, V2-M2-SENSE-001 |
@@ -20,7 +20,7 @@ Describe how KOS-SENSE-001 (Sense architecture and data contract) and KOS-SENSE-
 
 ## Current state (updated 2026-10-30)
 
-Since version 0.1: kritva-sense merged the KOS-SENSE-002 task row and criteria AC-201..AC-206, the draft contract 0.1.0 with its schema, and the reference validator with 31 synthetic fixtures and `make test-unit` (PRs #11, #12, #13). The statements below describe the state when the plan was first written; findings 1 and 2 are now resolved (see the outcome column).
+Update: baseline v3 was frozen on 2026-10-30 (pull request #13; 33 tasks, total weight 113; the 30 effective approvals re-approved on v3 under D-027). The Sense source gap that now contains code and tests is an accepted exception (D-079). Since version 0.1: kritva-sense merged the KOS-SENSE-002 task row and criteria AC-201..AC-206, the draft contract 0.1.0 with its schema, and the reference validator with 31 synthetic fixtures and `make test-unit` (PRs #11, #12, #13). The statements below describe the state when the plan was first written; findings 1 and 2 are now resolved (see the outcome column).
 
 - kritva-sense is a planning-only repository. Its report (`status/status.json`, schema 2.0) lists no tasks and is ingested as a live source (D-077).
 - `planning/TASKS.md` lists one task, KOS-SENSE-001 (NOT_STARTED, proposed, milestone V2-M1-SENSE-001). `ACCEPTANCE_CRITERIA.md` AC-001..AC-005 are PROPOSED.

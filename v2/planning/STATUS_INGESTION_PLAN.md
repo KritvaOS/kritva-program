@@ -18,6 +18,8 @@
 
 Stage 1 gives the program a repeatable, validated way to ingest a workstream status report, using Sense as the first new source after Core and Community. Repository reports state facts; the central baseline alone decides credit. Stage 1 does not implement the Sense data contract, approve KOS-SENSE-001, create KOS-SENSE-002, or change any baseline task, weight, approval, gate or accepted progress.
 
+Update 2026-10-30: after Stage 1 closed, KOS-SENSE-001 and KOS-SENSE-002 were baselined in v3 (D-078). The statements in this plan that KOS-SENSE-001 stays outside the baseline describe the Stage 1 scope only.
+
 ## Scope
 
 In scope: the Sense report at `status/status.json` in kritva-sense; the Sense entry in `v2/tracking/sources.json` and the repository name in `workstreams.json`; the Sense snapshot and manifest entry under `sources/`; consolidation; the operating procedure in [ONBOARDING.md](../tracking/ONBOARDING.md).
