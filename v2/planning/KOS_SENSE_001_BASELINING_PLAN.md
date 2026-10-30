@@ -5,20 +5,22 @@
 | Document ID | KOS-PLAN-SENSE-BASELINE-001 |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Plan |
-| Status | PROPOSED: not approved, not frozen |
+| Status | APPROVED to proceed (D-078, 2026-10-30); baseline v3 not yet frozen |
 | Owner | Dinesh (program owner) |
 | Reviewer / Approver | Dinesh |
-| Version | 0.1 |
-| Last Updated | 2026-10-29 |
+| Version | 0.2 |
+| Last Updated | 2026-10-30 |
 | Authority | REFERENCE: it governs no baseline, weight, approval or gate |
 | Related Tasks / Milestones | KOS-SENSE-001, KOS-SENSE-002 (DRAFT), V2-M1-SENSE-001, V2-M2-SENSE-001 |
 | Related Documents | [baseline_v3_proposal.json](../tracking/baseline_v3_proposal.json), [STATUS_INGESTION_PLAN.md](STATUS_INGESTION_PLAN.md), [ACCEPTANCE_STANDARD.md](ACCEPTANCE_STANDARD.md), [PENDING_DECISIONS.md](PENDING_DECISIONS.md) |
 
 ## Purpose
 
-Describe how KOS-SENSE-001 (Sense architecture and data contract) moves from PROPOSED to an approved, weighted baseline task, and what the owner must decide first. This plan authorizes nothing. It does not edit `baseline.json`, `approvals.json` or `gate_closures.json`, and no credit follows from it.
+Describe how KOS-SENSE-001 (Sense architecture and data contract) and KOS-SENSE-002 (contract validation and synthetic-data tests) move from PROPOSED to approved, weighted baseline tasks. Decision D-078 approves both to proceed with initial weights 5 and 4. This plan still does not edit `baseline.json`, `approvals.json` or `gate_closures.json`: the baseline changes only through the owner-run freeze below, and no credit follows from approval.
 
-## Current state
+## Current state (updated 2026-10-30)
+
+Since version 0.1: kritva-sense merged the KOS-SENSE-002 task row and criteria AC-201..AC-206, the draft contract 0.1.0 with its schema, and the reference validator with 31 synthetic fixtures and `make test-unit` (PRs #11, #12, #13). The statements below describe the state when the plan was first written; findings 1 and 2 are now resolved (see the outcome column).
 
 - kritva-sense is a planning-only repository. Its report (`status/status.json`, schema 2.0) lists no tasks and is ingested as a live source (D-077).
 - `planning/TASKS.md` lists one task, KOS-SENSE-001 (NOT_STARTED, proposed, milestone V2-M1-SENSE-001). `ACCEPTANCE_CRITERIA.md` AC-001..AC-005 are PROPOSED.
@@ -36,24 +38,27 @@ Describe how KOS-SENSE-001 (Sense architecture and data contract) moves from PRO
 
 ## Decisions needed from Dinesh, in order
 
-| # | Decision | Recommendation |
-|---|---|---|
-| 1 | Approve KOS-SENSE-001 as a baseline task | Approve once criteria AC-001..AC-005 are accepted as written, or amended |
-| 2 | Weight for KOS-SENSE-001 | 5, with a rationale recorded in the proposal |
-| 3 | Include KOS-SENSE-002 in this baseline | Only after its task row and criteria exist in kritva-sense; otherwise baseline it in a later version |
-| 4 | Weight for KOS-SENSE-002 | 4 (conditional on decision 3) |
-| 5 | Pin Core and Community contract versions in the criteria | Yes, before approval, or record "none required" with a reason |
-| 6 | Interim reviewer independence | Accept D-047 for KOS-SENSE-001 and record it in the decision entry |
-| 7 | PD-004, PD-005, PD-006 | Resolve PD-005 first; PD-004 and PD-006 before the v0.1.0 tag |
-| 8 | V2-M1 date | Leave unset until the owner states one; no date is invented |
+| # | Decision | Recommendation | Outcome (D-078, 2026-10-30) |
+|---|---|---|---|
+| 1 | Approve KOS-SENSE-001 as a baseline task | Approve once criteria AC-001..AC-005 are accepted as written, or amended | Approved to proceed; criteria stay PROPOSED until reviewed |
+| 2 | Weight for KOS-SENSE-001 | 5, with a rationale recorded in the proposal | 5, initial, revisable |
+| 3 | Include KOS-SENSE-002 in this baseline | Only after its task row and criteria exist in kritva-sense | Included: the row and criteria are merged (PR #11) |
+| 4 | Weight for KOS-SENSE-002 | 4 | 4, initial, revisable |
+| 5 | Pin Core and Community contract versions in the criteria | Yes, or record "none required" with a reason | "None required": contract 0.1.0 has no normative dependency; recorded in the contract and criteria |
+| 6 | Interim reviewer independence | Accept D-047 and record it | Accepted; still not independent review |
+| 7 | PD-004, PD-005, PD-006 | Resolve PD-005 first; PD-004 and PD-006 before the v0.1.0 tag | Still open; they gate the tag and milestone closure, not the baseline entry |
+| 8 | V2-M1 date | Leave unset until the owner states one | Unchanged: the V2-M1 date approved in D-076 applies; no new date |
 
 ## Step sequence
 
-1. Sense repo, docs PR: add KOS-SENSE-002 task row and criteria, pin dependency versions, update TASKS.md. Dinesh merges.
-2. Program repo, decision PR: record decisions 1 to 8 as one decision entry in `v2/DECISIONS.md` and update `PENDING_DECISIONS.md`.
+1. DONE. Sense repo: KOS-SENSE-002 task row and criteria, dependency statement, TASKS.md (PR #11, with audit fixes in #12 and the validator in #13).
+2. This pull request. Program repo: decision D-078 in `v2/DECISIONS.md` and the updated plan and proposal. `PENDING_DECISIONS.md` is unchanged because PD-004, PD-005 and PD-006 stay open.
 3. Owner-run freeze, in one commit:
    - add milestones `V2-M1-SENSE-001` and `V2-M2-SENSE-001` and the approved tasks to `baseline.json` with weights left null;
    - run the dry run, then the approved freeze (commands below);
+   - re-approve the 30 effective approvals on v3 with `tools/record_approvals.py` (D-027, D-078); without this every approval is bound to v2 and accepted progress falls to 0;
+   - first refresh the sources. The CORE and COMMUNITY reports must be inside the 14-day freshness window (the Community report is dated 2026-10-13), or the regenerated status drops their credit; refresh the Community report in kritvaos-community first;
+   - update the test that hard-codes `101/104` to `101/113`;
    - commit the frozen `baseline.json`, regenerated baseline hash and any frozen outputs together.
 4. Regenerate the Sense status snapshot and run consolidation. Credit stays zero until a task has passing evidence.
 5. Implement KOS-SENSE-001 in kritva-sense through normal PRs. Closure needs the approved COMPLETION_RECORD.md and an annotated SemVer tag.
@@ -66,16 +71,16 @@ Source: [baseline_v3_proposal.json](../tracking/baseline_v3_proposal.json).
 |---|---|
 | Milestones | `V2-M1-SENSE-001`, `V2-M2-SENSE-001` |
 | KOS-SENSE-001 | Sense architecture and data contract, weight 5 |
-| KOS-SENSE-002 | Contract validation and synthetic-data tests, weight 4 (DRAFT, conditional) |
+| KOS-SENSE-002 | Contract validation and synthetic-data tests, weight 4 (depends on KOS-SENSE-001) |
 | Existing 31 tasks | weights and rationales unchanged |
-| Total weight | 104 to 113 (33 tasks); 109 if KOS-SENSE-002 is deferred |
+| Total weight | 104 to 113 (33 tasks) |
 | Baseline version | 2 to 3 |
 
-If KOS-SENSE-002 is deferred, remove it from the proposal before the freeze; the proposal must cover exactly the baseline tasks.
+The proposal must cover exactly the baseline tasks, so the two Sense tasks are added to `baseline.json` (weight left null) in the same owner-run step.
 
 ## Owner-run freeze procedure
 
-Run from the repository root, by the owner only. Do not run the second command until the decisions above are recorded.
+Run from the repository root, by the owner only, after the pull request carrying D-078 is merged. The freeze is anchored to that merged commit (`--commit "$(git rev-parse HEAD)"`).
 
 ```
 python3 tools/freeze_baseline.py --root . --proposal v2/tracking/baseline_v3_proposal.json

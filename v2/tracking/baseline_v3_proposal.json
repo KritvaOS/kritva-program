@@ -1,5 +1,5 @@
 {
-  "_note": "DRAFT proposal for baseline v3 (KOS-SENSE-001 baselining plan, v2/planning/KOS_SENSE_001_BASELINING_PLAN.md). NOT approved and NOT frozen. v2 weights and rationales are copied unchanged; only the two Sense tasks are new. The freeze tool needs these two tasks to exist in baseline.json first; it is run by the owner (tools/freeze_baseline.py, D-015). KOS-SENSE-002 is not eligible until it exists in kritva-sense with approved criteria. Nothing here creates credit.",
+  "_note": "Proposal for baseline v3 (KOS-SENSE-001 baselining plan, v2/planning/KOS_SENSE_001_BASELINING_PLAN.md). Approved to proceed by decision D-078 (2026-10-30); NOT yet frozen. v2 weights and rationales are copied unchanged; only the two Sense tasks are new. The freeze is run by the owner (tools/freeze_baseline.py, D-015) after the two tasks are added to baseline.json. Weights are initial planning estimates and will be revised in later baseline versions. Nothing here creates credit.",
   "scale": "1 = smallest task ... 8 = largest; compare against explicit scope, not importance or current completion",
   "weights": {
     "I2-001": {
@@ -128,11 +128,11 @@
     },
     "KOS-SENSE-001": {
       "weight": 5,
-      "rationale": "Claude's relative-size judgement from the task title and the five criteria AC-001..AC-005 (a first architecture and data-contract task, review-only evidence, no code); Sense planning records hold NO effort estimates. Scale 1-8. Proposed for the owner's decision."
+      "rationale": "Initial planning estimate (D-078), not a recorded engineering estimate: 4 to 5 effort days, midpoint rounded up. Architecture, data model, schema and compatibility boundaries across AC-001..AC-005; the foundation for KOS-SENSE-002. Scale 1-8. To be revised as work proceeds."
     },
     "KOS-SENSE-002": {
       "weight": 4,
-      "rationale": "Claude's relative-size judgement from the task title (contract validation and synthetic-data tests, and the unit, integration and regression gates). DRAFT: KOS-SENSE-002 has no acceptance criteria yet; this weight is set only when the task exists in kritva-sense with approved criteria. Proposed for the owner's decision."
+      "rationale": "Initial planning estimate (D-078), not a recorded engineering estimate: 3 to 4 effort days, midpoint rounded up. Reference validator, synthetic fixtures, negative cases and a repeatable make test-unit gate (AC-201..AC-206); consumes the contract of KOS-SENSE-001. Depends on KOS-SENSE-001. Scale 1-8. To be revised as work proceeds."
     }
   }
 }
