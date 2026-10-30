@@ -105,11 +105,10 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 101/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Warnings: 20 -> 22"
+      "Pending decisions: 9 -> 6"
     ],
-    "recorded_at": "2026-10-30T02:38:49Z",
-    "since": "2026-10-30T02:36:13Z"
+    "recorded_at": "2026-10-30T03:03:22Z",
+    "since": "2026-10-30T02:38:49Z"
   },
   "errors": [],
   "evidence_health": [
@@ -209,7 +208,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-30T02:38:49Z",
+  "generated_at": "2026-10-30T03:03:22Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 33,
@@ -512,7 +511,7 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 9,
+    "pending_decisions": 6,
     "pending_reviews": 7,
     "progress": "101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 89.38,
@@ -1428,7 +1427,7 @@
     }
   ],
   "v2_plan": {
-    "blocking_decisions": 4,
+    "blocking_decisions": 3,
     "horizon_end": "2027-09-13",
     "milestones": [
       {
@@ -1495,7 +1494,7 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 9,
+    "pending_decisions": 6,
     "pending_reviews": 7,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",

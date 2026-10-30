@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-10-30T02:38:49Z from committed data. Baseline v3 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-10-30T03:03:22Z from committed data. Baseline v3 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -14,16 +14,14 @@ Open items derived from the program records. Owners and due dates appear only wh
 |---|---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
 | 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 3 | PD-005: Approve the acceptance and test policy | Set required checks per repository kind, coverage thresholds if any, waiver authority and safety and security approval roles (v2/planning/ACCEPTANCE_STANDARD.md). | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 4 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 5 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
+| 3 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 4 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
 
 ## What changed
 
-Compared with the snapshot generated 2026-10-30T02:36:13Z (recorded 2026-10-30T02:38:49Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-10-30T02:38:49Z (recorded 2026-10-30T03:03:22Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 101/104 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Warnings: 20 -> 22
+- Pending decisions: 9 -> 6
 
 ## Measures (never blended)
 
@@ -63,7 +61,7 @@ Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-0
 | V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | no |
 | V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | no |
 
-Pending: 9 decisions (4 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 6 decisions (3 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 
