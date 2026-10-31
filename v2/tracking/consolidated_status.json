@@ -43,17 +43,17 @@
       "weighted": true
     },
     "V2-M1-SENSE-001": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 5,
+      "complete": 1,
+      "credited": 1,
       "tasks": 1,
       "weight": 5,
       "weighted": true
     },
     "V2-M2-SENSE-001": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 4,
+      "complete": 1,
+      "credited": 1,
       "tasks": 1,
       "weight": 4,
       "weighted": true
@@ -61,9 +61,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 101,
-      "complete": 30,
-      "credited": 30,
+      "accepted_weight": 110,
+      "complete": 32,
+      "credited": 32,
       "tasks": 33,
       "weight": 113,
       "weighted": true
@@ -95,9 +95,9 @@
       "weighted": true
     },
     "SENSE": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 9,
+      "complete": 2,
+      "credited": 2,
       "tasks": 2,
       "weight": 9,
       "weighted": true
@@ -105,14 +105,15 @@
   },
   "changes": {
     "items": [
-      "Pending decisions: 9 -> 6"
+      "Accepted progress: 101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 110/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KOS-SENSE-001, KOS-SENSE-002",
+      "Warnings: 22 -> 20"
     ],
-    "recorded_at": "2026-10-30T03:03:22Z",
-    "since": "2026-10-30T02:38:49Z"
+    "recorded_at": "2026-10-31T02:33:52Z",
+    "since": "2026-10-30T03:03:22Z"
   },
   "errors": [],
   "evidence_health": [
-    "KOS-SENSE-001, KOS-SENSE-002: no current report from the owning workstream",
     "KRP-ENG-001: the repo reports no commit-bound CI evidence"
   ],
   "gates": [
@@ -208,22 +209,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-10-30T03:03:22Z",
+  "generated_at": "2026-10-31T02:34:14Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 33,
-      "tasks_with_github_verified_run": 30,
-      "tasks_with_verified_evidence": 30
+      "tasks_with_github_verified_run": 32,
+      "tasks_with_verified_evidence": 32
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 30,
+      "tasks_complete": 32,
       "tasks_total": 33
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 3
+      "uncredited_tasks": 1
     }
   },
   "phase_sequence": [
@@ -297,8 +298,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 89.38,
-    "basis": "101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 97.35,
+    "basis": "110/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "source_freshness": {
@@ -371,98 +372,56 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 2,
+        "ahead_by": 4,
         "changed_files": [
+          "Makefile",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-10-30T02:32:56Z",
-        "fetched_head": "89fadf851d530835bb18ac8becfce44659839cc9",
+        "fetched_at": "2026-10-31T02:33:41Z",
+        "fetched_head": "65a33ea96033efea026905d1bb421aed3ca6acdd",
         "freshness": "FRESH",
-        "gap_kind": "STATUS_ONLY",
+        "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritvaos-community",
         "report_source_commit": "27ed9615756721d86cd602f7caa8fc056a633f7e",
-        "status_only": true,
+        "status_only": false,
         "workstream_id": "COMMUNITY"
       },
       {
         "age_hours": 0,
-        "ahead_by": 2,
+        "ahead_by": 4,
         "changed_files": [
+          "Makefile",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-10-30T02:32:56Z",
-        "fetched_head": "f181f4ab6bcb399409bf3d20230059a664ffe19a",
+        "fetched_at": "2026-10-31T02:33:41Z",
+        "fetched_head": "969d61558b99ad8c9c9c5bbac111dbdd75d0bd18",
         "freshness": "FRESH",
-        "gap_kind": "STATUS_ONLY",
+        "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-core",
         "report_source_commit": "be8889e12997e6760ddf69e601b1891944ffd0f7",
-        "status_only": true,
+        "status_only": false,
         "workstream_id": "CORE"
       },
       {
         "age_hours": 0,
-        "ahead_by": 12,
+        "ahead_by": 2,
         "changed_files": [
-          "ACCEPTANCE_CRITERIA.md",
-          "Makefile",
           "README.md",
-          "contract/SENSE_CONTRACT.md",
-          "contract/sense-sample.schema.json",
           "planning/CHANGELOG.md",
-          "planning/MILESTONE_STATUS.md",
-          "planning/TASKS.md",
-          "src/kritva_sense/__init__.py",
-          "src/kritva_sense/__main__.py",
-          "src/kritva_sense/validator.py",
-          "status/status.json",
-          "tasks/KOS-SENSE-001/TASK.md",
-          "tasks/KOS-SENSE-002/TASK.md",
-          "tests/contract/fixtures/invalid/bad_sensor_id.json",
-          "tests/contract/fixtures/invalid/extra_measurement.json",
-          "tests/contract/fixtures/invalid/invalid_validity.json",
-          "tests/contract/fixtures/invalid/missing_measurement.json",
-          "tests/contract/fixtures/invalid/missing_sensor_id.json",
-          "tests/contract/fixtures/invalid/missing_with_data.json",
-          "tests/contract/fixtures/invalid/negative_sequence.json",
-          "tests/contract/fixtures/invalid/not_valid_without_error.json",
-          "tests/contract/fixtures/invalid/timestamp_float.json",
-          "tests/contract/fixtures/invalid/timestamp_negative.json",
-          "tests/contract/fixtures/invalid/timestamp_not_object.json",
-          "tests/contract/fixtures/invalid/timestamp_wrong_clock.json",
-          "tests/contract/fixtures/invalid/timestamp_wrong_unit.json",
-          "tests/contract/fixtures/invalid/unknown_error_code.json",
-          "tests/contract/fixtures/invalid/unknown_field.json",
-          "tests/contract/fixtures/invalid/unknown_frame.json",
-          "tests/contract/fixtures/invalid/unknown_kind.json",
-          "tests/contract/fixtures/invalid/unsupported_version.json",
-          "tests/contract/fixtures/invalid/valid_with_error.json",
-          "tests/contract/fixtures/invalid/value_is_bool.json",
-          "tests/contract/fixtures/invalid/value_is_string.json",
-          "tests/contract/fixtures/invalid/value_nan.json",
-          "tests/contract/fixtures/invalid/version_not_string.json",
-          "tests/contract/fixtures/invalid/wrong_unit.json",
-          "tests/contract/fixtures/valid/encoder_valid.json",
-          "tests/contract/fixtures/valid/imu_valid.json",
-          "tests/contract/fixtures/valid/invalid_declared.json",
-          "tests/contract/fixtures/valid/missing_declared.json",
-          "tests/contract/fixtures/valid/range_valid.json",
-          "tests/contract/fixtures/valid/stale_declared.json",
-          "tests/contract/fixtures/valid/temperature_valid.json",
-          "tests/contract/test_cli.py",
-          "tests/contract/test_validator.py"
+          "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-10-30T02:32:56Z",
-        "fetched_head": "b8148796fc2eb430fc0d2568289f1b476e3bfbd3",
+        "fetched_at": "2026-10-31T02:33:41Z",
+        "fetched_head": "58e1434993d95d0a36d5d7574bb25916ff779c4c",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-sense",
-        "report_source_commit": "244870835375ea29951128e698b6d3d8025198f0",
+        "report_source_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
         "status_only": false,
         "workstream_id": "SENSE"
       }
@@ -501,7 +460,9 @@
       "KF-CORE-R10-006",
       "KF-CORE-R10-007",
       "KF-CORE-R10-008",
-      "KF-CORE-R10-009"
+      "KF-CORE-R10-009",
+      "KOS-SENSE-001",
+      "KOS-SENSE-002"
     ],
     "effort_completed": null,
     "effort_remaining": null,
@@ -513,10 +474,10 @@
     },
     "pending_decisions": 6,
     "pending_reviews": 7,
-    "progress": "101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 89.38,
+    "progress": "110/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 97.35,
     "readiness": {},
-    "warnings": 22
+    "warnings": 20
   },
   "tasks": [
     {
@@ -1360,46 +1321,58 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no current report from the owning workstream",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_REPORT",
-      "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "credit": true,
+      "credit_reason": "weight 5 x approval A076 (PASS, APPROVED) on commit e949b9f with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "40994325092",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M1-SENSE-001",
       "phase": null,
-      "readiness": null,
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+        "github_verified": true,
+        "run": "40994325092",
+        "task_commit": "2f332fc28dcc7f1540c9ce4b7ed8c007969ef330"
+      },
+      "run_verified": true,
+      "task_commit": "2f332fc28dcc7f1540c9ce4b7ed8c007969ef330",
       "task_id": "KOS-SENSE-001",
-      "tested_commit": null,
+      "tested_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
       "weight": 5,
       "workstream_id": "SENSE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no current report from the owning workstream",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_REPORT",
-      "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "credit": true,
+      "credit_reason": "weight 4 x approval A077 (PASS, APPROVED) on commit e949b9f with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "40994325092",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M2-SENSE-001",
       "phase": null,
-      "readiness": null,
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+        "github_verified": true,
+        "run": "40994325092",
+        "task_commit": "3b2df51a064d9bf128a2886a3f2f87278cff7a25"
+      },
+      "run_verified": true,
+      "task_commit": "3b2df51a064d9bf128a2886a3f2f87278cff7a25",
       "task_id": "KOS-SENSE-002",
-      "tested_commit": null,
+      "tested_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
       "weight": 4,
       "workstream_id": "SENSE"
     },
@@ -1512,8 +1485,6 @@
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
-    "KOS-SENSE-001: not reported by SENSE (no credit)",
-    "KOS-SENSE-002: not reported by SENSE (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
     "MIND: no status source (UNVERIFIED)",
@@ -1666,11 +1637,11 @@
       "tasks_reported": 0
     },
     {
-      "commit": "244870835375ea29951128e698b6d3d8025198f0",
+      "commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
       "id": "SENSE",
       "repo": "KritvaOS/kritva-sense",
       "source_state": "OK",
-      "tasks_reported": 0
+      "tasks_reported": 2
     },
     {
       "commit": "-------",

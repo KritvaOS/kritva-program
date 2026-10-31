@@ -799,6 +799,53 @@
       "review_flags": [
         "RERUN_ATTEMPT_REPORTED_BY_OWNER_NOT_CHECKED"
       ]
+    },
+    {
+      "task_id": "KOS-SENSE-001",
+      "workstream_id": "SENSE",
+      "task_commit": "2f332fc28dcc7f1540c9ce4b7ed8c007969ef330",
+      "task_subject": "feat(contract): add Sense data contract 0.1.0 draft and schema",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+        "ci_run": 40994325092,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "ACCEPTANCE_CRITERIA.md",
+        "contract/SENSE_CONTRACT.md",
+        "tasks/KOS-SENSE-001/TASK.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KOS-SENSE-002",
+      "workstream_id": "SENSE",
+      "task_commit": "3b2df51a064d9bf128a2886a3f2f87278cff7a25",
+      "task_subject": "test(contract): add reference validator, fixtures and unit gate",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+        "ci_run": 40994325092,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "ACCEPTANCE_CRITERIA.md",
+        "tasks/KOS-SENSE-002/TASK.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []
