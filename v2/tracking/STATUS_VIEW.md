@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-10-30T03:03:22Z from committed data. Baseline v3 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-10-31T02:34:14Z from committed data. Baseline v3 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -19,28 +19,30 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-10-30T02:38:49Z (recorded 2026-10-30T03:03:22Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-10-30T03:03:22Z (recorded 2026-10-31T02:33:52Z). The record is replaced only when a tracked fact changes.
 
-- Pending decisions: 9 -> 6
+- Accepted progress: 101/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 110/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
+- Credited tasks: added KOS-SENSE-001, KOS-SENSE-002
+- Warnings: 22 -> 20
 
 ## Measures (never blended)
 
 | Measure | Value | Scope and basis |
 |---|---|---|
-| Accepted engineering progress | 89.38% (101/113 weight) | Frozen baseline v3: only the 33 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
+| Accepted engineering progress | 97.35% (110/113 weight) | Frozen baseline v3: only the 33 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
 ## Accepted engineering progress by workstream
 
 ```text
-101/113 weight  ███████████████████████████░░░  89.38%
+110/113 weight  █████████████████████████████░  97.35%
 ```
 
 | Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |
 |---|---|---|---|
 | COMMUNITY | 71/71 | 100.0% | 21/21 |
 | CORE | 30/30 | 100.0% | 9/9 |
-| SENSE | 0/9 | 0.0% | 0/2 |
+| SENSE | 9/9 | 100.0% | 2/2 |
 | CI_DEV_INFRA | 0/3 | 0.0% | 0/1 |
 
 Frozen baseline; credit needs a recorded approval and verified CI evidence. Only baselined workstreams are listed. A workstream that is NOT BASELINED has no accepted progress to report; that is not zero progress.
@@ -78,14 +80,9 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Measure | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 22 |
+| Warnings | 20 |
 | Workstreams registered / baselined | 24 / 4 |
 | Workstreams with no status source (UNVERIFIED) | 20 |
 | Source freshness | FETCH_FAILED 1, FRESH 3 |
 
 No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, MOTION, NEXUS_EDGE, SDK, SIM, SKILL, STUDIO.
-
-Other warnings:
-
-- KOS-SENSE-001: not reported by SENSE (no credit)
-- KOS-SENSE-002: not reported by SENSE (no credit)

@@ -1173,6 +1173,36 @@
       ],
       "rationale": "Re-approval on baseline v3 (D-027, D-078): task, evidence commit and CI run unchanged from the superseded v2 record.",
       "supersedes": "A045"
+    },
+    {
+      "approval_id": "A076",
+      "task_id": "KOS-SENSE-001",
+      "baseline_version": 3,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-31T02:33:52Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092"
+      ],
+      "rationale": "Approved by Dinesh (relayed in chat). Basis: unit-tests CI run 40994325092 PASS on e949b9f (make check, docs-check, test-unit), accepted as of that commit. Limits: the contract is a 0.1.0 DRAFT (no v0.1.0 tag); criteria were PROPOSED at implementation time; review is the interim D-047 role, not independent; approval relayed in chat."
+    },
+    {
+      "approval_id": "A077",
+      "task_id": "KOS-SENSE-002",
+      "baseline_version": 3,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-10-31T02:33:52Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092"
+      ],
+      "rationale": "Approved by Dinesh (relayed in chat). Basis: unit-tests CI run 40994325092 PASS on e949b9f (make check, docs-check, test-unit), accepted as of that commit. Limits: the contract is a 0.1.0 DRAFT (no v0.1.0 tag); criteria were PROPOSED at implementation time; review is the interim D-047 role, not independent; approval relayed in chat."
     }
   ]
 }

@@ -4,8 +4,61 @@
   "repo": "KritvaOS/kritva-sense",
   "source": {
     "branch": "main",
-    "commit": "244870835375ea29951128e698b6d3d8025198f0"
+    "commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af"
   },
-  "tasks": [],
-  "updated_at": "2026-10-27T07:38:57Z"
+  "tasks": [
+    {
+      "task_id": "KOS-SENSE-001",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "contract/SENSE_CONTRACT.md",
+          "description": "Contract 0.1.0 draft and schema; criteria AC-001 to AC-005 (reference only; not completion proof)",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092",
+          "description": "unit-tests CI run 40994325092 PASS on e949b9f (make check, docs-check and test-unit; accepted as of that commit)",
+          "commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+          "ci_run": "40994325092",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "task_id": "KOS-SENSE-002",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "tests/contract/test_validator.py",
+          "description": "Reference validator, synthetic fixtures and unit tests; criteria AC-201 to AC-206 (reference only; not completion proof)",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092",
+          "description": "unit-tests CI run 40994325092 PASS on e949b9f (make check, docs-check and test-unit; accepted as of that commit)",
+          "commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+          "ci_run": "40994325092",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-10-30T03:01:21Z"
 }
