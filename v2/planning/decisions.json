@@ -94,7 +94,7 @@
       "record_id": "PD-004",
       "record_type": "DECISION",
       "title": "Approve the repository and task ID registry",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-10-18",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -103,19 +103,19 @@
         "phase_ids": [],
         "repo_ids": []
       },
-      "required_action": "Confirm the prefixes in repo-pipeline.json (KOS-SENSE, KOS-MOTION, KOS-MIND, KOS-SKILL and the existing ones) and that task IDs are globally unique.",
+      "required_action": "Resolved by D-080: the owner approved the repository and task ID registry in repo-pipeline.json as written (prefixes KOS-SENSE, KOS-MOTION, KOS-MIND, KOS-SKILL and the existing ones; task IDs are globally unique).",
       "blocking": false,
       "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-080",
       "source": "ChatGPT advice 2026-10-18 (advisory)"
     },
     {
       "record_id": "PD-005",
       "record_type": "DECISION",
       "title": "Approve the acceptance and test policy",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-10-18",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -124,21 +124,19 @@
         "phase_ids": [],
         "repo_ids": []
       },
-      "required_action": "Set required checks per repository kind, coverage thresholds if any, waiver authority and safety and security approval roles (v2/planning/ACCEPTANCE_STANDARD.md).",
-      "blocking": true,
-      "blocks": [
-        "V2-M0"
-      ],
+      "required_action": "Resolved by D-080: the owner approved the acceptance and test policy in v2/planning/ACCEPTANCE_STANDARD.md as written. No coverage threshold is set; one needs its own decision. Waivers are structured records approved by an authorized approver (approvals.json); the safety and security approval roles are the reviewer roles of D-047 (Dinesh, interim).",
+      "blocking": false,
+      "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-080",
       "source": "ChatGPT advice 2026-10-18 (advisory)"
     },
     {
       "record_id": "PD-006",
       "record_type": "DECISION",
       "title": "Approve the tag policy",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-10-18",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -147,12 +145,12 @@
         "phase_ids": [],
         "repo_ids": []
       },
-      "required_action": "Confirm annotated SemVer tags, the restricted use of milestone prerelease tags and who may create release tags.",
+      "required_action": "Resolved by D-080: the owner approved the tag policy in section 5 of v2/planning/ACCEPTANCE_STANDARD.md as written (annotated SemVer tags; milestone prerelease tags only for an actual prerelease artifact). Who creates release tags is not named there: the owner runs `ship-prs.sh --tag`, and a different holder needs a new decision.",
       "blocking": false,
       "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-080",
       "source": "ChatGPT advice 2026-10-18 (advisory)"
     },
     {
