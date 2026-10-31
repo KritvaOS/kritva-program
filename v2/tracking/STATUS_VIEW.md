@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-10-31T02:34:14Z from committed data. Baseline v3 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-10-31T02:41:42Z from committed data. Baseline v3 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
