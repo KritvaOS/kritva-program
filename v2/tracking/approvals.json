@@ -3422,6 +3422,21 @@
         "https://github.com/KritvaOS/kritva-sense/actions/runs/41292919590"
       ],
       "rationale": "Approved by Dinesh (D-091). Basis: unit-tests CI run 41292919590 PASS on 5f1aa7a34c5aec9e0c12fc66add6d3bc6efaa7bc (make check, docs-check, test-unit; 27 of 27 mandatory packaging tests executed), accepted as of that commit; first implementation commit f068ecd597d6d3f2755ea2c7526e4dae634553c0. Limits: nothing is published and no tag is created (owner action); CI platform only (Python 3.12, ubuntu-latest); synthetic data; review is the interim D-047 role, not independent for the task itself; software scope, not hardware or safety validation."
+    },
+    {
+      "approval_id": "A217",
+      "task_id": "KOS-SENSE-008",
+      "baseline_version": 7,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "a8dfb5a7827e9888a5bfae0bbcea1598727bd400",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T15:28:42Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41298259048"
+      ],
+      "rationale": "Approved by Dinesh (D-092). Basis: unit-tests CI run 41298259048 PASS on a8dfb5a7827e9888a5bfae0bbcea1598727bd400 (make check, docs-check, test-unit including the security suite and a real network-namespace run; 27 of 27 mandatory packaging tests executed), accepted as of that commit; first implementation commit 80237dd4d98782bfa155433c858023deb0964dfc; five risk-owner dispositions recorded in D-092. Limits: internal software-only review, not a certification, a penetration test or an independent audit; the consumer loader is not a sandbox; no safety claim; the GitHub ruleset and other settings outside the repository files not verified; nothing is published and no tag is created (owner action); review is the interim D-047 role, not independent for the task itself."
     }
   ]
 }
