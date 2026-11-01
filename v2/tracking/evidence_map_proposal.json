@@ -917,6 +917,31 @@
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-SENSE-006",
+      "workstream_id": "SENSE",
+      "task_commit": "536d3c9af486a2e42c8cb0bd7268ce30342391a6",
+      "task_subject": "feat(conformance): add synthetic consumer conformance harness",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "67590bcbcc925d9dee58f5dc04bf51345cd000e2",
+        "ci_run": 41289421496,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/41289421496",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "planning/CHANGELOG.md",
+        "src/kritva_sense/CONFORMANCE.md",
+        "src/kritva_sense/conformance.py",
+        "tests/conformance/test_conformance.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []
