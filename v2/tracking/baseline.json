@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 3,
+  "baseline_version": 4,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -41,6 +41,10 @@
     },
     {
       "id": "V2-M2-SENSE-001",
+      "workstream_id": "SENSE"
+    },
+    {
+      "id": "V2-M5-SENSE-001",
       "workstream_id": "SENSE"
     }
   ],
@@ -374,6 +378,16 @@
       "requires_physical": false,
       "phase": null,
       "weight_rationale": "Initial planning estimate (D-078), not a recorded engineering estimate: 3 to 4 effort days, midpoint rounded up. Reference validator, synthetic fixtures, negative cases and a repeatable make test-unit gate (AC-201..AC-206); consumes the contract of KOS-SENSE-001. Depends on KOS-SENSE-001. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SENSE-003",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M5-SENSE-001",
+      "title": "Deterministic frame graph and transform validation for simulated samples",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-082), not a recorded engineering estimate: 4 to 5 effort days, rounded up. New versioned transform representation (one unit-quaternion rotation form), frame-graph rules, deterministic composition and inversion, negative fixtures and a repeatable make test-unit gate (AC-301..AC-307), software only on synthetic data. Depends on KOS-SENSE-001 and KOS-SENSE-002. Scale 1-8. To be revised as work proceeds."
     }
   ],
   "gates": [
@@ -447,9 +461,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-10-30T02:38:49Z",
-    "canonical_commit": "f416ad7f4b452e71021c22e7643d7aac6d9a9df7",
-    "baseline_sha256": "ff15915b4274fdc0530261b2befdb614d10a61e522e1f6df88c4a01208cd8315",
-    "reason": "D-078: baseline KOS-SENSE-001 (weight 5) and KOS-SENSE-002 (weight 4); initial planning weights"
+    "approved_at": "2026-11-01T02:39:06Z",
+    "canonical_commit": "a4cadf0a1623133cb069c2856ce880da3fd6cf17",
+    "baseline_sha256": "070bb570e430a0f3596ec39dbc3bcd62e2cee8fcc4476f2f29ef6e7afa2144ed",
+    "reason": "D-082: add milestone V2-M5-SENSE-001 and KOS-SENSE-003 (weight 5, initial planning estimate)"
   }
 }
