@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-01T08:57:56Z from committed data. Baseline v7 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-01T09:30:20Z from committed data. Baseline v7 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -19,27 +19,28 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-01T08:39:00Z (recorded 2026-11-01T08:57:37Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-01T08:57:56Z (recorded 2026-11-01T09:30:00Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 128/131 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 128/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
+- Accepted progress: 128/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 133/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
+- Credited tasks: added KOS-SENSE-007
 
 ## Measures (never blended)
 
 | Measure | Value | Scope and basis |
 |---|---|---|
-| Accepted engineering progress | 90.14% (128/142 weight) | Frozen baseline v7: only the 39 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
+| Accepted engineering progress | 93.66% (133/142 weight) | Frozen baseline v7: only the 39 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
 ## Accepted engineering progress by workstream
 
 ```text
-128/142 weight  ███████████████████████████░░░  90.14%
+133/142 weight  ████████████████████████████░░  93.66%
 ```
 
 | Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |
 |---|---|---|---|
 | COMMUNITY | 71/71 | 100.0% | 21/21 |
-| SENSE | 27/38 | 71.1% | 6/8 |
+| SENSE | 32/38 | 84.2% | 7/8 |
 | CORE | 30/30 | 100.0% | 9/9 |
 | CI_DEV_INFRA | 0/3 | 0.0% | 0/1 |
 
