@@ -59,7 +59,7 @@
       "fetched_at": "2026-10-26T16:23:10Z",
       "fetched_head": "03b9c3f584398b84f70a0ab6c3495e77820d6f48",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-01T05:00:04Z",
+      "last_attempt_at": "2026-11-01T05:16:12Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-program",
@@ -76,10 +76,10 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-01T05:00:04Z",
+      "fetched_at": "2026-11-01T05:16:12Z",
       "fetched_head": "65a33ea96033efea026905d1bb421aed3ca6acdd",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-01T05:00:04Z",
+      "last_attempt_at": "2026-11-01T05:16:12Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritvaos-community",
@@ -96,10 +96,10 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-01T05:00:04Z",
+      "fetched_at": "2026-11-01T05:16:12Z",
       "fetched_head": "969d61558b99ad8c9c9c5bbac111dbdd75d0bd18",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-01T05:00:04Z",
+      "last_attempt_at": "2026-11-01T05:16:12Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-core",
@@ -110,7 +110,7 @@
       "tasks": 9
     },
     "SENSE": {
-      "ahead_by": 20,
+      "ahead_by": 26,
       "changed_files": [
         "ACCEPTANCE_CRITERIA.md",
         "Makefile",
@@ -164,15 +164,15 @@
         "tests/frame_graph/fixtures/invalid/unknown_top_field.json"
       ],
       "changed_files_truncated": true,
-      "fetched_at": "2026-11-01T05:00:04Z",
-      "fetched_head": "fb4fdf6dc34b9063c5ef7667a98c691a11e3c17e",
+      "fetched_at": "2026-11-01T05:16:12Z",
+      "fetched_head": "ddfec56c28484867ddf732e65bafd2a28810734c",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-01T05:00:04Z",
+      "last_attempt_at": "2026-11-01T05:16:12Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-sense",
       "report_source_commit": "07c48d5398bea19e58f7bd4c7a5af55041b28df5",
-      "report_updated_at": "2026-11-01T07:00:00Z",
+      "report_updated_at": "2026-11-01T09:00:00Z",
       "state": "FETCHED",
       "status_only": false,
       "tasks": 4
