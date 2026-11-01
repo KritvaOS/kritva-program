@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 6,
+  "baseline_version": 7,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -49,6 +49,10 @@
     },
     {
       "id": "V2-M7-SENSE-001",
+      "workstream_id": "SENSE"
+    },
+    {
+      "id": "V2-M8-SENSE-001",
       "workstream_id": "SENSE"
     }
   ],
@@ -422,6 +426,26 @@
       "requires_physical": false,
       "phase": null,
       "weight_rationale": "Initial planning estimate (D-087), not a recorded engineering estimate: 5 to 6 effort days, rounded down; raised from the 4 recorded as a planning figure in D-083 after an external review found the scope is larger. A conformance harness for consumers with three operations (sample decision, stream decision, frame resolution), an independent contract-derived case set with clause references, mutants per rule class, failure isolation and a deterministic JSON result (AC-601..AC-607), software only on synthetic data, with a reference consumer under test and never used as the oracle. Depends on KOS-SENSE-001 to KOS-SENSE-005 and cannot start before KOS-SENSE-005 is accepted. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SENSE-007",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M8-SENSE-001",
+      "title": "Python package and reproducible release",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-090), not a recorded engineering estimate: 5 effort days. A versioned, installable Python package of the existing Sense software (pyproject.toml, runtime dependencies empty, pinned build tools kept apart), a version-information interface and RELEASE.md that keep the package, Sense, frame graph, stream and harness versions separate, wheel and sdist built in an isolated environment, install and smoke tests from a clean directory without the source tree, byte-for-byte reproducible builds with a fixed SOURCE_DATE_EPOCH (any difference documented), artifact hashes (AC-701..AC-707), software only on synthetic data, no publication and no contract change; a missing build tool fails CI. Depends on KOS-SENSE-001 to KOS-SENSE-006. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SENSE-008",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M8-SENSE-001",
+      "title": "Repository security and CI assurance review",
+      "weight": 6,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-090), not a recorded engineering estimate: 6 effort days. An internal, bounded security and CI assurance review of the Sense repository: a written threat model, review of input handling and of the dynamic consumer loading (not a sandbox), review of the CI workflows and PR gate, dependency and build configuration with an automated empty-runtime-dependency check and an offline test run, security regression tests, a findings register and a final report with every Critical and High finding fixed or dispositioned by the risk owner (AC-801..AC-807). Not a certification, penetration test or safety assessment. Depends on KOS-SENSE-001 to KOS-SENSE-006; acceptance prerequisite (not a dependency field): KOS-SENSE-007 accepted first. Scale 1-8. To be revised as work proceeds."
     }
   ],
   "gates": [
@@ -495,9 +519,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-11-01T05:32:49Z",
-    "canonical_commit": "9a60bafbb5f765352937988b94f908cd6c56a888",
-    "baseline_sha256": "34775a80ab53a178eda85411509e836878748b5baf86e3f9b5ceefc1a21886c2",
-    "reason": "D-087: add milestone V2-M7-SENSE-001, KOS-SENSE-005 (weight 4) and KOS-SENSE-006 (weight 5), initial planning estimates"
+    "approved_at": "2026-11-01T08:57:37Z",
+    "canonical_commit": "c317732f27273927e906fe0012d03283f53d6da6",
+    "baseline_sha256": "7096b2a71a633946c51ce37f163796fdc98b76764fdb4baa91c6ed8d5836bac6",
+    "reason": "D-090: add milestone V2-M8-SENSE-001, KOS-SENSE-007 (weight 5) and KOS-SENSE-008 (weight 6), initial planning estimates"
   }
 }
