@@ -870,6 +870,28 @@
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-SENSE-004",
+      "workstream_id": "SENSE",
+      "task_commit": "b976ba3f0b9fbe38697108861e77e07547a2d0ff",
+      "task_subject": "feat(generator): add deterministic synthetic sample and frame graph generator",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "82b3174523a70372b5673e94a81e8ef20bf4430e",
+        "ci_run": 41275942226,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/41275942226",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "tasks/KOS-SENSE-004/TASK.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []
