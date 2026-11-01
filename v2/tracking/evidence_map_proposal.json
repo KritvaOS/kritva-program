@@ -942,6 +942,36 @@
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-SENSE-007",
+      "workstream_id": "SENSE",
+      "task_commit": "f068ecd597d6d3f2755ea2c7526e4dae634553c0",
+      "task_subject": "feat(package): add the Python package and reproducible build",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "5f1aa7a34c5aec9e0c12fc66add6d3bc6efaa7bc",
+        "ci_run": 41292919590,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/41292919590",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "MANIFEST.in",
+        "RELEASE.md",
+        "planning/CHANGELOG.md",
+        "pyproject.toml",
+        "release/build-requirements.txt",
+        "release/normalise_sdist.py",
+        "src/kritva_sense/version.py",
+        "tasks/KOS-SENSE-007/ACCEPTANCE_CRITERIA.md",
+        "tests/packaging/test_packaging.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []
