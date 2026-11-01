@@ -2227,6 +2227,21 @@
       ],
       "rationale": "Re-recorded on baseline v5 (D-083, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
       "supersedes": "A109"
+    },
+    {
+      "approval_id": "A142",
+      "task_id": "KOS-SENSE-003",
+      "baseline_version": 5,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "c92e841523f5d194de25a9a890e365c13bfc3f59",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T05:00:15Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41267842700"
+      ],
+      "rationale": "Approved by Dinesh (D-085). Basis: unit-tests CI run 41267842700 PASS on c92e841523f5d194de25a9a890e365c13bfc3f59 (make check, docs-check, test-unit), accepted as of that commit; implementation commit 52963d6e905d86b369097f8e793778d4df4ee4d6. Limits: frame graph contract 0.1.0 is a 0.x contract; criteria were baselined with the task (D-082); review is the interim D-047 role, not independent; software scope on synthetic data, not hardware or safety validation."
     }
   ]
 }
