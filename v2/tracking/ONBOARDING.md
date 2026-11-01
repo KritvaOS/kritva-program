@@ -44,5 +44,5 @@ for Stage 1 only. For such a source:
 |---|---|
 | CORE | Reporting (KF-CORE-R10-001..009 only; R02..R09 not tracked, D-014) |
 | COMMUNITY | Reporting (I2-001..I4-008) |
-| SENSE | Reporting with an empty task list (D-077, [STATUS_INGESTION_PLAN.md](../planning/STATUS_INGESTION_PLAN.md)); KOS-SENSE-001 (weight 5) and KOS-SENSE-002 (weight 4) are baselined in v3 under D-078 and approved (A076, A077), so they carry credit; the code and test files in the SENSE gap are an accepted exception (D-079); contract 0.1.0 is owner-approved as v0.1.0 (D-081) |
+| SENSE | Reporting with an empty task list (D-077, [STATUS_INGESTION_PLAN.md](../planning/STATUS_INGESTION_PLAN.md)); KOS-SENSE-001 (weight 5) and KOS-SENSE-002 (weight 4) are baselined in v3 under D-078 and approved (A076, A077), so they carry credit; the code and test files in the SENSE gap are an accepted exception (D-079, limited to the files of those two tasks and ended by the report's task rows); contract 0.1.0 is owner-approved as v0.1.0 (D-081); KOS-SENSE-003 (weight 5) and milestone V2-M5-SENSE-001 are baselined in v4 under D-082, in progress, with no approval and no credit, and its implementation files need their own gap review at the next refresh |
 | All others | Roster entries only; no repo or task records verified |

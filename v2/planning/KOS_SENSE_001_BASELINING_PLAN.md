@@ -5,7 +5,7 @@
 | Document ID | KOS-PLAN-SENSE-BASELINE-001 |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Plan |
-| Status | APPROVED to proceed (D-078, 2026-10-30); baseline v3 frozen by pull request #13 (2026-10-30) |
+| Status | APPROVED to proceed (D-078, 2026-10-30); baseline v3 frozen by pull request #13 (2026-10-30). HISTORICAL for tasks 001 and 002: KOS-SENSE-003 and baseline v4 are in D-082, not in this plan |
 | Owner | Dinesh (program owner) |
 | Reviewer / Approver | Dinesh |
 | Version | 0.3 |
