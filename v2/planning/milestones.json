@@ -490,5 +490,38 @@
       "status": "PROPOSED",
       "tasks": []
     }
-  ]
+  ],
+  "historical_milestones": {
+    "_note": "Planning-layer classification of baseline milestones that predate V2 planning (D-094, D-095). Keys are real milestone IDs from baseline.json. No weights, tasks or credit are held or transferred here; weights stay in baseline.json. PRE_V2 means no related V2 program milestone. A later decision may mark one V2_FOUNDATION and relate it to a program milestone.",
+    "KF-CORE-R10": {
+      "classification": "PRE_V2",
+      "related_program_milestone": null,
+      "relationship": "HISTORICAL",
+      "credit_transfer": false
+    },
+    "KOS-I2": {
+      "classification": "PRE_V2",
+      "related_program_milestone": null,
+      "relationship": "HISTORICAL",
+      "credit_transfer": false
+    },
+    "KOS-I3": {
+      "classification": "PRE_V2",
+      "related_program_milestone": null,
+      "relationship": "HISTORICAL",
+      "credit_transfer": false
+    },
+    "KOS-I4": {
+      "classification": "PRE_V2",
+      "related_program_milestone": null,
+      "relationship": "HISTORICAL",
+      "credit_transfer": false
+    },
+    "KRP-ENG": {
+      "classification": "PRE_V2",
+      "related_program_milestone": null,
+      "relationship": "HISTORICAL",
+      "credit_transfer": false
+    }
+  }
 }
