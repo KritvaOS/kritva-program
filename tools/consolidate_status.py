@@ -656,6 +656,64 @@ def rollup(tasks, key):
     return {k: groups[k] for k in sorted(groups)}
 
 
+def milestone_alignment(base, pdata, by_milestone):
+    """Join baseline milestones to the V2 planning layer (D-093, D-094, D-095). Read-only: it never feeds compute().
+
+    Returns (rows, errors, warnings). Counts and weights come from the existing by_milestone rollup and are shown
+    side by side, never blended into a percentage. A repo milestone has no closure field of its own, so closure is
+    read from its program milestone. Historical milestones are classified in milestones.json (planning layer only).
+    """
+    errs, warns, rows = [], [], []
+    plan = pdata["milestones"]
+    repo_ms = {x["id"]: x for x in plan.get("repo_milestones") or []}
+    repo_ws = {r["code"]: r["workstream_id"] for r in pdata["pipeline"]["repositories"]}
+    prog = {x["id"]: x for x in plan["milestones"]}
+    hist = {k: v for k, v in (plan.get("historical_milestones") or {}).items() if not str(k).startswith("_")}
+    base_ms = {m["id"]: m for m in base.get("milestones", [])}
+    for t in base["tasks"]:
+        mid = t.get("milestone_id")
+        if mid is None:
+            continue
+        if mid not in base_ms:
+            errs.append(f"baseline task {t['id']}: milestone {mid!r} is not in baseline milestones")
+        elif t["workstream_id"] != base_ms[mid]["workstream_id"]:
+            errs.append(f"baseline task {t['id']}: workstream {t['workstream_id']} does not match milestone {mid} ({base_ms[mid]['workstream_id']})")
+    for k in sorted(hist):
+        if k not in base_ms:
+            warns.append(f"historical milestone {k}: classified in milestones.json but not a baseline milestone")
+
+    def stats(mid):
+        g = by_milestone.get(mid) or {}
+        return {"tasks": g.get("tasks", 0), "credited": g.get("credited", 0),
+                "weight": g.get("weight") if g.get("weighted") else None,
+                "accepted_weight": g.get("accepted_weight") if g.get("weighted") else None}
+
+    for mid in sorted(base_ms):
+        row = {"milestone": mid, "workstream": base_ms[mid]["workstream_id"], "status": "-", "closure": "-", **stats(mid)}
+        if mid in repo_ms:
+            r = repo_ms[mid]
+            pm = r["milestone_id"]
+            if base_ms[mid]["workstream_id"] != repo_ws.get(r["repo_code"]):
+                errs.append(f"baseline milestone {mid}: workstream {base_ms[mid]['workstream_id']} does not match repo {r['repo_code']} ({repo_ws.get(r['repo_code'])})")
+            row.update({"class": "V2_REPO", "program_milestone": pm, "status": r["status"],
+                        "closure": prog[pm].get("closure_record") or "none"})
+        elif mid in hist:
+            h = hist[mid]
+            row.update({"class": h["classification"], "program_milestone": h["related_program_milestone"] or "-"})
+        elif mid.startswith("V2-"):
+            errs.append(f"baseline milestone {mid}: not found in milestones.json repo_milestones")
+            row.update({"class": "UNKNOWN", "program_milestone": "-"})
+        else:
+            warns.append(f"baseline milestone {mid}: not classified in milestones.json historical_milestones (UNCLASSIFIED)")
+            row.update({"class": "UNCLASSIFIED", "program_milestone": "-"})
+        rows.append(row)
+    for mid in sorted(set(repo_ms) - set(base_ms)):
+        r = repo_ms[mid]
+        rows.append({"milestone": mid, "workstream": repo_ws.get(r["repo_code"], "-"), "class": "V2_REPO", "program_milestone": r["milestone_id"],
+                     "status": r["status"], "closure": prog[r["milestone_id"]].get("closure_record") or "none", **stats(mid)})
+    return rows, errs, warns
+
+
 def measures(tasks, gates):
     """Four SEPARATE measures. They are never blended into one percentage."""
     n = len(tasks)
@@ -757,6 +815,31 @@ def render_view(c):
     return "\n".join(L).rstrip("\n") + "\n"
 
 
+def alignment_lines(c):
+    """Milestone alignment section of STATUS_DETAIL.md (D-093). Counts and weights are shown side by side, no percentage."""
+    rows = c.get("milestone_alignment")
+    if not rows:
+        return []
+    cls = {}
+    for r in rows:
+        cls[r["class"]] = cls.get(r["class"], 0) + 1
+    L = ["", "## Milestone alignment", "",
+         "Joins the baseline milestones to the V2 planning layer (v2/planning/milestones.json). It is a read-only report: it adds no credit and changes "
+         "no weight. Task counts and baseline weights are shown side by side; there is no per-milestone percentage. A repository milestone has no closure "
+         "field, so the closure column shows the closure record of its program milestone (none until an approved COMPLETION_RECORD.md). "
+         "PRE_V2 and V2_FOUNDATION are planning classifications of historical baseline milestones (D-094, D-095); a PRE_V2 milestone has no program "
+         "milestone and its weight is not part of any V2 milestone. V2_REPO rows with no baselined tasks are planned repository milestones (planning only).", "",
+         "Rows: " + ", ".join(f"{k} {v}" for k, v in sorted(cls.items())) + ".", "",
+         "| Milestone | Class | Program milestone | Workstream | Repo milestone status | Baselined tasks | Credited | Baseline weight | Accepted weight | Closure record |",
+         "|---|---|---|---|---|---|---|---|---|---|"]
+    for r in rows:
+        wt = "-" if r["tasks"] == 0 else ("N/A" if r["weight"] is None else r["weight"])
+        aw = "-" if r["tasks"] == 0 else ("N/A" if r["accepted_weight"] is None else r["accepted_weight"])
+        L.append(f"| {r['milestone']} | {r['class']} | {r['program_milestone']} | {r['workstream']} | {r['status']} | {r['tasks']} | "
+                 f"{r['credited']} | {wt} | {aw} | {r['closure']} |")
+    return L
+
+
 def render(c):
     """STATUS_DETAIL.md: the full tables behind STATUS_VIEW.md."""
     pct = c["progress"]["accepted_progress_pct"]
@@ -821,6 +904,7 @@ def render(c):
         for k, g in c[key].items():
             L.append(f"| {k} | {g['tasks']} | {g['complete']} | {g['credited']} | "
                      f"{g['weight'] if g['weighted'] else 'N/A'} | {g['accepted_weight'] if g['weighted'] else 'N/A'} |")
+    L += alignment_lines(c)
     L += ["", "## Tasks", ""]
     if c["tasks"]:
         L += ["| Task | Workstream | Weight | Execution | Acceptance | Credit | Evidence (class, tested commit, task commit, run) | Run checked | Why |",
@@ -1084,6 +1168,11 @@ def main():
         if not perrs:
             c["v2_plan"] = planning.summary(pdata)
             c["v2_plan_data"] = pdata
+            arows, aerrs, awarns = milestone_alignment(base, pdata, c["by_milestone"])
+            errors += [f"milestone alignment: {x}" for x in aerrs]
+            warnings += [f"milestone alignment: {x}" for x in awarns]
+            c["errors"], c["warnings"] = sorted(errors), sorted(warnings)
+            c["milestone_alignment"] = arows
             plan_files = {root / planning.PLAN / n: t for n, t in planning.render_all(pdata).items()}
     prev_c = None
     if prev_out.exists():

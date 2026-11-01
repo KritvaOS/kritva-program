@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-01T17:00:36Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-01T17:50:51Z (freshness of sources is judged at this time)
 - Baseline version: 7 (APPROVED)
 - Accepted engineering progress: 97.89% (139/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 38/39 tasks (repo-reported; not acceptance)
@@ -29,7 +29,7 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-01T17:00:36Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-01T17:50:51Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
@@ -100,6 +100,58 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | V2-M5-SENSE-001 | 1 | 1 | 1 | 5 | 5 |
 | V2-M7-SENSE-001 | 2 | 2 | 2 | 9 | 9 |
 | V2-M8-SENSE-001 | 2 | 2 | 2 | 11 | 11 |
+
+## Milestone alignment
+
+Joins the baseline milestones to the V2 planning layer (v2/planning/milestones.json). It is a read-only report: it adds no credit and changes no weight. Task counts and baseline weights are shown side by side; there is no per-milestone percentage. A repository milestone has no closure field, so the closure column shows the closure record of its program milestone (none until an approved COMPLETION_RECORD.md). PRE_V2 and V2_FOUNDATION are planning classifications of historical baseline milestones (D-094, D-095); a PRE_V2 milestone has no program milestone and its weight is not part of any V2 milestone. V2_REPO rows with no baselined tasks are planned repository milestones (planning only).
+
+Rows: PRE_V2 5, V2_REPO 38.
+
+| Milestone | Class | Program milestone | Workstream | Repo milestone status | Baselined tasks | Credited | Baseline weight | Accepted weight | Closure record |
+|---|---|---|---|---|---|---|---|---|---|
+| KF-CORE-R10 | PRE_V2 | - | CORE | - | 9 | 9 | 30 | 30 | - |
+| KOS-I2 | PRE_V2 | - | COMMUNITY | - | 6 | 6 | 18 | 18 | - |
+| KOS-I3 | PRE_V2 | - | COMMUNITY | - | 7 | 7 | 23 | 23 | - |
+| KOS-I4 | PRE_V2 | - | COMMUNITY | - | 8 | 8 | 30 | 30 | - |
+| KRP-ENG | PRE_V2 | - | CI_DEV_INFRA | - | 1 | 0 | 3 | 0 | - |
+| V2-M1-SENSE-001 | V2_REPO | V2-M1 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
+| V2-M2-SENSE-001 | V2_REPO | V2-M2 | SENSE | PROPOSED | 2 | 2 | 8 | 8 | none |
+| V2-M5-SENSE-001 | V2_REPO | V2-M5 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
+| V2-M7-SENSE-001 | V2_REPO | V2-M7 | SENSE | PROPOSED | 2 | 2 | 9 | 9 | none |
+| V2-M8-SENSE-001 | V2_REPO | V2-M8 | SENSE | PROPOSED | 2 | 2 | 11 | 11 | none |
+| V2-M0-COMMUNITY-001 | V2_REPO | V2-M0 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
+| V2-M0-CORE-001 | V2_REPO | V2-M0 | CORE | PROPOSED | 0 | 0 | - | - | none |
+| V2-M0-MIND-001 | V2_REPO | V2-M0 | MIND | PROPOSED | 0 | 0 | - | - | none |
+| V2-M0-MOTION-001 | V2_REPO | V2-M0 | MOTION | PROPOSED | 0 | 0 | - | - | none |
+| V2-M0-PROGRAM-001 | V2_REPO | V2-M0 | CI_DEV_INFRA | PROPOSED | 0 | 0 | - | - | none |
+| V2-M0-SENSE-001 | V2_REPO | V2-M0 | SENSE | PROPOSED | 0 | 0 | - | - | none |
+| V2-M0-SKILL-001 | V2_REPO | V2-M0 | SKILL | PROPOSED | 0 | 0 | - | - | none |
+| V2-M1-COMMUNITY-001 | V2_REPO | V2-M1 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
+| V2-M1-MIND-001 | V2_REPO | V2-M1 | MIND | PROPOSED | 0 | 0 | - | - | none |
+| V2-M1-MOTION-001 | V2_REPO | V2-M1 | MOTION | PROPOSED | 0 | 0 | - | - | none |
+| V2-M1-SKILL-001 | V2_REPO | V2-M1 | SKILL | PROPOSED | 0 | 0 | - | - | none |
+| V2-M2-CORE-001 | V2_REPO | V2-M2 | CORE | PROPOSED | 0 | 0 | - | - | none |
+| V2-M2-MIND-001 | V2_REPO | V2-M2 | MIND | PROPOSED | 0 | 0 | - | - | none |
+| V2-M2-MOTION-001 | V2_REPO | V2-M2 | MOTION | PROPOSED | 0 | 0 | - | - | none |
+| V2-M2-SKILL-001 | V2_REPO | V2-M2 | SKILL | PROPOSED | 0 | 0 | - | - | none |
+| V2-M3-COMMUNITY-001 | V2_REPO | V2-M3 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
+| V2-M3-SKILL-001 | V2_REPO | V2-M3 | SKILL | PROPOSED | 0 | 0 | - | - | none |
+| V2-M5-ACTUATOR-001 | V2_REPO | V2-M5 | ACT_INT | PROPOSED | 0 | 0 | - | - | none |
+| V2-M5-MIND-001 | V2_REPO | V2-M5 | MIND | PROPOSED | 0 | 0 | - | - | none |
+| V2-M5-MOTION-001 | V2_REPO | V2-M5 | MOTION | PROPOSED | 0 | 0 | - | - | none |
+| V2-M5-SKILL-001 | V2_REPO | V2-M5 | SKILL | PROPOSED | 0 | 0 | - | - | none |
+| V2-M6-ACTL-001 | V2_REPO | V2-M6 | ACT_L | ON_HOLD | 0 | 0 | - | - | none |
+| V2-M6-ACTM-001 | V2_REPO | V2-M6 | ACT_M | ON_HOLD | 0 | 0 | - | - | none |
+| V2-M6-ACTS-001 | V2_REPO | V2-M6 | ACT_S | ON_HOLD | 0 | 0 | - | - | none |
+| V2-M6-ACTUATOR-001 | V2_REPO | V2-M6 | ACT_INT | ON_HOLD | 0 | 0 | - | - | none |
+| V2-M6-EMBEDDED-001 | V2_REPO | V2-M6 | ACT_EMB | ON_HOLD | 0 | 0 | - | - | none |
+| V2-M7-COMMUNITY-001 | V2_REPO | V2-M7 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
+| V2-M8-COMMUNITY-001 | V2_REPO | V2-M8 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
+| V2-M8-CORE-001 | V2_REPO | V2-M8 | CORE | PROPOSED | 0 | 0 | - | - | none |
+| V2-M8-MIND-001 | V2_REPO | V2-M8 | MIND | PROPOSED | 0 | 0 | - | - | none |
+| V2-M8-MOTION-001 | V2_REPO | V2-M8 | MOTION | PROPOSED | 0 | 0 | - | - | none |
+| V2-M8-PROGRAM-001 | V2_REPO | V2-M8 | CI_DEV_INFRA | PROPOSED | 0 | 0 | - | - | none |
+| V2-M8-SKILL-001 | V2_REPO | V2-M8 | SKILL | PROPOSED | 0 | 0 | - | - | none |
 
 ## Tasks
 
