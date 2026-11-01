@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-01T02:39:21Z from committed data. Baseline v4 (APPROVED). Validation: 0 error(s), 21 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-01T04:44:36Z from committed data. Baseline v5 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -16,32 +16,33 @@ Open items derived from the program records. Owners and due dates appear only wh
 | 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh | v2/planning/PENDING_DECISIONS.md |
 | 3 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
 | 4 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
+| 5 | 1 task(s) have reported CI evidence awaiting central approval | Zero credit until an approval is recorded: KOS-SENSE-003 | not recorded | v2/tracking/approvals.json |
 
 ## What changed
 
-Compared with the snapshot generated 2026-10-31T02:41:42Z (recorded 2026-11-01T02:39:06Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-01T02:39:21Z (recorded 2026-11-01T04:44:20Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 110/113 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 110/118 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Warnings: 20 -> 21
+- Accepted progress: 110/118 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 110/122 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
+- Warnings: 21 -> 20
 
 ## Measures (never blended)
 
 | Measure | Value | Scope and basis |
 |---|---|---|
-| Accepted engineering progress | 93.22% (110/118 weight) | Frozen baseline v4: only the 34 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
+| Accepted engineering progress | 90.16% (110/122 weight) | Frozen baseline v5: only the 35 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
 ## Accepted engineering progress by workstream
 
 ```text
-110/118 weight  ████████████████████████████░░  93.22%
+110/122 weight  ███████████████████████████░░░  90.16%
 ```
 
 | Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |
 |---|---|---|---|
 | COMMUNITY | 71/71 | 100.0% | 21/21 |
 | CORE | 30/30 | 100.0% | 9/9 |
-| SENSE | 9/14 | 64.3% | 2/3 |
+| SENSE | 9/18 | 50.0% | 2/4 |
 | CI_DEV_INFRA | 0/3 | 0.0% | 0/1 |
 
 Frozen baseline; credit needs a recorded approval and verified CI evidence. Only baselined workstreams are listed. A workstream that is NOT BASELINED has no accepted progress to report; that is not zero progress.
@@ -79,13 +80,9 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Measure | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 21 |
+| Warnings | 20 |
 | Workstreams registered / baselined | 24 / 4 |
 | Workstreams with no status source (UNVERIFIED) | 20 |
 | Source freshness | FETCH_FAILED 1, FRESH 3 |
 
 No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, MOTION, NEXUS_EDGE, SDK, SIM, SKILL, STUDIO.
-
-Other warnings:
-
-- KOS-SENSE-003: not reported by SENSE (no credit)
