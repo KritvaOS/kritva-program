@@ -892,6 +892,31 @@
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-SENSE-005",
+      "workstream_id": "SENSE",
+      "task_commit": "540c389150148f3793c6035bab28349828f186cc",
+      "task_subject": "feat(stream): add telemetry stream contract and reference validator",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "0bee5ed15dcbedbe4810e836adfc042cf99de97c",
+        "ci_run": 41278515695,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/41278515695",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "contract/STREAM_CONTRACT.md",
+        "src/kritva_sense/stream.py",
+        "tasks/KOS-SENSE-005/ACCEPTANCE_CRITERIA.md",
+        "tasks/KOS-SENSE-005/TASK.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []
