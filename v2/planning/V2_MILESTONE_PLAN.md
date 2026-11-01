@@ -174,3 +174,15 @@ Exit conditions:
 | V2-M8-MOTION-001 | kritva-motion | PROPOSED | Release and security review complete. |
 | V2-M8-MIND-001 | kritva-mind | PROPOSED | Release and security review complete. |
 | V2-M8-SKILL-001 | kritva-skill | PROPOSED | Release and security review complete. |
+
+## Historical milestones (pre-V2 baseline)
+
+Baseline milestones that predate V2 planning, classified here for planning only (D-094, D-095). No weight, task or credit is held or moved: weights and accepted progress stay in the baseline and appear in [tracking/STATUS_DETAIL.md](../tracking/STATUS_DETAIL.md). PRE_V2 means no related V2 program milestone.
+
+| Milestone | Classification | Related program milestone | Relationship | Credit transfer |
+|---|---|---|---|---|
+| KF-CORE-R10 | PRE_V2 | - | HISTORICAL | no |
+| KOS-I2 | PRE_V2 | - | HISTORICAL | no |
+| KOS-I3 | PRE_V2 | - | HISTORICAL | no |
+| KOS-I4 | PRE_V2 | - | HISTORICAL | no |
+| KRP-ENG | PRE_V2 | - | HISTORICAL | no |

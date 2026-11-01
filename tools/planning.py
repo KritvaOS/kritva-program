@@ -32,6 +32,9 @@ SCHEDULE_STATUS = ("PROPOSED", "APPROVED", "HOLD")
 PENDING_D = {"PROPOSED", "IN_REVIEW"}
 PENDING_R = {"PENDING", "IN_PROGRESS", "CHANGES_REQUESTED"}
 PHASES = [f"V2-M{i}" for i in range(9)]
+HIST_CLASS = {"PRE_V2": "HISTORICAL", "V2_FOUNDATION": "FOUNDATION_ONLY"}  # classification -> required relationship (D-094, D-095)
+HIST_FIELDS = {"classification", "related_program_milestone", "relationship", "credit_transfer"}
+HIST_ID = re.compile(r"^[A-Z0-9][A-Z0-9-]*$")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 SHA = re.compile(r"^[0-9a-f]{40}$")
 MID = re.compile(r"^V2-M[0-8]$")
@@ -209,6 +212,43 @@ def validate(data):
         for pm in x.get("phase_milestones", []):
             if not any(s.get("repo_code") == x["code"] and s.get("milestone_id") == pm for s in m.get("repo_milestones", [])):
                 errs.append(f"{x['repo_id']}: lists {pm} but has no repo milestone for it")
+    # ---- historical milestones (optional, D-095). Values only: this tool never reads the baseline, so it cannot
+    # check that a key exists there; consolidate_status does that. No weights, tasks or credit may appear here.
+    hist = m.get("historical_milestones")
+    if hist is not None and not isinstance(hist, dict):
+        errs.append("historical_milestones must be an object keyed by milestone ID")
+        hist = {}
+    for k, v in (hist or {}).items():
+        if str(k).startswith("_"):
+            continue
+        if not HIST_ID.match(str(k)) or MID.match(str(k)) or SUBID.match(str(k)):
+            errs.append(f"historical milestone {k!r}: must be a historical baseline milestone ID, not a V2 program or repo milestone ID")
+            continue
+        if not isinstance(v, dict):
+            errs.append(f"historical milestone {k}: must be an object")
+            continue
+        extra = sorted(set(v) - HIST_FIELDS)
+        if extra:
+            errs.append(f"historical milestone {k}: unknown field(s) {extra} (no weights, tasks or credit are held here)")
+        missing = sorted(HIST_FIELDS - set(v))
+        if missing:
+            errs.append(f"historical milestone {k}: missing field(s) {missing}")
+            continue
+        cl = v["classification"]
+        if cl not in HIST_CLASS:
+            errs.append(f"historical milestone {k}: classification must be one of {list(HIST_CLASS)}")
+            continue
+        rel = v["related_program_milestone"]
+        if rel is not None and rel not in PHASES:
+            errs.append(f"historical milestone {k}: related_program_milestone must be null or one of V2-M0..V2-M8")
+        if cl == "PRE_V2" and rel is not None:
+            errs.append(f"historical milestone {k}: PRE_V2 has no related program milestone")
+        if cl == "V2_FOUNDATION" and rel is None:
+            errs.append(f"historical milestone {k}: V2_FOUNDATION needs a related program milestone")
+        if v["relationship"] != HIST_CLASS[cl]:
+            errs.append(f"historical milestone {k}: relationship for {cl} must be {HIST_CLASS[cl]}")
+        if v["credit_transfer"] is not False:
+            errs.append(f"historical milestone {k}: credit_transfer must be false (no weight or credit moves to V2)")
     # ---- decisions and reviews
     ids_seen = set()
     for kind, doc, statuses in (("DECISION", d, DECISION_STATUS), ("REVIEW", r, REVIEW_STATUS)):
@@ -308,6 +348,17 @@ def render_milestones(data):
         for s in subs:
             repo = next(r["repo_id"] for r in p["repositories"] if r["code"] == s["repo_code"])
             L.append(f"| {s['id']} | {repo} | {s['status']} | {_cell(s['outcome'])} |")
+        L.append("")
+    hist = {k: v for k, v in (m.get("historical_milestones") or {}).items() if not str(k).startswith("_")}
+    if hist:
+        L += ["## Historical milestones (pre-V2 baseline)", "",
+              "Baseline milestones that predate V2 planning, classified here for planning only (D-094, D-095). No weight, task or credit is held or moved: "
+              "weights and accepted progress stay in the baseline and appear in [tracking/STATUS_DETAIL.md](../tracking/STATUS_DETAIL.md). "
+              "PRE_V2 means no related V2 program milestone.", "",
+              "| Milestone | Classification | Related program milestone | Relationship | Credit transfer |", "|---|---|---|---|---|"]
+        for k in sorted(hist):
+            v = hist[k]
+            L.append(f"| {k} | {v['classification']} | {v['related_program_milestone'] or '-'} | {v['relationship']} | {'yes' if v['credit_transfer'] else 'no'} |")
         L.append("")
     return "\n".join(L).rstrip("\n") + "\n"
 

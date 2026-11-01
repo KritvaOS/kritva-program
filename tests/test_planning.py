@@ -88,6 +88,89 @@ class Records(unittest.TestCase):
         self.assertTrue(any("COMPLETION_RECORD" in e for e in P.validate(d)))
 
 
+class Historical(unittest.TestCase):
+    """Optional historical_milestones section (D-094, D-095): values only, no weights, tasks or credit."""
+    IDS = {"KF-CORE-R10", "KOS-I2", "KOS-I3", "KOS-I4", "KRP-ENG"}
+
+    def hist(self, d):
+        return d["milestones"]["historical_milestones"]
+
+    def test_committed_section_has_the_five_real_ids_all_pre_v2(self):
+        h = {k: v for k, v in self.hist(data()).items() if not k.startswith("_")}
+        self.assertEqual(set(h), self.IDS)
+        for k, v in h.items():
+            self.assertEqual((v["classification"], v["related_program_milestone"], v["relationship"], v["credit_transfer"]),
+                             ("PRE_V2", None, "HISTORICAL", False), k)
+
+    def test_keys_exist_in_the_baseline_and_are_not_v2_ids(self):
+        # Read-only guard in the test: planning.py itself never reads the baseline (D-093).
+        base = json.loads((ROOT / "v2/tracking/baseline.json").read_text(encoding="utf-8"))
+        known = {m["id"] for m in base["milestones"]}
+        self.assertTrue(self.IDS <= known)
+        self.assertFalse({k for k in self.IDS if k.startswith("V2-")})
+
+    def test_section_is_optional(self):
+        d = copy.deepcopy(data()); del d["milestones"]["historical_milestones"]
+        self.assertEqual(P.validate(d), [])
+        self.assertNotIn("Historical milestones", P.render_milestones(d))
+
+    def test_unknown_classification_is_rejected(self):
+        d = copy.deepcopy(data()); self.hist(d)["KOS-I2"]["classification"] = "V2_PLANNED"
+        self.assertTrue(any("classification" in e for e in P.validate(d)))
+
+    def test_pre_v2_cannot_relate_to_a_program_milestone(self):
+        d = copy.deepcopy(data()); self.hist(d)["KOS-I2"]["related_program_milestone"] = "V2-M0"
+        self.assertTrue(any("PRE_V2 has no related" in e for e in P.validate(d)))
+
+    def test_v2_foundation_needs_a_valid_related_milestone_and_relationship(self):
+        d = copy.deepcopy(data()); h = self.hist(d)["KF-CORE-R10"]
+        h["classification"] = "V2_FOUNDATION"
+        errs = P.validate(d)
+        self.assertTrue(any("needs a related program milestone" in e for e in errs))
+        self.assertTrue(any("relationship for V2_FOUNDATION" in e for e in errs))
+        h["related_program_milestone"], h["relationship"] = "V2-M0", "FOUNDATION_ONLY"
+        self.assertEqual(P.validate(d), [])
+        h["related_program_milestone"] = "V2-M9"
+        self.assertTrue(any("related_program_milestone must be" in e for e in P.validate(d)))
+
+    def test_credit_transfer_must_be_false(self):
+        for bad in (True, "false", None):
+            d = copy.deepcopy(data()); self.hist(d)["KOS-I3"]["credit_transfer"] = bad
+            self.assertTrue(any("credit_transfer must be false" in e for e in P.validate(d)), bad)
+
+    def test_weights_tasks_and_unknown_fields_are_rejected(self):
+        for field in ("weight", "tasks", "credit", "accepted_weight"):
+            d = copy.deepcopy(data()); self.hist(d)["KOS-I4"][field] = 1
+            self.assertTrue(any("unknown field" in e for e in P.validate(d)), field)
+
+    def test_missing_field_and_non_object_are_rejected(self):
+        d = copy.deepcopy(data()); del self.hist(d)["KRP-ENG"]["relationship"]
+        self.assertTrue(any("missing field" in e for e in P.validate(d)))
+        d = copy.deepcopy(data()); self.hist(d)["KRP-ENG"] = "PRE_V2"
+        self.assertTrue(any("must be an object" in e for e in P.validate(d)))
+        d = copy.deepcopy(data()); d["milestones"]["historical_milestones"] = ["KRP-ENG"]
+        self.assertTrue(any("keyed by milestone ID" in e for e in P.validate(d)))
+
+    def test_v2_program_and_repo_milestone_ids_are_not_historical_keys(self):
+        for bad in ("V2-M3", "V2-M1-SENSE-001", "lower-case"):
+            d = copy.deepcopy(data()); self.hist(d)[bad] = dict(self.hist(d)["KOS-I2"])
+            self.assertTrue(any("historical baseline milestone ID" in e for e in P.validate(d)), bad)
+
+    def test_rendering_lists_all_five_without_weights_and_is_deterministic(self):
+        t = P.render_milestones(data())
+        self.assertEqual(t, P.render_milestones(data()))
+        self.assertIn("## Historical milestones (pre-V2 baseline)", t)
+        for k in self.IDS:
+            self.assertIn(f"| {k} | PRE_V2 | - | HISTORICAL | no |", t)
+        sec = t.split("## Historical milestones (pre-V2 baseline)")[1]
+        self.assertNotIn("104", sec)
+        self.assertNotIn("weight 1", sec)
+
+    def test_section_does_not_touch_summary_or_credit_inputs(self):
+        d = data(); s = P.summary(d)
+        self.assertNotIn("historical_milestones", json.dumps(s))
+
+
 class Pipeline(unittest.TestCase):
     def test_order_respects_dependencies(self):
         order, errs = P.topo(data()["pipeline"]["repositories"])
