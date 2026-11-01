@@ -846,6 +846,30 @@
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-SENSE-003",
+      "workstream_id": "SENSE",
+      "task_commit": "52963d6e905d86b369097f8e793778d4df4ee4d6",
+      "task_subject": "feat(frames): add frame graph contract, reference implementation and tests",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "c92e841523f5d194de25a9a890e365c13bfc3f59",
+        "ci_run": 41267842700,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/41267842700",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "tasks/KOS-SENSE-003/TASK.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []
