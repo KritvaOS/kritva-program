@@ -6,15 +6,15 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-01T09:30:20Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-01T15:29:05Z (freshness of sources is judged at this time)
 - Baseline version: 7 (APPROVED)
-- Accepted engineering progress: 93.66% (133/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
-- Execution reported complete: 37/39 tasks (repo-reported; not acceptance)
-- Credited tasks: 37/39; blocked by open gates: 0 (none)
-- Evidence coverage: 37/39 tasks with approved, verified evidence; 37 with the CI run confirmed against GitHub (policy: required for credit)
-- Release readiness: NOT_READY (open release gates: none; uncredited tasks: 2)
+- Accepted engineering progress: 97.89% (139/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
+- Execution reported complete: 38/39 tasks (repo-reported; not acceptance)
+- Credited tasks: 38/39; blocked by open gates: 0 (none)
+- Evidence coverage: 38/39 tasks with approved, verified evidence; 38 with the CI run confirmed against GitHub (policy: required for credit)
+- Release readiness: NOT_READY (open release gates: none; uncredited tasks: 1)
 - Schedule: NOT TRACKED here. Effort and capability are owner estimates in their own section, separate from progress
-- Evidence classes of credited tasks: MILESTONE 29, OWN 7, RERUN 1
+- Evidence classes of credited tasks: MILESTONE 30, OWN 7, RERUN 1
 - Evidence qualification: MILESTONE-class tasks were validated by a CI run on a LATER commit ("accepted as of" that commit), not by a run on the task's own commit; the tested commit is shown per task. UNSPECIFIED means the evidence class is not recorded. Open safety gates keep gated tasks at zero credit and release readiness NOT_READY. Credit reflects approval and CI evidence, not physical validation or safety sign-off.
 
 ## Program phase status (manual; separate scope from the engineering baseline)
@@ -29,14 +29,14 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-01T09:30:20Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-01T15:29:05Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
 | CI_DEV_INFRA | FETCH_FAILED | 2026-10-26T16:23:10Z | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
-| COMMUNITY | FRESH | 2026-11-01T09:29:49Z (0h ago) | 65a33ea | 27ed961 | 4 commit(s) | OTHER FILES (review): Makefile, status/status.json |
-| CORE | FRESH | 2026-11-01T09:29:49Z (0h ago) | 969d615 | be8889e | 4 commit(s) | OTHER FILES (review): Makefile, status/status.json |
-| SENSE | FRESH | 2026-11-01T09:29:49Z (0h ago) | 38edf01 | 07c48d5 | 60 commit(s) | OTHER FILES (review): .gitignore, ACCEPTANCE_CRITERIA.md, MANIFEST.in, Makefile, README.md |
+| COMMUNITY | FRESH | 2026-11-01T15:28:31Z (0h ago) | 65a33ea | 27ed961 | 4 commit(s) | OTHER FILES (review): Makefile, status/status.json |
+| CORE | FRESH | 2026-11-01T15:28:31Z (0h ago) | dd0bbee | 969d615 | 2 commit(s) | STATUS_ONLY |
+| SENSE | FRESH | 2026-11-01T15:28:31Z (0h ago) | cae7841 | 07c48d5 | 74 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
 
 ## Workstreams
 
@@ -50,10 +50,10 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | ACT_L | KritvaOS/kritva-actuator-l | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | ACT_M | KritvaOS/kritva-actuator-m | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | ACT_S | KritvaOS/kritva-actuator-s | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| CI_DEV_INFRA | KritvaOS/kritva-program | BASELINED (1 tasks) | OK | 1 | 8e50865 |
+| CI_DEV_INFRA | KritvaOS/kritva-program | BASELINED (1 tasks) | STALE | 1 | 8e50865 |
 | COMMUNITY | KritvaOS/kritvaos-community | BASELINED (21 tasks) | OK | 21 | 27ed961 |
 | CONTROL_PLANE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| CORE | KritvaOS/kritva-core | BASELINED (9 tasks) | OK | 9 | be8889e |
+| CORE | KritvaOS/kritva-core | BASELINED (9 tasks) | OK | 9 | 969d615 |
 | DEVICE_ENDPOINT | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | EDUCATION_APPLICATIONS | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | ELECTRICAL_POWER | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
@@ -75,7 +75,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| UNMAPPED | 39 | 37 | 37 | 142 | 133 |
+| UNMAPPED | 39 | 38 | 38 | 142 | 139 |
 
 ## Rollup by workstream
 
@@ -84,7 +84,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | CI_DEV_INFRA | 1 | 0 | 0 | 3 | 0 |
 | COMMUNITY | 21 | 21 | 21 | 71 | 71 |
 | CORE | 9 | 9 | 9 | 30 | 30 |
-| SENSE | 8 | 7 | 7 | 38 | 32 |
+| SENSE | 8 | 8 | 8 | 38 | 38 |
 
 ## Rollup by milestone
 
@@ -99,7 +99,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | V2-M2-SENSE-001 | 2 | 2 | 2 | 8 | 8 |
 | V2-M5-SENSE-001 | 1 | 1 | 1 | 5 | 5 |
 | V2-M7-SENSE-001 | 2 | 2 | 2 | 9 | 9 |
-| V2-M8-SENSE-001 | 2 | 1 | 1 | 11 | 5 |
+| V2-M8-SENSE-001 | 2 | 2 | 2 | 11 | 11 |
 
 ## Tasks
 
@@ -142,8 +142,8 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | KOS-SENSE-005 | SENSE | 4 | COMPLETE | PASS | yes | MILESTONE: 0bee5ed (task 540c389), run 41278515695 | yes | weight 4 x approval A214 (PASS, APPROVED) on commit 0bee5ed with PASS evidence |
 | KOS-SENSE-006 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: 67590bc (task 536d3c9), run 41289421496 | yes | weight 5 x approval A215 (PASS, APPROVED) on commit 67590bc with PASS evidence |
 | KOS-SENSE-007 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: 5f1aa7a (task f068ecd), run 41292919590 | yes | weight 5 x approval A216 (PASS, APPROVED) on commit 5f1aa7a with PASS evidence |
-| KOS-SENSE-008 | SENSE | 6 | NOT_STARTED | NOT_RUN | no | - | - | no central approval recorded |
-| KRP-ENG-001 | CI_DEV_INFRA | 3 | NOT_STARTED | NOT_RUN | no | - | - | no central approval recorded |
+| KOS-SENSE-008 | SENSE | 6 | COMPLETE | PASS | yes | MILESTONE: a8dfb5a (task 80237dd), run 41298259048 | yes | weight 6 x approval A217 (PASS, APPROVED) on commit a8dfb5a with PASS evidence |
+| KRP-ENG-001 | CI_DEV_INFRA | 3 | - | NOT_RUN | no | - | - | no current report from the owning workstream |
 
 ## Gates
 
@@ -160,7 +160,8 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 
 ## Evidence health
 
-- KOS-SENSE-008, KRP-ENG-001: the repo reports no commit-bound CI evidence
+- CI_DEV_INFRA: source STALE
+- KRP-ENG-001: no current report from the owning workstream
 
 ## Warnings
 
@@ -170,11 +171,13 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 - ACT_L: no status source (UNVERIFIED)
 - ACT_M: no status source (UNVERIFIED)
 - ACT_S: no status source (UNVERIFIED)
+- CI_DEV_INFRA: status is 15 days old
 - CONTROL_PLANE: no status source (UNVERIFIED)
 - DEVICE_ENDPOINT: no status source (UNVERIFIED)
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
 - ELECTRICAL_POWER: no status source (UNVERIFIED)
 - INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)
+- KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)
 - MANUFACTURING_FLEET: no status source (UNVERIFIED)
 - MECHANICAL: no status source (UNVERIFIED)
 - MIND: no status source (UNVERIFIED)

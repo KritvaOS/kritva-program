@@ -972,6 +972,41 @@
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-SENSE-008",
+      "workstream_id": "SENSE",
+      "task_commit": "80237dd4d98782bfa155433c858023deb0964dfc",
+      "task_subject": "feat(security): add the KOS-SENSE-008 threat model, review and security tests",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "a8dfb5a7827e9888a5bfae0bbcea1598727bd400",
+        "ci_run": 41298259048,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/41298259048",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        ".github/kritva-gate.json",
+        ".github/workflows/commit-message-check.yml",
+        ".github/workflows/pr-acceptance-gate.yml",
+        ".github/workflows/readme-check.yml",
+        ".github/workflows/secret-scan.yml",
+        ".github/workflows/unit-tests.yml",
+        "SECURITY.md",
+        "planning/CHANGELOG.md",
+        "tasks/KOS-SENSE-008/SECURITY_REVIEW.md",
+        "tasks/KOS-SENSE-008/THREAT_MODEL.md",
+        "tests/security/test_evidence.py",
+        "tests/security/test_offline.py",
+        "tests/security/test_register.py",
+        "tests/security/test_workflows.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []

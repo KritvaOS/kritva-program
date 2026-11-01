@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-01T09:30:20Z from committed data. Baseline v7 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-01T15:29:05Z from committed data. Baseline v7 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -19,28 +19,29 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-01T08:57:56Z (recorded 2026-11-01T09:30:00Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-01T09:30:20Z (recorded 2026-11-01T15:28:42Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 128/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 133/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Credited tasks: added KOS-SENSE-007
+- Accepted progress: 133/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 139/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
+- Credited tasks: added KOS-SENSE-008
+- Warnings: 20 -> 22
 
 ## Measures (never blended)
 
 | Measure | Value | Scope and basis |
 |---|---|---|
-| Accepted engineering progress | 93.66% (133/142 weight) | Frozen baseline v7: only the 39 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
+| Accepted engineering progress | 97.89% (139/142 weight) | Frozen baseline v7: only the 39 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
 ## Accepted engineering progress by workstream
 
 ```text
-133/142 weight  ████████████████████████████░░  93.66%
+139/142 weight  █████████████████████████████░  97.89%
 ```
 
 | Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |
 |---|---|---|---|
 | COMMUNITY | 71/71 | 100.0% | 21/21 |
-| SENSE | 32/38 | 84.2% | 7/8 |
+| SENSE | 38/38 | 100.0% | 8/8 |
 | CORE | 30/30 | 100.0% | 9/9 |
 | CI_DEV_INFRA | 0/3 | 0.0% | 0/1 |
 
@@ -79,9 +80,14 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Measure | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 20 |
+| Warnings | 22 |
 | Workstreams registered / baselined | 24 / 4 |
 | Workstreams with no status source (UNVERIFIED) | 20 |
 | Source freshness | FETCH_FAILED 1, FRESH 3 |
 
 No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, MOTION, NEXUS_EDGE, SDK, SIM, SKILL, STUDIO.
+
+Other warnings:
+
+- CI_DEV_INFRA: status is 15 days old
+- KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)

@@ -75,9 +75,9 @@
       "weighted": true
     },
     "V2-M8-SENSE-001": {
-      "accepted_weight": 5,
-      "complete": 1,
-      "credited": 1,
+      "accepted_weight": 11,
+      "complete": 2,
+      "credited": 2,
       "tasks": 2,
       "weight": 11,
       "weighted": true
@@ -85,9 +85,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 133,
-      "complete": 37,
-      "credited": 37,
+      "accepted_weight": 139,
+      "complete": 38,
+      "credited": 38,
       "tasks": 39,
       "weight": 142,
       "weighted": true
@@ -119,9 +119,9 @@
       "weighted": true
     },
     "SENSE": {
-      "accepted_weight": 32,
-      "complete": 7,
-      "credited": 7,
+      "accepted_weight": 38,
+      "complete": 8,
+      "credited": 8,
       "tasks": 8,
       "weight": 38,
       "weighted": true
@@ -129,15 +129,17 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 128/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 133/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: added KOS-SENSE-007"
+      "Accepted progress: 133/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 139/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KOS-SENSE-008",
+      "Warnings: 20 -> 22"
     ],
-    "recorded_at": "2026-11-01T09:30:00Z",
-    "since": "2026-11-01T08:57:56Z"
+    "recorded_at": "2026-11-01T15:28:42Z",
+    "since": "2026-11-01T09:30:20Z"
   },
   "errors": [],
   "evidence_health": [
-    "KOS-SENSE-008, KRP-ENG-001: the repo reports no commit-bound CI evidence"
+    "CI_DEV_INFRA: source STALE",
+    "KRP-ENG-001: no current report from the owning workstream"
   ],
   "gates": [
     {
@@ -232,22 +234,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-01T09:30:20Z",
+  "generated_at": "2026-11-01T15:29:05Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 39,
-      "tasks_with_github_verified_run": 37,
-      "tasks_with_verified_evidence": 37
+      "tasks_with_github_verified_run": 38,
+      "tasks_with_verified_evidence": 38
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 37,
+      "tasks_complete": 38,
       "tasks_total": 39
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 2
+      "uncredited_tasks": 1
     }
   },
   "phase_sequence": [
@@ -321,8 +323,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 93.66,
-    "basis": "133/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 97.89,
+    "basis": "139/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "source_freshness": {
@@ -401,7 +403,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-01T09:29:49Z",
+        "fetched_at": "2026-11-01T15:28:31Z",
         "fetched_head": "65a33ea96033efea026905d1bb421aed3ca6acdd",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -413,32 +415,38 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 4,
+        "ahead_by": 2,
         "changed_files": [
-          "Makefile",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-01T09:29:49Z",
-        "fetched_head": "969d61558b99ad8c9c9c5bbac111dbdd75d0bd18",
+        "fetched_at": "2026-11-01T15:28:31Z",
+        "fetched_head": "dd0bbee79d28a626f19618a23a0ba8f676897e07",
         "freshness": "FRESH",
-        "gap_kind": "OTHER_FILES",
+        "gap_kind": "STATUS_ONLY",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-core",
-        "report_source_commit": "be8889e12997e6760ddf69e601b1891944ffd0f7",
-        "status_only": false,
+        "report_source_commit": "969d61558b99ad8c9c9c5bbac111dbdd75d0bd18",
+        "status_only": true,
         "workstream_id": "CORE"
       },
       {
         "age_hours": 0,
-        "ahead_by": 60,
+        "ahead_by": 74,
         "changed_files": [
+          ".github/kritva-gate.json",
+          ".github/workflows/commit-message-check.yml",
+          ".github/workflows/pr-acceptance-gate.yml",
+          ".github/workflows/readme-check.yml",
+          ".github/workflows/secret-scan.yml",
+          ".github/workflows/unit-tests.yml",
           ".gitignore",
           "ACCEPTANCE_CRITERIA.md",
           "MANIFEST.in",
           "Makefile",
           "README.md",
           "RELEASE.md",
+          "SECURITY.md",
           "contract/FRAME_GRAPH_CONTRACT.md",
           "contract/SENSE_CONTRACT.md",
           "contract/STREAM_CONTRACT.md",
@@ -452,6 +460,7 @@
           "release/normalise_sdist.py",
           "src/kritva_sense/CONFORMANCE.md",
           "src/kritva_sense/GENERATOR.md",
+          "src/kritva_sense/__main__.py",
           "src/kritva_sense/_entry.py",
           "src/kritva_sense/conformance.py",
           "src/kritva_sense/frame_graph.py",
@@ -472,21 +481,13 @@
           "tasks/KOS-SENSE-007/ACCEPTANCE_CRITERIA.md",
           "tasks/KOS-SENSE-007/TASK.md",
           "tasks/KOS-SENSE-008/ACCEPTANCE_CRITERIA.md",
+          "tasks/KOS-SENSE-008/SECURITY_REVIEW.md",
           "tasks/KOS-SENSE-008/TASK.md",
-          "tests/conformance/test_conformance.py",
-          "tests/frame_graph/fixtures/invalid/cycle_three_frames.json",
-          "tests/frame_graph/fixtures/invalid/cycle_two_frames.json",
-          "tests/frame_graph/fixtures/invalid/cycle_with_a_tail.json",
-          "tests/frame_graph/fixtures/invalid/duplicate_edge.json",
-          "tests/frame_graph/fixtures/invalid/edge_not_object.json",
-          "tests/frame_graph/fixtures/invalid/invalid_child_id.json",
-          "tests/frame_graph/fixtures/invalid/invalid_parent_id.json",
-          "tests/frame_graph/fixtures/invalid/missing_parent.json",
-          "tests/frame_graph/fixtures/invalid/missing_transforms.json"
+          "tasks/KOS-SENSE-008/THREAT_MODEL.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-01T09:29:49Z",
-        "fetched_head": "38edf01becbaf50ee08917b21f2a6d21c1820c14",
+        "fetched_at": "2026-11-01T15:28:31Z",
+        "fetched_head": "cae78419f040cdbda29aae6822892927e7e19036",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -537,7 +538,8 @@
       "KOS-SENSE-004",
       "KOS-SENSE-005",
       "KOS-SENSE-006",
-      "KOS-SENSE-007"
+      "KOS-SENSE-007",
+      "KOS-SENSE-008"
     ],
     "effort_completed": null,
     "effort_remaining": null,
@@ -549,10 +551,10 @@
     },
     "pending_decisions": 6,
     "pending_reviews": 7,
-    "progress": "133/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 93.66,
+    "progress": "139/142 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 97.89,
     "readiness": {},
-    "warnings": 20
+    "warnings": 22
   },
   "tasks": [
     {
@@ -1153,7 +1155,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "NOT_COMMITTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -1181,7 +1183,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "NOT_COMMITTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -1209,7 +1211,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "NOT_COMMITTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -1237,7 +1239,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "NOT_COMMITTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -1265,7 +1267,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "NOT_COMMITTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -1293,7 +1295,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "NOT_COMMITTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -1321,7 +1323,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "NOT_COMMITTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -1349,7 +1351,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "NOT_COMMITTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -1377,7 +1379,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "NOT_COMMITTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -1592,24 +1594,30 @@
       "workstream_id": "SENSE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
-      "evidence_verified": false,
-      "execution": "NOT_STARTED",
+      "credit": true,
+      "credit_reason": "weight 6 x approval A217 (PASS, APPROVED) on commit a8dfb5a with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "41298259048",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M8-SENSE-001",
       "phase": null,
-      "readiness": "PLANNABLE",
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "a8dfb5a7827e9888a5bfae0bbcea1598727bd400",
+        "github_verified": true,
+        "run": "41298259048",
+        "task_commit": "80237dd4d98782bfa155433c858023deb0964dfc"
+      },
+      "run_verified": true,
+      "task_commit": "80237dd4d98782bfa155433c858023deb0964dfc",
       "task_id": "KOS-SENSE-008",
-      "tested_commit": null,
+      "tested_commit": "a8dfb5a7827e9888a5bfae0bbcea1598727bd400",
       "weight": 6,
       "workstream_id": "SENSE"
     },
@@ -1617,16 +1625,16 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no central approval recorded",
+      "credit_reason": "no current report from the owning workstream",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
+      "evidence_state": "NO_REPORT",
       "evidence_verified": false,
-      "execution": "NOT_STARTED",
-      "git_sync": "SYNCED",
+      "execution": null,
+      "git_sync": null,
       "milestone_id": "KRP-ENG",
       "phase": null,
-      "readiness": "IMPLEMENTABLE",
+      "readiness": null,
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -1717,11 +1725,13 @@
     "ACT_L: no status source (UNVERIFIED)",
     "ACT_M: no status source (UNVERIFIED)",
     "ACT_S: no status source (UNVERIFIED)",
+    "CI_DEV_INFRA: status is 15 days old",
     "CONTROL_PLANE: no status source (UNVERIFIED)",
     "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
+    "KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
     "MIND: no status source (UNVERIFIED)",
@@ -1779,7 +1789,7 @@
       "commit": "8e5086513ff12a7a20473314878111238f06a4d2",
       "id": "CI_DEV_INFRA",
       "repo": "KritvaOS/kritva-program",
-      "source_state": "OK",
+      "source_state": "STALE",
       "tasks_reported": 1
     },
     {
@@ -1797,7 +1807,7 @@
       "tasks_reported": 0
     },
     {
-      "commit": "be8889e12997e6760ddf69e601b1891944ffd0f7",
+      "commit": "969d61558b99ad8c9c9c5bbac111dbdd75d0bd18",
       "id": "CORE",
       "repo": "KritvaOS/kritva-core",
       "source_state": "OK",
