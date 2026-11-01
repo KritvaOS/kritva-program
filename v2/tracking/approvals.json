@@ -1203,6 +1203,518 @@
         "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092"
       ],
       "rationale": "Approved by Dinesh (relayed in chat). Basis: unit-tests CI run 40994325092 PASS on e949b9f (make check, docs-check, test-unit), accepted as of that commit. Limits: the contract is a 0.1.0 DRAFT (no v0.1.0 tag); criteria were PROPOSED at implementation time; review is the interim D-047 role, not independent; approval relayed in chat."
+    },
+    {
+      "approval_id": "A078",
+      "task_id": "I2-001",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A046"
+    },
+    {
+      "approval_id": "A079",
+      "task_id": "I2-002",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A047"
+    },
+    {
+      "approval_id": "A080",
+      "task_id": "I2-003",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A048"
+    },
+    {
+      "approval_id": "A081",
+      "task_id": "I2-004",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A049"
+    },
+    {
+      "approval_id": "A082",
+      "task_id": "I2-005",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A050"
+    },
+    {
+      "approval_id": "A083",
+      "task_id": "I2-006",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A051"
+    },
+    {
+      "approval_id": "A084",
+      "task_id": "I3-001",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A061"
+    },
+    {
+      "approval_id": "A085",
+      "task_id": "I3-002",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A062"
+    },
+    {
+      "approval_id": "A086",
+      "task_id": "I3-003",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A063"
+    },
+    {
+      "approval_id": "A087",
+      "task_id": "I3-004",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A064"
+    },
+    {
+      "approval_id": "A088",
+      "task_id": "I3-005",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A065"
+    },
+    {
+      "approval_id": "A089",
+      "task_id": "I3-006",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A066"
+    },
+    {
+      "approval_id": "A090",
+      "task_id": "I3-007",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A067"
+    },
+    {
+      "approval_id": "A091",
+      "task_id": "I4-001",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37253855540"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A068"
+    },
+    {
+      "approval_id": "A092",
+      "task_id": "I4-002",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "52218f484f29ea58813b848008d187aeab98a0bf",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37256868535"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A069"
+    },
+    {
+      "approval_id": "A093",
+      "task_id": "I4-003",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37347653023"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A070"
+    },
+    {
+      "approval_id": "A094",
+      "task_id": "I4-004",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "3c535b64ebae626065032e7315e679e474f6853b",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37405212290"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A071"
+    },
+    {
+      "approval_id": "A095",
+      "task_id": "I4-005",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "a6905207441abdc13ec6238272e7681093c50180",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37407633177"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A072"
+    },
+    {
+      "approval_id": "A096",
+      "task_id": "I4-006",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37497496804"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A073"
+    },
+    {
+      "approval_id": "A097",
+      "task_id": "I4-007",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37507901354"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A074"
+    },
+    {
+      "approval_id": "A098",
+      "task_id": "I4-008",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A075"
+    },
+    {
+      "approval_id": "A099",
+      "task_id": "KF-CORE-R10-001",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A052"
+    },
+    {
+      "approval_id": "A100",
+      "task_id": "KF-CORE-R10-002",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A053"
+    },
+    {
+      "approval_id": "A101",
+      "task_id": "KF-CORE-R10-003",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A054"
+    },
+    {
+      "approval_id": "A102",
+      "task_id": "KF-CORE-R10-004",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A055"
+    },
+    {
+      "approval_id": "A103",
+      "task_id": "KF-CORE-R10-005",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A056"
+    },
+    {
+      "approval_id": "A104",
+      "task_id": "KF-CORE-R10-006",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A057"
+    },
+    {
+      "approval_id": "A105",
+      "task_id": "KF-CORE-R10-007",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A058"
+    },
+    {
+      "approval_id": "A106",
+      "task_id": "KF-CORE-R10-008",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A059"
+    },
+    {
+      "approval_id": "A107",
+      "task_id": "KF-CORE-R10-009",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A060"
+    },
+    {
+      "approval_id": "A108",
+      "task_id": "KOS-SENSE-001",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A076"
+    },
+    {
+      "approval_id": "A109",
+      "task_id": "KOS-SENSE-002",
+      "baseline_version": 4,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-01T02:39:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092"
+      ],
+      "rationale": "Re-recorded on baseline v4 (D-082, D-027). No change to the evidence or the acceptance judgement of the earlier approval for this task.",
+      "supersedes": "A077"
     }
   ]
 }
