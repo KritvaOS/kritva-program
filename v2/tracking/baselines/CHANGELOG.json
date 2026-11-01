@@ -45,5 +45,14 @@
     "canonical_commit": "78eb1217419ab3b0d11b360b60882863fa7699aa",
     "reason": "D-083: add KOS-SENSE-004 (weight 4, initial planning estimate)",
     "baseline_sha256": "c4ea34bbe4979c4e42bfcbdc63aaf5ecd6ef69feafa6bdaf62af4c6944448658"
+  },
+  {
+    "from_version": 5,
+    "to_version": 6,
+    "approver": "Dinesh",
+    "approved_at": "2026-11-01T05:32:49Z",
+    "canonical_commit": "9a60bafbb5f765352937988b94f908cd6c56a888",
+    "reason": "D-087: add milestone V2-M7-SENSE-001, KOS-SENSE-005 (weight 4) and KOS-SENSE-006 (weight 5), initial planning estimates",
+    "baseline_sha256": "34775a80ab53a178eda85411509e836878748b5baf86e3f9b5ceefc1a21886c2"
   }
 ]

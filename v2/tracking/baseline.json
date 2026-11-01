@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 5,
+  "baseline_version": 6,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -45,6 +45,10 @@
     },
     {
       "id": "V2-M5-SENSE-001",
+      "workstream_id": "SENSE"
+    },
+    {
+      "id": "V2-M7-SENSE-001",
       "workstream_id": "SENSE"
     }
   ],
@@ -398,6 +402,26 @@
       "requires_physical": false,
       "phase": null,
       "weight_rationale": "Initial planning estimate (D-083), not a recorded engineering estimate: 4 to 5 effort days, rounded down against 003 because the validators it reuses already exist. Deterministic seeded generator with a documented PRNG, valid samples for every sensor kind, explicitly requested defect cases, conformant and defective frame graphs, API and command line (AC-401..AC-407), software only on synthetic data. Depends on KOS-SENSE-001, KOS-SENSE-002 and KOS-SENSE-003. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SENSE-005",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M7-SENSE-001",
+      "title": "Telemetry stream contract and reference validator",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-087), not a recorded engineering estimate: 4 to 5 effort days, rounded down. One versioned stream contract (open, sample and close records with a record index), a JSON Schema and a standard-library stream validator with the STREAM_ code namespace for lifecycle, sequence and timestamp rules, fixtures, batching-invariance and 10,000-record correctness tests and a command line (AC-501..AC-507), software only on synthetic data, no transport. Depends on KOS-SENSE-001, KOS-SENSE-002 and KOS-SENSE-004. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SENSE-006",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M7-SENSE-001",
+      "title": "Consumer conformance harness",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-087), not a recorded engineering estimate: 5 to 6 effort days, rounded down; raised from the 4 recorded as a planning figure in D-083 after an external review found the scope is larger. A conformance harness for consumers with three operations (sample decision, stream decision, frame resolution), an independent contract-derived case set with clause references, mutants per rule class, failure isolation and a deterministic JSON result (AC-601..AC-607), software only on synthetic data, with a reference consumer under test and never used as the oracle. Depends on KOS-SENSE-001 to KOS-SENSE-005 and cannot start before KOS-SENSE-005 is accepted. Scale 1-8. To be revised as work proceeds."
     }
   ],
   "gates": [
@@ -471,9 +495,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-11-01T04:44:20Z",
-    "canonical_commit": "78eb1217419ab3b0d11b360b60882863fa7699aa",
-    "baseline_sha256": "c4ea34bbe4979c4e42bfcbdc63aaf5ecd6ef69feafa6bdaf62af4c6944448658",
-    "reason": "D-083: add KOS-SENSE-004 (weight 4, initial planning estimate)"
+    "approved_at": "2026-11-01T05:32:49Z",
+    "canonical_commit": "9a60bafbb5f765352937988b94f908cd6c56a888",
+    "baseline_sha256": "34775a80ab53a178eda85411509e836878748b5baf86e3f9b5ceefc1a21886c2",
+    "reason": "D-087: add milestone V2-M7-SENSE-001, KOS-SENSE-005 (weight 4) and KOS-SENSE-006 (weight 5), initial planning estimates"
   }
 }
