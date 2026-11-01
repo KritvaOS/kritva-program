@@ -67,9 +67,9 @@
       "weighted": true
     },
     "V2-M7-SENSE-001": {
-      "accepted_weight": 4,
-      "complete": 1,
-      "credited": 1,
+      "accepted_weight": 9,
+      "complete": 2,
+      "credited": 2,
       "tasks": 2,
       "weight": 9,
       "weighted": true
@@ -77,9 +77,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 123,
-      "complete": 35,
-      "credited": 35,
+      "accepted_weight": 128,
+      "complete": 36,
+      "credited": 36,
       "tasks": 37,
       "weight": 131,
       "weighted": true
@@ -111,9 +111,9 @@
       "weighted": true
     },
     "SENSE": {
-      "accepted_weight": 22,
-      "complete": 5,
-      "credited": 5,
+      "accepted_weight": 27,
+      "complete": 6,
+      "credited": 6,
       "tasks": 6,
       "weight": 27,
       "weighted": true
@@ -121,15 +121,15 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 119/131 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 123/131 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: added KOS-SENSE-005"
+      "Accepted progress: 123/131 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 128/131 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KOS-SENSE-006"
     ],
-    "recorded_at": "2026-11-01T05:55:53Z",
-    "since": "2026-11-01T05:33:06Z"
+    "recorded_at": "2026-11-01T08:38:39Z",
+    "since": "2026-11-01T05:56:12Z"
   },
   "errors": [],
   "evidence_health": [
-    "KOS-SENSE-006, KRP-ENG-001: the repo reports no commit-bound CI evidence"
+    "KRP-ENG-001: the repo reports no commit-bound CI evidence"
   ],
   "gates": [
     {
@@ -224,22 +224,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-01T05:56:12Z",
+  "generated_at": "2026-11-01T08:39:00Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 37,
-      "tasks_with_github_verified_run": 35,
-      "tasks_with_verified_evidence": 35
+      "tasks_with_github_verified_run": 36,
+      "tasks_with_verified_evidence": 36
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 35,
+      "tasks_complete": 36,
       "tasks_total": 37
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 2
+      "uncredited_tasks": 1
     }
   },
   "phase_sequence": [
@@ -313,8 +313,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 93.89,
-    "basis": "123/131 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 97.71,
+    "basis": "128/131 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "source_freshness": {
@@ -393,7 +393,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-01T05:55:37Z",
+        "fetched_at": "2026-11-01T08:38:28Z",
         "fetched_head": "65a33ea96033efea026905d1bb421aed3ca6acdd",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -411,7 +411,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-01T05:55:37Z",
+        "fetched_at": "2026-11-01T08:38:28Z",
         "fetched_head": "969d61558b99ad8c9c9c5bbac111dbdd75d0bd18",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -423,7 +423,7 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 38,
+        "ahead_by": 48,
         "changed_files": [
           "ACCEPTANCE_CRITERIA.md",
           "Makefile",
@@ -436,7 +436,9 @@
           "planning/CHANGELOG.md",
           "planning/MILESTONE_STATUS.md",
           "planning/TASKS.md",
+          "src/kritva_sense/CONFORMANCE.md",
           "src/kritva_sense/GENERATOR.md",
+          "src/kritva_sense/conformance.py",
           "src/kritva_sense/frame_graph.py",
           "src/kritva_sense/generator.py",
           "src/kritva_sense/stream.py",
@@ -451,6 +453,7 @@
           "tasks/KOS-SENSE-005/TASK.md",
           "tasks/KOS-SENSE-006/ACCEPTANCE_CRITERIA.md",
           "tasks/KOS-SENSE-006/TASK.md",
+          "tests/conformance/test_conformance.py",
           "tests/frame_graph/fixtures/invalid/cycle_three_frames.json",
           "tests/frame_graph/fixtures/invalid/cycle_two_frames.json",
           "tests/frame_graph/fixtures/invalid/cycle_with_a_tail.json",
@@ -471,14 +474,11 @@
           "tests/frame_graph/fixtures/invalid/quaternion_zero.json",
           "tests/frame_graph/fixtures/invalid/rotation_as_array.json",
           "tests/frame_graph/fixtures/invalid/rotation_as_euler.json",
-          "tests/frame_graph/fixtures/invalid/self_link.json",
-          "tests/frame_graph/fixtures/invalid/several_faults.json",
-          "tests/frame_graph/fixtures/invalid/transforms_not_array.json",
-          "tests/frame_graph/fixtures/invalid/translation_array.json"
+          "tests/frame_graph/fixtures/invalid/self_link.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-01T05:55:37Z",
-        "fetched_head": "f74bc82e3221189862731cac5f626bc2226bc656",
+        "fetched_at": "2026-11-01T08:38:28Z",
+        "fetched_head": "3c96f372c8ea255f5d47779620c1ed0b16022d18",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -527,7 +527,8 @@
       "KOS-SENSE-002",
       "KOS-SENSE-003",
       "KOS-SENSE-004",
-      "KOS-SENSE-005"
+      "KOS-SENSE-005",
+      "KOS-SENSE-006"
     ],
     "effort_completed": null,
     "effort_remaining": null,
@@ -539,8 +540,8 @@
     },
     "pending_decisions": 6,
     "pending_reviews": 7,
-    "progress": "123/131 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 93.89,
+    "progress": "128/131 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 97.71,
     "readiness": {},
     "warnings": 20
   },
@@ -1526,24 +1527,30 @@
       "workstream_id": "SENSE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
-      "evidence_verified": false,
-      "execution": "NOT_STARTED",
+      "credit": true,
+      "credit_reason": "weight 5 x approval A179 (PASS, APPROVED) on commit 67590bc with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "41289421496",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M7-SENSE-001",
       "phase": null,
-      "readiness": "PLANNABLE",
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "67590bcbcc925d9dee58f5dc04bf51345cd000e2",
+        "github_verified": true,
+        "run": "41289421496",
+        "task_commit": "536d3c9af486a2e42c8cb0bd7268ce30342391a6"
+      },
+      "run_verified": true,
+      "task_commit": "536d3c9af486a2e42c8cb0bd7268ce30342391a6",
       "task_id": "KOS-SENSE-006",
-      "tested_commit": null,
+      "tested_commit": "67590bcbcc925d9dee58f5dc04bf51345cd000e2",
       "weight": 5,
       "workstream_id": "SENSE"
     },
