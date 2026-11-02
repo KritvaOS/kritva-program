@@ -263,7 +263,7 @@ class ShipScript(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t:
             r = subprocess.run([sys.executable, str(ROOT / "scripts/pipeline/manifest.py"), "checks", "kritva-sense",
                                 "--manifest", str(ROOT / "v2/planning/repo-pipeline.json")], capture_output=True, text=True, cwd=t)
-            self.assertEqual(r.stdout.split(), ["secret-scan", "commit-message-check", "pr-acceptance-gate"])
+            self.assertEqual(r.stdout.split(), ["secret-scan", "commit-message-check", "pr-acceptance-gate", "unit-tests"])
 
 
 class Queues(unittest.TestCase):
