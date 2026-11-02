@@ -143,7 +143,7 @@ class Remote(unittest.TestCase):
         pr_json = {"author": {"login": "someone"}, "headRefOid": SHA, "baseRefName": "main",
                    "commits": [{"oid": SHA, "messageHeadline": "feat(sense): define sensor frame contract", "messageBody": "Task: KOS-SENSE-001"}],
                    "reviews": [{"author": {"login": "dineshannayya"}, "state": "APPROVED", "commit": {"oid": SHA}}],
-                   "statusCheckRollup": [{"workflowName": "secret-scan", "conclusion": "SUCCESS", "status": "COMPLETED"}, {"workflowName": "commit-message-check", "conclusion": "SUCCESS", "status": "COMPLETED"}, {"workflowName": "pr-acceptance-gate", "conclusion": "", "status": "IN_PROGRESS"}]}
+                   "statusCheckRollup": [{"workflowName": "secret-scan", "conclusion": "SUCCESS", "status": "COMPLETED"}, {"workflowName": "commit-message-check", "conclusion": "SUCCESS", "status": "COMPLETED"}, {"workflowName": "pr-acceptance-gate", "conclusion": "", "status": "IN_PROGRESS"}, {"workflowName": "unit-tests", "conclusion": "SUCCESS", "status": "COMPLETED"}]}
         calls = []
         def stub(*a, **k):
             calls.append(a)
@@ -160,7 +160,7 @@ class Remote(unittest.TestCase):
         self.assertEqual(files, [{"path": "src/a.py", "status": "added"}])
         self.assertEqual(read("base", "planning/TASKS.md"), TASKS)
         self.assertIsNone(read("base", "nope.md"))
-        self.assertEqual([c["state"] for c in info["checks"]], ["SUCCESS", "SUCCESS", "IN_PROGRESS"])
+        self.assertEqual([c["state"] for c in info["checks"]], ["SUCCESS", "SUCCESS", "IN_PROGRESS", "SUCCESS"])
         res = G.static_rules(GATE, commits, files, read) + G.remote_rules(GATE, MANIFEST, info)
         self.assertEqual(G.verdict(res), "NEEDS_HUMAN")
 
