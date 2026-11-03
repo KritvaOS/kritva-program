@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 7,
+  "baseline_version": 8,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -446,6 +446,26 @@
       "requires_physical": false,
       "phase": null,
       "weight_rationale": "Initial planning estimate (D-090), not a recorded engineering estimate: 6 effort days. An internal, bounded security and CI assurance review of the Sense repository: a written threat model, review of input handling and of the dynamic consumer loading (not a sandbox), review of the CI workflows and PR gate, dependency and build configuration with an automated empty-runtime-dependency check and an offline test run, security regression tests, a findings register and a final report with every Critical and High finding fixed or dispositioned by the risk owner (AC-801..AC-807). Not a certification, penetration test or safety assessment. Depends on KOS-SENSE-001 to KOS-SENSE-006; acceptance prerequisite (not a dependency field): KOS-SENSE-007 accepted first. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SENSE-009",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M2-SENSE-001",
+      "title": "Synthetic integration gate",
+      "weight": 6,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-099), not a recorded engineering estimate: 6 effort days (range 5 to 8; delivery risk medium to high). A synthetic integration gate for the Sense software under V2-M2-SENSE-001: a scenario list written before the tests with a machine-checkable mapping, deterministic scenarios across generator, validator, frame graph, stream checker, a synthetic reference producer and consumer fixture (not a real consumer) and the conformance harness, the installed command lines chained through standard input and output, failure propagation with the documented exit codes, and make test-integration as a real gate that fails on a missing, duplicated, unreferenced or skipped scenario (AC-901..AC-907). Software only, synthetic data, offline, no hardware or real consumer. Depends on KOS-SENSE-001 to KOS-SENSE-008, all accepted. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SENSE-010",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M2-SENSE-001",
+      "title": "Regression gate and compatibility suite",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-099), not a recorded engineering estimate: 5 effort days (range 4 to 7; delivery risk medium). A regression gate and compatibility suite for the Sense software under V2-M2-SENSE-001: a regression inventory mapping accepted behaviour and fixed defects to tests, mutation evidence for F-001 to F-003 of KOS-SENSE-008, pinned normative artifacts of contracts 0.1.0 (the selected regression baseline, not a stable external API) with golden cases, protection of the six console entry points, golden determinism results, make test-regression as a real gate, and the aggregate make test that runs the unit, integration and regression gates and shows them separately (AC-1001..AC-1007). make acceptance stays out of scope. Depends on KOS-SENSE-001 to KOS-SENSE-008, all accepted; acceptance prerequisite (not a dependency field): KOS-SENSE-009 accepted first. Scale 1-8. To be revised as work proceeds."
     }
   ],
   "gates": [
@@ -519,9 +539,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-11-01T08:57:37Z",
-    "canonical_commit": "c317732f27273927e906fe0012d03283f53d6da6",
-    "baseline_sha256": "7096b2a71a633946c51ce37f163796fdc98b76764fdb4baa91c6ed8d5836bac6",
-    "reason": "D-090: add milestone V2-M8-SENSE-001, KOS-SENSE-007 (weight 5) and KOS-SENSE-008 (weight 6), initial planning estimates"
+    "approved_at": "2026-11-03T02:29:39Z",
+    "canonical_commit": "6647269b833ff313119afa4c283406a44a3ff0c4",
+    "baseline_sha256": "d141e55914f1e0cd00b186cc936a3acc69a1c0db0f3cbfc7773c19d922a0cbae",
+    "reason": "D-099: add KOS-SENSE-009 (weight 6) and KOS-SENSE-010 (weight 5) under V2-M2-SENSE-001, initial planning estimates"
   }
 }
