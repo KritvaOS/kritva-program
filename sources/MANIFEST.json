@@ -59,7 +59,7 @@
       "fetched_at": "2026-10-26T16:23:10Z",
       "fetched_head": "03b9c3f584398b84f70a0ab6c3495e77820d6f48",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-01T16:59:37Z",
+      "last_attempt_at": "2026-11-03T02:29:26Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-program",
@@ -70,16 +70,17 @@
       "tasks": 1
     },
     "COMMUNITY": {
-      "ahead_by": 4,
+      "ahead_by": 6,
       "changed_files": [
         "Makefile",
+        "planning/MILESTONE.md",
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-01T16:59:37Z",
-      "fetched_head": "65a33ea96033efea026905d1bb421aed3ca6acdd",
+      "fetched_at": "2026-11-03T02:29:26Z",
+      "fetched_head": "a4d4fbfaaddb684bae971f2081f5ca5f678d9be5",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-01T16:59:37Z",
+      "last_attempt_at": "2026-11-03T02:29:26Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritvaos-community",
@@ -90,26 +91,27 @@
       "tasks": 21
     },
     "CORE": {
-      "ahead_by": 2,
+      "ahead_by": 4,
       "changed_files": [
+        "planning/MILESTONE.md",
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-01T16:59:37Z",
-      "fetched_head": "dd0bbee79d28a626f19618a23a0ba8f676897e07",
-      "gap_kind": "STATUS_ONLY",
-      "last_attempt_at": "2026-11-01T16:59:37Z",
+      "fetched_at": "2026-11-03T02:29:26Z",
+      "fetched_head": "9fe6aa65303cae1bfe8a9d428f0dc0b32e649073",
+      "gap_kind": "OTHER_FILES",
+      "last_attempt_at": "2026-11-03T02:29:26Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-core",
       "report_source_commit": "969d61558b99ad8c9c9c5bbac111dbdd75d0bd18",
       "report_updated_at": "2026-11-01T10:37:16Z",
       "state": "FETCHED",
-      "status_only": true,
+      "status_only": false,
       "tasks": 9
     },
     "SENSE": {
-      "ahead_by": 78,
+      "ahead_by": 82,
       "changed_files": [
         ".github/kritva-gate.json",
         ".github/workflows/commit-message-check.yml",
@@ -163,18 +165,18 @@
         "tasks/KOS-SENSE-008/TASK.md"
       ],
       "changed_files_truncated": true,
-      "fetched_at": "2026-11-01T16:59:37Z",
-      "fetched_head": "38cdb2b483e923ce9531e6cbe4c8d8ebede47757",
+      "fetched_at": "2026-11-03T02:29:26Z",
+      "fetched_head": "b0b7f8918a1da6b3036ff44f12377c3b33df89b3",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-01T16:59:37Z",
+      "last_attempt_at": "2026-11-03T02:29:26Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-sense",
       "report_source_commit": "07c48d5398bea19e58f7bd4c7a5af55041b28df5",
-      "report_updated_at": "2026-11-02T03:00:00Z",
+      "report_updated_at": "2026-11-02T06:00:00Z",
       "state": "FETCHED",
       "status_only": false,
-      "tasks": 8
+      "tasks": 10
     }
   },
   "stale_hours": 72,
