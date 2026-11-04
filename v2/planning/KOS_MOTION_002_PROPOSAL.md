@@ -8,9 +8,10 @@
 | Status | DRAFT proposal for owner review (2026-11-04). Nothing here is approved |
 | Owner | Dinesh (program owner) |
 | Reviewer / Approver | Dinesh |
-| Version | 0.1 |
+| Version | 0.2 |
 | Last Updated | 2026-11-04 |
 | Authority | REFERENCE: it governs no baseline, weight, approval or gate |
+| Review | Cross-checked once with an external AI reviewer (ChatGPT, 2026-11-04): direction agreed, one blocker and five majors applied below. Not an independent review (D-047) |
 | Related Tasks / Milestones | KOS-MOTION-001, KOS-MOTION-002, V2-M1-MOTION-001, V2-M2-MOTION-001 |
 | Related Documents | [baseline_v9_proposal.json](../tracking/baseline_v9_proposal.json), [KOS_SENSE_001_BASELINING_PLAN.md](KOS_SENSE_001_BASELINING_PLAN.md), [STATUS_INGESTION_PLAN.md](STATUS_INGESTION_PLAN.md), [ACCEPTANCE_STANDARD.md](ACCEPTANCE_STANDARD.md), [ONBOARDING.md](../tracking/ONBOARDING.md) |
 
@@ -34,11 +35,13 @@ A software-only reference validator for the Motion contract and the tests that r
 In scope:
 
 1. Configuration validation (contract 3): completeness and consistency, policy vocabularies, continuous joints, backend capability checks.
-2. The fixed admission order of contract 8.4, reporting the first failure, with every admission code of `ERROR_CODES.md` section 1 reached by at least one fixture.
-3. Limit enforcement (contract 8.3): the intersection of backend, configuration and command limits, widening rejected, non-finite values rejected.
-4. Joint-state preconditions (contract 8.6): the exemption matrix, `TARGET_STATE_UNKNOWN`, `TARGET_FAULTED`, `TARGET_DEGRADED` and feedback freshness, evaluated against a supplied joint-state snapshot. These are the "fault-path" cases that this task covers: admission decisions on a joint that is faulted, degraded or unknown.
+2. The fixed admission order of contract 8.4, reporting the first failure, with every admission code of `ERROR_CODES.md` section 1 reachable from a command reached by at least one fixture, a test for every adjacent pair of steps showing the earlier step wins, and a deterministic rule for several failures inside one step (a sub-order, to be fixed in the task record without changing contract 8.4).
+3. Limit enforcement (contract 8.3): the intersection of backend, configuration and command limits, widening rejected, non-finite values rejected. Acceleration is only a declared maximum constraint in contract v0.1.0-draft (there is no command that requests an acceleration value), so this task tests the acceleration intersection and widening rejection and does not invent acceleration command semantics.
+4. Joint-state preconditions (contract 8.6): the exemption matrix, `TARGET_STATE_UNKNOWN`, `TARGET_FAULTED`, `TARGET_DEGRADED` and feedback freshness, evaluated against a supplied joint-state snapshot and a supplied monotonic reference time (the validator never reads the system clock). These are the "fault-path" cases that this task covers: admission decisions on a joint that is faulted, degraded or unknown.
 5. Schema evidence: the five JSON schemas with positive and negative example documents, run by `make test-unit` (today these 38 cases exist only as an out-of-repo script).
-6. A machine-checked mapping from implemented tests to conformance test IDs and contract sections, so a missing, duplicated or skipped test fails the gate.
+6. A machine-checked mapping from implemented tests to conformance test IDs and contract sections, driven by a manifest that marks each of the 124 conformance IDs IN_SCOPE, DEFERRED (a later task such as KOS-MOTION-003) or OUT_OF_SCOPE, so a missing, duplicated or skipped IN_SCOPE test fails the gate and no DEFERRED test is reported as implemented or passed.
+7. One explicit `AdmissionContext` input structure for the pure validator: the command envelope and contract version, supplied identity and permission results, the idempotency lookup result, the active configuration, supplied target, command and fault records, backend health and capabilities, the joint-state snapshot (control state, health state, fault records, movement slot, outstanding termination, feedback validity) and the monotonic reference time. The validator fetches nothing from a live service, does not implement Core authentication or authorization, and does not establish that a snapshot is current, authoritative or race-free. Read authorization and query preconditions are a separate path from command admission.
+8. A stable result structure: accepted or rejected, first error code, the admission step or field, an optional message, no command ID and no state mutation. Configuration validation may report several violations; command admission returns only the first failure of 8.4.
 
 Out of scope (each needs its own proposal and decision; none is registered here):
 
@@ -46,7 +49,9 @@ Out of scope (each needs its own proposal and decision; none is registered here)
 - Integration and regression gates, the Execution Backend Interface implementation, simulators, any physical actuator adapter, firmware, Mind or Skill integration.
 - Any hardware-in-loop or physical safety validation (gate V2-M6, HOLD). Software acceptance of this task is never physical or safety validation.
 
-Honest note on the milestone: V2-M2-MOTION-001 promises "gates implemented". KOS-MOTION-002 implements `make test-unit` only, so closing V2-M2 would need further tasks for the integration and regression gates, as Sense needed KOS-SENSE-009 and KOS-SENSE-010. The proposal does not claim otherwise.
+Honest note on the milestone: V2-M2-MOTION-001 promises "command validation, limit enforcement and fault-path tests pass; gates implemented". KOS-MOTION-002 covers command and configuration validation, limit enforcement, admission-time fault-path tests and the `make test-unit` gate only. Closing V2-M2 would also need KOS-MOTION-003 (runtime lifecycle, termination and fault state) if the owner wants runtime fault testing in that milestone, plus tasks for the integration and regression gates, as Sense needed KOS-SENSE-009 and KOS-SENSE-010. The proposal recommends clarifying the milestone outcome through the program process rather than widening 002, and does not claim that 002 alone closes V2-M2.
+
+Limits of the evidence: tests show that the validator decides correctly for a supplied, structurally valid context. They do not show that a live snapshot is fresh, that concurrent commands cannot race, that a backend is authoritative, that termination occurs or that a fault propagates at runtime. Those belong to later tasks.
 
 ## Draft criteria for kritva-motion (AC-201..AC-207)
 
@@ -54,32 +59,34 @@ To be added to kritva-motion `ACCEPTANCE_CRITERIA.md` as a new section, leaving 
 
 | ID | Criterion (testable) | Verified by |
 |---|---|---|
-| AC-201 | The validator rejects an invalid configuration at activation: unknown policy values, a continuous joint with position mode, `DEGRADE` with `feedback_required` true, a degradation policy that lists `SET_POSITION` or `HOLD` for `FEEDBACK_OPTIONAL_UNAVAILABLE`, and a policy the declared backend capabilities cannot satisfy. | unit tests with fixtures |
-| AC-202 | Admission validation runs in the fixed order of contract 8.4 and reports only the first failure. Every admission code in `ERROR_CODES.md` section 1 is reached by at least one fixture, and a fixture that violates two steps reports the earlier step. | unit tests |
-| AC-203 | Effective limits are the intersection of backend, configuration and command constraints. A constraint that widens a limit is rejected `INVALID_CONSTRAINT`; out-of-limit values are rejected `LIMIT_POSITION`, `LIMIT_VELOCITY` or `LIMIT_ACCELERATION`; non-finite numbers are rejected `NON_FINITE_VALUE`. | unit tests |
-| AC-204 | Joint-state preconditions follow the exemption matrix of contract 8.6 for `UNKNOWN`, `FAULTED` and `DEGRADED` snapshots, including `TARGET_STATE_UNKNOWN` with health `READY`, and feedback freshness. `STOP`, `CANCEL`, queries and `CLEAR_FAULT` follow their own rows. | unit tests |
-| AC-205 | The five schemas validate their positive example documents and reject their negative ones. Every CT-SCH test ID in the conformance plan has an executable case. | `make test-unit` |
-| AC-206 | A machine-checked mapping links each implemented test to a conformance test ID and contract section. The gate fails on a missing, duplicated, unmapped or skipped test. Tests are deterministic: no clock, randomness or network. | `make test-unit` |
-| AC-207 | The validator performs no I/O toward a backend or device. The documentation states that passing tests is software evidence only and never physical or safety validation. | review (independent safety reviewer when assigned) |
+| AC-201 | The reference validator rejects configurations that violate contract section 3 before they can be considered valid for activation (this task builds no activation runtime): unknown policy values, a continuous joint with position mode, `DEGRADE` with `feedback_required` true, a degradation policy that lists `SET_POSITION` or `HOLD` for `FEEDBACK_OPTIONAL_UNAVAILABLE`, and a policy the declared backend capabilities cannot satisfy. | unit tests with fixtures |
+| AC-202 | Admission validation runs in the fixed order of contract 8.4 and reports only the first failure. Every admission code in `ERROR_CODES.md` section 1 that a command can reach has at least one fixture, every adjacent pair of steps has a fixture that violates both and reports the earlier one, and several failures inside one step give a deterministic result under a documented sub-order. | unit tests |
+| AC-203 | Effective limits are the intersection of backend, configuration and command constraints. A constraint that widens a limit is rejected `INVALID_CONSTRAINT`; out-of-limit requested position and velocity values are rejected `LIMIT_POSITION` or `LIMIT_VELOCITY`; the effective acceleration maximum is the correct intersection of backend and configuration values (no requested-acceleration command exists, so `LIMIT_ACCELERATION` is not produced here; see the open contract item below); non-finite numbers are rejected `NON_FINITE_VALUE`. | unit tests |
+| AC-204 | Joint-state preconditions follow the exemption matrix of contract 8.6 for `UNKNOWN`, `FAULTED` and `DEGRADED` snapshots, including `TARGET_STATE_UNKNOWN` with health `READY`, and feedback freshness. `STOP`, `CANCEL`, queries and `CLEAR_FAULT` follow their own rows, including the contract 13.6 `CLEAR_FAULT` preconditions. The snapshot contents are those of the `AdmissionContext` (scope item 7), time is supplied, and query authorization is tested on its own path. The claim is limited to a supplied, structurally valid context. | unit tests |
+| AC-205 | The five schemas validate their positive example documents and reject their negative ones. Every CT-SCH test ID in the conformance plan has an executable case. Evidence reports separately the number of example documents, the number of schema cases (38 in the current script) and the number of conformance IDs covered; the older 46-case figure is historical and is not evidence. | `make test-unit` |
+| AC-206 | A manifest marks each conformance ID IN_SCOPE, DEFERRED or OUT_OF_SCOPE. Each IN_SCOPE ID has exactly one mapping to a discovered, non-skipped test and a recorded contract section; the gate fails on a missing, duplicated, unmapped or skipped IN_SCOPE test or a mapping to a nonexistent test. DEFERRED IDs are never reported as implemented. Tests are deterministic: no clock, randomness or network. | `make test-unit` |
+| AC-207 | The validator performs no I/O toward a backend or device. The documentation states that passing tests is software evidence only and never physical or safety validation. | review (owner-reviewed and not independent under D-047; not a safety case or independent safety approval) |
 
 ## Decisions needed from Dinesh
 
 | # | Decision | Recommendation |
 |---|---|---|
 | 1 | Approve KOS-MOTION-002 as the next Motion task, with the scope above | Approve. The scope is bounded and the criteria already point to it |
-| 2 | Baseline KOS-MOTION-001 and KOS-MOTION-002 together, as Sense did for its first two tasks, or baseline neither yet | Together. Without KOS-MOTION-001 in the baseline, accepting it would earn no credit and its evidence would have nowhere to be recorded. Baselining does not accept anything |
+| 2 | Baseline KOS-MOTION-001 and KOS-MOTION-002 together, as Sense did for its first two tasks, or baseline neither yet | Together. Without KOS-MOTION-001 in the baseline, accepting it would earn no credit and its evidence would have nowhere to be recorded. Baselining does not accept anything, and does not make the KOS-MOTION-001 contract accepted. The dependency is enforced in the kritva-motion task record, since the baseline has no dependency field |
 | 3 | Initial weights | The draft proposal uses 5 and 5 (estimated 4 to 7 effort days each), drafted with an AI assistant. They are estimates, not recorded effort, and the owner approves them |
-| 4 | Language and dependencies for the validator | Recommend following the approach of kritva-sense's reference validator so the two repositories look alike; confirm it before approval. The default is Python 3 using only the standard library, with JSON Schema checks needing either a development-time dependency installed by the CI workflow or a vendored checker; the owner picks one. A production implementation in another language is a later task |
-| 5 | Register the MOTION status source | `workstreams.json` has `repo: null` and kritva-motion has no `status/status.json`. Without a source, the two Motion tasks have nothing to report through. ONBOARDING.md and D-077 describe the steps. Recommend a separate small change (a status generator and registration, `Tasks: None` or a task ID from the owner) before or alongside the freeze, and an explicit decision on whether D-077's empty-report exception applies |
+| 4 | Language and dependencies for the validator | Python 3.12 (the version of kritva-motion's existing tooling and CI). Two layers: a standard-library reference validator (configuration, admission order, limits, snapshot preconditions), following the pattern of kritva-sense's validator (deterministic results, structured violation records, fixture-based `unittest`, a real `make test-unit`); and JSON Schema Draft 2020-12 conformance using a pinned test-only `jsonschema` dependency with its transitive dependencies pinned, preferably by hash, local schema references and offline runs. No home-grown or vendored partial schema engine. The Sense validator is a custom semantic validator, not a schema engine, so it does not cover this layer. The owner confirms. A production implementation in another language is a later task |
+| 5 | Register the MOTION status source | `workstreams.json` has `repo: null` and kritva-motion has no `status/status.json`. Without a source, the two Motion tasks have nothing to report through. ONBOARDING.md and D-077 describe the steps. Recommend a separate small change (a status generator and registration, `Tasks: None` or a task ID from the owner) resolved before the owner-run freeze, and an explicit decision on whether D-077's empty-report exception applies |
 | 6 | The `unit-tests` required check for kritva-motion | A `unit-tests` workflow is needed for a real gate. Recommend the same sequence as D-097: add the workflow in kritva-motion, then record the required-check change centrally. The ruleset itself is an owner action and stays OWNER-ATTESTED |
-| 7 | The AC-002 wording (A-2) and AC-006..AC-010 from KOS-MOTION-001 | Independent of this proposal. Recommend recording the interpretation in the review (option a) now and a formal amendment separately; AC-201..AC-207 do not depend on it |
+| 7 | The AC-002 wording (A-2) and AC-006..AC-010 from KOS-MOTION-001 | Independent of this proposal. Recommend recording the interpretation in the review (option a) now and a formal amendment separately; AC-201..AC-207 do not depend on it, and no amendment is made implicitly by this proposal |
 | 8 | Interim reviewer independence | Accept D-047 as the review path and record that the review is not independent |
+| 9 | V2-M2-MOTION-001 wording (new) | Clarify the outcome through the program process so 002 alone is not read as closing it, and decide whether KOS-MOTION-003 belongs in V2-M2 |
+| 10 | LIMIT_ACCELERATION (new) | Contract 8.3 lists `LIMIT_ACCELERATION`, but no command requests an acceleration. Recommend a small kritva-motion contract clarification (option 1: acceleration is a declared maximum only) as its own change; a requested-acceleration command is not added in this task |
 
 ## Step sequence
 
 1. This pull request (kritva-program): this plan and the DRAFT [baseline_v9_proposal.json](../tracking/baseline_v9_proposal.json). It changes no baseline, approval, gate or generated file.
-2. Owner decisions in the table above. The owner records the approval as a new decision (next free number) in `v2/DECISIONS.md`.
-3. kritva-motion pull request: TASKS.md row for KOS-MOTION-002, `tasks/KOS-MOTION-002/TASK.md` and the criteria AC-201..AC-207 (needs the owner because `ACCEPTANCE_CRITERIA.md` is protected). Sense merged its row and criteria before the baseline step.
+2. Owner decisions in the table above (ten after the review). The owner records the approval as a new decision (next free number) in `v2/DECISIONS.md`.
+3. kritva-motion pull request: TASKS.md row for KOS-MOTION-002, `tasks/KOS-MOTION-002/TASK.md` and the criteria AC-201..AC-207 (needs the owner because `ACCEPTANCE_CRITERIA.md` is protected), including the `AdmissionContext` definition, the intra-step sub-order and the test manifest. Sense merged its row and criteria before the baseline step.
 4. Owner-run freeze, in one change:
    - add milestones V2-M1-MOTION-001 and V2-M2-MOTION-001 (workstream MOTION) and the approved tasks to `baseline.json` with weights null;
    - run the dry run, then the approved freeze (commands below);
@@ -125,6 +132,7 @@ The first is a dry run that writes nothing. Check the stated task count, total w
 - Baselining KOS-MOTION-001 before it is reviewed gives a weighted task whose only evidence is a draft. It carries no credit until it has passing evidence and an approval.
 - Without a MOTION status source and a `unit-tests` workflow, neither task can report evidence, so baselining first gives zero credit by design.
 - The task title says "fault-path tests", but only admission-time fault, degraded and unknown cases belong to this task. Readers may expect the whole fault state machine; the plan says it does not.
+- The contract currently lists an error (`LIMIT_ACCELERATION`) that no command can reach; until the clarification in decision 10 lands, the validator and AC-203 do not depend on it.
 - Self-approval under D-047 is a known limitation, not independent review.
 - The kritva-core security interface and upstream versions are unpinned, so contract section 16 stays PROVISIONAL; the validator treats authorization as a supplied input.
 - The private program record also needs the MOTION registration (D-075) if the owner wants it there.
