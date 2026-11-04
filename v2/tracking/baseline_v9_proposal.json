@@ -1,0 +1,178 @@
+{
+  "_note": "DRAFT proposal for baseline v9 (not yet approved; no decision number yet): adds tasks KOS-MOTION-001 (weight 5) and KOS-MOTION-002 (weight 5) under milestones V2-M1-MOTION-001 and V2-M2-MOTION-001. The 41 v8 weights and rationales are copied unchanged. NOT yet frozen: the freeze is run by the owner (tools/freeze_baseline.py, D-015) after the two tasks and two milestones are added to baseline.json with weight null. Weights are initial planning estimates of effort, not risk or importance, drafted with an AI assistant, and the owner may change them. Nothing here changes credit: credit needs an approved baseline task with passing evidence and no open blocking gate. See v2/planning/KOS_MOTION_002_PROPOSAL.md.",
+  "scale": "1 = smallest task ... 8 = largest; compare against explicit scope, not importance or current completion",
+  "weights": {
+    "I2-001": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-002": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-003": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-004": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-005": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I2-006": {
+      "weight": 2,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-001": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-002": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-003": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-004": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-005": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-006": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I3-007": {
+      "weight": 2,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-001": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-002": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-003": {
+      "weight": 3,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-004": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-005": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-006": {
+      "weight": 5,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-007": {
+      "weight": 4,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "I4-008": {
+      "weight": 2,
+      "rationale": "Claude's relative-size judgement from the task title and scope; Community planning records hold NO effort estimates"
+    },
+    "KF-CORE-R10-001": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-002": {
+      "weight": 4,
+      "rationale": "Planning ED 3-4; midpoint 3.5 rounded up"
+    },
+    "KF-CORE-R10-003": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-004": {
+      "weight": 4,
+      "rationale": "Planning ED 3-4; midpoint 3.5 rounded up"
+    },
+    "KF-CORE-R10-005": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-006": {
+      "weight": 4,
+      "rationale": "Planning ED 3-4; midpoint 3.5 rounded up"
+    },
+    "KF-CORE-R10-007": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-008": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KF-CORE-R10-009": {
+      "weight": 3,
+      "rationale": "Planning ED 2-3; midpoint 2.5 rounded up"
+    },
+    "KRP-ENG-001": {
+      "weight": 3,
+      "rationale": "Owner decision 2026-10-17 (D-022): weight left at the proposed 3. Contract text, AGENTS.md/CLAUDE.md in each repo, compliance report and enforcement checks across the Kritva repos; sized between the 2-3 and 4-5 effort tasks already in the baseline."
+    },
+    "KOS-SENSE-001": {
+      "weight": 5,
+      "rationale": "Initial planning estimate (D-078), not a recorded engineering estimate: 4 to 5 effort days, midpoint rounded up. Architecture, data model, schema and compatibility boundaries across AC-001..AC-005; the foundation for KOS-SENSE-002. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-SENSE-002": {
+      "weight": 4,
+      "rationale": "Initial planning estimate (D-078), not a recorded engineering estimate: 3 to 4 effort days, midpoint rounded up. Reference validator, synthetic fixtures, negative cases and a repeatable make test-unit gate (AC-201..AC-206); consumes the contract of KOS-SENSE-001. Depends on KOS-SENSE-001. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-SENSE-003": {
+      "weight": 5,
+      "rationale": "Initial planning estimate (D-082), not a recorded engineering estimate: 4 to 5 effort days, rounded up. New versioned transform representation (one unit-quaternion rotation form), frame-graph rules, deterministic composition and inversion, negative fixtures and a repeatable make test-unit gate (AC-301..AC-307), software only on synthetic data. Depends on KOS-SENSE-001 and KOS-SENSE-002. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-SENSE-004": {
+      "weight": 4,
+      "rationale": "Initial planning estimate (D-083), not a recorded engineering estimate: 4 to 5 effort days, rounded down against 003 because the validators it reuses already exist. Deterministic seeded generator with a documented PRNG, valid samples for every sensor kind, explicitly requested defect cases, conformant and defective frame graphs, API and command line (AC-401..AC-407), software only on synthetic data. Depends on KOS-SENSE-001, KOS-SENSE-002 and KOS-SENSE-003. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-SENSE-005": {
+      "weight": 4,
+      "rationale": "Initial planning estimate (D-087), not a recorded engineering estimate: 4 to 5 effort days, rounded down. One versioned stream contract (open, sample and close records with a record index), a JSON Schema and a standard-library stream validator with the STREAM_ code namespace for lifecycle, sequence and timestamp rules, fixtures, batching-invariance and 10,000-record correctness tests and a command line (AC-501..AC-507), software only on synthetic data, no transport. Depends on KOS-SENSE-001, KOS-SENSE-002 and KOS-SENSE-004. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-SENSE-006": {
+      "weight": 5,
+      "rationale": "Initial planning estimate (D-087), not a recorded engineering estimate: 5 to 6 effort days, rounded down; raised from the 4 recorded as a planning figure in D-083 after an external review found the scope is larger. A conformance harness for consumers with three operations (sample decision, stream decision, frame resolution), an independent contract-derived case set with clause references, mutants per rule class, failure isolation and a deterministic JSON result (AC-601..AC-607), software only on synthetic data, with a reference consumer under test and never used as the oracle. Depends on KOS-SENSE-001 to KOS-SENSE-005 and cannot start before KOS-SENSE-005 is accepted. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-SENSE-007": {
+      "weight": 5,
+      "rationale": "Initial planning estimate (D-090), not a recorded engineering estimate: 5 effort days. A versioned, installable Python package of the existing Sense software (pyproject.toml, runtime dependencies empty, pinned build tools kept apart), a version-information interface and RELEASE.md that keep the package, Sense, frame graph, stream and harness versions separate, wheel and sdist built in an isolated environment, install and smoke tests from a clean directory without the source tree, byte-for-byte reproducible builds with a fixed SOURCE_DATE_EPOCH (any difference documented), artifact hashes (AC-701..AC-707), software only on synthetic data, no publication and no contract change; a missing build tool fails CI. Depends on KOS-SENSE-001 to KOS-SENSE-006. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-SENSE-008": {
+      "weight": 6,
+      "rationale": "Initial planning estimate (D-090), not a recorded engineering estimate: 6 effort days. An internal, bounded security and CI assurance review of the Sense repository: a written threat model, review of input handling and of the dynamic consumer loading (not a sandbox), review of the CI workflows and PR gate, dependency and build configuration with an automated empty-runtime-dependency check and an offline test run, security regression tests, a findings register and a final report with every Critical and High finding fixed or dispositioned by the risk owner (AC-801..AC-807). Not a certification, penetration test or safety assessment. Depends on KOS-SENSE-001 to KOS-SENSE-006; acceptance prerequisite (not a dependency field): KOS-SENSE-007 accepted first. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-SENSE-009": {
+      "weight": 6,
+      "rationale": "Initial planning estimate (D-099), not a recorded engineering estimate: 6 effort days (range 5 to 8; delivery risk medium to high). A synthetic integration gate for the Sense software under V2-M2-SENSE-001: a scenario list written before the tests with a machine-checkable mapping, deterministic scenarios across generator, validator, frame graph, stream checker, a synthetic reference producer and consumer fixture (not a real consumer) and the conformance harness, the installed command lines chained through standard input and output, failure propagation with the documented exit codes, and make test-integration as a real gate that fails on a missing, duplicated, unreferenced or skipped scenario (AC-901..AC-907). Software only, synthetic data, offline, no hardware or real consumer. Depends on KOS-SENSE-001 to KOS-SENSE-008, all accepted. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-SENSE-010": {
+      "weight": 5,
+      "rationale": "Initial planning estimate (D-099), not a recorded engineering estimate: 5 effort days (range 4 to 7; delivery risk medium). A regression gate and compatibility suite for the Sense software under V2-M2-SENSE-001: a regression inventory mapping accepted behaviour and fixed defects to tests, mutation evidence for F-001 to F-003 of KOS-SENSE-008, pinned normative artifacts of contracts 0.1.0 (the selected regression baseline, not a stable external API) with golden cases, protection of the six console entry points, golden determinism results, make test-regression as a real gate, and the aggregate make test that runs the unit, integration and regression gates and shows them separately (AC-1001..AC-1007). make acceptance stays out of scope. Depends on KOS-SENSE-001 to KOS-SENSE-008, all accepted; acceptance prerequisite (not a dependency field): KOS-SENSE-009 accepted first. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-MOTION-001": {
+      "weight": 5,
+      "rationale": "Initial planning estimate (DRAFT, owner to approve), not a recorded engineering estimate: 5 effort days (range 4 to 7; delivery risk medium). The Motion architecture, decision register and normative contract v0.1.0-draft with five JSON schemas, error codes and a conformance test plan under V2-M1-MOTION-001 (AC-001..AC-005), merged in kritva-motion (PR #9). Documents and schemas only; no runtime, simulator or physical validation. Scale 1-8. To be revised as work proceeds."
+    },
+    "KOS-MOTION-002": {
+      "weight": 5,
+      "rationale": "Initial planning estimate (DRAFT, owner to approve), not a recorded engineering estimate: 5 effort days (range 4 to 7; delivery risk medium). A reference validator and its tests for the Motion contract under V2-M2-MOTION-001: configuration validation, the fixed admission order, limit enforcement, joint-state preconditions on supplied snapshots, executable schema cases and a machine-checked test-to-contract mapping, with make test-unit as a real gate (AC-201..AC-207). Software only, deterministic, offline, no hardware, no lifecycle or termination state machine. Depends on KOS-MOTION-001. Scale 1-8. To be revised as work proceeds."
+    }
+  }
+}
