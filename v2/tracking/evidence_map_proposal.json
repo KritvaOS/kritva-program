@@ -1007,6 +1007,29 @@
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-SENSE-009",
+      "workstream_id": "SENSE",
+      "task_commit": "8e8fe8f490681fb57310ffe448e4c1a984960efa",
+      "task_subject": "feat(integration): add the synthetic integration scenarios, fixture and gate runner",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "55191ab4a57f3fad2e7011fbb4ad68eb8bb6dbc2",
+        "ci_run": 41761323273,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/41761323273",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "planning/CHANGELOG.md",
+        "tests/security/test_build_dependencies.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []
