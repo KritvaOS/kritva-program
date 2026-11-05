@@ -75,7 +75,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 
 - V2-M0-MOTION-001 (2026-10-30, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
 - V2-M1-MOTION-001 (2026-11-30, PROPOSED): Motion command and state contract (task 001) reviewed and tagged v0.1.0.
-- V2-M2-MOTION-001 (2027-01-15, PROPOSED): Command validation, limit enforcement and fault-path tests pass; gates implemented.
+- V2-M2-MOTION-001 (2027-01-15, PROPOSED): Command and configuration validation, limit enforcement and admission-time fault-path tests pass; unit, integration and regression gates implemented. The runtime lifecycle, termination and fault state machine is a separate task.
 - V2-M5-MOTION-001 (2027-06-15, PROPOSED): Motion commands validated against a simulated actuator interface.
 - V2-M8-MOTION-001 (2027-09-13, PROPOSED): Release and security review complete.
 
