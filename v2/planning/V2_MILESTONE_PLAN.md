@@ -73,7 +73,7 @@ Exit conditions:
 | Repository milestone | Repository | Status | Outcome |
 |---|---|---|---|
 | V2-M2-SENSE-001 | kritva-sense | PROPOSED | Contract validation and synthetic-data tests pass; unit, integration and regression gates implemented. |
-| V2-M2-MOTION-001 | kritva-motion | PROPOSED | Command validation, limit enforcement and fault-path tests pass; gates implemented. |
+| V2-M2-MOTION-001 | kritva-motion | PROPOSED | Command and configuration validation, limit enforcement and admission-time fault-path tests pass; unit, integration and regression gates implemented. The runtime lifecycle, termination and fault state machine is a separate task. |
 | V2-M2-MIND-001 | kritva-mind | PROPOSED | Schema validation, cancellation and error-path tests pass; gates implemented. |
 | V2-M2-SKILL-001 | kritva-skill | PROPOSED | Manifest validation and lifecycle conformance tests pass; gates implemented. |
 | V2-M2-CORE-001 | kritva-core | PROPOSED | Artifact and compatibility contract published as a versioned release. |
