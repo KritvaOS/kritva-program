@@ -6,15 +6,15 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-05T16:56:58Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-05T17:24:21Z (freshness of sources is judged at this time)
 - Baseline version: 9 (APPROVED)
-- Accepted engineering progress: 88.96% (145/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
-- Execution reported complete: 39/43 tasks (repo-reported; not acceptance)
-- Credited tasks: 39/43; blocked by open gates: 0 (none)
-- Evidence coverage: 39/43 tasks with approved, verified evidence; 39 with the CI run confirmed against GitHub (policy: required for credit)
-- Release readiness: NOT_READY (open release gates: none; uncredited tasks: 4)
+- Accepted engineering progress: 92.02% (150/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
+- Execution reported complete: 40/43 tasks (repo-reported; not acceptance)
+- Credited tasks: 40/43; blocked by open gates: 0 (none)
+- Evidence coverage: 40/43 tasks with approved, verified evidence; 40 with the CI run confirmed against GitHub (policy: required for credit)
+- Release readiness: NOT_READY (open release gates: none; uncredited tasks: 3)
 - Schedule: NOT TRACKED here. Effort and capability are owner estimates in their own section, separate from progress
-- Evidence classes of credited tasks: MILESTONE 31, OWN 7, RERUN 1
+- Evidence classes of credited tasks: MILESTONE 31, OWN 8, RERUN 1
 - Evidence qualification: MILESTONE-class tasks were validated by a CI run on a LATER commit ("accepted as of" that commit), not by a run on the task's own commit; the tested commit is shown per task. UNSPECIFIED means the evidence class is not recorded. Open safety gates keep gated tasks at zero credit and release readiness NOT_READY. Credit reflects approval and CI evidence, not physical validation or safety sign-off.
 
 ## Program phase status (manual; separate scope from the engineering baseline)
@@ -29,15 +29,15 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-05T16:56:58Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-05T17:24:21Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
 | CI_DEV_INFRA | FETCH_FAILED | 2026-10-26T16:23:10Z | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
-| COMMUNITY | FRESH | 2026-11-05T16:56:40Z (0h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
-| CORE | FRESH | 2026-11-05T16:56:40Z (0h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
-| MOTION | FRESH | 2026-11-05T16:56:40Z (0h ago) | 1e832ce | a0066d4 | 4 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE.md, scripts/status/gen_status.py, status/status.json |
-| SENSE | FRESH | 2026-11-05T16:56:40Z (0h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
+| COMMUNITY | FRESH | 2026-11-05T17:23:27Z (0h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
+| CORE | FRESH | 2026-11-05T17:23:27Z (0h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
+| MOTION | FRESH | 2026-11-05T17:23:27Z (0h ago) | 75aa32a | 5fbb200 | 2 commit(s) | STATUS_ONLY |
+| SENSE | FRESH | 2026-11-05T17:23:27Z (0h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
 
 ## Workstreams
 
@@ -62,7 +62,7 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | MANUFACTURING_FLEET | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MECHANICAL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MIND | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| MOTION | KritvaOS/kritva-motion | BASELINED (2 tasks) | OK | 0 | a0066d4 |
+| MOTION | KritvaOS/kritva-motion | BASELINED (2 tasks) | OK | 2 | 5fbb200 |
 | NEXUS_EDGE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SDK | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SENSE | KritvaOS/kritva-sense | BASELINED (10 tasks) | OK | 10 | 07c48d5 |
@@ -76,7 +76,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| UNMAPPED | 43 | 39 | 39 | 163 | 145 |
+| UNMAPPED | 43 | 40 | 40 | 163 | 150 |
 
 ## Rollup by workstream
 
@@ -85,7 +85,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | CI_DEV_INFRA | 1 | 0 | 0 | 3 | 0 |
 | COMMUNITY | 21 | 21 | 21 | 71 | 71 |
 | CORE | 9 | 9 | 9 | 30 | 30 |
-| MOTION | 2 | 0 | 0 | 10 | 0 |
+| MOTION | 2 | 1 | 1 | 10 | 5 |
 | SENSE | 10 | 9 | 9 | 49 | 44 |
 
 ## Rollup by milestone
@@ -97,7 +97,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | KOS-I3 | 7 | 7 | 7 | 23 | 23 |
 | KOS-I4 | 8 | 8 | 8 | 30 | 30 |
 | KRP-ENG | 1 | 0 | 0 | 3 | 0 |
-| V2-M1-MOTION-001 | 1 | 0 | 0 | 5 | 0 |
+| V2-M1-MOTION-001 | 1 | 1 | 1 | 5 | 5 |
 | V2-M1-SENSE-001 | 1 | 1 | 1 | 5 | 5 |
 | V2-M2-MOTION-001 | 1 | 0 | 0 | 5 | 0 |
 | V2-M2-SENSE-001 | 4 | 3 | 3 | 19 | 14 |
@@ -118,7 +118,7 @@ Rows: PRE_V2 5, V2_REPO 38.
 | KOS-I3 | PRE_V2 | - | COMMUNITY | - | 7 | 7 | 23 | 23 | - |
 | KOS-I4 | PRE_V2 | - | COMMUNITY | - | 8 | 8 | 30 | 30 | - |
 | KRP-ENG | PRE_V2 | - | CI_DEV_INFRA | - | 1 | 0 | 3 | 0 | - |
-| V2-M1-MOTION-001 | V2_REPO | V2-M1 | MOTION | PROPOSED | 1 | 0 | 5 | 0 | none |
+| V2-M1-MOTION-001 | V2_REPO | V2-M1 | MOTION | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M1-SENSE-001 | V2_REPO | V2-M1 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M2-MOTION-001 | V2_REPO | V2-M2 | MOTION | PROPOSED | 1 | 0 | 5 | 0 | none |
 | V2-M2-SENSE-001 | V2_REPO | V2-M2 | SENSE | PROPOSED | 4 | 3 | 19 | 14 | none |
@@ -191,8 +191,8 @@ Rows: PRE_V2 5, V2_REPO 38.
 | KF-CORE-R10-007 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task f212e46), run 37192914607 | yes | weight 3 x approval A284 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 | KF-CORE-R10-008 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task c0edf1f), run 37192914607 | yes | weight 3 x approval A285 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 | KF-CORE-R10-009 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task af16847), run 37192914607 | yes | weight 3 x approval A286 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KOS-MOTION-001 | MOTION | 5 | - | NOT_RUN | no | - | - | no current report from the owning workstream |
-| KOS-MOTION-002 | MOTION | 5 | - | NOT_RUN | no | - | - | no current report from the owning workstream |
+| KOS-MOTION-001 | MOTION | 5 | COMPLETE | PASS | yes | OWN: 3b9e12b (task 3b9e12b), run 41876610087 | yes | weight 5 x approval A296 (PASS, APPROVED) on commit 3b9e12b with PASS evidence |
+| KOS-MOTION-002 | MOTION | 5 | NOT_STARTED | NOT_RUN | no | - | - | no central approval recorded |
 | KOS-SENSE-001 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: e949b9f (task 2f332fc), run 40994325092 | yes | weight 5 x approval A287 (PASS, APPROVED) on commit e949b9f with PASS evidence |
 | KOS-SENSE-002 | SENSE | 4 | COMPLETE | PASS | yes | MILESTONE: e949b9f (task 3b2df51), run 40994325092 | yes | weight 4 x approval A288 (PASS, APPROVED) on commit e949b9f with PASS evidence |
 | KOS-SENSE-003 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: c92e841 (task 52963d6), run 41267842700 | yes | weight 5 x approval A289 (PASS, APPROVED) on commit c92e841 with PASS evidence |
@@ -221,8 +221,8 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 ## Evidence health
 
 - CI_DEV_INFRA: source STALE
-- KOS-MOTION-001, KOS-MOTION-002, KRP-ENG-001: no current report from the owning workstream
-- KOS-SENSE-010: the repo reports no commit-bound CI evidence
+- KOS-MOTION-002, KOS-SENSE-010: the repo reports no commit-bound CI evidence
+- KRP-ENG-001: no current report from the owning workstream
 
 ## Warnings
 
@@ -238,8 +238,6 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
 - ELECTRICAL_POWER: no status source (UNVERIFIED)
 - INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)
-- KOS-MOTION-001: not reported by MOTION (no credit)
-- KOS-MOTION-002: not reported by MOTION (no credit)
 - KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)
 - MANUFACTURING_FLEET: no status source (UNVERIFIED)
 - MECHANICAL: no status source (UNVERIFIED)

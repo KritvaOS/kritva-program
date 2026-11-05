@@ -4684,6 +4684,21 @@
       ],
       "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
       "supersedes": "A256"
+    },
+    {
+      "approval_id": "A296",
+      "task_id": "KOS-MOTION-001",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-motion",
+      "source_commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T17:24:21Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610087"
+      ],
+      "rationale": "Owner reviewed AC-001 to AC-005 of the Motion contract package (contract review, cross-check and schema validation) on 3b9e12b7; repository checks passed on that commit; not independent, not safety validation"
     }
   ]
 }

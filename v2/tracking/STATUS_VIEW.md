@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-05T16:56:58Z from committed data. Baseline v9 (APPROVED). Validation: 0 error(s), 23 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-05T17:24:21Z from committed data. Baseline v9 (APPROVED). Validation: 0 error(s), 21 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -19,22 +19,22 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-05T16:47:15Z (recorded 2026-11-05T16:56:58Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-05T17:23:45Z (recorded 2026-11-05T17:24:21Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 145/153 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 145/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Warnings: 21 -> 23
+- Accepted progress: 145/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 150/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
+- Credited tasks: added KOS-MOTION-001
 
 ## Measures (never blended)
 
 | Measure | Value | Scope and basis |
 |---|---|---|
-| Accepted engineering progress | 88.96% (145/163 weight) | Frozen baseline v9: only the 43 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
+| Accepted engineering progress | 92.02% (150/163 weight) | Frozen baseline v9: only the 43 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
 ## Accepted engineering progress by workstream
 
 ```text
-145/163 weight  ███████████████████████████░░░  88.96%
+150/163 weight  ████████████████████████████░░  92.02%
 ```
 
 | Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |
@@ -42,7 +42,7 @@ Compared with the snapshot generated 2026-11-05T16:47:15Z (recorded 2026-11-05T1
 | COMMUNITY | 71/71 | 100.0% | 21/21 |
 | SENSE | 44/49 | 89.8% | 9/10 |
 | CORE | 30/30 | 100.0% | 9/9 |
-| MOTION | 0/10 | 0.0% | 0/2 |
+| MOTION | 5/10 | 50.0% | 1/2 |
 | CI_DEV_INFRA | 0/3 | 0.0% | 0/1 |
 
 Frozen baseline; credit needs a recorded approval and verified CI evidence. Only baselined workstreams are listed. A workstream that is NOT BASELINED has no accepted progress to report; that is not zero progress.
@@ -80,7 +80,7 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Measure | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 23 |
+| Warnings | 21 |
 | Workstreams registered / baselined | 24 / 5 |
 | Workstreams with no status source (UNVERIFIED) | 19 |
 | Source freshness | FETCH_FAILED 1, FRESH 4 |
@@ -90,6 +90,4 @@ No status source, so no evidence and no credit (not zero progress): ACTUATION_CO
 Other warnings:
 
 - CI_DEV_INFRA: status is 19 days old
-- KOS-MOTION-001: not reported by MOTION (no credit)
-- KOS-MOTION-002: not reported by MOTION (no credit)
 - KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)
