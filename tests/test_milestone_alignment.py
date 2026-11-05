@@ -105,9 +105,16 @@ class Committed(unittest.TestCase):
         self.assertEqual(got, {"KF-CORE-R10": ("PRE_V2", 9, 30), "KOS-I2": ("PRE_V2", 6, 18), "KOS-I3": ("PRE_V2", 7, 23),
                                "KOS-I4": ("PRE_V2", 8, 30), "KRP-ENG": ("PRE_V2", 1, 3)})
 
+    def _v2_repo_weight(self, suffix):
+        return sum(x["weight"] or 0 for x in self.c["milestone_alignment"]
+                   if x["class"] == "V2_REPO" and x["tasks"] and x["milestone"].endswith(suffix))
+
     def test_sense_v2_milestones_hold_49_weight(self):
-        w = sum(x["weight"] or 0 for x in self.c["milestone_alignment"] if x["class"] == "V2_REPO" and x["tasks"])
-        self.assertEqual(w, 49)
+        self.assertEqual(self._v2_repo_weight("-SENSE-001"), 49)
+
+    def test_motion_v2_milestones_hold_10_weight(self):
+        """Baseline v9 (D-100): KOS-MOTION-001 and KOS-MOTION-002 at weight 5 each."""
+        self.assertEqual(self._v2_repo_weight("-MOTION-001"), 10)
 
     def test_every_repo_milestone_appears_once(self):
         ids = [x["milestone"] for x in self.c["milestone_alignment"]]

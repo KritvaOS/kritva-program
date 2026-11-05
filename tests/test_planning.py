@@ -338,7 +338,7 @@ class Generated(unittest.TestCase):
     def test_plan_does_not_change_credit(self):
         c = json.loads((ROOT / "v2/tracking/consolidated_status.json").read_text(encoding="utf-8"))
         self.assertEqual(c["progress"]["basis"], "48/104 weight (accepted/baseline)" if False else c["progress"]["basis"])
-        self.assertTrue(c["progress"]["basis"].startswith("145/153 weight"))
+        self.assertTrue(c["progress"]["basis"].startswith("145/163 weight"))
 
 
 class CommitFormat(unittest.TestCase):
