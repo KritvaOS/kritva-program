@@ -4060,6 +4060,630 @@
         "https://github.com/KritvaOS/kritva-sense/actions/runs/41761323273"
       ],
       "rationale": "Approved by Dinesh (D-101). Basis: unit-tests CI run 41761323273 PASS on 55191ab4a57f3fad2e7011fbb4ad68eb8bb6dbc2 (make check, docs-check, make test-unit and make test-integration as a separate step; the log shows all ten mandatory integration scenarios running), accepted as of that commit; first implementation commit 8e8fe8f490681fb57310ffe448e4c1a984960efa. Limits: synthetic data and a reference fixture that is not a real consumer; installed command lines tested with pip-style launchers, not a wheel install; no safety, performance or real-time claim; review is the interim D-047 role, not independent for the task itself; nothing is published and no tag is created."
+    },
+    {
+      "approval_id": "A257",
+      "task_id": "I2-001",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A218"
+    },
+    {
+      "approval_id": "A258",
+      "task_id": "I2-002",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A219"
+    },
+    {
+      "approval_id": "A259",
+      "task_id": "I2-003",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A220"
+    },
+    {
+      "approval_id": "A260",
+      "task_id": "I2-004",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A221"
+    },
+    {
+      "approval_id": "A261",
+      "task_id": "I2-005",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A222"
+    },
+    {
+      "approval_id": "A262",
+      "task_id": "I2-006",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A223"
+    },
+    {
+      "approval_id": "A263",
+      "task_id": "I3-001",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A224"
+    },
+    {
+      "approval_id": "A264",
+      "task_id": "I3-002",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A225"
+    },
+    {
+      "approval_id": "A265",
+      "task_id": "I3-003",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A226"
+    },
+    {
+      "approval_id": "A266",
+      "task_id": "I3-004",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A227"
+    },
+    {
+      "approval_id": "A267",
+      "task_id": "I3-005",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A228"
+    },
+    {
+      "approval_id": "A268",
+      "task_id": "I3-006",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A229"
+    },
+    {
+      "approval_id": "A269",
+      "task_id": "I3-007",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A230"
+    },
+    {
+      "approval_id": "A270",
+      "task_id": "I4-001",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37253855540"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A231"
+    },
+    {
+      "approval_id": "A271",
+      "task_id": "I4-002",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "52218f484f29ea58813b848008d187aeab98a0bf",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37256868535"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A232"
+    },
+    {
+      "approval_id": "A272",
+      "task_id": "I4-003",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37347653023"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A233"
+    },
+    {
+      "approval_id": "A273",
+      "task_id": "I4-004",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "3c535b64ebae626065032e7315e679e474f6853b",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37405212290"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A234"
+    },
+    {
+      "approval_id": "A274",
+      "task_id": "I4-005",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "a6905207441abdc13ec6238272e7681093c50180",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37407633177"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A235"
+    },
+    {
+      "approval_id": "A275",
+      "task_id": "I4-006",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37497496804"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A236"
+    },
+    {
+      "approval_id": "A276",
+      "task_id": "I4-007",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37507901354"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A237"
+    },
+    {
+      "approval_id": "A277",
+      "task_id": "I4-008",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A238"
+    },
+    {
+      "approval_id": "A278",
+      "task_id": "KF-CORE-R10-001",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A239"
+    },
+    {
+      "approval_id": "A279",
+      "task_id": "KF-CORE-R10-002",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A240"
+    },
+    {
+      "approval_id": "A280",
+      "task_id": "KF-CORE-R10-003",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A241"
+    },
+    {
+      "approval_id": "A281",
+      "task_id": "KF-CORE-R10-004",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A242"
+    },
+    {
+      "approval_id": "A282",
+      "task_id": "KF-CORE-R10-005",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A243"
+    },
+    {
+      "approval_id": "A283",
+      "task_id": "KF-CORE-R10-006",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A244"
+    },
+    {
+      "approval_id": "A284",
+      "task_id": "KF-CORE-R10-007",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A245"
+    },
+    {
+      "approval_id": "A285",
+      "task_id": "KF-CORE-R10-008",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A246"
+    },
+    {
+      "approval_id": "A286",
+      "task_id": "KF-CORE-R10-009",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A247"
+    },
+    {
+      "approval_id": "A287",
+      "task_id": "KOS-SENSE-001",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A248"
+    },
+    {
+      "approval_id": "A288",
+      "task_id": "KOS-SENSE-002",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A249"
+    },
+    {
+      "approval_id": "A289",
+      "task_id": "KOS-SENSE-003",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "c92e841523f5d194de25a9a890e365c13bfc3f59",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41267842700"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A250"
+    },
+    {
+      "approval_id": "A290",
+      "task_id": "KOS-SENSE-004",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "82b3174523a70372b5673e94a81e8ef20bf4430e",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41275942226"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A251"
+    },
+    {
+      "approval_id": "A291",
+      "task_id": "KOS-SENSE-005",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "0bee5ed15dcbedbe4810e836adfc042cf99de97c",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41278515695"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A252"
+    },
+    {
+      "approval_id": "A292",
+      "task_id": "KOS-SENSE-006",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "67590bcbcc925d9dee58f5dc04bf51345cd000e2",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41289421496"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A253"
+    },
+    {
+      "approval_id": "A293",
+      "task_id": "KOS-SENSE-007",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "5f1aa7a34c5aec9e0c12fc66add6d3bc6efaa7bc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41292919590"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A254"
+    },
+    {
+      "approval_id": "A294",
+      "task_id": "KOS-SENSE-008",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "a8dfb5a7827e9888a5bfae0bbcea1598727bd400",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41298259048"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A255"
+    },
+    {
+      "approval_id": "A295",
+      "task_id": "KOS-SENSE-009",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "55191ab4a57f3fad2e7011fbb4ad68eb8bb6dbc2",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-05T16:56:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41761323273"
+      ],
+      "rationale": "Carry-forward of the existing PASS approval onto baseline v9 (D-027, D-100): same evidence commit, no new judgement",
+      "supersedes": "A256"
     }
   ]
 }
