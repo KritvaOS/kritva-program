@@ -129,11 +129,10 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 139/153 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 145/153 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: added KOS-SENSE-009"
+      "Warnings: 22 -> 21"
     ],
-    "recorded_at": "2026-11-05T02:02:26Z",
-    "since": "2026-11-03T02:30:04Z"
+    "recorded_at": "2026-11-05T16:47:15Z",
+    "since": "2026-11-05T02:02:52Z"
   },
   "errors": [],
   "evidence_health": [
@@ -234,7 +233,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-05T02:02:52Z",
+  "generated_at": "2026-11-05T16:47:15Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 41,
@@ -922,7 +921,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T02:02:14Z",
+        "fetched_at": "2026-11-05T16:45:46Z",
         "fetched_head": "a4d4fbfaaddb684bae971f2081f5ca5f678d9be5",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -940,7 +939,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T02:02:14Z",
+        "fetched_at": "2026-11-05T16:45:46Z",
         "fetched_head": "9fe6aa65303cae1bfe8a9d428f0dc0b32e649073",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -952,7 +951,30 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 90,
+        "ahead_by": 2,
+        "changed_files": [
+          "README.md",
+          "planning/CHANGELOG.md",
+          "scripts/status/gen_status.py",
+          "status/status.json",
+          "status/status.schema.json",
+          "status/status.schema.json.sha256",
+          "tests/status_gen/test_gen_status.py"
+        ],
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-11-05T16:45:46Z",
+        "fetched_head": "169fe1594df2ba9aabc0c33f708291d84ae04494",
+        "freshness": "FRESH",
+        "gap_kind": "OTHER_FILES",
+        "relation": "AHEAD",
+        "repo": "KritvaOS/kritva-motion",
+        "report_source_commit": "a0066d453950acbf20223eee48791d56c3bda117",
+        "status_only": false,
+        "workstream_id": "MOTION"
+      },
+      {
+        "age_hours": 0,
+        "ahead_by": 92,
         "changed_files": [
           ".github/kritva-gate.json",
           ".github/workflows/commit-message-check.yml",
@@ -1006,8 +1028,8 @@
           "tasks/KOS-SENSE-008/SECURITY_REVIEW.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T02:02:14Z",
-        "fetched_head": "d1597278f25e5062b278c66600a2cdd58711f36b",
+        "fetched_at": "2026-11-05T16:45:46Z",
+        "fetched_head": "a7bdaaa1a2b29547f1e048b7354407c56d96effc",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -1075,7 +1097,7 @@
     "progress": "145/153 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 94.77,
     "readiness": {},
-    "warnings": 22
+    "warnings": 21
   },
   "tasks": [
     {
@@ -2296,7 +2318,7 @@
     "ACT_L: no status source (UNVERIFIED)",
     "ACT_M: no status source (UNVERIFIED)",
     "ACT_S: no status source (UNVERIFIED)",
-    "CI_DEV_INFRA: status is 18 days old",
+    "CI_DEV_INFRA: status is 19 days old",
     "CONTROL_PLANE: no status source (UNVERIFIED)",
     "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
@@ -2306,7 +2328,6 @@
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
     "MIND: no status source (UNVERIFIED)",
-    "MOTION: no status source (UNVERIFIED)",
     "NEXUS_EDGE: no status source (UNVERIFIED)",
     "SDK: no status source (UNVERIFIED)",
     "SIM: no status source (UNVERIFIED)",
@@ -2434,10 +2455,10 @@
       "tasks_reported": 0
     },
     {
-      "commit": "-------",
+      "commit": "a0066d453950acbf20223eee48791d56c3bda117",
       "id": "MOTION",
-      "repo": null,
-      "source_state": "UNVERIFIED",
+      "repo": "KritvaOS/kritva-motion",
+      "source_state": "OK",
       "tasks_reported": 0
     },
     {

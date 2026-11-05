@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-05T02:02:52Z from committed data. Baseline v8 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-05T16:47:15Z from committed data. Baseline v8 (APPROVED). Validation: 0 error(s), 21 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -19,10 +19,9 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-03T02:30:04Z (recorded 2026-11-05T02:02:26Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-05T02:02:52Z (recorded 2026-11-05T16:47:15Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 139/153 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 145/153 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Credited tasks: added KOS-SENSE-009
+- Warnings: 22 -> 21
 
 ## Measures (never blended)
 
@@ -79,14 +78,14 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Measure | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 22 |
+| Warnings | 21 |
 | Workstreams registered / baselined | 24 / 4 |
-| Workstreams with no status source (UNVERIFIED) | 20 |
-| Source freshness | FETCH_FAILED 1, FRESH 3 |
+| Workstreams with no status source (UNVERIFIED) | 19 |
+| Source freshness | FETCH_FAILED 1, FRESH 4 |
 
-No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, MOTION, NEXUS_EDGE, SDK, SIM, SKILL, STUDIO.
+No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, NEXUS_EDGE, SDK, SIM, SKILL, STUDIO.
 
 Other warnings:
 
-- CI_DEV_INFRA: status is 18 days old
+- CI_DEV_INFRA: status is 19 days old
 - KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)
