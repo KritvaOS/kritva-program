@@ -1030,6 +1030,28 @@
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-MOTION-001",
+      "workstream_id": "MOTION",
+      "task_commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
+      "task_subject": "docs(contract): make acceleration a declared maximum and reserve LIMIT_ACCELERATION",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
+        "ci_run": 41876610087,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610087",
+        "workflow": "secret-scan"
+      },
+      "task_files_changed_after": [
+        "ACCEPTANCE_CRITERIA.md",
+        "planning/TASKS.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT"
+      ]
     }
   ],
   "unmapped": []

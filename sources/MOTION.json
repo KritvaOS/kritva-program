@@ -4,9 +4,62 @@
   "repo": "KritvaOS/kritva-motion",
   "source": {
     "branch": "main",
-    "commit": "a0066d453950acbf20223eee48791d56c3bda117",
+    "commit": "5fbb2004efd65084f54dbdd9b21c4bc1821794c0",
     "tag": null
   },
-  "tasks": [],
-  "updated_at": "2026-11-04T23:21:29+05:30"
+  "tasks": [
+    {
+      "task_id": "KOS-MOTION-001",
+      "execution": "COMPLETE",
+      "git_sync": "NOT_SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610087",
+          "description": "secret-scan: PASS on the closing commit of pull request 11 (contract revision 5)",
+          "commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
+          "ci_run": "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610087",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610409",
+          "description": "commit-message-check: PASS on the closing commit of pull request 11 (contract revision 5)",
+          "commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
+          "ci_run": "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610409",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610404",
+          "description": "pr-acceptance-gate: PASS on the closing commit of pull request 11 (contract revision 5)",
+          "commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
+          "ci_run": "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610404",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "task_id": "KOS-MOTION-002",
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "ACCEPTANCE_CRITERIA.md",
+          "description": "Criteria reference only (not completion proof); planning status text: 'NOT_STARTED'",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-11-05T22:49:54+05:30"
 }

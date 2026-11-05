@@ -43,9 +43,9 @@
       "weighted": true
     },
     "V2-M1-MOTION-001": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 5,
+      "complete": 1,
+      "credited": 1,
       "tasks": 1,
       "weight": 5,
       "weighted": true
@@ -101,9 +101,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 145,
-      "complete": 39,
-      "credited": 39,
+      "accepted_weight": 150,
+      "complete": 40,
+      "credited": 40,
       "tasks": 43,
       "weight": 163,
       "weighted": true
@@ -135,9 +135,9 @@
       "weighted": true
     },
     "MOTION": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 5,
+      "complete": 1,
+      "credited": 1,
       "tasks": 2,
       "weight": 10,
       "weighted": true
@@ -153,17 +153,17 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 145/153 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 145/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Warnings: 21 -> 23"
+      "Accepted progress: 145/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 150/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KOS-MOTION-001"
     ],
-    "recorded_at": "2026-11-05T16:56:58Z",
-    "since": "2026-11-05T16:47:15Z"
+    "recorded_at": "2026-11-05T17:24:21Z",
+    "since": "2026-11-05T17:23:45Z"
   },
   "errors": [],
   "evidence_health": [
     "CI_DEV_INFRA: source STALE",
-    "KOS-MOTION-001, KOS-MOTION-002, KRP-ENG-001: no current report from the owning workstream",
-    "KOS-SENSE-010: the repo reports no commit-bound CI evidence"
+    "KOS-MOTION-002, KOS-SENSE-010: the repo reports no commit-bound CI evidence",
+    "KRP-ENG-001: no current report from the owning workstream"
   ],
   "gates": [
     {
@@ -258,22 +258,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-05T16:56:58Z",
+  "generated_at": "2026-11-05T17:24:21Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 43,
-      "tasks_with_github_verified_run": 39,
-      "tasks_with_verified_evidence": 39
+      "tasks_with_github_verified_run": 40,
+      "tasks_with_verified_evidence": 40
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 39,
+      "tasks_complete": 40,
       "tasks_total": 43
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 4
+      "uncredited_tasks": 3
     }
   },
   "milestone_alignment": [
@@ -338,10 +338,10 @@
       "workstream": "CI_DEV_INFRA"
     },
     {
-      "accepted_weight": 0,
+      "accepted_weight": 5,
       "class": "V2_REPO",
       "closure": "none",
-      "credited": 0,
+      "credited": 1,
       "milestone": "V2-M1-MOTION-001",
       "program_milestone": "V2-M1",
       "status": "PROPOSED",
@@ -865,8 +865,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 88.96,
-    "basis": "145/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 92.02,
+    "basis": "150/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "source_freshness": {
@@ -946,7 +946,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T16:56:40Z",
+        "fetched_at": "2026-11-05T17:23:27Z",
         "fetched_head": "a4d4fbfaaddb684bae971f2081f5ca5f678d9be5",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -964,7 +964,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T16:56:40Z",
+        "fetched_at": "2026-11-05T17:23:27Z",
         "fetched_head": "9fe6aa65303cae1bfe8a9d428f0dc0b32e649073",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -976,26 +976,19 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 4,
+        "ahead_by": 2,
         "changed_files": [
-          "README.md",
-          "planning/CHANGELOG.md",
-          "planning/MILESTONE.md",
-          "scripts/status/gen_status.py",
-          "status/status.json",
-          "status/status.schema.json",
-          "status/status.schema.json.sha256",
-          "tests/status_gen/test_gen_status.py"
+          "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T16:56:40Z",
-        "fetched_head": "1e832cea63862270c510c70edd640682d6d23fca",
+        "fetched_at": "2026-11-05T17:23:27Z",
+        "fetched_head": "75aa32aa5c18aa0d6fa110bdc735816c594d8090",
         "freshness": "FRESH",
-        "gap_kind": "OTHER_FILES",
+        "gap_kind": "STATUS_ONLY",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-motion",
-        "report_source_commit": "a0066d453950acbf20223eee48791d56c3bda117",
-        "status_only": false,
+        "report_source_commit": "5fbb2004efd65084f54dbdd9b21c4bc1821794c0",
+        "status_only": true,
         "workstream_id": "MOTION"
       },
       {
@@ -1054,7 +1047,7 @@
           "tasks/KOS-SENSE-008/SECURITY_REVIEW.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T16:56:40Z",
+        "fetched_at": "2026-11-05T17:23:27Z",
         "fetched_head": "a7bdaaa1a2b29547f1e048b7354407c56d96effc",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1100,6 +1093,7 @@
       "KF-CORE-R10-007",
       "KF-CORE-R10-008",
       "KF-CORE-R10-009",
+      "KOS-MOTION-001",
       "KOS-SENSE-001",
       "KOS-SENSE-002",
       "KOS-SENSE-003",
@@ -1120,10 +1114,10 @@
     },
     "pending_decisions": 6,
     "pending_reviews": 7,
-    "progress": "145/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 88.96,
+    "progress": "150/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 92.02,
     "readiness": {},
-    "warnings": 23
+    "warnings": 21
   },
   "tasks": [
     {
@@ -1967,24 +1961,30 @@
       "workstream_id": "CORE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no current report from the owning workstream",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_REPORT",
-      "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "credit": true,
+      "credit_reason": "weight 5 x approval A296 (PASS, APPROVED) on commit 3b9e12b with PASS evidence",
+      "evidence_class": "OWN",
+      "evidence_run": "41876610087",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_SYNCED",
       "milestone_id": "V2-M1-MOTION-001",
       "phase": null,
-      "readiness": null,
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
+        "github_verified": true,
+        "run": "41876610087",
+        "task_commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27"
+      },
+      "run_verified": true,
+      "task_commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
       "task_id": "KOS-MOTION-001",
-      "tested_commit": null,
+      "tested_commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
       "weight": 5,
       "workstream_id": "MOTION"
     },
@@ -1992,16 +1992,16 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "NOT_STARTED",
+      "git_sync": "NOT_SYNCED",
       "milestone_id": "V2-M2-MOTION-001",
       "phase": null,
-      "readiness": null,
+      "readiness": "IMPLEMENTABLE",
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -2394,8 +2394,6 @@
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
-    "KOS-MOTION-001: not reported by MOTION (no credit)",
-    "KOS-MOTION-002: not reported by MOTION (no credit)",
     "KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
@@ -2527,11 +2525,11 @@
       "tasks_reported": 0
     },
     {
-      "commit": "a0066d453950acbf20223eee48791d56c3bda117",
+      "commit": "5fbb2004efd65084f54dbdd9b21c4bc1821794c0",
       "id": "MOTION",
       "repo": "KritvaOS/kritva-motion",
       "source_state": "OK",
-      "tasks_reported": 0
+      "tasks_reported": 2
     },
     {
       "commit": "-------",
