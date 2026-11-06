@@ -81,5 +81,14 @@
     "canonical_commit": "d42eec9e86bdd0c3922b439fc57809dbe6265ff5",
     "reason": "Baseline v9: KOS-MOTION-001 and KOS-MOTION-002 added under D-100; weights are initial planning estimates, no credit before approved passing evidence",
     "baseline_sha256": "c32cb34573df49467838b751b1049c5e184335f3b488289a42e390bc554644d8"
+  },
+  {
+    "from_version": 9,
+    "to_version": 10,
+    "approver": "Dinesh",
+    "approved_at": "2026-11-06T17:52:33Z",
+    "canonical_commit": "3dd48a8314cbcbb269391aa37a4bd5f957704a27",
+    "reason": "Baseline v10 (D-108): KOS-MOTION-003 added under V2-M2-MOTION-002; weight 8 is an initial planning estimate, no credit before approved passing evidence",
+    "baseline_sha256": "e390303a601e22052ea357c8cad46dc33ba0ea01e12041a7aec8366828933535"
   }
 ]
