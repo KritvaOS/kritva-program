@@ -294,8 +294,8 @@
       "id": "V2-M2-MOTION-001",
       "milestone_id": "V2-M2",
       "repo_code": "MOTION",
-      "outcome": "Command and configuration validation, limit enforcement and admission-time fault-path tests pass; unit, integration and regression gates implemented. The runtime lifecycle, termination and fault state machine is a separate task.",
-      "status": "PROPOSED",
+      "outcome": "Command and configuration validation, limit enforcement and admission-time and joint-state fault-path tests pass as a software-only reference validator, with the `make test-unit` gate and a conformance manifest. The integration and regression gates and the runtime lifecycle, termination and fault state machine are separate, later work.",
+      "status": "CLOSED",
       "tasks": []
     },
     {
