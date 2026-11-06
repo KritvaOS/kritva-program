@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-05T17:24:21Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-06T06:55:39Z (freshness of sources is judged at this time)
 - Baseline version: 9 (APPROVED)
 - Accepted engineering progress: 92.02% (150/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 40/43 tasks (repo-reported; not acceptance)
@@ -29,15 +29,15 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-05T17:24:21Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-06T06:55:39Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
 | CI_DEV_INFRA | FETCH_FAILED | 2026-10-26T16:23:10Z | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
-| COMMUNITY | FRESH | 2026-11-05T17:23:27Z (0h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
-| CORE | FRESH | 2026-11-05T17:23:27Z (0h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
-| MOTION | FRESH | 2026-11-05T17:23:27Z (0h ago) | 75aa32a | 5fbb200 | 2 commit(s) | STATUS_ONLY |
-| SENSE | FRESH | 2026-11-05T17:23:27Z (0h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
+| COMMUNITY | FRESH | 2026-11-06T06:55:21Z (0h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
+| CORE | FRESH | 2026-11-06T06:55:21Z (0h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
+| MOTION | FRESH | 2026-11-06T06:55:21Z (0h ago) | 9254420 | 808ca37 | 12 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, requirements-test.txt, scripts/test_gate.py, src/kritva_motion/__init__.py, src/kritva_motion/admission.py |
+| SENSE | FRESH | 2026-11-06T06:55:21Z (0h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
 
 ## Workstreams
 
@@ -62,7 +62,7 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | MANUFACTURING_FLEET | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MECHANICAL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MIND | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| MOTION | KritvaOS/kritva-motion | BASELINED (2 tasks) | OK | 2 | 5fbb200 |
+| MOTION | KritvaOS/kritva-motion | BASELINED (2 tasks) | OK | 2 | 808ca37 |
 | NEXUS_EDGE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SDK | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SENSE | KritvaOS/kritva-sense | BASELINED (10 tasks) | OK | 10 | 07c48d5 |
@@ -192,7 +192,7 @@ Rows: PRE_V2 5, V2_REPO 38.
 | KF-CORE-R10-008 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task c0edf1f), run 37192914607 | yes | weight 3 x approval A285 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 | KF-CORE-R10-009 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task af16847), run 37192914607 | yes | weight 3 x approval A286 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
 | KOS-MOTION-001 | MOTION | 5 | COMPLETE | PASS | yes | OWN: 3b9e12b (task 3b9e12b), run 41876610087 | yes | weight 5 x approval A296 (PASS, APPROVED) on commit 3b9e12b with PASS evidence |
-| KOS-MOTION-002 | MOTION | 5 | NOT_STARTED | NOT_RUN | no | - | - | no central approval recorded |
+| KOS-MOTION-002 | MOTION | 5 | IN_PROGRESS | NOT_RUN | no | - | - | no central approval recorded |
 | KOS-SENSE-001 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: e949b9f (task 2f332fc), run 40994325092 | yes | weight 5 x approval A287 (PASS, APPROVED) on commit e949b9f with PASS evidence |
 | KOS-SENSE-002 | SENSE | 4 | COMPLETE | PASS | yes | MILESTONE: e949b9f (task 3b2df51), run 40994325092 | yes | weight 4 x approval A288 (PASS, APPROVED) on commit e949b9f with PASS evidence |
 | KOS-SENSE-003 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: c92e841 (task 52963d6), run 41267842700 | yes | weight 5 x approval A289 (PASS, APPROVED) on commit c92e841 with PASS evidence |

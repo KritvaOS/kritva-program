@@ -258,7 +258,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-05T17:24:21Z",
+  "generated_at": "2026-11-06T06:55:39Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 43,
@@ -946,7 +946,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T17:23:27Z",
+        "fetched_at": "2026-11-06T06:55:21Z",
         "fetched_head": "a4d4fbfaaddb684bae971f2081f5ca5f678d9be5",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -964,7 +964,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T17:23:27Z",
+        "fetched_at": "2026-11-06T06:55:21Z",
         "fetched_head": "9fe6aa65303cae1bfe8a9d428f0dc0b32e649073",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -976,19 +976,34 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 2,
+        "ahead_by": 12,
         "changed_files": [
-          "status/status.json"
+          "planning/CHANGELOG.md",
+          "requirements-test.txt",
+          "scripts/test_gate.py",
+          "src/kritva_motion/__init__.py",
+          "src/kritva_motion/admission.py",
+          "src/kritva_motion/config_validation.py",
+          "status/status.json",
+          "tasks/KOS-MOTION-002/TASK.md",
+          "tests/gate/test_test_gate.py",
+          "tests/manifest/conformance_manifest.json",
+          "tests/schema/test_envelope_mirror.py",
+          "tests/schema/test_schemas.py",
+          "tests/validator/test_admission.py",
+          "tests/validator/test_admission_state.py",
+          "tests/validator/test_config_validation.py",
+          "tests/validator/test_conformance.py"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T17:23:27Z",
-        "fetched_head": "75aa32aa5c18aa0d6fa110bdc735816c594d8090",
+        "fetched_at": "2026-11-06T06:55:21Z",
+        "fetched_head": "925442020d7e9463ad442379ab05c591f413cf4e",
         "freshness": "FRESH",
-        "gap_kind": "STATUS_ONLY",
+        "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-motion",
-        "report_source_commit": "5fbb2004efd65084f54dbdd9b21c4bc1821794c0",
-        "status_only": true,
+        "report_source_commit": "808ca37ca645747960ce66e81e872c39dfaea2c9",
+        "status_only": false,
         "workstream_id": "MOTION"
       },
       {
@@ -1047,7 +1062,7 @@
           "tasks/KOS-SENSE-008/SECURITY_REVIEW.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-05T17:23:27Z",
+        "fetched_at": "2026-11-06T06:55:21Z",
         "fetched_head": "a7bdaaa1a2b29547f1e048b7354407c56d96effc",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1997,7 +2012,7 @@
       "evidence_run": null,
       "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": "NOT_STARTED",
+      "execution": "IN_PROGRESS",
       "git_sync": "NOT_SYNCED",
       "milestone_id": "V2-M2-MOTION-001",
       "phase": null,
@@ -2525,7 +2540,7 @@
       "tasks_reported": 0
     },
     {
-      "commit": "5fbb2004efd65084f54dbdd9b21c4bc1821794c0",
+      "commit": "808ca37ca645747960ce66e81e872c39dfaea2c9",
       "id": "MOTION",
       "repo": "KritvaOS/kritva-motion",
       "source_state": "OK",
