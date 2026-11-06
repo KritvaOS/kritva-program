@@ -4699,6 +4699,21 @@
         "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610087"
       ],
       "rationale": "Owner reviewed AC-001 to AC-005 of the Motion contract package (contract review, cross-check and schema validation) on 3b9e12b7; repository checks passed on that commit; not independent, not safety validation"
+    },
+    {
+      "approval_id": "A297",
+      "task_id": "KOS-MOTION-002",
+      "baseline_version": 9,
+      "source_repo": "KritvaOS/kritva-motion",
+      "source_commit": "77319b460d01436c7c70a40af8163bde287dfeb7",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-06T16:34:56Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-motion/actions/runs/42252338541"
+      ],
+      "rationale": "Owner reviewed AC-201 to AC-207 of the Motion reference validator, tests, conformance manifest and gate on 77319b46; repository checks including unit-tests passed on that commit; software evidence only, 80 conformance IDs deferred; not independent, not safety validation"
     }
   ]
 }

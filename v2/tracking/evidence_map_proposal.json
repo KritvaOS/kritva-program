@@ -1052,6 +1052,33 @@
       "review_flags": [
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-MOTION-002",
+      "workstream_id": "MOTION",
+      "task_commit": "77319b460d01436c7c70a40af8163bde287dfeb7",
+      "task_subject": "Merge pull request #24 from KritvaOS/docs/motion-002-evidence-limit",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "77319b460d01436c7c70a40af8163bde287dfeb7",
+        "ci_run": 42252338541,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-motion/actions/runs/42252338541",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "README.md",
+        "planning/CHANGELOG.md",
+        "planning/TASKS.md",
+        "status/status.json",
+        "tasks/KOS-MOTION-002/EVIDENCE.json",
+        "tasks/KOS-MOTION-002/REVIEW.md",
+        "tasks/KOS-MOTION-002/TASK.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT"
+      ]
     }
   ],
   "unmapped": []
