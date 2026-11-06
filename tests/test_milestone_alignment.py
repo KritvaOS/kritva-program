@@ -116,6 +116,10 @@ class Committed(unittest.TestCase):
         """Baseline v9 (D-100): KOS-MOTION-001 and KOS-MOTION-002 at weight 5 each."""
         self.assertEqual(self._v2_repo_weight("-MOTION-001"), 10)
 
+    def test_motion_lifecycle_milestone_holds_8_weight(self):
+        """Baseline v10 (D-108): KOS-MOTION-003 at weight 8 under V2-M2-MOTION-002."""
+        self.assertEqual(self._v2_repo_weight("-MOTION-002"), 8)
+
     def test_every_repo_milestone_appears_once(self):
         ids = [x["milestone"] for x in self.c["milestone_alignment"]]
         self.assertEqual(len(ids), len(set(ids)))

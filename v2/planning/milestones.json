@@ -299,6 +299,14 @@
       "tasks": []
     },
     {
+      "id": "V2-M2-MOTION-002",
+      "milestone_id": "V2-M2",
+      "repo_code": "MOTION",
+      "outcome": "Software-only Motion lifecycle, termination, stop-preemption and fault state machine conforms to the Motion contract v0.1.0-draft through deterministic reference tests, with no backend, store or physical behaviour.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
       "id": "V2-M2-MIND-001",
       "milestone_id": "V2-M2",
       "repo_code": "MIND",
