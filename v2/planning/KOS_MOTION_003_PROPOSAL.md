@@ -5,12 +5,12 @@
 | Document ID | KOS-PLAN-MOTION-003-001 |
 | Repository | `KritvaOS/kritva-program` |
 | Document Type | Plan |
-| Status | DRAFT proposal for owner review (2026-11-06). Nothing here is approved |
+| Status | APPROVED by the owner on 2026-11-06 (chat: "You can update as Approved from my end"), recorded as D-107. The approval covers decisions 1 to 8 below with the recommendations as written; baseline v10, the weight and the milestone take effect only through the later owner-run freeze |
 | Owner | Dinesh (program owner) |
 | Reviewer / Approver | Dinesh |
 | Version | 0.1 |
 | Last Updated | 2026-11-06 |
-| Authority | REFERENCE: it governs no baseline, weight, approval or gate |
+| Authority | REFERENCE: it governs no baseline, weight, approval or gate. The decision record D-107 states the approval |
 | Review | Cross-checked with an external AI reviewer (ChatGPT, 2026-11-06) in two rounds: direction agreed, four adjustments applied below. Not an independent review (D-047) |
 | Related Tasks / Milestones | KOS-MOTION-001, KOS-MOTION-002 (accepted, D-103), V2-M2-MOTION-001 (closed, D-105) |
 | Related Documents | [KOS_MOTION_002_PROPOSAL.md](KOS_MOTION_002_PROPOSAL.md), kritva-motion `contract/MOTION_CONTRACT.md` sections 6, 7, 9, 10, 12, 13, `contract/CONFORMANCE_TEST_PLAN.md`, `tests/manifest/conformance_manifest.json` |
@@ -35,11 +35,11 @@ The 80 DEFERRED IDs split as follows. The numbers come from the manifest `reason
 |---|---|---|
 | Lifecycle-only: the manifest reason is "needs the runtime lifecycle, termination and fault state machine" | 52: LC 8 (01..08), ARB 10 (02, 03, 04, 07, 09, 10, 11, 13, 15, 16), TMO 11 (01..11), FB 3 (02, 04, 05), CMP 3 (01..03), FLT 17 (01, 02, 03, 05, 07, 08, 09, 10, 11, 14, 15, 16, 17, 19, 20, 21, 22) | Target of KOS-MOTION-003 |
 | Lifecycle plus a runtime part, to classify in PR-01 | 4: CT-FLT-18 (completion evidence for `SET_VELOCITY`), CT-FB-06 (`is_current` computed at runtime), CT-VAL-11 (execution semantics: absolute position, signed velocity), CT-DET-01 (determinism of lifecycle, timeout and event order with a simulated clock) | Decide per ID in PR-01: in scope when the lifecycle engine alone can show it, otherwise stay DEFERRED with a reason |
-| Needs a store, publisher or activation runtime | 21: CFG 5, ID 5, EV 5, HIS 1, FB-03, DET-02, AUTH-06 (needs idempotency and history, not authorization) | Stay DEFERRED (candidate KOS-MOTION-005) |
-| Needs the Core security interface (not pinned) | 5: AUTH-01..04, AUTH-06 (AUTH-06 also needs the idempotency store; classify once) | Stay DEFERRED until the interface is pinned |
-| Backend interface or simulator | CT-BE-02 DEFERRED, CT-BE-01, 03, 04, 06, 07 OUT_OF_SCOPE | Candidate KOS-MOTION-004 |
+| Needs a store, publisher, activation runtime or status reporting | 18: CFG 5 (01, 03, 04, 05, 06), ID 5, EV 5, HIS 1 (01), CT-FB-03, CT-DET-02 | Stay DEFERRED (candidate KOS-MOTION-005) |
+| Needs the Core security interface (not pinned) | 5: CT-AUTH-01, 02, 03, 04, 06 | Stay DEFERRED until the interface is pinned |
+| Backend interface or simulator | 1 DEFERRED (CT-BE-02) and 5 OUT_OF_SCOPE (CT-BE-01, 03, 04, 06, 07) | Candidate KOS-MOTION-004 |
 
-PR-01 replaces this table with the confirmed, ID-level one (a table that sums to 80 DEFERRED plus 5 OUT_OF_SCOPE and is checked by a test). Where the table above and the manifest disagree, the manifest wins and the difference is recorded in the task record.
+PR-01 replaces this table with the confirmed, ID-level one (a table whose rows add up to the 80 DEFERRED and 5 OUT_OF_SCOPE IDs of the manifest, checked by a test; today 52 + 4 + 18 + 5 + 1 = 80). Where the table above and the manifest disagree, the manifest wins and the difference is recorded in the task record.
 
 ## What KOS-MOTION-003 would deliver
 
@@ -105,7 +105,7 @@ To be added to kritva-motion `ACCEPTANCE_CRITERIA.md` as a new section in PR-01,
 
 The review is owner-only (D-047) and is declared not independent. To compensate with evidence, not claims: the one-test-per-ID gate, the generated transition matrix compared with the document, the fixed-seed property test with its seed and iteration count in the CI evidence, negative event-sequence tests, CI evidence bound to the exact commit, and open semantic questions recorded as interpretations or contract findings. The review checklist lives in `tasks/KOS-MOTION-003/REVIEW.md`. A read-only review by a second person is welcome if one exists and is optional.
 
-## Decisions needed from Dinesh
+## Decisions (approved by Dinesh, 2026-11-06, D-107)
 
 | # | Decision | Recommendation |
 |---|---|---|
@@ -136,4 +136,4 @@ The review is owner-only (D-047) and is declared not independent. To compensate 
 
 ## What this plan does not authorize
 
-Approval of KOS-MOTION-003, any weight, any baseline change, any gate closure, a required check, a contract change, implementation, hardware or safety claims, or a release tag.
+D-107 approves the task, its scope and the proposed weight of 8 as the owner's decision. This plan itself does not change the baseline. It does not authorize the credit for KOS-MOTION-003 (that needs an approved baseline task, a central approval and verified evidence), any baseline change, any gate closure, a required check, a contract change, implementation, hardware or safety claims, or a release tag.
