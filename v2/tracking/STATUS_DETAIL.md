@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-06T16:41:19Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-06T16:59:14Z (freshness of sources is judged at this time)
 - Baseline version: 9 (APPROVED)
 - Accepted engineering progress: 95.09% (155/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 41/43 tasks (repo-reported; not acceptance)
@@ -29,15 +29,15 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-06T16:41:19Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-06T16:59:14Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
 | CI_DEV_INFRA | FETCH_FAILED | 2026-10-26T16:23:10Z | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
-| COMMUNITY | FRESH | 2026-11-06T16:38:43Z (0h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
-| CORE | FRESH | 2026-11-06T16:38:43Z (0h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
-| MOTION | FRESH | 2026-11-06T16:38:43Z (0h ago) | 01ea8ab | d76dbdf | 2 commit(s) | STATUS_ONLY |
-| SENSE | FRESH | 2026-11-06T16:38:43Z (0h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
+| COMMUNITY | FRESH | 2026-11-06T16:58:58Z (0h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
+| CORE | FRESH | 2026-11-06T16:58:58Z (0h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
+| MOTION | FRESH | 2026-11-06T16:58:58Z (0h ago) | 01ea8ab | d76dbdf | 2 commit(s) | STATUS_ONLY |
+| SENSE | FRESH | 2026-11-06T16:58:58Z (0h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
 
 ## Workstreams
 
@@ -120,7 +120,7 @@ Rows: PRE_V2 5, V2_REPO 38.
 | KRP-ENG | PRE_V2 | - | CI_DEV_INFRA | - | 1 | 0 | 3 | 0 | - |
 | V2-M1-MOTION-001 | V2_REPO | V2-M1 | MOTION | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M1-SENSE-001 | V2_REPO | V2-M1 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
-| V2-M2-MOTION-001 | V2_REPO | V2-M2 | MOTION | PROPOSED | 1 | 1 | 5 | 5 | none |
+| V2-M2-MOTION-001 | V2_REPO | V2-M2 | MOTION | CLOSED | 1 | 1 | 5 | 5 | none |
 | V2-M2-SENSE-001 | V2_REPO | V2-M2 | SENSE | PROPOSED | 4 | 3 | 19 | 14 | none |
 | V2-M5-SENSE-001 | V2_REPO | V2-M5 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M7-SENSE-001 | V2_REPO | V2-M7 | SENSE | PROPOSED | 2 | 2 | 9 | 9 | none |

@@ -258,7 +258,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-06T16:41:19Z",
+  "generated_at": "2026-11-06T16:59:14Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 43,
@@ -368,7 +368,7 @@
       "credited": 1,
       "milestone": "V2-M2-MOTION-001",
       "program_milestone": "V2-M2",
-      "status": "PROPOSED",
+      "status": "CLOSED",
       "tasks": 1,
       "weight": 5,
       "workstream": "MOTION"
@@ -946,7 +946,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-06T16:38:43Z",
+        "fetched_at": "2026-11-06T16:58:58Z",
         "fetched_head": "a4d4fbfaaddb684bae971f2081f5ca5f678d9be5",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -964,7 +964,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-06T16:38:43Z",
+        "fetched_at": "2026-11-06T16:58:58Z",
         "fetched_head": "9fe6aa65303cae1bfe8a9d428f0dc0b32e649073",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -981,7 +981,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-06T16:38:43Z",
+        "fetched_at": "2026-11-06T16:58:58Z",
         "fetched_head": "01ea8abe75033cded66b4ff9e216fdbc76853cad",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -1047,7 +1047,7 @@
           "tasks/KOS-SENSE-008/SECURITY_REVIEW.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-06T16:38:43Z",
+        "fetched_at": "2026-11-06T16:58:58Z",
         "fetched_head": "a7bdaaa1a2b29547f1e048b7354407c56d96effc",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",

@@ -23,7 +23,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 | 1 | kritva-program | program | - | PROGRAM_OWNER | status, secret-scan, commit-message-check | make check | V2-M0, V2-M8 |
 | 2 | kritva-core | library | kritva-program | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check | make check, make test-unit, make test-regression | V2-M0, V2-M2, V2-M8 |
 | 3 | kritvaos-community | library | kritva-core | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check | make check, make test-unit, make test-regression | V2-M0, V2-M1, V2-M3, V2-M7, V2-M8 |
-| 4 | kritva-motion | capability | kritva-core, kritvaos-community | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check, pr-acceptance-gate | make check, make test-unit, make test-integration, make test-regression, make docs-check | V2-M0, V2-M1, V2-M2, V2-M5, V2-M8 |
+| 4 | kritva-motion | capability | kritva-core, kritvaos-community | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check, pr-acceptance-gate, unit-tests | make check, make test-unit, make test-integration, make test-regression, make docs-check | V2-M0, V2-M1, V2-M2, V2-M5, V2-M8 |
 | 5 | kritva-sense | capability | kritva-core, kritvaos-community | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check, pr-acceptance-gate, unit-tests | make check, make test-unit, make test-integration, make test-regression, make docs-check | V2-M0, V2-M1, V2-M2, V2-M5, V2-M7, V2-M8 |
 | 6 | kritva-mind | capability | kritva-core, kritva-sense | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check, pr-acceptance-gate | make check, make test-unit, make test-integration, make test-regression, make docs-check | V2-M0, V2-M1, V2-M2, V2-M5, V2-M8 |
 | 7 | kritva-skill | capability | kritva-core, kritva-mind, kritva-motion | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check, pr-acceptance-gate | make check, make test-unit, make test-integration, make test-regression, make docs-check | V2-M0, V2-M1, V2-M2, V2-M3, V2-M5, V2-M8 |
@@ -75,7 +75,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 
 - V2-M0-MOTION-001 (2026-10-30, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
 - V2-M1-MOTION-001 (2026-11-30, PROPOSED): Motion command and state contract (task 001) reviewed and tagged v0.1.0.
-- V2-M2-MOTION-001 (2027-01-15, PROPOSED): Command and configuration validation, limit enforcement and admission-time fault-path tests pass; unit, integration and regression gates implemented. The runtime lifecycle, termination and fault state machine is a separate task.
+- V2-M2-MOTION-001 (2027-01-15, CLOSED): Command and configuration validation, limit enforcement and admission-time and joint-state fault-path tests pass as a software-only reference validator, with the `make test-unit` gate and a conformance manifest. The integration and regression gates and the runtime lifecycle, termination and fault state machine are separate, later work.
 - V2-M5-MOTION-001 (2027-06-15, PROPOSED): Motion commands validated against a simulated actuator interface.
 - V2-M8-MOTION-001 (2027-09-13, PROPOSED): Release and security review complete.
 
