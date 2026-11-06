@@ -50,7 +50,8 @@
     "secret-scan",
     "commit-message-check",
     "pr-acceptance-gate",
-    "unit-tests"
+    "unit-tests",
+    "readme-check"
   ],
   "known_local_gates": [
     "make check",
@@ -302,7 +303,8 @@
         "secret-scan",
         "commit-message-check",
         "pr-acceptance-gate",
-        "unit-tests"
+        "unit-tests",
+        "readme-check"
       ],
       "local_gates": [
         "make check",
