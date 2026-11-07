@@ -956,7 +956,9 @@ def render(c):
     for title, key in (("Validation errors", "errors"), ("Warnings", "warnings")):
         if c[key]:
             L += ["", f"## {title}", ""] + [f"- {x}" for x in c[key]]
-    return "\n".join(L) + "\n"
+    L += ["", "## Measures (never blended)", "", *measures_table(c)]
+    L += dashboard.detail_extra_lines(c, c.get("phase_sequence") or [])
+    return "\n".join(L).rstrip("\n") + "\n"
 
 
 # ---- append-only history -------------------------------------------------------------------------

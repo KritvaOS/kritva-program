@@ -266,7 +266,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T09:18:31Z",
+  "generated_at": "2026-11-07T11:00:00Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 44,
@@ -921,42 +921,56 @@
     },
     "by_repo": {
       "Community": {
+        "accepted": 0,
+        "baseline": 0,
         "high": 170,
         "low": 108,
         "point": 139,
         "rows": 31
       },
       "Core": {
+        "accepted": 0,
+        "baseline": 0,
         "high": 19,
         "low": 13,
         "point": 16,
         "rows": 3
       },
       "Mind": {
+        "accepted": 0,
+        "baseline": 0,
         "high": 65,
         "low": 41,
         "point": 53,
         "rows": 10
       },
       "Motion": {
+        "accepted": 10,
+        "baseline": 18,
         "high": 18,
         "low": 12,
         "point": 15,
         "rows": 3
       },
       "Program": {
+        "accepted": 0,
+        "baseline": 0,
         "high": 25,
         "low": 15,
         "point": 20,
         "rows": 5
       },
       "Sense": {
+        "accepted": 44,
+        "baseline": 49,
         "high": 4,
         "low": 2,
         "point": 3,
         "rows": 1
       },
       "Skill": {
+        "accepted": 0,
+        "baseline": 0,
         "high": 37,
         "low": 22,
         "point": 29,
@@ -1078,7 +1092,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 15,
+        "age_hours": 17,
         "ahead_by": 6,
         "changed_files": [
           "Makefile",
@@ -1097,7 +1111,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 15,
+        "age_hours": 17,
         "ahead_by": 4,
         "changed_files": [
           "planning/MILESTONE.md",
@@ -1115,7 +1129,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 15,
+        "age_hours": 17,
         "ahead_by": 6,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -1144,7 +1158,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 15,
+        "age_hours": 17,
         "ahead_by": 92,
         "changed_files": [
           ".github/kritva-gate.json",

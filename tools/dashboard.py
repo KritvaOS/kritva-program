@@ -85,7 +85,7 @@ def header_lines(c):
     errs, warns = len(c["errors"]), len(c["warnings"])
     return [f"Snapshot generated {c['generated_at']} from committed data. Baseline v{c['baseline_version']} "
             f"({'APPROVED' if c['baseline_approved'] else 'DRAFT, not approved'}). "
-            f"Validation: {errs} error(s), {warns} warning(s) (see Data quality). "
+            f"Validation: {errs} error(s), {warns} warning(s) (see Data health). "
             "Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).", "",
             "Views are snapshots of the records, not approvals, schedule commitments or forecasts. "
             "The measures are never combined into one health figure.", ""]
@@ -313,8 +313,121 @@ def quality_lines(c):
     return L
 
 
+def _bar20(done, total):
+    return bar(done, total, 20)
+
+
+def _share(done, total):
+    return f"{100 * done / total:.1f}%" if total else "n/a"
+
+
+def headline_lines(c):
+    s = c.get("plan_register")
+    L = ["## V2 progress at a glance", ""]
+    if not s:
+        return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
+    base, acc = s["v2_baseline_weight"], s["v2_accepted_weight"]
+    tot, lo_t, hi_t = base + s["point"], base + s["low"], base + s["high"]
+    return L + ["```text",
+                f"V2 approved-plan coverage: {_share(acc, tot)}  ({acc} / {tot} weight)",
+                f"{_bar20(acc, tot)}",
+                "```", "",
+                f"- Plan estimate range: {_share(acc, hi_t)} to {_share(acc, lo_t)} (total weight {lo_t} to {hi_t}).",
+                f"- V2 baseline acceptance: {acc} / {base} = {_share(acc, base)} (approved baseline tasks only).",
+                f"- Approved plan with no credit yet: {s['rows']} tasks, weight {s['point']} [{s['low']}-{s['high']}]; "
+                f"{s['retired_parents']} retired parents are not counted.",
+                "- Physical validation (V2-M6) is on HOLD and excluded. Mechanical, actuator, enterprise and raas work are outside this view.", "",
+                "Credit comes only from baseline tasks with an approval, a completed task and CI evidence. "
+                "Planning weights are estimates and earn nothing until they are baselined.", ""]
+
+
+def milestone_table_lines(c):
+    s = c.get("plan_register")
+    L = ["## Milestones M0-M8", ""]
+    if not s:
+        return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
+    meta = {m["id"].replace("V2-", ""): m for m in (c.get("v2_plan") or {}).get("milestones", [])}
+    L += ["Accepted weight over total plan weight (V2 baseline plus approved plan).", "",
+          "| Milestone | Phase | Target | Progress | Accepted / total | Share | Plan tasks |", "|---|---|---|---|---|---|---|"]
+    for i in range(9):
+        k = f"M{i}"
+        m = meta.get(k, {})
+        phase = (m.get("phase") or "").split(" ", 1)[-1] if m.get("phase") else ""
+        if k == "M6":
+            L.append(f"| M6 | {phase or 'LAB & ROBOT'} | HOLD | HOLD (excluded) | n/a | n/a | n/a |")
+            continue
+        v = s["by_milestone"].get(k, {"baseline": 0, "accepted": 0, "point": 0, "rows": 0})
+        tot = v["baseline"] + v["point"]
+        L.append(f"| {k} | {phase} | {m.get('target_date') or 'none'} | `{_bar20(v['accepted'], tot)}` | "
+                 f"{v['accepted']} / {tot} | {_share(v['accepted'], tot)} | {v['rows']} |")
+    tot = s["v2_baseline_weight"] + s["point"]
+    L.append(f"| **Total** | | | `{_bar20(s['v2_accepted_weight'], tot)}` | **{s['v2_accepted_weight']} / {tot}** | **{_share(s['v2_accepted_weight'], tot)}** | {s['rows']} |")
+    return L + ["", "Target dates are the owner-approved planning dates; they are not commitments or forecasts.", ""]
+
+
+def repo_table_lines(c):
+    s = c.get("plan_register")
+    L = ["## Repositories", ""]
+    if not s:
+        return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
+    L += ["| Repository | Progress | Accepted / total | Share | Baseline accepted | Plan tasks |", "|---|---|---|---|---|---|"]
+    ra = ra_t = 0
+    for k, v in s["by_repo"].items():
+        tot = v["baseline"] + v["point"]
+        ra += v["accepted"]; ra_t += tot
+        L.append(f"| {k} | `{_bar20(v['accepted'], tot)}` | {v['accepted']} / {tot} | {_share(v['accepted'], tot)} | {v['accepted']} / {v['baseline']} | {v['rows']} |")
+    L.append(f"| **Total** | `{_bar20(ra, ra_t)}` | **{ra} / {ra_t}** | **{_share(ra, ra_t)}** | {s['v2_accepted_weight']} / {s['v2_baseline_weight']} | {s['rows']} |")
+    return L + [""]
+
+
+def attention_lines(c, limit=5):
+    rows = owner_action_rows(c)
+    L = ["## Needs owner attention", ""]
+    if not rows:
+        return L + ["None recorded.", ""]
+    L += ["| # | Item | Why it matters | Owner |", "|---|---|---|---|"]
+    for i, (a, b, o, _r) in enumerate(rows[:limit], 1):
+        L.append(f"| {i} | {a} | {b.replace('|', '/')} | {o} |")
+    more = len(rows) - limit
+    return L + ["", (f"{more} more open item(s) are listed in [STATUS_DETAIL.md](STATUS_DETAIL.md)." if more > 0 else "All open items are shown."), ""]
+
+
+def foundation_lines(c):
+    rows = [r for r in (c.get("milestone_alignment") or []) if r.get("class") == "PRE_V2"]
+    L = ["## PRE_V2 foundation history (separate from V2 progress)", ""]
+    if not rows:
+        return L + ["No PRE_V2 baseline records.", ""]
+    w = sum(r["weight"] for r in rows)
+    a = sum(r["accepted_weight"] for r in rows)
+    parts = _progress_parts(c)
+    tail = f" Together with V2 baseline tasks this is the historical {_fmt(parts[0])}/{_fmt(parts[1])} = {c['progress']['accepted_progress_pct']}% in the baseline file." if parts else ""
+    return L + [f"Foundation work accepted before the V2 plan: {_fmt(a)} / {_fmt(w)} weight (Core R1.0, Community I2-I4 and the program CI task).{tail} "
+                "That figure mixes completed foundation work with a small V2 baseline; it is not V2 completion and is never used as the V2 headline.", ""]
+
+
+def health_lines(c):
+    L = ["## Data health", ""]
+    unv = [w for w in c["warnings"] if UNVERIFIED.match(w)]
+    sf = c.get("source_freshness")
+    L += ["| Check | Value |", "|---|---|",
+          f"| Validation errors | {len(c['errors'])} |",
+          f"| Warnings | {len(c['warnings'])} ({len(unv)} workstreams with no status source) |"]
+    if sf:
+        from collections import Counter
+        L.append("| Source freshness | " + ", ".join(f"{k} {v}" for k, v in sorted(Counter(r["freshness"] for r in sf["rows"]).items())) + " |")
+    L += ["", "Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).", ""]
+    for x in c["errors"]:
+        L.append(f"- ERROR: {x}")
+    return L + ([""] if c["errors"] else [])
+
+
+def detail_extra_lines(c, phases):
+    """Sections moved out of STATUS_VIEW.md; appended to STATUS_DETAIL.md."""
+    return ["", *owner_actions_lines(c), *changes_lines(c), *_pr.view_lines(c), *progress_lines(c), *effort_lines(c), *readiness_lines(c),
+            *plan_lines(c), *milestones_lines(c), *phase_lines(phases), *quality_lines(c)]
+
+
 def render_view_lines(c, phases, measures_table):
-    """measures_table: list of lines for the three-measures table, built by the consolidator."""
-    return [*header_lines(c), *owner_actions_lines(c), *changes_lines(c),
-            "## Measures (never blended)", "", *measures_table, "",
-            *progress_lines(c), *_pr.view_lines(c), *effort_lines(c), *readiness_lines(c), *plan_lines(c), *milestones_lines(c), *phase_lines(phases), *quality_lines(c)]
+    """Executive view. measures_table is kept for the detail file; it is not shown here."""
+    return [*header_lines(c), *headline_lines(c), *milestone_table_lines(c), *repo_table_lines(c),
+            *attention_lines(c), *foundation_lines(c), *health_lines(c)]

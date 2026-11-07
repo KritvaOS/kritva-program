@@ -39,6 +39,11 @@ def doc():
 
 
 def view(c, phases=PHASES):
+    """Executive view plus the sections moved to the detail file."""
+    return "\n".join([*D.render_view_lines(c, phases, ["| m |", "|---|"]), *D.detail_extra_lines(c, phases)])
+
+
+def exec_view(c, phases=PHASES):
     return "\n".join(D.render_view_lines(c, phases, ["| m |", "|---|"]))
 
 
@@ -177,12 +182,18 @@ class Committed(unittest.TestCase):
         self.assertLess(len(self.v.splitlines()), 150)
         self.assertNotIn("mermaid", self.v.lower())
         self.assertEqual(self.v.count("```") % 2, 0)
-        for h in ("## Owner actions and blockers", "## What changed", "## Measures (never blended)",
-                  "## Data quality"):
+        for h in ("## V2 progress at a glance", "## Milestones M0-M8", "## Repositories", "## Needs owner attention",
+                  "## PRE_V2 foundation history (separate from V2 progress)", "## Data health"):
             self.assertIn(h, self.v)
+        for h in ("## What changed", "## Phase order", "## Dated milestones", "## V2 milestone plan"):
+            self.assertNotIn(h, self.v)
+        self.assertIn("V2 approved-plan coverage:", self.v)
+        for m in range(9):
+            self.assertRegex(self.v, rf"\| M{m} \|")
+        self.assertIn("HOLD", self.v)
 
     def test_detail_holds_the_full_tables_and_no_mermaid(self):
-        for h in ("## Summary", "## Workstreams", "## Tasks", "## Gates"):
+        for h in ("## Summary", "## Workstreams", "## Tasks", "## Gates", "## What changed", "## Owner actions and blockers", "## Data quality"):
             self.assertIn(h, self.d)
         self.assertNotIn("mermaid", self.d.lower())
         self.assertIn("STATUS_VIEW.md", self.d)
@@ -203,3 +214,36 @@ class Committed(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ExecutiveView(unittest.TestCase):
+    def plan_doc(self):
+        c = doc()
+        c["plan_register"] = {"rows": 2, "point": 30, "low": 20, "high": 40, "retired_parents": 1, "v2_baseline_weight": 20, "v2_accepted_weight": 10,
+                              "by_milestone": {"M0": {"rows": 1, "point": 10, "low": 5, "high": 15, "baseline": 0, "accepted": 0},
+                                               "M1": {"rows": 1, "point": 20, "low": 15, "high": 25, "baseline": 20, "accepted": 10}},
+                              "by_repo": {"Sense": {"rows": 2, "point": 30, "low": 20, "high": 40, "baseline": 20, "accepted": 10}}}
+        c["milestone_alignment"] = [{"class": "PRE_V2", "weight": 10, "accepted_weight": 9}]
+        return c
+
+    def test_headline_is_v2_plan_coverage_not_the_historical_figure(self):
+        t = exec_view(self.plan_doc())
+        self.assertIn("V2 approved-plan coverage: 20.0%  (10 / 50 weight)", t)
+        self.assertIn("10 / 20 = 50.0%", t)
+        self.assertIn("never used as the V2 headline", t)
+
+    def test_milestone_rows_have_bars_and_m6_hold(self):
+        t = exec_view(self.plan_doc())
+        self.assertRegex(t, r"\| M1 \|[^\n]*\| 10 / 40 \| 25\.0% \| 1 \|")
+        self.assertRegex(t, r"\| M0 \|[^\n]*\| 0 / 10 \| 0\.0% \| 1 \|")
+        self.assertIn("HOLD (excluded)", t)
+
+    def test_attention_is_capped_at_five(self):
+        c = self.plan_doc()
+        c["gates"] = [{"gate_id": f"G{i}", "status": "OPEN", "title": "t", "blocking_effect": ["X"], "owner": "Dinesh"} for i in range(8)]
+        t = D.attention_lines(c)
+        self.assertEqual(sum(1 for l in t if re.match(r"\| \d+ \|", l)), 5)
+        self.assertTrue(any("more open item" in l for l in t))
+
+    def test_missing_register_is_not_verified(self):
+        self.assertIn("NOT_VERIFIED", exec_view(doc()))

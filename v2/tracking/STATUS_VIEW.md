@@ -2,124 +2,77 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-07T09:18:31Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T11:00:00Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
-## Owner actions and blockers
-
-Open items derived from the program records. Owners and due dates appear only where a record holds them. Blocking items from the V2 decision queue ([PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md)) are included; the append-only log [v2/DECISIONS.md](../DECISIONS.md) is not parsed.
-
-| # | Item | Why it matters | Recorded owner | Record |
-|---|---|---|---|---|
-| 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 3 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 4 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
-
-## What changed
-
-Compared with the snapshot generated 2026-11-06T17:51:51Z (recorded 2026-11-06T17:52:33Z). The record is replaced only when a tracked fact changes.
-
-- Accepted progress: 155/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Warnings: 21 -> 22
-
-## Measures (never blended)
-
-| Measure | Value | Scope and basis |
-|---|---|---|
-| Accepted engineering progress | 90.64% (155/171 weight) | Frozen baseline v10: only the 44 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
-| Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
-
-## Accepted engineering progress by workstream
+## V2 progress at a glance
 
 ```text
-155/171 weight  ███████████████████████████░░░  90.64%
+V2 approved-plan coverage: 15.8%  (54 / 342 weight)
+███░░░░░░░░░░░░░░░░░
 ```
 
-| Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |
-|---|---|---|---|
-| COMMUNITY | 71/71 | 100.0% | 21/21 |
-| SENSE | 44/49 | 89.8% | 9/10 |
-| CORE | 30/30 | 100.0% | 9/9 |
-| MOTION | 10/18 | 55.6% | 2/3 |
-| CI_DEV_INFRA | 0/3 | 0.0% | 0/1 |
+- Plan estimate range: 13.3% to 19.3% (total weight 280 to 405).
+- V2 baseline acceptance: 54 / 67 = 80.6% (approved baseline tasks only).
+- Approved plan with no credit yet: 59 tasks, weight 275 [213-338]; 14 retired parents are not counted.
+- Physical validation (V2-M6) is on HOLD and excluded. Mechanical, actuator, enterprise and raas work are outside this view.
 
-Frozen baseline; credit needs a recorded approval and verified CI evidence. Only baselined workstreams are listed. A workstream that is NOT BASELINED has no accepted progress to report; that is not zero progress.
+Credit comes only from baseline tasks with an approval, a completed task and CI evidence. Planning weights are estimates and earn nothing until they are baselined.
 
-## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
+## Milestones M0-M8
 
-Source: [SEVEN_REPO_PLAN_REGISTER.md](../planning/SEVEN_REPO_PLAN_REGISTER.md), recorded as an owner-approved planning record in D-109. Planning weights are estimates, not baseline weights: they earn no credit and are not part of the 155/171 figure above. Each row below keeps the V2 baseline and the approved plan in separate columns.
+Accepted weight over total plan weight (V2 baseline plus approved plan).
 
-V2 baseline weight 67 (54 accepted). Approved plan 59 rows, 275 [213-338] (14 retired parents not counted). Total V2 plan weight 342 [280-405]; provisional accepted share 54/342 = 15.8% [13.3%-19.3%].
+| Milestone | Phase | Target | Progress | Accepted / total | Share | Plan tasks |
+|---|---|---|---|---|---|---|
+| M0 | FOUNDATION | 2026-10-30 | `░░░░░░░░░░░░░░░░░░░░` | 0 / 34 | 0.0% | 10 |
+| M1 | STUDIO | 2026-11-30 | `██████░░░░░░░░░░░░░░` | 10 / 32 | 31.2% | 5 |
+| M2 | BUILD & ARTIFACT | 2027-01-15 | `████░░░░░░░░░░░░░░░░` | 19 / 88 | 21.6% | 12 |
+| M3 | CONTROL PLANE | 2027-03-15 | `░░░░░░░░░░░░░░░░░░░░` | 0 / 48 | 0.0% | 10 |
+| M4 | BOOKING & COMMERCIAL | 2027-04-30 | `░░░░░░░░░░░░░░░░░░░░` | 0 / 18 | 0.0% | 4 |
+| M5 | EXECUTION | 2027-06-15 | `██░░░░░░░░░░░░░░░░░░` | 5 / 54 | 9.3% | 9 |
+| M6 | LAB & ROBOT | HOLD | HOLD (excluded) | n/a | n/a | n/a |
+| M7 | LIVE & RESULTS | 2027-08-15 | `████████░░░░░░░░░░░░` | 9 / 22 | 40.9% | 3 |
+| M8 | PRODUCTION | 2027-09-13 | `█████░░░░░░░░░░░░░░░` | 11 / 46 | 23.9% | 6 |
+| **Total** | | | `███░░░░░░░░░░░░░░░░░` | **54 / 342** | **15.8%** | 59 |
 
-| Milestone | V2 baseline weight | Accepted weight | Plan rows | Plan weight [low-high] | Total plan weight |
+Target dates are the owner-approved planning dates; they are not commitments or forecasts.
+
+## Repositories
+
+| Repository | Progress | Accepted / total | Share | Baseline accepted | Plan tasks |
 |---|---|---|---|---|---|
-| M0 | 0 | 0 | 10 | 34 [24-44] | 34 |
-| M1 | 10 | 10 | 5 | 22 [17-27] | 32 |
-| M2 | 32 | 19 | 12 | 56 [44-68] | 88 |
-| M3 | 0 | 0 | 10 | 48 [37-60] | 48 |
-| M4 | 0 | 0 | 4 | 18 [14-22] | 18 |
-| M5 | 5 | 5 | 9 | 49 [38-60] | 54 |
-| M7 | 9 | 9 | 3 | 13 [10-16] | 22 |
-| M8 | 11 | 11 | 6 | 35 [29-41] | 46 |
-| Total | 67 | 54 | 59 | 275 [213-338] | 342 |
+| Program | `░░░░░░░░░░░░░░░░░░░░` | 0 / 20 | 0.0% | 0 / 0 | 5 |
+| Core | `░░░░░░░░░░░░░░░░░░░░` | 0 / 16 | 0.0% | 0 / 0 | 3 |
+| Community | `░░░░░░░░░░░░░░░░░░░░` | 0 / 139 | 0.0% | 0 / 0 | 31 |
+| Sense | `█████████████████░░░` | 44 / 52 | 84.6% | 44 / 49 | 1 |
+| Mind | `░░░░░░░░░░░░░░░░░░░░` | 0 / 53 | 0.0% | 0 / 0 | 10 |
+| Motion | `██████░░░░░░░░░░░░░░` | 10 / 33 | 30.3% | 10 / 18 | 3 |
+| Skill | `░░░░░░░░░░░░░░░░░░░░` | 0 / 29 | 0.0% | 0 / 0 | 6 |
+| **Total** | `███░░░░░░░░░░░░░░░░░` | **54 / 342** | **15.8%** | 54 / 67 | 59 |
 
-| Repository | Plan rows | Plan weight [low-high] |
-|---|---|---|
-| Program | 5 | 20 [15-25] |
-| Core | 3 | 16 [13-19] |
-| Community | 31 | 139 [108-170] |
-| Sense | 1 | 3 [2-4] |
-| Mind | 10 | 53 [41-65] |
-| Motion | 3 | 15 [12-18] |
-| Skill | 6 | 29 [22-37] |
-| Total | 59 | 275 [213-338] |
+## Needs owner attention
 
-V2-M6 (physical validation) is on HOLD and excluded. Mechanical, actuator, kritva-enterprise_program and kritva-raas work are outside this plan.
+| # | Item | Why it matters | Owner |
+|---|---|---|---|
+| 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh |
+| 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh |
+| 3 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh |
+| 4 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED |
 
-## V2 milestone plan (proposed; not the baseline)
+All open items are shown.
 
-Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-044). Phase dates are owner-approved planning dates (D-076, PD-001); they were not derived from a recorded capacity. P6 LAB & ROBOT is on HOLD and has no date. This plan adds no tasks, weights or credit and does not change accepted progress.
+## PRE_V2 foundation history (separate from V2 progress)
 
-| Milestone | Phase | Target | Schedule status | Closed |
-|---|---|---|---|---|
-| V2-M0 | P0 FOUNDATION | 2026-10-30 | APPROVED | no |
-| V2-M1 | P1 STUDIO | 2026-11-30 | APPROVED | no |
-| V2-M2 | P2 BUILD & ARTIFACT | 2027-01-15 | APPROVED | no |
-| V2-M3 | P3 CONTROL PLANE | 2027-03-15 | APPROVED | no |
-| V2-M4 | P4 BOOKING & COMMERCIAL | 2027-04-30 | APPROVED | no |
-| V2-M5 | P5 EXECUTION | 2027-06-15 | APPROVED | no |
-| V2-M6 | P6 LAB & ROBOT | NO DATE (HOLD) | HOLD | no |
-| V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | no |
-| V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | no |
+Foundation work accepted before the V2 plan: 101 / 104 weight (Core R1.0, Community I2-I4 and the program CI task). Together with V2 baseline tasks this is the historical 155/171 = 90.64% in the baseline file. That figure mixes completed foundation work with a small V2 baseline; it is not V2 completion and is never used as the V2 headline.
 
-Pending: 6 decisions (3 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+## Data health
 
-## Dated milestones (approved dates only)
-
-NOT_VERIFIED: dates come from the readiness record, which is missing.
-
-## Phase order (dates not approved)
-
-P0 FOUNDATION > P1 STUDIO > P2 BUILD & ARTIFACT > P3 CONTROL PLANE > P4 BOOKING & COMMERCIAL > P5 EXECUTION > P6 LAB & ROBOT > P7 LIVE & RESULTS > P8 PRODUCTION
-
-Order only. Start and end dates, durations and percent complete are TBD in [v2/ROADMAP.md](../ROADMAP.md); none are inferred here.
-
-## Data quality
-
-| Measure | Value |
+| Check | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 22 |
-| Workstreams registered / baselined | 24 / 5 |
-| Workstreams with no status source (UNVERIFIED) | 19 |
+| Warnings | 22 (19 workstreams with no status source) |
 | Source freshness | FETCH_FAILED 1, FRESH 4 |
 
-No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, NEXUS_EDGE, SDK, SIM, SKILL, STUDIO.
-
-Other warnings:
-
-- CI_DEV_INFRA: status is 20 days old
-- KOS-MOTION-003: not reported by MOTION (no credit)
-- KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)
+Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).
