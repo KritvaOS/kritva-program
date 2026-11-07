@@ -50,6 +50,7 @@ import readiness  # noqa: E402  (display-only; never read by compute())
 import planning  # noqa: E402  (display-only; never read by compute())
 import dashboard  # noqa: E402  (display-only; never read by compute())
 import plan_register  # noqa: E402  (display-only; never read by compute())
+import sequence_check  # noqa: E402  (validation only; never read by compute())
 
 REPORT_ENUMS = {
     "execution": {"NOT_STARTED", "IN_PROGRESS", "BLOCKED", "COMPLETE"},
@@ -1183,6 +1184,12 @@ def main():
         c["errors"] = sorted(errors)
         if not perrs2:
             c["plan_register"] = plan_register.summary(prows, c, ptext)
+    if c.get("v2_plan"):
+        srows, serrs = sequence_check.check(root, c)
+        c["sequence"] = srows
+        if serrs:
+            errors += serrs
+            c["errors"] = sorted(errors)
     prev_c = None
     if prev_out.exists():
         try:

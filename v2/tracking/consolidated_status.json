@@ -266,7 +266,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T15:00:00Z",
+  "generated_at": "2026-11-07T17:00:00Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 44,
@@ -1748,6 +1748,112 @@
     "basis": "155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
+  "sequence": [
+    {
+      "depends_on": [],
+      "milestone": "M0",
+      "open_predecessors": [],
+      "started": false,
+      "status": "OK",
+      "waiver": []
+    },
+    {
+      "depends_on": [
+        "M0"
+      ],
+      "milestone": "M1",
+      "open_predecessors": [
+        "M0"
+      ],
+      "started": true,
+      "status": "WAIVED",
+      "waiver": [
+        "D-112"
+      ]
+    },
+    {
+      "depends_on": [
+        "M1"
+      ],
+      "milestone": "M2",
+      "open_predecessors": [
+        "M1"
+      ],
+      "started": true,
+      "status": "WAIVED",
+      "waiver": [
+        "D-112"
+      ]
+    },
+    {
+      "depends_on": [
+        "M2"
+      ],
+      "milestone": "M3",
+      "open_predecessors": [
+        "M2"
+      ],
+      "started": false,
+      "status": "OK",
+      "waiver": []
+    },
+    {
+      "depends_on": [
+        "M3"
+      ],
+      "milestone": "M4",
+      "open_predecessors": [
+        "M3"
+      ],
+      "started": false,
+      "status": "OK",
+      "waiver": []
+    },
+    {
+      "depends_on": [
+        "M3"
+      ],
+      "milestone": "M5",
+      "open_predecessors": [
+        "M3"
+      ],
+      "started": true,
+      "status": "WAIVED",
+      "waiver": [
+        "D-112"
+      ]
+    },
+    {
+      "depends_on": [
+        "M4",
+        "M5"
+      ],
+      "milestone": "M7",
+      "open_predecessors": [
+        "M4",
+        "M5"
+      ],
+      "started": true,
+      "status": "WAIVED",
+      "waiver": [
+        "D-112"
+      ]
+    },
+    {
+      "depends_on": [
+        "M7"
+      ],
+      "milestone": "M8",
+      "open_predecessors": [
+        "M7"
+      ],
+      "started": true,
+      "status": "WAIVED",
+      "waiver": [
+        "D-112"
+      ]
+    }
+  ],
   "source_freshness": {
     "rows": [
       {
@@ -1817,7 +1923,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 21,
+        "age_hours": 23,
         "ahead_by": 6,
         "changed_files": [
           "Makefile",
@@ -1836,7 +1942,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 21,
+        "age_hours": 23,
         "ahead_by": 4,
         "changed_files": [
           "planning/MILESTONE.md",
@@ -1854,7 +1960,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 21,
+        "age_hours": 23,
         "ahead_by": 6,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -1883,7 +1989,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 21,
+        "age_hours": 23,
         "ahead_by": 92,
         "changed_files": [
           ".github/kritva-gate.json",
