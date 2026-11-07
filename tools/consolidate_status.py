@@ -803,7 +803,7 @@ def measures_table(c):
     return ["| Measure | Value | Scope and basis |", "|---|---|---|",
             f"| Accepted engineering progress | {'N/A' if pct is None else str(pct) + '%'} ({c['progress']['basis'].split(' (')[0]}) | "
             f"Frozen baseline v{c['baseline_version']}: only the {len(c['tasks'])} baselined tasks (Core R1.0 and Community I2-I4). "
-            "Approval- and CI-evidence-credited. This is not V2 product completion |",
+            "Approval- and CI-evidence-credited. Baselined tasks only; the whole-program figure including approved plan scope is in STATUS_VIEW.md |",
             f"| Program phase (P0-P8) | {ps['current_phase'] if ps and ps['current_phase'] else 'unavailable'} | "
             + (f"Manual status in {ps['source']}, as of {ps['as_of']}; it may lag this report and is not derived from the engineering baseline |"
                if ps else "no program status file |")]
