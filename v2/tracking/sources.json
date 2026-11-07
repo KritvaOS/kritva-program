@@ -27,6 +27,16 @@
       "workstream_id": "MOTION",
       "repo": "KritvaOS/kritva-motion",
       "ref": "main"
+    },
+    {
+      "workstream_id": "MIND",
+      "repo": "KritvaOS/kritva-mind",
+      "ref": "main"
+    },
+    {
+      "workstream_id": "SKILL",
+      "repo": "KritvaOS/kritva-skill",
+      "ref": "main"
     }
   ],
   "require_run_verification": true

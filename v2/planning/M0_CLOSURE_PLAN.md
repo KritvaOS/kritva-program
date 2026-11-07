@@ -5,7 +5,7 @@
 ## How M0 closes
 
 1. Every item that blocks V2-M0 is resolved: reviews REV-001 to REV-007 (all `blocks: V2-M0`; approved by D-114) (PD-015, the Core engineering contract, is decided: D-113).
-2. The V2-M0 items in scope but not blocking are settled or consciously deferred: PD-014 (register Mind, Sense, Skill and Motion on their workstreams), PD-017 (test the Community security mailbox), PD-009 (status schema ownership).
+2. The V2-M0 items in scope but not blocking are settled or consciously deferred: PD-014 (register Mind, Sense, Skill and Motion on their workstreams; decided, D-116), PD-017 (test the Community security mailbox), PD-009 (status schema ownership; decided, D-116).
 3. An approved `COMPLETION_RECORD.md` for V2-M0 exists and `closure_record` is set in `v2/planning/milestones.json`. Only then does the status view show M0 as closed, and the sequencing check (D-112) stops treating M1 and later as starting early.
 
 Closing M0 does not award weighted credit. The 10 M0 plan tasks (34 weight, see [M0_TASK_DEFINITIONS.md](M0_TASK_DEFINITIONS.md)) earn credit only after they are baselined, completed, approved and backed by CI evidence. The reviews above are the natural acceptance evidence for those tasks, so baselining the M0 tasks before the reviews are recorded lets closure and credit line up.

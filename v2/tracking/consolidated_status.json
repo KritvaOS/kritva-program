@@ -161,10 +161,11 @@
   },
   "changes": {
     "items": [
-      "Pending reviews: 7 -> 0"
+      "Warnings: 22 -> 20",
+      "Pending decisions: 5 -> 3"
     ],
-    "recorded_at": "2026-11-07T15:49:02Z",
-    "since": "2026-11-07T15:43:43Z"
+    "recorded_at": "2026-11-07T16:55:49Z",
+    "since": "2026-11-07T15:58:13Z"
   },
   "errors": [],
   "evidence_health": [
@@ -265,7 +266,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T15:58:13Z",
+  "generated_at": "2026-11-07T16:55:49Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 44,
@@ -1922,16 +1923,17 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 22,
-        "ahead_by": 6,
+        "age_hours": 0,
+        "ahead_by": 8,
         "changed_files": [
           "Makefile",
           "planning/MILESTONE.md",
+          "planning/PD-017-SECURITY-MAILBOX-TEST.md",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-06T17:51:34Z",
-        "fetched_head": "a4d4fbfaaddb684bae971f2081f5ca5f678d9be5",
+        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_head": "bd9d84c4f5ec471418338499c34df38f95e56332",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -1941,15 +1943,20 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 22,
-        "ahead_by": 4,
+        "age_hours": 0,
+        "ahead_by": 8,
         "changed_files": [
+          ".github/workflows/contract-pin-check.yml",
+          "docs/development/ENGINEERING_CONTRACT.md",
+          "docs/development/ENGINEERING_CONTRACT.pin.json",
           "planning/MILESTONE.md",
+          "scripts/contract/check_contract_pin.py",
+          "scripts/contract/test_check_contract_pin.py",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-06T17:51:34Z",
-        "fetched_head": "9fe6aa65303cae1bfe8a9d428f0dc0b32e649073",
+        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_head": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -1959,10 +1966,31 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 22,
-        "ahead_by": 6,
+        "age_hours": 0,
+        "ahead_by": 2,
+        "changed_files": [
+          "status/README.md",
+          "status/status.json",
+          "status/status.schema.json",
+          "status/status.schema.json.sha256"
+        ],
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_head": "30b0e22669602beb177e7eddcf0fbca1a29fb697",
+        "freshness": "FRESH",
+        "gap_kind": "STATUS_ONLY",
+        "relation": "AHEAD",
+        "repo": "KritvaOS/kritva-mind",
+        "report_source_commit": "3083512cb116b57bed92aa4e016a66f7a3189089",
+        "status_only": true,
+        "workstream_id": "MIND"
+      },
+      {
+        "age_hours": 0,
+        "ahead_by": 14,
         "changed_files": [
           ".github/kritva-gate.json",
+          "ACCEPTANCE_CRITERIA.md",
           "AGENTS.md",
           "COMPLETION_RECORD.md",
           "CONTRIBUTING.md",
@@ -1973,12 +2001,17 @@
           "planning/CHANGELOG.md",
           "planning/MILESTONE.md",
           "planning/MILESTONE_STATUS.md",
+          "planning/TASKS.md",
+          "planning/reviews/REV-005-GOVERNANCE-BASELINE.md",
           "status/status.json",
-          "tasks/KOS-MOTION-002/TASK.md"
+          "tasks/KOS-MOTION-002/TASK.md",
+          "tasks/KOS-MOTION-003/ID_MATRIX.md",
+          "tasks/KOS-MOTION-003/LIFECYCLE.md",
+          "tasks/KOS-MOTION-003/TASK.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-06T17:51:34Z",
-        "fetched_head": "cc4503f0b43a3c4e43ed69daf8b557806c28d377",
+        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_head": "84e4678c23a182bcf8bb36f5ba821ce0e928afca",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -1988,8 +2021,8 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 22,
-        "ahead_by": 92,
+        "age_hours": 0,
+        "ahead_by": 101,
         "changed_files": [
           ".github/kritva-gate.json",
           ".github/workflows/commit-message-check.yml",
@@ -2013,6 +2046,7 @@
           "planning/CHANGELOG.md",
           "planning/MILESTONE_STATUS.md",
           "planning/TASKS.md",
+          "planning/reviews/REV-004-GOVERNANCE-BASELINE.md",
           "pyproject.toml",
           "release/build-requirements.txt",
           "release/normalise_sdist.py",
@@ -2039,12 +2073,11 @@
           "tasks/KOS-SENSE-006/TASK.md",
           "tasks/KOS-SENSE-007/ACCEPTANCE_CRITERIA.md",
           "tasks/KOS-SENSE-007/TASK.md",
-          "tasks/KOS-SENSE-008/ACCEPTANCE_CRITERIA.md",
-          "tasks/KOS-SENSE-008/SECURITY_REVIEW.md"
+          "tasks/KOS-SENSE-008/ACCEPTANCE_CRITERIA.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-06T17:51:34Z",
-        "fetched_head": "a7bdaaa1a2b29547f1e048b7354407c56d96effc",
+        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_head": "39196bb8f1840aeb6ba7af51471de1b63f658f3c",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -2052,6 +2085,26 @@
         "report_source_commit": "07c48d5398bea19e58f7bd4c7a5af55041b28df5",
         "status_only": false,
         "workstream_id": "SENSE"
+      },
+      {
+        "age_hours": 0,
+        "ahead_by": 2,
+        "changed_files": [
+          "status/README.md",
+          "status/status.json",
+          "status/status.schema.json",
+          "status/status.schema.json.sha256"
+        ],
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_head": "86703637bf6ad17d1d95521033e36142a82c581c",
+        "freshness": "FRESH",
+        "gap_kind": "STATUS_ONLY",
+        "relation": "AHEAD",
+        "repo": "KritvaOS/kritva-skill",
+        "report_source_commit": "557f19bc21de867f03bef8c867ac599ec17d0693",
+        "status_only": true,
+        "workstream_id": "SKILL"
       }
     ],
     "stale_hours": 72,
@@ -2109,12 +2162,12 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 5,
+    "pending_decisions": 3,
     "pending_reviews": 0,
     "progress": "155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 90.64,
     "readiness": {},
-    "warnings": 22
+    "warnings": 20
   },
   "tasks": [
     {
@@ -3296,11 +3349,11 @@
       "evidence_run": null,
       "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": "NOT_STARTED",
+      "execution": "IN_PROGRESS",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M2-SENSE-001",
       "phase": null,
-      "readiness": "PLANNABLE",
+      "readiness": "IMPLEMENTABLE",
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -3400,7 +3453,7 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 5,
+    "pending_decisions": 3,
     "pending_reviews": 0,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
@@ -3423,11 +3476,9 @@
     "KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
-    "MIND: no status source (UNVERIFIED)",
     "NEXUS_EDGE: no status source (UNVERIFIED)",
     "SDK: no status source (UNVERIFIED)",
     "SIM: no status source (UNVERIFIED)",
-    "SKILL: no status source (UNVERIFIED)",
     "STUDIO: no status source (UNVERIFIED)"
   ],
   "workstreams": [
@@ -3544,10 +3595,10 @@
       "tasks_reported": 0
     },
     {
-      "commit": "-------",
+      "commit": "3083512cb116b57bed92aa4e016a66f7a3189089",
       "id": "MIND",
-      "repo": null,
-      "source_state": "UNVERIFIED",
+      "repo": "KritvaOS/kritva-mind",
+      "source_state": "OK",
       "tasks_reported": 0
     },
     {
@@ -3586,10 +3637,10 @@
       "tasks_reported": 0
     },
     {
-      "commit": "-------",
+      "commit": "557f19bc21de867f03bef8c867ac599ec17d0693",
       "id": "SKILL",
-      "repo": null,
-      "source_state": "UNVERIFIED",
+      "repo": "KritvaOS/kritva-skill",
+      "source_state": "OK",
       "tasks_reported": 0
     },
     {

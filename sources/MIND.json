@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0",
+  "workstream_id": "MIND",
+  "repo": "KritvaOS/kritva-mind",
+  "source": {
+    "branch": "main",
+    "commit": "3083512cb116b57bed92aa4e016a66f7a3189089",
+    "tag": null
+  },
+  "tasks": [],
+  "updated_at": "2026-11-07T16:47:00+00:00"
+}

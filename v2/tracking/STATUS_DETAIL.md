@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-07T15:58:13Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-07T16:55:49Z (freshness of sources is judged at this time)
 - Baseline version: 10 (APPROVED)
 - Accepted engineering progress: 90.64% (155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 41/44 tasks (repo-reported; not acceptance)
@@ -29,15 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-07T15:58:13Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-07T16:55:49Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
 | CI_DEV_INFRA | FETCH_FAILED | 2026-10-26T16:23:10Z | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
-| COMMUNITY | FRESH | 2026-11-06T17:51:34Z (22h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
-| CORE | FRESH | 2026-11-06T17:51:34Z (22h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
-| MOTION | FRESH | 2026-11-06T17:51:34Z (22h ago) | cc4503f | d76dbdf | 6 commit(s) | OTHER FILES (review): .github/kritva-gate.json, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md, Claude outputs/PASTE.txt |
-| SENSE | FRESH | 2026-11-06T17:51:34Z (22h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
+| COMMUNITY | FRESH | 2026-11-07T16:55:25Z (0h ago) | bd9d84c | 27ed961 | 8 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, planning/PD-017-SECURITY-MAILBOX-TEST.md, status/status.json |
+| CORE | FRESH | 2026-11-07T16:55:25Z (0h ago) | 7132431 | 969d615 | 8 commit(s) | OTHER FILES (review): .github/workflows/contract-pin-check.yml, docs/development/ENGINEERING_CONTRACT.md, docs/development/ENGINEERING_CONTRACT.pin.json, planning/MILESTONE.md, scripts/contract/check_contract_pin.py |
+| MIND | FRESH | 2026-11-07T16:55:25Z (0h ago) | 30b0e22 | 3083512 | 2 commit(s) | STATUS_ONLY |
+| MOTION | FRESH | 2026-11-07T16:55:25Z (0h ago) | 84e4678 | d76dbdf | 14 commit(s) | OTHER FILES (review): .github/kritva-gate.json, ACCEPTANCE_CRITERIA.md, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md |
+| SENSE | FRESH | 2026-11-07T16:55:25Z (0h ago) | 39196bb | 07c48d5 | 101 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
+| SKILL | FRESH | 2026-11-07T16:55:25Z (0h ago) | 8670363 | 557f19b | 2 commit(s) | STATUS_ONLY |
 
 ## Workstreams
 
@@ -61,13 +63,13 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | INTEGRATION_SOFTWARE_VALIDATION | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MANUFACTURING_FLEET | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MECHANICAL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| MIND | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| MIND | KritvaOS/kritva-mind | NOT BASELINED | OK | 0 | 3083512 |
 | MOTION | KritvaOS/kritva-motion | BASELINED (3 tasks) | OK | 2 | d76dbdf |
 | NEXUS_EDGE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SDK | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SENSE | KritvaOS/kritva-sense | BASELINED (10 tasks) | OK | 10 | 07c48d5 |
 | SIM | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| SKILL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
+| SKILL | KritvaOS/kritva-skill | NOT BASELINED | OK | 0 | 557f19b |
 | STUDIO | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 
 ## Rollup by phase (P0-P8)
@@ -205,7 +207,7 @@ Rows: PRE_V2 5, V2_REPO 39.
 | KOS-SENSE-007 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: 5f1aa7a (task f068ecd), run 41292919590 | yes | weight 5 x approval A336 (PASS, APPROVED) on commit 5f1aa7a with PASS evidence |
 | KOS-SENSE-008 | SENSE | 6 | COMPLETE | PASS | yes | MILESTONE: a8dfb5a (task 80237dd), run 41298259048 | yes | weight 6 x approval A337 (PASS, APPROVED) on commit a8dfb5a with PASS evidence |
 | KOS-SENSE-009 | SENSE | 6 | COMPLETE | PASS | yes | MILESTONE: 55191ab (task 8e8fe8f), run 41761323273 | yes | weight 6 x approval A338 (PASS, APPROVED) on commit 55191ab with PASS evidence |
-| KOS-SENSE-010 | SENSE | 5 | NOT_STARTED | NOT_RUN | no | - | - | no central approval recorded |
+| KOS-SENSE-010 | SENSE | 5 | IN_PROGRESS | NOT_RUN | no | - | - | no central approval recorded |
 | KRP-ENG-001 | CI_DEV_INFRA | 3 | - | NOT_RUN | no | - | - | no current report from the owning workstream |
 
 ## Gates
@@ -245,11 +247,9 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 - KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)
 - MANUFACTURING_FLEET: no status source (UNVERIFIED)
 - MECHANICAL: no status source (UNVERIFIED)
-- MIND: no status source (UNVERIFIED)
 - NEXUS_EDGE: no status source (UNVERIFIED)
 - SDK: no status source (UNVERIFIED)
 - SIM: no status source (UNVERIFIED)
-- SKILL: no status source (UNVERIFIED)
 - STUDIO: no status source (UNVERIFIED)
 
 ## Measures (never blended)
@@ -337,9 +337,10 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-07T15:43:43Z (recorded 2026-11-07T15:49:02Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-07T15:58:13Z (recorded 2026-11-07T16:55:49Z). The record is replaced only when a tracked fact changes.
 
-- Pending reviews: 7 -> 0
+- Warnings: 22 -> 20
+- Pending decisions: 5 -> 3
 
 ## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
 
@@ -404,7 +405,7 @@ Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-0
 | V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | no |
 | V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | no |
 
-Pending: 5 decisions (2 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 3 decisions (2 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 
@@ -421,12 +422,12 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Measure | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 22 |
+| Warnings | 20 |
 | Workstreams registered / baselined | 24 / 5 |
-| Workstreams with no status source (UNVERIFIED) | 19 |
-| Source freshness | FETCH_FAILED 1, FRESH 4 |
+| Workstreams with no status source (UNVERIFIED) | 17 |
+| Source freshness | FETCH_FAILED 1, FRESH 6 |
 
-No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, NEXUS_EDGE, SDK, SIM, SKILL, STUDIO.
+No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, NEXUS_EDGE, SDK, SIM, STUDIO.
 
 Other warnings:
 

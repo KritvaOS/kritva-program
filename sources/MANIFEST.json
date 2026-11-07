@@ -59,7 +59,7 @@
       "fetched_at": "2026-10-26T16:23:10Z",
       "fetched_head": "03b9c3f584398b84f70a0ab6c3495e77820d6f48",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-06T17:51:34Z",
+      "last_attempt_at": "2026-11-07T16:55:25Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-program",
@@ -70,17 +70,18 @@
       "tasks": 1
     },
     "COMMUNITY": {
-      "ahead_by": 6,
+      "ahead_by": 8,
       "changed_files": [
         "Makefile",
         "planning/MILESTONE.md",
+        "planning/PD-017-SECURITY-MAILBOX-TEST.md",
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-06T17:51:34Z",
-      "fetched_head": "a4d4fbfaaddb684bae971f2081f5ca5f678d9be5",
+      "fetched_at": "2026-11-07T16:55:25Z",
+      "fetched_head": "bd9d84c4f5ec471418338499c34df38f95e56332",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-06T17:51:34Z",
+      "last_attempt_at": "2026-11-07T16:55:25Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritvaos-community",
@@ -91,16 +92,21 @@
       "tasks": 21
     },
     "CORE": {
-      "ahead_by": 4,
+      "ahead_by": 8,
       "changed_files": [
+        ".github/workflows/contract-pin-check.yml",
+        "docs/development/ENGINEERING_CONTRACT.md",
+        "docs/development/ENGINEERING_CONTRACT.pin.json",
         "planning/MILESTONE.md",
+        "scripts/contract/check_contract_pin.py",
+        "scripts/contract/test_check_contract_pin.py",
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-06T17:51:34Z",
-      "fetched_head": "9fe6aa65303cae1bfe8a9d428f0dc0b32e649073",
+      "fetched_at": "2026-11-07T16:55:25Z",
+      "fetched_head": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-06T17:51:34Z",
+      "last_attempt_at": "2026-11-07T16:55:25Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-core",
@@ -110,10 +116,33 @@
       "status_only": false,
       "tasks": 9
     },
+    "MIND": {
+      "ahead_by": 2,
+      "changed_files": [
+        "status/README.md",
+        "status/status.json",
+        "status/status.schema.json",
+        "status/status.schema.json.sha256"
+      ],
+      "changed_files_truncated": false,
+      "fetched_at": "2026-11-07T16:55:25Z",
+      "fetched_head": "30b0e22669602beb177e7eddcf0fbca1a29fb697",
+      "gap_kind": "STATUS_ONLY",
+      "last_attempt_at": "2026-11-07T16:55:25Z",
+      "ref": "main",
+      "relation": "AHEAD",
+      "repo": "KritvaOS/kritva-mind",
+      "report_source_commit": "3083512cb116b57bed92aa4e016a66f7a3189089",
+      "report_updated_at": "2026-11-07T16:47:00+00:00",
+      "state": "FETCHED",
+      "status_only": true,
+      "tasks": 0
+    },
     "MOTION": {
-      "ahead_by": 6,
+      "ahead_by": 14,
       "changed_files": [
         ".github/kritva-gate.json",
+        "ACCEPTANCE_CRITERIA.md",
         "AGENTS.md",
         "COMPLETION_RECORD.md",
         "CONTRIBUTING.md",
@@ -124,14 +153,19 @@
         "planning/CHANGELOG.md",
         "planning/MILESTONE.md",
         "planning/MILESTONE_STATUS.md",
+        "planning/TASKS.md",
+        "planning/reviews/REV-005-GOVERNANCE-BASELINE.md",
         "status/status.json",
-        "tasks/KOS-MOTION-002/TASK.md"
+        "tasks/KOS-MOTION-002/TASK.md",
+        "tasks/KOS-MOTION-003/ID_MATRIX.md",
+        "tasks/KOS-MOTION-003/LIFECYCLE.md",
+        "tasks/KOS-MOTION-003/TASK.md"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-06T17:51:34Z",
-      "fetched_head": "cc4503f0b43a3c4e43ed69daf8b557806c28d377",
+      "fetched_at": "2026-11-07T16:55:25Z",
+      "fetched_head": "84e4678c23a182bcf8bb36f5ba821ce0e928afca",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-06T17:51:34Z",
+      "last_attempt_at": "2026-11-07T16:55:25Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-motion",
@@ -142,7 +176,7 @@
       "tasks": 2
     },
     "SENSE": {
-      "ahead_by": 92,
+      "ahead_by": 101,
       "changed_files": [
         ".github/kritva-gate.json",
         ".github/workflows/commit-message-check.yml",
@@ -166,6 +200,7 @@
         "planning/CHANGELOG.md",
         "planning/MILESTONE_STATUS.md",
         "planning/TASKS.md",
+        "planning/reviews/REV-004-GOVERNANCE-BASELINE.md",
         "pyproject.toml",
         "release/build-requirements.txt",
         "release/normalise_sdist.py",
@@ -192,22 +227,43 @@
         "tasks/KOS-SENSE-006/TASK.md",
         "tasks/KOS-SENSE-007/ACCEPTANCE_CRITERIA.md",
         "tasks/KOS-SENSE-007/TASK.md",
-        "tasks/KOS-SENSE-008/ACCEPTANCE_CRITERIA.md",
-        "tasks/KOS-SENSE-008/SECURITY_REVIEW.md"
+        "tasks/KOS-SENSE-008/ACCEPTANCE_CRITERIA.md"
       ],
       "changed_files_truncated": true,
-      "fetched_at": "2026-11-06T17:51:34Z",
-      "fetched_head": "a7bdaaa1a2b29547f1e048b7354407c56d96effc",
+      "fetched_at": "2026-11-07T16:55:25Z",
+      "fetched_head": "39196bb8f1840aeb6ba7af51471de1b63f658f3c",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-06T17:51:34Z",
+      "last_attempt_at": "2026-11-07T16:55:25Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-sense",
       "report_source_commit": "07c48d5398bea19e58f7bd4c7a5af55041b28df5",
-      "report_updated_at": "2026-11-04T06:00:00Z",
+      "report_updated_at": "2026-11-05T06:00:00Z",
       "state": "FETCHED",
       "status_only": false,
       "tasks": 10
+    },
+    "SKILL": {
+      "ahead_by": 2,
+      "changed_files": [
+        "status/README.md",
+        "status/status.json",
+        "status/status.schema.json",
+        "status/status.schema.json.sha256"
+      ],
+      "changed_files_truncated": false,
+      "fetched_at": "2026-11-07T16:55:25Z",
+      "fetched_head": "86703637bf6ad17d1d95521033e36142a82c581c",
+      "gap_kind": "STATUS_ONLY",
+      "last_attempt_at": "2026-11-07T16:55:25Z",
+      "ref": "main",
+      "relation": "AHEAD",
+      "repo": "KritvaOS/kritva-skill",
+      "report_source_commit": "557f19bc21de867f03bef8c867ac599ec17d0693",
+      "report_updated_at": "2026-11-07T16:47:00+00:00",
+      "state": "FETCHED",
+      "status_only": true,
+      "tasks": 0
     }
   },
   "stale_hours": 72,
