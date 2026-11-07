@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-07T18:00:00Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-07T15:39:59Z (freshness of sources is judged at this time)
 - Baseline version: 10 (APPROVED)
 - Accepted engineering progress: 90.64% (155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 41/44 tasks (repo-reported; not acceptance)
@@ -29,15 +29,15 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-07T18:00:00Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-07T15:39:59Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
 | CI_DEV_INFRA | FETCH_FAILED | 2026-10-26T16:23:10Z | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
-| COMMUNITY | WARN | 2026-11-06T17:51:34Z (24h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
-| CORE | WARN | 2026-11-06T17:51:34Z (24h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
-| MOTION | WARN | 2026-11-06T17:51:34Z (24h ago) | cc4503f | d76dbdf | 6 commit(s) | OTHER FILES (review): .github/kritva-gate.json, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md, Claude outputs/PASTE.txt |
-| SENSE | WARN | 2026-11-06T17:51:34Z (24h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
+| COMMUNITY | FRESH | 2026-11-06T17:51:34Z (21h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
+| CORE | FRESH | 2026-11-06T17:51:34Z (21h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
+| MOTION | FRESH | 2026-11-06T17:51:34Z (21h ago) | cc4503f | d76dbdf | 6 commit(s) | OTHER FILES (review): .github/kritva-gate.json, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md, Claude outputs/PASTE.txt |
+| SENSE | FRESH | 2026-11-06T17:51:34Z (21h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
 
 ## Workstreams
 
@@ -270,7 +270,7 @@ Approved plan rows (no credit). Weights are planning estimates. Status is the ex
 | M0 | Program | PROPOSED-NEW-PROGRAM-003 | Program register and planning controls | 4 | NOT_STARTED |
 | M0 | Program | PROPOSED-NEW-PROGRAM-004 | Program approval and decision records | 3 | NOT_STARTED |
 | M0 | Program | PROPOSED-NEW-PROGRAM-005 | Program validation and governance checks | 3 | NOT_STARTED |
-| M0 | Core | PROPOSED-NEW-CORE-001 | Core engineering contract and version pin | 5 | BLOCKED (PD-015) |
+| M0 | Core | PROPOSED-NEW-CORE-001 | Core engineering contract and version pin | 5 | IN_PROGRESS |
 | M0 | Community | PROPOSED-NEW-COMMUNITY-001 | Security reporting path and mailbox verification | 2 | NOT_STARTED |
 | M0 | Sense | PROPOSED-NEW-SENSE-001 | Sense governance and acceptance review | 3 | NOT_STARTED |
 | M0 | Mind | PROPOSED-NEW-MIND-GOV-001 | Mind governance and acceptance review | 3 | NOT_STARTED |
@@ -334,15 +334,13 @@ Open items derived from the program records. Owners and due dates appear only wh
 |---|---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
 | 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 3 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 4 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
+| 3 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED | v2/planning/PENDING_REVIEWS.md |
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-06T17:51:51Z (recorded 2026-11-06T17:52:33Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-07T18:00:00Z (recorded 2026-11-07T15:39:59Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 155/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Warnings: 21 -> 22
+- Pending decisions: 6 -> 5
 
 ## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
 
@@ -407,7 +405,7 @@ Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-0
 | V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | no |
 | V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | no |
 
-Pending: 6 decisions (3 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 5 decisions (2 blocking) and 7 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 
@@ -427,7 +425,7 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Warnings | 22 |
 | Workstreams registered / baselined | 24 / 5 |
 | Workstreams with no status source (UNVERIFIED) | 19 |
-| Source freshness | FETCH_FAILED 1, WARN 4 |
+| Source freshness | FETCH_FAILED 1, FRESH 4 |
 
 No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, MIND, NEXUS_EDGE, SDK, SIM, SKILL, STUDIO.
 

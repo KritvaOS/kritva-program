@@ -18,7 +18,7 @@ Common to every task: owner Dinesh; initial status as recorded in the register; 
 | Program | PROPOSED-NEW-PROGRAM-003 | Program register and planning controls | 4 | NOT_STARTED | none recorded |
 | Program | PROPOSED-NEW-PROGRAM-004 | Program approval and decision records | 3 | NOT_STARTED | none recorded |
 | Program | PROPOSED-NEW-PROGRAM-005 | Program validation and governance checks | 3 | NOT_STARTED | none recorded |
-| Core | PROPOSED-NEW-CORE-001 | Core engineering contract and version pin | 5 | BLOCKED (PD-015) | PD-015 owner decision |
+| Core | PROPOSED-NEW-CORE-001 | Core engineering contract and version pin | 5 | IN_PROGRESS | PD-015 decided (D-113); contract merged and pinned; waits for baseline v11, approval and CI evidence |
 | Community | PROPOSED-NEW-COMMUNITY-001 | Security reporting path and mailbox verification | 2 | NOT_STARTED | none recorded |
 | Sense | PROPOSED-NEW-SENSE-001 | Sense governance and acceptance review | 3 | NOT_STARTED | none recorded |
 | Mind | PROPOSED-NEW-MIND-GOV-001 | Mind governance and acceptance review | 3 | NOT_STARTED | none recorded |
@@ -37,7 +37,7 @@ Common to every task: owner Dinesh; initial status as recorded in the register; 
 
 ### Core (kritva-core), V2-M0-CORE-001: engineering contract approved and pinned; contract_pin check closed
 
-- PROPOSED-NEW-CORE-001 (5): after the owner decides PD-015, the Core engineering contract is drafted and approved; a pin file records the contract's exact commit SHA and SHA-256; a CI check fails when the pin and the contract differ; the readiness check `contract_pin` passes (exit condition 3). Blocked until PD-015 is decided.
+- PROPOSED-NEW-CORE-001 (5): the Core engineering contract is drafted and approved; a pin file records the contract's exact commit SHA and SHA-256; a CI check fails when the pin and the contract differ; the readiness check `contract_pin` passes (exit condition 3). PD-015 is decided (D-113); the contract is merged and pinned in kritva-core.
 
 ### Community (kritvaos-community), V2-M0-COMMUNITY-001: security reporting path working
 
@@ -50,6 +50,6 @@ Common to every task: owner Dinesh; initial status as recorded in the register; 
 ## Open points for the owner
 
 - Confirm or edit the criteria above. Once approved, each repository adds its task to its own `planning/TASKS.md` through a pull request in that repository (initial status NOT_STARTED, no weight, no credit).
-- Decide PD-015 to unblock PROPOSED-NEW-CORE-001.
+- PD-015 is decided (D-113), so PROPOSED-NEW-CORE-001 is no longer blocked.
 - Dependencies between M0 tasks are not recorded anywhere yet; none are assumed here.
 - The M0 target date 2026-10-30 has passed with M0 not closed (see the Sequence column in STATUS_VIEW.md). Re-confirm or move the date.

@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-07T18:00:00Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T15:39:59Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -87,7 +87,7 @@ M0 is the earliest milestone with open tasks: 0 of 34 weight accepted, 10 approv
 | Program | PROPOSED-NEW-PROGRAM-003 | Program register and planning controls | 4 | NOT_STARTED |
 | Program | PROPOSED-NEW-PROGRAM-004 | Program approval and decision records | 3 | NOT_STARTED |
 | Program | PROPOSED-NEW-PROGRAM-005 | Program validation and governance checks | 3 | NOT_STARTED |
-| Core | PROPOSED-NEW-CORE-001 | Core engineering contract and version pin | 5 | BLOCKED (PD-015) |
+| Core | PROPOSED-NEW-CORE-001 | Core engineering contract and version pin | 5 | IN_PROGRESS |
 | Community | PROPOSED-NEW-COMMUNITY-001 | Security reporting path and mailbox verification | 2 | NOT_STARTED |
 | Sense | PROPOSED-NEW-SENSE-001 | Sense governance and acceptance review | 3 | NOT_STARTED |
 | Mind | PROPOSED-NEW-MIND-GOV-001 | Mind governance and acceptance review | 3 | NOT_STARTED |
@@ -106,10 +106,9 @@ What stands between M0 and closure: the items below, then an approved completion
 | REV-006 | Review kritva-mind governance baseline and contract task | blocks closing M0 | UNASSIGNED |
 | REV-007 | Review kritva-skill governance baseline and contract task | blocks closing M0 | UNASSIGNED |
 | PD-014 | Register the four new repositories on their workstreams | in scope, not blocking | UNASSIGNED |
-| PD-015 | Approve drafting the Core engineering contract | blocks closing M0 | UNASSIGNED |
 | PD-017 | Test the Community security mailbox | in scope, not blocking | UNASSIGNED |
 
-Weights add up to 34. 1 task(s) are blocked on a pending owner decision: PROPOSED-NEW-CORE-001 (BLOCKED (PD-015)). Every milestone's tasks are listed in [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Weights add up to 34. Every milestone's tasks are listed in [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 ## Needs owner attention
 
@@ -117,8 +116,7 @@ Weights add up to 34. 1 task(s) are blocked on a pending owner decision: PROPOSE
 |---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh |
 | 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh |
-| 3 | PD-015: Approve drafting the Core engineering contract | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. | Dinesh |
-| 4 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED |
+| 3 | 7 review(s) pending (REV-001, REV-002, REV-003, REV-004, REV-005, REV-006, REV-007) | Review obligations on the V2 plan and the new repositories; no reviewer is assigned yet | UNASSIGNED |
 
 All open items are shown.
 
@@ -136,6 +134,6 @@ Community I3/I4 software implementation credit is included in Foundation (PRE_V2
 |---|---|
 | Validation errors | 0 |
 | Warnings | 22 (19 workstreams with no status source) |
-| Source freshness | FETCH_FAILED 1, WARN 4 |
+| Source freshness | FETCH_FAILED 1, FRESH 4 |
 
 Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).

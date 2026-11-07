@@ -161,11 +161,10 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 155/163 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Warnings: 21 -> 22"
+      "Pending decisions: 6 -> 5"
     ],
-    "recorded_at": "2026-11-06T17:52:33Z",
-    "since": "2026-11-06T17:51:51Z"
+    "recorded_at": "2026-11-07T15:39:59Z",
+    "since": "2026-11-07T18:00:00Z"
   },
   "errors": [],
   "evidence_health": [
@@ -266,7 +265,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T18:00:00Z",
+  "generated_at": "2026-11-07T15:39:59Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 44,
@@ -1268,7 +1267,7 @@
         "id": "PROPOSED-NEW-CORE-001",
         "milestone": "M0",
         "repo": "Core",
-        "status": "BLOCKED (PD-015)",
+        "status": "IN_PROGRESS",
         "title": "Core engineering contract and version pin",
         "weight": 5
       },
@@ -1753,7 +1752,7 @@
       "depends_on": [],
       "milestone": "M0",
       "open_predecessors": [],
-      "started": false,
+      "started": true,
       "status": "OK",
       "waiver": []
     },
@@ -1923,7 +1922,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 24,
+        "age_hours": 21,
         "ahead_by": 6,
         "changed_files": [
           "Makefile",
@@ -1933,7 +1932,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-06T17:51:34Z",
         "fetched_head": "a4d4fbfaaddb684bae971f2081f5ca5f678d9be5",
-        "freshness": "WARN",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritvaos-community",
@@ -1942,7 +1941,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 24,
+        "age_hours": 21,
         "ahead_by": 4,
         "changed_files": [
           "planning/MILESTONE.md",
@@ -1951,7 +1950,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-06T17:51:34Z",
         "fetched_head": "9fe6aa65303cae1bfe8a9d428f0dc0b32e649073",
-        "freshness": "WARN",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-core",
@@ -1960,7 +1959,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 24,
+        "age_hours": 21,
         "ahead_by": 6,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -1980,7 +1979,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-06T17:51:34Z",
         "fetched_head": "cc4503f0b43a3c4e43ed69daf8b557806c28d377",
-        "freshness": "WARN",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-motion",
@@ -1989,7 +1988,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 24,
+        "age_hours": 21,
         "ahead_by": 92,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2046,7 +2045,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-06T17:51:34Z",
         "fetched_head": "a7bdaaa1a2b29547f1e048b7354407c56d96effc",
-        "freshness": "WARN",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-sense",
@@ -2110,7 +2109,7 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 6,
+    "pending_decisions": 5,
     "pending_reviews": 7,
     "progress": "155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 90.64,
@@ -3334,7 +3333,7 @@
     }
   ],
   "v2_plan": {
-    "blocking_decisions": 3,
+    "blocking_decisions": 2,
     "horizon_end": "2027-09-13",
     "milestones": [
       {
@@ -3401,7 +3400,7 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 6,
+    "pending_decisions": 5,
     "pending_reviews": 7,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
