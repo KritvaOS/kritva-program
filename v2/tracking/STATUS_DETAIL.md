@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-07T16:55:49Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-07T17:02:09Z (freshness of sources is judged at this time)
 - Baseline version: 10 (APPROVED)
 - Accepted engineering progress: 90.64% (155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 41/44 tasks (repo-reported; not acceptance)
@@ -29,17 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-07T16:55:49Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-07T17:02:09Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
 | CI_DEV_INFRA | FETCH_FAILED | 2026-10-26T16:23:10Z | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
-| COMMUNITY | FRESH | 2026-11-07T16:55:25Z (0h ago) | bd9d84c | 27ed961 | 8 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, planning/PD-017-SECURITY-MAILBOX-TEST.md, status/status.json |
-| CORE | FRESH | 2026-11-07T16:55:25Z (0h ago) | 7132431 | 969d615 | 8 commit(s) | OTHER FILES (review): .github/workflows/contract-pin-check.yml, docs/development/ENGINEERING_CONTRACT.md, docs/development/ENGINEERING_CONTRACT.pin.json, planning/MILESTONE.md, scripts/contract/check_contract_pin.py |
-| MIND | FRESH | 2026-11-07T16:55:25Z (0h ago) | 30b0e22 | 3083512 | 2 commit(s) | STATUS_ONLY |
-| MOTION | FRESH | 2026-11-07T16:55:25Z (0h ago) | 84e4678 | d76dbdf | 14 commit(s) | OTHER FILES (review): .github/kritva-gate.json, ACCEPTANCE_CRITERIA.md, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md |
-| SENSE | FRESH | 2026-11-07T16:55:25Z (0h ago) | 39196bb | 07c48d5 | 101 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
-| SKILL | FRESH | 2026-11-07T16:55:25Z (0h ago) | 8670363 | 557f19b | 2 commit(s) | STATUS_ONLY |
+| COMMUNITY | FRESH | 2026-11-07T17:01:45Z (0h ago) | bd9d84c | 27ed961 | 8 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, planning/PD-017-SECURITY-MAILBOX-TEST.md, status/status.json |
+| CORE | FRESH | 2026-11-07T17:01:45Z (0h ago) | 7132431 | 969d615 | 8 commit(s) | OTHER FILES (review): .github/workflows/contract-pin-check.yml, docs/development/ENGINEERING_CONTRACT.md, docs/development/ENGINEERING_CONTRACT.pin.json, planning/MILESTONE.md, scripts/contract/check_contract_pin.py |
+| MIND | FRESH | 2026-11-07T17:01:45Z (0h ago) | 30b0e22 | 3083512 | 2 commit(s) | STATUS_ONLY |
+| MOTION | FRESH | 2026-11-07T17:01:45Z (0h ago) | 84e4678 | d76dbdf | 14 commit(s) | OTHER FILES (review): .github/kritva-gate.json, ACCEPTANCE_CRITERIA.md, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md |
+| SENSE | FRESH | 2026-11-07T17:01:45Z (0h ago) | 39196bb | 07c48d5 | 101 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
+| SKILL | FRESH | 2026-11-07T17:01:45Z (0h ago) | 8670363 | 557f19b | 2 commit(s) | STATUS_ONLY |
 
 ## Workstreams
 
