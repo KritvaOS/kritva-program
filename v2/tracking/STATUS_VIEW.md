@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-06T17:52:33Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T09:18:31Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data quality). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -46,6 +46,37 @@ Compared with the snapshot generated 2026-11-06T17:51:51Z (recorded 2026-11-06T1
 | CI_DEV_INFRA | 0/3 | 0.0% | 0/1 |
 
 Frozen baseline; credit needs a recorded approval and verified CI evidence. Only baselined workstreams are listed. A workstream that is NOT BASELINED has no accepted progress to report; that is not zero progress.
+
+## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
+
+Source: [SEVEN_REPO_PLAN_REGISTER.md](../planning/SEVEN_REPO_PLAN_REGISTER.md), recorded as an owner-approved planning record in D-109. Planning weights are estimates, not baseline weights: they earn no credit and are not part of the 155/171 figure above. Each row below keeps the V2 baseline and the approved plan in separate columns.
+
+V2 baseline weight 67 (54 accepted). Approved plan 59 rows, 275 [213-338] (14 retired parents not counted). Total V2 plan weight 342 [280-405]; provisional accepted share 54/342 = 15.8% [13.3%-19.3%].
+
+| Milestone | V2 baseline weight | Accepted weight | Plan rows | Plan weight [low-high] | Total plan weight |
+|---|---|---|---|---|---|
+| M0 | 0 | 0 | 10 | 34 [24-44] | 34 |
+| M1 | 10 | 10 | 5 | 22 [17-27] | 32 |
+| M2 | 32 | 19 | 12 | 56 [44-68] | 88 |
+| M3 | 0 | 0 | 10 | 48 [37-60] | 48 |
+| M4 | 0 | 0 | 4 | 18 [14-22] | 18 |
+| M5 | 5 | 5 | 9 | 49 [38-60] | 54 |
+| M7 | 9 | 9 | 3 | 13 [10-16] | 22 |
+| M8 | 11 | 11 | 6 | 35 [29-41] | 46 |
+| Total | 67 | 54 | 59 | 275 [213-338] | 342 |
+
+| Repository | Plan rows | Plan weight [low-high] |
+|---|---|---|
+| Program | 5 | 20 [15-25] |
+| Core | 3 | 16 [13-19] |
+| Community | 31 | 139 [108-170] |
+| Sense | 1 | 3 [2-4] |
+| Mind | 10 | 53 [41-65] |
+| Motion | 3 | 15 [12-18] |
+| Skill | 6 | 29 [22-37] |
+| Total | 59 | 275 [213-338] |
+
+V2-M6 (physical validation) is on HOLD and excluded. Mechanical, actuator, kritva-enterprise_program and kritva-raas work are outside this plan.
 
 ## V2 milestone plan (proposed; not the baseline)
 

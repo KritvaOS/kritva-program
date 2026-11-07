@@ -19,6 +19,7 @@ from pathlib import Path
 
 import planning as _pl
 import readiness as _rd
+import plan_register as _pr
 
 BAR_WIDTH = 30
 
@@ -316,4 +317,4 @@ def render_view_lines(c, phases, measures_table):
     """measures_table: list of lines for the three-measures table, built by the consolidator."""
     return [*header_lines(c), *owner_actions_lines(c), *changes_lines(c),
             "## Measures (never blended)", "", *measures_table, "",
-            *progress_lines(c), *effort_lines(c), *readiness_lines(c), *plan_lines(c), *milestones_lines(c), *phase_lines(phases), *quality_lines(c)]
+            *progress_lines(c), *_pr.view_lines(c), *effort_lines(c), *readiness_lines(c), *plan_lines(c), *milestones_lines(c), *phase_lines(phases), *quality_lines(c)]

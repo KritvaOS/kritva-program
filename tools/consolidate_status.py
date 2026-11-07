@@ -49,6 +49,7 @@ except ImportError:  # the public program carries no effort estimates
 import readiness  # noqa: E402  (display-only; never read by compute())
 import planning  # noqa: E402  (display-only; never read by compute())
 import dashboard  # noqa: E402  (display-only; never read by compute())
+import plan_register  # noqa: E402  (display-only; never read by compute())
 
 REPORT_ENUMS = {
     "execution": {"NOT_STARTED", "IN_PROGRESS", "BLOCKED", "COMPLETE"},
@@ -1174,6 +1175,12 @@ def main():
             c["errors"], c["warnings"] = sorted(errors), sorted(warnings)
             c["milestone_alignment"] = arows
             plan_files = {root / planning.PLAN / n: t for n, t in planning.render_all(pdata).items()}
+    prows, ptext, perrs2 = plan_register.load(root)
+    if prows is not None or perrs2:
+        errors += [f"{plan_register.FILE}: {x}" for x in perrs2]
+        c["errors"] = sorted(errors)
+        if not perrs2:
+            c["plan_register"] = plan_register.summary(prows, c)
     prev_c = None
     if prev_out.exists():
         try:
