@@ -7,6 +7,33 @@
     "commit": "3083512cb116b57bed92aa4e016a66f7a3189089",
     "tag": null
   },
-  "tasks": [],
-  "updated_at": "2026-11-07T16:47:00+00:00"
+  "tasks": [
+    {
+      "task_id": "KOS-MIND-M0-001",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "planning/reviews/REV-006-GOVERNANCE-BASELINE.md",
+          "description": "Governance baseline evidence package REV-006 (criteria and owner review record; reference only, not completion proof)",
+          "commit": null,
+          "ci_run": null,
+          "report_sha256": null,
+          "result": null
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-mind/actions/runs/42385456931",
+          "description": "unit-tests CI run 42385456931 PASS on 564c4e00, the commit reviewed in REV-006; later commits change planning and status files only",
+          "commit": "564c4e002c19b09309093a47aab1c7a7eda12825",
+          "ci_run": "42385456931",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-11-07T17:30:00+00:00"
 }
