@@ -1079,6 +1079,86 @@
       "review_flags": [
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-SENSE-M0-001",
+      "workstream_id": "SENSE",
+      "task_commit": "ddf95185341656bea5f26b2f9196838321853852",
+      "task_subject": "governance baseline reviewed in REV-004 (no single task commit; the reviewed main commit)",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "ddf95185341656bea5f26b2f9196838321853852",
+        "ci_run": 42329065787,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/42329065787",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": null,
+      "review_flags": [
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT",
+        "GOVERNANCE_BASELINE_REVIEWED_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KOS-MIND-M0-001",
+      "workstream_id": "MIND",
+      "task_commit": "564c4e002c19b09309093a47aab1c7a7eda12825",
+      "task_subject": "governance baseline reviewed in REV-006 (no single task commit; the reviewed main commit)",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "564c4e002c19b09309093a47aab1c7a7eda12825",
+        "ci_run": 42385456931,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-mind/actions/runs/42385456931",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": null,
+      "review_flags": [
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT",
+        "GOVERNANCE_BASELINE_REVIEWED_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KOS-MOTION-M0-001",
+      "workstream_id": "MOTION",
+      "task_commit": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
+      "task_subject": "governance baseline reviewed in REV-005 (no single task commit; the reviewed main commit)",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
+        "ci_run": 42385668725,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-motion/actions/runs/42385668725",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": null,
+      "review_flags": [
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT",
+        "GOVERNANCE_BASELINE_REVIEWED_COMMIT"
+      ]
+    },
+    {
+      "task_id": "KOS-SKILL-M0-001",
+      "workstream_id": "SKILL",
+      "task_commit": "c17192001f6c672819589857e8644ad21573d8d8",
+      "task_subject": "governance baseline reviewed in REV-007 (no single task commit; the reviewed main commit)",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "c17192001f6c672819589857e8644ad21573d8d8",
+        "ci_run": 41598873743,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-skill/actions/runs/41598873743",
+        "workflow": "secret-scan"
+      },
+      "task_files_changed_after": null,
+      "review_flags": [
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT",
+        "GOVERNANCE_BASELINE_REVIEWED_COMMIT"
+      ]
     }
   ],
   "unmapped": []

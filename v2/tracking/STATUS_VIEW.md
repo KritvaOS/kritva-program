@@ -2,25 +2,25 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-07T17:40:28Z from committed data. Baseline v11 (APPROVED). Validation: 0 error(s), 27 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T18:13:09Z from committed data. Baseline v11 (APPROVED). Validation: 0 error(s), 24 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
 ## Program progress at a glance
 
 ```text
-Program completion: 34.8%  (155 / 446 weight)
+Program completion: 37.4%  (167 / 446 weight)
 ███████░░░░░░░░░░░░░
 ```
 
-Accepted weight across completed Foundation work and accepted V2 baseline tasks, divided by total Foundation weight, V2 baseline weight and owner-approved V2 planning weight. Planning-only tasks are in the denominator but earn no credit until they are baselined and accepted. Plan estimate range 31.1% to 39.3% (total weight 394 to 499). Tasks accepted: 41 of 103.
+Accepted weight across completed Foundation work and accepted V2 baseline tasks, divided by total Foundation weight, V2 baseline weight and owner-approved V2 planning weight. Planning-only tasks are in the denominator but earn no credit until they are baselined and accepted. Plan estimate range 33.5% to 42.4% (total weight 394 to 499). Tasks accepted: 45 of 103.
 
 | Component | Accepted / total weight | Tasks accepted / total | What it is |
 |---|---|---|---|
 | Completed Foundation (PRE_V2) | 101 / 104 | 30 / 31 | Core R1.0, Community I2-I4 and the program CI task, completed before the V2 plan |
-| V2 baselined | 54 / 101 | 11 / 23 | Approved baseline tasks (Sense, Motion) |
+| V2 baselined | 66 / 101 | 15 / 23 | Approved baseline tasks (Sense, Motion) |
 | V2 approved planning scope (not baselined) | 0 / 241 | 0 / 49 | Owner-approved scope not yet in the baseline; not necessarily ready to execute; no credit until baselined and accepted |
-| **Total** | **155 / 446** | **41 / 103** | **34.8%** |
+| **Total** | **167 / 446** | **45 / 103** | **37.4%** |
 
 Moving approved-plan tasks into the baseline later changes which row they sit in, not the total or the percentage. Credit comes only from baselined tasks with an approval, a completed task and CI evidence. Plan weights are estimates. Physical validation (V2-M6) is on HOLD and excluded; mechanical, actuator, enterprise and raas work are outside this view.
 
@@ -31,7 +31,7 @@ Accepted weight over total weight (completed foundation, V2 baseline and approve
 | Milestone | Title | Target | Depends on | Sequence | Progress | Accepted / total weight | Share | Tasks accepted / total |
 |---|---|---|---|---|---|---|---|---|
 | Foundation (PRE_V2) | Completed before V2 | done | none | n/a | `███████████████████░` | 101 / 104 | 97.1% | 30 / 31 |
-| M0 | FOUNDATION | 2026-10-30 OVERDUE | none | OK | `░░░░░░░░░░░░░░░░░░░░` | 0 / 34 | 0.0% | 0 / 10 |
+| M0 | FOUNDATION | 2026-10-30 OVERDUE | none | OK | `███████░░░░░░░░░░░░░` | 12 / 34 | 35.3% | 4 / 10 |
 | M1 | STUDIO | 2026-11-30 | M0 | STARTED before M0 closed (waived D-112) | `██████░░░░░░░░░░░░░░` | 10 / 32 | 31.2% | 2 / 7 |
 | M2 | BUILD & ARTIFACT | 2027-01-15 | M1 | STARTED before M1 closed (waived D-112) | `████░░░░░░░░░░░░░░░░` | 19 / 88 | 21.6% | 4 / 18 |
 | M3 | CONTROL PLANE | 2027-03-15 | M2 | OK | `░░░░░░░░░░░░░░░░░░░░` | 0 / 48 | 0.0% | 0 / 10 |
@@ -40,7 +40,7 @@ Accepted weight over total weight (completed foundation, V2 baseline and approve
 | M6 | LAB & ROBOT | HOLD | M5 | n/a | HOLD (excluded) | n/a | n/a | n/a |
 | M7 | LIVE & RESULTS | 2027-08-15 | M4, M5 | STARTED before M4, M5 closed (waived D-112) | `████████░░░░░░░░░░░░` | 9 / 22 | 40.9% | 2 / 5 |
 | M8 | PRODUCTION | 2027-09-13 | M7 | STARTED before M7 closed (waived D-112) | `█████░░░░░░░░░░░░░░░` | 11 / 46 | 23.9% | 2 / 8 |
-| **Total** | | | | | `███████░░░░░░░░░░░░░` | **155 / 446** | **34.8%** | **41 / 103** |
+| **Total** | | | | | `███████░░░░░░░░░░░░░` | **167 / 446** | **37.4%** | **45 / 103** |
 
 Target dates are the owner-approved planning dates; they are not commitments or forecasts. Rule (D-112): a milestone may not start until the milestones it depends on are closed. Closure needs a recorded completion record; none of M0-M8 is closed yet. STARTED means accepted weight or an in-progress plan task. Existing out-of-sequence work is grandfathered by waivers; a new start without a waiver is a validation error.
 \* The plan title differs from the V2 milestone record (booking and commercial work belongs to kritva-raas, outside this plan); the date is carried over and must be re-confirmed.
@@ -54,11 +54,11 @@ Task and weight totals combine completed Foundation (PRE_V2) work, V2 baseline t
 | Program | 0 / 6 | 0 / 23 | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
 | Core | 9 / 12 | 30 / 46 | `█████████████░░░░░░░` 65.2% |
 | Community | 21 / 52 | 71 / 210 | `███████░░░░░░░░░░░░░` 33.8% |
-| Sense | 9 / 11 | 44 / 52 | `█████████████████░░░` 84.6% |
-| Mind | 0 / 10 | 0 / 53 | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| Motion | 2 / 6 | 10 / 33 | `██████░░░░░░░░░░░░░░` 30.3% |
-| Skill | 0 / 6 | 0 / 29 | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| **Total** | **41 / 103** | **155 / 446** | `███████░░░░░░░░░░░░░` **34.8%** |
+| Sense | 10 / 11 | 47 / 52 | `██████████████████░░` 90.4% |
+| Mind | 1 / 10 | 3 / 53 | `█░░░░░░░░░░░░░░░░░░░` 5.7% |
+| Motion | 3 / 6 | 13 / 33 | `████████░░░░░░░░░░░░` 39.4% |
+| Skill | 1 / 6 | 3 / 29 | `██░░░░░░░░░░░░░░░░░░` 10.3% |
+| **Total** | **45 / 103** | **167 / 446** | `███████░░░░░░░░░░░░░` **37.4%** |
 
 ## Work by repository and milestone
 
@@ -69,17 +69,17 @@ Each cell is accepted / total weight (share). A dot means no work planned for th
 | Program | 0/3 (0%) | 0/15 (0%) | · | · | · | · | · | · | 0/5 (0%) | 0/23 (0.0%) |
 | Core | 30/30 (100%) | 0/5 (0%) | · | 0/5 (0%) | · | · | · | · | 0/6 (0%) | 30/46 (65.2%) |
 | Community | 71/71 (100%) | 0/2 (0%) | 0/12 (0%) | 0/26 (0%) | 0/43 (0%) | 0/18 (0%) | 0/19 (0%) | 0/13 (0%) | 0/6 (0%) | 71/210 (33.8%) |
-| Sense | · | 0/3 (0%) | 5/5 (100%) | 14/19 (74%) | · | · | 5/5 (100%) | 9/9 (100%) | 11/11 (100%) | 44/52 (84.6%) |
-| Mind | · | 0/3 (0%) | 0/5 (0%) | 0/21 (0%) | · | · | 0/18 (0%) | · | 0/6 (0%) | 0/53 (0.0%) |
-| Motion | · | 0/3 (0%) | 5/5 (100%) | 5/13 (38%) | · | · | 0/6 (0%) | · | 0/6 (0%) | 10/33 (30.3%) |
-| Skill | · | 0/3 (0%) | 0/5 (0%) | 0/4 (0%) | 0/5 (0%) | · | 0/6 (0%) | · | 0/6 (0%) | 0/29 (0.0%) |
-| **All** | 101/104 (97%) | 0/34 (0%) | 10/32 (31%) | 19/88 (22%) | 0/48 (0%) | 0/18 (0%) | 5/54 (9%) | 9/22 (41%) | 11/46 (24%) | **155/446 (34.8%)** |
+| Sense | · | 3/3 (100%) | 5/5 (100%) | 14/19 (74%) | · | · | 5/5 (100%) | 9/9 (100%) | 11/11 (100%) | 47/52 (90.4%) |
+| Mind | · | 3/3 (100%) | 0/5 (0%) | 0/21 (0%) | · | · | 0/18 (0%) | · | 0/6 (0%) | 3/53 (5.7%) |
+| Motion | · | 3/3 (100%) | 5/5 (100%) | 5/13 (38%) | · | · | 0/6 (0%) | · | 0/6 (0%) | 13/33 (39.4%) |
+| Skill | · | 3/3 (100%) | 0/5 (0%) | 0/4 (0%) | 0/5 (0%) | · | 0/6 (0%) | · | 0/6 (0%) | 3/29 (10.3%) |
+| **All** | 101/104 (97%) | 12/34 (35%) | 10/32 (31%) | 19/88 (22%) | 0/48 (0%) | 0/18 (0%) | 5/54 (9%) | 9/22 (41%) | 11/46 (24%) | **167/446 (37.4%)** |
 
 Task-level detail for every cell is in [STATUS_DETAIL.md](STATUS_DETAIL.md) (Plan tasks by milestone and repository).
 
 ## Open work: M0 FOUNDATION
 
-M0 is the earliest milestone with open tasks: 0 of 34 weight accepted, 10 tasks (10 baselined, 0 approved plan rows), 0 credited. Each task needs to be baselined, completed and backed by CI evidence before it earns credit.
+M0 is the earliest milestone with open tasks: 12 of 34 weight accepted, 10 tasks (10 baselined, 0 approved plan rows), 4 credited. Each task needs to be baselined, completed and backed by CI evidence before it earns credit.
 
 | Repository | Task | Title | Weight | Status |
 |---|---|---|---|---|
@@ -87,12 +87,12 @@ M0 is the earliest milestone with open tasks: 0 of 34 weight accepted, 10 tasks 
 | Program | KRP-M0-002 | Program register and planning controls | 4 | NOT_REPORTED |
 | Program | KRP-M0-003 | Program approval and decision records | 3 | NOT_REPORTED |
 | Program | KRP-M0-004 | Program validation and governance checks | 3 | NOT_REPORTED |
-| Core | KF-CORE-M0-001 | Core engineering contract and version pin | 5 | NOT_REPORTED |
-| Community | KOS-COMMUNITY-M0-001 | Security reporting path and mailbox verification | 2 | NOT_REPORTED |
-| Sense | KOS-SENSE-M0-001 | Sense governance and acceptance review | 3 | COMPLETE |
-| Mind | KOS-MIND-M0-001 | Mind governance and acceptance review | 3 | COMPLETE |
-| Motion | KOS-MOTION-M0-001 | Motion governance and acceptance review | 3 | NOT_REPORTED |
-| Skill | KOS-SKILL-M0-001 | Skill governance and acceptance review | 3 | COMPLETE |
+| Core | KF-CORE-M0-001 | Core engineering contract and version pin | 5 | IN_PROGRESS |
+| Community | KOS-COMMUNITY-M0-001 | Security reporting path and mailbox verification | 2 | IN_PROGRESS |
+| Sense | KOS-SENSE-M0-001 | Sense governance and acceptance review | 3 | COMPLETE (credited) |
+| Mind | KOS-MIND-M0-001 | Mind governance and acceptance review | 3 | COMPLETE (credited) |
+| Motion | KOS-MOTION-M0-001 | Motion governance and acceptance review | 3 | COMPLETE (credited) |
+| Skill | KOS-SKILL-M0-001 | Skill governance and acceptance review | 3 | COMPLETE (credited) |
 
 What stands between M0 and closure: the items below, then an approved completion record. Closing a milestone does not by itself award weighted credit; credit needs baselined tasks that are completed with approval and CI evidence.
 
@@ -108,13 +108,12 @@ Weights add up to 34. Every milestone's tasks are listed in [STATUS_DETAIL.md](S
 |---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh |
 | 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh |
-| 3 | 3 task(s) have reported CI evidence awaiting central approval | Zero credit until an approval is recorded: KOS-MIND-M0-001, KOS-SENSE-M0-001, KOS-SKILL-M0-001 | not recorded |
 
 All open items are shown.
 
 ## Notes on the total
 
-The previously displayed 75.61% (155/205) used the same accepted weight but a narrower denominator: it excluded the 241 points of approved V2 planning scope not yet baselined. The consolidated measure includes that scope, giving 155/446 (34.8%).
+The previously displayed 81.46% (167/205) used the same accepted weight but a narrower denominator: it excluded the 241 points of approved V2 planning scope not yet baselined. The consolidated measure includes that scope, giving 167/446 (37.4%).
 
 Consolidated program completion is a reporting aggregate across Foundation and V2 scope. It does not merge their baselines, alter task ownership, transfer credit between phases, or make planning-only tasks credit-eligible. Promoting planning tasks into a later baseline changes their classification, not the denominator or the accepted credit.
 
@@ -125,7 +124,7 @@ Community I3/I4 software implementation credit is included in Foundation (PRE_V2
 | Check | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 27 (17 workstreams with no status source) |
-| Source freshness | FETCH_FAILED 2, FRESH 5 |
+| Warnings | 24 (17 workstreams with no status source) |
+| Source freshness | FETCH_FAILED 1, FRESH 6 |
 
 Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).

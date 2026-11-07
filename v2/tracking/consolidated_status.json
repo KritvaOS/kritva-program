@@ -59,17 +59,17 @@
       "weighted": true
     },
     "V2-M0-MIND-001": {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "complete": 1,
-      "credited": 0,
+      "credited": 1,
       "tasks": 1,
       "weight": 3,
       "weighted": true
     },
     "V2-M0-MOTION-001": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 3,
+      "complete": 1,
+      "credited": 1,
       "tasks": 1,
       "weight": 3,
       "weighted": true
@@ -83,17 +83,17 @@
       "weighted": true
     },
     "V2-M0-SENSE-001": {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "complete": 1,
-      "credited": 0,
+      "credited": 1,
       "tasks": 1,
       "weight": 3,
       "weighted": true
     },
     "V2-M0-SKILL-001": {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "complete": 1,
-      "credited": 0,
+      "credited": 1,
       "tasks": 1,
       "weight": 3,
       "weighted": true
@@ -165,9 +165,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 155,
-      "complete": 44,
-      "credited": 41,
+      "accepted_weight": 167,
+      "complete": 45,
+      "credited": 45,
       "tasks": 54,
       "weight": 205,
       "weighted": true
@@ -199,33 +199,33 @@
       "weighted": true
     },
     "MIND": {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "complete": 1,
-      "credited": 0,
+      "credited": 1,
       "tasks": 1,
       "weight": 3,
       "weighted": true
     },
     "MOTION": {
-      "accepted_weight": 10,
-      "complete": 2,
-      "credited": 2,
+      "accepted_weight": 13,
+      "complete": 3,
+      "credited": 3,
       "tasks": 4,
       "weight": 21,
       "weighted": true
     },
     "SENSE": {
-      "accepted_weight": 44,
+      "accepted_weight": 47,
       "complete": 10,
-      "credited": 9,
+      "credited": 10,
       "tasks": 11,
       "weight": 52,
       "weighted": true
     },
     "SKILL": {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "complete": 1,
-      "credited": 0,
+      "credited": 1,
       "tasks": 1,
       "weight": 3,
       "weighted": true
@@ -233,19 +233,18 @@
   },
   "changes": {
     "items": [
-      "Warnings: 30 -> 27"
+      "Accepted progress: 155/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 167/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KOS-MIND-M0-001, KOS-MOTION-M0-001, KOS-SENSE-M0-001, KOS-SKILL-M0-001",
+      "Warnings: 27 -> 24"
     ],
-    "recorded_at": "2026-11-07T17:40:28Z",
-    "since": "2026-11-07T17:39:17Z"
+    "recorded_at": "2026-11-07T18:12:09Z",
+    "since": "2026-11-07T17:40:28Z"
   },
   "errors": [],
   "evidence_health": [
     "CI_DEV_INFRA: source STALE",
-    "KF-CORE-M0-001, KOS-COMMUNITY-M0-001, KOS-MOTION-003, KOS-MOTION-M0-001, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream",
-    "KOS-MIND-M0-001: evidence reported (class not recorded, run 42385456931 at 564c4e0; run not yet checked against GitHub) but no central approval is recorded, so zero credit until approved",
-    "KOS-SENSE-010: the repo reports no commit-bound CI evidence",
-    "KOS-SENSE-M0-001: evidence reported (class not recorded, run 42329065787 at ddf9518; run not yet checked against GitHub) but no central approval is recorded, so zero credit until approved",
-    "KOS-SKILL-M0-001: evidence reported (class not recorded, run 41598873743 at c171920; run not yet checked against GitHub) but no central approval is recorded, so zero credit until approved"
+    "KF-CORE-M0-001, KOS-COMMUNITY-M0-001, KOS-SENSE-010: the repo reports no commit-bound CI evidence",
+    "KOS-MOTION-003, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream"
   ],
   "gates": [
     {
@@ -340,22 +339,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T17:40:28Z",
+  "generated_at": "2026-11-07T18:13:09Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
-      "tasks_with_github_verified_run": 41,
-      "tasks_with_verified_evidence": 41
+      "tasks_with_github_verified_run": 45,
+      "tasks_with_verified_evidence": 45
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 44,
+      "tasks_complete": 45,
       "tasks_total": 54
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 13
+      "uncredited_tasks": 9
     }
   },
   "milestone_alignment": [
@@ -444,10 +443,10 @@
       "workstream": "CORE"
     },
     {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "class": "V2_REPO",
       "closure": "none",
-      "credited": 0,
+      "credited": 1,
       "milestone": "V2-M0-MIND-001",
       "program_milestone": "V2-M0",
       "status": "PROPOSED",
@@ -456,10 +455,10 @@
       "workstream": "MIND"
     },
     {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "class": "V2_REPO",
       "closure": "none",
-      "credited": 0,
+      "credited": 1,
       "milestone": "V2-M0-MOTION-001",
       "program_milestone": "V2-M0",
       "status": "PROPOSED",
@@ -480,10 +479,10 @@
       "workstream": "CI_DEV_INFRA"
     },
     {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "class": "V2_REPO",
       "closure": "none",
-      "credited": 0,
+      "credited": 1,
       "milestone": "V2-M0-SENSE-001",
       "program_milestone": "V2-M0",
       "status": "PROPOSED",
@@ -492,10 +491,10 @@
       "workstream": "SENSE"
     },
     {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "class": "V2_REPO",
       "closure": "none",
-      "credited": 0,
+      "credited": 1,
       "milestone": "V2-M0-SKILL-001",
       "program_milestone": "V2-M0",
       "status": "PROPOSED",
@@ -929,7 +928,7 @@
   "plan_register": {
     "by_milestone": {
       "M0": {
-        "accepted": 0,
+        "accepted": 12,
         "baseline": 34,
         "high": 0,
         "low": 0,
@@ -1015,8 +1014,8 @@
         "rows": 2
       },
       "Mind": {
-        "accepted": 0,
-        "accepted_tasks": 0,
+        "accepted": 3,
+        "accepted_tasks": 1,
         "baseline": 3,
         "baseline_tasks": 1,
         "high": 61,
@@ -1025,8 +1024,8 @@
         "rows": 9
       },
       "Motion": {
-        "accepted": 10,
-        "accepted_tasks": 2,
+        "accepted": 13,
+        "accepted_tasks": 3,
         "baseline": 21,
         "baseline_tasks": 4,
         "high": 14,
@@ -1045,8 +1044,8 @@
         "rows": 1
       },
       "Sense": {
-        "accepted": 44,
-        "accepted_tasks": 9,
+        "accepted": 47,
+        "accepted_tasks": 10,
         "baseline": 52,
         "baseline_tasks": 11,
         "high": 0,
@@ -1055,8 +1054,8 @@
         "rows": 0
       },
       "Skill": {
-        "accepted": 0,
-        "accepted_tasks": 0,
+        "accepted": 3,
+        "accepted_tasks": 1,
         "baseline": 3,
         "baseline_tasks": 1,
         "high": 33,
@@ -1141,7 +1140,7 @@
       },
       "Mind": {
         "M0": {
-          "accepted": 0,
+          "accepted": 3,
           "baseline": 3,
           "point": 0,
           "rows": 0
@@ -1173,7 +1172,7 @@
       },
       "Motion": {
         "M0": {
-          "accepted": 0,
+          "accepted": 3,
           "baseline": 3,
           "point": 0,
           "rows": 0
@@ -1219,7 +1218,7 @@
       },
       "Sense": {
         "M0": {
-          "accepted": 0,
+          "accepted": 3,
           "baseline": 3,
           "point": 0,
           "rows": 0
@@ -1257,7 +1256,7 @@
       },
       "Skill": {
         "M0": {
-          "accepted": 0,
+          "accepted": 3,
           "baseline": 3,
           "point": 0,
           "rows": 0
@@ -1702,7 +1701,7 @@
       "M7": "LIVE & RESULTS",
       "M8": "PRODUCTION"
     },
-    "v2_accepted_weight": 54,
+    "v2_accepted_weight": 66,
     "v2_baseline_weight": 101
   },
   "program_status": {
@@ -1738,8 +1737,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 75.61,
-    "basis": "155/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 81.46,
+    "basis": "167/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "sequence": [
@@ -1747,7 +1746,7 @@
       "depends_on": [],
       "milestone": "M0",
       "open_predecessors": [],
-      "started": false,
+      "started": true,
       "status": "OK",
       "waiver": []
     },
@@ -1918,50 +1917,56 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 8,
+        "ahead_by": 2,
         "changed_files": [
-          "Makefile",
           "planning/MILESTONE.md",
-          "planning/PD-017-SECURITY-MAILBOX-TEST.md",
+          "planning/MILESTONE_STATUS.md",
+          "planning/TASKS.md",
+          "planning/milestones/KOS-M0/KOS-COMMUNITY-M0-001/ACCEPTANCE_CRITERIA.md",
+          "planning/milestones/KOS-M0/TASKS.md",
+          "scripts/gen_status.py",
+          "scripts/test_gen_status.py",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:40:06Z",
-        "fetched_head": "bd9d84c4f5ec471418338499c34df38f95e56332",
+        "fetched_at": "2026-11-07T18:07:37Z",
+        "fetched_head": "37c59c1ebef7e046f10cb72ce0292b98729d52d8",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritvaos-community",
-        "report_source_commit": "27ed9615756721d86cd602f7caa8fc056a633f7e",
+        "report_source_commit": "bd9d84c4f5ec471418338499c34df38f95e56332",
         "status_only": false,
         "workstream_id": "COMMUNITY"
       },
       {
         "age_hours": 0,
-        "ahead_by": 8,
+        "ahead_by": 2,
         "changed_files": [
-          ".github/workflows/contract-pin-check.yml",
-          "docs/development/ENGINEERING_CONTRACT.md",
-          "docs/development/ENGINEERING_CONTRACT.pin.json",
-          "planning/MILESTONE.md",
-          "scripts/contract/check_contract_pin.py",
-          "scripts/contract/test_check_contract_pin.py",
+          "planning/MILESTONE_STATUS.md",
+          "planning/TASKS.md",
+          "planning/milestones/KF-CORE-M0/TASK_MANIFEST.md",
+          "planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md",
+          "planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/TASK.md",
+          "scripts/status/gen_status.py",
+          "scripts/status/test_gen_status.py",
+          "status/README.md",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:40:06Z",
-        "fetched_head": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
+        "fetched_at": "2026-11-07T18:07:37Z",
+        "fetched_head": "0b30a998ef701864cb0e5133be3330cb230e5118",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-core",
-        "report_source_commit": "969d61558b99ad8c9c9c5bbac111dbdd75d0bd18",
+        "report_source_commit": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
         "status_only": false,
         "workstream_id": "CORE"
       },
       {
         "age_hours": 0,
-        "ahead_by": 4,
+        "ahead_by": 6,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
           "planning/TASKS.md",
@@ -1972,8 +1977,8 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:40:06Z",
-        "fetched_head": "395b54aa9aff37d24eeaa1fdc752fc31f99e2b75",
+        "fetched_at": "2026-11-07T18:07:37Z",
+        "fetched_head": "beb9fa19265b548cbd2d62f3bd19864637319e69",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -1983,43 +1988,28 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": null,
-        "ahead_by": 14,
+        "age_hours": 0,
+        "ahead_by": 2,
         "changed_files": [
-          ".github/kritva-gate.json",
-          "ACCEPTANCE_CRITERIA.md",
-          "AGENTS.md",
-          "COMPLETION_RECORD.md",
-          "CONTRIBUTING.md",
-          "Claude outputs/PASTE.txt",
-          "Claude outputs/PASTE_MOTION.txt",
-          "Claude outputs/PASTE_PROGRAM.txt",
-          "README.md",
-          "planning/CHANGELOG.md",
-          "planning/MILESTONE.md",
           "planning/MILESTONE_STATUS.md",
           "planning/TASKS.md",
-          "planning/reviews/REV-005-GOVERNANCE-BASELINE.md",
           "status/status.json",
-          "tasks/KOS-MOTION-002/TASK.md",
-          "tasks/KOS-MOTION-003/ID_MATRIX.md",
-          "tasks/KOS-MOTION-003/LIFECYCLE.md",
-          "tasks/KOS-MOTION-003/TASK.md"
+          "tasks/KOS-MOTION-M0-001/EVIDENCE.json"
         ],
-        "fetch_state": "FETCH_FAILED",
-        "fetched_at": "2026-11-07T17:01:45Z",
-        "fetched_head": "84e4678c23a182bcf8bb36f5ba821ce0e928afca",
-        "freshness": "FETCH_FAILED",
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-11-07T18:07:37Z",
+        "fetched_head": "63a94525e9124d353353ca87c615907b71cf3fe2",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-motion",
-        "report_source_commit": "d76dbdf36d4c430c9a379de8b0b249f1cf52c7ab",
+        "report_source_commit": "363e511a3def80ca8fb6045b4761ee1ed22bfb8b",
         "status_only": false,
         "workstream_id": "MOTION"
       },
       {
         "age_hours": 0,
-        "ahead_by": 103,
+        "ahead_by": 105,
         "changed_files": [
           ".github/kritva-gate.json",
           ".github/workflows/commit-message-check.yml",
@@ -2073,8 +2063,8 @@
           "tasks/KOS-SENSE-008/ACCEPTANCE_CRITERIA.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:40:06Z",
-        "fetched_head": "7b43720ece86149e9590c13b11006d3d17da7bdf",
+        "fetched_at": "2026-11-07T18:07:37Z",
+        "fetched_head": "3ed576cee4e53a389c5381718ff910ee908ec227",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -2085,7 +2075,7 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 4,
+        "ahead_by": 6,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
           "planning/TASKS.md",
@@ -2096,8 +2086,8 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:40:06Z",
-        "fetched_head": "7b0937740cd6b0d6f937cca736eb2ef3b44a4b24",
+        "fetched_at": "2026-11-07T18:07:37Z",
+        "fetched_head": "5c04151f018b3a9e8b3fe4c5461b5379f20d3f1a",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -2142,8 +2132,10 @@
       "KF-CORE-R10-007",
       "KF-CORE-R10-008",
       "KF-CORE-R10-009",
+      "KOS-MIND-M0-001",
       "KOS-MOTION-001",
       "KOS-MOTION-002",
+      "KOS-MOTION-M0-001",
       "KOS-SENSE-001",
       "KOS-SENSE-002",
       "KOS-SENSE-003",
@@ -2152,7 +2144,9 @@
       "KOS-SENSE-006",
       "KOS-SENSE-007",
       "KOS-SENSE-008",
-      "KOS-SENSE-009"
+      "KOS-SENSE-009",
+      "KOS-SENSE-M0-001",
+      "KOS-SKILL-M0-001"
     ],
     "effort_completed": null,
     "effort_remaining": null,
@@ -2164,10 +2158,10 @@
     },
     "pending_decisions": 3,
     "pending_reviews": 0,
-    "progress": "155/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 75.61,
+    "progress": "167/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 81.46,
     "readiness": {},
-    "warnings": 27
+    "warnings": 24
   },
   "tasks": [
     {
@@ -2180,7 +2174,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2209,7 +2203,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2238,7 +2232,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2267,7 +2261,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2296,7 +2290,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2325,7 +2319,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I2",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2354,7 +2348,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2383,7 +2377,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2412,7 +2406,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2441,7 +2435,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2470,7 +2464,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2499,7 +2493,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2528,7 +2522,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I3",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2557,7 +2551,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2586,7 +2580,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2615,7 +2609,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2644,7 +2638,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2673,7 +2667,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2702,7 +2696,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2731,7 +2725,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2760,7 +2754,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KOS-I4",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2783,16 +2777,16 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "IN_PROGRESS",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "V2-M0-CORE-001",
       "phase": null,
-      "readiness": null,
+      "readiness": "IMPLEMENTABLE",
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -2812,7 +2806,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2841,7 +2835,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2870,7 +2864,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2899,7 +2893,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2928,7 +2922,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2957,7 +2951,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -2986,7 +2980,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -3015,7 +3009,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -3044,7 +3038,7 @@
       "evidence_state": "VERIFIED",
       "evidence_verified": true,
       "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "KF-CORE-R10",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
@@ -3067,16 +3061,16 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "IN_PROGRESS",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "V2-M0-COMMUNITY-001",
       "phase": null,
-      "readiness": null,
+      "readiness": "IMPLEMENTABLE",
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -3087,30 +3081,30 @@
       "workstream_id": "COMMUNITY"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "REPORTED_AWAITING_APPROVAL",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A381 (PASS, APPROVED) on commit 564c4e0 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "42385456931",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M0-MIND-001",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
       "reported_evidence": {
-        "class": null,
+        "class": "MILESTONE",
         "commit": "564c4e002c19b09309093a47aab1c7a7eda12825",
-        "github_verified": null,
+        "github_verified": true,
         "run": "42385456931",
-        "task_commit": null
+        "task_commit": "564c4e002c19b09309093a47aab1c7a7eda12825"
       },
-      "run_verified": null,
-      "task_commit": null,
+      "run_verified": true,
+      "task_commit": "564c4e002c19b09309093a47aab1c7a7eda12825",
       "task_id": "KOS-MIND-M0-001",
-      "tested_commit": null,
+      "tested_commit": "564c4e002c19b09309093a47aab1c7a7eda12825",
       "title": "Mind governance and acceptance review",
       "weight": 3,
       "workstream_id": "MIND"
@@ -3197,24 +3191,30 @@
       "workstream_id": "MOTION"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no current report from the owning workstream",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_REPORT",
-      "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A382 (PASS, APPROVED) on commit 44b733d with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "42385668763",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "NOT_COMMITTED",
       "milestone_id": "V2-M0-MOTION-001",
       "phase": null,
-      "readiness": null,
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
+        "github_verified": true,
+        "run": "42385668763",
+        "task_commit": "44b733d5284d36895b1fff7e1cecedb69ca1720c"
+      },
+      "run_verified": true,
+      "task_commit": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
       "task_id": "KOS-MOTION-M0-001",
-      "tested_commit": null,
+      "tested_commit": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
       "title": "Motion governance and acceptance review",
       "weight": 3,
       "workstream_id": "MOTION"
@@ -3504,59 +3504,59 @@
       "workstream_id": "SENSE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "REPORTED_AWAITING_APPROVAL",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A380 (PASS, APPROVED) on commit ddf9518 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "42329065787",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M0-SENSE-001",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
       "reported_evidence": {
-        "class": null,
+        "class": "MILESTONE",
         "commit": "ddf95185341656bea5f26b2f9196838321853852",
-        "github_verified": null,
+        "github_verified": true,
         "run": "42329065787",
-        "task_commit": null
+        "task_commit": "ddf95185341656bea5f26b2f9196838321853852"
       },
-      "run_verified": null,
-      "task_commit": null,
+      "run_verified": true,
+      "task_commit": "ddf95185341656bea5f26b2f9196838321853852",
       "task_id": "KOS-SENSE-M0-001",
-      "tested_commit": null,
+      "tested_commit": "ddf95185341656bea5f26b2f9196838321853852",
       "title": "Sense governance and acceptance review",
       "weight": 3,
       "workstream_id": "SENSE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "REPORTED_AWAITING_APPROVAL",
-      "evidence_verified": false,
+      "credit": true,
+      "credit_reason": "weight 3 x approval A383 (PASS, APPROVED) on commit c171920 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "41598873743",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
       "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M0-SKILL-001",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
       "reported_evidence": {
-        "class": null,
+        "class": "MILESTONE",
         "commit": "c17192001f6c672819589857e8644ad21573d8d8",
-        "github_verified": null,
+        "github_verified": true,
         "run": "41598873743",
-        "task_commit": null
+        "task_commit": "c17192001f6c672819589857e8644ad21573d8d8"
       },
-      "run_verified": null,
-      "task_commit": null,
+      "run_verified": true,
+      "task_commit": "c17192001f6c672819589857e8644ad21573d8d8",
       "task_id": "KOS-SKILL-M0-001",
-      "tested_commit": null,
+      "tested_commit": "c17192001f6c672819589857e8644ad21573d8d8",
       "title": "Skill governance and acceptance review",
       "weight": 3,
       "workstream_id": "SKILL"
@@ -3764,10 +3764,7 @@
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
-    "KF-CORE-M0-001: not reported by CORE (no credit)",
-    "KOS-COMMUNITY-M0-001: not reported by COMMUNITY (no credit)",
     "KOS-MOTION-003: not reported by MOTION (no credit)",
-    "KOS-MOTION-M0-001: not reported by MOTION (no credit)",
     "KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)",
     "KRP-M0-001: not reported by CI_DEV_INFRA (no credit)",
     "KRP-M0-002: not reported by CI_DEV_INFRA (no credit)",
@@ -3831,11 +3828,11 @@
       "tasks_reported": 1
     },
     {
-      "commit": "27ed9615756721d86cd602f7caa8fc056a633f7e",
+      "commit": "bd9d84c4f5ec471418338499c34df38f95e56332",
       "id": "COMMUNITY",
       "repo": "KritvaOS/kritvaos-community",
       "source_state": "OK",
-      "tasks_reported": 21
+      "tasks_reported": 22
     },
     {
       "commit": "-------",
@@ -3845,11 +3842,11 @@
       "tasks_reported": 0
     },
     {
-      "commit": "969d61558b99ad8c9c9c5bbac111dbdd75d0bd18",
+      "commit": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
       "id": "CORE",
       "repo": "KritvaOS/kritva-core",
       "source_state": "OK",
-      "tasks_reported": 9
+      "tasks_reported": 10
     },
     {
       "commit": "-------",
@@ -3901,11 +3898,11 @@
       "tasks_reported": 1
     },
     {
-      "commit": "d76dbdf36d4c430c9a379de8b0b249f1cf52c7ab",
+      "commit": "363e511a3def80ca8fb6045b4761ee1ed22bfb8b",
       "id": "MOTION",
       "repo": "KritvaOS/kritva-motion",
       "source_state": "OK",
-      "tasks_reported": 2
+      "tasks_reported": 3
     },
     {
       "commit": "-------",

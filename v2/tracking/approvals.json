@@ -6026,6 +6026,66 @@
       ],
       "rationale": "Carry-forward of the existing PASS approvals onto baseline v11 (D-027, D-117): same evidence commit, no new judgement",
       "supersedes": "A338"
+    },
+    {
+      "approval_id": "A380",
+      "task_id": "KOS-SENSE-M0-001",
+      "baseline_version": 11,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "ddf95185341656bea5f26b2f9196838321853852",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-07T18:12:09Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/42329065787"
+      ],
+      "rationale": "Owner acceptance of the M0 governance task on the merged REV-004 to REV-007 evidence packages (criteria AC-M0-1 to AC-M0-6; AC-M0-3 PARTIAL as recorded: pull request and required checks verified, approval roles held by the owner under the interim roles of D-047, not independent review; D-114, D-115)."
+    },
+    {
+      "approval_id": "A381",
+      "task_id": "KOS-MIND-M0-001",
+      "baseline_version": 11,
+      "source_repo": "KritvaOS/kritva-mind",
+      "source_commit": "564c4e002c19b09309093a47aab1c7a7eda12825",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-07T18:12:09Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-mind/actions/runs/42385456931"
+      ],
+      "rationale": "Owner acceptance of the M0 governance task on the merged REV-004 to REV-007 evidence packages (criteria AC-M0-1 to AC-M0-6; AC-M0-3 PARTIAL as recorded: pull request and required checks verified, approval roles held by the owner under the interim roles of D-047, not independent review; D-114, D-115)."
+    },
+    {
+      "approval_id": "A382",
+      "task_id": "KOS-MOTION-M0-001",
+      "baseline_version": 11,
+      "source_repo": "KritvaOS/kritva-motion",
+      "source_commit": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-07T18:12:09Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-motion/actions/runs/42385668725"
+      ],
+      "rationale": "Owner acceptance of the M0 governance task on the merged REV-004 to REV-007 evidence packages (criteria AC-M0-1 to AC-M0-6; AC-M0-3 PARTIAL as recorded: pull request and required checks verified, approval roles held by the owner under the interim roles of D-047, not independent review; D-114, D-115)."
+    },
+    {
+      "approval_id": "A383",
+      "task_id": "KOS-SKILL-M0-001",
+      "baseline_version": 11,
+      "source_repo": "KritvaOS/kritva-skill",
+      "source_commit": "c17192001f6c672819589857e8644ad21573d8d8",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-07T18:12:09Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-skill/actions/runs/41598873743"
+      ],
+      "rationale": "Owner acceptance of the M0 governance task on the merged REV-004 to REV-007 evidence packages (criteria AC-M0-1 to AC-M0-6; AC-M0-3 PARTIAL as recorded: pull request and required checks verified, approval roles held by the owner under the interim roles of D-047, not independent review; D-114, D-115)."
     }
   ]
 }
