@@ -53,6 +53,20 @@ V2 baseline (v10, frozen) is separate: 67 weight, 54 accepted, 13 task rows. Tot
 
 M6 is excluded (HOLD). M4 reuses the ID as Developer Experience and Ecosystem.
 
+Milestone titles used by this plan (status views show these titles). Booking and commercial work belongs to kritva-raas, which is outside this plan, so M4 carries the Developer Experience and Ecosystem scope here. The M4 target date is carried over from the V2-M4 record and must be re-confirmed for the new scope.
+
+| Milestone | Plan title |
+|---|---|
+| M0 | FOUNDATION |
+| M1 | STUDIO |
+| M2 | BUILD & ARTIFACT |
+| M3 | CONTROL PLANE |
+| M4 | DEVELOPER EXPERIENCE & ECOSYSTEM |
+| M5 | EXECUTION |
+| M6 | LAB & ROBOT (HOLD, excluded) |
+| M7 | LIVE & RESULTS |
+| M8 | PRODUCTION |
+
 ## 3. Roll-up by repository (planning rows only)
 
 | Repository | Rows | Point | Low | High |
