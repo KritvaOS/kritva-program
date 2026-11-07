@@ -2,7 +2,7 @@
 
 **Owner of:** the common acceptance, test, commit, tag and merge rules for every Kritva repository in the V2 plan.
 **Status:** APPROVED. PD-005 (acceptance and test policy) and PD-006 (tag policy) by D-080, PD-007 (reviewer roles, interim) by D-047, PD-010 (merge method) by D-053. No coverage threshold is set. Repository CI checks below are enforced only where a repository has adopted them.
-**Relation to D-023:** the approved engineering contract (D-023) remains the controlling lifecycle, branch, commit and tag convention. Where this standard and the pinned contract text differ, the contract wins and this file is corrected. The contract text is not yet committed here (readiness check `contract_pin`).
+**Relation to D-023:** the approved engineering contract (D-023) remains the controlling lifecycle, branch, commit and tag convention. Where this standard and the pinned contract text differ, the contract wins and this file is corrected. The contract text is `docs/development/ENGINEERING_CONTRACT.md` in kritva-core, pinned by `ENGINEERING_CONTRACT.pin.json` at commit 71a82e9b6e2ec3c6155270391adaa30e7751c1b9 (D-113).
 
 The frozen baseline is not touched by anything in this file. V2 milestones and repository tasks added under this standard are planning inventory: no weight, no credit, until a separately approved baseline amendment.
 

@@ -4,7 +4,7 @@
 
 Generated from structured records only (status, owner, due date and blocking state are fields, not parsed text). Missing owners and dates are shown as UNASSIGNED and NO_DUE_DATE_RECORDED. Superseded records are excluded. Open gates are tracked separately in the Gates section of [tracking/STATUS_DETAIL.md](../tracking/STATUS_DETAIL.md), not here.
 
-6 pending, 3 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
+5 pending, 2 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
 
 | ID | Decision needed | Status | Blocking | Blocks | Scope | Owner | Due | Required action |
 |---|---|---|---|---|---|---|---|---|
@@ -12,5 +12,4 @@ Generated from structured records only (status, owner, due date and blocking sta
 | PD-003 | Decide where Sim, SDK, Studio and Control Plane live | PROPOSED | yes | V2-M1 | V2-M1, V2-M2, V2-M3 | UNASSIGNED | NO_DUE_DATE_RECORDED | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. |
 | PD-009 | Approve the status schema and record ownership | PROPOSED | no | - | program | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm the canonical locations of decision, review, gate and milestone records in v2/planning and the generated report locations. |
 | PD-014 | Register the four new repositories on their workstreams | PROPOSED | no | - | kritva-mind, kritva-sense, kritva-skill, kritva-motion, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | workstreams.json has SENSE, MOTION, SKILL and MIND with no repository. Recording the repository changes a program record, so it needs your approval (as D-034 did for the actuators). |
-| PD-015 | Approve drafting the Core engineering contract | PROPOSED | yes | V2-M0 | kritva-core, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | Needed to close contract_pin: contract text, exact SHA and SHA-256, a Core pin file and a CI check. |
 | PD-017 | Test the Community security mailbox | PROPOSED | no | - | kritvaos-community, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | After the SECURITY.md contact patch merges, send a test email to the Security Owner's mailbox so security_policy can move from OPEN to ATTESTED. |

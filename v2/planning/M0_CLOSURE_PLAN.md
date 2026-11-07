@@ -4,7 +4,7 @@
 
 ## How M0 closes
 
-1. Every item that blocks V2-M0 is resolved: reviews REV-001 to REV-007 (all `blocks: V2-M0`) and decision PD-015 (Core engineering contract).
+1. Every item that blocks V2-M0 is resolved: reviews REV-001 to REV-007 (all `blocks: V2-M0`) (PD-015, the Core engineering contract, is decided: D-113).
 2. The V2-M0 items in scope but not blocking are settled or consciously deferred: PD-014 (register Mind, Sense, Skill and Motion on their workstreams), PD-017 (test the Community security mailbox), PD-009 (status schema ownership).
 3. An approved `COMPLETION_RECORD.md` for V2-M0 exists and `closure_record` is set in `v2/planning/milestones.json`. Only then does the status view show M0 as closed, and the sequencing check (D-112) stops treating M1 and later as starting early.
 
@@ -38,10 +38,11 @@ Closing M0 does not award weighted credit. The 10 M0 plan tasks (34 weight, see 
 - Exists: SECURITY.md with the contact dinesh@kritvaos.in and GitHub private vulnerability reporting. The Security Owner states the route was tested on 18 October 2026 (D-068); that is an owner statement, not verified from the repository.
 - Left: PD-017, a recorded test email to the Security Owner's mailbox so the readiness check `security_policy` can move from OPEN to ATTESTED; then the task evidence (date and who received it) is written down.
 
-### kritva-core (PROPOSED-NEW-CORE-001, weight 5; PD-015, blocking)
+### kritva-core (PROPOSED-NEW-CORE-001, weight 5; PD-015 decided)
 
 - Exists: AGENTS.md, CODEOWNERS, SECURITY.md, commit-message-check, secret-scan, readme-check, source-header-check, status-report and core CI workflows.
-- Left: the owner decides PD-015; then the engineering contract is drafted and approved, a pin file records its exact commit SHA and SHA-256, and a CI check fails when they differ (`contract_pin`). This is the only M0 item that needs new content rather than review.
+- Done (D-113): PD-015 decided; `docs/development/ENGINEERING_CONTRACT.md` merged and pinned at commit 71a82e9b6e2ec3c6155270391adaa30e7751c1b9 (SHA-256 b57e24ba…7021) with the `contract-pin-check` workflow.
+- Left: the owner adds `contract-pin-check` to the main ruleset and confirms the pinned text when D-113 merges; the task earns no credit until it is baselined, approved and CI-evidenced.
 
 ### kritva-program (PROPOSED-NEW-PROGRAM-001, -003, -004, -005, weight 5, 4, 3 and 3; REV-001, REV-002, REV-003; PD-009)
 
@@ -50,7 +51,7 @@ Closing M0 does not award weighted credit. The 10 M0 plan tasks (34 weight, see 
 
 ## Suggested order
 
-1. Owner approves the M0 task definitions (criteria) and decides PD-015, PD-014 and PD-017.
+1. Owner approves the M0 task definitions (criteria) and decides PD-014 and PD-017 (PD-015 is decided: D-113).
 2. Record REV-001 to REV-003 for the program, then REV-004 to REV-007 repository by repository starting with Sense (nothing missing except the review), then Motion, Mind, Skill.
 3. Run the Community mailbox test (PD-017); start Core contract drafting.
 4. Baseline the 10 M0 tasks together with the Core and Community plan tasks in baseline v11 (no credit on baselining).

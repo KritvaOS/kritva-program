@@ -95,7 +95,7 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 | PLANNING_TASK | PROPOSED-NEW-PROGRAM-003 | Program | M0 | Program register and planning controls |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-PROGRAM-004 | Program | M0 | Program approval and decision records |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-PROGRAM-005 | Program | M0 | Program validation and governance checks |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-CORE-001 | Core | M0 | Core engineering contract and version pin |  | 5 | 4 | 6 | APPROVED_PLAN | BLOCKED (PD-015) | 0 | true | not recorded in this draft |
+| PLANNING_TASK | PROPOSED-NEW-CORE-001 | Core | M0 | Core engineering contract and version pin |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-CORE-002 | Core | M2 | Core build and artifact integration |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-CORE-003 | Core | M8 | Core release and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-001 | Community | M0 | Security reporting path and mailbox verification |  | 2 | 1 | 3 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
