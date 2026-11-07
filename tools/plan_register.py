@@ -115,9 +115,11 @@ def _base_by_repo(c):
         m = re.match(r"^V2-M\d+-([A-Z]+)-", k)
         if m and v.get("weighted"):
             name = m.group(1).capitalize()
-            a = out.setdefault(name, [0, 0])
+            a = out.setdefault(name, [0, 0, 0, 0])
             a[0] += v["weight"]
             a[1] += v["accepted_weight"]
+            a[2] += v.get("tasks", 0)
+            a[3] += v.get("credited", 0)
     return out
 
 
@@ -159,7 +161,8 @@ def summary(rows, c, text=None):
                                  "baseline": (base_m.get(k) or [0, 0])[0], "accepted": (base_m.get(k) or [0, 0])[1]}
                              for k, v in sorted(by_m.items())},
             "by_repo": {k: {"rows": v[0], "point": v[1], "low": v[2], "high": v[3],
-                                   "baseline": (base_r.get(k) or [0, 0])[0], "accepted": (base_r.get(k) or [0, 0])[1]} for k, v in sorted(by_r.items(), key=lambda kv: REPOS.index(kv[0]) if kv[0] in REPOS else 99)}}
+                                   "baseline": (base_r.get(k) or [0, 0])[0], "accepted": (base_r.get(k) or [0, 0])[1],
+                                   "baseline_tasks": (base_r.get(k) or [0, 0, 0, 0])[2], "accepted_tasks": (base_r.get(k) or [0, 0, 0, 0])[3]} for k, v in sorted(by_r.items(), key=lambda kv: REPOS.index(kv[0]) if kv[0] in REPOS else 99)}}
 
 
 def view_lines(c):

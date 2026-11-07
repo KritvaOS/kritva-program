@@ -88,7 +88,7 @@ def header_lines(c):
             f"Validation: {errs} error(s), {warns} warning(s) (see Data health). "
             "Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).", "",
             "Views are snapshots of the records, not approvals, schedule commitments or forecasts. "
-            "The measures are never combined into one health figure.", ""]
+            "Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.", ""]
 
 
 def owner_action_rows(c):
@@ -321,35 +321,85 @@ def _share(done, total):
     return f"{100 * done / total:.1f}%" if total else "n/a"
 
 
-def headline_lines(c):
+_FOUNDATION_REPO = {"CORE": "Core", "COMMUNITY": "Community", "CI_DEV_INFRA": "Program"}
+
+
+def _foundation_by_repo(c):
+    """Completed-before-V2 baseline work per repository: [accepted weight, weight, accepted tasks, tasks]."""
+    out = {}
+    bm = c.get("by_milestone") or {}
+    for r in c.get("milestone_alignment") or []:
+        if r.get("class") == "PRE_V2" and r.get("workstream") in _FOUNDATION_REPO:
+            a = out.setdefault(_FOUNDATION_REPO[r["workstream"]], [0, 0, 0, 0])
+            m = bm.get(r.get("milestone"), {})
+            a[0] += r["accepted_weight"]
+            a[1] += r["weight"]
+            a[2] += m.get("credited", 0)
+            a[3] += m.get("tasks", 0)
+    return out
+
+
+def _v2_tasks_by_milestone(c):
+    out = {}
+    for k, v in (c.get("by_milestone") or {}).items():
+        m = re.match(r"^V2-(M\d+)-", k)
+        if m:
+            a = out.setdefault(m.group(1), [0, 0])
+            a[0] += v.get("credited", 0)
+            a[1] += v.get("tasks", 0)
+    return out
+
+
+def totals(c):
+    """Single program view: completed foundation + V2 baseline + approved plan (not yet baselined). None if the register is missing."""
     s = c.get("plan_register")
-    L = ["## V2 progress at a glance", ""]
     if not s:
+        return None
+    fnd = _foundation_by_repo(c)
+    fa, fw = sum(v[0] for v in fnd.values()), sum(v[1] for v in fnd.values())
+    fta, ft = sum(v[2] for v in fnd.values()), sum(v[3] for v in fnd.values())
+    ba, bw = s["v2_accepted_weight"], s["v2_baseline_weight"]
+    bta = sum(v["accepted_tasks"] for v in s["by_repo"].values())
+    bt = sum(v["baseline_tasks"] for v in s["by_repo"].values())
+    return {"fa": fa, "fw": fw, "fta": fta, "ft": ft, "ba": ba, "bw": bw, "bta": bta, "bt": bt,
+            "pw": s["point"], "plo": s["low"], "phi": s["high"], "pt": s["rows"],
+            "acc": fa + ba, "tot": fw + bw + s["point"], "lo": fw + bw + s["low"], "hi": fw + bw + s["high"],
+            "tacc": fta + bta, "ttot": ft + bt + s["rows"]}
+
+
+def headline_lines(c):
+    t = totals(c)
+    L = ["## Program progress at a glance", ""]
+    if not t:
         return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
-    base, acc = s["v2_baseline_weight"], s["v2_accepted_weight"]
-    tot, lo_t, hi_t = base + s["point"], base + s["low"], base + s["high"]
-    return L + ["```text",
-                f"V2 approved-plan coverage: {_share(acc, tot)}  ({acc} / {tot} weight)",
-                f"{_bar20(acc, tot)}",
-                "```", "",
-                f"- Plan estimate range: {_share(acc, hi_t)} to {_share(acc, lo_t)} (total weight {lo_t} to {hi_t}).",
-                f"- V2 baseline acceptance: {acc} / {base} = {_share(acc, base)} (approved baseline tasks only).",
-                f"- Approved plan with no credit yet: {s['rows']} tasks, weight {s['point']} [{s['low']}-{s['high']}]; "
-                f"{s['retired_parents']} retired parents are not counted.",
-                "- Physical validation (V2-M6) is on HOLD and excluded. Mechanical, actuator, enterprise and raas work are outside this view.", "",
-                "Credit comes only from baseline tasks with an approval, a completed task and CI evidence. "
-                "Planning weights are estimates and earn nothing until they are baselined.", ""]
+    L += ["```text", f"Program completion: {_share(t['acc'], t['tot'])}  ({t['acc']} / {t['tot']} weight)", _bar20(t["acc"], t["tot"]), "```", "",
+          "Accepted weight across completed Foundation work and accepted V2 baseline tasks, divided by total Foundation weight, V2 baseline weight and owner-approved V2 planning weight. "
+          "Planning-only tasks are in the denominator but earn no credit until they are baselined and accepted. "
+          f"Plan estimate range {_share(t['acc'], t['hi'])} to {_share(t['acc'], t['lo'])} (total weight {t['lo']} to {t['hi']}). "
+          f"Tasks accepted: {t['tacc']} of {t['ttot']}.", "",
+          "| Component | Accepted / total weight | Tasks accepted / total | What it is |", "|---|---|---|---|",
+          f"| Completed Foundation (PRE_V2) | {_fmt(t['fa'])} / {_fmt(t['fw'])} | {t['fta']} / {t['ft']} | Core R1.0, Community I2-I4 and the program CI task, completed before the V2 plan |",
+          f"| V2 baselined | {t['ba']} / {t['bw']} | {t['bta']} / {t['bt']} | Approved baseline tasks (Sense, Motion) |",
+          f"| V2 approved planning scope (not baselined) | 0 / {t['pw']} | 0 / {t['pt']} | Owner-approved scope not yet in the baseline; not necessarily ready to execute; no credit until baselined and accepted |",
+          f"| **Total** | **{t['acc']} / {t['tot']}** | **{t['tacc']} / {t['ttot']}** | **{_share(t['acc'], t['tot'])}** |", "",
+          "Moving approved-plan tasks into the baseline later changes which row they sit in, not the total or the percentage. "
+          "Credit comes only from baselined tasks with an approval, a completed task and CI evidence. Plan weights are estimates. "
+          "Physical validation (V2-M6) is on HOLD and excluded; mechanical, actuator, enterprise and raas work are outside this view.", ""]
+    return L
 
 
 def milestone_table_lines(c):
     s = c.get("plan_register")
-    L = ["## Milestones M0-M8", ""]
-    if not s:
+    t = totals(c)
+    L = ["## Milestones", ""]
+    if not s or not t:
         return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
     meta = {m["id"].replace("V2-", ""): m for m in (c.get("v2_plan") or {}).get("milestones", [])}
     titles = s.get("titles") or {}
-    L += ["Accepted weight over total plan weight (V2 baseline plus approved plan).", "",
-          "| Milestone | Title | Target | Progress | Accepted / total | Share | Plan tasks |", "|---|---|---|---|---|---|---|"]
+    vt = _v2_tasks_by_milestone(c)
+    L += ["Accepted weight over total weight (completed foundation, V2 baseline and approved plan).", "",
+          "| Milestone | Title | Target | Progress | Accepted / total weight | Share | Tasks accepted / total |", "|---|---|---|---|---|---|---|",
+          f"| Foundation (PRE_V2) | Completed before V2 | done | `{_bar20(t['fa'], t['fw'])}` | {_fmt(t['fa'])} / {_fmt(t['fw'])} | {_share(t['fa'], t['fw'])} | {t['fta']} / {t['ft']} |"]
     changed = False
     for i in range(9):
         k = f"M{i}"
@@ -365,46 +415,32 @@ def milestone_table_lines(c):
             changed = True
         v = s["by_milestone"].get(k, {"baseline": 0, "accepted": 0, "point": 0, "rows": 0})
         tot = v["baseline"] + v["point"]
-        L.append(f"| {k} | {title} | {date} | `{_bar20(v['accepted'], tot)}` | "
-                 f"{v['accepted']} / {tot} | {_share(v['accepted'], tot)} | {v['rows']} |")
-    tot = s["v2_baseline_weight"] + s["point"]
-    L.append(f"| **Total** | | | `{_bar20(s['v2_accepted_weight'], tot)}` | **{s['v2_accepted_weight']} / {tot}** | **{_share(s['v2_accepted_weight'], tot)}** | {s['rows']} |")
+        bt = vt.get(k, [0, 0])
+        L.append(f"| {k} | {title} | {date} | `{_bar20(v['accepted'], tot)}` | {v['accepted']} / {tot} | {_share(v['accepted'], tot)} | {bt[0]} / {bt[1] + v['rows']} |")
+    L.append(f"| **Total** | | | `{_bar20(t['acc'], t['tot'])}` | **{t['acc']} / {t['tot']}** | **{_share(t['acc'], t['tot'])}** | **{t['tacc']} / {t['ttot']}** |")
     L += ["", "Target dates are the owner-approved planning dates; they are not commitments or forecasts."]
     if changed:
         L.append("\\* The plan title differs from the V2 milestone record (booking and commercial work belongs to kritva-raas, outside this plan); the date is carried over and must be re-confirmed.")
     return L + [""]
 
 
-_FOUNDATION_REPO = {"CORE": "Core", "COMMUNITY": "Community", "CI_DEV_INFRA": "Program"}
-
-
-def _foundation_by_repo(c):
-    out = {}
-    for r in c.get("milestone_alignment") or []:
-        if r.get("class") == "PRE_V2" and r.get("workstream") in _FOUNDATION_REPO:
-            a = out.setdefault(_FOUNDATION_REPO[r["workstream"]], [0, 0])
-            a[0] += r["accepted_weight"]
-            a[1] += r["weight"]
-    return out
-
-
 def repo_table_lines(c):
     s = c.get("plan_register")
+    t = totals(c)
     L = ["## Repositories", ""]
-    if not s:
+    if not s or not t:
         return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
     fnd = _foundation_by_repo(c)
-    L += ["V2 progress only. Core and Community show 0 here because their accepted work is PRE_V2 foundation (kept in its own column, never added to V2).", "",
-          "| Repository | V2 progress | V2 accepted / total | Share | Foundation PRE_V2 (separate) | Plan tasks |", "|---|---|---|---|---|---|"]
-    ra = ra_t = 0
+    L += ["Task and weight totals combine completed Foundation (PRE_V2) work, V2 baseline tasks and approved V2 planning tasks. Each repository row adds up to the program totals.", "",
+          "| Repository | Accepted tasks / total tasks | Accepted weight / total weight | Completion |", "|---|---|---|---|"]
     for k, v in s["by_repo"].items():
-        tot = v["baseline"] + v["point"]
-        ra += v["accepted"]; ra_t += tot
-        f = fnd.get(k)
-        L.append(f"| {k} | `{_bar20(v['accepted'], tot)}` | {v['accepted']} / {tot} | {_share(v['accepted'], tot)} | "
-                 f"{f'{_fmt(f[0])} / {_fmt(f[1])} accepted' if f else 'none'} | {v['rows']} |")
-    fa = sum(x[0] for x in fnd.values()); ft = sum(x[1] for x in fnd.values())
-    L.append(f"| **Total** | `{_bar20(ra, ra_t)}` | **{ra} / {ra_t}** | **{_share(ra, ra_t)}** | {_fmt(fa)} / {_fmt(ft)} accepted | {s['rows']} |")
+        f = fnd.get(k, [0, 0, 0, 0])
+        acc = f[0] + v["accepted"]
+        tot = f[1] + v["baseline"] + v["point"]
+        ta = f[2] + v.get("accepted_tasks", 0)
+        tn = f[3] + v.get("baseline_tasks", 0) + v["rows"]
+        L.append(f"| {k} | {ta} / {tn} | {_fmt(acc)} / {_fmt(tot)} | `{_bar20(acc, tot)}` {_share(acc, tot)} |")
+    L.append(f"| **Total** | **{t['tacc']} / {t['ttot']}** | **{t['acc']} / {t['tot']}** | `{_bar20(t['acc'], t['tot'])}` **{_share(t['acc'], t['tot'])}** |")
     return L + [""]
 
 
@@ -413,25 +449,32 @@ def matrix_lines(c):
     L = ["## Work by repository and milestone", ""]
     if not s or not s.get("matrix"):
         return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
+    fnd = _foundation_by_repo(c)
     ms = [f"M{i}" for i in range(9) if i != 6]
-    L += ["Each cell is accepted / total weight (share). A dot means no work planned for that repository in that milestone. "
-          "Total weight is baseline plus approved plan; nothing is accepted until it is baselined and credited.", "",
-          "| Repository | " + " | ".join(ms) + " | All |", "|---|" + "---|" * (len(ms) + 1)]
-    col = {m: [0, 0] for m in ms}
+    L += ["Each cell is accepted / total weight (share). A dot means no work planned for that repository in that milestone.", "",
+          "| Repository | Foundation (PRE_V2) | " + " | ".join(ms) + " | All |", "|---|---|" + "---|" * (len(ms) + 1)]
+    col = {m: [0, 0] for m in ["Foundation"] + ms}
+    cell = lambda a, n: f"{_fmt(a)}/{_fmt(n)} ({100 * a / n:.0f}%)"
     for repo in s["by_repo"]:
+        f = fnd.get(repo)
         row, ra, rt = [], 0, 0
+        if f and f[1]:
+            row.append(cell(f[0], f[1])); ra += f[0]; rt += f[1]
+            col["Foundation"][0] += f[0]; col["Foundation"][1] += f[1]
+        else:
+            row.append("·")
         for m in ms:
             v = s["matrix"].get(repo, {}).get(m)
             if not v or not (v["baseline"] + v["point"]):
                 row.append("·")
                 continue
             tot = v["baseline"] + v["point"]
-            row.append(f"{v['accepted']}/{tot} ({100 * v['accepted'] / tot:.0f}%)")
+            row.append(cell(v["accepted"], tot))
             ra += v["accepted"]; rt += tot
             col[m][0] += v["accepted"]; col[m][1] += tot
-        L.append(f"| {repo} | " + " | ".join(row) + f" | {ra}/{rt} ({_share(ra, rt)}) |")
+        L.append(f"| {repo} | " + " | ".join(row) + f" | {_fmt(ra)}/{_fmt(rt)} ({_share(ra, rt)}) |")
     ta = sum(v[0] for v in col.values()); tt = sum(v[1] for v in col.values())
-    L.append("| **All** | " + " | ".join(f"{v[0]}/{v[1]} ({100 * v[0] / v[1]:.0f}%)" if v[1] else "·" for v in col.values()) + f" | **{ta}/{tt} ({_share(ta, tt)})** |")
+    L.append("| **All** | " + " | ".join(cell(v[0], v[1]) if v[1] else "·" for v in col.values()) + f" | **{_fmt(ta)}/{_fmt(tt)} ({_share(ta, tt)})** |")
     return L + ["", "Task-level detail for every cell is in [STATUS_DETAIL.md](STATUS_DETAIL.md) (Plan tasks by milestone and repository).", ""]
 
 
@@ -461,16 +504,22 @@ def attention_lines(c, limit=5):
 
 
 def foundation_lines(c):
-    rows = [r for r in (c.get("milestone_alignment") or []) if r.get("class") == "PRE_V2"]
-    L = ["## PRE_V2 foundation history (separate from V2 progress)", ""]
-    if not rows:
-        return L + ["No PRE_V2 baseline records.", ""]
-    w = sum(r["weight"] for r in rows)
-    a = sum(r["accepted_weight"] for r in rows)
+    """Notes on the single total: how it relates to the earlier 90.64% figure, and the Community safety caveat."""
+    t = totals(c)
+    if not t:
+        return []
     parts = _progress_parts(c)
-    tail = f" Together with V2 baseline tasks this is the historical {_fmt(parts[0])}/{_fmt(parts[1])} = {c['progress']['accepted_progress_pct']}% in the baseline file." if parts else ""
-    return L + [f"Foundation work accepted before the V2 plan: {_fmt(a)} / {_fmt(w)} weight (Core R1.0, Community I2-I4 and the program CI task).{tail} "
-                "That figure mixes completed foundation work with a small V2 baseline; it is not V2 completion and is never used as the V2 headline.", ""]
+    L = ["## Notes on the total", ""]
+    if parts:
+        L += [f"The previously displayed {c['progress']['accepted_progress_pct']}% ({_fmt(parts[0])}/{_fmt(parts[1])}) used the same accepted weight but a narrower denominator: "
+              f"it excluded the {t['pw']} points of approved V2 planning scope not yet baselined. The consolidated measure includes that scope, giving {t['acc']}/{t['tot']} ({_share(t['acc'], t['tot'])}).", "",
+              "Consolidated program completion is a reporting aggregate across Foundation and V2 scope. It does not merge their baselines, alter task ownership, "
+              "transfer credit between phases, or make planning-only tasks credit-eligible. Promoting planning tasks into a later baseline changes their classification, not the denominator or the accepted credit.", ""]
+    fnd = _foundation_by_repo(c)
+    if "Community" in fnd:
+        L += ["Community I3/I4 software implementation credit is included in Foundation (PRE_V2). The KOS-I3 and KOS-I4 human safety reviews remain open, KOS-I4 formal closure and physical actuator deployment stay blocked by them, and KOS-CI-001 is deferred. "
+              "Software acceptance does not establish human-safety approval or physical validation.", ""]
+    return L
 
 
 def health_lines(c):

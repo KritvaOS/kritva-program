@@ -136,7 +136,7 @@ class Content(unittest.TestCase):
     def test_no_blended_health_figure(self):
         t = view(doc()).lower()
         self.assertNotIn("overall health", t)
-        self.assertIn("never combined", t)
+        self.assertIn("reported separately", t)
 
     def test_view_is_deterministic(self):
         self.assertEqual(view(doc()), view(doc()))
@@ -182,12 +182,12 @@ class Committed(unittest.TestCase):
         self.assertLess(len(self.v.splitlines()), 150)
         self.assertNotIn("mermaid", self.v.lower())
         self.assertEqual(self.v.count("```") % 2, 0)
-        for h in ("## V2 progress at a glance", "## Milestones M0-M8", "## Repositories", "## Needs owner attention",
-                  "## PRE_V2 foundation history (separate from V2 progress)", "## Data health"):
+        for h in ("## Program progress at a glance", "## Milestones", "## Repositories", "## Work by repository and milestone",
+                  "## Needs owner attention", "## Notes on the total", "## Data health"):
             self.assertIn(h, self.v)
         for h in ("## What changed", "## Phase order", "## Dated milestones", "## V2 milestone plan"):
             self.assertNotIn(h, self.v)
-        self.assertIn("V2 approved-plan coverage:", self.v)
+        self.assertIn("Program completion:", self.v)
         for m in range(9):
             self.assertRegex(self.v, rf"\| M{m} \|")
         self.assertIn("HOLD", self.v)
@@ -219,30 +219,47 @@ if __name__ == "__main__":
 class ExecutiveView(unittest.TestCase):
     def plan_doc(self):
         c = doc()
+        c["by_milestone"] = {"KF-CORE-R10": {"tasks": 4, "credited": 3, "weight": 10, "accepted_weight": 9, "weighted": True},
+                             "V2-M1-SENSE-001": {"tasks": 2, "credited": 1, "weight": 20, "accepted_weight": 10, "weighted": True}}
+        c["milestone_alignment"] = [{"class": "PRE_V2", "workstream": "CORE", "milestone": "KF-CORE-R10", "weight": 10, "accepted_weight": 9}]
         c["plan_register"] = {"rows": 2, "point": 30, "low": 20, "high": 40, "retired_parents": 1, "v2_baseline_weight": 20, "v2_accepted_weight": 10,
+                              "titles": {"M0": "FOUNDATION", "M1": "STUDIO"},
                               "by_milestone": {"M0": {"rows": 1, "point": 10, "low": 5, "high": 15, "baseline": 0, "accepted": 0},
                                                "M1": {"rows": 1, "point": 20, "low": 15, "high": 25, "baseline": 20, "accepted": 10}},
-                              "by_repo": {"Sense": {"rows": 2, "point": 30, "low": 20, "high": 40, "baseline": 20, "accepted": 10}}}
-        c["milestone_alignment"] = [{"class": "PRE_V2", "workstream": "CORE", "weight": 10, "accepted_weight": 9}]
-        c["plan_register"]["titles"] = {"M0": "FOUNDATION", "M1": "STUDIO"}
-        c["plan_register"]["matrix"] = {"Sense": {"M0": {"rows": 1, "point": 10, "baseline": 0, "accepted": 0},
-                                                  "M1": {"rows": 1, "point": 0, "baseline": 20, "accepted": 10}}}
-        c["plan_register"]["tasks"] = [{"id": "T-1", "repo": "Sense", "milestone": "M0", "title": "x", "weight": 10, "status": "NOT_STARTED"}]
+                              "by_repo": {"Core": {"rows": 1, "point": 10, "low": 5, "high": 15, "baseline": 0, "accepted": 0, "baseline_tasks": 0, "accepted_tasks": 0},
+                                          "Sense": {"rows": 1, "point": 20, "low": 15, "high": 25, "baseline": 20, "accepted": 10, "baseline_tasks": 2, "accepted_tasks": 1}},
+                              "matrix": {"Core": {"M0": {"rows": 1, "point": 10, "baseline": 0, "accepted": 0}},
+                                         "Sense": {"M1": {"rows": 1, "point": 20, "baseline": 20, "accepted": 10}}},
+                              "tasks": [{"id": "T-1", "repo": "Core", "milestone": "M0", "title": "x", "weight": 10, "status": "NOT_STARTED"}]}
         c["v2_plan"] = {"milestones": [{"id": "V2-M0", "phase": "P0 FOUNDATION", "target_date": "2026-10-30"},
                                        {"id": "V2-M1", "phase": "P1 OLD NAME", "target_date": "2026-11-30"}]}
         return c
 
-    def test_headline_is_v2_plan_coverage_not_the_historical_figure(self):
-        t = exec_view(self.plan_doc())
-        self.assertIn("V2 approved-plan coverage: 20.0%  (10 / 50 weight)", t)
-        self.assertIn("10 / 20 = 50.0%", t)
-        self.assertIn("never used as the V2 headline", t)
+    def test_one_total_combines_foundation_baseline_and_plan(self):
+        t = D.totals(self.plan_doc())
+        self.assertEqual((t["acc"], t["tot"]), (19, 60))  # 9 + 10 accepted of 10 + 20 + 30
+        self.assertEqual((t["tacc"], t["ttot"]), (4, 8))  # 3 + 1 accepted of 4 + 2 + 2
+        v = exec_view(self.plan_doc())
+        self.assertIn("Program completion: 31.7%  (19 / 60 weight)", v)
+        self.assertIn("| **Total** | **19 / 60** | **4 / 8** | **31.7%** |", v)
+        self.assertNotIn("before v11", v.lower())
 
-    def test_milestone_rows_have_bars_and_m6_hold(self):
+    def test_milestone_table_has_foundation_row_bars_and_m6_hold(self):
         t = exec_view(self.plan_doc())
-        self.assertRegex(t, r"\| M1 \|[^\n]*\| 10 / 40 \| 25\.0% \| 1 \|")
-        self.assertRegex(t, r"\| M0 \|[^\n]*\| 0 / 10 \| 0\.0% \| 1 \|")
+        self.assertRegex(t, r"\| Foundation \(PRE_V2\) \| Completed before V2 \| done \|[^\n]*\| 9 / 10 \| 90\.0% \| 3 / 4 \|")
+        self.assertRegex(t, r"\| M1 \| STUDIO \| 2026-11-30 \* \|[^\n]*\| 10 / 40 \| 25\.0% \| 1 / 3 \|")
         self.assertIn("HOLD (excluded)", t)
+        self.assertIn("must be re-confirmed", t)
+
+    def test_repo_table_includes_foundation_work(self):
+        t = exec_view(self.plan_doc())
+        self.assertIn("| Core | 3 / 5 | 9 / 20 |", t)
+        self.assertIn("| Sense | 1 / 3 | 10 / 40 |", t)
+
+    def test_matrix_has_foundation_column(self):
+        t = exec_view(self.plan_doc())
+        self.assertIn("| Repository | Foundation (PRE_V2) | M0 |", t)
+        self.assertIn("| Core | 9/10 (90%) | 0/10 (0%) |", t)
 
     def test_attention_is_capped_at_five(self):
         c = self.plan_doc()
@@ -254,21 +271,18 @@ class ExecutiveView(unittest.TestCase):
     def test_missing_register_is_not_verified(self):
         self.assertIn("NOT_VERIFIED", exec_view(doc()))
 
-    def test_plan_title_overrides_record_and_flags_date(self):
-        t = exec_view(self.plan_doc())
-        self.assertIn("| M1 | STUDIO | 2026-11-30 * |", t)
-        self.assertIn("| M0 | FOUNDATION | 2026-10-30 |", t)
-        self.assertIn("must be re-confirmed", t)
-
-    def test_foundation_is_a_separate_repo_column(self):
-        t = exec_view(self.plan_doc())
-        self.assertIn("Foundation PRE_V2 (separate)", t)
-
-    def test_matrix_shows_share_per_repo_and_milestone(self):
-        t = exec_view(self.plan_doc())
-        self.assertIn("| Sense | 0/10 (0%) | 10/20 (50%) |", t)
-        self.assertIn("**10/30 (33.3%)**", t)
-
     def test_detail_lists_plan_tasks(self):
         t = "\n".join(D.plan_tasks_lines(self.plan_doc()))
-        self.assertIn("| M0 | Sense | T-1 | x | 10 | NOT_STARTED |", t)
+        self.assertIn("| M0 | Core | T-1 | x | 10 | NOT_STARTED |", t)
+
+    def test_rollups_reconcile_to_the_headline(self):
+        c = self.plan_doc()
+        t = D.totals(c)
+        fnd = D._foundation_by_repo(c)
+        reg = c["plan_register"]["by_repo"]
+        self.assertEqual(sum(v[0] for v in fnd.values()) + sum(v["accepted"] for v in reg.values()), t["acc"])
+        self.assertEqual(sum(v[1] for v in fnd.values()) + sum(v["baseline"] + v["point"] for v in reg.values()), t["tot"])
+        v = exec_view(c)
+        self.assertIn("Planning-only tasks are in the denominator but earn no credit", v)
+        self.assertIn("V2 approved planning scope (not baselined)", v)
+        self.assertIn("does not merge their baselines", v)
