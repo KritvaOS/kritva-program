@@ -265,7 +265,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T15:49:02Z",
+  "generated_at": "2026-11-07T15:58:13Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 44,
@@ -1922,7 +1922,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 21,
+        "age_hours": 22,
         "ahead_by": 6,
         "changed_files": [
           "Makefile",
@@ -1941,7 +1941,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 21,
+        "age_hours": 22,
         "ahead_by": 4,
         "changed_files": [
           "planning/MILESTONE.md",
@@ -1959,7 +1959,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 21,
+        "age_hours": 22,
         "ahead_by": 6,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -1988,7 +1988,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 21,
+        "age_hours": 22,
         "ahead_by": 92,
         "changed_files": [
           ".github/kritva-gate.json",
