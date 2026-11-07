@@ -11,11 +11,27 @@
         }
       ],
       "repo": "KritvaOS/kritva-core",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "37192914607",
       "state": "RETRIEVED",
       "status": "completed",
       "workflow": "Kritva Core CI"
+    },
+    "KritvaOS/kritva-mind#42385456931": {
+      "conclusion": "success",
+      "head_sha": "564c4e002c19b09309093a47aab1c7a7eda12825",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "unit-tests"
+        }
+      ],
+      "repo": "KritvaOS/kritva-mind",
+      "retrieved_at": "2026-11-07T18:12:09Z",
+      "run_id": "42385456931",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "unit-tests"
     },
     "KritvaOS/kritva-motion#41876610087": {
       "conclusion": "success",
@@ -27,7 +43,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-motion",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41876610087",
       "state": "RETRIEVED",
       "status": "completed",
@@ -43,7 +59,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-motion",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41876610404",
       "state": "RETRIEVED",
       "status": "completed",
@@ -59,7 +75,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-motion",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41876610409",
       "state": "RETRIEVED",
       "status": "completed",
@@ -75,7 +91,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-motion",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "42252338541",
       "state": "RETRIEVED",
       "status": "completed",
@@ -91,7 +107,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-motion",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "42252338614",
       "state": "RETRIEVED",
       "status": "completed",
@@ -107,11 +123,59 @@
         }
       ],
       "repo": "KritvaOS/kritva-motion",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "42252338615",
       "state": "RETRIEVED",
       "status": "completed",
       "workflow": "readme-check"
+    },
+    "KritvaOS/kritva-motion#42385668725": {
+      "conclusion": "success",
+      "head_sha": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "unit-tests"
+        }
+      ],
+      "repo": "KritvaOS/kritva-motion",
+      "retrieved_at": "2026-11-07T18:12:09Z",
+      "run_id": "42385668725",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "unit-tests"
+    },
+    "KritvaOS/kritva-motion#42385668726": {
+      "conclusion": "success",
+      "head_sha": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "readme-check"
+        }
+      ],
+      "repo": "KritvaOS/kritva-motion",
+      "retrieved_at": "2026-11-07T18:12:09Z",
+      "run_id": "42385668726",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "readme-check"
+    },
+    "KritvaOS/kritva-motion#42385668763": {
+      "conclusion": "success",
+      "head_sha": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "secret-scan"
+        }
+      ],
+      "repo": "KritvaOS/kritva-motion",
+      "retrieved_at": "2026-11-07T18:12:09Z",
+      "run_id": "42385668763",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "secret-scan"
     },
     "KritvaOS/kritva-sense#40994325092": {
       "conclusion": "success",
@@ -123,7 +187,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-sense",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "40994325092",
       "state": "RETRIEVED",
       "status": "completed",
@@ -139,7 +203,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-sense",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41267842700",
       "state": "RETRIEVED",
       "status": "completed",
@@ -155,7 +219,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-sense",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41275942226",
       "state": "RETRIEVED",
       "status": "completed",
@@ -171,7 +235,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-sense",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41278515695",
       "state": "RETRIEVED",
       "status": "completed",
@@ -187,7 +251,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-sense",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41289421496",
       "state": "RETRIEVED",
       "status": "completed",
@@ -203,7 +267,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-sense",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41292919590",
       "state": "RETRIEVED",
       "status": "completed",
@@ -219,7 +283,7 @@
         }
       ],
       "repo": "KritvaOS/kritva-sense",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41298259048",
       "state": "RETRIEVED",
       "status": "completed",
@@ -235,11 +299,43 @@
         }
       ],
       "repo": "KritvaOS/kritva-sense",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "41761323273",
       "state": "RETRIEVED",
       "status": "completed",
       "workflow": "unit-tests"
+    },
+    "KritvaOS/kritva-sense#42329065787": {
+      "conclusion": "success",
+      "head_sha": "ddf95185341656bea5f26b2f9196838321853852",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "unit-tests"
+        }
+      ],
+      "repo": "KritvaOS/kritva-sense",
+      "retrieved_at": "2026-11-07T18:12:09Z",
+      "run_id": "42329065787",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "unit-tests"
+    },
+    "KritvaOS/kritva-skill#41598873743": {
+      "conclusion": "success",
+      "head_sha": "c17192001f6c672819589857e8644ad21573d8d8",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "secret-scan"
+        }
+      ],
+      "repo": "KritvaOS/kritva-skill",
+      "retrieved_at": "2026-11-07T18:12:09Z",
+      "run_id": "41598873743",
+      "state": "RETRIEVED",
+      "status": "completed",
+      "workflow": "secret-scan"
     },
     "KritvaOS/kritvaos-community#37253855540": {
       "conclusion": "success",
@@ -255,7 +351,7 @@
         }
       ],
       "repo": "KritvaOS/kritvaos-community",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "37253855540",
       "state": "RETRIEVED",
       "status": "completed",
@@ -275,7 +371,7 @@
         }
       ],
       "repo": "KritvaOS/kritvaos-community",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "37256868535",
       "state": "RETRIEVED",
       "status": "completed",
@@ -295,7 +391,7 @@
         }
       ],
       "repo": "KritvaOS/kritvaos-community",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "37347653023",
       "state": "RETRIEVED",
       "status": "completed",
@@ -315,7 +411,7 @@
         }
       ],
       "repo": "KritvaOS/kritvaos-community",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "37405212290",
       "state": "RETRIEVED",
       "status": "completed",
@@ -335,7 +431,7 @@
         }
       ],
       "repo": "KritvaOS/kritvaos-community",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "37407633177",
       "state": "RETRIEVED",
       "status": "completed",
@@ -355,7 +451,7 @@
         }
       ],
       "repo": "KritvaOS/kritvaos-community",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "37497496804",
       "state": "RETRIEVED",
       "status": "completed",
@@ -375,7 +471,7 @@
         }
       ],
       "repo": "KritvaOS/kritvaos-community",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "37507901354",
       "state": "RETRIEVED",
       "status": "completed",
@@ -395,7 +491,7 @@
         }
       ],
       "repo": "KritvaOS/kritvaos-community",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "37561636952",
       "state": "RETRIEVED",
       "status": "completed",
@@ -427,7 +523,7 @@
         }
       ],
       "repo": "KritvaOS/kritvaos-community",
-      "retrieved_at": "2026-11-06T17:52:33Z",
+      "retrieved_at": "2026-11-07T18:12:09Z",
       "run_id": "38158709895",
       "state": "RETRIEVED",
       "status": "completed",
