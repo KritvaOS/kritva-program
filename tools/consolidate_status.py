@@ -1182,7 +1182,7 @@ def main():
         errors += [f"{plan_register.FILE}: {x}" for x in perrs2]
         c["errors"] = sorted(errors)
         if not perrs2:
-            c["plan_register"] = plan_register.summary(prows, c)
+            c["plan_register"] = plan_register.summary(prows, c, ptext)
     prev_c = None
     if prev_out.exists():
         try:

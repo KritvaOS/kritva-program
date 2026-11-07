@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-07T11:00:00Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T14:00:00Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. The measures are never combined into one health figure.
 
@@ -24,13 +24,13 @@ Credit comes only from baseline tasks with an approval, a completed task and CI 
 
 Accepted weight over total plan weight (V2 baseline plus approved plan).
 
-| Milestone | Phase | Target | Progress | Accepted / total | Share | Plan tasks |
+| Milestone | Title | Target | Progress | Accepted / total | Share | Plan tasks |
 |---|---|---|---|---|---|---|
 | M0 | FOUNDATION | 2026-10-30 | `░░░░░░░░░░░░░░░░░░░░` | 0 / 34 | 0.0% | 10 |
 | M1 | STUDIO | 2026-11-30 | `██████░░░░░░░░░░░░░░` | 10 / 32 | 31.2% | 5 |
 | M2 | BUILD & ARTIFACT | 2027-01-15 | `████░░░░░░░░░░░░░░░░` | 19 / 88 | 21.6% | 12 |
 | M3 | CONTROL PLANE | 2027-03-15 | `░░░░░░░░░░░░░░░░░░░░` | 0 / 48 | 0.0% | 10 |
-| M4 | BOOKING & COMMERCIAL | 2027-04-30 | `░░░░░░░░░░░░░░░░░░░░` | 0 / 18 | 0.0% | 4 |
+| M4 | DEVELOPER EXPERIENCE & ECOSYSTEM | 2027-04-30 * | `░░░░░░░░░░░░░░░░░░░░` | 0 / 18 | 0.0% | 4 |
 | M5 | EXECUTION | 2027-06-15 | `██░░░░░░░░░░░░░░░░░░` | 5 / 54 | 9.3% | 9 |
 | M6 | LAB & ROBOT | HOLD | HOLD (excluded) | n/a | n/a | n/a |
 | M7 | LIVE & RESULTS | 2027-08-15 | `████████░░░░░░░░░░░░` | 9 / 22 | 40.9% | 3 |
@@ -38,19 +38,39 @@ Accepted weight over total plan weight (V2 baseline plus approved plan).
 | **Total** | | | `███░░░░░░░░░░░░░░░░░` | **54 / 342** | **15.8%** | 59 |
 
 Target dates are the owner-approved planning dates; they are not commitments or forecasts.
+\* The plan title differs from the V2 milestone record (booking and commercial work belongs to kritva-raas, outside this plan); the date is carried over and must be re-confirmed.
 
 ## Repositories
 
-| Repository | Progress | Accepted / total | Share | Baseline accepted | Plan tasks |
+V2 progress only. Core and Community show 0 here because their accepted work is PRE_V2 foundation (kept in its own column, never added to V2).
+
+| Repository | V2 progress | V2 accepted / total | Share | Foundation PRE_V2 (separate) | Plan tasks |
 |---|---|---|---|---|---|
-| Program | `░░░░░░░░░░░░░░░░░░░░` | 0 / 20 | 0.0% | 0 / 0 | 5 |
-| Core | `░░░░░░░░░░░░░░░░░░░░` | 0 / 16 | 0.0% | 0 / 0 | 3 |
-| Community | `░░░░░░░░░░░░░░░░░░░░` | 0 / 139 | 0.0% | 0 / 0 | 31 |
-| Sense | `█████████████████░░░` | 44 / 52 | 84.6% | 44 / 49 | 1 |
-| Mind | `░░░░░░░░░░░░░░░░░░░░` | 0 / 53 | 0.0% | 0 / 0 | 10 |
-| Motion | `██████░░░░░░░░░░░░░░` | 10 / 33 | 30.3% | 10 / 18 | 3 |
-| Skill | `░░░░░░░░░░░░░░░░░░░░` | 0 / 29 | 0.0% | 0 / 0 | 6 |
-| **Total** | `███░░░░░░░░░░░░░░░░░` | **54 / 342** | **15.8%** | 54 / 67 | 59 |
+| Program | `░░░░░░░░░░░░░░░░░░░░` | 0 / 20 | 0.0% | 0 / 3 accepted | 5 |
+| Core | `░░░░░░░░░░░░░░░░░░░░` | 0 / 16 | 0.0% | 30 / 30 accepted | 3 |
+| Community | `░░░░░░░░░░░░░░░░░░░░` | 0 / 139 | 0.0% | 71 / 71 accepted | 31 |
+| Sense | `█████████████████░░░` | 44 / 52 | 84.6% | none | 1 |
+| Mind | `░░░░░░░░░░░░░░░░░░░░` | 0 / 53 | 0.0% | none | 10 |
+| Motion | `██████░░░░░░░░░░░░░░` | 10 / 33 | 30.3% | none | 3 |
+| Skill | `░░░░░░░░░░░░░░░░░░░░` | 0 / 29 | 0.0% | none | 6 |
+| **Total** | `███░░░░░░░░░░░░░░░░░` | **54 / 342** | **15.8%** | 101 / 104 accepted | 59 |
+
+## Work by repository and milestone
+
+Each cell is accepted / total weight (share). A dot means no work planned for that repository in that milestone. Total weight is baseline plus approved plan; nothing is accepted until it is baselined and credited.
+
+| Repository | M0 | M1 | M2 | M3 | M4 | M5 | M7 | M8 | All |
+|---|---|---|---|---|---|---|---|---|---|
+| Program | 0/15 (0%) | · | · | · | · | · | · | 0/5 (0%) | 0/20 (0.0%) |
+| Core | 0/5 (0%) | · | 0/5 (0%) | · | · | · | · | 0/6 (0%) | 0/16 (0.0%) |
+| Community | 0/2 (0%) | 0/12 (0%) | 0/26 (0%) | 0/43 (0%) | 0/18 (0%) | 0/19 (0%) | 0/13 (0%) | 0/6 (0%) | 0/139 (0.0%) |
+| Sense | 0/3 (0%) | 5/5 (100%) | 14/19 (74%) | · | · | 5/5 (100%) | 9/9 (100%) | 11/11 (100%) | 44/52 (84.6%) |
+| Mind | 0/3 (0%) | 0/5 (0%) | 0/21 (0%) | · | · | 0/18 (0%) | · | 0/6 (0%) | 0/53 (0.0%) |
+| Motion | 0/3 (0%) | 5/5 (100%) | 5/13 (38%) | · | · | 0/6 (0%) | · | 0/6 (0%) | 10/33 (30.3%) |
+| Skill | 0/3 (0%) | 0/5 (0%) | 0/4 (0%) | 0/5 (0%) | · | 0/6 (0%) | · | 0/6 (0%) | 0/29 (0.0%) |
+| **All** | 0/34 (0%) | 10/32 (31%) | 19/88 (22%) | 0/48 (0%) | 0/18 (0%) | 5/54 (9%) | 9/22 (41%) | 11/46 (24%) | **54/342 (15.8%)** |
+
+Task-level detail for every cell is in [STATUS_DETAIL.md](STATUS_DETAIL.md) (Plan tasks by milestone and repository).
 
 ## Needs owner attention
 

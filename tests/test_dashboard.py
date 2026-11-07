@@ -223,7 +223,13 @@ class ExecutiveView(unittest.TestCase):
                               "by_milestone": {"M0": {"rows": 1, "point": 10, "low": 5, "high": 15, "baseline": 0, "accepted": 0},
                                                "M1": {"rows": 1, "point": 20, "low": 15, "high": 25, "baseline": 20, "accepted": 10}},
                               "by_repo": {"Sense": {"rows": 2, "point": 30, "low": 20, "high": 40, "baseline": 20, "accepted": 10}}}
-        c["milestone_alignment"] = [{"class": "PRE_V2", "weight": 10, "accepted_weight": 9}]
+        c["milestone_alignment"] = [{"class": "PRE_V2", "workstream": "CORE", "weight": 10, "accepted_weight": 9}]
+        c["plan_register"]["titles"] = {"M0": "FOUNDATION", "M1": "STUDIO"}
+        c["plan_register"]["matrix"] = {"Sense": {"M0": {"rows": 1, "point": 10, "baseline": 0, "accepted": 0},
+                                                  "M1": {"rows": 1, "point": 0, "baseline": 20, "accepted": 10}}}
+        c["plan_register"]["tasks"] = [{"id": "T-1", "repo": "Sense", "milestone": "M0", "title": "x", "weight": 10, "status": "NOT_STARTED"}]
+        c["v2_plan"] = {"milestones": [{"id": "V2-M0", "phase": "P0 FOUNDATION", "target_date": "2026-10-30"},
+                                       {"id": "V2-M1", "phase": "P1 OLD NAME", "target_date": "2026-11-30"}]}
         return c
 
     def test_headline_is_v2_plan_coverage_not_the_historical_figure(self):
@@ -247,3 +253,22 @@ class ExecutiveView(unittest.TestCase):
 
     def test_missing_register_is_not_verified(self):
         self.assertIn("NOT_VERIFIED", exec_view(doc()))
+
+    def test_plan_title_overrides_record_and_flags_date(self):
+        t = exec_view(self.plan_doc())
+        self.assertIn("| M1 | STUDIO | 2026-11-30 * |", t)
+        self.assertIn("| M0 | FOUNDATION | 2026-10-30 |", t)
+        self.assertIn("must be re-confirmed", t)
+
+    def test_foundation_is_a_separate_repo_column(self):
+        t = exec_view(self.plan_doc())
+        self.assertIn("Foundation PRE_V2 (separate)", t)
+
+    def test_matrix_shows_share_per_repo_and_milestone(self):
+        t = exec_view(self.plan_doc())
+        self.assertIn("| Sense | 0/10 (0%) | 10/20 (50%) |", t)
+        self.assertIn("**10/30 (33.3%)**", t)
+
+    def test_detail_lists_plan_tasks(self):
+        t = "\n".join(D.plan_tasks_lines(self.plan_doc()))
+        self.assertIn("| M0 | Sense | T-1 | x | 10 | NOT_STARTED |", t)

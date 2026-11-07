@@ -347,22 +347,45 @@ def milestone_table_lines(c):
     if not s:
         return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
     meta = {m["id"].replace("V2-", ""): m for m in (c.get("v2_plan") or {}).get("milestones", [])}
+    titles = s.get("titles") or {}
     L += ["Accepted weight over total plan weight (V2 baseline plus approved plan).", "",
-          "| Milestone | Phase | Target | Progress | Accepted / total | Share | Plan tasks |", "|---|---|---|---|---|---|---|"]
+          "| Milestone | Title | Target | Progress | Accepted / total | Share | Plan tasks |", "|---|---|---|---|---|---|---|"]
+    changed = False
     for i in range(9):
         k = f"M{i}"
         m = meta.get(k, {})
-        phase = (m.get("phase") or "").split(" ", 1)[-1] if m.get("phase") else ""
+        rec = (m.get("phase") or "").split(" ", 1)[-1] if m.get("phase") else ""
+        title = titles.get(k) or rec
         if k == "M6":
-            L.append(f"| M6 | {phase or 'LAB & ROBOT'} | HOLD | HOLD (excluded) | n/a | n/a | n/a |")
+            L.append(f"| M6 | {rec or 'LAB & ROBOT'} | HOLD | HOLD (excluded) | n/a | n/a | n/a |")
             continue
+        date = m.get("target_date") or "none"
+        if titles.get(k) and rec and titles[k] != rec:
+            date += " *"
+            changed = True
         v = s["by_milestone"].get(k, {"baseline": 0, "accepted": 0, "point": 0, "rows": 0})
         tot = v["baseline"] + v["point"]
-        L.append(f"| {k} | {phase} | {m.get('target_date') or 'none'} | `{_bar20(v['accepted'], tot)}` | "
+        L.append(f"| {k} | {title} | {date} | `{_bar20(v['accepted'], tot)}` | "
                  f"{v['accepted']} / {tot} | {_share(v['accepted'], tot)} | {v['rows']} |")
     tot = s["v2_baseline_weight"] + s["point"]
     L.append(f"| **Total** | | | `{_bar20(s['v2_accepted_weight'], tot)}` | **{s['v2_accepted_weight']} / {tot}** | **{_share(s['v2_accepted_weight'], tot)}** | {s['rows']} |")
-    return L + ["", "Target dates are the owner-approved planning dates; they are not commitments or forecasts.", ""]
+    L += ["", "Target dates are the owner-approved planning dates; they are not commitments or forecasts."]
+    if changed:
+        L.append("\\* The plan title differs from the V2 milestone record (booking and commercial work belongs to kritva-raas, outside this plan); the date is carried over and must be re-confirmed.")
+    return L + [""]
+
+
+_FOUNDATION_REPO = {"CORE": "Core", "COMMUNITY": "Community", "CI_DEV_INFRA": "Program"}
+
+
+def _foundation_by_repo(c):
+    out = {}
+    for r in c.get("milestone_alignment") or []:
+        if r.get("class") == "PRE_V2" and r.get("workstream") in _FOUNDATION_REPO:
+            a = out.setdefault(_FOUNDATION_REPO[r["workstream"]], [0, 0])
+            a[0] += r["accepted_weight"]
+            a[1] += r["weight"]
+    return out
 
 
 def repo_table_lines(c):
@@ -370,13 +393,58 @@ def repo_table_lines(c):
     L = ["## Repositories", ""]
     if not s:
         return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
-    L += ["| Repository | Progress | Accepted / total | Share | Baseline accepted | Plan tasks |", "|---|---|---|---|---|---|"]
+    fnd = _foundation_by_repo(c)
+    L += ["V2 progress only. Core and Community show 0 here because their accepted work is PRE_V2 foundation (kept in its own column, never added to V2).", "",
+          "| Repository | V2 progress | V2 accepted / total | Share | Foundation PRE_V2 (separate) | Plan tasks |", "|---|---|---|---|---|---|"]
     ra = ra_t = 0
     for k, v in s["by_repo"].items():
         tot = v["baseline"] + v["point"]
         ra += v["accepted"]; ra_t += tot
-        L.append(f"| {k} | `{_bar20(v['accepted'], tot)}` | {v['accepted']} / {tot} | {_share(v['accepted'], tot)} | {v['accepted']} / {v['baseline']} | {v['rows']} |")
-    L.append(f"| **Total** | `{_bar20(ra, ra_t)}` | **{ra} / {ra_t}** | **{_share(ra, ra_t)}** | {s['v2_accepted_weight']} / {s['v2_baseline_weight']} | {s['rows']} |")
+        f = fnd.get(k)
+        L.append(f"| {k} | `{_bar20(v['accepted'], tot)}` | {v['accepted']} / {tot} | {_share(v['accepted'], tot)} | "
+                 f"{f'{_fmt(f[0])} / {_fmt(f[1])} accepted' if f else 'none'} | {v['rows']} |")
+    fa = sum(x[0] for x in fnd.values()); ft = sum(x[1] for x in fnd.values())
+    L.append(f"| **Total** | `{_bar20(ra, ra_t)}` | **{ra} / {ra_t}** | **{_share(ra, ra_t)}** | {_fmt(fa)} / {_fmt(ft)} accepted | {s['rows']} |")
+    return L + [""]
+
+
+def matrix_lines(c):
+    s = c.get("plan_register")
+    L = ["## Work by repository and milestone", ""]
+    if not s or not s.get("matrix"):
+        return L + ["NOT_VERIFIED: the approved plan register is missing or invalid.", ""]
+    ms = [f"M{i}" for i in range(9) if i != 6]
+    L += ["Each cell is accepted / total weight (share). A dot means no work planned for that repository in that milestone. "
+          "Total weight is baseline plus approved plan; nothing is accepted until it is baselined and credited.", "",
+          "| Repository | " + " | ".join(ms) + " | All |", "|---|" + "---|" * (len(ms) + 1)]
+    col = {m: [0, 0] for m in ms}
+    for repo in s["by_repo"]:
+        row, ra, rt = [], 0, 0
+        for m in ms:
+            v = s["matrix"].get(repo, {}).get(m)
+            if not v or not (v["baseline"] + v["point"]):
+                row.append("·")
+                continue
+            tot = v["baseline"] + v["point"]
+            row.append(f"{v['accepted']}/{tot} ({100 * v['accepted'] / tot:.0f}%)")
+            ra += v["accepted"]; rt += tot
+            col[m][0] += v["accepted"]; col[m][1] += tot
+        L.append(f"| {repo} | " + " | ".join(row) + f" | {ra}/{rt} ({_share(ra, rt)}) |")
+    ta = sum(v[0] for v in col.values()); tt = sum(v[1] for v in col.values())
+    L.append("| **All** | " + " | ".join(f"{v[0]}/{v[1]} ({100 * v[0] / v[1]:.0f}%)" if v[1] else "·" for v in col.values()) + f" | **{ta}/{tt} ({_share(ta, tt)})** |")
+    return L + ["", "Task-level detail for every cell is in [STATUS_DETAIL.md](STATUS_DETAIL.md) (Plan tasks by milestone and repository).", ""]
+
+
+def plan_tasks_lines(c):
+    s = c.get("plan_register")
+    if not s or not s.get("tasks"):
+        return []
+    L = ["", "## Plan tasks by milestone and repository", "",
+         "Approved plan rows (no credit). Weights are planning estimates. Status is the execution status recorded in the register.", "",
+         "| Milestone | Repository | Task | Title | Weight | Status |", "|---|---|---|---|---|---|"]
+    order = {r: i for i, r in enumerate(_pr.REPOS)}
+    for t in sorted(s["tasks"], key=lambda t: (int(t["milestone"][1:]), order.get(t["repo"], 99), t["id"])):
+        L.append(f"| {t['milestone']} | {t['repo']} | {t['id']} | {t['title'].replace('|', '/')} | {t['weight']} | {t['status']} |")
     return L + [""]
 
 
@@ -423,11 +491,11 @@ def health_lines(c):
 
 def detail_extra_lines(c, phases):
     """Sections moved out of STATUS_VIEW.md; appended to STATUS_DETAIL.md."""
-    return ["", *owner_actions_lines(c), *changes_lines(c), *_pr.view_lines(c), *progress_lines(c), *effort_lines(c), *readiness_lines(c),
+    return ["", *plan_tasks_lines(c), *owner_actions_lines(c), *changes_lines(c), *_pr.view_lines(c), *progress_lines(c), *effort_lines(c), *readiness_lines(c),
             *plan_lines(c), *milestones_lines(c), *phase_lines(phases), *quality_lines(c)]
 
 
 def render_view_lines(c, phases, measures_table):
     """Executive view. measures_table is kept for the detail file; it is not shown here."""
-    return [*header_lines(c), *headline_lines(c), *milestone_table_lines(c), *repo_table_lines(c),
+    return [*header_lines(c), *headline_lines(c), *milestone_table_lines(c), *repo_table_lines(c), *matrix_lines(c),
             *attention_lines(c), *foundation_lines(c), *health_lines(c)]

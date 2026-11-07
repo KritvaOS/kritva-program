@@ -90,5 +90,14 @@ class RegisterTests(unittest.TestCase):
         self.assertIn("not the baseline", text)
 
 
+class Titles(unittest.TestCase):
+    def test_register_declares_m4_as_developer_experience(self):
+        text = (ROOT / plan_register.FILE).read_text(encoding="utf-8")
+        t = plan_register.titles(text)
+        self.assertEqual(sorted(t), [f"M{i}" for i in range(9)])
+        self.assertIn("DEVELOPER EXPERIENCE", t["M4"])
+        self.assertNotIn("BOOKING", " ".join(t.values()))
+
+
 if __name__ == "__main__":
     unittest.main()

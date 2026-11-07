@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-07T11:00:00Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-07T14:00:00Z (freshness of sources is judged at this time)
 - Baseline version: 10 (APPROVED)
 - Accepted engineering progress: 90.64% (155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 41/44 tasks (repo-reported; not acceptance)
@@ -29,15 +29,15 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-07T11:00:00Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-07T14:00:00Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
 | CI_DEV_INFRA | FETCH_FAILED | 2026-10-26T16:23:10Z | 03b9c3f | 8e50865 | 104 commit(s) | OTHER FILES (review): .github/CODEOWNERS, .github/PULL_REQUEST_TEMPLATE.md, .github/workflows/commit-message-check.yml, .github/workflows/readme-check.yml, .github/workflows/refresh-sources.yml |
-| COMMUNITY | FRESH | 2026-11-06T17:51:34Z (17h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
-| CORE | FRESH | 2026-11-06T17:51:34Z (17h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
-| MOTION | FRESH | 2026-11-06T17:51:34Z (17h ago) | cc4503f | d76dbdf | 6 commit(s) | OTHER FILES (review): .github/kritva-gate.json, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md, Claude outputs/PASTE.txt |
-| SENSE | FRESH | 2026-11-06T17:51:34Z (17h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
+| COMMUNITY | FRESH | 2026-11-06T17:51:34Z (20h ago) | a4d4fbf | 27ed961 | 6 commit(s) | OTHER FILES (review): Makefile, planning/MILESTONE.md, status/status.json |
+| CORE | FRESH | 2026-11-06T17:51:34Z (20h ago) | 9fe6aa6 | 969d615 | 4 commit(s) | OTHER FILES (review): planning/MILESTONE.md, status/status.json |
+| MOTION | FRESH | 2026-11-06T17:51:34Z (20h ago) | cc4503f | d76dbdf | 6 commit(s) | OTHER FILES (review): .github/kritva-gate.json, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md, Claude outputs/PASTE.txt |
+| SENSE | FRESH | 2026-11-06T17:51:34Z (20h ago) | a7bdaaa | 07c48d5 | 92 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
 
 ## Workstreams
 
@@ -235,7 +235,7 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 - ACT_L: no status source (UNVERIFIED)
 - ACT_M: no status source (UNVERIFIED)
 - ACT_S: no status source (UNVERIFIED)
-- CI_DEV_INFRA: status is 20 days old
+- CI_DEV_INFRA: status is 21 days old
 - CONTROL_PLANE: no status source (UNVERIFIED)
 - DEVICE_ENDPOINT: no status source (UNVERIFIED)
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
@@ -258,6 +258,73 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 |---|---|---|
 | Accepted engineering progress | 90.64% (155/171 weight) | Frozen baseline v10: only the 44 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. This is not V2 product completion |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
+
+
+## Plan tasks by milestone and repository
+
+Approved plan rows (no credit). Weights are planning estimates. Status is the execution status recorded in the register.
+
+| Milestone | Repository | Task | Title | Weight | Status |
+|---|---|---|---|---|---|
+| M0 | Program | PROPOSED-NEW-PROGRAM-001 | Program governance and planning foundation | 5 | NOT_STARTED |
+| M0 | Program | PROPOSED-NEW-PROGRAM-003 | Program register and planning controls | 4 | NOT_STARTED |
+| M0 | Program | PROPOSED-NEW-PROGRAM-004 | Program approval and decision records | 3 | NOT_STARTED |
+| M0 | Program | PROPOSED-NEW-PROGRAM-005 | Program validation and governance checks | 3 | NOT_STARTED |
+| M0 | Core | PROPOSED-NEW-CORE-001 | Core engineering contract and version pin | 5 | BLOCKED (PD-015) |
+| M0 | Community | PROPOSED-NEW-COMMUNITY-001 | Security reporting path and mailbox verification | 2 | NOT_STARTED |
+| M0 | Sense | PROPOSED-NEW-SENSE-001 | Sense governance and acceptance review | 3 | NOT_STARTED |
+| M0 | Mind | PROPOSED-NEW-MIND-GOV-001 | Mind governance and acceptance review | 3 | NOT_STARTED |
+| M0 | Motion | PROPOSED-NEW-MOTION-001 | Motion governance and acceptance review | 3 | NOT_STARTED |
+| M0 | Skill | PROPOSED-NEW-SKILL-GOV-001 | Skill governance and acceptance review | 3 | NOT_STARTED |
+| M1 | Community | PROPOSED-NEW-COMMUNITY-002 | Cross-capability architecture documentation | 4 | NOT_STARTED |
+| M1 | Community | PROPOSED-NEW-COMMUNITY-018-01 | Capability contract inventory and compatibility matrix | 4 | NOT_STARTED |
+| M1 | Community | PROPOSED-NEW-COMMUNITY-018-02 | Automated version and pin compatibility checks | 4 | NOT_STARTED |
+| M1 | Mind | KOS-MIND-001 | Mind foundational contract and schema work | 5 | IN_PROGRESS |
+| M1 | Skill | KOS-SKILL-001 | Skill foundational contract and capability integration | 5 | IN_PROGRESS |
+| M2 | Core | PROPOSED-NEW-CORE-002 | Core build and artifact integration | 5 | NOT_STARTED |
+| M2 | Community | PROPOSED-NEW-COMMUNITY-003-01 | Build artifact handoff specification and metadata | 4 | NOT_STARTED |
+| M2 | Community | PROPOSED-NEW-COMMUNITY-003-02 | Reproducible integration build and artifact hash | 5 | NOT_STARTED |
+| M2 | Community | PROPOSED-NEW-COMMUNITY-004-01 | Simulator artifact interface and manifest | 5 | NOT_STARTED |
+| M2 | Community | PROPOSED-NEW-COMMUNITY-004-02 | Deterministic simulator artifact handoff tests | 4 | NOT_STARTED |
+| M2 | Community | PROPOSED-NEW-COMMUNITY-005-01 | SDK package and build manifest | 4 | NOT_STARTED |
+| M2 | Community | PROPOSED-NEW-COMMUNITY-005-02 | Clean-environment SDK installation and import tests | 4 | NOT_STARTED |
+| M2 | Mind | KOS-MIND-002 | Mind validation and semantics implementation | 5 | IN_PROGRESS |
+| M2 | Mind | KOS-MIND-004 | Mind capability and contract integration | 6 | NOT_STARTED |
+| M2 | Mind | PROPOSED-NEW-MIND-003-01 | Context lifecycle model | 5 | NOT_STARTED |
+| M2 | Mind | PROPOSED-NEW-MIND-003-02 | Edge and Hybrid context conformance fixtures | 5 | NOT_STARTED |
+| M2 | Skill | PROPOSED-NEW-SKILL-002 | Skill build and package integration | 4 | NOT_STARTED |
+| M3 | Community | PROPOSED-NEW-COMMUNITY-006 | Control Plane service conformance | 5 | NOT_STARTED |
+| M3 | Community | PROPOSED-NEW-COMMUNITY-007-01 | Control Plane API resource model and versioning | 5 | NOT_STARTED |
+| M3 | Community | PROPOSED-NEW-COMMUNITY-007-02 | API schema validation and compatibility fixtures | 4 | NOT_STARTED |
+| M3 | Community | PROPOSED-NEW-COMMUNITY-008-01 | Job and run lifecycle model | 5 | NOT_STARTED |
+| M3 | Community | PROPOSED-NEW-COMMUNITY-008-02 | Deterministic lifecycle transition tests | 5 | NOT_STARTED |
+| M3 | Community | PROPOSED-NEW-COMMUNITY-009-01 | Authorization principals, permissions and resource scope | 4 | NOT_STARTED |
+| M3 | Community | PROPOSED-NEW-COMMUNITY-009-02 | Authorization allow/deny conformance tests | 5 | NOT_STARTED |
+| M3 | Community | PROPOSED-NEW-COMMUNITY-010-01 | Control Plane service conformance harness and traceability | 5 | NOT_STARTED |
+| M3 | Community | PROPOSED-NEW-COMMUNITY-010-02 | API, lifecycle and authorization integration tests | 5 | NOT_STARTED |
+| M3 | Skill | PROPOSED-NEW-SKILL-003 | Skill Control Plane registration and consumption | 5 | NOT_STARTED |
+| M4 | Community | PROPOSED-NEW-COMMUNITY-011-01 | Studio workflow model | 5 | NOT_STARTED |
+| M4 | Community | PROPOSED-NEW-COMMUNITY-011-02 | Demonstrable Studio sample-project workflow | 4 | NOT_STARTED |
+| M4 | Community | PROPOSED-NEW-COMMUNITY-012-01 | SDK developer API and CLI | 4 | NOT_STARTED |
+| M4 | Community | PROPOSED-NEW-COMMUNITY-012-02 | SDK examples, documentation and clean-environment tests | 5 | NOT_STARTED |
+| M5 | Community | PROPOSED-NEW-COMMUNITY-013-01 | Simulator job execution orchestration | 5 | NOT_STARTED |
+| M5 | Community | PROPOSED-NEW-COMMUNITY-013-02 | Deterministic execution and result handoff | 5 | NOT_STARTED |
+| M5 | Community | PROPOSED-NEW-COMMUNITY-014-01 | SDK job submit, status and cancel integration | 4 | NOT_STARTED |
+| M5 | Community | PROPOSED-NEW-COMMUNITY-014-02 | SDK result retrieval and error handling | 5 | NOT_STARTED |
+| M5 | Mind | KOS-MIND-005 | Mind execution and runtime integration | 6 | NOT_STARTED |
+| M5 | Mind | KOS-MIND-006 | Mind execution conformance and validation | 6 | NOT_STARTED |
+| M5 | Mind | KOS-MIND-007 | Joint Mind-to-Skill integration | 6 | NOT_STARTED |
+| M5 | Motion | PROPOSED-NEW-MOTION-002 | Motion simulated execution integration | 6 | NOT_STARTED |
+| M5 | Skill | PROPOSED-NEW-SKILL-004 | Skill runtime execution against simulated capabilities | 6 | NOT_STARTED |
+| M7 | Community | PROPOSED-NEW-COMMUNITY-015 | Live and results public documentation | 3 | NOT_STARTED |
+| M7 | Community | PROPOSED-NEW-COMMUNITY-016-01 | Telemetry and results ingestion using Sense stream contract | 5 | NOT_STARTED |
+| M7 | Community | PROPOSED-NEW-COMMUNITY-016-02 | Correlation, query and export end-to-end traceability | 5 | NOT_STARTED |
+| M8 | Program | PROPOSED-NEW-PROGRAM-002 | Production governance and release readiness | 5 | NOT_STARTED |
+| M8 | Core | PROPOSED-NEW-CORE-003 | Core release and security review | 6 | NOT_STARTED |
+| M8 | Community | PROPOSED-NEW-COMMUNITY-017 | Community release and security review | 6 | NOT_STARTED |
+| M8 | Mind | KOS-MIND-008 | Mind production readiness and release review | 6 | NOT_STARTED |
+| M8 | Motion | PROPOSED-NEW-MOTION-003 | Motion production and security review | 6 | NOT_STARTED |
+| M8 | Skill | PROPOSED-NEW-SKILL-005 | Skill production readiness and release review | 6 | NOT_STARTED |
 
 ## Owner actions and blockers
 
@@ -366,6 +433,6 @@ No status source, so no evidence and no credit (not zero progress): ACTUATION_CO
 
 Other warnings:
 
-- CI_DEV_INFRA: status is 20 days old
+- CI_DEV_INFRA: status is 21 days old
 - KOS-MOTION-003: not reported by MOTION (no credit)
 - KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)

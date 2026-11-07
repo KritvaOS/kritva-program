@@ -266,7 +266,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T11:00:00Z",
+  "generated_at": "2026-11-07T14:00:00Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 44,
@@ -980,9 +980,720 @@
     "file": "v2/planning/SEVEN_REPO_PLAN_REGISTER.md",
     "high": 338,
     "low": 213,
+    "matrix": {
+      "Community": {
+        "M0": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 2,
+          "rows": 1
+        },
+        "M1": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 12,
+          "rows": 3
+        },
+        "M2": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 26,
+          "rows": 6
+        },
+        "M3": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 43,
+          "rows": 9
+        },
+        "M4": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 18,
+          "rows": 4
+        },
+        "M5": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 19,
+          "rows": 4
+        },
+        "M7": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 13,
+          "rows": 3
+        },
+        "M8": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 6,
+          "rows": 1
+        }
+      },
+      "Core": {
+        "M0": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 5,
+          "rows": 1
+        },
+        "M2": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 5,
+          "rows": 1
+        },
+        "M8": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 6,
+          "rows": 1
+        }
+      },
+      "Mind": {
+        "M0": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 3,
+          "rows": 1
+        },
+        "M1": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 5,
+          "rows": 1
+        },
+        "M2": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 21,
+          "rows": 4
+        },
+        "M5": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 18,
+          "rows": 3
+        },
+        "M8": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 6,
+          "rows": 1
+        }
+      },
+      "Motion": {
+        "M0": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 3,
+          "rows": 1
+        },
+        "M1": {
+          "accepted": 5,
+          "baseline": 5,
+          "point": 0,
+          "rows": 0
+        },
+        "M2": {
+          "accepted": 5,
+          "baseline": 13,
+          "point": 0,
+          "rows": 0
+        },
+        "M5": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 6,
+          "rows": 1
+        },
+        "M8": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 6,
+          "rows": 1
+        }
+      },
+      "Program": {
+        "M0": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 15,
+          "rows": 4
+        },
+        "M8": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 5,
+          "rows": 1
+        }
+      },
+      "Sense": {
+        "M0": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 3,
+          "rows": 1
+        },
+        "M1": {
+          "accepted": 5,
+          "baseline": 5,
+          "point": 0,
+          "rows": 0
+        },
+        "M2": {
+          "accepted": 14,
+          "baseline": 19,
+          "point": 0,
+          "rows": 0
+        },
+        "M5": {
+          "accepted": 5,
+          "baseline": 5,
+          "point": 0,
+          "rows": 0
+        },
+        "M7": {
+          "accepted": 9,
+          "baseline": 9,
+          "point": 0,
+          "rows": 0
+        },
+        "M8": {
+          "accepted": 11,
+          "baseline": 11,
+          "point": 0,
+          "rows": 0
+        }
+      },
+      "Skill": {
+        "M0": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 3,
+          "rows": 1
+        },
+        "M1": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 5,
+          "rows": 1
+        },
+        "M2": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 4,
+          "rows": 1
+        },
+        "M3": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 5,
+          "rows": 1
+        },
+        "M5": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 6,
+          "rows": 1
+        },
+        "M8": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 6,
+          "rows": 1
+        }
+      }
+    },
     "point": 275,
     "retired_parents": 14,
     "rows": 59,
+    "tasks": [
+      {
+        "id": "PROPOSED-NEW-PROGRAM-001",
+        "milestone": "M0",
+        "repo": "Program",
+        "status": "NOT_STARTED",
+        "title": "Program governance and planning foundation",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-PROGRAM-002",
+        "milestone": "M8",
+        "repo": "Program",
+        "status": "NOT_STARTED",
+        "title": "Production governance and release readiness",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-PROGRAM-003",
+        "milestone": "M0",
+        "repo": "Program",
+        "status": "NOT_STARTED",
+        "title": "Program register and planning controls",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-PROGRAM-004",
+        "milestone": "M0",
+        "repo": "Program",
+        "status": "NOT_STARTED",
+        "title": "Program approval and decision records",
+        "weight": 3
+      },
+      {
+        "id": "PROPOSED-NEW-PROGRAM-005",
+        "milestone": "M0",
+        "repo": "Program",
+        "status": "NOT_STARTED",
+        "title": "Program validation and governance checks",
+        "weight": 3
+      },
+      {
+        "id": "PROPOSED-NEW-CORE-001",
+        "milestone": "M0",
+        "repo": "Core",
+        "status": "BLOCKED (PD-015)",
+        "title": "Core engineering contract and version pin",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-CORE-002",
+        "milestone": "M2",
+        "repo": "Core",
+        "status": "NOT_STARTED",
+        "title": "Core build and artifact integration",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-CORE-003",
+        "milestone": "M8",
+        "repo": "Core",
+        "status": "NOT_STARTED",
+        "title": "Core release and security review",
+        "weight": 6
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-001",
+        "milestone": "M0",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Security reporting path and mailbox verification",
+        "weight": 2
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-002",
+        "milestone": "M1",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Cross-capability architecture documentation",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-006",
+        "milestone": "M3",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Control Plane service conformance",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-015",
+        "milestone": "M7",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Live and results public documentation",
+        "weight": 3
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-017",
+        "milestone": "M8",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Community release and security review",
+        "weight": 6
+      },
+      {
+        "id": "PROPOSED-NEW-SENSE-001",
+        "milestone": "M0",
+        "repo": "Sense",
+        "status": "NOT_STARTED",
+        "title": "Sense governance and acceptance review",
+        "weight": 3
+      },
+      {
+        "id": "KOS-MIND-001",
+        "milestone": "M1",
+        "repo": "Mind",
+        "status": "IN_PROGRESS",
+        "title": "Mind foundational contract and schema work",
+        "weight": 5
+      },
+      {
+        "id": "KOS-MIND-002",
+        "milestone": "M2",
+        "repo": "Mind",
+        "status": "IN_PROGRESS",
+        "title": "Mind validation and semantics implementation",
+        "weight": 5
+      },
+      {
+        "id": "KOS-MIND-004",
+        "milestone": "M2",
+        "repo": "Mind",
+        "status": "NOT_STARTED",
+        "title": "Mind capability and contract integration",
+        "weight": 6
+      },
+      {
+        "id": "KOS-MIND-005",
+        "milestone": "M5",
+        "repo": "Mind",
+        "status": "NOT_STARTED",
+        "title": "Mind execution and runtime integration",
+        "weight": 6
+      },
+      {
+        "id": "KOS-MIND-006",
+        "milestone": "M5",
+        "repo": "Mind",
+        "status": "NOT_STARTED",
+        "title": "Mind execution conformance and validation",
+        "weight": 6
+      },
+      {
+        "id": "KOS-MIND-007",
+        "milestone": "M5",
+        "repo": "Mind",
+        "status": "NOT_STARTED",
+        "title": "Joint Mind-to-Skill integration",
+        "weight": 6
+      },
+      {
+        "id": "KOS-MIND-008",
+        "milestone": "M8",
+        "repo": "Mind",
+        "status": "NOT_STARTED",
+        "title": "Mind production readiness and release review",
+        "weight": 6
+      },
+      {
+        "id": "PROPOSED-NEW-MIND-GOV-001",
+        "milestone": "M0",
+        "repo": "Mind",
+        "status": "NOT_STARTED",
+        "title": "Mind governance and acceptance review",
+        "weight": 3
+      },
+      {
+        "id": "PROPOSED-NEW-MOTION-001",
+        "milestone": "M0",
+        "repo": "Motion",
+        "status": "NOT_STARTED",
+        "title": "Motion governance and acceptance review",
+        "weight": 3
+      },
+      {
+        "id": "PROPOSED-NEW-MOTION-002",
+        "milestone": "M5",
+        "repo": "Motion",
+        "status": "NOT_STARTED",
+        "title": "Motion simulated execution integration",
+        "weight": 6
+      },
+      {
+        "id": "PROPOSED-NEW-MOTION-003",
+        "milestone": "M8",
+        "repo": "Motion",
+        "status": "NOT_STARTED",
+        "title": "Motion production and security review",
+        "weight": 6
+      },
+      {
+        "id": "KOS-SKILL-001",
+        "milestone": "M1",
+        "repo": "Skill",
+        "status": "IN_PROGRESS",
+        "title": "Skill foundational contract and capability integration",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-SKILL-002",
+        "milestone": "M2",
+        "repo": "Skill",
+        "status": "NOT_STARTED",
+        "title": "Skill build and package integration",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-SKILL-003",
+        "milestone": "M3",
+        "repo": "Skill",
+        "status": "NOT_STARTED",
+        "title": "Skill Control Plane registration and consumption",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-SKILL-004",
+        "milestone": "M5",
+        "repo": "Skill",
+        "status": "NOT_STARTED",
+        "title": "Skill runtime execution against simulated capabilities",
+        "weight": 6
+      },
+      {
+        "id": "PROPOSED-NEW-SKILL-005",
+        "milestone": "M8",
+        "repo": "Skill",
+        "status": "NOT_STARTED",
+        "title": "Skill production readiness and release review",
+        "weight": 6
+      },
+      {
+        "id": "PROPOSED-NEW-SKILL-GOV-001",
+        "milestone": "M0",
+        "repo": "Skill",
+        "status": "NOT_STARTED",
+        "title": "Skill governance and acceptance review",
+        "weight": 3
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-018-01",
+        "milestone": "M1",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Capability contract inventory and compatibility matrix",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-018-02",
+        "milestone": "M1",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Automated version and pin compatibility checks",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-003-01",
+        "milestone": "M2",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Build artifact handoff specification and metadata",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-003-02",
+        "milestone": "M2",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Reproducible integration build and artifact hash",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-004-01",
+        "milestone": "M2",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Simulator artifact interface and manifest",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-004-02",
+        "milestone": "M2",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Deterministic simulator artifact handoff tests",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-005-01",
+        "milestone": "M2",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "SDK package and build manifest",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-005-02",
+        "milestone": "M2",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Clean-environment SDK installation and import tests",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-007-01",
+        "milestone": "M3",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Control Plane API resource model and versioning",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-007-02",
+        "milestone": "M3",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "API schema validation and compatibility fixtures",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-008-01",
+        "milestone": "M3",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Job and run lifecycle model",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-008-02",
+        "milestone": "M3",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Deterministic lifecycle transition tests",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-009-01",
+        "milestone": "M3",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Authorization principals, permissions and resource scope",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-009-02",
+        "milestone": "M3",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Authorization allow/deny conformance tests",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-010-01",
+        "milestone": "M3",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Control Plane service conformance harness and traceability",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-010-02",
+        "milestone": "M3",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "API, lifecycle and authorization integration tests",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-011-01",
+        "milestone": "M4",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Studio workflow model",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-011-02",
+        "milestone": "M4",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Demonstrable Studio sample-project workflow",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-012-01",
+        "milestone": "M4",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "SDK developer API and CLI",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-012-02",
+        "milestone": "M4",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "SDK examples, documentation and clean-environment tests",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-013-01",
+        "milestone": "M5",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Simulator job execution orchestration",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-013-02",
+        "milestone": "M5",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Deterministic execution and result handoff",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-014-01",
+        "milestone": "M5",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "SDK job submit, status and cancel integration",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-014-02",
+        "milestone": "M5",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "SDK result retrieval and error handling",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-016-01",
+        "milestone": "M7",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Telemetry and results ingestion using Sense stream contract",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-COMMUNITY-016-02",
+        "milestone": "M7",
+        "repo": "Community",
+        "status": "NOT_STARTED",
+        "title": "Correlation, query and export end-to-end traceability",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-MIND-003-01",
+        "milestone": "M2",
+        "repo": "Mind",
+        "status": "NOT_STARTED",
+        "title": "Context lifecycle model",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-MIND-003-02",
+        "milestone": "M2",
+        "repo": "Mind",
+        "status": "NOT_STARTED",
+        "title": "Edge and Hybrid context conformance fixtures",
+        "weight": 5
+      }
+    ],
+    "titles": {
+      "M0": "FOUNDATION",
+      "M1": "STUDIO",
+      "M2": "BUILD & ARTIFACT",
+      "M3": "CONTROL PLANE",
+      "M4": "DEVELOPER EXPERIENCE & ECOSYSTEM",
+      "M5": "EXECUTION",
+      "M6": "LAB & ROBOT (HOLD, excluded)",
+      "M7": "LIVE & RESULTS",
+      "M8": "PRODUCTION"
+    },
     "v2_accepted_weight": 54,
     "v2_baseline_weight": 67
   },
@@ -1092,7 +1803,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 17,
+        "age_hours": 20,
         "ahead_by": 6,
         "changed_files": [
           "Makefile",
@@ -1111,7 +1822,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 17,
+        "age_hours": 20,
         "ahead_by": 4,
         "changed_files": [
           "planning/MILESTONE.md",
@@ -1129,7 +1840,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 17,
+        "age_hours": 20,
         "ahead_by": 6,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -1158,7 +1869,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 17,
+        "age_hours": 20,
         "ahead_by": 92,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2583,7 +3294,7 @@
     "ACT_L: no status source (UNVERIFIED)",
     "ACT_M: no status source (UNVERIFIED)",
     "ACT_S: no status source (UNVERIFIED)",
-    "CI_DEV_INFRA: status is 20 days old",
+    "CI_DEV_INFRA: status is 21 days old",
     "CONTROL_PLANE: no status source (UNVERIFIED)",
     "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",

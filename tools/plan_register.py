@@ -90,6 +90,25 @@ def _base_by_program_milestone(c):
     return out
 
 
+def titles(text):
+    """Milestone titles declared by the register ('| M4 | DEVELOPER EXPERIENCE & ECOSYSTEM |'). Empty when absent."""
+    sec = text.split("| Milestone | Plan title |", 1)
+    if len(sec) < 2:
+        return {}
+    return {m.group(1): m.group(2).strip() for m in re.finditer(r"^\| (M\d) \| ([^|]+?) \|$", sec[1], re.M)}
+
+
+def _base_cells(c):
+    out = {}
+    for k, v in (c.get("by_milestone") or {}).items():
+        m = re.match(r"^V2-(M\d+)-([A-Z]+)-", k)
+        if m and v.get("weighted"):
+            a = out.setdefault((m.group(2).capitalize(), m.group(1)), [0, 0])
+            a[0] += v["weight"]
+            a[1] += v["accepted_weight"]
+    return out
+
+
 def _base_by_repo(c):
     out = {}
     for k, v in (c.get("by_milestone") or {}).items():
@@ -102,7 +121,7 @@ def _base_by_repo(c):
     return out
 
 
-def summary(rows, c):
+def summary(rows, c, text=None):
     """Plan summary for consolidated_status.json (no row detail)."""
     planned = [r for r in rows if r["record_type"] == "PLANNING_TASK"]
     base_m = _base_by_program_milestone(c)
@@ -122,7 +141,18 @@ def summary(rows, c):
     base_total = sum(v[0] for v in base_m.values())
     acc_total = sum(v[1] for v in base_m.values())
     tot = [len(planned), sum(v[1] for v in by_m.values()), sum(v[2] for v in by_m.values()), sum(v[3] for v in by_m.values())]
-    return {"file": FILE, "rows": tot[0], "point": tot[1], "low": tot[2], "high": tot[3],
+    cells = {}
+    for r in planned:
+        a = cells.setdefault(r["repo"], {}).setdefault(r["milestone"], {"rows": 0, "point": 0, "baseline": 0, "accepted": 0})
+        a["rows"] += 1
+        a["point"] += int(r["weight_point"])
+    for (repo, ms), (b, acc) in _base_cells(c).items():
+        a = cells.setdefault(repo, {}).setdefault(ms, {"rows": 0, "point": 0, "baseline": 0, "accepted": 0})
+        a["baseline"] += b
+        a["accepted"] += acc
+    tasks = [{"id": r["id"], "repo": r["repo"], "milestone": r["milestone"], "title": r["title"],
+              "weight": int(r["weight_point"]), "status": r["execution_status"]} for r in planned]
+    return {"titles": titles(text) if text else {}, "matrix": cells, "tasks": tasks, "file": FILE, "rows": tot[0], "point": tot[1], "low": tot[2], "high": tot[3],
             "retired_parents": sum(1 for r in rows if r["record_type"] == "RETIRED_PARENT"),
             "v2_baseline_weight": base_total, "v2_accepted_weight": acc_total,
             "by_milestone": {k: {"rows": v[0], "point": v[1], "low": v[2], "high": v[3],
