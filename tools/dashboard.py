@@ -507,6 +507,50 @@ def plan_tasks_lines(c):
     return L + [""]
 
 
+def open_milestone_lines(c):
+    """Task list for the earliest milestone that still has open approved-plan tasks (currently M0)."""
+    s = c.get("plan_register")
+    L = []
+    if not s or not s.get("tasks"):
+        return L
+    titles = s.get("titles") or {}
+    order = {r: i for i, r in enumerate(_pr.REPOS)}
+    for i in range(9):
+        k = f"M{i}"
+        tasks = [t for t in s["tasks"] if t["milestone"] == k]
+        v = s["by_milestone"].get(k)
+        if not tasks or not v or v["accepted"] >= v["baseline"] + v["point"]:
+            continue
+        tot = v["baseline"] + v["point"]
+        L = [f"## Open work: {k} {titles.get(k, '')}".rstrip(), "",
+             f"{k} is the earliest milestone with open tasks: {v['accepted']} of {tot} weight accepted, {len(tasks)} approved plan tasks, none completed. "
+             "Each task needs to be baselined, completed and backed by CI evidence before it earns credit.", "",
+             "| Repository | Task | Title | Weight | Status |", "|---|---|---|---|---|"]
+        for t in sorted(tasks, key=lambda t: (order.get(t["repo"], 99), t["id"])):
+            L.append(f"| {t['repo']} | {t['id']} | {t['title'].replace('|', '/')} | {t['weight']} | {t['status']} |")
+        pdata = c.get("v2_plan_data")
+        if pdata:
+            mid = f"V2-{k}"
+            items = []
+            for x in _pl.pending_reviews(pdata) + _pl.pending_decisions(pdata):
+                scope = (x.get("scope") or {}).get("phase_ids") or []
+                if mid in (x.get("blocks") or []):
+                    items.append((x["record_id"], x["title"], "blocks closing " + k, x.get("reviewer") or x.get("owner") or "UNASSIGNED"))
+                elif mid in scope:
+                    items.append((x["record_id"], x["title"], "in scope, not blocking", x.get("reviewer") or x.get("owner") or "UNASSIGNED"))
+            if items:
+                L += ["", f"What stands between {k} and closure: the items below, then an approved completion record. "
+                      "Closing a milestone does not by itself award weighted credit; credit needs baselined tasks that are completed with approval and CI evidence.", "",
+                      "| ID | Item | Effect | Reviewer / owner |", "|---|---|---|---|"]
+                L += [f"| {a} | {b} | {c_} | {d} |" for a, b, c_, d in items]
+        blocked = [t for t in tasks if "BLOCKED" in t["status"]]
+        L += ["", f"Weights add up to {sum(t['weight'] for t in tasks)}. "
+              + (f"{len(blocked)} task(s) are blocked on a pending owner decision: " + ", ".join(f"{t['id']} ({t['status']})" for t in blocked) + ". " if blocked else "")
+              + "Every milestone's tasks are listed in [STATUS_DETAIL.md](STATUS_DETAIL.md).", ""]
+        break
+    return L
+
+
 def attention_lines(c, limit=5):
     rows = owner_action_rows(c)
     L = ["## Needs owner attention", ""]
@@ -562,5 +606,5 @@ def detail_extra_lines(c, phases):
 
 def render_view_lines(c, phases, measures_table):
     """Executive view. measures_table is kept for the detail file; it is not shown here."""
-    return [*header_lines(c), *headline_lines(c), *milestone_table_lines(c), *repo_table_lines(c), *matrix_lines(c),
+    return [*header_lines(c), *headline_lines(c), *milestone_table_lines(c), *repo_table_lines(c), *matrix_lines(c), *open_milestone_lines(c),
             *attention_lines(c), *foundation_lines(c), *health_lines(c)]

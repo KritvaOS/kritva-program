@@ -266,7 +266,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T17:00:00Z",
+  "generated_at": "2026-11-07T18:00:00Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 44,
@@ -1923,7 +1923,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 23,
+        "age_hours": 24,
         "ahead_by": 6,
         "changed_files": [
           "Makefile",
@@ -1933,7 +1933,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-06T17:51:34Z",
         "fetched_head": "a4d4fbfaaddb684bae971f2081f5ca5f678d9be5",
-        "freshness": "FRESH",
+        "freshness": "WARN",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritvaos-community",
@@ -1942,7 +1942,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 23,
+        "age_hours": 24,
         "ahead_by": 4,
         "changed_files": [
           "planning/MILESTONE.md",
@@ -1951,7 +1951,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-06T17:51:34Z",
         "fetched_head": "9fe6aa65303cae1bfe8a9d428f0dc0b32e649073",
-        "freshness": "FRESH",
+        "freshness": "WARN",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-core",
@@ -1960,7 +1960,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 23,
+        "age_hours": 24,
         "ahead_by": 6,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -1980,7 +1980,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-06T17:51:34Z",
         "fetched_head": "cc4503f0b43a3c4e43ed69daf8b557806c28d377",
-        "freshness": "FRESH",
+        "freshness": "WARN",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-motion",
@@ -1989,7 +1989,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 23,
+        "age_hours": 24,
         "ahead_by": 92,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2046,7 +2046,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-06T17:51:34Z",
         "fetched_head": "a7bdaaa1a2b29547f1e048b7354407c56d96effc",
-        "freshness": "FRESH",
+        "freshness": "WARN",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-sense",

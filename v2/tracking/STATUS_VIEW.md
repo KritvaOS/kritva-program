@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-07T17:00:00Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T18:00:00Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -77,6 +77,40 @@ Each cell is accepted / total weight (share). A dot means no work planned for th
 
 Task-level detail for every cell is in [STATUS_DETAIL.md](STATUS_DETAIL.md) (Plan tasks by milestone and repository).
 
+## Open work: M0 FOUNDATION
+
+M0 is the earliest milestone with open tasks: 0 of 34 weight accepted, 10 approved plan tasks, none completed. Each task needs to be baselined, completed and backed by CI evidence before it earns credit.
+
+| Repository | Task | Title | Weight | Status |
+|---|---|---|---|---|
+| Program | PROPOSED-NEW-PROGRAM-001 | Program governance and planning foundation | 5 | NOT_STARTED |
+| Program | PROPOSED-NEW-PROGRAM-003 | Program register and planning controls | 4 | NOT_STARTED |
+| Program | PROPOSED-NEW-PROGRAM-004 | Program approval and decision records | 3 | NOT_STARTED |
+| Program | PROPOSED-NEW-PROGRAM-005 | Program validation and governance checks | 3 | NOT_STARTED |
+| Core | PROPOSED-NEW-CORE-001 | Core engineering contract and version pin | 5 | BLOCKED (PD-015) |
+| Community | PROPOSED-NEW-COMMUNITY-001 | Security reporting path and mailbox verification | 2 | NOT_STARTED |
+| Sense | PROPOSED-NEW-SENSE-001 | Sense governance and acceptance review | 3 | NOT_STARTED |
+| Mind | PROPOSED-NEW-MIND-GOV-001 | Mind governance and acceptance review | 3 | NOT_STARTED |
+| Motion | PROPOSED-NEW-MOTION-001 | Motion governance and acceptance review | 3 | NOT_STARTED |
+| Skill | PROPOSED-NEW-SKILL-GOV-001 | Skill governance and acceptance review | 3 | NOT_STARTED |
+
+What stands between M0 and closure: the items below, then an approved completion record. Closing a milestone does not by itself award weighted credit; credit needs baselined tasks that are completed with approval and CI evidence.
+
+| ID | Item | Effect | Reviewer / owner |
+|---|---|---|---|
+| REV-001 | Review the V2 milestone plan | blocks closing M0 | UNASSIGNED |
+| REV-002 | Review the pipeline manifest and approval roles | blocks closing M0 | UNASSIGNED |
+| REV-003 | Review the acceptance standard | blocks closing M0 | UNASSIGNED |
+| REV-004 | Review kritva-sense governance baseline and contract task | blocks closing M0 | UNASSIGNED |
+| REV-005 | Review kritva-motion governance baseline and contract task | blocks closing M0 | UNASSIGNED |
+| REV-006 | Review kritva-mind governance baseline and contract task | blocks closing M0 | UNASSIGNED |
+| REV-007 | Review kritva-skill governance baseline and contract task | blocks closing M0 | UNASSIGNED |
+| PD-014 | Register the four new repositories on their workstreams | in scope, not blocking | UNASSIGNED |
+| PD-015 | Approve drafting the Core engineering contract | blocks closing M0 | UNASSIGNED |
+| PD-017 | Test the Community security mailbox | in scope, not blocking | UNASSIGNED |
+
+Weights add up to 34. 1 task(s) are blocked on a pending owner decision: PROPOSED-NEW-CORE-001 (BLOCKED (PD-015)). Every milestone's tasks are listed in [STATUS_DETAIL.md](STATUS_DETAIL.md).
+
 ## Needs owner attention
 
 | # | Item | Why it matters | Owner |
@@ -102,6 +136,6 @@ Community I3/I4 software implementation credit is included in Foundation (PRE_V2
 |---|---|
 | Validation errors | 0 |
 | Warnings | 22 (19 workstreams with no status source) |
-| Source freshness | FETCH_FAILED 1, FRESH 4 |
+| Source freshness | FETCH_FAILED 1, WARN 4 |
 
 Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).
