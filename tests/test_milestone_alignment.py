@@ -109,12 +109,13 @@ class Committed(unittest.TestCase):
         return sum(x["weight"] or 0 for x in self.c["milestone_alignment"]
                    if x["class"] == "V2_REPO" and x["tasks"] and x["milestone"].endswith(suffix))
 
-    def test_sense_v2_milestones_hold_49_weight(self):
-        self.assertEqual(self._v2_repo_weight("-SENSE-001"), 49)
+    def test_sense_v2_milestones_hold_52_weight(self):
+        """49 from the earlier baselines plus KOS-SENSE-M0-001 at weight 3 (baseline v11, D-117)."""
+        self.assertEqual(self._v2_repo_weight("-SENSE-001"), 52)
 
-    def test_motion_v2_milestones_hold_10_weight(self):
-        """Baseline v9 (D-100): KOS-MOTION-001 and KOS-MOTION-002 at weight 5 each."""
-        self.assertEqual(self._v2_repo_weight("-MOTION-001"), 10)
+    def test_motion_v2_milestones_hold_13_weight(self):
+        """Baseline v9 (D-100): KOS-MOTION-001 and KOS-MOTION-002 at weight 5 each; baseline v11 (D-117) adds KOS-MOTION-M0-001 at 3."""
+        self.assertEqual(self._v2_repo_weight("-MOTION-001"), 13)
 
     def test_motion_lifecycle_milestone_holds_8_weight(self):
         """Baseline v10 (D-108): KOS-MOTION-003 at weight 8 under V2-M2-MOTION-002."""

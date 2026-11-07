@@ -68,9 +68,9 @@ class RegisterTests(unittest.TestCase):
     def test_counts_and_totals(self):
         planned = [r for r in self.rows if r["record_type"] == "PLANNING_TASK"]
         retired = [r for r in self.rows if r["record_type"] == "RETIRED_PARENT"]
-        self.assertEqual(len(planned), 59)
+        self.assertEqual(len(planned), 49)
         self.assertEqual(len(retired), 14)
-        self.assertEqual((sum(int(r["weight_point"]) for r in planned), sum(int(r["low"]) for r in planned), sum(int(r["high"]) for r in planned)), (275, 213, 338))
+        self.assertEqual((sum(int(r["weight_point"]) for r in planned), sum(int(r["low"]) for r in planned), sum(int(r["high"]) for r in planned)), (241, 189, 294))
 
     def test_summary_matches_baseline_split(self):
         base = {"by_milestone": {"V2-M1-SENSE-001": {"weight": 5, "accepted_weight": 5, "weighted": True},
@@ -78,9 +78,9 @@ class RegisterTests(unittest.TestCase):
                                  "KOS-I2": {"weight": 18, "accepted_weight": 18, "weighted": True}}}
         s = plan_register.summary(self.rows, base)
         self.assertEqual((s["v2_baseline_weight"], s["v2_accepted_weight"]), (24, 19))
-        self.assertEqual(s["point"], 275)
+        self.assertEqual(s["point"], 241)
         self.assertEqual(s["by_milestone"]["M2"]["baseline"], 19)
-        self.assertEqual(sum(v["point"] for v in s["by_repo"].values()), 275)
+        self.assertEqual(sum(v["point"] for v in s["by_repo"].values()), 241)
 
     def test_view_lines_state_no_credit(self):
         base = {"by_milestone": {"V2-M1-SENSE-001": {"weight": 5, "accepted_weight": 5, "weighted": True}}}

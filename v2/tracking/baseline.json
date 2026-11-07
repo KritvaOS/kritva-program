@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 10,
+  "baseline_version": 11,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -66,6 +66,34 @@
     {
       "id": "V2-M2-MOTION-002",
       "workstream_id": "MOTION"
+    },
+    {
+      "id": "V2-M0-PROGRAM-001",
+      "workstream_id": "CI_DEV_INFRA"
+    },
+    {
+      "id": "V2-M0-CORE-001",
+      "workstream_id": "CORE"
+    },
+    {
+      "id": "V2-M0-COMMUNITY-001",
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "id": "V2-M0-SENSE-001",
+      "workstream_id": "SENSE"
+    },
+    {
+      "id": "V2-M0-MOTION-001",
+      "workstream_id": "MOTION"
+    },
+    {
+      "id": "V2-M0-MIND-001",
+      "workstream_id": "MIND"
+    },
+    {
+      "id": "V2-M0-SKILL-001",
+      "workstream_id": "SKILL"
     }
   ],
   "tasks": [
@@ -508,6 +536,106 @@
       "requires_physical": false,
       "phase": null,
       "weight_rationale": "Initial planning estimate (D-107, D-108), not a recorded engineering estimate: larger than KOS-MOTION-001 and KOS-MOTION-002 (5 each) because of six pull requests, a design checkpoint with an owner review stop, a lifecycle, termination and fault state machine for the 52 conformance IDs the manifest marks as needing it plus up to four classified in PR-01, and a generated transition matrix with a fixed-seed property test (AC-301..AC-307). Software only, deterministic, offline, no hardware, no backend, no stores. Depends on KOS-MOTION-002. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KRP-M0-001",
+      "workstream_id": "CI_DEV_INFRA",
+      "milestone_id": "V2-M0-PROGRAM-001",
+      "title": "Program governance and planning foundation",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 5 [4-6] carried unchanged from register row PROPOSED-NEW-PROGRAM-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-PROGRAM-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KRP-M0-002",
+      "workstream_id": "CI_DEV_INFRA",
+      "milestone_id": "V2-M0-PROGRAM-001",
+      "title": "Program register and planning controls",
+      "weight": 4,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 4 [3-5] carried unchanged from register row PROPOSED-NEW-PROGRAM-003; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-PROGRAM-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KRP-M0-003",
+      "workstream_id": "CI_DEV_INFRA",
+      "milestone_id": "V2-M0-PROGRAM-001",
+      "title": "Program approval and decision records",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 3 [2-4] carried unchanged from register row PROPOSED-NEW-PROGRAM-004; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-PROGRAM-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KRP-M0-004",
+      "workstream_id": "CI_DEV_INFRA",
+      "milestone_id": "V2-M0-PROGRAM-001",
+      "title": "Program validation and governance checks",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 3 [2-4] carried unchanged from register row PROPOSED-NEW-PROGRAM-005; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-PROGRAM-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KF-CORE-M0-001",
+      "workstream_id": "CORE",
+      "milestone_id": "V2-M0-CORE-001",
+      "title": "Core engineering contract and version pin",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 5 [4-6] carried unchanged from register row PROPOSED-NEW-CORE-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-CORE-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-COMMUNITY-M0-001",
+      "workstream_id": "COMMUNITY",
+      "milestone_id": "V2-M0-COMMUNITY-001",
+      "title": "Security reporting path and mailbox verification",
+      "weight": 2,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 2 [1-3] carried unchanged from register row PROPOSED-NEW-COMMUNITY-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-COMMUNITY-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SENSE-M0-001",
+      "workstream_id": "SENSE",
+      "milestone_id": "V2-M0-SENSE-001",
+      "title": "Sense governance and acceptance review",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 3 [2-4] carried unchanged from register row PROPOSED-NEW-SENSE-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-SENSE-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-MIND-M0-001",
+      "workstream_id": "MIND",
+      "milestone_id": "V2-M0-MIND-001",
+      "title": "Mind governance and acceptance review",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 3 [2-4] carried unchanged from register row PROPOSED-NEW-MIND-GOV-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-MIND-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-MOTION-M0-001",
+      "workstream_id": "MOTION",
+      "milestone_id": "V2-M0-MOTION-001",
+      "title": "Motion governance and acceptance review",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 3 [2-4] carried unchanged from register row PROPOSED-NEW-MOTION-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-MOTION-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-SKILL-M0-001",
+      "workstream_id": "SKILL",
+      "milestone_id": "V2-M0-SKILL-001",
+      "title": "Skill governance and acceptance review",
+      "weight": 3,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 3 [2-4] carried unchanged from register row PROPOSED-NEW-SKILL-GOV-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-SKILL-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
     }
   ],
   "gates": [
@@ -581,9 +709,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-11-06T17:52:33Z",
-    "canonical_commit": "3dd48a8314cbcbb269391aa37a4bd5f957704a27",
-    "baseline_sha256": "e390303a601e22052ea357c8cad46dc33ba0ea01e12041a7aec8366828933535",
-    "reason": "Baseline v10 (D-108): KOS-MOTION-003 added under V2-M2-MOTION-002; weight 8 is an initial planning estimate, no credit before approved passing evidence"
+    "approved_at": "2026-11-07T17:12:27Z",
+    "canonical_commit": "bee0f2b36e88ef718b2d5c8320b9c94acaa978c8",
+    "baseline_sha256": "94f2113d57473481dedc51766e827b239ac31a224c495b232b117bcbe97b9528",
+    "reason": "Baseline v11 (D-117): ten V2-M0 tasks added at planning weights; no credit before approved passing evidence"
   }
 }

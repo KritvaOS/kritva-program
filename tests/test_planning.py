@@ -263,7 +263,7 @@ class ShipScript(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t:
             r = subprocess.run([sys.executable, str(ROOT / "scripts/pipeline/manifest.py"), "checks", "kritva-sense",
                                 "--manifest", str(ROOT / "v2/planning/repo-pipeline.json")], capture_output=True, text=True, cwd=t)
-            self.assertEqual(r.stdout.split(), ["secret-scan", "commit-message-check", "pr-acceptance-gate", "unit-tests"])
+            self.assertEqual(r.stdout.split(), ["secret-scan", "commit-message-check", "pr-acceptance-gate", "unit-tests", "readme-check"])
 
 
 class Queues(unittest.TestCase):
@@ -272,6 +272,7 @@ class Queues(unittest.TestCase):
         n = len(P.pending_decisions(d))
         d["decisions"]["records"][1]["status"] = "ACCEPTED"; d["decisions"]["records"][1]["approval_ref"] = "D-999"  # PD-002, still open
         self.assertEqual(len(P.pending_decisions(d)), n - 1)
+        d["reviews"]["records"][0]["status"] = "PENDING"  # the committed reviews may all be approved
         r = len(P.pending_reviews(d))
         d["reviews"]["records"][0]["status"] = "APPROVED"
         self.assertEqual(len(P.pending_reviews(d)), r - 1)
@@ -290,7 +291,10 @@ class Queues(unittest.TestCase):
         t = P.render_all(data())["PENDING_DECISIONS.md"]
         self.assertIn("UNASSIGNED", t)
         self.assertIn("NO_DUE_DATE_RECORDED", t)
-        r = P.render_all(data())["PENDING_REVIEWS.md"]
+        d = copy.deepcopy(data())
+        d["reviews"]["records"][0]["status"] = "PENDING"
+        d["reviews"]["records"][0]["artifact"]["commit_sha"] = None
+        r = P.render_all(d)["PENDING_REVIEWS.md"]
         self.assertIn("NOT_YET_PINNED", r)
 
     def test_review_sha_placeholder_rejected(self):
@@ -331,14 +335,14 @@ class Generated(unittest.TestCase):
 
     def test_status_view_shows_plan_without_dates_for_hold(self):
         v = (ROOT / "v2/tracking/STATUS_VIEW.md").read_text(encoding="utf-8")
-        self.assertIn("## V2 milestone plan (proposed; not the baseline)", v)
-        self.assertIn("| V2-M6 | P6 LAB & ROBOT | NO DATE (HOLD) | HOLD | no |", v)
-        self.assertIn("| V2-M0 | P0 FOUNDATION | 2026-10-30 | APPROVED | no |", v)
+        self.assertIn("## Milestones", v)
+        self.assertIn("| M6 | LAB & ROBOT | HOLD | M5 | n/a | HOLD (excluded) |", v)
+        self.assertIn("| M0 | FOUNDATION | 2026-10-30", v)
 
     def test_plan_does_not_change_credit(self):
         c = json.loads((ROOT / "v2/tracking/consolidated_status.json").read_text(encoding="utf-8"))
         self.assertEqual(c["progress"]["basis"], "48/104 weight (accepted/baseline)" if False else c["progress"]["basis"])
-        self.assertTrue(c["progress"]["basis"].startswith("155/171 weight"))
+        self.assertTrue(c["progress"]["basis"].startswith("155/205 weight"))
 
 
 class CommitFormat(unittest.TestCase):

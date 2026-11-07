@@ -30,18 +30,19 @@ Source commits when this was prepared (local main, equal to GitHub main): kritva
 
 | Subset | Rows | Point | Low | High |
 |---|---:|---:|---:|---:|
-| Original planning rows | 31 | 146 | 112 | 181 |
+| Original planning rows | 21 | 112 | 88 | 137 |
 | Approved child rows | 28 | 129 | 101 | 157 |
-| Counted planning register | 59 | 275 | 213 | 338 |
+| Counted planning register | 49 | 241 | 189 | 294 |
 | Retired parents (not counted) | 14 | - | - | - |
+| Moved to the baseline in v11 (D-117, not counted) | 10 | 34 | 24 | 44 |
 
-V2 baseline (v10, frozen) is separate: 67 weight, 54 accepted, 13 task rows. Total plan weight 67 + 275 = 342 [280-405]; provisional accepted share 54/342 = 15.8% [13.3-19.3%]. These measures are never blended with the historical 155/171 (90.64%, PRE_V2 plus V2).
+V2 baseline (v11, once frozen) is separate: 101 V2 weight, 54 accepted, 23 task rows, because the ten M0 rows above moved from this register into the baseline (D-117). Total plan weight 101 + 241 = 342 [280-405], unchanged by the move; provisional accepted share 54/342 = 15.8% [13.3-19.3%]. These measures are never blended with the historical 155/171 (90.64%, PRE_V2 plus V2).
 
 ## 2. Roll-up by milestone (planning rows only)
 
 | Milestone | Rows | Point | Low | High | V2 baseline | Accepted |
 |---|---:|---:|---:|---:|---:|---:|
-| M0 | 10 | 34 | 24 | 44 | 0 | 0 |
+| M0 | 0 | 0 | 0 | 0 | 34 | 0 |
 | M1 | 5 | 22 | 17 | 27 | 10 | 10 |
 | M2 | 12 | 56 | 44 | 68 | 32 | 19 |
 | M3 | 10 | 48 | 37 | 60 | 0 | 0 |
@@ -49,7 +50,7 @@ V2 baseline (v10, frozen) is separate: 67 weight, 54 accepted, 13 task rows. Tot
 | M5 | 9 | 49 | 38 | 60 | 5 | 5 |
 | M7 | 3 | 13 | 10 | 16 | 9 | 9 |
 | M8 | 6 | 35 | 29 | 41 | 11 | 11 |
-| Total | 59 | 275 | 213 | 338 | 67 | 54 |
+| Total | 49 | 241 | 189 | 294 | 101 | 54 |
 
 M6 is excluded (HOLD). M4 reuses the ID as Developer Experience and Ecosystem.
 
@@ -71,39 +72,32 @@ Milestone titles used by this plan (status views show these titles). Booking and
 
 | Repository | Rows | Point | Low | High |
 |---|---:|---:|---:|---:|
-| Program | 5 | 20 | 15 | 25 |
-| Core | 3 | 16 | 13 | 19 |
-| Community | 31 | 139 | 108 | 170 |
-| Sense | 1 | 3 | 2 | 4 |
-| Mind | 10 | 53 | 41 | 65 |
-| Motion | 3 | 15 | 12 | 18 |
-| Skill | 6 | 29 | 22 | 37 |
-| Total | 59 | 275 | 213 | 338 |
+| Program | 1 | 5 | 4 | 6 |
+| Core | 2 | 11 | 9 | 13 |
+| Community | 30 | 137 | 107 | 167 |
+| Sense | 0 | 0 | 0 | 0 |
+| Mind | 9 | 50 | 39 | 61 |
+| Motion | 2 | 12 | 10 | 14 |
+| Skill | 5 | 26 | 20 | 33 |
+| Total | 49 | 241 | 189 | 294 |
 
 ## 4. Column definitions
 
-`record_type` PLANNING_TASK or RETIRED_PARENT; `id` full stable ID; `repo`; `milestone` V2 milestone; `title`; `parent_id` for child rows; `weight_point`, `low`, `high` approved planning estimate (blank for retired parents); `plan_state` APPROVED_PLAN or DECOMPOSED_REPLACED; `execution_status` as last reported, never inferred from plan approval; `credit` always 0; `counted` true for the 59 planning rows; `dependencies`.
+`record_type` PLANNING_TASK or RETIRED_PARENT; `id` full stable ID; `repo`; `milestone` V2 milestone; `title`; `parent_id` for child rows; `weight_point`, `low`, `high` approved planning estimate (blank for retired parents); `plan_state` APPROVED_PLAN or DECOMPOSED_REPLACED; `execution_status` as last reported, never inferred from plan approval; `credit` always 0; `counted` true for the 49 planning rows; `dependencies`.
 
 Titles and execution statuses are register-friendly summaries. Before relying on one that mirrors an existing repository task (KOS-MIND-001, 002, 004 to 008; KOS-SKILL-001), check that repository's own task file.
 
-## 5. Original planning rows (31)
+## 5. Original planning rows (21)
 
 | record_type | id | repo | milestone | title | parent_id | weight_point | low | high | plan_state | execution_status | credit | counted | dependencies |
 |---|---|---|---|---|---|---:|---:|---:|---|---|---:|---|---|
-| PLANNING_TASK | PROPOSED-NEW-PROGRAM-001 | Program | M0 | Program governance and planning foundation |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-PROGRAM-002 | Program | M8 | Production governance and release readiness |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-PROGRAM-003 | Program | M0 | Program register and planning controls |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-PROGRAM-004 | Program | M0 | Program approval and decision records |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-PROGRAM-005 | Program | M0 | Program validation and governance checks |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-CORE-001 | Core | M0 | Core engineering contract and version pin |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-CORE-002 | Core | M2 | Core build and artifact integration |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-CORE-003 | Core | M8 | Core release and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-001 | Community | M0 | Security reporting path and mailbox verification |  | 2 | 1 | 3 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-002 | Community | M1 | Cross-capability architecture documentation |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-006 | Community | M3 | Control Plane service conformance |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-015 | Community | M7 | Live and results public documentation |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-017 | Community | M8 | Community release and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-SENSE-001 | Sense | M0 | Sense governance and acceptance review |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | KOS-MIND-001 | Mind | M1 | Mind foundational contract and schema work |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | not recorded in this draft |
 | PLANNING_TASK | KOS-MIND-002 | Mind | M2 | Mind validation and semantics implementation |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | not recorded in this draft |
 | PLANNING_TASK | KOS-MIND-004 | Mind | M2 | Mind capability and contract integration |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
@@ -111,8 +105,6 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 | PLANNING_TASK | KOS-MIND-006 | Mind | M5 | Mind execution conformance and validation |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | KOS-MIND-007 | Mind | M5 | Joint Mind-to-Skill integration |  | 6 | 4 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | KOS-SKILL-001 |
 | PLANNING_TASK | KOS-MIND-008 | Mind | M8 | Mind production readiness and release review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-MIND-GOV-001 | Mind | M0 | Mind governance and acceptance review |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-MOTION-001 | Motion | M0 | Motion governance and acceptance review |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-MOTION-002 | Motion | M5 | Motion simulated execution integration |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-MOTION-003 | Motion | M8 | Motion production and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | KOS-SKILL-001 | Skill | M1 | Skill foundational contract and capability integration |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | not recorded in this draft |
@@ -120,7 +112,6 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 | PLANNING_TASK | PROPOSED-NEW-SKILL-003 | Skill | M3 | Skill Control Plane registration and consumption |  | 5 | 3 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-SKILL-004 | Skill | M5 | Skill runtime execution against simulated capabilities |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 | PLANNING_TASK | PROPOSED-NEW-SKILL-005 | Skill | M8 | Skill production readiness and release review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-SKILL-GOV-001 | Skill | M0 | Skill governance and acceptance review |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
 
 ## 6. Child rows (28)
 
@@ -174,9 +165,9 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 | RETIRED_PARENT | PROPOSED-NEW-COMMUNITY-018 | Community | M1 | Cross-capability compatibility matrix and version pins |  |  |  |  | DECOMPOSED_REPLACED | NOT_COUNTED | 0 | false |  |
 | RETIRED_PARENT | KOS-MIND-003 | Mind | M2 | Context lifecycle and Edge/Hybrid conformance |  |  |  |  | DECOMPOSED_REPLACED | NOT_COUNTED | 0 | false | KOS-MIND-001 accepted |
 
-## 8. Baseline reference (not one of the 59 planning rows)
+## 8. Baseline reference (not one of the 49 planning rows)
 
-KOS-MOTION-003, milestone V2-M2-MOTION-002, baseline weight 8 (baseline v10, D-108). Credit 0. It is already inside the 67-point V2 baseline and must not be added to the 275 planning points. Motion's main task register has no row for it and Motion has not reported it. Execution status is pending verification of the start record on the branch `docs/start-kos-motion-003`: NOT_STARTED (or READY) if the record only prepares the work, IN_PROGRESS only after the record is merged and says the work started.
+KOS-MOTION-003, milestone V2-M2-MOTION-002, baseline weight 8 (baseline v10, D-108). Credit 0. It is already inside the V2 baseline and must not be added to the 241 planning points. Motion's main task register has no row for it and Motion has not reported it. Execution status is pending verification of the start record on the branch `docs/start-kos-motion-003`: NOT_STARTED (or READY) if the record only prepares the work, IN_PROGRESS only after the record is merged and says the work started.
 
 ## 9. Caveats
 
@@ -185,3 +176,19 @@ KOS-MOTION-003, milestone V2-M2-MOTION-002, baseline weight 8 (baseline v10, D-1
 - Per-repo status.json files lag their repositories; use task registers and the frozen baseline.
 - Dependencies are recorded only where known (KOS-MIND-003 children, KOS-MIND-007). Remaining rows say so; they are to be filled when each task's criteria are made concrete.
 
+## 9. M0 rows moved to the baseline (D-117)
+
+The ten M0 planning rows were removed from the counted register when baseline v11 added them as baseline tasks, so no weight is counted twice. Weights and low-high ranges are unchanged (34 [24-44]). They earn no credit until completed with approval and CI evidence.
+
+| Baseline task | Former register row | Repo | Baseline milestone | Weight | Range |
+|---|---|---|---|---:|---|
+| KRP-M0-001 | PROPOSED-NEW-PROGRAM-001 | Program | V2-M0-PROGRAM-001 | 5 | 4-6 |
+| KRP-M0-002 | PROPOSED-NEW-PROGRAM-003 | Program | V2-M0-PROGRAM-001 | 4 | 3-5 |
+| KRP-M0-003 | PROPOSED-NEW-PROGRAM-004 | Program | V2-M0-PROGRAM-001 | 3 | 2-4 |
+| KRP-M0-004 | PROPOSED-NEW-PROGRAM-005 | Program | V2-M0-PROGRAM-001 | 3 | 2-4 |
+| KF-CORE-M0-001 | PROPOSED-NEW-CORE-001 | Core | V2-M0-CORE-001 | 5 | 4-6 |
+| KOS-COMMUNITY-M0-001 | PROPOSED-NEW-COMMUNITY-001 | Community | V2-M0-COMMUNITY-001 | 2 | 1-3 |
+| KOS-SENSE-M0-001 | PROPOSED-NEW-SENSE-001 | Sense | V2-M0-SENSE-001 | 3 | 2-4 |
+| KOS-MIND-M0-001 | PROPOSED-NEW-MIND-GOV-001 | Mind | V2-M0-MIND-001 | 3 | 2-4 |
+| KOS-MOTION-M0-001 | PROPOSED-NEW-MOTION-001 | Motion | V2-M0-MOTION-001 | 3 | 2-4 |
+| KOS-SKILL-M0-001 | PROPOSED-NEW-SKILL-GOV-001 | Skill | V2-M0-SKILL-001 | 3 | 2-4 |
