@@ -286,3 +286,24 @@ class ExecutiveView(unittest.TestCase):
         self.assertIn("Planning-only tasks are in the denominator but earn no credit", v)
         self.assertIn("V2 approved planning scope (not baselined)", v)
         self.assertIn("does not merge their baselines", v)
+
+    def test_earliest_open_milestone_lists_its_tasks(self):
+        c = self.plan_doc()
+        c["plan_register"]["tasks"].append({"id": "T-2", "repo": "Sense", "milestone": "M0", "title": "y", "weight": 3, "status": "BLOCKED (PD-015)"})
+        t = "\n".join(D.open_milestone_lines(c))
+        self.assertIn("## Open work: M0 FOUNDATION", t)
+        self.assertIn("| Core | T-1 | x | 10 | NOT_STARTED |", t)
+        self.assertIn("T-2 (BLOCKED (PD-015))", t)
+        self.assertEqual(D.open_milestone_lines(doc()), [])
+
+    def test_open_milestone_names_what_blocks_closure(self):
+        c = self.plan_doc()
+        c["v2_plan_data"] = {"decisions": {"records": [
+            {"record_id": "PD-1", "title": "decide", "status": "PROPOSED", "blocks": ["V2-M0"], "scope": {"phase_ids": ["V2-M0"]}},
+            {"record_id": "PD-2", "title": "later", "status": "PROPOSED", "blocks": [], "scope": {"phase_ids": ["V2-M0"]}}]},
+            "reviews": {"records": [{"record_id": "REV-1", "title": "review", "status": "PENDING", "blocks": ["V2-M0"], "scope": {}}]}}
+        t = "\n".join(D.open_milestone_lines(c))
+        self.assertIn("| REV-1 | review | blocks closing M0 | UNASSIGNED |", t)
+        self.assertIn("| PD-1 | decide | blocks closing M0 | UNASSIGNED |", t)
+        self.assertIn("| PD-2 | later | in scope, not blocking |", t)
+        self.assertIn("does not by itself award weighted credit", t)
