@@ -266,7 +266,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-06T17:52:33Z",
+  "generated_at": "2026-11-07T09:18:31Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 44,
@@ -852,6 +852,126 @@
       "PRODUCTION"
     ]
   ],
+  "plan_register": {
+    "by_milestone": {
+      "M0": {
+        "accepted": 0,
+        "baseline": 0,
+        "high": 44,
+        "low": 24,
+        "point": 34,
+        "rows": 10
+      },
+      "M1": {
+        "accepted": 10,
+        "baseline": 10,
+        "high": 27,
+        "low": 17,
+        "point": 22,
+        "rows": 5
+      },
+      "M2": {
+        "accepted": 19,
+        "baseline": 32,
+        "high": 68,
+        "low": 44,
+        "point": 56,
+        "rows": 12
+      },
+      "M3": {
+        "accepted": 0,
+        "baseline": 0,
+        "high": 60,
+        "low": 37,
+        "point": 48,
+        "rows": 10
+      },
+      "M4": {
+        "accepted": 0,
+        "baseline": 0,
+        "high": 22,
+        "low": 14,
+        "point": 18,
+        "rows": 4
+      },
+      "M5": {
+        "accepted": 5,
+        "baseline": 5,
+        "high": 60,
+        "low": 38,
+        "point": 49,
+        "rows": 9
+      },
+      "M7": {
+        "accepted": 9,
+        "baseline": 9,
+        "high": 16,
+        "low": 10,
+        "point": 13,
+        "rows": 3
+      },
+      "M8": {
+        "accepted": 11,
+        "baseline": 11,
+        "high": 41,
+        "low": 29,
+        "point": 35,
+        "rows": 6
+      }
+    },
+    "by_repo": {
+      "Community": {
+        "high": 170,
+        "low": 108,
+        "point": 139,
+        "rows": 31
+      },
+      "Core": {
+        "high": 19,
+        "low": 13,
+        "point": 16,
+        "rows": 3
+      },
+      "Mind": {
+        "high": 65,
+        "low": 41,
+        "point": 53,
+        "rows": 10
+      },
+      "Motion": {
+        "high": 18,
+        "low": 12,
+        "point": 15,
+        "rows": 3
+      },
+      "Program": {
+        "high": 25,
+        "low": 15,
+        "point": 20,
+        "rows": 5
+      },
+      "Sense": {
+        "high": 4,
+        "low": 2,
+        "point": 3,
+        "rows": 1
+      },
+      "Skill": {
+        "high": 37,
+        "low": 22,
+        "point": 29,
+        "rows": 6
+      }
+    },
+    "file": "v2/planning/SEVEN_REPO_PLAN_REGISTER.md",
+    "high": 338,
+    "low": 213,
+    "point": 275,
+    "retired_parents": 14,
+    "rows": 59,
+    "v2_accepted_weight": 54,
+    "v2_baseline_weight": 67
+  },
   "program_status": {
     "accepted_progress": "0% of the P0 baseline (no tasks defined or accepted yet)",
     "as_of": "2026-10-09",
@@ -958,7 +1078,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 0,
+        "age_hours": 15,
         "ahead_by": 6,
         "changed_files": [
           "Makefile",
@@ -977,7 +1097,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 0,
+        "age_hours": 15,
         "ahead_by": 4,
         "changed_files": [
           "planning/MILESTONE.md",
@@ -995,7 +1115,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 0,
+        "age_hours": 15,
         "ahead_by": 6,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -1024,7 +1144,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 0,
+        "age_hours": 15,
         "ahead_by": 92,
         "changed_files": [
           ".github/kritva-gate.json",
