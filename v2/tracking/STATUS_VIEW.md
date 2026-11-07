@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-07T15:58:13Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T16:55:49Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -98,7 +98,6 @@ What stands between M0 and closure: the items below, then an approved completion
 
 | ID | Item | Effect | Reviewer / owner |
 |---|---|---|---|
-| PD-014 | Register the four new repositories on their workstreams | in scope, not blocking | UNASSIGNED |
 | PD-017 | Test the Community security mailbox | in scope, not blocking | UNASSIGNED |
 
 Weights add up to 34. Every milestone's tasks are listed in [STATUS_DETAIL.md](STATUS_DETAIL.md).
@@ -125,7 +124,7 @@ Community I3/I4 software implementation credit is included in Foundation (PRE_V2
 | Check | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 22 (19 workstreams with no status source) |
-| Source freshness | FETCH_FAILED 1, FRESH 4 |
+| Warnings | 20 (17 workstreams with no status source) |
+| Source freshness | FETCH_FAILED 1, FRESH 6 |
 
 Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).

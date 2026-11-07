@@ -33,12 +33,12 @@
     {
       "id": "SKILL",
       "name": "Skill",
-      "repo": null
+      "repo": "KritvaOS/kritva-skill"
     },
     {
       "id": "MIND",
       "name": "Mind",
-      "repo": null
+      "repo": "KritvaOS/kritva-mind"
     },
     {
       "id": "SIM",

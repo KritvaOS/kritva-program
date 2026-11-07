@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0",
+  "workstream_id": "SKILL",
+  "repo": "KritvaOS/kritva-skill",
+  "source": {
+    "branch": "main",
+    "commit": "557f19bc21de867f03bef8c867ac599ec17d0693",
+    "tag": null
+  },
+  "tasks": [],
+  "updated_at": "2026-11-07T16:47:00+00:00"
+}
