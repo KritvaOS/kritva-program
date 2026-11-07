@@ -398,8 +398,10 @@ def milestone_table_lines(c):
     titles = s.get("titles") or {}
     vt = _v2_tasks_by_milestone(c)
     L += ["Accepted weight over total weight (completed foundation, V2 baseline and approved plan).", "",
-          "| Milestone | Title | Target | Progress | Accepted / total weight | Share | Tasks accepted / total |", "|---|---|---|---|---|---|---|",
-          f"| Foundation (PRE_V2) | Completed before V2 | done | `{_bar20(t['fa'], t['fw'])}` | {_fmt(t['fa'])} / {_fmt(t['fw'])} | {_share(t['fa'], t['fw'])} | {t['fta']} / {t['ft']} |"]
+          "| Milestone | Title | Target | Depends on | Sequence | Progress | Accepted / total weight | Share | Tasks accepted / total |", "|---|---|---|---|---|---|---|---|---|",
+          f"| Foundation (PRE_V2) | Completed before V2 | done | none | n/a | `{_bar20(t['fa'], t['fw'])}` | {_fmt(t['fa'])} / {_fmt(t['fw'])} | {_share(t['fa'], t['fw'])} | {t['fta']} / {t['ft']} |"]
+    seq = {r["milestone"]: r for r in c.get("sequence") or []}
+    today = (c.get("generated_at") or "")[:10]
     changed = False
     for i in range(9):
         k = f"M{i}"
@@ -407,7 +409,7 @@ def milestone_table_lines(c):
         rec = (m.get("phase") or "").split(" ", 1)[-1] if m.get("phase") else ""
         title = titles.get(k) or rec
         if k == "M6":
-            L.append(f"| M6 | {rec or 'LAB & ROBOT'} | HOLD | HOLD (excluded) | n/a | n/a | n/a |")
+            L.append(f"| M6 | {rec or 'LAB & ROBOT'} | HOLD | M5 | n/a | HOLD (excluded) | n/a | n/a | n/a |")
             continue
         date = m.get("target_date") or "none"
         if titles.get(k) and rec and titles[k] != rec:
@@ -416,9 +418,23 @@ def milestone_table_lines(c):
         v = s["by_milestone"].get(k, {"baseline": 0, "accepted": 0, "point": 0, "rows": 0})
         tot = v["baseline"] + v["point"]
         bt = vt.get(k, [0, 0])
-        L.append(f"| {k} | {title} | {date} | `{_bar20(v['accepted'], tot)}` | {v['accepted']} / {tot} | {_share(v['accepted'], tot)} | {bt[0]} / {bt[1] + v['rows']} |")
-    L.append(f"| **Total** | | | `{_bar20(t['acc'], t['tot'])}` | **{t['acc']} / {t['tot']}** | **{_share(t['acc'], t['tot'])}** | **{t['tacc']} / {t['ttot']}** |")
-    L += ["", "Target dates are the owner-approved planning dates; they are not commitments or forecasts."]
+        sq = seq.get(k)
+        if m.get("target_date") and today and m["target_date"] < today and not m.get("closed"):
+            date += " OVERDUE"
+        dep = ", ".join(sq["depends_on"]) if sq and sq["depends_on"] else "none"
+        if not sq:
+            sqt = "n/a"
+        elif sq["status"] == "OK":
+            sqt = "OK"
+        elif sq["status"] == "WAIVED":
+            sqt = f"STARTED before {', '.join(sq['open_predecessors'])} closed (waived {', '.join(sq['waiver'])})"
+        else:
+            sqt = f"VIOLATION: started before {', '.join(sq['open_predecessors'])} closed"
+        L.append(f"| {k} | {title} | {date} | {dep} | {sqt} | `{_bar20(v['accepted'], tot)}` | {v['accepted']} / {tot} | {_share(v['accepted'], tot)} | {bt[0]} / {bt[1] + v['rows']} |")
+    L.append(f"| **Total** | | | | | `{_bar20(t['acc'], t['tot'])}` | **{t['acc']} / {t['tot']}** | **{_share(t['acc'], t['tot'])}** | **{t['tacc']} / {t['ttot']}** |")
+    L += ["", "Target dates are the owner-approved planning dates; they are not commitments or forecasts. "
+          "Rule (D-112): a milestone may not start until the milestones it depends on are closed. Closure needs a recorded completion record; none of M0-M8 is closed yet. "
+          "STARTED means accepted weight or an in-progress plan task. Existing out-of-sequence work is grandfathered by waivers; a new start without a waiver is a validation error."]
     if changed:
         L.append("\\* The plan title differs from the V2 milestone record (booking and commercial work belongs to kritva-raas, outside this plan); the date is carried over and must be re-confirmed.")
     return L + [""]

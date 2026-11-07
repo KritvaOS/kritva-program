@@ -1,0 +1,41 @@
+{
+  "_note": "Owner-approved waivers of the milestone sequencing rule (D-112). Each entry covers one existing milestone/predecessor pair; it adds no credit and changes no baseline, approval or gate. Read only by tools/sequence_check.py.",
+  "waivers": [
+    {
+      "milestone": "V2-M1",
+      "predecessor": "V2-M0",
+      "decision": "D-112",
+      "reason": "Existing Sense and Motion V2 work was started on owner direction (D-078, D-083, D-090) before the predecessor milestone closed; grandfathered as of baseline v10. New out-of-sequence starts are not covered."
+    },
+    {
+      "milestone": "V2-M2",
+      "predecessor": "V2-M1",
+      "decision": "D-112",
+      "reason": "Existing Sense and Motion V2 work was started on owner direction (D-078, D-083, D-090) before the predecessor milestone closed; grandfathered as of baseline v10. New out-of-sequence starts are not covered."
+    },
+    {
+      "milestone": "V2-M5",
+      "predecessor": "V2-M3",
+      "decision": "D-112",
+      "reason": "Existing Sense and Motion V2 work was started on owner direction (D-078, D-083, D-090) before the predecessor milestone closed; grandfathered as of baseline v10. New out-of-sequence starts are not covered."
+    },
+    {
+      "milestone": "V2-M7",
+      "predecessor": "V2-M4",
+      "decision": "D-112",
+      "reason": "Existing Sense and Motion V2 work was started on owner direction (D-078, D-083, D-090) before the predecessor milestone closed; grandfathered as of baseline v10. New out-of-sequence starts are not covered."
+    },
+    {
+      "milestone": "V2-M7",
+      "predecessor": "V2-M5",
+      "decision": "D-112",
+      "reason": "Existing Sense and Motion V2 work was started on owner direction (D-078, D-083, D-090) before the predecessor milestone closed; grandfathered as of baseline v10. New out-of-sequence starts are not covered."
+    },
+    {
+      "milestone": "V2-M8",
+      "predecessor": "V2-M7",
+      "decision": "D-112",
+      "reason": "Existing Sense and Motion V2 work was started on owner direction (D-078, D-083, D-090) before the predecessor milestone closed; grandfathered as of baseline v10. New out-of-sequence starts are not covered."
+    }
+  ]
+}

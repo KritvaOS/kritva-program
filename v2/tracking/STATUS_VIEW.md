@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-07T15:00:00Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T17:00:00Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 22 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -28,21 +28,21 @@ Moving approved-plan tasks into the baseline later changes which row they sit in
 
 Accepted weight over total weight (completed foundation, V2 baseline and approved plan).
 
-| Milestone | Title | Target | Progress | Accepted / total weight | Share | Tasks accepted / total |
-|---|---|---|---|---|---|---|
-| Foundation (PRE_V2) | Completed before V2 | done | `███████████████████░` | 101 / 104 | 97.1% | 30 / 31 |
-| M0 | FOUNDATION | 2026-10-30 | `░░░░░░░░░░░░░░░░░░░░` | 0 / 34 | 0.0% | 0 / 10 |
-| M1 | STUDIO | 2026-11-30 | `██████░░░░░░░░░░░░░░` | 10 / 32 | 31.2% | 2 / 7 |
-| M2 | BUILD & ARTIFACT | 2027-01-15 | `████░░░░░░░░░░░░░░░░` | 19 / 88 | 21.6% | 4 / 18 |
-| M3 | CONTROL PLANE | 2027-03-15 | `░░░░░░░░░░░░░░░░░░░░` | 0 / 48 | 0.0% | 0 / 10 |
-| M4 | DEVELOPER EXPERIENCE & ECOSYSTEM | 2027-04-30 * | `░░░░░░░░░░░░░░░░░░░░` | 0 / 18 | 0.0% | 0 / 4 |
-| M5 | EXECUTION | 2027-06-15 | `██░░░░░░░░░░░░░░░░░░` | 5 / 54 | 9.3% | 1 / 10 |
-| M6 | LAB & ROBOT | HOLD | HOLD (excluded) | n/a | n/a | n/a |
-| M7 | LIVE & RESULTS | 2027-08-15 | `████████░░░░░░░░░░░░` | 9 / 22 | 40.9% | 2 / 5 |
-| M8 | PRODUCTION | 2027-09-13 | `█████░░░░░░░░░░░░░░░` | 11 / 46 | 23.9% | 2 / 8 |
-| **Total** | | | `███████░░░░░░░░░░░░░` | **155 / 446** | **34.8%** | **41 / 103** |
+| Milestone | Title | Target | Depends on | Sequence | Progress | Accepted / total weight | Share | Tasks accepted / total |
+|---|---|---|---|---|---|---|---|---|
+| Foundation (PRE_V2) | Completed before V2 | done | none | n/a | `███████████████████░` | 101 / 104 | 97.1% | 30 / 31 |
+| M0 | FOUNDATION | 2026-10-30 OVERDUE | none | OK | `░░░░░░░░░░░░░░░░░░░░` | 0 / 34 | 0.0% | 0 / 10 |
+| M1 | STUDIO | 2026-11-30 | M0 | STARTED before M0 closed (waived D-112) | `██████░░░░░░░░░░░░░░` | 10 / 32 | 31.2% | 2 / 7 |
+| M2 | BUILD & ARTIFACT | 2027-01-15 | M1 | STARTED before M1 closed (waived D-112) | `████░░░░░░░░░░░░░░░░` | 19 / 88 | 21.6% | 4 / 18 |
+| M3 | CONTROL PLANE | 2027-03-15 | M2 | OK | `░░░░░░░░░░░░░░░░░░░░` | 0 / 48 | 0.0% | 0 / 10 |
+| M4 | DEVELOPER EXPERIENCE & ECOSYSTEM | 2027-04-30 * | M3 | OK | `░░░░░░░░░░░░░░░░░░░░` | 0 / 18 | 0.0% | 0 / 4 |
+| M5 | EXECUTION | 2027-06-15 | M3 | STARTED before M3 closed (waived D-112) | `██░░░░░░░░░░░░░░░░░░` | 5 / 54 | 9.3% | 1 / 10 |
+| M6 | LAB & ROBOT | HOLD | M5 | n/a | HOLD (excluded) | n/a | n/a | n/a |
+| M7 | LIVE & RESULTS | 2027-08-15 | M4, M5 | STARTED before M4, M5 closed (waived D-112) | `████████░░░░░░░░░░░░` | 9 / 22 | 40.9% | 2 / 5 |
+| M8 | PRODUCTION | 2027-09-13 | M7 | STARTED before M7 closed (waived D-112) | `█████░░░░░░░░░░░░░░░` | 11 / 46 | 23.9% | 2 / 8 |
+| **Total** | | | | | `███████░░░░░░░░░░░░░` | **155 / 446** | **34.8%** | **41 / 103** |
 
-Target dates are the owner-approved planning dates; they are not commitments or forecasts.
+Target dates are the owner-approved planning dates; they are not commitments or forecasts. Rule (D-112): a milestone may not start until the milestones it depends on are closed. Closure needs a recorded completion record; none of M0-M8 is closed yet. STARTED means accepted weight or an in-progress plan task. Existing out-of-sequence work is grandfathered by waivers; a new start without a waiver is a validation error.
 \* The plan title differs from the V2 milestone record (booking and commercial work belongs to kritva-raas, outside this plan); the date is carried over and must be re-confirmed.
 
 ## Repositories
