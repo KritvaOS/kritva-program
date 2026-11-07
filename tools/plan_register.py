@@ -90,10 +90,23 @@ def _base_by_program_milestone(c):
     return out
 
 
+def _base_by_repo(c):
+    out = {}
+    for k, v in (c.get("by_milestone") or {}).items():
+        m = re.match(r"^V2-M\d+-([A-Z]+)-", k)
+        if m and v.get("weighted"):
+            name = m.group(1).capitalize()
+            a = out.setdefault(name, [0, 0])
+            a[0] += v["weight"]
+            a[1] += v["accepted_weight"]
+    return out
+
+
 def summary(rows, c):
     """Plan summary for consolidated_status.json (no row detail)."""
     planned = [r for r in rows if r["record_type"] == "PLANNING_TASK"]
     base_m = _base_by_program_milestone(c)
+    base_r = _base_by_repo(c)
     by_m, by_r = {}, {}
     for r in planned:
         for d, k in ((by_m, r["milestone"]), (by_r, r["repo"])):
@@ -104,6 +117,8 @@ def summary(rows, c):
             a[3] += int(r["high"])
     for k in base_m:
         by_m.setdefault(k, [0, 0, 0, 0])
+    for k in base_r:
+        by_r.setdefault(k, [0, 0, 0, 0])
     base_total = sum(v[0] for v in base_m.values())
     acc_total = sum(v[1] for v in base_m.values())
     tot = [len(planned), sum(v[1] for v in by_m.values()), sum(v[2] for v in by_m.values()), sum(v[3] for v in by_m.values())]
@@ -113,7 +128,8 @@ def summary(rows, c):
             "by_milestone": {k: {"rows": v[0], "point": v[1], "low": v[2], "high": v[3],
                                  "baseline": (base_m.get(k) or [0, 0])[0], "accepted": (base_m.get(k) or [0, 0])[1]}
                              for k, v in sorted(by_m.items())},
-            "by_repo": {k: {"rows": v[0], "point": v[1], "low": v[2], "high": v[3]} for k, v in sorted(by_r.items(), key=lambda kv: REPOS.index(kv[0]) if kv[0] in REPOS else 99)}}
+            "by_repo": {k: {"rows": v[0], "point": v[1], "low": v[2], "high": v[3],
+                                   "baseline": (base_r.get(k) or [0, 0])[0], "accepted": (base_r.get(k) or [0, 0])[1]} for k, v in sorted(by_r.items(), key=lambda kv: REPOS.index(kv[0]) if kv[0] in REPOS else 99)}}
 
 
 def view_lines(c):
