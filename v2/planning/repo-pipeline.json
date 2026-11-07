@@ -241,7 +241,8 @@
         "secret-scan",
         "commit-message-check",
         "pr-acceptance-gate",
-        "unit-tests"
+        "unit-tests",
+        "readme-check"
       ],
       "local_gates": [
         "make check",
@@ -364,7 +365,8 @@
       "required_github_checks": [
         "secret-scan",
         "commit-message-check",
-        "pr-acceptance-gate"
+        "pr-acceptance-gate",
+        "readme-check"
       ],
       "local_gates": [
         "make check",
@@ -425,7 +427,8 @@
       "required_github_checks": [
         "secret-scan",
         "commit-message-check",
-        "pr-acceptance-gate"
+        "pr-acceptance-gate",
+        "readme-check"
       ],
       "local_gates": [
         "make check",
