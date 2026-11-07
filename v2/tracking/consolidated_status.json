@@ -1,6 +1,6 @@
 {
   "baseline_approved": true,
-  "baseline_version": 10,
+  "baseline_version": 11,
   "by_milestone": {
     "KF-CORE-R10": {
       "accepted_weight": 30,
@@ -35,6 +35,62 @@
       "weighted": true
     },
     "KRP-ENG": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 3,
+      "weighted": true
+    },
+    "V2-M0-COMMUNITY-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 2,
+      "weighted": true
+    },
+    "V2-M0-CORE-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 5,
+      "weighted": true
+    },
+    "V2-M0-MIND-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 3,
+      "weighted": true
+    },
+    "V2-M0-MOTION-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 3,
+      "weighted": true
+    },
+    "V2-M0-PROGRAM-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 4,
+      "weight": 15,
+      "weighted": true
+    },
+    "V2-M0-SENSE-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 3,
+      "weighted": true
+    },
+    "V2-M0-SKILL-001": {
       "accepted_weight": 0,
       "complete": 0,
       "credited": 0,
@@ -112,8 +168,8 @@
       "accepted_weight": 155,
       "complete": 41,
       "credited": 41,
-      "tasks": 44,
-      "weight": 171,
+      "tasks": 54,
+      "weight": 205,
       "weighted": true
     }
   },
@@ -122,55 +178,71 @@
       "accepted_weight": 0,
       "complete": 0,
       "credited": 0,
-      "tasks": 1,
-      "weight": 3,
+      "tasks": 5,
+      "weight": 18,
       "weighted": true
     },
     "COMMUNITY": {
       "accepted_weight": 71,
       "complete": 21,
       "credited": 21,
-      "tasks": 21,
-      "weight": 71,
+      "tasks": 22,
+      "weight": 73,
       "weighted": true
     },
     "CORE": {
       "accepted_weight": 30,
       "complete": 9,
       "credited": 9,
-      "tasks": 9,
-      "weight": 30,
+      "tasks": 10,
+      "weight": 35,
+      "weighted": true
+    },
+    "MIND": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 3,
       "weighted": true
     },
     "MOTION": {
       "accepted_weight": 10,
       "complete": 2,
       "credited": 2,
-      "tasks": 3,
-      "weight": 18,
+      "tasks": 4,
+      "weight": 21,
       "weighted": true
     },
     "SENSE": {
       "accepted_weight": 44,
       "complete": 9,
       "credited": 9,
-      "tasks": 10,
-      "weight": 49,
+      "tasks": 11,
+      "weight": 52,
+      "weighted": true
+    },
+    "SKILL": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 3,
       "weighted": true
     }
   },
   "changes": {
     "items": [
-      "Warnings: 22 -> 20",
-      "Pending decisions: 5 -> 3"
+      "Accepted progress: 155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 155/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Warnings: 20 -> 30"
     ],
-    "recorded_at": "2026-11-07T16:55:49Z",
-    "since": "2026-11-07T15:58:13Z"
+    "recorded_at": "2026-11-07T17:12:27Z",
+    "since": "2026-11-07T17:02:09Z"
   },
   "errors": [],
   "evidence_health": [
     "CI_DEV_INFRA: source STALE",
-    "KOS-MOTION-003, KRP-ENG-001: no current report from the owning workstream",
+    "KF-CORE-M0-001, KOS-COMMUNITY-M0-001, KOS-MIND-M0-001, KOS-MOTION-003, KOS-MOTION-M0-001, KOS-SENSE-M0-001, KOS-SKILL-M0-001, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream",
     "KOS-SENSE-010: the repo reports no commit-bound CI evidence"
   ],
   "gates": [
@@ -266,22 +338,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T16:55:49Z",
+  "generated_at": "2026-11-07T17:12:27Z",
   "measures": {
     "evidence_coverage": {
-      "tasks_total": 44,
+      "tasks_total": 54,
       "tasks_with_github_verified_run": 41,
       "tasks_with_verified_evidence": 41
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
       "tasks_complete": 41,
-      "tasks_total": 44
+      "tasks_total": 54
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 3
+      "uncredited_tasks": 13
     }
   },
   "milestone_alignment": [
@@ -344,6 +416,90 @@
       "tasks": 1,
       "weight": 3,
       "workstream": "CI_DEV_INFRA"
+    },
+    {
+      "accepted_weight": 0,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M0-COMMUNITY-001",
+      "program_milestone": "V2-M0",
+      "status": "PROPOSED",
+      "tasks": 1,
+      "weight": 2,
+      "workstream": "COMMUNITY"
+    },
+    {
+      "accepted_weight": 0,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M0-CORE-001",
+      "program_milestone": "V2-M0",
+      "status": "PROPOSED",
+      "tasks": 1,
+      "weight": 5,
+      "workstream": "CORE"
+    },
+    {
+      "accepted_weight": 0,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M0-MIND-001",
+      "program_milestone": "V2-M0",
+      "status": "PROPOSED",
+      "tasks": 1,
+      "weight": 3,
+      "workstream": "MIND"
+    },
+    {
+      "accepted_weight": 0,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M0-MOTION-001",
+      "program_milestone": "V2-M0",
+      "status": "PROPOSED",
+      "tasks": 1,
+      "weight": 3,
+      "workstream": "MOTION"
+    },
+    {
+      "accepted_weight": 0,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M0-PROGRAM-001",
+      "program_milestone": "V2-M0",
+      "status": "PROPOSED",
+      "tasks": 4,
+      "weight": 15,
+      "workstream": "CI_DEV_INFRA"
+    },
+    {
+      "accepted_weight": 0,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M0-SENSE-001",
+      "program_milestone": "V2-M0",
+      "status": "PROPOSED",
+      "tasks": 1,
+      "weight": 3,
+      "workstream": "SENSE"
+    },
+    {
+      "accepted_weight": 0,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M0-SKILL-001",
+      "program_milestone": "V2-M0",
+      "status": "PROPOSED",
+      "tasks": 1,
+      "weight": 3,
+      "workstream": "SKILL"
     },
     {
       "accepted_weight": 5,
@@ -440,90 +596,6 @@
       "tasks": 2,
       "weight": 11,
       "workstream": "SENSE"
-    },
-    {
-      "accepted_weight": null,
-      "class": "V2_REPO",
-      "closure": "none",
-      "credited": 0,
-      "milestone": "V2-M0-COMMUNITY-001",
-      "program_milestone": "V2-M0",
-      "status": "PROPOSED",
-      "tasks": 0,
-      "weight": null,
-      "workstream": "COMMUNITY"
-    },
-    {
-      "accepted_weight": null,
-      "class": "V2_REPO",
-      "closure": "none",
-      "credited": 0,
-      "milestone": "V2-M0-CORE-001",
-      "program_milestone": "V2-M0",
-      "status": "PROPOSED",
-      "tasks": 0,
-      "weight": null,
-      "workstream": "CORE"
-    },
-    {
-      "accepted_weight": null,
-      "class": "V2_REPO",
-      "closure": "none",
-      "credited": 0,
-      "milestone": "V2-M0-MIND-001",
-      "program_milestone": "V2-M0",
-      "status": "PROPOSED",
-      "tasks": 0,
-      "weight": null,
-      "workstream": "MIND"
-    },
-    {
-      "accepted_weight": null,
-      "class": "V2_REPO",
-      "closure": "none",
-      "credited": 0,
-      "milestone": "V2-M0-MOTION-001",
-      "program_milestone": "V2-M0",
-      "status": "PROPOSED",
-      "tasks": 0,
-      "weight": null,
-      "workstream": "MOTION"
-    },
-    {
-      "accepted_weight": null,
-      "class": "V2_REPO",
-      "closure": "none",
-      "credited": 0,
-      "milestone": "V2-M0-PROGRAM-001",
-      "program_milestone": "V2-M0",
-      "status": "PROPOSED",
-      "tasks": 0,
-      "weight": null,
-      "workstream": "CI_DEV_INFRA"
-    },
-    {
-      "accepted_weight": null,
-      "class": "V2_REPO",
-      "closure": "none",
-      "credited": 0,
-      "milestone": "V2-M0-SENSE-001",
-      "program_milestone": "V2-M0",
-      "status": "PROPOSED",
-      "tasks": 0,
-      "weight": null,
-      "workstream": "SENSE"
-    },
-    {
-      "accepted_weight": null,
-      "class": "V2_REPO",
-      "closure": "none",
-      "credited": 0,
-      "milestone": "V2-M0-SKILL-001",
-      "program_milestone": "V2-M0",
-      "status": "PROPOSED",
-      "tasks": 0,
-      "weight": null,
-      "workstream": "SKILL"
     },
     {
       "accepted_weight": null,
@@ -856,11 +928,11 @@
     "by_milestone": {
       "M0": {
         "accepted": 0,
-        "baseline": 0,
-        "high": 44,
-        "low": 24,
-        "point": 34,
-        "rows": 10
+        "baseline": 34,
+        "high": 0,
+        "low": 0,
+        "point": 0,
+        "rows": 0
       },
       "M1": {
         "accepted": 10,
@@ -923,84 +995,84 @@
       "Community": {
         "accepted": 0,
         "accepted_tasks": 0,
-        "baseline": 0,
-        "baseline_tasks": 0,
-        "high": 170,
-        "low": 108,
-        "point": 139,
-        "rows": 31
+        "baseline": 2,
+        "baseline_tasks": 1,
+        "high": 167,
+        "low": 107,
+        "point": 137,
+        "rows": 30
       },
       "Core": {
         "accepted": 0,
         "accepted_tasks": 0,
-        "baseline": 0,
-        "baseline_tasks": 0,
-        "high": 19,
-        "low": 13,
-        "point": 16,
-        "rows": 3
+        "baseline": 5,
+        "baseline_tasks": 1,
+        "high": 13,
+        "low": 9,
+        "point": 11,
+        "rows": 2
       },
       "Mind": {
         "accepted": 0,
         "accepted_tasks": 0,
-        "baseline": 0,
-        "baseline_tasks": 0,
-        "high": 65,
-        "low": 41,
-        "point": 53,
-        "rows": 10
+        "baseline": 3,
+        "baseline_tasks": 1,
+        "high": 61,
+        "low": 39,
+        "point": 50,
+        "rows": 9
       },
       "Motion": {
         "accepted": 10,
         "accepted_tasks": 2,
-        "baseline": 18,
-        "baseline_tasks": 3,
-        "high": 18,
-        "low": 12,
-        "point": 15,
-        "rows": 3
+        "baseline": 21,
+        "baseline_tasks": 4,
+        "high": 14,
+        "low": 10,
+        "point": 12,
+        "rows": 2
       },
       "Program": {
         "accepted": 0,
         "accepted_tasks": 0,
-        "baseline": 0,
-        "baseline_tasks": 0,
-        "high": 25,
-        "low": 15,
-        "point": 20,
-        "rows": 5
+        "baseline": 15,
+        "baseline_tasks": 4,
+        "high": 6,
+        "low": 4,
+        "point": 5,
+        "rows": 1
       },
       "Sense": {
         "accepted": 44,
         "accepted_tasks": 9,
-        "baseline": 49,
-        "baseline_tasks": 10,
-        "high": 4,
-        "low": 2,
-        "point": 3,
-        "rows": 1
+        "baseline": 52,
+        "baseline_tasks": 11,
+        "high": 0,
+        "low": 0,
+        "point": 0,
+        "rows": 0
       },
       "Skill": {
         "accepted": 0,
         "accepted_tasks": 0,
-        "baseline": 0,
-        "baseline_tasks": 0,
-        "high": 37,
-        "low": 22,
-        "point": 29,
-        "rows": 6
+        "baseline": 3,
+        "baseline_tasks": 1,
+        "high": 33,
+        "low": 20,
+        "point": 26,
+        "rows": 5
       }
     },
     "file": "v2/planning/SEVEN_REPO_PLAN_REGISTER.md",
-    "high": 338,
-    "low": 213,
+    "high": 294,
+    "low": 189,
     "matrix": {
       "Community": {
         "M0": {
           "accepted": 0,
-          "baseline": 0,
-          "point": 2,
-          "rows": 1
+          "baseline": 2,
+          "point": 0,
+          "rows": 0
         },
         "M1": {
           "accepted": 0,
@@ -1048,9 +1120,9 @@
       "Core": {
         "M0": {
           "accepted": 0,
-          "baseline": 0,
-          "point": 5,
-          "rows": 1
+          "baseline": 5,
+          "point": 0,
+          "rows": 0
         },
         "M2": {
           "accepted": 0,
@@ -1068,9 +1140,9 @@
       "Mind": {
         "M0": {
           "accepted": 0,
-          "baseline": 0,
-          "point": 3,
-          "rows": 1
+          "baseline": 3,
+          "point": 0,
+          "rows": 0
         },
         "M1": {
           "accepted": 0,
@@ -1100,9 +1172,9 @@
       "Motion": {
         "M0": {
           "accepted": 0,
-          "baseline": 0,
-          "point": 3,
-          "rows": 1
+          "baseline": 3,
+          "point": 0,
+          "rows": 0
         },
         "M1": {
           "accepted": 5,
@@ -1132,9 +1204,9 @@
       "Program": {
         "M0": {
           "accepted": 0,
-          "baseline": 0,
-          "point": 15,
-          "rows": 4
+          "baseline": 15,
+          "point": 0,
+          "rows": 0
         },
         "M8": {
           "accepted": 0,
@@ -1146,9 +1218,9 @@
       "Sense": {
         "M0": {
           "accepted": 0,
-          "baseline": 0,
-          "point": 3,
-          "rows": 1
+          "baseline": 3,
+          "point": 0,
+          "rows": 0
         },
         "M1": {
           "accepted": 5,
@@ -1184,9 +1256,9 @@
       "Skill": {
         "M0": {
           "accepted": 0,
-          "baseline": 0,
-          "point": 3,
-          "rows": 1
+          "baseline": 3,
+          "point": 0,
+          "rows": 0
         },
         "M1": {
           "accepted": 0,
@@ -1220,56 +1292,16 @@
         }
       }
     },
-    "point": 275,
+    "point": 241,
     "retired_parents": 14,
-    "rows": 59,
+    "rows": 49,
     "tasks": [
-      {
-        "id": "PROPOSED-NEW-PROGRAM-001",
-        "milestone": "M0",
-        "repo": "Program",
-        "status": "NOT_STARTED",
-        "title": "Program governance and planning foundation",
-        "weight": 5
-      },
       {
         "id": "PROPOSED-NEW-PROGRAM-002",
         "milestone": "M8",
         "repo": "Program",
         "status": "NOT_STARTED",
         "title": "Production governance and release readiness",
-        "weight": 5
-      },
-      {
-        "id": "PROPOSED-NEW-PROGRAM-003",
-        "milestone": "M0",
-        "repo": "Program",
-        "status": "NOT_STARTED",
-        "title": "Program register and planning controls",
-        "weight": 4
-      },
-      {
-        "id": "PROPOSED-NEW-PROGRAM-004",
-        "milestone": "M0",
-        "repo": "Program",
-        "status": "NOT_STARTED",
-        "title": "Program approval and decision records",
-        "weight": 3
-      },
-      {
-        "id": "PROPOSED-NEW-PROGRAM-005",
-        "milestone": "M0",
-        "repo": "Program",
-        "status": "NOT_STARTED",
-        "title": "Program validation and governance checks",
-        "weight": 3
-      },
-      {
-        "id": "PROPOSED-NEW-CORE-001",
-        "milestone": "M0",
-        "repo": "Core",
-        "status": "IN_PROGRESS",
-        "title": "Core engineering contract and version pin",
         "weight": 5
       },
       {
@@ -1287,14 +1319,6 @@
         "status": "NOT_STARTED",
         "title": "Core release and security review",
         "weight": 6
-      },
-      {
-        "id": "PROPOSED-NEW-COMMUNITY-001",
-        "milestone": "M0",
-        "repo": "Community",
-        "status": "NOT_STARTED",
-        "title": "Security reporting path and mailbox verification",
-        "weight": 2
       },
       {
         "id": "PROPOSED-NEW-COMMUNITY-002",
@@ -1327,14 +1351,6 @@
         "status": "NOT_STARTED",
         "title": "Community release and security review",
         "weight": 6
-      },
-      {
-        "id": "PROPOSED-NEW-SENSE-001",
-        "milestone": "M0",
-        "repo": "Sense",
-        "status": "NOT_STARTED",
-        "title": "Sense governance and acceptance review",
-        "weight": 3
       },
       {
         "id": "KOS-MIND-001",
@@ -1393,22 +1409,6 @@
         "weight": 6
       },
       {
-        "id": "PROPOSED-NEW-MIND-GOV-001",
-        "milestone": "M0",
-        "repo": "Mind",
-        "status": "NOT_STARTED",
-        "title": "Mind governance and acceptance review",
-        "weight": 3
-      },
-      {
-        "id": "PROPOSED-NEW-MOTION-001",
-        "milestone": "M0",
-        "repo": "Motion",
-        "status": "NOT_STARTED",
-        "title": "Motion governance and acceptance review",
-        "weight": 3
-      },
-      {
         "id": "PROPOSED-NEW-MOTION-002",
         "milestone": "M5",
         "repo": "Motion",
@@ -1463,14 +1463,6 @@
         "status": "NOT_STARTED",
         "title": "Skill production readiness and release review",
         "weight": 6
-      },
-      {
-        "id": "PROPOSED-NEW-SKILL-GOV-001",
-        "milestone": "M0",
-        "repo": "Skill",
-        "status": "NOT_STARTED",
-        "title": "Skill governance and acceptance review",
-        "weight": 3
       },
       {
         "id": "PROPOSED-NEW-COMMUNITY-018-01",
@@ -1709,7 +1701,7 @@
       "M8": "PRODUCTION"
     },
     "v2_accepted_weight": 54,
-    "v2_baseline_weight": 67
+    "v2_baseline_weight": 101
   },
   "program_status": {
     "accepted_progress": "0% of the P0 baseline (no tasks defined or accepted yet)",
@@ -1744,8 +1736,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 90.64,
-    "basis": "155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 75.61,
+    "basis": "155/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "sequence": [
@@ -1753,7 +1745,7 @@
       "depends_on": [],
       "milestone": "M0",
       "open_predecessors": [],
-      "started": true,
+      "started": false,
       "status": "OK",
       "waiver": []
     },
@@ -1932,7 +1924,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_at": "2026-11-07T17:01:45Z",
         "fetched_head": "bd9d84c4f5ec471418338499c34df38f95e56332",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1955,7 +1947,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_at": "2026-11-07T17:01:45Z",
         "fetched_head": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1975,7 +1967,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_at": "2026-11-07T17:01:45Z",
         "fetched_head": "30b0e22669602beb177e7eddcf0fbca1a29fb697",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2010,7 +2002,7 @@
           "tasks/KOS-MOTION-003/TASK.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_at": "2026-11-07T17:01:45Z",
         "fetched_head": "84e4678c23a182bcf8bb36f5ba821ce0e928afca",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2076,7 +2068,7 @@
           "tasks/KOS-SENSE-008/ACCEPTANCE_CRITERIA.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_at": "2026-11-07T17:01:45Z",
         "fetched_head": "39196bb8f1840aeb6ba7af51471de1b63f658f3c",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2096,7 +2088,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T16:55:25Z",
+        "fetched_at": "2026-11-07T17:01:45Z",
         "fetched_head": "86703637bf6ad17d1d95521033e36142a82c581c",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2164,17 +2156,17 @@
     },
     "pending_decisions": 3,
     "pending_reviews": 0,
-    "progress": "155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 90.64,
+    "progress": "155/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 75.61,
     "readiness": {},
-    "warnings": 20
+    "warnings": 30
   },
   "tasks": [
     {
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A298 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 4 x approval A339 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2195,6 +2187,7 @@
       "task_commit": "150d21161ce22676a23c76adbc5758222421f948",
       "task_id": "I2-001",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Runtime Host",
       "weight": 4,
       "workstream_id": "COMMUNITY"
     },
@@ -2202,7 +2195,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A299 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A340 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2223,6 +2216,7 @@
       "task_commit": "e2851fdae3229e7a0139841ee1c099dab2ad218d",
       "task_id": "I2-002",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Component Composition",
       "weight": 3,
       "workstream_id": "COMMUNITY"
     },
@@ -2230,7 +2224,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A300 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A341 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2251,6 +2245,7 @@
       "task_commit": "ae0de753d1e240a71da9e1411efc30cbfe9a109e",
       "task_id": "I2-003",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Configuration",
       "weight": 3,
       "workstream_id": "COMMUNITY"
     },
@@ -2258,7 +2253,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A301 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A342 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2279,6 +2274,7 @@
       "task_commit": "bfa2b29aee7fcfcd34bf9b870b6249e556e32333",
       "task_id": "I2-004",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Runtime Observation",
       "weight": 3,
       "workstream_id": "COMMUNITY"
     },
@@ -2286,7 +2282,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A302 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A343 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2307,6 +2303,7 @@
       "task_commit": "e8ad7937366455c758c9cd0add35fb17d8593b3c",
       "task_id": "I2-005",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Failure Handling",
       "weight": 3,
       "workstream_id": "COMMUNITY"
     },
@@ -2314,7 +2311,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 2 x approval A303 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 2 x approval A344 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2335,6 +2332,7 @@
       "task_commit": "69521ef3c164847e8956ef509d2f8f6a308f24b1",
       "task_id": "I2-006",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Reference Demo",
       "weight": 2,
       "workstream_id": "COMMUNITY"
     },
@@ -2342,7 +2340,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A304 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 4 x approval A345 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2363,6 +2361,7 @@
       "task_commit": "39780ccb8f93719471ee982299f6f43f2cee6196",
       "task_id": "I3-001",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Device / Endpoint architecture and contracts",
       "weight": 4,
       "workstream_id": "COMMUNITY"
     },
@@ -2370,7 +2369,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A305 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A346 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2391,6 +2390,7 @@
       "task_commit": "a7e08e518257d657ae0b1a1ac8696241cc8844d2",
       "task_id": "I3-002",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Device and Endpoint registry",
       "weight": 3,
       "workstream_id": "COMMUNITY"
     },
@@ -2398,7 +2398,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A306 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 4 x approval A347 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2419,6 +2419,7 @@
       "task_commit": "97ab51870a122019a80acf7507bd916a4bef3a3b",
       "task_id": "I3-003",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Endpoint lifecycle and Runtime integration",
       "weight": 4,
       "workstream_id": "COMMUNITY"
     },
@@ -2426,7 +2427,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A307 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A348 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2447,6 +2448,7 @@
       "task_commit": "f98067542476258b3e346353115bf663760b5491",
       "task_id": "I3-004",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Typed sensor / actuator data interfaces",
       "weight": 3,
       "workstream_id": "COMMUNITY"
     },
@@ -2454,7 +2456,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A308 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 3 x approval A349 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2475,6 +2477,7 @@
       "task_commit": "cd1a35c85f2bc9e2680f0c3ce80be524a1fc15ce",
       "task_id": "I3-005",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Mock Device / Endpoint implementation",
       "weight": 3,
       "workstream_id": "COMMUNITY"
     },
@@ -2482,7 +2485,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A309 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 4 x approval A350 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2503,6 +2506,7 @@
       "task_commit": "46b91fabac8bd4a9df00797ca23313717127c325",
       "task_id": "I3-006",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Observation, diagnostics and fault handling",
       "weight": 4,
       "workstream_id": "COMMUNITY"
     },
@@ -2510,7 +2514,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 2 x approval A310 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
+      "credit_reason": "weight 2 x approval A351 (PASS, APPROVED) on commit 8256ba3 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "38158709895",
       "evidence_state": "VERIFIED",
@@ -2531,6 +2535,7 @@
       "task_commit": "d8cd3150867a7e71111579a9cac6d37a5832731e",
       "task_id": "I3-007",
       "tested_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "title": "Reference Device/Endpoint demo",
       "weight": 2,
       "workstream_id": "COMMUNITY"
     },
@@ -2538,7 +2543,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A311 (PASS, APPROVED) on commit d2f8936 with PASS evidence",
+      "credit_reason": "weight 4 x approval A352 (PASS, APPROVED) on commit d2f8936 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37253855540",
       "evidence_state": "VERIFIED",
@@ -2559,6 +2564,7 @@
       "task_commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
       "task_id": "I4-001",
       "tested_commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+      "title": "Architecture, Node Identity & Protocol Contract",
       "weight": 4,
       "workstream_id": "COMMUNITY"
     },
@@ -2566,7 +2572,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A312 (PASS, APPROVED) on commit 52218f4 with PASS evidence",
+      "credit_reason": "weight 4 x approval A353 (PASS, APPROVED) on commit 52218f4 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37256868535",
       "evidence_state": "VERIFIED",
@@ -2587,6 +2593,7 @@
       "task_commit": "52218f484f29ea58813b848008d187aeab98a0bf",
       "task_id": "I4-002",
       "tested_commit": "52218f484f29ea58813b848008d187aeab98a0bf",
+      "title": "Frame Format & Protocol Codec",
       "weight": 4,
       "workstream_id": "COMMUNITY"
     },
@@ -2594,7 +2601,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A313 (PASS, APPROVED) on commit c40fbb2 with PASS evidence",
+      "credit_reason": "weight 3 x approval A354 (PASS, APPROVED) on commit c40fbb2 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37347653023",
       "evidence_state": "VERIFIED",
@@ -2615,6 +2622,7 @@
       "task_commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
       "task_id": "I4-003",
       "tested_commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+      "title": "Deterministic Simulated Transport",
       "weight": 3,
       "workstream_id": "COMMUNITY"
     },
@@ -2622,7 +2630,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A314 (PASS, APPROVED) on commit 3c535b6 with PASS evidence",
+      "credit_reason": "weight 4 x approval A355 (PASS, APPROVED) on commit 3c535b6 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37405212290",
       "evidence_state": "VERIFIED",
@@ -2643,6 +2651,7 @@
       "task_commit": "3c535b64ebae626065032e7315e679e474f6853b",
       "task_id": "I4-004",
       "tested_commit": "3c535b64ebae626065032e7315e679e474f6853b",
+      "title": "EdgeHost & Remote Service",
       "weight": 4,
       "workstream_id": "COMMUNITY"
     },
@@ -2650,7 +2659,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A315 (PASS, APPROVED) on commit a690520 with PASS evidence",
+      "credit_reason": "weight 4 x approval A356 (PASS, APPROVED) on commit a690520 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37407633177",
       "evidence_state": "VERIFIED",
@@ -2671,6 +2680,7 @@
       "task_commit": "a6905207441abdc13ec6238272e7681093c50180",
       "task_id": "I4-005",
       "tested_commit": "a6905207441abdc13ec6238272e7681093c50180",
+      "title": "RemoteDevice & RemoteEndpoint",
       "weight": 4,
       "workstream_id": "COMMUNITY"
     },
@@ -2678,7 +2688,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A316 (PASS, APPROVED) on commit 94aa01d with PASS evidence",
+      "credit_reason": "weight 5 x approval A357 (PASS, APPROVED) on commit 94aa01d with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37497496804",
       "evidence_state": "VERIFIED",
@@ -2699,6 +2709,7 @@
       "task_commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
       "task_id": "I4-006",
       "tested_commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
+      "title": "Distributed Failure & Actuator Safety",
       "weight": 5,
       "workstream_id": "COMMUNITY"
     },
@@ -2706,7 +2717,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A317 (PASS, APPROVED) on commit cd51be8 with PASS evidence",
+      "credit_reason": "weight 4 x approval A358 (PASS, APPROVED) on commit cd51be8 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "37507901354",
       "evidence_state": "VERIFIED",
@@ -2727,6 +2738,7 @@
       "task_commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
       "task_id": "I4-007",
       "tested_commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+      "title": "Runtime Integration & Diagnostics",
       "weight": 4,
       "workstream_id": "COMMUNITY"
     },
@@ -2734,7 +2746,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 2 x approval A318 (PASS, APPROVED) on commit 79f4daf with PASS evidence",
+      "credit_reason": "weight 2 x approval A359 (PASS, APPROVED) on commit 79f4daf with PASS evidence",
       "evidence_class": "RERUN",
       "evidence_run": "37561636952",
       "evidence_state": "VERIFIED",
@@ -2755,14 +2767,38 @@
       "task_commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
       "task_id": "I4-008",
       "tested_commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+      "title": "Nexus-Edge Reference Demo",
       "weight": 2,
       "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-CORE-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KF-CORE-M0-001",
+      "tested_commit": null,
+      "title": "Core engineering contract and version pin",
+      "weight": 5,
+      "workstream_id": "CORE"
     },
     {
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A319 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A360 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -2783,6 +2819,7 @@
       "task_commit": "1dba57166dfef312f6c204b8dd759c93ec309c99",
       "task_id": "KF-CORE-R10-001",
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "title": "Public API Inventory & Compatibility Classification",
       "weight": 3,
       "workstream_id": "CORE"
     },
@@ -2790,7 +2827,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A320 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 4 x approval A361 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -2811,6 +2848,7 @@
       "task_commit": "bbe10b6cb67165834d91b1cd0fe428579af5136d",
       "task_id": "KF-CORE-R10-002",
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "title": "Source & Semantic Compatibility Contract",
       "weight": 4,
       "workstream_id": "CORE"
     },
@@ -2818,7 +2856,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A321 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A362 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -2839,6 +2877,7 @@
       "task_commit": "559d75f7d7b57ef0dd6652e6f9d751b732e2d90d",
       "task_id": "KF-CORE-R10-003",
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "title": "ABI / Binary Compatibility Policy",
       "weight": 3,
       "workstream_id": "CORE"
     },
@@ -2846,7 +2885,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A322 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 4 x approval A363 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -2867,6 +2906,7 @@
       "task_commit": "a121c24f3987e97e4f7650effd45da638932e54e",
       "task_id": "KF-CORE-R10-004",
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "title": "Versioning & API Evolution Policy",
       "weight": 4,
       "workstream_id": "CORE"
     },
@@ -2874,7 +2914,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A323 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A364 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -2895,6 +2935,7 @@
       "task_commit": "2882cd2083591011d8556eec582eb777b6936dc3",
       "task_id": "KF-CORE-R10-005",
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "title": "Deprecation & Migration Policy",
       "weight": 3,
       "workstream_id": "CORE"
     },
@@ -2902,7 +2943,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A324 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 4 x approval A365 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -2923,6 +2964,7 @@
       "task_commit": "b44b14be9ac32a75b7fcf0568ddabfb14bedb1d1",
       "task_id": "KF-CORE-R10-006",
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "title": "Compatibility & Boundary Validation Harness",
       "weight": 4,
       "workstream_id": "CORE"
     },
@@ -2930,7 +2972,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A325 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A366 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -2951,6 +2993,7 @@
       "task_commit": "f212e469bb764cc0e27b3e40dfe8d67e9cd241d0",
       "task_id": "KF-CORE-R10-007",
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "title": "Package / Install Compatibility",
       "weight": 3,
       "workstream_id": "CORE"
     },
@@ -2958,7 +3001,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A326 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A367 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -2979,6 +3022,7 @@
       "task_commit": "c0edf1f0e1fa75dd90172e280776ea5fd27ac8eb",
       "task_id": "KF-CORE-R10-008",
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "title": "Documentation / Security / Traceability Validation",
       "weight": 3,
       "workstream_id": "CORE"
     },
@@ -2986,7 +3030,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A327 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
+      "credit_reason": "weight 3 x approval A368 (PASS, APPROVED) on commit 4acce3b with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "37192914607",
       "evidence_state": "VERIFIED",
@@ -3007,14 +3051,61 @@
       "task_commit": "af168478fa223b9c5bf4790984849cdf23964642",
       "task_id": "KF-CORE-R10-009",
       "tested_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "title": "Full Validation & Release Candidate",
       "weight": 3,
       "workstream_id": "CORE"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-COMMUNITY-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-COMMUNITY-M0-001",
+      "tested_commit": null,
+      "title": "Security reporting path and mailbox verification",
+      "weight": 2,
+      "workstream_id": "COMMUNITY"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-MIND-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-MIND-M0-001",
+      "tested_commit": null,
+      "title": "Mind governance and acceptance review",
+      "weight": 3,
+      "workstream_id": "MIND"
     },
     {
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A328 (PASS, APPROVED) on commit 3b9e12b with PASS evidence",
+      "credit_reason": "weight 5 x approval A369 (PASS, APPROVED) on commit 3b9e12b with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "41876610087",
       "evidence_state": "VERIFIED",
@@ -3035,6 +3126,7 @@
       "task_commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
       "task_id": "KOS-MOTION-001",
       "tested_commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
+      "title": "Motion command and state contract",
       "weight": 5,
       "workstream_id": "MOTION"
     },
@@ -3042,7 +3134,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A329 (PASS, APPROVED) on commit 77319b4 with PASS evidence",
+      "credit_reason": "weight 5 x approval A370 (PASS, APPROVED) on commit 77319b4 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "42252338614",
       "evidence_state": "VERIFIED",
@@ -3063,6 +3155,7 @@
       "task_commit": "77319b460d01436c7c70a40af8163bde287dfeb7",
       "task_id": "KOS-MOTION-002",
       "tested_commit": "77319b460d01436c7c70a40af8163bde287dfeb7",
+      "title": "Command validation, limit enforcement and fault-path tests",
       "weight": 5,
       "workstream_id": "MOTION"
     },
@@ -3085,14 +3178,38 @@
       "task_commit": null,
       "task_id": "KOS-MOTION-003",
       "tested_commit": null,
+      "title": "Motion lifecycle, termination and fault state machine",
       "weight": 8,
+      "workstream_id": "MOTION"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-MOTION-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-MOTION-M0-001",
+      "tested_commit": null,
+      "title": "Motion governance and acceptance review",
+      "weight": 3,
       "workstream_id": "MOTION"
     },
     {
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A330 (PASS, APPROVED) on commit e949b9f with PASS evidence",
+      "credit_reason": "weight 5 x approval A371 (PASS, APPROVED) on commit e949b9f with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "40994325092",
       "evidence_state": "VERIFIED",
@@ -3113,6 +3230,7 @@
       "task_commit": "2f332fc28dcc7f1540c9ce4b7ed8c007969ef330",
       "task_id": "KOS-SENSE-001",
       "tested_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "title": "Sense architecture and data contract",
       "weight": 5,
       "workstream_id": "SENSE"
     },
@@ -3120,7 +3238,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A331 (PASS, APPROVED) on commit e949b9f with PASS evidence",
+      "credit_reason": "weight 4 x approval A372 (PASS, APPROVED) on commit e949b9f with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "40994325092",
       "evidence_state": "VERIFIED",
@@ -3141,6 +3259,7 @@
       "task_commit": "3b2df51a064d9bf128a2886a3f2f87278cff7a25",
       "task_id": "KOS-SENSE-002",
       "tested_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "title": "Contract validation and synthetic-data tests",
       "weight": 4,
       "workstream_id": "SENSE"
     },
@@ -3148,7 +3267,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A332 (PASS, APPROVED) on commit c92e841 with PASS evidence",
+      "credit_reason": "weight 5 x approval A373 (PASS, APPROVED) on commit c92e841 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41267842700",
       "evidence_state": "VERIFIED",
@@ -3169,6 +3288,7 @@
       "task_commit": "52963d6e905d86b369097f8e793778d4df4ee4d6",
       "task_id": "KOS-SENSE-003",
       "tested_commit": "c92e841523f5d194de25a9a890e365c13bfc3f59",
+      "title": "Deterministic frame graph and transform validation for simulated samples",
       "weight": 5,
       "workstream_id": "SENSE"
     },
@@ -3176,7 +3296,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A333 (PASS, APPROVED) on commit 82b3174 with PASS evidence",
+      "credit_reason": "weight 4 x approval A374 (PASS, APPROVED) on commit 82b3174 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41275942226",
       "evidence_state": "VERIFIED",
@@ -3197,6 +3317,7 @@
       "task_commit": "b976ba3f0b9fbe38697108861e77e07547a2d0ff",
       "task_id": "KOS-SENSE-004",
       "tested_commit": "82b3174523a70372b5673e94a81e8ef20bf4430e",
+      "title": "Deterministic synthetic sensor sample generator",
       "weight": 4,
       "workstream_id": "SENSE"
     },
@@ -3204,7 +3325,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A334 (PASS, APPROVED) on commit 0bee5ed with PASS evidence",
+      "credit_reason": "weight 4 x approval A375 (PASS, APPROVED) on commit 0bee5ed with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41278515695",
       "evidence_state": "VERIFIED",
@@ -3225,6 +3346,7 @@
       "task_commit": "540c389150148f3793c6035bab28349828f186cc",
       "task_id": "KOS-SENSE-005",
       "tested_commit": "0bee5ed15dcbedbe4810e836adfc042cf99de97c",
+      "title": "Telemetry stream contract and reference validator",
       "weight": 4,
       "workstream_id": "SENSE"
     },
@@ -3232,7 +3354,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A335 (PASS, APPROVED) on commit 67590bc with PASS evidence",
+      "credit_reason": "weight 5 x approval A376 (PASS, APPROVED) on commit 67590bc with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41289421496",
       "evidence_state": "VERIFIED",
@@ -3253,6 +3375,7 @@
       "task_commit": "536d3c9af486a2e42c8cb0bd7268ce30342391a6",
       "task_id": "KOS-SENSE-006",
       "tested_commit": "67590bcbcc925d9dee58f5dc04bf51345cd000e2",
+      "title": "Consumer conformance harness",
       "weight": 5,
       "workstream_id": "SENSE"
     },
@@ -3260,7 +3383,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A336 (PASS, APPROVED) on commit 5f1aa7a with PASS evidence",
+      "credit_reason": "weight 5 x approval A377 (PASS, APPROVED) on commit 5f1aa7a with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41292919590",
       "evidence_state": "VERIFIED",
@@ -3281,6 +3404,7 @@
       "task_commit": "f068ecd597d6d3f2755ea2c7526e4dae634553c0",
       "task_id": "KOS-SENSE-007",
       "tested_commit": "5f1aa7a34c5aec9e0c12fc66add6d3bc6efaa7bc",
+      "title": "Python package and reproducible release",
       "weight": 5,
       "workstream_id": "SENSE"
     },
@@ -3288,7 +3412,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 6 x approval A337 (PASS, APPROVED) on commit a8dfb5a with PASS evidence",
+      "credit_reason": "weight 6 x approval A378 (PASS, APPROVED) on commit a8dfb5a with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41298259048",
       "evidence_state": "VERIFIED",
@@ -3309,6 +3433,7 @@
       "task_commit": "80237dd4d98782bfa155433c858023deb0964dfc",
       "task_id": "KOS-SENSE-008",
       "tested_commit": "a8dfb5a7827e9888a5bfae0bbcea1598727bd400",
+      "title": "Repository security and CI assurance review",
       "weight": 6,
       "workstream_id": "SENSE"
     },
@@ -3316,7 +3441,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 6 x approval A338 (PASS, APPROVED) on commit 55191ab with PASS evidence",
+      "credit_reason": "weight 6 x approval A379 (PASS, APPROVED) on commit 55191ab with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41761323273",
       "evidence_state": "VERIFIED",
@@ -3337,6 +3462,7 @@
       "task_commit": "8e8fe8f490681fb57310ffe448e4c1a984960efa",
       "task_id": "KOS-SENSE-009",
       "tested_commit": "55191ab4a57f3fad2e7011fbb4ad68eb8bb6dbc2",
+      "title": "Synthetic integration gate",
       "weight": 6,
       "workstream_id": "SENSE"
     },
@@ -3359,8 +3485,55 @@
       "task_commit": null,
       "task_id": "KOS-SENSE-010",
       "tested_commit": null,
+      "title": "Regression gate and compatibility suite",
       "weight": 5,
       "workstream_id": "SENSE"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-SENSE-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-SENSE-M0-001",
+      "tested_commit": null,
+      "title": "Sense governance and acceptance review",
+      "weight": 3,
+      "workstream_id": "SENSE"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-SKILL-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-SKILL-M0-001",
+      "tested_commit": null,
+      "title": "Skill governance and acceptance review",
+      "weight": 3,
+      "workstream_id": "SKILL"
     },
     {
       "acceptance": "NOT_RUN",
@@ -3381,6 +3554,99 @@
       "task_commit": null,
       "task_id": "KRP-ENG-001",
       "tested_commit": null,
+      "title": "Establish and enforce the Kritva repository engineering contract",
+      "weight": 3,
+      "workstream_id": "CI_DEV_INFRA"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-PROGRAM-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KRP-M0-001",
+      "tested_commit": null,
+      "title": "Program governance and planning foundation",
+      "weight": 5,
+      "workstream_id": "CI_DEV_INFRA"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-PROGRAM-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KRP-M0-002",
+      "tested_commit": null,
+      "title": "Program register and planning controls",
+      "weight": 4,
+      "workstream_id": "CI_DEV_INFRA"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-PROGRAM-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KRP-M0-003",
+      "tested_commit": null,
+      "title": "Program approval and decision records",
+      "weight": 3,
+      "workstream_id": "CI_DEV_INFRA"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M0-PROGRAM-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KRP-M0-004",
+      "tested_commit": null,
+      "title": "Program validation and governance checks",
       "weight": 3,
       "workstream_id": "CI_DEV_INFRA"
     }
@@ -3472,8 +3738,18 @@
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
+    "KF-CORE-M0-001: not reported by CORE (no credit)",
+    "KOS-COMMUNITY-M0-001: not reported by COMMUNITY (no credit)",
+    "KOS-MIND-M0-001: not reported by MIND (no credit)",
     "KOS-MOTION-003: not reported by MOTION (no credit)",
+    "KOS-MOTION-M0-001: not reported by MOTION (no credit)",
+    "KOS-SENSE-M0-001: not reported by SENSE (no credit)",
+    "KOS-SKILL-M0-001: not reported by SKILL (no credit)",
     "KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)",
+    "KRP-M0-001: not reported by CI_DEV_INFRA (no credit)",
+    "KRP-M0-002: not reported by CI_DEV_INFRA (no credit)",
+    "KRP-M0-003: not reported by CI_DEV_INFRA (no credit)",
+    "KRP-M0-004: not reported by CI_DEV_INFRA (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
     "NEXUS_EDGE: no status source (UNVERIFIED)",

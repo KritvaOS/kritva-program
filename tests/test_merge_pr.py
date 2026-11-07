@@ -12,7 +12,7 @@ case "$1 $2" in
   "pr view")
      if echo "$*" | grep -q "state,baseRefName"; then echo "${FAKE_PR_STATE:-OPEN main feat/x}"; exit 0; fi
      if echo "$*" | grep -q "\-q .state"; then echo MERGED; exit 0; fi
-     roll=""; for w in secret-scan commit-message-check pr-acceptance-gate unit-tests; do [ "$w" = "${FAKE_BAD:-none}" ] || roll="$roll{\"workflowName\":\"$w\",\"conclusion\":\"SUCCESS\",\"status\":\"COMPLETED\"},"; done
+     roll=""; for w in secret-scan commit-message-check pr-acceptance-gate unit-tests readme-check; do [ "$w" = "${FAKE_BAD:-none}" ] || roll="$roll{\"workflowName\":\"$w\",\"conclusion\":\"SUCCESS\",\"status\":\"COMPLETED\"},"; done
      echo '{"author":{"login":"someone"},"headRefOid":"'$(printf 'a%.0s' $(seq 40))'","baseRefName":"main","commits":[{"oid":"a","messageHeadline":"'"${FAKE_MSG:-feat(sense): x}"'","messageBody":"Task: KOS-SENSE-001"}],"reviews":[],"statusCheckRollup":['"${roll%,}"']}'; exit 0;;
   "pr checks")
      if echo "$*" | grep -q "\-\-json"; then

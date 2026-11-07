@@ -11,7 +11,7 @@ import pr_gate as G  # noqa: E402
 MANIFEST = json.loads((ROOT / "v2/planning/repo-pipeline.json").read_text(encoding="utf-8"))
 SHA = "b" * 40
 TASKS = "| Task | Title | Status |\n|---|---|---|\n| KOS-SENSE-001 | Contract | IN_PROGRESS |\n"
-OK = [{"workflowName": w, "conclusion": "SUCCESS", "status": "COMPLETED"} for w in ("secret-scan", "commit-message-check", "pr-acceptance-gate", "unit-tests")]
+OK = [{"workflowName": w, "conclusion": "SUCCESS", "status": "COMPLETED"} for w in ("secret-scan", "commit-message-check", "pr-acceptance-gate", "unit-tests", "readme-check")]
 
 
 class Gh:

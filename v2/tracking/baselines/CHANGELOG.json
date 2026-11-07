@@ -90,5 +90,14 @@
     "canonical_commit": "3dd48a8314cbcbb269391aa37a4bd5f957704a27",
     "reason": "Baseline v10 (D-108): KOS-MOTION-003 added under V2-M2-MOTION-002; weight 8 is an initial planning estimate, no credit before approved passing evidence",
     "baseline_sha256": "e390303a601e22052ea357c8cad46dc33ba0ea01e12041a7aec8366828933535"
+  },
+  {
+    "from_version": 10,
+    "to_version": 11,
+    "approver": "Dinesh",
+    "approved_at": "2026-11-07T17:12:27Z",
+    "canonical_commit": "bee0f2b36e88ef718b2d5c8320b9c94acaa978c8",
+    "reason": "Baseline v11 (D-117): ten V2-M0 tasks added at planning weights; no credit before approved passing evidence",
+    "baseline_sha256": "94f2113d57473481dedc51766e827b239ac31a224c495b232b117bcbe97b9528"
   }
 ]

@@ -332,8 +332,8 @@ def _foundation_by_repo(c):
         if r.get("class") == "PRE_V2" and r.get("workstream") in _FOUNDATION_REPO:
             a = out.setdefault(_FOUNDATION_REPO[r["workstream"]], [0, 0, 0, 0])
             m = bm.get(r.get("milestone"), {})
-            a[0] += r["accepted_weight"]
-            a[1] += r["weight"]
+            a[0] += r["accepted_weight"] or 0
+            a[1] += r["weight"] or 0
             a[2] += m.get("credited", 0)
             a[3] += m.get("tasks", 0)
     return out
@@ -508,26 +508,34 @@ def plan_tasks_lines(c):
 
 
 def open_milestone_lines(c):
-    """Task list for the earliest milestone that still has open approved-plan tasks (currently M0)."""
+    """Task list for the earliest milestone that still has open tasks (currently M0): approved plan rows plus
+    baseline tasks of that milestone (a plan row leaves the register when baseline v11 adds it as a baseline task)."""
     s = c.get("plan_register")
     L = []
-    if not s or not s.get("tasks"):
+    if not s or not (s.get("tasks") or c.get("tasks")):
         return L
     titles = s.get("titles") or {}
     order = {r: i for i, r in enumerate(_pr.REPOS)}
     for i in range(9):
         k = f"M{i}"
-        tasks = [t for t in s["tasks"] if t["milestone"] == k]
+        tasks = [t for t in s.get("tasks", []) if t["milestone"] == k]
+        base_rows = [t for t in c.get("tasks", []) if str(t.get("milestone_id") or "").startswith(f"V2-{k}-")]
         v = s["by_milestone"].get(k)
-        if not tasks or not v or v["accepted"] >= v["baseline"] + v["point"]:
+        if not (tasks or base_rows) or not v or v["accepted"] >= v["baseline"] + v["point"]:
             continue
         tot = v["baseline"] + v["point"]
+        rows = [(t["repo"], t["id"], t["title"], t["weight"], t["status"]) for t in tasks]
+        for t in base_rows:
+            repo = str(t["milestone_id"]).split("-")[2].capitalize()
+            status = (t.get("execution") or "NOT_REPORTED") + (" (credited)" if t.get("credit") else "")
+            rows.append((repo, t["task_id"], t.get("title") or "-", t.get("weight") if t.get("weight") is not None else "N/A", status))
+        done = sum(1 for t in base_rows if t.get("credit"))
         L = [f"## Open work: {k} {titles.get(k, '')}".rstrip(), "",
-             f"{k} is the earliest milestone with open tasks: {v['accepted']} of {tot} weight accepted, {len(tasks)} approved plan tasks, none completed. "
+             f"{k} is the earliest milestone with open tasks: {v['accepted']} of {tot} weight accepted, {len(rows)} tasks ({len(base_rows)} baselined, {len(tasks)} approved plan rows), {done} credited. "
              "Each task needs to be baselined, completed and backed by CI evidence before it earns credit.", "",
              "| Repository | Task | Title | Weight | Status |", "|---|---|---|---|---|"]
-        for t in sorted(tasks, key=lambda t: (order.get(t["repo"], 99), t["id"])):
-            L.append(f"| {t['repo']} | {t['id']} | {t['title'].replace('|', '/')} | {t['weight']} | {t['status']} |")
+        for r in sorted(rows, key=lambda r: (order.get(r[0], 99), r[1])):
+            L.append(f"| {r[0]} | {r[1]} | {str(r[2]).replace('|', '/')} | {r[3]} | {r[4]} |")
         pdata = c.get("v2_plan_data")
         if pdata:
             mid = f"V2-{k}"
@@ -543,9 +551,9 @@ def open_milestone_lines(c):
                       "Closing a milestone does not by itself award weighted credit; credit needs baselined tasks that are completed with approval and CI evidence.", "",
                       "| ID | Item | Effect | Reviewer / owner |", "|---|---|---|---|"]
                 L += [f"| {a} | {b} | {c_} | {d} |" for a, b, c_, d in items]
-        blocked = [t for t in tasks if "BLOCKED" in t["status"]]
-        L += ["", f"Weights add up to {sum(t['weight'] for t in tasks)}. "
-              + (f"{len(blocked)} task(s) are blocked on a pending owner decision: " + ", ".join(f"{t['id']} ({t['status']})" for t in blocked) + ". " if blocked else "")
+        blocked = [r for r in rows if "BLOCKED" in str(r[4])]
+        L += ["", f"Weights add up to {sum(r[3] for r in rows if isinstance(r[3], int))}. "
+              + (f"{len(blocked)} task(s) are blocked on a pending owner decision: " + ", ".join(f"{r[1]} ({r[4]})" for r in blocked) + ". " if blocked else "")
               + "Every milestone's tasks are listed in [STATUS_DETAIL.md](STATUS_DETAIL.md).", ""]
         break
     return L

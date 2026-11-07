@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-07T16:55:49Z from committed data. Baseline v10 (APPROVED). Validation: 0 error(s), 20 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T17:12:27Z from committed data. Baseline v11 (APPROVED). Validation: 0 error(s), 30 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -13,13 +13,13 @@ Program completion: 34.8%  (155 / 446 weight)
 ███████░░░░░░░░░░░░░
 ```
 
-Accepted weight across completed Foundation work and accepted V2 baseline tasks, divided by total Foundation weight, V2 baseline weight and owner-approved V2 planning weight. Planning-only tasks are in the denominator but earn no credit until they are baselined and accepted. Plan estimate range 30.5% to 40.4% (total weight 384 to 509). Tasks accepted: 41 of 103.
+Accepted weight across completed Foundation work and accepted V2 baseline tasks, divided by total Foundation weight, V2 baseline weight and owner-approved V2 planning weight. Planning-only tasks are in the denominator but earn no credit until they are baselined and accepted. Plan estimate range 31.1% to 39.3% (total weight 394 to 499). Tasks accepted: 41 of 103.
 
 | Component | Accepted / total weight | Tasks accepted / total | What it is |
 |---|---|---|---|
 | Completed Foundation (PRE_V2) | 101 / 104 | 30 / 31 | Core R1.0, Community I2-I4 and the program CI task, completed before the V2 plan |
-| V2 baselined | 54 / 67 | 11 / 13 | Approved baseline tasks (Sense, Motion) |
-| V2 approved planning scope (not baselined) | 0 / 275 | 0 / 59 | Owner-approved scope not yet in the baseline; not necessarily ready to execute; no credit until baselined and accepted |
+| V2 baselined | 54 / 101 | 11 / 23 | Approved baseline tasks (Sense, Motion) |
+| V2 approved planning scope (not baselined) | 0 / 241 | 0 / 49 | Owner-approved scope not yet in the baseline; not necessarily ready to execute; no credit until baselined and accepted |
 | **Total** | **155 / 446** | **41 / 103** | **34.8%** |
 
 Moving approved-plan tasks into the baseline later changes which row they sit in, not the total or the percentage. Credit comes only from baselined tasks with an approval, a completed task and CI evidence. Plan weights are estimates. Physical validation (V2-M6) is on HOLD and excluded; mechanical, actuator, enterprise and raas work are outside this view.
@@ -79,20 +79,20 @@ Task-level detail for every cell is in [STATUS_DETAIL.md](STATUS_DETAIL.md) (Pla
 
 ## Open work: M0 FOUNDATION
 
-M0 is the earliest milestone with open tasks: 0 of 34 weight accepted, 10 approved plan tasks, none completed. Each task needs to be baselined, completed and backed by CI evidence before it earns credit.
+M0 is the earliest milestone with open tasks: 0 of 34 weight accepted, 10 tasks (10 baselined, 0 approved plan rows), 0 credited. Each task needs to be baselined, completed and backed by CI evidence before it earns credit.
 
 | Repository | Task | Title | Weight | Status |
 |---|---|---|---|---|
-| Program | PROPOSED-NEW-PROGRAM-001 | Program governance and planning foundation | 5 | NOT_STARTED |
-| Program | PROPOSED-NEW-PROGRAM-003 | Program register and planning controls | 4 | NOT_STARTED |
-| Program | PROPOSED-NEW-PROGRAM-004 | Program approval and decision records | 3 | NOT_STARTED |
-| Program | PROPOSED-NEW-PROGRAM-005 | Program validation and governance checks | 3 | NOT_STARTED |
-| Core | PROPOSED-NEW-CORE-001 | Core engineering contract and version pin | 5 | IN_PROGRESS |
-| Community | PROPOSED-NEW-COMMUNITY-001 | Security reporting path and mailbox verification | 2 | NOT_STARTED |
-| Sense | PROPOSED-NEW-SENSE-001 | Sense governance and acceptance review | 3 | NOT_STARTED |
-| Mind | PROPOSED-NEW-MIND-GOV-001 | Mind governance and acceptance review | 3 | NOT_STARTED |
-| Motion | PROPOSED-NEW-MOTION-001 | Motion governance and acceptance review | 3 | NOT_STARTED |
-| Skill | PROPOSED-NEW-SKILL-GOV-001 | Skill governance and acceptance review | 3 | NOT_STARTED |
+| Program | KRP-M0-001 | Program governance and planning foundation | 5 | NOT_REPORTED |
+| Program | KRP-M0-002 | Program register and planning controls | 4 | NOT_REPORTED |
+| Program | KRP-M0-003 | Program approval and decision records | 3 | NOT_REPORTED |
+| Program | KRP-M0-004 | Program validation and governance checks | 3 | NOT_REPORTED |
+| Core | KF-CORE-M0-001 | Core engineering contract and version pin | 5 | NOT_REPORTED |
+| Community | KOS-COMMUNITY-M0-001 | Security reporting path and mailbox verification | 2 | NOT_REPORTED |
+| Sense | KOS-SENSE-M0-001 | Sense governance and acceptance review | 3 | NOT_REPORTED |
+| Mind | KOS-MIND-M0-001 | Mind governance and acceptance review | 3 | NOT_REPORTED |
+| Motion | KOS-MOTION-M0-001 | Motion governance and acceptance review | 3 | NOT_REPORTED |
+| Skill | KOS-SKILL-M0-001 | Skill governance and acceptance review | 3 | NOT_REPORTED |
 
 What stands between M0 and closure: the items below, then an approved completion record. Closing a milestone does not by itself award weighted credit; credit needs baselined tasks that are completed with approval and CI evidence.
 
@@ -113,7 +113,7 @@ All open items are shown.
 
 ## Notes on the total
 
-The previously displayed 90.64% (155/171) used the same accepted weight but a narrower denominator: it excluded the 275 points of approved V2 planning scope not yet baselined. The consolidated measure includes that scope, giving 155/446 (34.8%).
+The previously displayed 75.61% (155/205) used the same accepted weight but a narrower denominator: it excluded the 241 points of approved V2 planning scope not yet baselined. The consolidated measure includes that scope, giving 155/446 (34.8%).
 
 Consolidated program completion is a reporting aggregate across Foundation and V2 scope. It does not merge their baselines, alter task ownership, transfer credit between phases, or make planning-only tasks credit-eligible. Promoting planning tasks into a later baseline changes their classification, not the denominator or the accepted credit.
 
@@ -124,7 +124,7 @@ Community I3/I4 software implementation credit is included in Foundation (PRE_V2
 | Check | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 20 (17 workstreams with no status source) |
+| Warnings | 30 (17 workstreams with no status source) |
 | Source freshness | FETCH_FAILED 1, FRESH 6 |
 
 Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).

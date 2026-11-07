@@ -531,7 +531,7 @@ def compute(base, reports, effective, reg, vr=None, require_vr=False, emap=None)
             task_state[t["task_id"]] = (doc, t)
     gates = base.get("gates", [])
     for bt in base["tasks"]:
-        row = {"task_id": bt["id"], "workstream_id": bt["workstream_id"], "milestone_id": bt.get("milestone_id"),
+        row = {"task_id": bt["id"], "title": bt.get("title"), "workstream_id": bt["workstream_id"], "milestone_id": bt.get("milestone_id"),
                "phase": bt.get("phase"), "weight": bt.get("weight"), "execution": None, "git_sync": None,
                "readiness": None, "acceptance": "NOT_RUN", "evidence_verified": False, "credit": False,
                "blocked_by": gates_for(bt, gates), "credit_reason": "", "evidence_class": None,
