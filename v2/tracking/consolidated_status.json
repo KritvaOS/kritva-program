@@ -161,10 +161,10 @@
   },
   "changes": {
     "items": [
-      "Pending decisions: 6 -> 5"
+      "Pending reviews: 7 -> 0"
     ],
-    "recorded_at": "2026-11-07T15:39:59Z",
-    "since": "2026-11-07T18:00:00Z"
+    "recorded_at": "2026-11-07T15:49:02Z",
+    "since": "2026-11-07T15:43:43Z"
   },
   "errors": [],
   "evidence_health": [
@@ -265,7 +265,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T15:43:43Z",
+  "generated_at": "2026-11-07T15:49:02Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 44,
@@ -2110,7 +2110,7 @@
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
     "pending_decisions": 5,
-    "pending_reviews": 7,
+    "pending_reviews": 0,
     "progress": "155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 90.64,
     "readiness": {},
@@ -3401,7 +3401,7 @@
       }
     ],
     "pending_decisions": 5,
-    "pending_reviews": 7,
+    "pending_reviews": 0,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
     "repositories": 12

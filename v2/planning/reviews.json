@@ -6,22 +6,24 @@
       "record_id": "REV-001",
       "record_type": "REVIEW",
       "title": "Review the V2 milestone plan",
-      "status": "PENDING",
+      "status": "APPROVED",
       "created_at": "2026-10-18",
       "owner": null,
       "review_role": "PROGRAM_OWNER",
-      "reviewer": null,
+      "reviewer": "Dinesh",
       "due_date": null,
       "artifact": {
         "repo": "KritvaOS/kritva-program",
         "path": "v2/planning/milestones.json",
-        "commit_sha": null
+        "commit_sha": "d69e105d3666b9d85844a01f26c3151f8745e869"
       },
       "required_checks": [
         "tools/planning.py --check",
         "status-generation-check"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "D-114"
+      ],
       "blocking": true,
       "blocks": [
         "V2-M0"
@@ -31,21 +33,23 @@
       "record_id": "REV-002",
       "record_type": "REVIEW",
       "title": "Review the pipeline manifest and approval roles",
-      "status": "PENDING",
+      "status": "APPROVED",
       "created_at": "2026-10-18",
       "owner": null,
       "review_role": "PROGRAM_OWNER",
-      "reviewer": null,
+      "reviewer": "Dinesh",
       "due_date": null,
       "artifact": {
         "repo": "KritvaOS/kritva-program",
         "path": "v2/planning/repo-pipeline.json",
-        "commit_sha": null
+        "commit_sha": "d69e105d3666b9d85844a01f26c3151f8745e869"
       },
       "required_checks": [
         "scripts/pipeline/manifest.py validate"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "D-114"
+      ],
       "blocking": true,
       "blocks": [
         "V2-M0"
@@ -55,21 +59,23 @@
       "record_id": "REV-003",
       "record_type": "REVIEW",
       "title": "Review the acceptance standard",
-      "status": "PENDING",
+      "status": "APPROVED",
       "created_at": "2026-10-18",
       "owner": null,
       "review_role": "ARCHITECTURE_REVIEWER",
-      "reviewer": null,
+      "reviewer": "Dinesh",
       "due_date": null,
       "artifact": {
         "repo": "KritvaOS/kritva-program",
         "path": "v2/planning/ACCEPTANCE_STANDARD.md",
-        "commit_sha": null
+        "commit_sha": "d69e105d3666b9d85844a01f26c3151f8745e869"
       },
       "required_checks": [
         "docs-check"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "D-114"
+      ],
       "blocking": true,
       "blocks": [
         "V2-M0"
@@ -79,22 +85,25 @@
       "record_id": "REV-004",
       "record_type": "REVIEW",
       "title": "Review kritva-sense governance baseline and contract task",
-      "status": "PENDING",
+      "status": "APPROVED",
       "created_at": "2026-10-18",
       "owner": null,
       "review_role": "ARCHITECTURE_REVIEWER",
-      "reviewer": null,
+      "reviewer": "Dinesh",
       "due_date": null,
       "artifact": {
         "repo": "KritvaOS/kritva-sense",
         "path": "ACCEPTANCE_CRITERIA.md",
-        "commit_sha": null
+        "commit_sha": "ddf95185341656bea5f26b2f9196838321853852"
       },
       "required_checks": [
         "secret-scan",
         "commit-message-check"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "D-114",
+        "KritvaOS/kritva-sense planning/reviews/REV-004-GOVERNANCE-BASELINE.md"
+      ],
       "blocking": true,
       "blocks": [
         "V2-M0"
@@ -104,22 +113,25 @@
       "record_id": "REV-005",
       "record_type": "REVIEW",
       "title": "Review kritva-motion governance baseline and contract task",
-      "status": "PENDING",
+      "status": "APPROVED",
       "created_at": "2026-10-18",
       "owner": null,
       "review_role": "ARCHITECTURE_REVIEWER",
-      "reviewer": null,
+      "reviewer": "Dinesh",
       "due_date": null,
       "artifact": {
         "repo": "KritvaOS/kritva-motion",
         "path": "ACCEPTANCE_CRITERIA.md",
-        "commit_sha": null
+        "commit_sha": "44b733d5284d36895b1fff7e1cecedb69ca1720c"
       },
       "required_checks": [
         "secret-scan",
         "commit-message-check"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "D-114",
+        "KritvaOS/kritva-motion planning/reviews/REV-005-GOVERNANCE-BASELINE.md"
+      ],
       "blocking": true,
       "blocks": [
         "V2-M0"
@@ -129,22 +141,25 @@
       "record_id": "REV-006",
       "record_type": "REVIEW",
       "title": "Review kritva-mind governance baseline and contract task",
-      "status": "PENDING",
+      "status": "APPROVED",
       "created_at": "2026-10-18",
       "owner": null,
       "review_role": "ARCHITECTURE_REVIEWER",
-      "reviewer": null,
+      "reviewer": "Dinesh",
       "due_date": null,
       "artifact": {
         "repo": "KritvaOS/kritva-mind",
         "path": "ACCEPTANCE_CRITERIA.md",
-        "commit_sha": null
+        "commit_sha": "564c4e002c19b09309093a47aab1c7a7eda12825"
       },
       "required_checks": [
         "secret-scan",
         "commit-message-check"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "D-114",
+        "KritvaOS/kritva-mind planning/reviews/REV-006-GOVERNANCE-BASELINE.md"
+      ],
       "blocking": true,
       "blocks": [
         "V2-M0"
@@ -154,22 +169,25 @@
       "record_id": "REV-007",
       "record_type": "REVIEW",
       "title": "Review kritva-skill governance baseline and contract task",
-      "status": "PENDING",
+      "status": "APPROVED",
       "created_at": "2026-10-18",
       "owner": null,
       "review_role": "ARCHITECTURE_REVIEWER",
-      "reviewer": null,
+      "reviewer": "Dinesh",
       "due_date": null,
       "artifact": {
         "repo": "KritvaOS/kritva-skill",
         "path": "ACCEPTANCE_CRITERIA.md",
-        "commit_sha": null
+        "commit_sha": "c17192001f6c672819589857e8644ad21573d8d8"
       },
       "required_checks": [
         "secret-scan",
         "commit-message-check"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "D-114",
+        "KritvaOS/kritva-skill planning/reviews/REV-007-GOVERNANCE-BASELINE.md"
+      ],
       "blocking": true,
       "blocks": [
         "V2-M0"
