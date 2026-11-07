@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-07T17:12:27Z from committed data. Baseline v11 (APPROVED). Validation: 0 error(s), 30 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-07T17:40:28Z from committed data. Baseline v11 (APPROVED). Validation: 0 error(s), 27 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -89,10 +89,10 @@ M0 is the earliest milestone with open tasks: 0 of 34 weight accepted, 10 tasks 
 | Program | KRP-M0-004 | Program validation and governance checks | 3 | NOT_REPORTED |
 | Core | KF-CORE-M0-001 | Core engineering contract and version pin | 5 | NOT_REPORTED |
 | Community | KOS-COMMUNITY-M0-001 | Security reporting path and mailbox verification | 2 | NOT_REPORTED |
-| Sense | KOS-SENSE-M0-001 | Sense governance and acceptance review | 3 | NOT_REPORTED |
-| Mind | KOS-MIND-M0-001 | Mind governance and acceptance review | 3 | NOT_REPORTED |
+| Sense | KOS-SENSE-M0-001 | Sense governance and acceptance review | 3 | COMPLETE |
+| Mind | KOS-MIND-M0-001 | Mind governance and acceptance review | 3 | COMPLETE |
 | Motion | KOS-MOTION-M0-001 | Motion governance and acceptance review | 3 | NOT_REPORTED |
-| Skill | KOS-SKILL-M0-001 | Skill governance and acceptance review | 3 | NOT_REPORTED |
+| Skill | KOS-SKILL-M0-001 | Skill governance and acceptance review | 3 | COMPLETE |
 
 What stands between M0 and closure: the items below, then an approved completion record. Closing a milestone does not by itself award weighted credit; credit needs baselined tasks that are completed with approval and CI evidence.
 
@@ -108,6 +108,7 @@ Weights add up to 34. Every milestone's tasks are listed in [STATUS_DETAIL.md](S
 |---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh |
 | 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh |
+| 3 | 3 task(s) have reported CI evidence awaiting central approval | Zero credit until an approval is recorded: KOS-MIND-M0-001, KOS-SENSE-M0-001, KOS-SKILL-M0-001 | not recorded |
 
 All open items are shown.
 
@@ -124,7 +125,7 @@ Community I3/I4 software implementation credit is included in Foundation (PRE_V2
 | Check | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 30 (17 workstreams with no status source) |
-| Source freshness | FETCH_FAILED 1, FRESH 6 |
+| Warnings | 27 (17 workstreams with no status source) |
+| Source freshness | FETCH_FAILED 2, FRESH 5 |
 
 Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).

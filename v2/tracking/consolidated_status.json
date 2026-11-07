@@ -60,7 +60,7 @@
     },
     "V2-M0-MIND-001": {
       "accepted_weight": 0,
-      "complete": 0,
+      "complete": 1,
       "credited": 0,
       "tasks": 1,
       "weight": 3,
@@ -84,7 +84,7 @@
     },
     "V2-M0-SENSE-001": {
       "accepted_weight": 0,
-      "complete": 0,
+      "complete": 1,
       "credited": 0,
       "tasks": 1,
       "weight": 3,
@@ -92,7 +92,7 @@
     },
     "V2-M0-SKILL-001": {
       "accepted_weight": 0,
-      "complete": 0,
+      "complete": 1,
       "credited": 0,
       "tasks": 1,
       "weight": 3,
@@ -166,7 +166,7 @@
   "by_phase": {
     "UNMAPPED": {
       "accepted_weight": 155,
-      "complete": 41,
+      "complete": 44,
       "credited": 41,
       "tasks": 54,
       "weight": 205,
@@ -200,7 +200,7 @@
     },
     "MIND": {
       "accepted_weight": 0,
-      "complete": 0,
+      "complete": 1,
       "credited": 0,
       "tasks": 1,
       "weight": 3,
@@ -216,7 +216,7 @@
     },
     "SENSE": {
       "accepted_weight": 44,
-      "complete": 9,
+      "complete": 10,
       "credited": 9,
       "tasks": 11,
       "weight": 52,
@@ -224,7 +224,7 @@
     },
     "SKILL": {
       "accepted_weight": 0,
-      "complete": 0,
+      "complete": 1,
       "credited": 0,
       "tasks": 1,
       "weight": 3,
@@ -233,17 +233,19 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 155/171 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 155/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Warnings: 20 -> 30"
+      "Warnings: 30 -> 27"
     ],
-    "recorded_at": "2026-11-07T17:12:27Z",
-    "since": "2026-11-07T17:02:09Z"
+    "recorded_at": "2026-11-07T17:40:28Z",
+    "since": "2026-11-07T17:39:17Z"
   },
   "errors": [],
   "evidence_health": [
     "CI_DEV_INFRA: source STALE",
-    "KF-CORE-M0-001, KOS-COMMUNITY-M0-001, KOS-MIND-M0-001, KOS-MOTION-003, KOS-MOTION-M0-001, KOS-SENSE-M0-001, KOS-SKILL-M0-001, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream",
-    "KOS-SENSE-010: the repo reports no commit-bound CI evidence"
+    "KF-CORE-M0-001, KOS-COMMUNITY-M0-001, KOS-MOTION-003, KOS-MOTION-M0-001, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream",
+    "KOS-MIND-M0-001: evidence reported (class not recorded, run 42385456931 at 564c4e0; run not yet checked against GitHub) but no central approval is recorded, so zero credit until approved",
+    "KOS-SENSE-010: the repo reports no commit-bound CI evidence",
+    "KOS-SENSE-M0-001: evidence reported (class not recorded, run 42329065787 at ddf9518; run not yet checked against GitHub) but no central approval is recorded, so zero credit until approved",
+    "KOS-SKILL-M0-001: evidence reported (class not recorded, run 41598873743 at c171920; run not yet checked against GitHub) but no central approval is recorded, so zero credit until approved"
   ],
   "gates": [
     {
@@ -338,7 +340,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-07T17:12:27Z",
+  "generated_at": "2026-11-07T17:40:28Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
@@ -347,7 +349,7 @@
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 41,
+      "tasks_complete": 44,
       "tasks_total": 54
     },
     "release_readiness": {
@@ -1924,7 +1926,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:01:45Z",
+        "fetched_at": "2026-11-07T17:40:06Z",
         "fetched_head": "bd9d84c4f5ec471418338499c34df38f95e56332",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1947,7 +1949,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:01:45Z",
+        "fetched_at": "2026-11-07T17:40:06Z",
         "fetched_head": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1959,26 +1961,29 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 2,
+        "ahead_by": 4,
         "changed_files": [
+          "planning/MILESTONE_STATUS.md",
+          "planning/TASKS.md",
+          "planning/reviews/REV-006-GOVERNANCE-BASELINE.md",
           "status/README.md",
           "status/status.json",
           "status/status.schema.json",
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:01:45Z",
-        "fetched_head": "30b0e22669602beb177e7eddcf0fbca1a29fb697",
+        "fetched_at": "2026-11-07T17:40:06Z",
+        "fetched_head": "395b54aa9aff37d24eeaa1fdc752fc31f99e2b75",
         "freshness": "FRESH",
-        "gap_kind": "STATUS_ONLY",
+        "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-mind",
         "report_source_commit": "3083512cb116b57bed92aa4e016a66f7a3189089",
-        "status_only": true,
+        "status_only": false,
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 0,
+        "age_hours": null,
         "ahead_by": 14,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2001,10 +2006,10 @@
           "tasks/KOS-MOTION-003/LIFECYCLE.md",
           "tasks/KOS-MOTION-003/TASK.md"
         ],
-        "fetch_state": "FETCHED",
+        "fetch_state": "FETCH_FAILED",
         "fetched_at": "2026-11-07T17:01:45Z",
         "fetched_head": "84e4678c23a182bcf8bb36f5ba821ce0e928afca",
-        "freshness": "FRESH",
+        "freshness": "FETCH_FAILED",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-motion",
@@ -2014,7 +2019,7 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 101,
+        "ahead_by": 103,
         "changed_files": [
           ".github/kritva-gate.json",
           ".github/workflows/commit-message-check.yml",
@@ -2068,8 +2073,8 @@
           "tasks/KOS-SENSE-008/ACCEPTANCE_CRITERIA.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:01:45Z",
-        "fetched_head": "39196bb8f1840aeb6ba7af51471de1b63f658f3c",
+        "fetched_at": "2026-11-07T17:40:06Z",
+        "fetched_head": "7b43720ece86149e9590c13b11006d3d17da7bdf",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -2080,22 +2085,25 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 2,
+        "ahead_by": 4,
         "changed_files": [
+          "planning/MILESTONE_STATUS.md",
+          "planning/TASKS.md",
+          "planning/reviews/REV-007-GOVERNANCE-BASELINE.md",
           "status/README.md",
           "status/status.json",
           "status/status.schema.json",
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-07T17:01:45Z",
-        "fetched_head": "86703637bf6ad17d1d95521033e36142a82c581c",
+        "fetched_at": "2026-11-07T17:40:06Z",
+        "fetched_head": "7b0937740cd6b0d6f937cca736eb2ef3b44a4b24",
         "freshness": "FRESH",
-        "gap_kind": "STATUS_ONLY",
+        "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-skill",
         "report_source_commit": "557f19bc21de867f03bef8c867ac599ec17d0693",
-        "status_only": true,
+        "status_only": false,
         "workstream_id": "SKILL"
       }
     ],
@@ -2159,7 +2167,7 @@
     "progress": "155/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 75.61,
     "readiness": {},
-    "warnings": 30
+    "warnings": 27
   },
   "tasks": [
     {
@@ -3082,17 +3090,23 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M0-MIND-001",
       "phase": null,
-      "readiness": null,
-      "reported_evidence": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": null,
+        "commit": "564c4e002c19b09309093a47aab1c7a7eda12825",
+        "github_verified": null,
+        "run": "42385456931",
+        "task_commit": null
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "KOS-MIND-M0-001",
@@ -3493,17 +3507,23 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M0-SENSE-001",
       "phase": null,
-      "readiness": null,
-      "reported_evidence": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": null,
+        "commit": "ddf95185341656bea5f26b2f9196838321853852",
+        "github_verified": null,
+        "run": "42329065787",
+        "task_commit": null
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "KOS-SENSE-M0-001",
@@ -3516,17 +3536,23 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M0-SKILL-001",
       "phase": null,
-      "readiness": null,
-      "reported_evidence": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": null,
+        "commit": "c17192001f6c672819589857e8644ad21573d8d8",
+        "github_verified": null,
+        "run": "41598873743",
+        "task_commit": null
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "KOS-SKILL-M0-001",
@@ -3740,11 +3766,8 @@
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
     "KF-CORE-M0-001: not reported by CORE (no credit)",
     "KOS-COMMUNITY-M0-001: not reported by COMMUNITY (no credit)",
-    "KOS-MIND-M0-001: not reported by MIND (no credit)",
     "KOS-MOTION-003: not reported by MOTION (no credit)",
     "KOS-MOTION-M0-001: not reported by MOTION (no credit)",
-    "KOS-SENSE-M0-001: not reported by SENSE (no credit)",
-    "KOS-SKILL-M0-001: not reported by SKILL (no credit)",
     "KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)",
     "KRP-M0-001: not reported by CI_DEV_INFRA (no credit)",
     "KRP-M0-002: not reported by CI_DEV_INFRA (no credit)",
@@ -3875,7 +3898,7 @@
       "id": "MIND",
       "repo": "KritvaOS/kritva-mind",
       "source_state": "OK",
-      "tasks_reported": 0
+      "tasks_reported": 1
     },
     {
       "commit": "d76dbdf36d4c430c9a379de8b0b249f1cf52c7ab",
@@ -3903,7 +3926,7 @@
       "id": "SENSE",
       "repo": "KritvaOS/kritva-sense",
       "source_state": "OK",
-      "tasks_reported": 10
+      "tasks_reported": 11
     },
     {
       "commit": "-------",
@@ -3917,7 +3940,7 @@
       "id": "SKILL",
       "repo": "KritvaOS/kritva-skill",
       "source_state": "OK",
-      "tasks_reported": 0
+      "tasks_reported": 1
     },
     {
       "commit": "-------",
