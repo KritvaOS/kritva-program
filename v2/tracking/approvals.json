@@ -6086,6 +6086,21 @@
         "https://github.com/KritvaOS/kritva-skill/actions/runs/41598873743"
       ],
       "rationale": "Owner acceptance of the M0 governance task on the merged REV-004 to REV-007 evidence packages (criteria AC-M0-1 to AC-M0-6; AC-M0-3 PARTIAL as recorded: pull request and required checks verified, approval roles held by the owner under the interim roles of D-047, not independent review; D-114, D-115)."
+    },
+    {
+      "approval_id": "A384",
+      "task_id": "KF-CORE-M0-001",
+      "baseline_version": 11,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "0b30a998ef701864cb0e5133be3330cb230e5118",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T07:11:41Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/42398261494"
+      ],
+      "rationale": "Owner acceptance of the Core engineering contract and pin (D-113; contract-pin-check run 42398261494 PASS on 0b30a99). Interim reviewer roles of D-047, not independent review."
     }
   ]
 }

@@ -1159,6 +1159,25 @@
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT",
         "GOVERNANCE_BASELINE_REVIEWED_COMMIT"
       ]
+    },
+    {
+      "task_id": "KF-CORE-M0-001",
+      "workstream_id": "CORE",
+      "task_commit": "71a82e9b6e2ec3c6155270391adaa30e7751c1b9",
+      "task_subject": "Core engineering contract text (pinned by docs/development/ENGINEERING_CONTRACT.pin.json, D-113)",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "0b30a998ef701864cb0e5133be3330cb230e5118",
+        "ci_run": 42398261494,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-core/actions/runs/42398261494",
+        "workflow": "contract-pin-check"
+      },
+      "task_files_changed_after": null,
+      "review_flags": [
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []

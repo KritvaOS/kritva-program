@@ -4,7 +4,7 @@
   "repo": "KritvaOS/kritva-program",
   "source": {
     "branch": "main",
-    "commit": "8e5086513ff12a7a20473314878111238f06a4d2",
+    "commit": "bc01ada3bbf3d30e1c5d8d371b46caaa3d89092a",
     "tag": null
   },
   "tasks": [
@@ -14,7 +14,35 @@
       "git_sync": "SYNCED",
       "readiness": "IMPLEMENTABLE",
       "evidence": []
+    },
+    {
+      "task_id": "KRP-M0-001",
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "KRP-M0-002",
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "KRP-M0-003",
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": []
+    },
+    {
+      "task_id": "KRP-M0-004",
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": []
     }
   ],
-  "updated_at": "2026-10-17T12:00:00Z"
+  "updated_at": "2026-11-08T07:08:29Z"
 }
