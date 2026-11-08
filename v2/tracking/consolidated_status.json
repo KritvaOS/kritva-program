@@ -75,9 +75,9 @@
       "weighted": true
     },
     "V2-M0-PROGRAM-001": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 15,
+      "complete": 4,
+      "credited": 4,
       "tasks": 4,
       "weight": 15,
       "weighted": true
@@ -165,9 +165,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 172,
-      "complete": 46,
-      "credited": 46,
+      "accepted_weight": 187,
+      "complete": 50,
+      "credited": 50,
       "tasks": 54,
       "weight": 205,
       "weighted": true
@@ -175,9 +175,9 @@
   },
   "by_workstream": {
     "CI_DEV_INFRA": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 15,
+      "complete": 4,
+      "credited": 4,
       "tasks": 5,
       "weight": 18,
       "weighted": true
@@ -233,16 +233,15 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 167/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 172/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: added KF-CORE-M0-001",
-      "Warnings: 24 -> 18"
+      "Accepted progress: 172/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 187/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004"
     ],
-    "recorded_at": "2026-11-08T07:11:41Z",
-    "since": "2026-11-08T06:57:25Z"
+    "recorded_at": "2026-11-08T11:17:40Z",
+    "since": "2026-11-08T09:00:39Z"
   },
   "errors": [],
   "evidence_health": [
-    "KOS-COMMUNITY-M0-001, KOS-SENSE-010, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: the repo reports no commit-bound CI evidence",
+    "KOS-COMMUNITY-M0-001, KOS-SENSE-010, KRP-ENG-001: the repo reports no commit-bound CI evidence",
     "KOS-MOTION-003: no current report from the owning workstream"
   ],
   "gates": [
@@ -338,22 +337,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-08T09:00:39Z",
+  "generated_at": "2026-11-08T11:18:35Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
-      "tasks_with_github_verified_run": 46,
-      "tasks_with_verified_evidence": 46
+      "tasks_with_github_verified_run": 50,
+      "tasks_with_verified_evidence": 50
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 46,
+      "tasks_complete": 50,
       "tasks_total": 54
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 8
+      "uncredited_tasks": 4
     }
   },
   "milestone_alignment": [
@@ -466,10 +465,10 @@
       "workstream": "MOTION"
     },
     {
-      "accepted_weight": 0,
+      "accepted_weight": 15,
       "class": "V2_REPO",
       "closure": "v2/milestones/V2-M0/COMPLETION_RECORD.md",
-      "credited": 0,
+      "credited": 4,
       "milestone": "V2-M0-PROGRAM-001",
       "program_milestone": "V2-M0",
       "status": "PROPOSED",
@@ -927,7 +926,7 @@
   "plan_register": {
     "by_milestone": {
       "M0": {
-        "accepted": 17,
+        "accepted": 32,
         "baseline": 34,
         "high": 0,
         "low": 0,
@@ -1033,8 +1032,8 @@
         "rows": 2
       },
       "Program": {
-        "accepted": 0,
-        "accepted_tasks": 0,
+        "accepted": 15,
+        "accepted_tasks": 4,
         "baseline": 15,
         "baseline_tasks": 4,
         "high": 6,
@@ -1203,7 +1202,7 @@
       },
       "Program": {
         "M0": {
-          "accepted": 0,
+          "accepted": 15,
           "baseline": 15,
           "point": 0,
           "rows": 0
@@ -1700,7 +1699,7 @@
       "M7": "LIVE & RESULTS",
       "M8": "PRODUCTION"
     },
-    "v2_accepted_weight": 71,
+    "v2_accepted_weight": 86,
     "v2_baseline_weight": 101
   },
   "program_status": {
@@ -1736,8 +1735,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 83.9,
-    "basis": "172/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 91.22,
+    "basis": "187/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "sequence": [
@@ -1845,24 +1844,29 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 1,
+        "age_hours": 0,
         "ahead_by": 2,
         "changed_files": [
-          "status/status.json"
+          "status/README.md",
+          "status/status.json",
+          "v2/tracking/STATUS_DETAIL.md",
+          "v2/tracking/STATUS_VIEW.md",
+          "v2/tracking/consolidated_status.json",
+          "v2/tracking/evidence_map_proposal.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T07:11:09Z",
-        "fetched_head": "adb099a8c74cd2ce3b269f40746641e610252c88",
+        "fetched_at": "2026-11-08T11:17:11Z",
+        "fetched_head": "2d99b59f1e5cce85a88b9fdfb26b101188cbe2fc",
         "freshness": "FRESH",
-        "gap_kind": "STATUS_ONLY",
+        "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-program",
-        "report_source_commit": "bc01ada3bbf3d30e1c5d8d371b46caaa3d89092a",
-        "status_only": true,
+        "report_source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "status_only": false,
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 1,
+        "age_hours": 0,
         "ahead_by": 2,
         "changed_files": [
           "planning/MILESTONE.md",
@@ -1875,7 +1879,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T07:11:09Z",
+        "fetched_at": "2026-11-08T11:17:11Z",
         "fetched_head": "37c59c1ebef7e046f10cb72ce0292b98729d52d8",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1886,7 +1890,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 1,
+        "age_hours": 0,
         "ahead_by": 2,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
@@ -1897,7 +1901,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T07:11:09Z",
+        "fetched_at": "2026-11-08T11:17:11Z",
         "fetched_head": "8ac173f8a331ed15e3180126d199482040b70964",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1908,7 +1912,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 1,
+        "age_hours": 0,
         "ahead_by": 6,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
@@ -1920,7 +1924,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T07:11:09Z",
+        "fetched_at": "2026-11-08T11:17:11Z",
         "fetched_head": "beb9fa19265b548cbd2d62f3bd19864637319e69",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1931,7 +1935,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 1,
+        "age_hours": 0,
         "ahead_by": 2,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
@@ -1940,7 +1944,7 @@
           "tasks/KOS-MOTION-M0-001/EVIDENCE.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T07:11:09Z",
+        "fetched_at": "2026-11-08T11:17:11Z",
         "fetched_head": "63a94525e9124d353353ca87c615907b71cf3fe2",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1951,7 +1955,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 1,
+        "age_hours": 0,
         "ahead_by": 108,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2006,7 +2010,7 @@
           "tasks/KOS-SENSE-006/TASK.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T07:11:09Z",
+        "fetched_at": "2026-11-08T11:17:11Z",
         "fetched_head": "6a10cac3c87cfc2664ff6c1300ff1ea368b126db",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2017,7 +2021,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 1,
+        "age_hours": 0,
         "ahead_by": 6,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
@@ -2029,7 +2033,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T07:11:09Z",
+        "fetched_at": "2026-11-08T11:17:11Z",
         "fetched_head": "5c04151f018b3a9e8b3fe4c5461b5379f20d3f1a",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2090,7 +2094,11 @@
       "KOS-SENSE-008",
       "KOS-SENSE-009",
       "KOS-SENSE-M0-001",
-      "KOS-SKILL-M0-001"
+      "KOS-SKILL-M0-001",
+      "KRP-M0-001",
+      "KRP-M0-002",
+      "KRP-M0-003",
+      "KRP-M0-004"
     ],
     "effort_completed": null,
     "effort_remaining": null,
@@ -2102,8 +2110,8 @@
     },
     "pending_decisions": 3,
     "pending_reviews": 0,
-    "progress": "172/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 83.9,
+    "progress": "187/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 91.22,
     "readiness": {},
     "warnings": 18
   },
@@ -3535,93 +3543,117 @@
       "workstream_id": "CI_DEV_INFRA"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
-      "evidence_verified": false,
-      "execution": "NOT_STARTED",
+      "credit": true,
+      "credit_reason": "weight 5 x approval A385 (PASS, APPROVED) on commit f4ec001 with PASS evidence",
+      "evidence_class": "OWN",
+      "evidence_run": "42461232903",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M0-PROGRAM-001",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "github_verified": true,
+        "run": "42461232903",
+        "task_commit": "f4ec001447d90cb2988421526fc5819bad05a713"
+      },
+      "run_verified": true,
+      "task_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
       "task_id": "KRP-M0-001",
-      "tested_commit": null,
+      "tested_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
       "title": "Program governance and planning foundation",
       "weight": 5,
       "workstream_id": "CI_DEV_INFRA"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
-      "evidence_verified": false,
-      "execution": "NOT_STARTED",
+      "credit": true,
+      "credit_reason": "weight 4 x approval A386 (PASS, APPROVED) on commit f4ec001 with PASS evidence",
+      "evidence_class": "OWN",
+      "evidence_run": "42461232903",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M0-PROGRAM-001",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "github_verified": true,
+        "run": "42461232903",
+        "task_commit": "dc24f6a7c326033b02aad53b1d4709c3dced40f1"
+      },
+      "run_verified": true,
+      "task_commit": "dc24f6a7c326033b02aad53b1d4709c3dced40f1",
       "task_id": "KRP-M0-002",
-      "tested_commit": null,
+      "tested_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
       "title": "Program register and planning controls",
       "weight": 4,
       "workstream_id": "CI_DEV_INFRA"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
-      "evidence_verified": false,
-      "execution": "NOT_STARTED",
+      "credit": true,
+      "credit_reason": "weight 3 x approval A387 (PASS, APPROVED) on commit f4ec001 with PASS evidence",
+      "evidence_class": "OWN",
+      "evidence_run": "42461232903",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M0-PROGRAM-001",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "github_verified": true,
+        "run": "42461232903",
+        "task_commit": "dc24f6a7c326033b02aad53b1d4709c3dced40f1"
+      },
+      "run_verified": true,
+      "task_commit": "dc24f6a7c326033b02aad53b1d4709c3dced40f1",
       "task_id": "KRP-M0-003",
-      "tested_commit": null,
+      "tested_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
       "title": "Program approval and decision records",
       "weight": 3,
       "workstream_id": "CI_DEV_INFRA"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
-      "evidence_verified": false,
-      "execution": "NOT_STARTED",
+      "credit": true,
+      "credit_reason": "weight 3 x approval A388 (PASS, APPROVED) on commit f4ec001 with PASS evidence",
+      "evidence_class": "OWN",
+      "evidence_run": "42461232736",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M0-PROGRAM-001",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "github_verified": true,
+        "run": "42461232736",
+        "task_commit": "9d0231da1947eeb6ae4b2081f3b557be16201e81"
+      },
+      "run_verified": true,
+      "task_commit": "9d0231da1947eeb6ae4b2081f3b557be16201e81",
       "task_id": "KRP-M0-004",
-      "tested_commit": null,
+      "tested_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
       "title": "Program validation and governance checks",
       "weight": 3,
       "workstream_id": "CI_DEV_INFRA"
@@ -3765,7 +3797,7 @@
       "tasks_reported": 0
     },
     {
-      "commit": "bc01ada3bbf3d30e1c5d8d371b46caaa3d89092a",
+      "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
       "id": "CI_DEV_INFRA",
       "repo": "KritvaOS/kritva-program",
       "source_state": "OK",
