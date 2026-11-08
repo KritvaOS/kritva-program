@@ -80,6 +80,8 @@ Every repository carries `.github/PULL_REQUEST_TEMPLATE.md`, the template in [te
 
 ## 6. PR approval sequence
 
+Decisions, approvals and baseline freezes follow [APPROVAL_PROCEDURE.md](APPROVAL_PROCEDURE.md) (append-only ledgers; only the owner runs the `--approve` commands).
+
 The sequence, dependencies, required approvals and required checks per repository are in [repo-pipeline.json](repo-pipeline.json) and rendered in [V2_REPO_PLAN.md](V2_REPO_PLAN.md). `ship-prs.sh --manifest v2/planning/repo-pipeline.json` reads the order from it, never from a hard-coded list. A downstream PR is merged only after its declared dependencies are merged; independent repositories can proceed in parallel. Approvals made before the PR head changed are stale and are not accepted.
 
 ## 7. Required files per repository

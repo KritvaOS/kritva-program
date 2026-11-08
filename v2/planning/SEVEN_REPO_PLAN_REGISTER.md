@@ -91,58 +91,58 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 
 | record_type | id | repo | milestone | title | parent_id | weight_point | low | high | plan_state | execution_status | credit | counted | dependencies |
 |---|---|---|---|---|---|---:|---:|---:|---|---|---:|---|---|
-| PLANNING_TASK | PROPOSED-NEW-PROGRAM-002 | Program | M8 | Production governance and release readiness |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-CORE-002 | Core | M2 | Core build and artifact integration |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-CORE-003 | Core | M8 | Core release and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-002 | Community | M1 | Cross-capability architecture documentation |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-006 | Community | M3 | Control Plane service conformance |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-015 | Community | M7 | Live and results public documentation |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-017 | Community | M8 | Community release and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | KOS-MIND-001 | Mind | M1 | Mind foundational contract and schema work |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | not recorded in this draft |
-| PLANNING_TASK | KOS-MIND-002 | Mind | M2 | Mind validation and semantics implementation |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | not recorded in this draft |
-| PLANNING_TASK | KOS-MIND-004 | Mind | M2 | Mind capability and contract integration |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | KOS-MIND-005 | Mind | M5 | Mind execution and runtime integration |  | 6 | 4 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | KOS-MIND-006 | Mind | M5 | Mind execution conformance and validation |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
+| PLANNING_TASK | PROPOSED-NEW-PROGRAM-002 | Program | M8 | Production governance and release readiness |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: none |
+| PLANNING_TASK | PROPOSED-NEW-CORE-002 | Core | M2 | Core build and artifact integration |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: none |
+| PLANNING_TASK | PROPOSED-NEW-CORE-003 | Core | M8 | Core release and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-CORE-002 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-002 | Community | M1 | Cross-capability architecture documentation |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: none |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-006 | Community | M3 | Control Plane service conformance |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-005-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-015 | Community | M7 | Live and results public documentation |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-014-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-017 | Community | M8 | Community release and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-016-02 |
+| PLANNING_TASK | KOS-MIND-001 | Mind | M1 | Mind foundational contract and schema work |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | PROPOSED: none |
+| PLANNING_TASK | KOS-MIND-002 | Mind | M2 | Mind validation and semantics implementation |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | PROPOSED: KOS-MIND-001 |
+| PLANNING_TASK | KOS-MIND-004 | Mind | M2 | Mind capability and contract integration |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-MIND-003-02 |
+| PLANNING_TASK | KOS-MIND-005 | Mind | M5 | Mind execution and runtime integration |  | 6 | 4 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: KOS-MIND-004 |
+| PLANNING_TASK | KOS-MIND-006 | Mind | M5 | Mind execution conformance and validation |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: KOS-MIND-005 |
 | PLANNING_TASK | KOS-MIND-007 | Mind | M5 | Joint Mind-to-Skill integration |  | 6 | 4 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | KOS-SKILL-001 |
-| PLANNING_TASK | KOS-MIND-008 | Mind | M8 | Mind production readiness and release review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-MOTION-002 | Motion | M5 | Motion simulated execution integration |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-MOTION-003 | Motion | M8 | Motion production and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | KOS-SKILL-001 | Skill | M1 | Skill foundational contract and capability integration |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-SKILL-002 | Skill | M2 | Skill build and package integration |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-SKILL-003 | Skill | M3 | Skill Control Plane registration and consumption |  | 5 | 3 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-SKILL-004 | Skill | M5 | Skill runtime execution against simulated capabilities |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-SKILL-005 | Skill | M8 | Skill production readiness and release review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
+| PLANNING_TASK | KOS-MIND-008 | Mind | M8 | Mind production readiness and release review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: KOS-MIND-007 |
+| PLANNING_TASK | PROPOSED-NEW-MOTION-002 | Motion | M5 | Motion simulated execution integration |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: none |
+| PLANNING_TASK | PROPOSED-NEW-MOTION-003 | Motion | M8 | Motion production and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-MOTION-002 |
+| PLANNING_TASK | KOS-SKILL-001 | Skill | M1 | Skill foundational contract and capability integration |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | PROPOSED: none |
+| PLANNING_TASK | PROPOSED-NEW-SKILL-002 | Skill | M2 | Skill build and package integration |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: KOS-SKILL-001 |
+| PLANNING_TASK | PROPOSED-NEW-SKILL-003 | Skill | M3 | Skill Control Plane registration and consumption |  | 5 | 3 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SKILL-002 |
+| PLANNING_TASK | PROPOSED-NEW-SKILL-004 | Skill | M5 | Skill runtime execution against simulated capabilities |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SKILL-003 |
+| PLANNING_TASK | PROPOSED-NEW-SKILL-005 | Skill | M8 | Skill production readiness and release review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SKILL-004 |
 
 ## 6. Child rows (28)
 
 | record_type | id | repo | milestone | title | parent_id | weight_point | low | high | plan_state | execution_status | credit | counted | dependencies |
 |---|---|---|---|---|---|---:|---:|---:|---|---|---:|---|---|
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-018-01 | Community | M1 | Capability contract inventory and compatibility matrix | PROPOSED-NEW-COMMUNITY-018 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-018-02 | Community | M1 | Automated version and pin compatibility checks | PROPOSED-NEW-COMMUNITY-018 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-003-01 | Community | M2 | Build artifact handoff specification and metadata | PROPOSED-NEW-COMMUNITY-003 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-003-02 | Community | M2 | Reproducible integration build and artifact hash | PROPOSED-NEW-COMMUNITY-003 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-004-01 | Community | M2 | Simulator artifact interface and manifest | PROPOSED-NEW-COMMUNITY-004 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-004-02 | Community | M2 | Deterministic simulator artifact handoff tests | PROPOSED-NEW-COMMUNITY-004 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-01 | Community | M2 | SDK package and build manifest | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-02 | Community | M2 | Clean-environment SDK installation and import tests | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-007-01 | Community | M3 | Control Plane API resource model and versioning | PROPOSED-NEW-COMMUNITY-007 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-007-02 | Community | M3 | API schema validation and compatibility fixtures | PROPOSED-NEW-COMMUNITY-007 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-008-01 | Community | M3 | Job and run lifecycle model | PROPOSED-NEW-COMMUNITY-008 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-008-02 | Community | M3 | Deterministic lifecycle transition tests | PROPOSED-NEW-COMMUNITY-008 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-009-01 | Community | M3 | Authorization principals, permissions and resource scope | PROPOSED-NEW-COMMUNITY-009 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-009-02 | Community | M3 | Authorization allow/deny conformance tests | PROPOSED-NEW-COMMUNITY-009 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-010-01 | Community | M3 | Control Plane service conformance harness and traceability | PROPOSED-NEW-COMMUNITY-010 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-010-02 | Community | M3 | API, lifecycle and authorization integration tests | PROPOSED-NEW-COMMUNITY-010 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-011-01 | Community | M4 | Studio workflow model | PROPOSED-NEW-COMMUNITY-011 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-011-02 | Community | M4 | Demonstrable Studio sample-project workflow | PROPOSED-NEW-COMMUNITY-011 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-012-01 | Community | M4 | SDK developer API and CLI | PROPOSED-NEW-COMMUNITY-012 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-012-02 | Community | M4 | SDK examples, documentation and clean-environment tests | PROPOSED-NEW-COMMUNITY-012 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-013-01 | Community | M5 | Simulator job execution orchestration | PROPOSED-NEW-COMMUNITY-013 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-013-02 | Community | M5 | Deterministic execution and result handoff | PROPOSED-NEW-COMMUNITY-013 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-014-01 | Community | M5 | SDK job submit, status and cancel integration | PROPOSED-NEW-COMMUNITY-014 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-014-02 | Community | M5 | SDK result retrieval and error handling | PROPOSED-NEW-COMMUNITY-014 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-016-01 | Community | M7 | Telemetry and results ingestion using Sense stream contract | PROPOSED-NEW-COMMUNITY-016 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-016-02 | Community | M7 | Correlation, query and export end-to-end traceability | PROPOSED-NEW-COMMUNITY-016 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | not recorded in this draft |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-018-01 | Community | M1 | Capability contract inventory and compatibility matrix | PROPOSED-NEW-COMMUNITY-018 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-002 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-018-02 | Community | M1 | Automated version and pin compatibility checks | PROPOSED-NEW-COMMUNITY-018 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-018-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-003-01 | Community | M2 | Build artifact handoff specification and metadata | PROPOSED-NEW-COMMUNITY-003 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-018-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-003-02 | Community | M2 | Reproducible integration build and artifact hash | PROPOSED-NEW-COMMUNITY-003 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-003-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-004-01 | Community | M2 | Simulator artifact interface and manifest | PROPOSED-NEW-COMMUNITY-004 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-003-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-004-02 | Community | M2 | Deterministic simulator artifact handoff tests | PROPOSED-NEW-COMMUNITY-004 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-004-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-01 | Community | M2 | SDK package and build manifest | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-004-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-02 | Community | M2 | Clean-environment SDK installation and import tests | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-005-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-007-01 | Community | M3 | Control Plane API resource model and versioning | PROPOSED-NEW-COMMUNITY-007 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-006 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-007-02 | Community | M3 | API schema validation and compatibility fixtures | PROPOSED-NEW-COMMUNITY-007 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-007-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-008-01 | Community | M3 | Job and run lifecycle model | PROPOSED-NEW-COMMUNITY-008 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-007-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-008-02 | Community | M3 | Deterministic lifecycle transition tests | PROPOSED-NEW-COMMUNITY-008 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-008-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-009-01 | Community | M3 | Authorization principals, permissions and resource scope | PROPOSED-NEW-COMMUNITY-009 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-008-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-009-02 | Community | M3 | Authorization allow/deny conformance tests | PROPOSED-NEW-COMMUNITY-009 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-009-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-010-01 | Community | M3 | Control Plane service conformance harness and traceability | PROPOSED-NEW-COMMUNITY-010 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-009-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-010-02 | Community | M3 | API, lifecycle and authorization integration tests | PROPOSED-NEW-COMMUNITY-010 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-010-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-011-01 | Community | M4 | Studio workflow model | PROPOSED-NEW-COMMUNITY-011 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-010-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-011-02 | Community | M4 | Demonstrable Studio sample-project workflow | PROPOSED-NEW-COMMUNITY-011 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-011-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-012-01 | Community | M4 | SDK developer API and CLI | PROPOSED-NEW-COMMUNITY-012 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-011-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-012-02 | Community | M4 | SDK examples, documentation and clean-environment tests | PROPOSED-NEW-COMMUNITY-012 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-012-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-013-01 | Community | M5 | Simulator job execution orchestration | PROPOSED-NEW-COMMUNITY-013 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-012-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-013-02 | Community | M5 | Deterministic execution and result handoff | PROPOSED-NEW-COMMUNITY-013 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-013-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-014-01 | Community | M5 | SDK job submit, status and cancel integration | PROPOSED-NEW-COMMUNITY-014 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-013-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-014-02 | Community | M5 | SDK result retrieval and error handling | PROPOSED-NEW-COMMUNITY-014 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-014-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-016-01 | Community | M7 | Telemetry and results ingestion using Sense stream contract | PROPOSED-NEW-COMMUNITY-016 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-015 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-016-02 | Community | M7 | Correlation, query and export end-to-end traceability | PROPOSED-NEW-COMMUNITY-016 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-016-01 |
 | PLANNING_TASK | PROPOSED-NEW-MIND-003-01 | Mind | M2 | Context lifecycle model | KOS-MIND-003 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | KOS-MIND-001 accepted |
 | PLANNING_TASK | PROPOSED-NEW-MIND-003-02 | Mind | M2 | Edge and Hybrid context conformance fixtures | KOS-MIND-003 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | KOS-MIND-001 accepted |
 
@@ -174,7 +174,7 @@ KOS-MOTION-003, milestone V2-M2-MOTION-002, baseline weight 8 (baseline v10, D-1
 - Community I2 to I4 software credit (21/21 tasks, 71/71 weight) is not safety clearance. KOS-I3 and KOS-I4 human safety reviews stay OPEN, KOS-CI-001 is deferred, and physical actuator deployment is blocked.
 - kritva-core/planning is authoritative for Core planning.
 - Per-repo status.json files lag their repositories; use task registers and the frozen baseline.
-- Dependencies are recorded only where known (KOS-MIND-003 children, KOS-MIND-007). Remaining rows say so; they are to be filled when each task's criteria are made concrete.
+- Dependencies (KRP-M0-002, owner-proposed from plan order): rows marked `PROPOSED: <ID>` depend on the previous row in the same repository and ID series (a -02 child depends on its -01); `PROPOSED: none` marks the first row of a repository. Rows with an earlier recorded dependency (KOS-MIND-003 children, KOS-MIND-007) are unchanged. The proposals are planning input, not baseline dependencies; they are confirmed or corrected when each task's criteria are made concrete.
 
 ## 9. M0 rows moved to the baseline (D-117)
 
