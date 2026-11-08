@@ -94,6 +94,11 @@ class SelfReportedProgramTaskTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             r = make_root(d + "/kp", real=True)
             shutil.copytree(ROOT / "sources", r / "sources")
+            # the live ledger may already hold an approval for this task; this test models a self-report with none
+            ap = r / "v2/tracking/approvals.json"
+            led = json.loads(ap.read_text())
+            led["approvals"] = [x for x in led["approvals"] if x["task_id"] != "KRP-ENG-001"]
+            ap.write_text(json.dumps(led))
             p = r / "sources/CI_DEV_INFRA.json"
             doc = json.loads(p.read_text())
             doc["source"]["commit"] = SHA

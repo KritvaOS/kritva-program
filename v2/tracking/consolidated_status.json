@@ -35,9 +35,9 @@
       "weighted": true
     },
     "KRP-ENG": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 3,
+      "complete": 1,
+      "credited": 1,
       "tasks": 1,
       "weight": 3,
       "weighted": true
@@ -157,9 +157,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 187,
-      "complete": 50,
-      "credited": 50,
+      "accepted_weight": 190,
+      "complete": 51,
+      "credited": 51,
       "tasks": 53,
       "weight": 203,
       "weighted": true
@@ -167,9 +167,9 @@
   },
   "by_workstream": {
     "CI_DEV_INFRA": {
-      "accepted_weight": 15,
-      "complete": 4,
-      "credited": 4,
+      "accepted_weight": 18,
+      "complete": 5,
+      "credited": 5,
       "tasks": 5,
       "weight": 18,
       "weighted": true
@@ -225,16 +225,16 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 187/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 187/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Pending decisions: 3 -> 2"
+      "Accepted progress: 187/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 190/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KRP-ENG-001"
     ],
-    "recorded_at": "2026-11-08T12:00:22Z",
-    "since": "2026-11-08T11:18:35Z"
+    "recorded_at": "2026-11-08T12:15:47Z",
+    "since": "2026-11-08T12:14:29Z"
   },
   "errors": [],
   "evidence_health": [
     "KOS-MOTION-003: no current report from the owning workstream",
-    "KOS-SENSE-010, KRP-ENG-001: the repo reports no commit-bound CI evidence"
+    "KOS-SENSE-010: the repo reports no commit-bound CI evidence"
   ],
   "gates": [
     {
@@ -329,22 +329,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-08T12:14:29Z",
+  "generated_at": "2026-11-08T12:16:37Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 53,
-      "tasks_with_github_verified_run": 50,
-      "tasks_with_verified_evidence": 50
+      "tasks_with_github_verified_run": 51,
+      "tasks_with_verified_evidence": 51
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 50,
+      "tasks_complete": 51,
       "tasks_total": 53
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 3
+      "uncredited_tasks": 2
     }
   },
   "milestone_alignment": [
@@ -397,10 +397,10 @@
       "workstream": "COMMUNITY"
     },
     {
-      "accepted_weight": 0,
+      "accepted_weight": 3,
       "class": "PRE_V2",
       "closure": "-",
-      "credited": 0,
+      "credited": 1,
       "milestone": "KRP-ENG",
       "program_milestone": "-",
       "status": "-",
@@ -1721,8 +1721,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 92.12,
-    "basis": "187/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 93.6,
+    "basis": "190/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "sequence": [
@@ -1831,27 +1831,23 @@
     "rows": [
       {
         "age_hours": 0,
-        "ahead_by": 4,
+        "ahead_by": 2,
         "changed_files": [
-          "sources/CI_DEV_INFRA.json",
-          "sources/MANIFEST.json",
           "status/README.md",
           "status/status.json",
           "v2/tracking/STATUS_DETAIL.md",
           "v2/tracking/STATUS_VIEW.md",
-          "v2/tracking/approvals.json",
           "v2/tracking/consolidated_status.json",
-          "v2/tracking/evidence_map_proposal.json",
-          "v2/tracking/run_verification.json"
+          "v2/tracking/evidence_map_proposal.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T11:59:52Z",
-        "fetched_head": "bc8884f1c8920afd00e9146acb3bdedd8badbcd8",
+        "fetched_at": "2026-11-08T12:15:21Z",
+        "fetched_head": "6481d02cfb82207be60fbad679852da3dd1d5603",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-program",
-        "report_source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "report_source_commit": "0b0f18004de12820a5440f3bedfd2b031d3d6acd",
         "status_only": false,
         "workstream_id": "CI_DEV_INFRA"
       },
@@ -1869,7 +1865,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T11:59:52Z",
+        "fetched_at": "2026-11-08T12:15:21Z",
         "fetched_head": "87007e86250e31d582d82e9a829695ca457f058c",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1891,7 +1887,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T11:59:52Z",
+        "fetched_at": "2026-11-08T12:15:21Z",
         "fetched_head": "8ac173f8a331ed15e3180126d199482040b70964",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1914,7 +1910,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T11:59:52Z",
+        "fetched_at": "2026-11-08T12:15:21Z",
         "fetched_head": "beb9fa19265b548cbd2d62f3bd19864637319e69",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1948,7 +1944,7 @@
           "tests/manifest/conformance_manifest.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T11:59:52Z",
+        "fetched_at": "2026-11-08T12:15:21Z",
         "fetched_head": "5c52ae758b05318e4c472d846191671406522ce7",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2014,7 +2010,7 @@
           "tasks/KOS-SENSE-006/TASK.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T11:59:52Z",
+        "fetched_at": "2026-11-08T12:15:21Z",
         "fetched_head": "6a10cac3c87cfc2664ff6c1300ff1ea368b126db",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2037,7 +2033,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T11:59:52Z",
+        "fetched_at": "2026-11-08T12:15:21Z",
         "fetched_head": "5c04151f018b3a9e8b3fe4c5461b5379f20d3f1a",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2099,6 +2095,7 @@
       "KOS-SENSE-009",
       "KOS-SENSE-M0-001",
       "KOS-SKILL-M0-001",
+      "KRP-ENG-001",
       "KRP-M0-001",
       "KRP-M0-002",
       "KRP-M0-003",
@@ -2114,8 +2111,8 @@
     },
     "pending_decisions": 2,
     "pending_reviews": 0,
-    "progress": "187/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 92.12,
+    "progress": "190/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 93.6,
     "readiness": {},
     "warnings": 18
   },
@@ -3501,24 +3498,30 @@
       "workstream_id": "SKILL"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
-      "evidence_verified": false,
-      "execution": "NOT_STARTED",
+      "credit": true,
+      "credit_reason": "weight 3 x approval A439 (PASS, APPROVED) on commit 0b0f180 with PASS evidence",
+      "evidence_class": "OWN",
+      "evidence_run": "42479226279",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "KRP-ENG",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "0b0f18004de12820a5440f3bedfd2b031d3d6acd",
+        "github_verified": true,
+        "run": "42479226279",
+        "task_commit": "befdc8dbbbb4bbc25f36d1e5527b2665f5d33ae3"
+      },
+      "run_verified": true,
+      "task_commit": "befdc8dbbbb4bbc25f36d1e5527b2665f5d33ae3",
       "task_id": "KRP-ENG-001",
-      "tested_commit": null,
+      "tested_commit": "0b0f18004de12820a5440f3bedfd2b031d3d6acd",
       "title": "Establish and enforce the Kritva repository engineering contract",
       "weight": 3,
       "workstream_id": "CI_DEV_INFRA"
@@ -3778,7 +3781,7 @@
       "tasks_reported": 0
     },
     {
-      "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "commit": "0b0f18004de12820a5440f3bedfd2b031d3d6acd",
       "id": "CI_DEV_INFRA",
       "repo": "KritvaOS/kritva-program",
       "source_state": "OK",

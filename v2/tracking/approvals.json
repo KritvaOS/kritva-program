@@ -6961,6 +6961,21 @@
       ],
       "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
       "supersedes": "A388"
+    },
+    {
+      "approval_id": "A439",
+      "task_id": "KRP-ENG-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-program",
+      "source_commit": "0b0f18004de12820a5440f3bedfd2b031d3d6acd",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T12:15:47Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-program/actions/runs/42479226279"
+      ],
+      "rationale": "Owner acceptance of KRP-ENG-001 on the engineering contract compliance report (v2/planning/ENGINEERING_CONTRACT_COMPLIANCE.md): contract pinned in Core (D-113), AGENTS.md in the repositories, commit-message-check and secret-scan enforcement, PR gate in the program and the four capability repositories (D-061, PD-018). Known differences: no CLAUDE.md files, Core and Community do not run the PR gate, reviews are owner-held under D-047 (not independent)."
     }
   ]
 }
