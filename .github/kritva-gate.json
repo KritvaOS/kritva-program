@@ -1,0 +1,34 @@
+{
+  "code": "PROGRAM",
+  "commit_standard": {
+    "adopted": true,
+    "basis": "D-044 format; new repo or program"
+  },
+  "depends_on": [],
+  "github_repo": "KritvaOS/kritva-program",
+  "kind": "program",
+  "manifest_id": "KOS-V2-PR-PIPELINE",
+  "manifest_status": "PROPOSED",
+  "protected_paths": [
+    ".github/",
+    "SECURITY.md",
+    "LICENSE",
+    "v2/tracking/baseline.json",
+    "v2/tracking/approvals.json",
+    "v2/tracking/gate_closures.json",
+    "v2/planning/repo-pipeline.json"
+  ],
+  "repo_id": "kritva-program",
+  "required_approvals": [
+    "PROGRAM_OWNER"
+  ],
+  "required_github_checks": [
+    "status",
+    "secret-scan",
+    "commit-message-check"
+  ],
+  "task_prefix": "KRP-ENG",
+  "task_registry": {
+    "type": "program-baseline"
+  }
+}

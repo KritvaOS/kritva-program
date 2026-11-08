@@ -1,0 +1,35 @@
+# TEMPLATE for .github/workflows/tag-policy-check.yml (KRP-M0-004; ACCEPTANCE_STANDARD.md section 5).
+# On a pull request it runs the tag-rule tests, so a change to the rule is itself checked. On a pushed v* tag it validates the
+# tag name (vMAJOR.MINOR.PATCH, or vX.Y.Z-milestone.v2-mN) and that the tag is annotated. A tag is evidence, not closure authority.
+name: tag-policy-check
+
+on:
+  pull_request:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  tag-policy-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Tag rule tests
+        run: python3 -m unittest discover -s tests -p "test_ci_templates.py" -k TagPolicy -v
+      - name: Validate the pushed tag
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          python3 scripts/pipeline/manifest.py tag-ok kritva-program "$TAG" --manifest v2/planning/repo-pipeline.json \
+            || { echo "tag $TAG is not vMAJOR.MINOR.PATCH or vX.Y.Z-milestone.v2-mN"; exit 1; }
+          [ "$(git cat-file -t "refs/tags/$TAG")" = "tag" ] \
+            || { echo "tag $TAG is lightweight; release tags must be annotated"; exit 1; }
