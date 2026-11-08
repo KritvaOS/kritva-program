@@ -20,7 +20,7 @@
       "id": "V2-M0",
       "phase_id": "P0",
       "phase_name": "FOUNDATION",
-      "target_date": "2026-10-30",
+      "target_date": "2026-11-08",
       "schedule_status": "APPROVED",
       "depends_on": [],
       "outcome": "Governance contracts, status schemas, repository ownership, CI and PR conventions and evidence requirements are consistent and checked in every repository.",
@@ -30,8 +30,8 @@
         "Core engineering contract pinned (contract_pin)"
       ],
       "owner": null,
-      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001)",
-      "closure_record": null
+      "approval": "Dinesh, chat, 2026-10-26 (D-076, PD-001); target date moved to 2026-11-08 and milestone closed on the owner's chat instruction of 2026-11-08 (D-118)",
+      "closure_record": "v2/milestones/V2-M0/COMPLETION_RECORD.md"
     },
     {
       "id": "V2-M1",

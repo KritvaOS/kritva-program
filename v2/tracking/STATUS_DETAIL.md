@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-08T07:12:30Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-08T07:19:47Z (freshness of sources is judged at this time)
 - Baseline version: 11 (APPROVED)
 - Accepted engineering progress: 83.9% (172/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 46/54 tasks (repo-reported; not acceptance)
@@ -29,7 +29,7 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-08T07:12:30Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-08T07:19:47Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
@@ -130,13 +130,13 @@ Rows: PRE_V2 5, V2_REPO 39.
 | KOS-I3 | PRE_V2 | - | COMMUNITY | - | 7 | 7 | 23 | 23 | - |
 | KOS-I4 | PRE_V2 | - | COMMUNITY | - | 8 | 8 | 30 | 30 | - |
 | KRP-ENG | PRE_V2 | - | CI_DEV_INFRA | - | 1 | 0 | 3 | 0 | - |
-| V2-M0-COMMUNITY-001 | V2_REPO | V2-M0 | COMMUNITY | PROPOSED | 1 | 0 | 2 | 0 | none |
-| V2-M0-CORE-001 | V2_REPO | V2-M0 | CORE | PROPOSED | 1 | 1 | 5 | 5 | none |
-| V2-M0-MIND-001 | V2_REPO | V2-M0 | MIND | PROPOSED | 1 | 1 | 3 | 3 | none |
-| V2-M0-MOTION-001 | V2_REPO | V2-M0 | MOTION | PROPOSED | 1 | 1 | 3 | 3 | none |
-| V2-M0-PROGRAM-001 | V2_REPO | V2-M0 | CI_DEV_INFRA | PROPOSED | 4 | 0 | 15 | 0 | none |
-| V2-M0-SENSE-001 | V2_REPO | V2-M0 | SENSE | PROPOSED | 1 | 1 | 3 | 3 | none |
-| V2-M0-SKILL-001 | V2_REPO | V2-M0 | SKILL | PROPOSED | 1 | 1 | 3 | 3 | none |
+| V2-M0-COMMUNITY-001 | V2_REPO | V2-M0 | COMMUNITY | PROPOSED | 1 | 0 | 2 | 0 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
+| V2-M0-CORE-001 | V2_REPO | V2-M0 | CORE | PROPOSED | 1 | 1 | 5 | 5 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
+| V2-M0-MIND-001 | V2_REPO | V2-M0 | MIND | PROPOSED | 1 | 1 | 3 | 3 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
+| V2-M0-MOTION-001 | V2_REPO | V2-M0 | MOTION | PROPOSED | 1 | 1 | 3 | 3 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
+| V2-M0-PROGRAM-001 | V2_REPO | V2-M0 | CI_DEV_INFRA | PROPOSED | 4 | 0 | 15 | 0 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
+| V2-M0-SENSE-001 | V2_REPO | V2-M0 | SENSE | PROPOSED | 1 | 1 | 3 | 3 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
+| V2-M0-SKILL-001 | V2_REPO | V2-M0 | SKILL | PROPOSED | 1 | 1 | 3 | 3 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
 | V2-M1-MOTION-001 | V2_REPO | V2-M1 | MOTION | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M1-SENSE-001 | V2_REPO | V2-M1 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M2-MOTION-001 | V2_REPO | V2-M2 | MOTION | CLOSED | 1 | 1 | 5 | 5 | none |
@@ -404,7 +404,7 @@ Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-0
 
 | Milestone | Phase | Target | Schedule status | Closed |
 |---|---|---|---|---|
-| V2-M0 | P0 FOUNDATION | 2026-10-30 | APPROVED | no |
+| V2-M0 | P0 FOUNDATION | 2026-11-08 | APPROVED | yes |
 | V2-M1 | P1 STUDIO | 2026-11-30 | APPROVED | no |
 | V2-M2 | P2 BUILD & ARTIFACT | 2027-01-15 | APPROVED | no |
 | V2-M3 | P3 CONTROL PLANE | 2027-03-15 | APPROVED | no |
