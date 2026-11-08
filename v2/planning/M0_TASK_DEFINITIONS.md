@@ -52,4 +52,4 @@ Common to every task: owner Dinesh; initial status as recorded in the register; 
 - Freezing baseline v11 approves these criteria and weights. Each repository then adds its task to its own `planning/TASKS.md` through a pull request in that repository (initial status NOT_STARTED, no credit), and reports it in `status/status.json` (the program rejects a task ID it has not baselined).
 - PD-015 is decided (D-113), so KF-CORE-M0-001 is no longer blocked.
 - Dependencies between M0 tasks are not recorded anywhere yet; none are assumed here.
-- The M0 target date 2026-10-30 has passed with M0 not closed (see the Sequence column in STATUS_VIEW.md). Re-confirm or move the date.
+- The M0 target date was 2026-10-30; the owner moved it to 2026-11-08 and closed V2-M0 in D-118.

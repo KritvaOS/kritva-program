@@ -403,6 +403,8 @@ def milestone_table_lines(c):
     seq = {r["milestone"]: r for r in c.get("sequence") or []}
     today = (c.get("generated_at") or "")[:10]
     changed = False
+    closed_ms = sorted(k for k, mm in meta.items() if mm.get("closed"))
+    closed_txt = ("closed so far: " + ", ".join(closed_ms) + ". ") if closed_ms else "none of M0-M8 is closed yet. "
     for i in range(9):
         k = f"M{i}"
         m = meta.get(k, {})
@@ -433,7 +435,7 @@ def milestone_table_lines(c):
         L.append(f"| {k} | {title} | {date} | {dep} | {sqt} | `{_bar20(v['accepted'], tot)}` | {v['accepted']} / {tot} | {_share(v['accepted'], tot)} | {bt[0]} / {bt[1] + v['rows']} |")
     L.append(f"| **Total** | | | | | `{_bar20(t['acc'], t['tot'])}` | **{t['acc']} / {t['tot']}** | **{_share(t['acc'], t['tot'])}** | **{t['tacc']} / {t['ttot']}** |")
     L += ["", "Target dates are the owner-approved planning dates; they are not commitments or forecasts. "
-          "Rule (D-112): a milestone may not start until the milestones it depends on are closed. Closure needs a recorded completion record; none of M0-M8 is closed yet. "
+          "Rule (D-112): a milestone may not start until the milestones it depends on are closed. Closure needs a recorded completion record; " + closed_txt +
           "STARTED means accepted weight or an in-progress plan task. Existing out-of-sequence work is grandfathered by waivers; a new start without a waiver is a validation error."]
     if changed:
         L.append("\\* The plan title differs from the V2 milestone record (booking and commercial work belongs to kritva-raas, outside this plan); the date is carried over and must be re-confirmed.")

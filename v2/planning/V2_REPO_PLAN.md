@@ -54,18 +54,18 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 
 ### kritva-program
 
-- V2-M0-PROGRAM-001 (2026-10-30, PROPOSED): Plan, registry, schemas, acceptance standard and pipeline manifest approved; status views generated from them.
+- V2-M0-PROGRAM-001 (2026-11-08, PROPOSED): Plan, registry, schemas, acceptance standard and pipeline manifest approved; status views generated from them.
 - V2-M8-PROGRAM-001 (2027-09-13, PROPOSED): Production-readiness review, residual risks and visibility decisions recorded.
 
 ### kritva-core
 
-- V2-M0-CORE-001 (2026-10-30, PROPOSED): Engineering contract approved and pinned; contract_pin check closed.
+- V2-M0-CORE-001 (2026-11-08, PROPOSED): Engineering contract approved and pinned; contract_pin check closed.
 - V2-M2-CORE-001 (2027-01-15, PROPOSED): Artifact and compatibility contract published as a versioned release.
 - V2-M8-CORE-001 (2027-09-13, PROPOSED): Release, security disposition and recovery documentation reviewed.
 
 ### kritvaos-community
 
-- V2-M0-COMMUNITY-001 (2026-10-30, PROPOSED): Security reporting path working (SECURITY.md contact tested).
+- V2-M0-COMMUNITY-001 (2026-11-08, PROPOSED): Security reporting path working (SECURITY.md contact tested).
 - V2-M1-COMMUNITY-001 (2026-11-30, PROPOSED): Public architecture description matches the approved capability contracts.
 - V2-M3-COMMUNITY-001 (2027-03-15, PROPOSED): Public integration guide matches the control-plane contract.
 - V2-M7-COMMUNITY-001 (2027-08-15, PROPOSED): Public documentation reflects the live and results interfaces.
@@ -73,7 +73,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 
 ### kritva-motion
 
-- V2-M0-MOTION-001 (2026-10-30, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
+- V2-M0-MOTION-001 (2026-11-08, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
 - V2-M1-MOTION-001 (2026-11-30, PROPOSED): Motion command and state contract (task 001) reviewed and tagged v0.1.0.
 - V2-M2-MOTION-001 (2027-01-15, CLOSED): Command and configuration validation, limit enforcement and admission-time and joint-state fault-path tests pass as a software-only reference validator, with the `make test-unit` gate and a conformance manifest. The integration and regression gates and the runtime lifecycle, termination and fault state machine are separate, later work.
 - V2-M2-MOTION-002 (2027-01-15, PROPOSED): Software-only Motion lifecycle, termination, stop-preemption and fault state machine conforms to the Motion contract v0.1.0-draft through deterministic reference tests, with no backend, store or physical behaviour.
@@ -82,7 +82,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 
 ### kritva-sense
 
-- V2-M0-SENSE-001 (2026-10-30, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
+- V2-M0-SENSE-001 (2026-11-08, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
 - V2-M1-SENSE-001 (2026-11-30, PROPOSED): Sense architecture and data contract (task 001) reviewed and tagged v0.1.0.
 - V2-M2-SENSE-001 (2027-01-15, PROPOSED): Contract validation and synthetic-data tests pass; unit, integration and regression gates implemented.
 - V2-M5-SENSE-001 (2027-06-15, PROPOSED): Sense frames validated in simulated execution.
@@ -91,7 +91,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 
 ### kritva-mind
 
-- V2-M0-MIND-001 (2026-10-30, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
+- V2-M0-MIND-001 (2026-11-08, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
 - V2-M1-MIND-001 (2026-11-30, PROPOSED): Mind request, context and result contract (task 001) reviewed and tagged v0.1.0.
 - V2-M2-MIND-001 (2027-01-15, PROPOSED): Schema validation, cancellation and error-path tests pass; gates implemented.
 - V2-M5-MIND-001 (2027-06-15, PROPOSED): Mind results reproducible in simulated execution.
@@ -99,7 +99,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 
 ### kritva-skill
 
-- V2-M0-SKILL-001 (2026-10-30, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
+- V2-M0-SKILL-001 (2026-11-08, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
 - V2-M1-SKILL-001 (2026-11-30, PROPOSED): Skill manifest and execution contract (task 001) reviewed and tagged v0.1.0.
 - V2-M2-SKILL-001 (2027-01-15, PROPOSED): Manifest validation and lifecycle conformance tests pass; gates implemented.
 - V2-M3-SKILL-001 (2027-03-15, PROPOSED): Skill execution exposed through the control-plane contract.

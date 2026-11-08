@@ -40,7 +40,8 @@ class Records(unittest.TestCase):
                 self.assertTrue(m["target_date"] and m["approval"] and "D-076" in m["approval"], m["id"])
             self.assertNotEqual(m["id"] == "V2-M6" and m["schedule_status"], "APPROVED")
             self.assertIsNone(m["owner"])
-            self.assertIsNone(m["closure_record"])
+            if m["id"] != "V2-M0":  # V2-M0 closed by D-118
+                self.assertIsNone(m["closure_record"])
 
     def test_no_placeholder_tasks_and_no_weights(self):
         d = data()
@@ -337,7 +338,7 @@ class Generated(unittest.TestCase):
         v = (ROOT / "v2/tracking/STATUS_VIEW.md").read_text(encoding="utf-8")
         self.assertIn("## Milestones", v)
         self.assertIn("| M6 | LAB & ROBOT | HOLD | M5 | n/a | HOLD (excluded) |", v)
-        self.assertIn("| M0 | FOUNDATION | 2026-10-30", v)
+        self.assertIn("| M0 | FOUNDATION | 2026-11-08", v)
 
     def test_plan_does_not_change_credit(self):
         c = json.loads((ROOT / "v2/tracking/consolidated_status.json").read_text(encoding="utf-8"))

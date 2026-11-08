@@ -338,7 +338,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-08T07:12:30Z",
+  "generated_at": "2026-11-08T07:19:47Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
@@ -420,7 +420,7 @@
     {
       "accepted_weight": 0,
       "class": "V2_REPO",
-      "closure": "none",
+      "closure": "v2/milestones/V2-M0/COMPLETION_RECORD.md",
       "credited": 0,
       "milestone": "V2-M0-COMMUNITY-001",
       "program_milestone": "V2-M0",
@@ -432,7 +432,7 @@
     {
       "accepted_weight": 5,
       "class": "V2_REPO",
-      "closure": "none",
+      "closure": "v2/milestones/V2-M0/COMPLETION_RECORD.md",
       "credited": 1,
       "milestone": "V2-M0-CORE-001",
       "program_milestone": "V2-M0",
@@ -444,7 +444,7 @@
     {
       "accepted_weight": 3,
       "class": "V2_REPO",
-      "closure": "none",
+      "closure": "v2/milestones/V2-M0/COMPLETION_RECORD.md",
       "credited": 1,
       "milestone": "V2-M0-MIND-001",
       "program_milestone": "V2-M0",
@@ -456,7 +456,7 @@
     {
       "accepted_weight": 3,
       "class": "V2_REPO",
-      "closure": "none",
+      "closure": "v2/milestones/V2-M0/COMPLETION_RECORD.md",
       "credited": 1,
       "milestone": "V2-M0-MOTION-001",
       "program_milestone": "V2-M0",
@@ -468,7 +468,7 @@
     {
       "accepted_weight": 0,
       "class": "V2_REPO",
-      "closure": "none",
+      "closure": "v2/milestones/V2-M0/COMPLETION_RECORD.md",
       "credited": 0,
       "milestone": "V2-M0-PROGRAM-001",
       "program_milestone": "V2-M0",
@@ -480,7 +480,7 @@
     {
       "accepted_weight": 3,
       "class": "V2_REPO",
-      "closure": "none",
+      "closure": "v2/milestones/V2-M0/COMPLETION_RECORD.md",
       "credited": 1,
       "milestone": "V2-M0-SENSE-001",
       "program_milestone": "V2-M0",
@@ -492,7 +492,7 @@
     {
       "accepted_weight": 3,
       "class": "V2_REPO",
-      "closure": "none",
+      "closure": "v2/milestones/V2-M0/COMPLETION_RECORD.md",
       "credited": 1,
       "milestone": "V2-M0-SKILL-001",
       "program_milestone": "V2-M0",
@@ -1754,14 +1754,10 @@
         "M0"
       ],
       "milestone": "M1",
-      "open_predecessors": [
-        "M0"
-      ],
+      "open_predecessors": [],
       "started": true,
-      "status": "WAIVED",
-      "waiver": [
-        "D-112"
-      ]
+      "status": "OK",
+      "waiver": []
     },
     {
       "depends_on": [
@@ -3636,11 +3632,11 @@
     "horizon_end": "2027-09-13",
     "milestones": [
       {
-        "closed": false,
+        "closed": true,
         "id": "V2-M0",
         "phase": "P0 FOUNDATION",
         "schedule_status": "APPROVED",
-        "target_date": "2026-10-30"
+        "target_date": "2026-11-08"
       },
       {
         "closed": false,
