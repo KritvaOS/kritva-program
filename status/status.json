@@ -4,7 +4,7 @@
   "repo": "KritvaOS/kritva-program",
   "source": {
     "branch": "main",
-    "commit": "bc01ada3bbf3d30e1c5d8d371b46caaa3d89092a",
+    "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
     "tag": null
   },
   "tasks": [
@@ -17,32 +17,72 @@
     },
     {
       "task_id": "KRP-M0-001",
-      "execution": "NOT_STARTED",
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "readiness": "IMPLEMENTABLE",
-      "evidence": []
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903",
+          "description": "status: PASS on main commit f4ec001 (program status, planning and credit-gating checks run on main)",
+          "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+          "ci_run": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
     },
     {
       "task_id": "KRP-M0-002",
-      "execution": "NOT_STARTED",
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "readiness": "IMPLEMENTABLE",
-      "evidence": []
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903",
+          "description": "status: PASS on main commit f4ec001 (plan register with proposed dependencies validated by the status checks)",
+          "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+          "ci_run": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
     },
     {
       "task_id": "KRP-M0-003",
-      "execution": "NOT_STARTED",
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "readiness": "IMPLEMENTABLE",
-      "evidence": []
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903",
+          "description": "status: PASS on main commit f4ec001 (approval procedure document merged; status and planning checks green)",
+          "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+          "ci_run": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
     },
     {
       "task_id": "KRP-M0-004",
-      "execution": "NOT_STARTED",
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "readiness": "IMPLEMENTABLE",
-      "evidence": []
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232736",
+          "description": "unit-tests: PASS on main commit f4ec001 (unit-tests, pr-acceptance-gate and tag-policy-check workflows installed with tests)",
+          "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+          "ci_run": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232736",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
     }
   ],
-  "updated_at": "2026-11-08T07:08:29Z"
+  "updated_at": "2026-11-08T09:00:22Z"
 }

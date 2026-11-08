@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-08T08:00:44Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-08T09:00:39Z (freshness of sources is judged at this time)
 - Baseline version: 11 (APPROVED)
 - Accepted engineering progress: 83.9% (172/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 46/54 tasks (repo-reported; not acceptance)
@@ -29,17 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-08T08:00:44Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-08T09:00:39Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | FRESH | 2026-11-08T07:11:09Z (0h ago) | adb099a | bc01ada | 2 commit(s) | STATUS_ONLY |
-| COMMUNITY | FRESH | 2026-11-08T07:11:09Z (0h ago) | 37c59c1 | bd9d84c | 2 commit(s) | OTHER FILES (review): planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KOS-M0/KOS-COMMUNITY-M0-001/ACCEPTANCE_CRITERIA.md, planning/milestones/KOS-M0/TASKS.md |
-| CORE | FRESH | 2026-11-08T07:11:09Z (0h ago) | 8ac173f | 0b30a99 | 2 commit(s) | OTHER FILES (review): planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md, scripts/status/test_gen_status.py, status/evidence.json |
-| MIND | FRESH | 2026-11-08T07:11:09Z (0h ago) | beb9fa1 | 3083512 | 6 commit(s) | OTHER FILES (review): planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-006-GOVERNANCE-BASELINE.md, status/README.md, status/status.json |
-| MOTION | FRESH | 2026-11-08T07:11:09Z (0h ago) | 63a9452 | 363e511 | 2 commit(s) | OTHER FILES (review): planning/MILESTONE_STATUS.md, planning/TASKS.md, status/status.json, tasks/KOS-MOTION-M0-001/EVIDENCE.json |
-| SENSE | FRESH | 2026-11-08T07:11:09Z (0h ago) | 6a10cac | 07c48d5 | 108 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
-| SKILL | FRESH | 2026-11-08T07:11:09Z (0h ago) | 5c04151 | 557f19b | 6 commit(s) | OTHER FILES (review): planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md, status/README.md, status/status.json |
+| CI_DEV_INFRA | FRESH | 2026-11-08T07:11:09Z (1h ago) | adb099a | bc01ada | 2 commit(s) | STATUS_ONLY |
+| COMMUNITY | FRESH | 2026-11-08T07:11:09Z (1h ago) | 37c59c1 | bd9d84c | 2 commit(s) | OTHER FILES (review): planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KOS-M0/KOS-COMMUNITY-M0-001/ACCEPTANCE_CRITERIA.md, planning/milestones/KOS-M0/TASKS.md |
+| CORE | FRESH | 2026-11-08T07:11:09Z (1h ago) | 8ac173f | 0b30a99 | 2 commit(s) | OTHER FILES (review): planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md, scripts/status/test_gen_status.py, status/evidence.json |
+| MIND | FRESH | 2026-11-08T07:11:09Z (1h ago) | beb9fa1 | 3083512 | 6 commit(s) | OTHER FILES (review): planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-006-GOVERNANCE-BASELINE.md, status/README.md, status/status.json |
+| MOTION | FRESH | 2026-11-08T07:11:09Z (1h ago) | 63a9452 | 363e511 | 2 commit(s) | OTHER FILES (review): planning/MILESTONE_STATUS.md, planning/TASKS.md, status/status.json, tasks/KOS-MOTION-M0-001/EVIDENCE.json |
+| SENSE | FRESH | 2026-11-08T07:11:09Z (1h ago) | 6a10cac | 07c48d5 | 108 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/readme-check.yml, .github/workflows/secret-scan.yml |
+| SKILL | FRESH | 2026-11-08T07:11:09Z (1h ago) | 5c04151 | 557f19b | 6 commit(s) | OTHER FILES (review): planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md, status/README.md, status/status.json |
 
 ## Workstreams
 

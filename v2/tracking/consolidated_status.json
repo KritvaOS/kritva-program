@@ -338,7 +338,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-08T08:00:44Z",
+  "generated_at": "2026-11-08T09:00:39Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
@@ -1845,7 +1845,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 0,
+        "age_hours": 1,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
@@ -1862,7 +1862,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 0,
+        "age_hours": 1,
         "ahead_by": 2,
         "changed_files": [
           "planning/MILESTONE.md",
@@ -1886,7 +1886,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 0,
+        "age_hours": 1,
         "ahead_by": 2,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
@@ -1908,7 +1908,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 0,
+        "age_hours": 1,
         "ahead_by": 6,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
@@ -1931,7 +1931,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 0,
+        "age_hours": 1,
         "ahead_by": 2,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
@@ -1951,7 +1951,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 0,
+        "age_hours": 1,
         "ahead_by": 108,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2017,7 +2017,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 0,
+        "age_hours": 1,
         "ahead_by": 6,
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
