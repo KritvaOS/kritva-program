@@ -1,0 +1,25 @@
+# TEMPLATE for .github/workflows/unit-tests.yml (KRP-M0-004). Workflow paths are protected from remote tools: the owner copies it
+# with tools/ci-templates/install_ci.sh. Actions are pinned to the full commit SHAs already used in kritva-sense.
+name: unit-tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Program unit tests
+        run: python3 -m unittest discover -s tests -p "test_*.py"
+      - name: Commit message checker tests
+        run: python3 -m unittest discover -s tests/commit_message_check

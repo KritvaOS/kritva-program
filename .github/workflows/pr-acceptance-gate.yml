@@ -1,0 +1,54 @@
+# TEMPLATE for .github/workflows/pr-acceptance-gate.yml (KRP-M0-004). Same workflow as kritva-sense, with the program gate file.
+# Report only (D-045): it approves, merges and changes nothing. REJECT fails the check; NEEDS_HUMAN and APPROVE pass it.
+name: pr-acceptance-gate
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  pr-acceptance-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Evaluate the pull request
+        id: gate
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set +e
+          python3 scripts/pipeline/pr_gate.py static \
+            --gate .github/kritva-gate.json \
+            --base "origin/${BASE_REF}" \
+            --head "${HEAD_SHA}" \
+            --markdown gate-report.md --json gate-report.json
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+          cat gate-report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Post or update the report comment
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          id=$(gh api "repos/${REPO}/issues/${PR_NUMBER}/comments" \
+            --jq '[.[] | select(.body | contains("<!-- pr-acceptance-gate -->"))][0].id // empty')
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/${REPO}/issues/comments/$id" -F body=@gate-report.md
+          else
+            gh pr comment "${PR_NUMBER}" --body-file gate-report.md
+          fi
+      - name: Fail only on REJECT
+        env:
+          GATE_RC: ${{ steps.gate.outputs.rc }}
+        run: exit "${GATE_RC}"
