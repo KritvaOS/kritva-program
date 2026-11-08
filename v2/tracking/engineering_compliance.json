@@ -1,0 +1,153 @@
+{
+  "generated_at": "2026-11-08T12:11:51Z",
+  "org": "KritvaOS",
+  "repos": [
+    {
+      "repo": "kritva-program",
+      "default_branch": "main",
+      "head": "5c435d7839fc5fd20ed56c2a181fbd6d5053feab",
+      "agent_files": [
+        "AGENTS.md"
+      ],
+      "workflows": {
+        "commit-message-check": true,
+        "secret-scan": true,
+        "readme-check": true,
+        "pr-acceptance-gate": true,
+        "unit-tests": true
+      },
+      "required_checks": [
+        "commit-message-check",
+        "secret-scan",
+        "status-validate"
+      ]
+    },
+    {
+      "repo": "kritva-core",
+      "default_branch": "main",
+      "head": "8ac173f8a331ed15e3180126d199482040b70964",
+      "agent_files": [
+        "AGENTS.md"
+      ],
+      "workflows": {
+        "commit-message-check": true,
+        "secret-scan": true,
+        "readme-check": true,
+        "pr-acceptance-gate": false,
+        "unit-tests": false
+      },
+      "required_checks": [
+        "commit-message-check",
+        "secret-scan",
+        "source-header-check",
+        "status-report-check"
+      ],
+      "contract_pin": true
+    },
+    {
+      "repo": "kritvaos-community",
+      "default_branch": "main",
+      "head": "87007e86250e31d582d82e9a829695ca457f058c",
+      "agent_files": [
+        "AGENTS.md"
+      ],
+      "workflows": {
+        "commit-message-check": true,
+        "secret-scan": true,
+        "readme-check": true,
+        "pr-acceptance-gate": false,
+        "unit-tests": false
+      },
+      "required_checks": [
+        "source-header-check",
+        "status-report-check"
+      ]
+    },
+    {
+      "repo": "kritva-sense",
+      "default_branch": "main",
+      "head": "6a10cac3c87cfc2664ff6c1300ff1ea368b126db",
+      "agent_files": [
+        "AGENTS.md"
+      ],
+      "workflows": {
+        "commit-message-check": true,
+        "secret-scan": true,
+        "readme-check": true,
+        "pr-acceptance-gate": true,
+        "unit-tests": true
+      },
+      "required_checks": [
+        "commit-message-check",
+        "pr-acceptance-gate",
+        "readme-check",
+        "secret-scan",
+        "unit-tests"
+      ]
+    },
+    {
+      "repo": "kritva-mind",
+      "default_branch": "main",
+      "head": "beb9fa19265b548cbd2d62f3bd19864637319e69",
+      "agent_files": [
+        "AGENTS.md"
+      ],
+      "workflows": {
+        "commit-message-check": true,
+        "secret-scan": true,
+        "readme-check": true,
+        "pr-acceptance-gate": true,
+        "unit-tests": true
+      },
+      "required_checks": [
+        "commit-message-check",
+        "pr-acceptance-gate",
+        "readme-check",
+        "secret-scan"
+      ]
+    },
+    {
+      "repo": "kritva-motion",
+      "default_branch": "main",
+      "head": "5c52ae758b05318e4c472d846191671406522ce7",
+      "agent_files": [
+        "AGENTS.md"
+      ],
+      "workflows": {
+        "commit-message-check": true,
+        "secret-scan": true,
+        "readme-check": true,
+        "pr-acceptance-gate": true,
+        "unit-tests": true
+      },
+      "required_checks": [
+        "commit-message-check",
+        "pr-acceptance-gate",
+        "readme-check",
+        "secret-scan",
+        "unit-tests"
+      ]
+    },
+    {
+      "repo": "kritva-skill",
+      "default_branch": "main",
+      "head": "5c04151f018b3a9e8b3fe4c5461b5379f20d3f1a",
+      "agent_files": [
+        "AGENTS.md"
+      ],
+      "workflows": {
+        "commit-message-check": true,
+        "secret-scan": true,
+        "readme-check": true,
+        "pr-acceptance-gate": true,
+        "unit-tests": false
+      },
+      "required_checks": [
+        "commit-message-check",
+        "pr-acceptance-gate",
+        "readme-check",
+        "secret-scan"
+      ]
+    }
+  ]
+}
