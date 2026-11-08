@@ -6101,6 +6101,66 @@
         "https://github.com/KritvaOS/kritva-core/actions/runs/42398261494"
       ],
       "rationale": "Owner acceptance of the Core engineering contract and pin (D-113; contract-pin-check run 42398261494 PASS on 0b30a99). Interim reviewer roles of D-047, not independent review."
+    },
+    {
+      "approval_id": "A385",
+      "task_id": "KRP-M0-001",
+      "baseline_version": 11,
+      "source_repo": "KritvaOS/kritva-program",
+      "source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:17:40Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903"
+      ],
+      "rationale": "Owner acceptance of the Program M0 deliverables: CI baseline green on main (KRP-M0-001), plan dependencies proposed (KRP-M0-002), approval procedure (KRP-M0-003), unit-tests, pr-acceptance-gate and tag-policy-check workflows with failure-demonstration tests (KRP-M0-004). Evidence: status and unit-tests runs on main f4ec001. Interim reviewer roles of D-047, not independent review."
+    },
+    {
+      "approval_id": "A386",
+      "task_id": "KRP-M0-002",
+      "baseline_version": 11,
+      "source_repo": "KritvaOS/kritva-program",
+      "source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:17:40Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903"
+      ],
+      "rationale": "Owner acceptance of the Program M0 deliverables: CI baseline green on main (KRP-M0-001), plan dependencies proposed (KRP-M0-002), approval procedure (KRP-M0-003), unit-tests, pr-acceptance-gate and tag-policy-check workflows with failure-demonstration tests (KRP-M0-004). Evidence: status and unit-tests runs on main f4ec001. Interim reviewer roles of D-047, not independent review."
+    },
+    {
+      "approval_id": "A387",
+      "task_id": "KRP-M0-003",
+      "baseline_version": 11,
+      "source_repo": "KritvaOS/kritva-program",
+      "source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:17:40Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903"
+      ],
+      "rationale": "Owner acceptance of the Program M0 deliverables: CI baseline green on main (KRP-M0-001), plan dependencies proposed (KRP-M0-002), approval procedure (KRP-M0-003), unit-tests, pr-acceptance-gate and tag-policy-check workflows with failure-demonstration tests (KRP-M0-004). Evidence: status and unit-tests runs on main f4ec001. Interim reviewer roles of D-047, not independent review."
+    },
+    {
+      "approval_id": "A388",
+      "task_id": "KRP-M0-004",
+      "baseline_version": 11,
+      "source_repo": "KritvaOS/kritva-program",
+      "source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:17:40Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-program/actions/runs/42461232736"
+      ],
+      "rationale": "Owner acceptance of the Program M0 deliverables: CI baseline green on main (KRP-M0-001), plan dependencies proposed (KRP-M0-002), approval procedure (KRP-M0-003), unit-tests, pr-acceptance-gate and tag-policy-check workflows with failure-demonstration tests (KRP-M0-004). Evidence: status and unit-tests runs on main f4ec001. Interim reviewer roles of D-047, not independent review."
     }
   ]
 }
