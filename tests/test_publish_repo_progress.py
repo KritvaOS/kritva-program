@@ -149,6 +149,12 @@ class TemplateHygiene(unittest.TestCase):
             if m:
                 self.assertRegex(m.group(1), r"^[0-9a-f]{40}$", line)
 
+    def test_workflow_pins_name_their_version_tag(self):
+        import re
+        for line in (ROOT / "tools/repo-templates/progress-check.yml").read_text().splitlines():
+            if "uses:" in line:
+                self.assertRegex(line, r"uses:\s*[\w.-]+/[\w.-]+@[0-9a-f]{40}\s+# v\d+\s*$", line)
+
     def test_workflow_template_has_the_standard_source_header(self):
         text = "\n".join((ROOT / "tools/repo-templates/progress-check.yml").read_text().splitlines()[:20])
         for field in ("File", "Description", "Component", "Module", "Layer", "Requirements", "API", "Author", "Created"):
