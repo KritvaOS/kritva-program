@@ -2,7 +2,7 @@
 
 **Status:** BASELINED in v11 once the owner freezes it (D-117); until then proposed. Baselining awards no credit and no approval. Weights are the owner-approved planning weights in [SEVEN_REPO_PLAN_REGISTER.md](SEVEN_REPO_PLAN_REGISTER.md) (D-109). Baseline IDs replace the former register IDs `PROPOSED-NEW-*` (mapping in section 9 of the register).
 **Source of the outcomes:** `v2/planning/milestones.json` (`V2-M0` outcome and exit conditions, and the `V2-M0-*` repository milestones). The acceptance criteria below are drafted from those outcomes and need the owner's review before any repository copies them into its own `planning/TASKS.md`.
-**Why this file exists:** M0 shows 0 of 34 accepted weight. Each task below says what has to be true for it to be accepted, so that it can be baselined, completed and credited. Credit still needs a baselined task, a central PASS approval, a COMPLETE task and CI evidence on the approved commit.
+**Why this file exists:** M0 had 34 baseline weight; D-119 descoped KOS-COMMUNITY-M0-001 (2), leaving 32. Each task below says what has to be true for it to be accepted, so that it can be baselined, completed and credited. Credit still needs a baselined task, a central PASS approval, a COMPLETE task and CI evidence on the approved commit.
 
 M0 outcome: governance contracts, status schemas, repository ownership, CI and PR conventions and evidence requirements are consistent and checked in every repository.
 
@@ -19,12 +19,11 @@ Common to every task: owner Dinesh; initial status as recorded in the register; 
 | Program | KRP-M0-003 | Program approval and decision records | 3 | NOT_STARTED | none recorded |
 | Program | KRP-M0-004 | Program validation and governance checks | 3 | NOT_STARTED | none recorded |
 | Core | KF-CORE-M0-001 | Core engineering contract and version pin | 5 | IN_PROGRESS | PD-015 decided (D-113); contract merged and pinned; waits for completion, approval and CI evidence on the baselined task |
-| Community | KOS-COMMUNITY-M0-001 | Security reporting path and mailbox verification | 2 | NOT_STARTED | none recorded |
 | Sense | KOS-SENSE-M0-001 | Sense governance and acceptance review | 3 | NOT_STARTED | none recorded |
 | Mind | KOS-MIND-M0-001 | Mind governance and acceptance review | 3 | NOT_STARTED | none recorded |
 | Motion | KOS-MOTION-M0-001 | Motion governance and acceptance review | 3 | NOT_STARTED | none recorded |
 | Skill | KOS-SKILL-M0-001 | Skill governance and acceptance review | 3 | NOT_STARTED | none recorded |
-| **Total** | | | **34** | | |
+| **Total** | | | **32** | | |
 
 ## Proposed acceptance criteria
 
@@ -39,7 +38,9 @@ Common to every task: owner Dinesh; initial status as recorded in the register; 
 
 - KF-CORE-M0-001 (5): the Core engineering contract is drafted and approved; a pin file records the contract's exact commit SHA and SHA-256; a CI check fails when the pin and the contract differ; the readiness check `contract_pin` passes (exit condition 3). PD-015 is decided (D-113); the contract is merged and pinned in kritva-core.
 
-### Community (kritvaos-community), V2-M0-COMMUNITY-001: security reporting path working
+### Community (kritvaos-community), V2-M0-COMMUNITY-001: DESCOPED by D-119 (baseline v12)
+
+The owner waived the mailbox test (PD-017) and the task was removed from the baseline on 2026-11-08. It was not tested, accepted or credited. The criterion below is kept for the record only.
 
 - KOS-COMMUNITY-M0-001 (2): SECURITY.md names a reporting contact; a test message to that contact is received and recorded (date and who received it); the readiness check `security_policy` passes.
 

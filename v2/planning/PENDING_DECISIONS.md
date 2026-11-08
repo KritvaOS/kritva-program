@@ -4,10 +4,9 @@
 
 Generated from structured records only (status, owner, due date and blocking state are fields, not parsed text). Missing owners and dates are shown as UNASSIGNED and NO_DUE_DATE_RECORDED. Superseded records are excluded. Open gates are tracked separately in the Gates section of [tracking/STATUS_DETAIL.md](../tracking/STATUS_DETAIL.md), not here.
 
-3 pending, 2 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
+2 pending, 2 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
 
 | ID | Decision needed | Status | Blocking | Blocks | Scope | Owner | Due | Required action |
 |---|---|---|---|---|---|---|---|---|
 | PD-002 | Define P6 LAB & ROBOT reopening criteria | PROPOSED | yes | V2-M6 | kritva-actuator, kritva-actuator-embedded, kritva-actuator-s, kritva-actuator-m, kritva-actuator-l, V2-M6 | UNASSIGNED | NO_DUE_DATE_RECORDED | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. |
 | PD-003 | Decide where Sim, SDK, Studio and Control Plane live | PROPOSED | yes | V2-M1 | V2-M1, V2-M2, V2-M3 | UNASSIGNED | NO_DUE_DATE_RECORDED | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. |
-| PD-017 | Test the Community security mailbox | PROPOSED | no | - | kritvaos-community, V2-M0 | UNASSIGNED | NO_DUE_DATE_RECORDED | After the SECURITY.md contact patch merges, send a test email to the Security Owner's mailbox so security_policy can move from OPEN to ATTESTED. |
