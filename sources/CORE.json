@@ -4,7 +4,7 @@
   "repo": "KritvaOS/kritva-core",
   "source": {
     "branch": "main",
-    "commit": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
+    "commit": "0b30a998ef701864cb0e5133be3330cb230e5118",
     "tag": null
   },
   "tasks": [
@@ -244,21 +244,30 @@
     },
     {
       "task_id": "KF-CORE-M0-001",
-      "execution": "IN_PROGRESS",
+      "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "readiness": "IMPLEMENTABLE",
       "evidence": [
         {
           "type": "software",
           "uri": "planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md",
-          "description": "Criteria reference only (not completion proof); planning status text: 'In progress (contract and pin merged, D-113; waits for owner acceptance, central approval and CI evidence)'",
+          "description": "Criteria reference only (not completion proof); planning status text: 'ACCEPTED (owner accepted 2026-11-08; contract and pin merged, D-113; contract-pin-check run 42398261494 PASS on `0b30a99`; central approval pending)'",
           "commit": null,
           "ci_run": null,
           "report_sha256": null,
           "result": null
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-core/actions/runs/42398261494",
+          "description": "contract-pin-check run 42398261494 PASS on 0b30a99 (run on a later commit; accepted as of that commit)",
+          "commit": "0b30a998ef701864cb0e5133be3330cb230e5118",
+          "ci_run": "42398261494",
+          "report_sha256": null,
+          "result": "PASS"
         }
       ]
     }
   ],
-  "updated_at": "2026-11-07T17:48:34Z"
+  "updated_at": "2026-11-08T07:04:01Z"
 }

@@ -51,9 +51,9 @@
       "weighted": true
     },
     "V2-M0-CORE-001": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 5,
+      "complete": 1,
+      "credited": 1,
       "tasks": 1,
       "weight": 5,
       "weighted": true
@@ -165,9 +165,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 167,
-      "complete": 45,
-      "credited": 45,
+      "accepted_weight": 172,
+      "complete": 46,
+      "credited": 46,
       "tasks": 54,
       "weight": 205,
       "weighted": true
@@ -191,9 +191,9 @@
       "weighted": true
     },
     "CORE": {
-      "accepted_weight": 30,
-      "complete": 9,
-      "credited": 9,
+      "accepted_weight": 35,
+      "complete": 10,
+      "credited": 10,
       "tasks": 10,
       "weight": 35,
       "weighted": true
@@ -233,18 +233,17 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 155/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 167/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: added KOS-MIND-M0-001, KOS-MOTION-M0-001, KOS-SENSE-M0-001, KOS-SKILL-M0-001",
-      "Warnings: 27 -> 24"
+      "Accepted progress: 167/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 172/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KF-CORE-M0-001",
+      "Warnings: 24 -> 18"
     ],
-    "recorded_at": "2026-11-07T18:12:09Z",
-    "since": "2026-11-07T17:40:28Z"
+    "recorded_at": "2026-11-08T07:11:41Z",
+    "since": "2026-11-08T06:57:25Z"
   },
   "errors": [],
   "evidence_health": [
-    "CI_DEV_INFRA: source STALE",
-    "KF-CORE-M0-001, KOS-COMMUNITY-M0-001, KOS-SENSE-010: the repo reports no commit-bound CI evidence",
-    "KOS-MOTION-003, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream"
+    "KOS-COMMUNITY-M0-001, KOS-SENSE-010, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: the repo reports no commit-bound CI evidence",
+    "KOS-MOTION-003: no current report from the owning workstream"
   ],
   "gates": [
     {
@@ -339,22 +338,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-08T06:57:25Z",
+  "generated_at": "2026-11-08T07:12:30Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
-      "tasks_with_github_verified_run": 45,
-      "tasks_with_verified_evidence": 45
+      "tasks_with_github_verified_run": 46,
+      "tasks_with_verified_evidence": 46
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 45,
+      "tasks_complete": 46,
       "tasks_total": 54
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 9
+      "uncredited_tasks": 8
     }
   },
   "milestone_alignment": [
@@ -431,10 +430,10 @@
       "workstream": "COMMUNITY"
     },
     {
-      "accepted_weight": 0,
+      "accepted_weight": 5,
       "class": "V2_REPO",
       "closure": "none",
-      "credited": 0,
+      "credited": 1,
       "milestone": "V2-M0-CORE-001",
       "program_milestone": "V2-M0",
       "status": "PROPOSED",
@@ -928,7 +927,7 @@
   "plan_register": {
     "by_milestone": {
       "M0": {
-        "accepted": 12,
+        "accepted": 17,
         "baseline": 34,
         "high": 0,
         "low": 0,
@@ -1004,8 +1003,8 @@
         "rows": 30
       },
       "Core": {
-        "accepted": 0,
-        "accepted_tasks": 0,
+        "accepted": 5,
+        "accepted_tasks": 1,
         "baseline": 5,
         "baseline_tasks": 1,
         "high": 13,
@@ -1120,7 +1119,7 @@
       },
       "Core": {
         "M0": {
-          "accepted": 0,
+          "accepted": 5,
           "baseline": 5,
           "point": 0,
           "rows": 0
@@ -1701,7 +1700,7 @@
       "M7": "LIVE & RESULTS",
       "M8": "PRODUCTION"
     },
-    "v2_accepted_weight": 66,
+    "v2_accepted_weight": 71,
     "v2_baseline_weight": 101
   },
   "program_status": {
@@ -1737,8 +1736,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 81.46,
-    "basis": "167/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 83.9,
+    "basis": "172/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "sequence": [
@@ -1850,69 +1849,20 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": null,
-        "ahead_by": 104,
+        "age_hours": 0,
+        "ahead_by": 2,
         "changed_files": [
-          ".github/CODEOWNERS",
-          ".github/PULL_REQUEST_TEMPLATE.md",
-          ".github/workflows/commit-message-check.yml",
-          ".github/workflows/readme-check.yml",
-          ".github/workflows/refresh-sources.yml",
-          ".github/workflows/secret-scan.yml",
-          ".github/workflows/status.yml",
-          "AGENTS.md",
-          "LICENSE",
-          "Makefile",
-          "README.md",
-          "SECURITY.md",
-          "scripts/docs/check_readme.py",
-          "scripts/pipeline/manifest.py",
-          "scripts/pipeline/merge-pr.sh",
-          "scripts/pipeline/pr_check.py",
-          "scripts/pipeline/pr_gate.py",
-          "scripts/pipeline/ship-prs.sh",
-          "scripts/pipeline/ship.sh",
-          "scripts/security/check_commit_format.py",
-          "scripts/security/check_commit_messages.py",
-          "sources/CI_DEV_INFRA.json",
-          "status/README.md",
-          "status/status.json",
-          "tests/commit_message_check/test_check_commit_messages.py",
-          "tests/support.py",
-          "tests/test_baseline_reapproval.py",
-          "tests/test_check_readme.py",
-          "tests/test_dashboard.py",
-          "tests/test_effort.py",
-          "tests/test_gate_closures.py",
-          "tests/test_merge_pr.py",
-          "tests/test_planning.py",
-          "tests/test_planning_inventory.py",
-          "tests/test_pr_check.py",
-          "tests/test_pr_gate.py",
-          "tests/test_readiness.py",
-          "tests/test_report_structure.py",
-          "tests/test_run_verification.py",
-          "tests/test_ship_make.py",
-          "tools/check_planning_inventory.py",
-          "tools/ci-templates/refresh-sources.yml",
-          "tools/consolidate_status.py",
-          "tools/dashboard.py",
-          "tools/effort.py",
-          "tools/make_public.py",
-          "tools/planning.py",
-          "tools/public_assets/LICENSE.apache-2.0",
-          "tools/readiness.py",
-          "tools/scan_public.py"
+          "status/status.json"
         ],
-        "fetch_state": "FETCH_FAILED",
-        "fetched_at": "2026-10-26T16:23:10Z",
-        "fetched_head": "03b9c3f584398b84f70a0ab6c3495e77820d6f48",
-        "freshness": "FETCH_FAILED",
-        "gap_kind": "OTHER_FILES",
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-11-08T07:11:09Z",
+        "fetched_head": "adb099a8c74cd2ce3b269f40746641e610252c88",
+        "freshness": "FRESH",
+        "gap_kind": "STATUS_ONLY",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-program",
-        "report_source_commit": "8e5086513ff12a7a20473314878111238f06a4d2",
-        "status_only": false,
+        "report_source_commit": "bc01ada3bbf3d30e1c5d8d371b46caaa3d89092a",
+        "status_only": true,
         "workstream_id": "CI_DEV_INFRA"
       },
       {
@@ -1929,7 +1879,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T06:57:01Z",
+        "fetched_at": "2026-11-08T07:11:09Z",
         "fetched_head": "37c59c1ebef7e046f10cb72ce0292b98729d52d8",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1945,22 +1895,19 @@
         "changed_files": [
           "planning/MILESTONE_STATUS.md",
           "planning/TASKS.md",
-          "planning/milestones/KF-CORE-M0/TASK_MANIFEST.md",
           "planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md",
-          "planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/TASK.md",
-          "scripts/status/gen_status.py",
           "scripts/status/test_gen_status.py",
-          "status/README.md",
+          "status/evidence.json",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T06:57:01Z",
-        "fetched_head": "0b30a998ef701864cb0e5133be3330cb230e5118",
+        "fetched_at": "2026-11-08T07:11:09Z",
+        "fetched_head": "8ac173f8a331ed15e3180126d199482040b70964",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-core",
-        "report_source_commit": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
+        "report_source_commit": "0b30a998ef701864cb0e5133be3330cb230e5118",
         "status_only": false,
         "workstream_id": "CORE"
       },
@@ -1977,7 +1924,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T06:57:01Z",
+        "fetched_at": "2026-11-08T07:11:09Z",
         "fetched_head": "beb9fa19265b548cbd2d62f3bd19864637319e69",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1997,7 +1944,7 @@
           "tasks/KOS-MOTION-M0-001/EVIDENCE.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T06:57:01Z",
+        "fetched_at": "2026-11-08T07:11:09Z",
         "fetched_head": "63a94525e9124d353353ca87c615907b71cf3fe2",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2063,7 +2010,7 @@
           "tasks/KOS-SENSE-006/TASK.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T06:57:01Z",
+        "fetched_at": "2026-11-08T07:11:09Z",
         "fetched_head": "6a10cac3c87cfc2664ff6c1300ff1ea368b126db",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2086,7 +2033,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-08T06:57:01Z",
+        "fetched_at": "2026-11-08T07:11:09Z",
         "fetched_head": "5c04151f018b3a9e8b3fe4c5461b5379f20d3f1a",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2123,6 +2070,7 @@
       "I4-006",
       "I4-007",
       "I4-008",
+      "KF-CORE-M0-001",
       "KF-CORE-R10-001",
       "KF-CORE-R10-002",
       "KF-CORE-R10-003",
@@ -2158,10 +2106,10 @@
     },
     "pending_decisions": 3,
     "pending_reviews": 0,
-    "progress": "167/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 81.46,
+    "progress": "172/205 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 83.9,
     "readiness": {},
-    "warnings": 24
+    "warnings": 18
   },
   "tasks": [
     {
@@ -2774,24 +2722,30 @@
       "workstream_id": "COMMUNITY"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
-      "evidence_verified": false,
-      "execution": "IN_PROGRESS",
+      "credit": true,
+      "credit_reason": "weight 5 x approval A384 (PASS, APPROVED) on commit 0b30a99 with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "42398261494",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
       "git_sync": "NOT_COMMITTED",
       "milestone_id": "V2-M0-CORE-001",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "0b30a998ef701864cb0e5133be3330cb230e5118",
+        "github_verified": true,
+        "run": "42398261494",
+        "task_commit": "71a82e9b6e2ec3c6155270391adaa30e7751c1b9"
+      },
+      "run_verified": true,
+      "task_commit": "71a82e9b6e2ec3c6155270391adaa30e7751c1b9",
       "task_id": "KF-CORE-M0-001",
-      "tested_commit": null,
+      "tested_commit": "0b30a998ef701864cb0e5133be3330cb230e5118",
       "title": "Core engineering contract and version pin",
       "weight": 5,
       "workstream_id": "CORE"
@@ -3565,16 +3519,16 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
       "milestone_id": "KRP-ENG",
       "phase": null,
-      "readiness": null,
+      "readiness": "IMPLEMENTABLE",
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -3588,16 +3542,16 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M0-PROGRAM-001",
       "phase": null,
-      "readiness": null,
+      "readiness": "IMPLEMENTABLE",
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -3611,16 +3565,16 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M0-PROGRAM-001",
       "phase": null,
-      "readiness": null,
+      "readiness": "IMPLEMENTABLE",
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -3634,16 +3588,16 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M0-PROGRAM-001",
       "phase": null,
-      "readiness": null,
+      "readiness": "IMPLEMENTABLE",
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -3657,16 +3611,16 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "NO_EVIDENCE_REPORTED",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "NOT_STARTED",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M0-PROGRAM-001",
       "phase": null,
-      "readiness": null,
+      "readiness": "IMPLEMENTABLE",
       "reported_evidence": null,
       "run_verified": null,
       "task_commit": null,
@@ -3758,18 +3712,12 @@
     "ACT_L: no status source (UNVERIFIED)",
     "ACT_M: no status source (UNVERIFIED)",
     "ACT_S: no status source (UNVERIFIED)",
-    "CI_DEV_INFRA: status is 21 days old",
     "CONTROL_PLANE: no status source (UNVERIFIED)",
     "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
     "KOS-MOTION-003: not reported by MOTION (no credit)",
-    "KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)",
-    "KRP-M0-001: not reported by CI_DEV_INFRA (no credit)",
-    "KRP-M0-002: not reported by CI_DEV_INFRA (no credit)",
-    "KRP-M0-003: not reported by CI_DEV_INFRA (no credit)",
-    "KRP-M0-004: not reported by CI_DEV_INFRA (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
     "NEXUS_EDGE: no status source (UNVERIFIED)",
@@ -3821,11 +3769,11 @@
       "tasks_reported": 0
     },
     {
-      "commit": "8e5086513ff12a7a20473314878111238f06a4d2",
+      "commit": "bc01ada3bbf3d30e1c5d8d371b46caaa3d89092a",
       "id": "CI_DEV_INFRA",
       "repo": "KritvaOS/kritva-program",
-      "source_state": "STALE",
-      "tasks_reported": 1
+      "source_state": "OK",
+      "tasks_reported": 5
     },
     {
       "commit": "bd9d84c4f5ec471418338499c34df38f95e56332",
@@ -3842,7 +3790,7 @@
       "tasks_reported": 0
     },
     {
-      "commit": "71324314dc0e03fdb9bc5d5e6045ccf8e0efcc8c",
+      "commit": "0b30a998ef701864cb0e5133be3330cb230e5118",
       "id": "CORE",
       "repo": "KritvaOS/kritva-core",
       "source_state": "OK",
