@@ -343,7 +343,8 @@ class Generated(unittest.TestCase):
     def test_plan_does_not_change_credit(self):
         c = json.loads((ROOT / "v2/tracking/consolidated_status.json").read_text(encoding="utf-8"))
         self.assertEqual(c["progress"]["basis"], "48/104 weight (accepted/baseline)" if False else c["progress"]["basis"])
-        self.assertRegex(c["progress"]["basis"], r"^\d+/205 weight")  # baseline total only; accepted weight rises with approvals
+        total = sum(t["weight"] for t in json.loads((ROOT / "v2/tracking/baseline.json").read_text(encoding="utf-8"))["tasks"])
+        self.assertRegex(c["progress"]["basis"], rf"^\d+/{total} weight")  # baseline total only; accepted weight rises with approvals
 
 
 class CommitFormat(unittest.TestCase):

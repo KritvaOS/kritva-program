@@ -42,3 +42,7 @@ Status: approved by the owner when the pull request that adds this file is merge
   - Review packages `planning/reviews/REV-004` to `REV-007` in kritva-sense, kritva-motion, kritva-mind and kritva-skill
   - `v2/planning/reviews.json` and `v2/planning/M0_CLOSURE_PLAN.md`
   - CI run references listed under test runs
+
+## Addendum (D-119, 2026-11-08)
+
+The owner waived PD-017 (the Community security mailbox test) and descoped its task KOS-COMMUNITY-M0-001 (weight 2): baseline v12 removes the task, so V2-M0 has nine baseline tasks and 32 weight, all credited. The mailbox test was not performed and no test result is recorded; the task was never accepted. The earlier lines above that carry PD-017 and KOS-COMMUNITY-M0-001 forward are superseded by this addendum. The closure of V2-M0 (D-118) is unchanged.

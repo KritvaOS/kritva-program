@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 11,
+  "baseline_version": 12,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -74,10 +74,6 @@
     {
       "id": "V2-M0-CORE-001",
       "workstream_id": "CORE"
-    },
-    {
-      "id": "V2-M0-COMMUNITY-001",
-      "workstream_id": "COMMUNITY"
     },
     {
       "id": "V2-M0-SENSE-001",
@@ -588,16 +584,6 @@
       "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 5 [4-6] carried unchanged from register row PROPOSED-NEW-CORE-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-CORE-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
     },
     {
-      "id": "KOS-COMMUNITY-M0-001",
-      "workstream_id": "COMMUNITY",
-      "milestone_id": "V2-M0-COMMUNITY-001",
-      "title": "Security reporting path and mailbox verification",
-      "weight": 2,
-      "requires_physical": false,
-      "phase": null,
-      "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 2 [1-3] carried unchanged from register row PROPOSED-NEW-COMMUNITY-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-COMMUNITY-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
-    },
-    {
       "id": "KOS-SENSE-M0-001",
       "workstream_id": "SENSE",
       "milestone_id": "V2-M0-SENSE-001",
@@ -709,9 +695,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-11-07T17:12:27Z",
-    "canonical_commit": "bee0f2b36e88ef718b2d5c8320b9c94acaa978c8",
-    "baseline_sha256": "94f2113d57473481dedc51766e827b239ac31a224c495b232b117bcbe97b9528",
-    "reason": "Baseline v11 (D-117): ten V2-M0 tasks added at planning weights; no credit before approved passing evidence"
+    "approved_at": "2026-11-08T11:59:49Z",
+    "canonical_commit": "bc8884f1c8920afd00e9146acb3bdedd8badbcd8",
+    "baseline_sha256": "a88f785ce3257631ffb6ae20147d4881724f37c12d0a1457c44b3838f0fb10c0",
+    "reason": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes"
   }
 }

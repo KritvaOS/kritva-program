@@ -99,5 +99,14 @@
     "canonical_commit": "bee0f2b36e88ef718b2d5c8320b9c94acaa978c8",
     "reason": "Baseline v11 (D-117): ten V2-M0 tasks added at planning weights; no credit before approved passing evidence",
     "baseline_sha256": "94f2113d57473481dedc51766e827b239ac31a224c495b232b117bcbe97b9528"
+  },
+  {
+    "from_version": 11,
+    "to_version": 12,
+    "approver": "Dinesh",
+    "approved_at": "2026-11-08T11:59:49Z",
+    "canonical_commit": "bc8884f1c8920afd00e9146acb3bdedd8badbcd8",
+    "reason": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+    "baseline_sha256": "a88f785ce3257631ffb6ae20147d4881724f37c12d0a1457c44b3838f0fb10c0"
   }
 ]

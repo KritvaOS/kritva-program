@@ -35,14 +35,15 @@ Source commits when this was prepared (local main, equal to GitHub main): kritva
 | Counted planning register | 49 | 241 | 189 | 294 |
 | Retired parents (not counted) | 14 | - | - | - |
 | Moved to the baseline in v11 (D-117, not counted) | 10 | 34 | 24 | 44 |
+| Of those, descoped and removed from baseline v12 (D-119, not counted) | 1 | 2 | 1 | 3 |
 
-V2 baseline (v11, once frozen) is separate: 101 V2 weight, 54 accepted, 23 task rows, because the ten M0 rows above moved from this register into the baseline (D-117). Total plan weight 101 + 241 = 342 [280-405], unchanged by the move; provisional accepted share 54/342 = 15.8% [13.3-19.3%]. These measures are never blended with the historical 155/171 (90.64%, PRE_V2 plus V2).
+V2 baseline (v11, once frozen) is separate: 101 V2 weight, 54 accepted, 23 task rows, because the ten M0 rows above moved from this register into the baseline (D-117). Total plan weight 101 + 241 = 342 [280-405], unchanged by the move; baseline v12 (D-119) then removes the descoped Community task (weight 2), so the V2 baseline is 99 and the total 99 + 241 = 340; provisional accepted share 54/342 = 15.8% [13.3-19.3%]. These measures are never blended with the historical 155/171 (90.64%, PRE_V2 plus V2).
 
 ## 2. Roll-up by milestone (planning rows only)
 
 | Milestone | Rows | Point | Low | High | V2 baseline | Accepted |
 |---|---:|---:|---:|---:|---:|---:|
-| M0 | 0 | 0 | 0 | 0 | 34 | 0 |
+| M0 | 0 | 0 | 0 | 0 | 32 | 0 |
 | M1 | 5 | 22 | 17 | 27 | 10 | 10 |
 | M2 | 12 | 56 | 44 | 68 | 32 | 19 |
 | M3 | 10 | 48 | 37 | 60 | 0 | 0 |
@@ -50,7 +51,7 @@ V2 baseline (v11, once frozen) is separate: 101 V2 weight, 54 accepted, 23 task 
 | M5 | 9 | 49 | 38 | 60 | 5 | 5 |
 | M7 | 3 | 13 | 10 | 16 | 9 | 9 |
 | M8 | 6 | 35 | 29 | 41 | 11 | 11 |
-| Total | 49 | 241 | 189 | 294 | 101 | 54 |
+| Total | 49 | 241 | 189 | 294 | 99 | 54 |
 
 M6 is excluded (HOLD). M4 reuses the ID as Developer Experience and Ecosystem.
 
@@ -178,7 +179,7 @@ KOS-MOTION-003, milestone V2-M2-MOTION-002, baseline weight 8 (baseline v10, D-1
 
 ## 9. M0 rows moved to the baseline (D-117)
 
-The ten M0 planning rows were removed from the counted register when baseline v11 added them as baseline tasks, so no weight is counted twice. Weights and low-high ranges are unchanged (34 [24-44]). They earn no credit until completed with approval and CI evidence.
+The ten M0 planning rows were removed from the counted register when baseline v11 added them as baseline tasks, so no weight is counted twice. Weights and low-high ranges are unchanged (34 [24-44]). They earn no credit until completed with approval and CI evidence. Exception (D-119, 2026-11-08): the owner waived the Community mailbox test, so KOS-COMMUNITY-M0-001 was descoped and removed from baseline v12; it was not tested, accepted or credited, and the nine remaining M0 baseline tasks weigh 32.
 
 | Baseline task | Former register row | Repo | Baseline milestone | Weight | Range |
 |---|---|---|---|---:|---|
@@ -187,7 +188,7 @@ The ten M0 planning rows were removed from the counted register when baseline v1
 | KRP-M0-003 | PROPOSED-NEW-PROGRAM-004 | Program | V2-M0-PROGRAM-001 | 3 | 2-4 |
 | KRP-M0-004 | PROPOSED-NEW-PROGRAM-005 | Program | V2-M0-PROGRAM-001 | 3 | 2-4 |
 | KF-CORE-M0-001 | PROPOSED-NEW-CORE-001 | Core | V2-M0-CORE-001 | 5 | 4-6 |
-| KOS-COMMUNITY-M0-001 | PROPOSED-NEW-COMMUNITY-001 | Community | V2-M0-COMMUNITY-001 | 2 | 1-3 |
+| KOS-COMMUNITY-M0-001 (descoped, D-119) | PROPOSED-NEW-COMMUNITY-001 | Community | V2-M0-COMMUNITY-001 | 2 | 1-3 |
 | KOS-SENSE-M0-001 | PROPOSED-NEW-SENSE-001 | Sense | V2-M0-SENSE-001 | 3 | 2-4 |
 | KOS-MIND-M0-001 | PROPOSED-NEW-MIND-GOV-001 | Mind | V2-M0-MIND-001 | 3 | 2-4 |
 | KOS-MOTION-M0-001 | PROPOSED-NEW-MOTION-001 | Motion | V2-M0-MOTION-001 | 3 | 2-4 |

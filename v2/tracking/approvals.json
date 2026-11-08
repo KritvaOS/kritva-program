@@ -6161,6 +6161,806 @@
         "https://github.com/KritvaOS/kritva-program/actions/runs/42461232736"
       ],
       "rationale": "Owner acceptance of the Program M0 deliverables: CI baseline green on main (KRP-M0-001), plan dependencies proposed (KRP-M0-002), approval procedure (KRP-M0-003), unit-tests, pr-acceptance-gate and tag-policy-check workflows with failure-demonstration tests (KRP-M0-004). Evidence: status and unit-tests runs on main f4ec001. Interim reviewer roles of D-047, not independent review."
+    },
+    {
+      "approval_id": "A389",
+      "task_id": "I2-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A339"
+    },
+    {
+      "approval_id": "A390",
+      "task_id": "I2-002",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A340"
+    },
+    {
+      "approval_id": "A391",
+      "task_id": "I2-003",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A341"
+    },
+    {
+      "approval_id": "A392",
+      "task_id": "I2-004",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A342"
+    },
+    {
+      "approval_id": "A393",
+      "task_id": "I2-005",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A343"
+    },
+    {
+      "approval_id": "A394",
+      "task_id": "I2-006",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A344"
+    },
+    {
+      "approval_id": "A395",
+      "task_id": "I3-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A345"
+    },
+    {
+      "approval_id": "A396",
+      "task_id": "I3-002",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A346"
+    },
+    {
+      "approval_id": "A397",
+      "task_id": "I3-003",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A347"
+    },
+    {
+      "approval_id": "A398",
+      "task_id": "I3-004",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A348"
+    },
+    {
+      "approval_id": "A399",
+      "task_id": "I3-005",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A349"
+    },
+    {
+      "approval_id": "A400",
+      "task_id": "I3-006",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A350"
+    },
+    {
+      "approval_id": "A401",
+      "task_id": "I3-007",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A351"
+    },
+    {
+      "approval_id": "A402",
+      "task_id": "I4-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "d2f893622db2479efe37ca8bbbdcab37d8f151c3",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37253855540"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A352"
+    },
+    {
+      "approval_id": "A403",
+      "task_id": "I4-002",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "52218f484f29ea58813b848008d187aeab98a0bf",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37256868535"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A353"
+    },
+    {
+      "approval_id": "A404",
+      "task_id": "I4-003",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "c40fbb23afacab27341c5e8f0d35e3523ebbaf4a",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37347653023"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A354"
+    },
+    {
+      "approval_id": "A405",
+      "task_id": "I4-004",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "3c535b64ebae626065032e7315e679e474f6853b",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37405212290"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A355"
+    },
+    {
+      "approval_id": "A406",
+      "task_id": "I4-005",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "a6905207441abdc13ec6238272e7681093c50180",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37407633177"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A356"
+    },
+    {
+      "approval_id": "A407",
+      "task_id": "I4-006",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "94aa01d8ed99561acf77020257e6c517b15a369d",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37497496804"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A357"
+    },
+    {
+      "approval_id": "A408",
+      "task_id": "I4-007",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "cd51be85152ef6014796d1856fb0e7e962e28ccf",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37507901354"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A358"
+    },
+    {
+      "approval_id": "A409",
+      "task_id": "I4-008",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritvaos-community",
+      "source_commit": "79f4daff61ec661ace40a3c7ea0304c68f1b7ce9",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritvaos-community/actions/runs/37561636952"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A359"
+    },
+    {
+      "approval_id": "A410",
+      "task_id": "KF-CORE-R10-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A360"
+    },
+    {
+      "approval_id": "A411",
+      "task_id": "KF-CORE-R10-002",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A361"
+    },
+    {
+      "approval_id": "A412",
+      "task_id": "KF-CORE-R10-003",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A362"
+    },
+    {
+      "approval_id": "A413",
+      "task_id": "KF-CORE-R10-004",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A363"
+    },
+    {
+      "approval_id": "A414",
+      "task_id": "KF-CORE-R10-005",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A364"
+    },
+    {
+      "approval_id": "A415",
+      "task_id": "KF-CORE-R10-006",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A365"
+    },
+    {
+      "approval_id": "A416",
+      "task_id": "KF-CORE-R10-007",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A366"
+    },
+    {
+      "approval_id": "A417",
+      "task_id": "KF-CORE-R10-008",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A367"
+    },
+    {
+      "approval_id": "A418",
+      "task_id": "KF-CORE-R10-009",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "4acce3b60833abfe33168c4766405ab86ea73edc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/37192914607"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A368"
+    },
+    {
+      "approval_id": "A419",
+      "task_id": "KOS-MOTION-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-motion",
+      "source_commit": "3b9e12b7c8f2e752968d4d80e3b5efb73f28fb27",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-motion/actions/runs/41876610087"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A369"
+    },
+    {
+      "approval_id": "A420",
+      "task_id": "KOS-MOTION-002",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-motion",
+      "source_commit": "77319b460d01436c7c70a40af8163bde287dfeb7",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-motion/actions/runs/42252338541"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A370"
+    },
+    {
+      "approval_id": "A421",
+      "task_id": "KOS-SENSE-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A371"
+    },
+    {
+      "approval_id": "A422",
+      "task_id": "KOS-SENSE-002",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "e949b9f9eeb3e67eb1278b5069f999aea4eb36af",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/40994325092"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A372"
+    },
+    {
+      "approval_id": "A423",
+      "task_id": "KOS-SENSE-003",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "c92e841523f5d194de25a9a890e365c13bfc3f59",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41267842700"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A373"
+    },
+    {
+      "approval_id": "A424",
+      "task_id": "KOS-SENSE-004",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "82b3174523a70372b5673e94a81e8ef20bf4430e",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41275942226"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A374"
+    },
+    {
+      "approval_id": "A425",
+      "task_id": "KOS-SENSE-005",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "0bee5ed15dcbedbe4810e836adfc042cf99de97c",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41278515695"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A375"
+    },
+    {
+      "approval_id": "A426",
+      "task_id": "KOS-SENSE-006",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "67590bcbcc925d9dee58f5dc04bf51345cd000e2",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41289421496"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A376"
+    },
+    {
+      "approval_id": "A427",
+      "task_id": "KOS-SENSE-007",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "5f1aa7a34c5aec9e0c12fc66add6d3bc6efaa7bc",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41292919590"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A377"
+    },
+    {
+      "approval_id": "A428",
+      "task_id": "KOS-SENSE-008",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "a8dfb5a7827e9888a5bfae0bbcea1598727bd400",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41298259048"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A378"
+    },
+    {
+      "approval_id": "A429",
+      "task_id": "KOS-SENSE-009",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "55191ab4a57f3fad2e7011fbb4ad68eb8bb6dbc2",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/41761323273"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A379"
+    },
+    {
+      "approval_id": "A430",
+      "task_id": "KOS-SENSE-M0-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-sense",
+      "source_commit": "ddf95185341656bea5f26b2f9196838321853852",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sense/actions/runs/42329065787"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A380"
+    },
+    {
+      "approval_id": "A431",
+      "task_id": "KOS-MIND-M0-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-mind",
+      "source_commit": "564c4e002c19b09309093a47aab1c7a7eda12825",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-mind/actions/runs/42385456931"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A381"
+    },
+    {
+      "approval_id": "A432",
+      "task_id": "KOS-MOTION-M0-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-motion",
+      "source_commit": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-motion/actions/runs/42385668725"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A382"
+    },
+    {
+      "approval_id": "A433",
+      "task_id": "KOS-SKILL-M0-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-skill",
+      "source_commit": "c17192001f6c672819589857e8644ad21573d8d8",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-skill/actions/runs/41598873743"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A383"
+    },
+    {
+      "approval_id": "A434",
+      "task_id": "KF-CORE-M0-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-core",
+      "source_commit": "0b30a998ef701864cb0e5133be3330cb230e5118",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-core/actions/runs/42398261494"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A384"
+    },
+    {
+      "approval_id": "A435",
+      "task_id": "KRP-M0-001",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-program",
+      "source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A385"
+    },
+    {
+      "approval_id": "A436",
+      "task_id": "KRP-M0-002",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-program",
+      "source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A386"
+    },
+    {
+      "approval_id": "A437",
+      "task_id": "KRP-M0-003",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-program",
+      "source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A387"
+    },
+    {
+      "approval_id": "A438",
+      "task_id": "KRP-M0-004",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-program",
+      "source_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-08T11:59:49Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-program/actions/runs/42461232736"
+      ],
+      "rationale": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
+      "supersedes": "A388"
     }
   ]
 }

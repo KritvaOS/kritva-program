@@ -329,7 +329,7 @@
       "record_id": "PD-017",
       "record_type": "DECISION",
       "title": "Test the Community security mailbox",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-10-18",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -342,12 +342,12 @@
           "kritvaos-community"
         ]
       },
-      "required_action": "After the SECURITY.md contact patch merges, send a test email to the Security Owner's mailbox so security_policy can move from OPEN to ATTESTED.",
+      "required_action": "Waived by the owner (D-119): the mailbox test was not performed, KOS-COMMUNITY-M0-001 was removed from baseline v12, and security_policy is not moved to ATTESTED.",
       "blocking": false,
       "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-119",
       "source": "readiness check security_policy"
     },
     {
