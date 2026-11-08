@@ -149,6 +149,14 @@ class TemplateHygiene(unittest.TestCase):
             if m:
                 self.assertRegex(m.group(1), r"^[0-9a-f]{40}$", line)
 
+    def test_workflow_template_has_the_standard_source_header(self):
+        text = "\n".join((ROOT / "tools/repo-templates/progress-check.yml").read_text().splitlines()[:20])
+        for field in ("File", "Description", "Component", "Module", "Layer", "Requirements", "API", "Author", "Created"):
+            self.assertRegex(text, rf"#\s*{field}\s*:\s*\S")
+        self.assertIn("SPDX-License-Identifier: Apache-2.0", text)
+        self.assertIn("Copyright (c) 2026 KritvaOS", text)
+        self.assertRegex(text, r"Created\s*:\s*\d\d-\d\d-\d{4}")
+
     def test_template_has_the_standard_source_header(self):
         head = (ROOT / "tools/repo-templates/progress_report.py").read_text().splitlines()[:20]
         text = "\n".join(head)
