@@ -1178,6 +1178,74 @@
       "review_flags": [
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KRP-M0-001",
+      "workstream_id": "CI_DEV_INFRA",
+      "task_commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+      "task_subject": "Program CI status and planning checks green on main (D-117)",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "ci_run": 42461232903,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903",
+        "workflow": "status"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "KRP-M0-002",
+      "workstream_id": "CI_DEV_INFRA",
+      "task_commit": "dc24f6a7c326033b02aad53b1d4709c3dced40f1",
+      "task_subject": "dependencies proposed for the counted plan rows",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "ci_run": 42461232903,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903",
+        "workflow": "status"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "KRP-M0-003",
+      "workstream_id": "CI_DEV_INFRA",
+      "task_commit": "dc24f6a7c326033b02aad53b1d4709c3dced40f1",
+      "task_subject": "approval procedure (v2/planning/APPROVAL_PROCEDURE.md)",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "ci_run": 42461232903,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232903",
+        "workflow": "status"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
+    },
+    {
+      "task_id": "KRP-M0-004",
+      "workstream_id": "CI_DEV_INFRA",
+      "task_commit": "9d0231da1947eeb6ae4b2081f3b557be16201e81",
+      "task_subject": "unit-tests, pr-acceptance-gate and tag-policy-check workflows with tests",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "f4ec001447d90cb2988421526fc5819bad05a713",
+        "ci_run": 42461232736,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-program/actions/runs/42461232736",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
     }
   ],
   "unmapped": []
