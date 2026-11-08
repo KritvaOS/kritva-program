@@ -102,7 +102,7 @@ class Template(unittest.TestCase):
 
     def test_unknown_schema_is_refused(self):
         snap = copy.deepcopy(self.snap)
-        snap["schema_version"] = 2
+        snap["schema_version"] = 3
         self.assertTrue(pr.validate(snap))
 
     def test_old_snapshot_warns_but_does_not_fail(self):
@@ -128,6 +128,49 @@ class Template(unittest.TestCase):
                             ".github/workflows/progress-check.yml"):
                     self.assertTrue((Path(d) / folder / rel).is_file(), f"{folder}/{rel}")
                 self.assertEqual(pr.main(["--root", str(Path(d) / folder), "--check"]), 0)
+
+
+class TaskRows(unittest.TestCase):
+    def test_task_weights_reconcile_to_the_repository_totals(self):
+        for k in pub.REPOS:
+            snap = pub.build(DATA, k)
+            acc, tot = pub.summary({k: snap})[k]
+            self.assertEqual(sum(x["weight"] for x in snap["tasks"]), tot, k)
+            self.assertEqual(sum(x["weight"] for x in snap["tasks"] if x["accepted"]), acc, k)
+            self.assertEqual(len({x["id"] for x in snap["tasks"]}), len(snap["tasks"]), k)
+
+    def test_every_baselined_task_of_the_program_appears_in_exactly_one_repository(self):
+        seen = [x["id"] for k in pub.REPOS for x in pub.build(DATA, k)["tasks"] if x["kind"] == "baselined"]
+        ws = {v[2] for v in pub.REPOS.values()}
+        want = [t["task_id"] for t in DATA["tasks"] if t.get("workstream_id") in ws]
+        self.assertEqual(sorted(seen), sorted(want))
+
+    def test_report_lists_each_task_with_id_weight_and_state(self):
+        snap = pub.build(DATA, "Sense")
+        text = pr.render(snap)
+        for x in snap["tasks"]:
+            self.assertIn(f"`{x['id']}`", text)
+        self.assertIn("| Task | Title | Milestone | Weight | Execution | Acceptance |", text)
+        self.assertIn("ACCEPTED", text)
+
+    def test_planned_tasks_are_marked_not_baselined_and_earn_nothing(self):
+        snap = pub.build(DATA, "Community")
+        planned = [x for x in snap["tasks"] if x["kind"] == "planned"]
+        self.assertTrue(planned)
+        self.assertFalse(any(x["accepted"] for x in planned))
+        text = pr.render(snap)
+        self.assertIn("## Planned tasks (not baselined)", text)
+        self.assertIn("NOT BASELINED", text)
+
+    def test_a_task_weight_that_does_not_add_up_is_refused(self):
+        snap = pub.build(DATA, "Sense")
+        snap["tasks"][0]["weight"] += 1
+        self.assertTrue(pr.validate(snap))
+
+    def test_a_pipe_in_a_title_cannot_break_the_table(self):
+        snap = pub.build(DATA, "Sense")
+        snap["tasks"][0]["title"] = "a | b"
+        self.assertNotIn("a | b", pr.render(snap))
 
 
 class Only(unittest.TestCase):

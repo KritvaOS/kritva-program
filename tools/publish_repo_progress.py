@@ -46,6 +46,25 @@ def _notes(c, key):
     return [x for x in c.get("evidence_health") or [] if rx.search(x.split(":", 1)[0])]
 
 
+def _milestone_of(t):
+    m = re.match(r"^V2-(M\d+)-", t.get("milestone_id") or "")
+    return m.group(1) if m else "Foundation"
+
+
+def _tasks(c, key, ws):
+    """Task rows for one repository: baselined tasks (with their execution state and credit) and planned, not yet baselined."""
+    out = []
+    for t in c.get("tasks") or []:
+        if ws and t.get("workstream_id") == ws:
+            out.append({"id": t["task_id"], "title": t.get("title") or "", "weight": t["weight"], "milestone": _milestone_of(t),
+                        "kind": "baselined", "execution": t.get("execution") or "NOT_REPORTED", "accepted": bool(t.get("credit"))})
+    for t in c["plan_register"].get("tasks") or []:
+        if t.get("repo") == key:
+            out.append({"id": t["id"], "title": t.get("title") or "", "weight": t["weight"], "milestone": t["milestone"],
+                        "kind": "planned", "execution": t.get("status") or "NOT_STARTED", "accepted": False})
+    return out
+
+
 def build(c, key):
     """One repository's snapshot. Raises ValueError when the program data it needs is missing."""
     reg = c.get("plan_register")
@@ -58,7 +77,7 @@ def build(c, key):
     ms = {m: {"accepted": x["accepted"], "baseline": x["baseline"], "point": x["point"], "rows": x["rows"]}
           for m, x in (reg.get("matrix") or {}).get(key, {}).items()}
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "repo": key,
         "repository": REPOS[key][0] if key in REPOS else None,
         "program": {"baseline_version": c["baseline_version"], "baseline_approved": bool(c["baseline_approved"]),
@@ -70,6 +89,7 @@ def build(c, key):
         "titles": _titles(c),
         "execution": {"complete": w.get("complete", 0), "tasks": w.get("tasks", 0)},
         "evidence_notes": _notes(c, key),
+        "tasks": _tasks(c, key, ws),
     }
 
 
