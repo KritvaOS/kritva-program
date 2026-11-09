@@ -74,7 +74,7 @@ Exit conditions:
 |---|---|---|---|
 | V2-M2-SENSE-001 | kritva-sense | PROPOSED | Contract validation and synthetic-data tests pass; unit, integration and regression gates implemented. |
 | V2-M2-MOTION-001 | kritva-motion | CLOSED | Command and configuration validation, limit enforcement and admission-time and joint-state fault-path tests pass as a software-only reference validator, with the `make test-unit` gate and a conformance manifest. The integration and regression gates and the runtime lifecycle, termination and fault state machine are separate, later work. |
-| V2-M2-MOTION-002 | kritva-motion | PROPOSED | Software-only Motion lifecycle, termination, stop-preemption and fault state machine conforms to the Motion contract v0.1.0-draft through deterministic reference tests, with no backend, store or physical behaviour. |
+| V2-M2-MOTION-002 | kritva-motion | CLOSED | Software-only Motion lifecycle, termination, stop-preemption and fault state machine conforms to the Motion contract v0.1.0-draft through deterministic reference tests, with no backend, store or physical behaviour. |
 | V2-M2-MIND-001 | kritva-mind | PROPOSED | Schema validation, cancellation and error-path tests pass; gates implemented. |
 | V2-M2-SKILL-001 | kritva-skill | PROPOSED | Manifest validation and lifecycle conformance tests pass; gates implemented. |
 | V2-M2-CORE-001 | kritva-core | PROPOSED | Artifact and compatibility contract published as a versioned release. |
