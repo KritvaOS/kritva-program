@@ -1081,6 +1081,36 @@
       ]
     },
     {
+      "task_id": "KOS-MOTION-003",
+      "workstream_id": "MOTION",
+      "task_commit": "1acb437abc1a9c0934a0626d7b39a163947b325c",
+      "task_subject": "Merge pull request #42 from KritvaOS/feat/kos-motion-003-pr-06-closing",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "1acb437abc1a9c0934a0626d7b39a163947b325c",
+        "ci_run": 42605983509,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-motion/actions/runs/42605983509",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "README.md",
+        "planning/CHANGELOG.md",
+        "planning/TASKS.md",
+        "scripts/status/gen_status.py",
+        "status/status.json",
+        "tasks/KOS-MOTION-003/EVIDENCE.json",
+        "tasks/KOS-MOTION-003/LIFECYCLE.md",
+        "tasks/KOS-MOTION-003/REVIEW.md",
+        "tasks/KOS-MOTION-003/TASK.md",
+        "tests/status_gen/test_gen_status.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT"
+      ]
+    },
+    {
       "task_id": "KOS-SENSE-M0-001",
       "workstream_id": "SENSE",
       "task_commit": "ddf95185341656bea5f26b2f9196838321853852",
