@@ -6976,6 +6976,21 @@
         "https://github.com/KritvaOS/kritva-program/actions/runs/42479226279"
       ],
       "rationale": "Owner acceptance of KRP-ENG-001 on the engineering contract compliance report (v2/planning/ENGINEERING_CONTRACT_COMPLIANCE.md): contract pinned in Core (D-113), AGENTS.md in the repositories, commit-message-check and secret-scan enforcement, PR gate in the program and the four capability repositories (D-061, PD-018). Known differences: no CLAUDE.md files, Core and Community do not run the PR gate, reviews are owner-held under D-047 (not independent)."
+    },
+    {
+      "approval_id": "A440",
+      "task_id": "KOS-MOTION-003",
+      "baseline_version": 12,
+      "source_repo": "KritvaOS/kritva-motion",
+      "source_commit": "1acb437abc1a9c0934a0626d7b39a163947b325c",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-09T11:19:37Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-motion/actions/runs/42605983509"
+      ],
+      "rationale": "Owner acceptance of KOS-MOTION-003 against AC-301 to AC-307 on kritva-motion main commit 1acb437: a pure in-memory lifecycle, termination and fault state machine with 94 IN_SCOPE conformance IDs (55 added by this task), 25 DEFERRED, 5 OUT_OF_SCOPE; unit-tests, secret-scan, readme-check and progress-check passed on that commit (D-121). Software evidence only; interim owner review under D-047, not independent; not physical or safety validation."
     }
   ]
 }
