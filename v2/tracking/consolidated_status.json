@@ -329,7 +329,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-09T11:19:37Z",
+  "generated_at": "2026-11-09T14:44:54Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 53,
@@ -523,7 +523,7 @@
       "credited": 1,
       "milestone": "V2-M2-MOTION-002",
       "program_milestone": "V2-M2",
-      "status": "PROPOSED",
+      "status": "CLOSED",
       "tasks": 1,
       "weight": 8,
       "workstream": "MOTION"
@@ -1830,7 +1830,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 0,
+        "age_hours": 3,
         "ahead_by": 13,
         "changed_files": [
           "sources/CI_DEV_INFRA.json",
@@ -1862,7 +1862,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 0,
+        "age_hours": 3,
         "ahead_by": 6,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1891,7 +1891,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 0,
+        "age_hours": 3,
         "ahead_by": 6,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1918,7 +1918,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 0,
+        "age_hours": 3,
         "ahead_by": 10,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1946,7 +1946,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 0,
+        "age_hours": 3,
         "ahead_by": 2,
         "changed_files": [
           "README.md",
@@ -1972,7 +1972,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 0,
+        "age_hours": 3,
         "ahead_by": 114,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2038,7 +2038,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 0,
+        "age_hours": 3,
         "ahead_by": 10,
         "changed_files": [
           ".github/workflows/progress-check.yml",

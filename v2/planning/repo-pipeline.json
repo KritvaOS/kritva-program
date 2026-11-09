@@ -51,7 +51,8 @@
     "commit-message-check",
     "pr-acceptance-gate",
     "unit-tests",
-    "readme-check"
+    "readme-check",
+    "progress-check"
   ],
   "known_local_gates": [
     "make check",
@@ -305,7 +306,8 @@
         "commit-message-check",
         "pr-acceptance-gate",
         "unit-tests",
-        "readme-check"
+        "readme-check",
+        "progress-check"
       ],
       "local_gates": [
         "make check",
