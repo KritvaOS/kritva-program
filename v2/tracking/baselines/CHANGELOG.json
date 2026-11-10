@@ -108,5 +108,14 @@
     "canonical_commit": "bc8884f1c8920afd00e9146acb3bdedd8badbcd8",
     "reason": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes",
     "baseline_sha256": "a88f785ce3257631ffb6ae20147d4881724f37c12d0a1457c44b3838f0fb10c0"
+  },
+  {
+    "from_version": 12,
+    "to_version": 13,
+    "approver": "Dinesh",
+    "approved_at": "2026-11-10T13:03:38Z",
+    "canonical_commit": "5ca6201cb0c4062e27990e32bbf7ce6852be72aa",
+    "reason": "Baseline v13 (D-125): KOS-MIND-001 added from the approved planning row (weight 5); 53 weights unchanged; no credit changes",
+    "baseline_sha256": "9bdd9f990a2dafe96f0cdddca09204521214e83d11aed0d04df2759e8a16f00e"
   }
 ]

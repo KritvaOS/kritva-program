@@ -6,13 +6,13 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-09T14:44:54Z (freshness of sources is judged at this time)
-- Baseline version: 12 (APPROVED)
-- Accepted engineering progress: 97.54% (198/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
-- Execution reported complete: 52/53 tasks (repo-reported; not acceptance)
-- Credited tasks: 52/53; blocked by open gates: 0 (none)
-- Evidence coverage: 52/53 tasks with approved, verified evidence; 52 with the CI run confirmed against GitHub (policy: required for credit)
-- Release readiness: NOT_READY (open release gates: none; uncredited tasks: 1)
+- Generated at: 2026-11-10T13:03:38Z (freshness of sources is judged at this time)
+- Baseline version: 13 (APPROVED)
+- Accepted engineering progress: 95.19% (198/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
+- Execution reported complete: 52/54 tasks (repo-reported; not acceptance)
+- Credited tasks: 52/54; blocked by open gates: 0 (none)
+- Evidence coverage: 52/54 tasks with approved, verified evidence; 52 with the CI run confirmed against GitHub (policy: required for credit)
+- Release readiness: NOT_READY (open release gates: none; uncredited tasks: 2)
 - Schedule: NOT TRACKED here. Effort and capability are owner estimates in their own section, separate from progress
 - Evidence classes of credited tasks: MILESTONE 36, OWN 15, RERUN 1
 - Evidence qualification: MILESTONE-class tasks were validated by a CI run on a LATER commit ("accepted as of" that commit), not by a run on the task's own commit; the tested commit is shown per task. UNSPECIFIED means the evidence class is not recorded. Open safety gates keep gated tasks at zero credit and release readiness NOT_READY. Credit reflects approval and CI evidence, not physical validation or safety sign-off.
@@ -29,17 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-09T14:44:54Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-10T13:03:38Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | FRESH | 2026-11-09T11:19:07Z (3h ago) | 1b978d2 | 0b0f180 | 13 commit(s) | OTHER FILES (review): sources/CI_DEV_INFRA.json, sources/MANIFEST.json, status/README.md, status/status.json, tests/test_baseline_reapproval.py |
-| COMMUNITY | FRESH | 2026-11-09T11:19:07Z (3h ago) | 3021c5b | 37c59c1 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
-| CORE | FRESH | 2026-11-09T11:19:07Z (3h ago) | 3850bcc | 0b30a99 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
-| MIND | FRESH | 2026-11-09T11:19:07Z (3h ago) | f7afc4e | 3083512 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-006-GOVERNANCE-BASELINE.md |
-| MOTION | FRESH | 2026-11-09T11:19:07Z (3h ago) | 5422983 | 1acb437 | 2 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/TASKS.md, scripts/status/gen_status.py, status/status.json |
-| SENSE | FRESH | 2026-11-09T11:19:07Z (3h ago) | 0b8123a | 07c48d5 | 114 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
-| SKILL | FRESH | 2026-11-09T11:19:07Z (3h ago) | e97938e | 557f19b | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
+| CI_DEV_INFRA | WARN | 2026-11-09T11:19:07Z (25h ago) | 1b978d2 | 0b0f180 | 13 commit(s) | OTHER FILES (review): sources/CI_DEV_INFRA.json, sources/MANIFEST.json, status/README.md, status/status.json, tests/test_baseline_reapproval.py |
+| COMMUNITY | WARN | 2026-11-09T11:19:07Z (25h ago) | 3021c5b | 37c59c1 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
+| CORE | WARN | 2026-11-09T11:19:07Z (25h ago) | 3850bcc | 0b30a99 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
+| MIND | WARN | 2026-11-09T11:19:07Z (25h ago) | f7afc4e | 3083512 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-006-GOVERNANCE-BASELINE.md |
+| MOTION | WARN | 2026-11-09T11:19:07Z (25h ago) | 5422983 | 1acb437 | 2 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/TASKS.md, scripts/status/gen_status.py, status/status.json |
+| SENSE | WARN | 2026-11-09T11:19:07Z (25h ago) | 0b8123a | 07c48d5 | 114 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
+| SKILL | WARN | 2026-11-09T11:19:07Z (25h ago) | e97938e | 557f19b | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
 
 ## Workstreams
 
@@ -63,7 +63,7 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | INTEGRATION_SOFTWARE_VALIDATION | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MANUFACTURING_FLEET | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MECHANICAL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| MIND | KritvaOS/kritva-mind | BASELINED (1 tasks) | OK | 1 | 3083512 |
+| MIND | KritvaOS/kritva-mind | BASELINED (2 tasks) | OK | 1 | 3083512 |
 | MOTION | KritvaOS/kritva-motion | BASELINED (4 tasks) | OK | 4 | 1acb437 |
 | NEXUS_EDGE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SDK | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
@@ -78,7 +78,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| UNMAPPED | 53 | 52 | 52 | 203 | 198 |
+| UNMAPPED | 54 | 52 | 52 | 208 | 198 |
 
 ## Rollup by workstream
 
@@ -87,7 +87,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | CI_DEV_INFRA | 5 | 5 | 5 | 18 | 18 |
 | COMMUNITY | 21 | 21 | 21 | 71 | 71 |
 | CORE | 10 | 10 | 10 | 35 | 35 |
-| MIND | 1 | 1 | 1 | 3 | 3 |
+| MIND | 2 | 1 | 1 | 8 | 3 |
 | MOTION | 4 | 4 | 4 | 21 | 21 |
 | SENSE | 11 | 10 | 10 | 52 | 47 |
 | SKILL | 1 | 1 | 1 | 3 | 3 |
@@ -107,6 +107,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | V2-M0-PROGRAM-001 | 4 | 4 | 4 | 15 | 15 |
 | V2-M0-SENSE-001 | 1 | 1 | 1 | 3 | 3 |
 | V2-M0-SKILL-001 | 1 | 1 | 1 | 3 | 3 |
+| V2-M1-MIND-001 | 1 | 0 | 0 | 5 | 0 |
 | V2-M1-MOTION-001 | 1 | 1 | 1 | 5 | 5 |
 | V2-M1-SENSE-001 | 1 | 1 | 1 | 5 | 5 |
 | V2-M2-MOTION-001 | 1 | 1 | 1 | 5 | 5 |
@@ -135,6 +136,7 @@ Rows: PRE_V2 5, V2_REPO 39.
 | V2-M0-PROGRAM-001 | V2_REPO | V2-M0 | CI_DEV_INFRA | PROPOSED | 4 | 4 | 15 | 15 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
 | V2-M0-SENSE-001 | V2_REPO | V2-M0 | SENSE | PROPOSED | 1 | 1 | 3 | 3 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
 | V2-M0-SKILL-001 | V2_REPO | V2-M0 | SKILL | PROPOSED | 1 | 1 | 3 | 3 | v2/milestones/V2-M0/COMPLETION_RECORD.md |
+| V2-M1-MIND-001 | V2_REPO | V2-M1 | MIND | PROPOSED | 1 | 0 | 5 | 0 | none |
 | V2-M1-MOTION-001 | V2_REPO | V2-M1 | MOTION | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M1-SENSE-001 | V2_REPO | V2-M1 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M2-MOTION-001 | V2_REPO | V2-M2 | MOTION | CLOSED | 1 | 1 | 5 | 5 | none |
@@ -145,7 +147,6 @@ Rows: PRE_V2 5, V2_REPO 39.
 | V2-M8-SENSE-001 | V2_REPO | V2-M8 | SENSE | PROPOSED | 2 | 2 | 11 | 11 | none |
 | V2-M0-COMMUNITY-001 | V2_REPO | V2-M0 | COMMUNITY | PROPOSED | 0 | 0 | - | - | v2/milestones/V2-M0/COMPLETION_RECORD.md |
 | V2-M1-COMMUNITY-001 | V2_REPO | V2-M1 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
-| V2-M1-MIND-001 | V2_REPO | V2-M1 | MIND | PROPOSED | 0 | 0 | - | - | none |
 | V2-M1-SKILL-001 | V2_REPO | V2-M1 | SKILL | PROPOSED | 0 | 0 | - | - | none |
 | V2-M2-CORE-001 | V2_REPO | V2-M2 | CORE | PROPOSED | 0 | 0 | - | - | none |
 | V2-M2-MIND-001 | V2_REPO | V2-M2 | MIND | PROPOSED | 0 | 0 | - | - | none |
@@ -173,59 +174,60 @@ Rows: PRE_V2 5, V2_REPO 39.
 
 | Task | Workstream | Weight | Execution | Acceptance | Credit | Evidence (class, tested commit, task commit, run) | Run checked | Why |
 |---|---|---|---|---|---|---|---|---|
-| I2-001 | COMMUNITY | 4 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 150d211), run 38158709895 | yes | weight 4 x approval A389 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-002 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task e2851fd), run 38158709895 | yes | weight 3 x approval A390 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-003 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task ae0de75), run 38158709895 | yes | weight 3 x approval A391 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-004 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task bfa2b29), run 38158709895 | yes | weight 3 x approval A392 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-005 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task e8ad793), run 38158709895 | yes | weight 3 x approval A393 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I2-006 | COMMUNITY | 2 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 69521ef), run 38158709895 | yes | weight 2 x approval A394 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I3-001 | COMMUNITY | 4 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 39780cc), run 38158709895 | yes | weight 4 x approval A395 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I3-002 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task a7e08e5), run 38158709895 | yes | weight 3 x approval A396 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I3-003 | COMMUNITY | 4 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 97ab518), run 38158709895 | yes | weight 4 x approval A397 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I3-004 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task f980675), run 38158709895 | yes | weight 3 x approval A398 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I3-005 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task cd1a35c), run 38158709895 | yes | weight 3 x approval A399 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I3-006 | COMMUNITY | 4 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 46b91fa), run 38158709895 | yes | weight 4 x approval A400 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I3-007 | COMMUNITY | 2 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task d8cd315), run 38158709895 | yes | weight 2 x approval A401 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
-| I4-001 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: d2f8936 (task d2f8936), run 37253855540 | yes | weight 4 x approval A402 (PASS, APPROVED) on commit d2f8936 with PASS evidence |
-| I4-002 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: 52218f4 (task 52218f4), run 37256868535 | yes | weight 4 x approval A403 (PASS, APPROVED) on commit 52218f4 with PASS evidence |
-| I4-003 | COMMUNITY | 3 | COMPLETE | PASS | yes | OWN: c40fbb2 (task c40fbb2), run 37347653023 | yes | weight 3 x approval A404 (PASS, APPROVED) on commit c40fbb2 with PASS evidence |
-| I4-004 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: 3c535b6 (task 3c535b6), run 37405212290 | yes | weight 4 x approval A405 (PASS, APPROVED) on commit 3c535b6 with PASS evidence |
-| I4-005 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: a690520 (task a690520), run 37407633177 | yes | weight 4 x approval A406 (PASS, APPROVED) on commit a690520 with PASS evidence |
-| I4-006 | COMMUNITY | 5 | COMPLETE | PASS | yes | OWN: 94aa01d (task 94aa01d), run 37497496804 | yes | weight 5 x approval A407 (PASS, APPROVED) on commit 94aa01d with PASS evidence |
-| I4-007 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: cd51be8 (task cd51be8), run 37507901354 | yes | weight 4 x approval A408 (PASS, APPROVED) on commit cd51be8 with PASS evidence |
-| I4-008 | COMMUNITY | 2 | COMPLETE | PASS | yes | RERUN: 79f4daf (task 79f4daf), run 37561636952 | yes | weight 2 x approval A409 (PASS, APPROVED) on commit 79f4daf with PASS evidence |
-| KF-CORE-M0-001 | CORE | 5 | COMPLETE | PASS | yes | MILESTONE: 0b30a99 (task 71a82e9), run 42398261494 | yes | weight 5 x approval A434 (PASS, APPROVED) on commit 0b30a99 with PASS evidence |
-| KF-CORE-R10-001 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 1dba571), run 37192914607 | yes | weight 3 x approval A410 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-002 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task bbe10b6), run 37192914607 | yes | weight 4 x approval A411 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-003 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 559d75f), run 37192914607 | yes | weight 3 x approval A412 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-004 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task a121c24), run 37192914607 | yes | weight 4 x approval A413 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-005 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 2882cd2), run 37192914607 | yes | weight 3 x approval A414 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-006 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task b44b14b), run 37192914607 | yes | weight 4 x approval A415 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-007 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task f212e46), run 37192914607 | yes | weight 3 x approval A416 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-008 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task c0edf1f), run 37192914607 | yes | weight 3 x approval A417 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KF-CORE-R10-009 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task af16847), run 37192914607 | yes | weight 3 x approval A418 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
-| KOS-MIND-M0-001 | MIND | 3 | COMPLETE | PASS | yes | MILESTONE: 564c4e0 (task 564c4e0), run 42385456931 | yes | weight 3 x approval A431 (PASS, APPROVED) on commit 564c4e0 with PASS evidence |
-| KOS-MOTION-001 | MOTION | 5 | COMPLETE | PASS | yes | OWN: 3b9e12b (task 3b9e12b), run 41876610087 | yes | weight 5 x approval A419 (PASS, APPROVED) on commit 3b9e12b with PASS evidence |
-| KOS-MOTION-002 | MOTION | 5 | COMPLETE | PASS | yes | OWN: 77319b4 (task 77319b4), run 42252338614 | yes | weight 5 x approval A420 (PASS, APPROVED) on commit 77319b4 with PASS evidence |
-| KOS-MOTION-003 | MOTION | 8 | COMPLETE | PASS | yes | OWN: 1acb437 (task 1acb437), run 42605983509 | yes | weight 8 x approval A440 (PASS, APPROVED) on commit 1acb437 with PASS evidence |
-| KOS-MOTION-M0-001 | MOTION | 3 | COMPLETE | PASS | yes | MILESTONE: 44b733d (task 44b733d), run 42385668763 | yes | weight 3 x approval A432 (PASS, APPROVED) on commit 44b733d with PASS evidence |
-| KOS-SENSE-001 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: e949b9f (task 2f332fc), run 40994325092 | yes | weight 5 x approval A421 (PASS, APPROVED) on commit e949b9f with PASS evidence |
-| KOS-SENSE-002 | SENSE | 4 | COMPLETE | PASS | yes | MILESTONE: e949b9f (task 3b2df51), run 40994325092 | yes | weight 4 x approval A422 (PASS, APPROVED) on commit e949b9f with PASS evidence |
-| KOS-SENSE-003 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: c92e841 (task 52963d6), run 41267842700 | yes | weight 5 x approval A423 (PASS, APPROVED) on commit c92e841 with PASS evidence |
-| KOS-SENSE-004 | SENSE | 4 | COMPLETE | PASS | yes | MILESTONE: 82b3174 (task b976ba3), run 41275942226 | yes | weight 4 x approval A424 (PASS, APPROVED) on commit 82b3174 with PASS evidence |
-| KOS-SENSE-005 | SENSE | 4 | COMPLETE | PASS | yes | MILESTONE: 0bee5ed (task 540c389), run 41278515695 | yes | weight 4 x approval A425 (PASS, APPROVED) on commit 0bee5ed with PASS evidence |
-| KOS-SENSE-006 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: 67590bc (task 536d3c9), run 41289421496 | yes | weight 5 x approval A426 (PASS, APPROVED) on commit 67590bc with PASS evidence |
-| KOS-SENSE-007 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: 5f1aa7a (task f068ecd), run 41292919590 | yes | weight 5 x approval A427 (PASS, APPROVED) on commit 5f1aa7a with PASS evidence |
-| KOS-SENSE-008 | SENSE | 6 | COMPLETE | PASS | yes | MILESTONE: a8dfb5a (task 80237dd), run 41298259048 | yes | weight 6 x approval A428 (PASS, APPROVED) on commit a8dfb5a with PASS evidence |
-| KOS-SENSE-009 | SENSE | 6 | COMPLETE | PASS | yes | MILESTONE: 55191ab (task 8e8fe8f), run 41761323273 | yes | weight 6 x approval A429 (PASS, APPROVED) on commit 55191ab with PASS evidence |
+| I2-001 | COMMUNITY | 4 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 150d211), run 38158709895 | yes | weight 4 x approval A441 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-002 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task e2851fd), run 38158709895 | yes | weight 3 x approval A442 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-003 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task ae0de75), run 38158709895 | yes | weight 3 x approval A443 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-004 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task bfa2b29), run 38158709895 | yes | weight 3 x approval A444 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-005 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task e8ad793), run 38158709895 | yes | weight 3 x approval A445 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I2-006 | COMMUNITY | 2 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 69521ef), run 38158709895 | yes | weight 2 x approval A446 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I3-001 | COMMUNITY | 4 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 39780cc), run 38158709895 | yes | weight 4 x approval A447 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I3-002 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task a7e08e5), run 38158709895 | yes | weight 3 x approval A448 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I3-003 | COMMUNITY | 4 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 97ab518), run 38158709895 | yes | weight 4 x approval A449 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I3-004 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task f980675), run 38158709895 | yes | weight 3 x approval A450 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I3-005 | COMMUNITY | 3 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task cd1a35c), run 38158709895 | yes | weight 3 x approval A451 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I3-006 | COMMUNITY | 4 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task 46b91fa), run 38158709895 | yes | weight 4 x approval A452 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I3-007 | COMMUNITY | 2 | COMPLETE | PASS | yes | MILESTONE: 8256ba3 (task d8cd315), run 38158709895 | yes | weight 2 x approval A453 (PASS, APPROVED) on commit 8256ba3 with PASS evidence |
+| I4-001 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: d2f8936 (task d2f8936), run 37253855540 | yes | weight 4 x approval A454 (PASS, APPROVED) on commit d2f8936 with PASS evidence |
+| I4-002 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: 52218f4 (task 52218f4), run 37256868535 | yes | weight 4 x approval A455 (PASS, APPROVED) on commit 52218f4 with PASS evidence |
+| I4-003 | COMMUNITY | 3 | COMPLETE | PASS | yes | OWN: c40fbb2 (task c40fbb2), run 37347653023 | yes | weight 3 x approval A456 (PASS, APPROVED) on commit c40fbb2 with PASS evidence |
+| I4-004 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: 3c535b6 (task 3c535b6), run 37405212290 | yes | weight 4 x approval A457 (PASS, APPROVED) on commit 3c535b6 with PASS evidence |
+| I4-005 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: a690520 (task a690520), run 37407633177 | yes | weight 4 x approval A458 (PASS, APPROVED) on commit a690520 with PASS evidence |
+| I4-006 | COMMUNITY | 5 | COMPLETE | PASS | yes | OWN: 94aa01d (task 94aa01d), run 37497496804 | yes | weight 5 x approval A459 (PASS, APPROVED) on commit 94aa01d with PASS evidence |
+| I4-007 | COMMUNITY | 4 | COMPLETE | PASS | yes | OWN: cd51be8 (task cd51be8), run 37507901354 | yes | weight 4 x approval A460 (PASS, APPROVED) on commit cd51be8 with PASS evidence |
+| I4-008 | COMMUNITY | 2 | COMPLETE | PASS | yes | RERUN: 79f4daf (task 79f4daf), run 37561636952 | yes | weight 2 x approval A461 (PASS, APPROVED) on commit 79f4daf with PASS evidence |
+| KF-CORE-M0-001 | CORE | 5 | COMPLETE | PASS | yes | MILESTONE: 0b30a99 (task 71a82e9), run 42398261494 | yes | weight 5 x approval A486 (PASS, APPROVED) on commit 0b30a99 with PASS evidence |
+| KF-CORE-R10-001 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 1dba571), run 37192914607 | yes | weight 3 x approval A462 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-002 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task bbe10b6), run 37192914607 | yes | weight 4 x approval A463 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-003 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 559d75f), run 37192914607 | yes | weight 3 x approval A464 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-004 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task a121c24), run 37192914607 | yes | weight 4 x approval A465 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-005 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task 2882cd2), run 37192914607 | yes | weight 3 x approval A466 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-006 | CORE | 4 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task b44b14b), run 37192914607 | yes | weight 4 x approval A467 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-007 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task f212e46), run 37192914607 | yes | weight 3 x approval A468 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-008 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task c0edf1f), run 37192914607 | yes | weight 3 x approval A469 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KF-CORE-R10-009 | CORE | 3 | COMPLETE | PASS | yes | MILESTONE: 4acce3b (task af16847), run 37192914607 | yes | weight 3 x approval A470 (PASS, APPROVED) on commit 4acce3b with PASS evidence |
+| KOS-MIND-001 | MIND | 5 | - | NOT_RUN | no | - | - | no current report from the owning workstream |
+| KOS-MIND-M0-001 | MIND | 3 | COMPLETE | PASS | yes | MILESTONE: 564c4e0 (task 564c4e0), run 42385456931 | yes | weight 3 x approval A483 (PASS, APPROVED) on commit 564c4e0 with PASS evidence |
+| KOS-MOTION-001 | MOTION | 5 | COMPLETE | PASS | yes | OWN: 3b9e12b (task 3b9e12b), run 41876610087 | yes | weight 5 x approval A471 (PASS, APPROVED) on commit 3b9e12b with PASS evidence |
+| KOS-MOTION-002 | MOTION | 5 | COMPLETE | PASS | yes | OWN: 77319b4 (task 77319b4), run 42252338614 | yes | weight 5 x approval A472 (PASS, APPROVED) on commit 77319b4 with PASS evidence |
+| KOS-MOTION-003 | MOTION | 8 | COMPLETE | PASS | yes | OWN: 1acb437 (task 1acb437), run 42605983509 | yes | weight 8 x approval A492 (PASS, APPROVED) on commit 1acb437 with PASS evidence |
+| KOS-MOTION-M0-001 | MOTION | 3 | COMPLETE | PASS | yes | MILESTONE: 44b733d (task 44b733d), run 42385668763 | yes | weight 3 x approval A484 (PASS, APPROVED) on commit 44b733d with PASS evidence |
+| KOS-SENSE-001 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: e949b9f (task 2f332fc), run 40994325092 | yes | weight 5 x approval A473 (PASS, APPROVED) on commit e949b9f with PASS evidence |
+| KOS-SENSE-002 | SENSE | 4 | COMPLETE | PASS | yes | MILESTONE: e949b9f (task 3b2df51), run 40994325092 | yes | weight 4 x approval A474 (PASS, APPROVED) on commit e949b9f with PASS evidence |
+| KOS-SENSE-003 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: c92e841 (task 52963d6), run 41267842700 | yes | weight 5 x approval A475 (PASS, APPROVED) on commit c92e841 with PASS evidence |
+| KOS-SENSE-004 | SENSE | 4 | COMPLETE | PASS | yes | MILESTONE: 82b3174 (task b976ba3), run 41275942226 | yes | weight 4 x approval A476 (PASS, APPROVED) on commit 82b3174 with PASS evidence |
+| KOS-SENSE-005 | SENSE | 4 | COMPLETE | PASS | yes | MILESTONE: 0bee5ed (task 540c389), run 41278515695 | yes | weight 4 x approval A477 (PASS, APPROVED) on commit 0bee5ed with PASS evidence |
+| KOS-SENSE-006 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: 67590bc (task 536d3c9), run 41289421496 | yes | weight 5 x approval A478 (PASS, APPROVED) on commit 67590bc with PASS evidence |
+| KOS-SENSE-007 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: 5f1aa7a (task f068ecd), run 41292919590 | yes | weight 5 x approval A479 (PASS, APPROVED) on commit 5f1aa7a with PASS evidence |
+| KOS-SENSE-008 | SENSE | 6 | COMPLETE | PASS | yes | MILESTONE: a8dfb5a (task 80237dd), run 41298259048 | yes | weight 6 x approval A480 (PASS, APPROVED) on commit a8dfb5a with PASS evidence |
+| KOS-SENSE-009 | SENSE | 6 | COMPLETE | PASS | yes | MILESTONE: 55191ab (task 8e8fe8f), run 41761323273 | yes | weight 6 x approval A481 (PASS, APPROVED) on commit 55191ab with PASS evidence |
 | KOS-SENSE-010 | SENSE | 5 | IN_PROGRESS | NOT_RUN | no | - | - | no central approval recorded |
-| KOS-SENSE-M0-001 | SENSE | 3 | COMPLETE | PASS | yes | MILESTONE: ddf9518 (task ddf9518), run 42329065787 | yes | weight 3 x approval A430 (PASS, APPROVED) on commit ddf9518 with PASS evidence |
-| KOS-SKILL-M0-001 | SKILL | 3 | COMPLETE | PASS | yes | MILESTONE: c171920 (task c171920), run 41598873743 | yes | weight 3 x approval A433 (PASS, APPROVED) on commit c171920 with PASS evidence |
-| KRP-ENG-001 | CI_DEV_INFRA | 3 | COMPLETE | PASS | yes | OWN: 0b0f180 (task befdc8d), run 42479226279 | yes | weight 3 x approval A439 (PASS, APPROVED) on commit 0b0f180 with PASS evidence |
-| KRP-M0-001 | CI_DEV_INFRA | 5 | COMPLETE | PASS | yes | OWN: f4ec001 (task f4ec001), run 42461232903 | yes | weight 5 x approval A435 (PASS, APPROVED) on commit f4ec001 with PASS evidence |
-| KRP-M0-002 | CI_DEV_INFRA | 4 | COMPLETE | PASS | yes | OWN: f4ec001 (task dc24f6a), run 42461232903 | yes | weight 4 x approval A436 (PASS, APPROVED) on commit f4ec001 with PASS evidence |
-| KRP-M0-003 | CI_DEV_INFRA | 3 | COMPLETE | PASS | yes | OWN: f4ec001 (task dc24f6a), run 42461232903 | yes | weight 3 x approval A437 (PASS, APPROVED) on commit f4ec001 with PASS evidence |
-| KRP-M0-004 | CI_DEV_INFRA | 3 | COMPLETE | PASS | yes | OWN: f4ec001 (task 9d0231d), run 42461232736 | yes | weight 3 x approval A438 (PASS, APPROVED) on commit f4ec001 with PASS evidence |
+| KOS-SENSE-M0-001 | SENSE | 3 | COMPLETE | PASS | yes | MILESTONE: ddf9518 (task ddf9518), run 42329065787 | yes | weight 3 x approval A482 (PASS, APPROVED) on commit ddf9518 with PASS evidence |
+| KOS-SKILL-M0-001 | SKILL | 3 | COMPLETE | PASS | yes | MILESTONE: c171920 (task c171920), run 41598873743 | yes | weight 3 x approval A485 (PASS, APPROVED) on commit c171920 with PASS evidence |
+| KRP-ENG-001 | CI_DEV_INFRA | 3 | COMPLETE | PASS | yes | OWN: 0b0f180 (task befdc8d), run 42479226279 | yes | weight 3 x approval A491 (PASS, APPROVED) on commit 0b0f180 with PASS evidence |
+| KRP-M0-001 | CI_DEV_INFRA | 5 | COMPLETE | PASS | yes | OWN: f4ec001 (task f4ec001), run 42461232903 | yes | weight 5 x approval A487 (PASS, APPROVED) on commit f4ec001 with PASS evidence |
+| KRP-M0-002 | CI_DEV_INFRA | 4 | COMPLETE | PASS | yes | OWN: f4ec001 (task dc24f6a), run 42461232903 | yes | weight 4 x approval A488 (PASS, APPROVED) on commit f4ec001 with PASS evidence |
+| KRP-M0-003 | CI_DEV_INFRA | 3 | COMPLETE | PASS | yes | OWN: f4ec001 (task dc24f6a), run 42461232903 | yes | weight 3 x approval A489 (PASS, APPROVED) on commit f4ec001 with PASS evidence |
+| KRP-M0-004 | CI_DEV_INFRA | 3 | COMPLETE | PASS | yes | OWN: f4ec001 (task 9d0231d), run 42461232736 | yes | weight 3 x approval A490 (PASS, APPROVED) on commit f4ec001 with PASS evidence |
 
 ## Gates
 
@@ -242,6 +244,7 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 
 ## Evidence health
 
+- KOS-MIND-001: no current report from the owning workstream
 - KOS-SENSE-010: the repo reports no commit-bound CI evidence
 
 ## Warnings
@@ -257,6 +260,7 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
 - ELECTRICAL_POWER: no status source (UNVERIFIED)
 - INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)
+- KOS-MIND-001: not reported by MIND (no credit)
 - MANUFACTURING_FLEET: no status source (UNVERIFIED)
 - MECHANICAL: no status source (UNVERIFIED)
 - NEXUS_EDGE: no status source (UNVERIFIED)
@@ -268,7 +272,7 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 
 | Measure | Value | Scope and basis |
 |---|---|---|
-| Accepted engineering progress | 97.54% (198/203 weight) | Frozen baseline v12: only the 53 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. Baselined tasks only; the whole-program figure including approved plan scope is in STATUS_VIEW.md |
+| Accepted engineering progress | 95.19% (198/208 weight) | Frozen baseline v13: only the 54 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. Baselined tasks only; the whole-program figure including approved plan scope is in STATUS_VIEW.md |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
 
@@ -281,7 +285,6 @@ Approved plan rows (no credit). Weights are planning estimates. Status is the ex
 | M1 | Community | PROPOSED-NEW-COMMUNITY-002 | Cross-capability architecture documentation | 4 | NOT_STARTED |
 | M1 | Community | PROPOSED-NEW-COMMUNITY-018-01 | Capability contract inventory and compatibility matrix | 4 | NOT_STARTED |
 | M1 | Community | PROPOSED-NEW-COMMUNITY-018-02 | Automated version and pin compatibility checks | 4 | NOT_STARTED |
-| M1 | Mind | KOS-MIND-001 | Mind foundational contract and schema work | 5 | IN_PROGRESS |
 | M1 | Skill | KOS-SKILL-001 | Skill foundational contract and capability integration | 5 | IN_PROGRESS |
 | M2 | Core | PROPOSED-NEW-CORE-002 | Core build and artifact integration | 5 | NOT_STARTED |
 | M2 | Community | PROPOSED-NEW-COMMUNITY-003-01 | Build artifact handoff specification and metadata | 4 | NOT_STARTED |
@@ -339,29 +342,28 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-08T12:16:37Z (recorded 2026-11-09T11:19:37Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-09T14:44:54Z (recorded 2026-11-10T13:03:38Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 190/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 198/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Credited tasks: added KOS-MOTION-003
-- Warnings: 18 -> 17
+- Accepted progress: 198/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 198/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
+- Warnings: 17 -> 18
 
 ## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
 
 Source: [SEVEN_REPO_PLAN_REGISTER.md](../planning/SEVEN_REPO_PLAN_REGISTER.md), recorded as an owner-approved planning record in D-109. Planning weights are estimates, not baseline weights: they earn no credit and are not part of the 155/171 figure above. Each row below keeps the V2 baseline and the approved plan in separate columns.
 
-V2 baseline weight 99 (94 accepted). Approved plan 49 rows, 241 [189-294] (14 retired parents not counted). Total V2 plan weight 340 [288-393]; provisional accepted share 94/340 = 27.6% [23.9%-32.6%].
+V2 baseline weight 104 (94 accepted). Approved plan 48 rows, 236 [185-288] (14 retired parents not counted). Total V2 plan weight 340 [289-392]; provisional accepted share 94/340 = 27.6% [24.0%-32.5%].
 
 | Milestone | V2 baseline weight | Accepted weight | Plan rows | Plan weight [low-high] | Total plan weight |
 |---|---|---|---|---|---|
 | M0 | 32 | 32 | 0 | 0 [0-0] | 32 |
-| M1 | 10 | 10 | 5 | 22 [17-27] | 32 |
+| M1 | 15 | 10 | 4 | 17 [13-21] | 32 |
 | M2 | 32 | 27 | 12 | 56 [44-68] | 88 |
 | M3 | 0 | 0 | 10 | 48 [37-60] | 48 |
 | M4 | 0 | 0 | 4 | 18 [14-22] | 18 |
 | M5 | 5 | 5 | 9 | 49 [38-60] | 54 |
 | M7 | 9 | 9 | 3 | 13 [10-16] | 22 |
 | M8 | 11 | 11 | 6 | 35 [29-41] | 46 |
-| Total | 99 | 94 | 49 | 241 [189-294] | 340 |
+| Total | 104 | 94 | 48 | 236 [185-288] | 340 |
 
 | Repository | Plan rows | Plan weight [low-high] |
 |---|---|---|
@@ -369,17 +371,17 @@ V2 baseline weight 99 (94 accepted). Approved plan 49 rows, 241 [189-294] (14 re
 | Core | 2 | 11 [9-13] |
 | Community | 30 | 137 [107-167] |
 | Sense | 0 | 0 [0-0] |
-| Mind | 9 | 50 [39-61] |
+| Mind | 8 | 45 [35-55] |
 | Motion | 2 | 12 [10-14] |
 | Skill | 5 | 26 [20-33] |
-| Total | 49 | 241 [189-294] |
+| Total | 48 | 236 [185-288] |
 
 V2-M6 (physical validation) is on HOLD and excluded. Mechanical, actuator, kritva-enterprise_program and kritva-raas work are outside this plan.
 
 ## Accepted engineering progress by workstream
 
 ```text
-198/203 weight  █████████████████████████████░  97.54%
+198/208 weight  █████████████████████████████░  95.19%
 ```
 
 | Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |
@@ -389,7 +391,7 @@ V2-M6 (physical validation) is on HOLD and excluded. Mechanical, actuator, kritv
 | CORE | 35/35 | 100.0% | 10/10 |
 | MOTION | 21/21 | 100.0% | 4/4 |
 | CI_DEV_INFRA | 18/18 | 100.0% | 5/5 |
-| MIND | 3/3 | 100.0% | 1/1 |
+| MIND | 3/8 | 37.5% | 1/2 |
 | SKILL | 3/3 | 100.0% | 1/1 |
 
 Frozen baseline; credit needs a recorded approval and verified CI evidence. Only baselined workstreams are listed. A workstream that is NOT BASELINED has no accepted progress to report; that is not zero progress.
@@ -427,9 +429,13 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Measure | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 17 |
+| Warnings | 18 |
 | Workstreams registered / baselined | 24 / 7 |
 | Workstreams with no status source (UNVERIFIED) | 17 |
-| Source freshness | FRESH 7 |
+| Source freshness | WARN 7 |
 
 No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, NEXUS_EDGE, SDK, SIM, STUDIO.
+
+Other warnings:
+
+- KOS-MIND-001: not reported by MIND (no credit)
