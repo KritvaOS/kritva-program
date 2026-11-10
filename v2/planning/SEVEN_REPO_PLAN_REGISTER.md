@@ -30,12 +30,13 @@ Source commits when this was prepared (local main, equal to GitHub main): kritva
 
 | Subset | Rows | Point | Low | High |
 |---|---:|---:|---:|---:|
-| Original planning rows | 21 | 112 | 88 | 137 |
+| Original planning rows | 20 | 107 | 84 | 131 |
 | Approved child rows | 28 | 129 | 101 | 157 |
-| Counted planning register | 49 | 241 | 189 | 294 |
+| Counted planning register | 48 | 236 | 185 | 288 |
 | Retired parents (not counted) | 14 | - | - | - |
 | Moved to the baseline in v11 (D-117, not counted) | 10 | 34 | 24 | 44 |
 | Of those, descoped and removed from baseline v12 (D-119, not counted) | 1 | 2 | 1 | 3 |
+| Moved to the baseline in v13 (D-125, not counted) | 1 | 5 | 4 | 6 |
 
 V2 baseline (v11, once frozen) is separate: 101 V2 weight, 54 accepted, 23 task rows, because the ten M0 rows above moved from this register into the baseline (D-117). Total plan weight 101 + 241 = 342 [280-405], unchanged by the move; baseline v12 (D-119) then removes the descoped Community task (weight 2), so the V2 baseline is 99 and the total 99 + 241 = 340; provisional accepted share 54/342 = 15.8% [13.3-19.3%]. These measures are never blended with the historical 155/171 (90.64%, PRE_V2 plus V2).
 
@@ -44,14 +45,14 @@ V2 baseline (v11, once frozen) is separate: 101 V2 weight, 54 accepted, 23 task 
 | Milestone | Rows | Point | Low | High | V2 baseline | Accepted |
 |---|---:|---:|---:|---:|---:|---:|
 | M0 | 0 | 0 | 0 | 0 | 32 | 0 |
-| M1 | 5 | 22 | 17 | 27 | 10 | 10 |
+| M1 | 4 | 17 | 13 | 21 | 15 | 10 |
 | M2 | 12 | 56 | 44 | 68 | 32 | 19 |
 | M3 | 10 | 48 | 37 | 60 | 0 | 0 |
 | M4 | 4 | 18 | 14 | 22 | 0 | 0 |
 | M5 | 9 | 49 | 38 | 60 | 5 | 5 |
 | M7 | 3 | 13 | 10 | 16 | 9 | 9 |
 | M8 | 6 | 35 | 29 | 41 | 11 | 11 |
-| Total | 49 | 241 | 189 | 294 | 99 | 54 |
+| Total | 48 | 236 | 185 | 288 | 104 | 54 |
 
 M6 is excluded (HOLD). M4 reuses the ID as Developer Experience and Ecosystem.
 
@@ -77,10 +78,10 @@ Milestone titles used by this plan (status views show these titles). Booking and
 | Core | 2 | 11 | 9 | 13 |
 | Community | 30 | 137 | 107 | 167 |
 | Sense | 0 | 0 | 0 | 0 |
-| Mind | 9 | 50 | 39 | 61 |
+| Mind | 8 | 45 | 35 | 55 |
 | Motion | 2 | 12 | 10 | 14 |
 | Skill | 5 | 26 | 20 | 33 |
-| Total | 49 | 241 | 189 | 294 |
+| Total | 48 | 236 | 185 | 288 |
 
 ## 4. Column definitions
 
@@ -88,7 +89,7 @@ Milestone titles used by this plan (status views show these titles). Booking and
 
 Titles and execution statuses are register-friendly summaries. Before relying on one that mirrors an existing repository task (KOS-MIND-001, 002, 004 to 008; KOS-SKILL-001), check that repository's own task file.
 
-## 5. Original planning rows (21)
+## 5. Original planning rows (20)
 
 | record_type | id | repo | milestone | title | parent_id | weight_point | low | high | plan_state | execution_status | credit | counted | dependencies |
 |---|---|---|---|---|---|---:|---:|---:|---|---|---:|---|---|
@@ -99,7 +100,6 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-006 | Community | M3 | Control Plane service conformance |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-005-02 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-015 | Community | M7 | Live and results public documentation |  | 3 | 2 | 4 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-014-02 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-017 | Community | M8 | Community release and security review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-016-02 |
-| PLANNING_TASK | KOS-MIND-001 | Mind | M1 | Mind foundational contract and schema work |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | PROPOSED: none |
 | PLANNING_TASK | KOS-MIND-002 | Mind | M2 | Mind validation and semantics implementation |  | 5 | 4 | 6 | APPROVED_PLAN | IN_PROGRESS | 0 | true | PROPOSED: KOS-MIND-001 |
 | PLANNING_TASK | KOS-MIND-004 | Mind | M2 | Mind capability and contract integration |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-MIND-003-02 |
 | PLANNING_TASK | KOS-MIND-005 | Mind | M5 | Mind execution and runtime integration |  | 6 | 4 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: KOS-MIND-004 |
@@ -193,3 +193,11 @@ The ten M0 planning rows were removed from the counted register when baseline v1
 | KOS-MIND-M0-001 | PROPOSED-NEW-MIND-GOV-001 | Mind | V2-M0-MIND-001 | 3 | 2-4 |
 | KOS-MOTION-M0-001 | PROPOSED-NEW-MOTION-001 | Motion | V2-M0-MOTION-001 | 3 | 2-4 |
 | KOS-SKILL-M0-001 | PROPOSED-NEW-SKILL-GOV-001 | Skill | V2-M0-SKILL-001 | 3 | 2-4 |
+
+## 10. Rows moved to the baseline in v13 (D-125)
+
+The planning row KOS-MIND-001 was removed from the counted register when baseline v13 added it as a baseline task, so no weight is counted twice. Title, weight and range are unchanged. It earns no credit until it is completed with an approval and CI evidence.
+
+| Baseline task | Former register row | Repo | Baseline milestone | Weight | Range |
+|---|---|---|---|---:|---|
+| KOS-MIND-001 | KOS-MIND-001 | Mind | V2-M1-MIND-001 | 5 | 4-6 |

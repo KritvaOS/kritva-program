@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 12,
+  "baseline_version": 13,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -85,6 +85,10 @@
     },
     {
       "id": "V2-M0-MIND-001",
+      "workstream_id": "MIND"
+    },
+    {
+      "id": "V2-M1-MIND-001",
       "workstream_id": "MIND"
     },
     {
@@ -622,6 +626,16 @@
       "requires_physical": false,
       "phase": null,
       "weight_rationale": "Initial planning estimate (D-109, D-117), not a recorded engineering estimate: planning point 3 [2-4] carried unchanged from register row PROPOSED-NEW-SKILL-GOV-001; acceptance criteria in v2/planning/M0_TASK_DEFINITIONS.md under V2-M0-SKILL-001. Governance and evidence work only, no product behaviour. Scale 1-8. To be revised as work proceeds."
+    },
+    {
+      "id": "KOS-MIND-001",
+      "workstream_id": "MIND",
+      "milestone_id": "V2-M1-MIND-001",
+      "title": "Mind foundational contract and schema work",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-109, D-125), not a recorded engineering estimate: planning point 5 [4-6] carried unchanged from register row KOS-MIND-001; the Mind request, context and result contract: schemas, semantics, examples and the acceptance criteria of kritva-mind tasks/KOS-MIND-001. Software and documentation only, no runtime behaviour. Scale 1-8. To be revised as work proceeds."
     }
   ],
   "gates": [
@@ -695,9 +709,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-11-08T11:59:49Z",
-    "canonical_commit": "bc8884f1c8920afd00e9146acb3bdedd8badbcd8",
-    "baseline_sha256": "a88f785ce3257631ffb6ae20147d4881724f37c12d0a1457c44b3838f0fb10c0",
-    "reason": "Baseline v12 (D-119): KOS-COMMUNITY-M0-001 and milestone V2-M0-COMMUNITY-001 removed because the owner waived the PD-017 mailbox test; 53 weights unchanged; no credit changes"
+    "approved_at": "2026-11-10T13:03:38Z",
+    "canonical_commit": "5ca6201cb0c4062e27990e32bbf7ce6852be72aa",
+    "baseline_sha256": "9bdd9f990a2dafe96f0cdddca09204521214e83d11aed0d04df2759e8a16f00e",
+    "reason": "Baseline v13 (D-125): KOS-MIND-001 added from the approved planning row (weight 5); 53 weights unchanged; no credit changes"
   }
 }
