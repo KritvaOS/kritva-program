@@ -233,15 +233,14 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 198/203 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 198/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Warnings: 17 -> 18"
+      "Warnings: 18 -> 17"
     ],
-    "recorded_at": "2026-11-10T13:03:38Z",
-    "since": "2026-11-09T14:44:54Z"
+    "recorded_at": "2026-11-10T13:16:33Z",
+    "since": "2026-11-10T13:03:38Z"
   },
   "errors": [],
   "evidence_health": [
-    "KOS-MIND-001: no current report from the owning workstream",
+    "KOS-MIND-001: evidence reported (class not recorded, run 42219290884 at 8cc3329; run not yet checked against GitHub) but no central approval is recorded, so zero credit until approved",
     "KOS-SENSE-010: the repo reports no commit-bound CI evidence"
   ],
   "gates": [
@@ -337,7 +336,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-10T13:03:38Z",
+  "generated_at": "2026-11-10T13:16:33Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
@@ -1830,30 +1829,41 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 25,
-        "ahead_by": 13,
+        "age_hours": 0,
+        "ahead_by": 24,
         "changed_files": [
           "sources/CI_DEV_INFRA.json",
           "sources/MANIFEST.json",
+          "sources/MOTION.json",
           "status/README.md",
           "status/status.json",
           "tests/test_baseline_reapproval.py",
+          "tests/test_plan_register.py",
           "tests/test_publish_repo_progress.py",
           "tools/publish_repo_progress.py",
           "tools/repo-templates/progress-check.yml",
           "tools/repo-templates/progress_report.py",
           "v2/DECISIONS.md",
+          "v2/planning/SEVEN_REPO_PLAN_REGISTER.md",
+          "v2/planning/V2_MILESTONE_PLAN.md",
+          "v2/planning/V2_REPO_PLAN.md",
+          "v2/planning/milestones.json",
+          "v2/planning/repo-pipeline.json",
           "v2/tracking/STATUS_DETAIL.md",
           "v2/tracking/STATUS_VIEW.md",
           "v2/tracking/approvals.json",
+          "v2/tracking/baseline.json",
+          "v2/tracking/baseline_v13_proposal.json",
+          "v2/tracking/baselines/CHANGELOG.json",
+          "v2/tracking/baselines/baseline_v13.json",
           "v2/tracking/consolidated_status.json",
           "v2/tracking/evidence_map_proposal.json",
           "v2/tracking/run_verification.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-09T11:19:07Z",
-        "fetched_head": "1b978d20f83d3b6f11a932f203458709b5710ad0",
-        "freshness": "WARN",
+        "fetched_at": "2026-11-10T13:16:07Z",
+        "fetched_head": "ede774b84959b2c700ef7e6d55f6be7093e43189",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-program",
@@ -1862,7 +1872,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 25,
+        "age_hours": 0,
         "ahead_by": 6,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1880,9 +1890,9 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-09T11:19:07Z",
+        "fetched_at": "2026-11-10T13:16:07Z",
         "fetched_head": "3021c5b9c72e030e7721e191e1772fc3b25ea8ff",
-        "freshness": "WARN",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritvaos-community",
@@ -1891,7 +1901,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 25,
+        "age_hours": 0,
         "ahead_by": 6,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1907,9 +1917,9 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-09T11:19:07Z",
+        "fetched_at": "2026-11-10T13:16:07Z",
         "fetched_head": "3850bccca36a00df6290ad600617b04ca4c28164",
-        "freshness": "WARN",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-core",
@@ -1918,41 +1928,40 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 25,
-        "ahead_by": 10,
+        "age_hours": 0,
+        "ahead_by": 2,
         "changed_files": [
-          ".github/workflows/progress-check.yml",
-          "README.md",
-          "planning/MILESTONE_STATUS.md",
-          "planning/TASKS.md",
-          "planning/reviews/REV-006-GOVERNANCE-BASELINE.md",
-          "scripts/progress_report.py",
+          "planning/CHANGELOG.md",
           "status/README.md",
-          "status/STATUS.md",
-          "status/program_snapshot.json",
-          "status/status.json",
-          "status/status.schema.json",
-          "status/status.schema.json.sha256"
+          "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-09T11:19:07Z",
-        "fetched_head": "f7afc4ecae71a16ea1bff75c0b8c5e42b807ddfd",
-        "freshness": "WARN",
+        "fetched_at": "2026-11-10T13:16:07Z",
+        "fetched_head": "7e9bb2c9f520b8172606fb4ef242e19a5d62f16a",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-mind",
-        "report_source_commit": "3083512cb116b57bed92aa4e016a66f7a3189089",
+        "report_source_commit": "c2e82a325b0f2f780f9af551c094d2a9d8f4c975",
         "status_only": false,
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 25,
-        "ahead_by": 2,
+        "age_hours": 0,
+        "ahead_by": 8,
         "changed_files": [
+          ".github/kritva-gate.json",
+          "AGENTS.md",
+          "COMPLETION_RECORD.md",
+          "CONTRIBUTING.md",
           "README.md",
           "planning/CHANGELOG.md",
+          "planning/MILESTONE.md",
+          "planning/MILESTONE_STATUS.md",
           "planning/TASKS.md",
           "scripts/status/gen_status.py",
+          "status/STATUS.md",
+          "status/program_snapshot.json",
           "status/status.json",
           "tasks/KOS-MOTION-003/EVIDENCE.json",
           "tasks/KOS-MOTION-003/LIFECYCLE.md",
@@ -1961,9 +1970,9 @@
           "tests/status_gen/test_gen_status.py"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-09T11:19:07Z",
-        "fetched_head": "5422983610deb6d08de31042ceaa136056bdd231",
-        "freshness": "WARN",
+        "fetched_at": "2026-11-10T13:16:07Z",
+        "fetched_head": "7544c0618a7e42ee717da0b05a40c3cafaa12e93",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-motion",
@@ -1972,7 +1981,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 25,
+        "age_hours": 0,
         "ahead_by": 114,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2027,9 +2036,9 @@
           "tasks/KOS-SENSE-004/TASK.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-09T11:19:07Z",
+        "fetched_at": "2026-11-10T13:16:07Z",
         "fetched_head": "0b8123aa1a6315d790ab477910cbdc37a8fdbede",
-        "freshness": "WARN",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-sense",
@@ -2038,7 +2047,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 25,
+        "age_hours": 0,
         "ahead_by": 10,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2055,9 +2064,9 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-09T11:19:07Z",
+        "fetched_at": "2026-11-10T13:16:07Z",
         "fetched_head": "e97938e059627c5ded4ea24a3535aba7c59fa284",
-        "freshness": "WARN",
+        "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-skill",
@@ -2137,7 +2146,7 @@
     "progress": "198/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 95.19,
     "readiness": {},
-    "warnings": 18
+    "warnings": 17
   },
   "tasks": [
     {
@@ -3043,17 +3052,23 @@
       "acceptance": "NOT_RUN",
       "blocked_by": [],
       "credit": false,
-      "credit_reason": "no current report from the owning workstream",
+      "credit_reason": "no central approval recorded",
       "evidence_class": null,
       "evidence_run": null,
-      "evidence_state": "NO_REPORT",
+      "evidence_state": "REPORTED_AWAITING_APPROVAL",
       "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "execution": "IN_PROGRESS",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M1-MIND-001",
       "phase": null,
-      "readiness": null,
-      "reported_evidence": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": null,
+        "commit": "8cc33291919ce5599d60351d0cf181ea19cdf0ff",
+        "github_verified": null,
+        "run": "42219290884",
+        "task_commit": null
+      },
       "run_verified": null,
       "task_commit": null,
       "task_id": "KOS-MIND-001",
@@ -3781,7 +3796,6 @@
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
-    "KOS-MIND-001: not reported by MIND (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
     "NEXUS_EDGE: no status source (UNVERIFIED)",
@@ -3903,11 +3917,11 @@
       "tasks_reported": 0
     },
     {
-      "commit": "3083512cb116b57bed92aa4e016a66f7a3189089",
+      "commit": "c2e82a325b0f2f780f9af551c094d2a9d8f4c975",
       "id": "MIND",
       "repo": "KritvaOS/kritva-mind",
       "source_state": "OK",
-      "tasks_reported": 1
+      "tasks_reported": 2
     },
     {
       "commit": "1acb437abc1a9c0934a0626d7b39a163947b325c",

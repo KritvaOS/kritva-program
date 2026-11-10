@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-10T13:03:38Z from committed data. Baseline v13 (APPROVED). Validation: 0 error(s), 18 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-10T13:16:33Z from committed data. Baseline v13 (APPROVED). Validation: 0 error(s), 17 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -87,7 +87,7 @@ M1 is the earliest milestone with open tasks: 10 of 32 weight accepted, 7 tasks 
 | Community | PROPOSED-NEW-COMMUNITY-018-01 | Capability contract inventory and compatibility matrix | 4 | NOT_STARTED |
 | Community | PROPOSED-NEW-COMMUNITY-018-02 | Automated version and pin compatibility checks | 4 | NOT_STARTED |
 | Sense | KOS-SENSE-001 | Sense architecture and data contract | 5 | COMPLETE (credited) |
-| Mind | KOS-MIND-001 | Mind foundational contract and schema work | 5 | NOT_REPORTED |
+| Mind | KOS-MIND-001 | Mind foundational contract and schema work | 5 | IN_PROGRESS |
 | Motion | KOS-MOTION-001 | Motion command and state contract | 5 | COMPLETE (credited) |
 | Skill | KOS-SKILL-001 | Skill foundational contract and capability integration | 5 | IN_PROGRESS |
 
@@ -105,6 +105,7 @@ Weights add up to 32. Every milestone's tasks are listed in [STATUS_DETAIL.md](S
 |---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh |
 | 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh |
+| 3 | 1 task(s) have reported CI evidence awaiting central approval | Zero credit until an approval is recorded: KOS-MIND-001 | not recorded |
 
 All open items are shown.
 
@@ -121,7 +122,7 @@ Community I3/I4 software implementation credit is included in Foundation (PRE_V2
 | Check | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 18 (17 workstreams with no status source) |
-| Source freshness | WARN 7 |
+| Warnings | 17 (17 workstreams with no status source) |
+| Source freshness | FRESH 7 |
 
 Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).
