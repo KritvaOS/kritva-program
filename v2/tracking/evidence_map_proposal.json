@@ -1151,6 +1151,42 @@
       ]
     },
     {
+      "task_id": "KOS-MIND-001",
+      "workstream_id": "MIND",
+      "task_commit": "8cc33291919ce5599d60351d0cf181ea19cdf0ff",
+      "task_subject": "Merge pull request #27 from KritvaOS/docs/kos-mind-001-completion-record",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "8cc33291919ce5599d60351d0cf181ea19cdf0ff",
+        "ci_run": 42219290884,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-mind/actions/runs/42219290884",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        ".github/kritva-gate.json",
+        ".github/workflows/progress-check.yml",
+        "COMPLETION_RECORD.md",
+        "README.md",
+        "planning/CHANGELOG.md",
+        "planning/MILESTONE_STATUS.md",
+        "planning/TASKS.md",
+        "planning/reviews/REV-006-GOVERNANCE-BASELINE.md",
+        "scripts/progress_report.py",
+        "status/README.md",
+        "status/STATUS.md",
+        "status/program_snapshot.json",
+        "status/status.json",
+        "status/status.schema.json",
+        "status/status.schema.json.sha256",
+        "tasks/KOS-MIND-001/TASK.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT"
+      ]
+    },
+    {
       "task_id": "KOS-MOTION-M0-001",
       "workstream_id": "MOTION",
       "task_commit": "44b733d5284d36895b1fff7e1cecedb69ca1720c",
