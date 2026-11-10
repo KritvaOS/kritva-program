@@ -7823,6 +7823,21 @@
       ],
       "rationale": "Carried forward onto baseline v13 (D-125); same evidence commits, no new judgement (D-027)",
       "supersedes": "A440"
+    },
+    {
+      "approval_id": "A493",
+      "task_id": "KOS-MIND-001",
+      "baseline_version": 13,
+      "source_repo": "KritvaOS/kritva-mind",
+      "source_commit": "8cc33291919ce5599d60351d0cf181ea19cdf0ff",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-10T13:32:28Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-mind/actions/runs/42219290884"
+      ],
+      "rationale": "Owner approval (Dinesh, chat, 2026-11-10; decision D-126). Task KOS-MIND-001 accepted as it stands against kritva-mind COMPLETION_RECORD.md: AC-001, AC-002, AC-004 and AC-006 PASS. AC-003, AC-005, AC-007, AC-008, AC-009, AC-010 and AC-011 remain WAIVED with conditions that cover only their deferred parts; they are not reported as PASS or as met. Reviewed under the interim roles of D-047, not independent review. Evidence: unit-tests run 42219290884 on merge commit 8cc33291919ce5599d60351d0cf181ea19cdf0ff."
     }
   ]
 }
