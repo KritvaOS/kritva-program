@@ -6,15 +6,15 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-10T13:33:28Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-12T02:46:14Z (freshness of sources is judged at this time)
 - Baseline version: 13 (APPROVED)
-- Accepted engineering progress: 97.6% (203/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
-- Execution reported complete: 53/54 tasks (repo-reported; not acceptance)
-- Credited tasks: 53/54; blocked by open gates: 0 (none)
-- Evidence coverage: 53/54 tasks with approved, verified evidence; 53 with the CI run confirmed against GitHub (policy: required for credit)
-- Release readiness: NOT_READY (open release gates: none; uncredited tasks: 1)
+- Accepted engineering progress: 100.0% (208/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
+- Execution reported complete: 54/54 tasks (repo-reported; not acceptance)
+- Credited tasks: 54/54; blocked by open gates: 0 (none)
+- Evidence coverage: 54/54 tasks with approved, verified evidence; 54 with the CI run confirmed against GitHub (policy: required for credit)
+- Release readiness: READY (open release gates: none; uncredited tasks: 0)
 - Schedule: NOT TRACKED here. Effort and capability are owner estimates in their own section, separate from progress
-- Evidence classes of credited tasks: MILESTONE 36, OWN 16, RERUN 1
+- Evidence classes of credited tasks: MILESTONE 37, OWN 16, RERUN 1
 - Evidence qualification: MILESTONE-class tasks were validated by a CI run on a LATER commit ("accepted as of" that commit), not by a run on the task's own commit; the tested commit is shown per task. UNSPECIFIED means the evidence class is not recorded. Open safety gates keep gated tasks at zero credit and release readiness NOT_READY. Credit reflects approval and CI evidence, not physical validation or safety sign-off.
 
 ## Program phase status (manual; separate scope from the engineering baseline)
@@ -29,17 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-10T13:33:28Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-12T02:46:14Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | FRESH | 2026-11-10T13:32:05Z (0h ago) | 90c25ca | 0b0f180 | 26 commit(s) | OTHER FILES (review): sources/CI_DEV_INFRA.json, sources/MANIFEST.json, sources/MIND.json, sources/MOTION.json, status/README.md |
-| COMMUNITY | FRESH | 2026-11-10T13:32:05Z (0h ago) | 3021c5b | 37c59c1 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
-| CORE | FRESH | 2026-11-10T13:32:05Z (0h ago) | 3850bcc | 0b30a99 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
-| MIND | FRESH | 2026-11-10T13:32:05Z (0h ago) | e0b53c0 | d593493 | 2 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, status/status.json, tasks/KOS-MIND-001/TASK.md |
-| MOTION | FRESH | 2026-11-10T13:32:05Z (0h ago) | 7544c06 | 1acb437 | 8 commit(s) | OTHER FILES (review): .github/kritva-gate.json, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md, README.md |
-| SENSE | FRESH | 2026-11-10T13:32:05Z (0h ago) | 0b8123a | 07c48d5 | 114 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
-| SKILL | FRESH | 2026-11-10T13:32:05Z (0h ago) | e97938e | 557f19b | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
+| CI_DEV_INFRA | FRESH | 2026-11-12T02:44:55Z (0h ago) | f03c164 | 0b0f180 | 28 commit(s) | OTHER FILES (review): sources/CI_DEV_INFRA.json, sources/MANIFEST.json, sources/MIND.json, sources/MOTION.json, status/README.md |
+| COMMUNITY | FRESH | 2026-11-12T02:44:55Z (0h ago) | 3021c5b | 37c59c1 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
+| CORE | FRESH | 2026-11-12T02:44:55Z (0h ago) | 3850bcc | 0b30a99 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
+| MIND | FRESH | 2026-11-12T02:44:55Z (0h ago) | 7f3d339 | d593493 | 4 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, status/STATUS.md, status/program_snapshot.json |
+| MOTION | FRESH | 2026-11-12T02:44:55Z (0h ago) | 7544c06 | 1acb437 | 8 commit(s) | OTHER FILES (review): .github/kritva-gate.json, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md, README.md |
+| SENSE | FRESH | 2026-11-12T02:44:55Z (0h ago) | 35e6a9e | 07c48d5 | 116 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
+| SKILL | FRESH | 2026-11-12T02:44:55Z (0h ago) | e97938e | 557f19b | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
 
 ## Workstreams
 
@@ -78,7 +78,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 
 | Group | Tasks | Execution complete | Credited | Weight | Accepted weight |
 |---|---|---|---|---|---|
-| UNMAPPED | 54 | 53 | 53 | 208 | 203 |
+| UNMAPPED | 54 | 54 | 54 | 208 | 208 |
 
 ## Rollup by workstream
 
@@ -89,7 +89,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | CORE | 10 | 10 | 10 | 35 | 35 |
 | MIND | 2 | 2 | 2 | 8 | 8 |
 | MOTION | 4 | 4 | 4 | 21 | 21 |
-| SENSE | 11 | 10 | 10 | 52 | 47 |
+| SENSE | 11 | 11 | 11 | 52 | 52 |
 | SKILL | 1 | 1 | 1 | 3 | 3 |
 
 ## Rollup by milestone
@@ -112,7 +112,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 | V2-M1-SENSE-001 | 1 | 1 | 1 | 5 | 5 |
 | V2-M2-MOTION-001 | 1 | 1 | 1 | 5 | 5 |
 | V2-M2-MOTION-002 | 1 | 1 | 1 | 8 | 8 |
-| V2-M2-SENSE-001 | 4 | 3 | 3 | 19 | 14 |
+| V2-M2-SENSE-001 | 4 | 4 | 4 | 19 | 19 |
 | V2-M5-SENSE-001 | 1 | 1 | 1 | 5 | 5 |
 | V2-M7-SENSE-001 | 2 | 2 | 2 | 9 | 9 |
 | V2-M8-SENSE-001 | 2 | 2 | 2 | 11 | 11 |
@@ -141,7 +141,7 @@ Rows: PRE_V2 5, V2_REPO 39.
 | V2-M1-SENSE-001 | V2_REPO | V2-M1 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M2-MOTION-001 | V2_REPO | V2-M2 | MOTION | CLOSED | 1 | 1 | 5 | 5 | none |
 | V2-M2-MOTION-002 | V2_REPO | V2-M2 | MOTION | CLOSED | 1 | 1 | 8 | 8 | none |
-| V2-M2-SENSE-001 | V2_REPO | V2-M2 | SENSE | PROPOSED | 4 | 3 | 19 | 14 | none |
+| V2-M2-SENSE-001 | V2_REPO | V2-M2 | SENSE | PROPOSED | 4 | 4 | 19 | 19 | none |
 | V2-M5-SENSE-001 | V2_REPO | V2-M5 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M7-SENSE-001 | V2_REPO | V2-M7 | SENSE | PROPOSED | 2 | 2 | 9 | 9 | none |
 | V2-M8-SENSE-001 | V2_REPO | V2-M8 | SENSE | PROPOSED | 2 | 2 | 11 | 11 | none |
@@ -220,7 +220,7 @@ Rows: PRE_V2 5, V2_REPO 39.
 | KOS-SENSE-007 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: 5f1aa7a (task f068ecd), run 41292919590 | yes | weight 5 x approval A479 (PASS, APPROVED) on commit 5f1aa7a with PASS evidence |
 | KOS-SENSE-008 | SENSE | 6 | COMPLETE | PASS | yes | MILESTONE: a8dfb5a (task 80237dd), run 41298259048 | yes | weight 6 x approval A480 (PASS, APPROVED) on commit a8dfb5a with PASS evidence |
 | KOS-SENSE-009 | SENSE | 6 | COMPLETE | PASS | yes | MILESTONE: 55191ab (task 8e8fe8f), run 41761323273 | yes | weight 6 x approval A481 (PASS, APPROVED) on commit 55191ab with PASS evidence |
-| KOS-SENSE-010 | SENSE | 5 | IN_PROGRESS | NOT_RUN | no | - | - | no central approval recorded |
+| KOS-SENSE-010 | SENSE | 5 | COMPLETE | PASS | yes | MILESTONE: a072cee (task d775dd6), run 43139244187 | yes | weight 5 x approval A494 (PASS, APPROVED) on commit a072cee with PASS evidence |
 | KOS-SENSE-M0-001 | SENSE | 3 | COMPLETE | PASS | yes | MILESTONE: ddf9518 (task ddf9518), run 42329065787 | yes | weight 3 x approval A482 (PASS, APPROVED) on commit ddf9518 with PASS evidence |
 | KOS-SKILL-M0-001 | SKILL | 3 | COMPLETE | PASS | yes | MILESTONE: c171920 (task c171920), run 41598873743 | yes | weight 3 x approval A485 (PASS, APPROVED) on commit c171920 with PASS evidence |
 | KRP-ENG-001 | CI_DEV_INFRA | 3 | COMPLETE | PASS | yes | OWN: 0b0f180 (task befdc8d), run 42479226279 | yes | weight 3 x approval A491 (PASS, APPROVED) on commit 0b0f180 with PASS evidence |
@@ -241,10 +241,6 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 - C009 limitations: Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.
 - C010 limitations: Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.
 - C011 limitations: Claude checked job conclusions only, not logs, sanitizer settings or test coverage. Reviewer independence from the implementation is not stated. Closure rests on the owner's approval stated in chat on 2026-10-26.
-
-## Evidence health
-
-- KOS-SENSE-010: the repo reports no commit-bound CI evidence
 
 ## Warnings
 
@@ -270,7 +266,7 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 
 | Measure | Value | Scope and basis |
 |---|---|---|
-| Accepted engineering progress | 97.6% (203/208 weight) | Frozen baseline v13: only the 54 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. Baselined tasks only; the whole-program figure including approved plan scope is in STATUS_VIEW.md |
+| Accepted engineering progress | 100.0% (208/208 weight) | Frozen baseline v13: only the 54 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. Baselined tasks only; the whole-program figure including approved plan scope is in STATUS_VIEW.md |
 | Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
 
 
@@ -340,28 +336,28 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-10T13:16:33Z (recorded 2026-11-10T13:32:29Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-10T13:33:28Z (recorded 2026-11-12T02:45:17Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 198/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 203/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Credited tasks: added KOS-MIND-001
+- Accepted progress: 203/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 208/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
+- Credited tasks: added KOS-SENSE-010
 
 ## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
 
 Source: [SEVEN_REPO_PLAN_REGISTER.md](../planning/SEVEN_REPO_PLAN_REGISTER.md), recorded as an owner-approved planning record in D-109. Planning weights are estimates, not baseline weights: they earn no credit and are not part of the 155/171 figure above. Each row below keeps the V2 baseline and the approved plan in separate columns.
 
-V2 baseline weight 104 (99 accepted). Approved plan 48 rows, 236 [185-288] (14 retired parents not counted). Total V2 plan weight 340 [289-392]; provisional accepted share 99/340 = 29.1% [25.3%-34.3%].
+V2 baseline weight 104 (104 accepted). Approved plan 48 rows, 236 [185-288] (14 retired parents not counted). Total V2 plan weight 340 [289-392]; provisional accepted share 104/340 = 30.6% [26.5%-36.0%].
 
 | Milestone | V2 baseline weight | Accepted weight | Plan rows | Plan weight [low-high] | Total plan weight |
 |---|---|---|---|---|---|
 | M0 | 32 | 32 | 0 | 0 [0-0] | 32 |
 | M1 | 15 | 15 | 4 | 17 [13-21] | 32 |
-| M2 | 32 | 27 | 12 | 56 [44-68] | 88 |
+| M2 | 32 | 32 | 12 | 56 [44-68] | 88 |
 | M3 | 0 | 0 | 10 | 48 [37-60] | 48 |
 | M4 | 0 | 0 | 4 | 18 [14-22] | 18 |
 | M5 | 5 | 5 | 9 | 49 [38-60] | 54 |
 | M7 | 9 | 9 | 3 | 13 [10-16] | 22 |
 | M8 | 11 | 11 | 6 | 35 [29-41] | 46 |
-| Total | 104 | 99 | 48 | 236 [185-288] | 340 |
+| Total | 104 | 104 | 48 | 236 [185-288] | 340 |
 
 | Repository | Plan rows | Plan weight [low-high] |
 |---|---|---|
@@ -379,13 +375,13 @@ V2-M6 (physical validation) is on HOLD and excluded. Mechanical, actuator, kritv
 ## Accepted engineering progress by workstream
 
 ```text
-203/208 weight  █████████████████████████████░  97.6%
+208/208 weight  ██████████████████████████████  100.0%
 ```
 
 | Workstream | Accepted / baseline weight | Share | Tasks credited / baselined |
 |---|---|---|---|
 | COMMUNITY | 71/71 | 100.0% | 21/21 |
-| SENSE | 47/52 | 90.4% | 10/11 |
+| SENSE | 52/52 | 100.0% | 11/11 |
 | CORE | 35/35 | 100.0% | 10/10 |
 | MOTION | 21/21 | 100.0% | 4/4 |
 | CI_DEV_INFRA | 18/18 | 100.0% | 5/5 |

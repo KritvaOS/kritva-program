@@ -131,9 +131,9 @@
       "weighted": true
     },
     "V2-M2-SENSE-001": {
-      "accepted_weight": 14,
-      "complete": 3,
-      "credited": 3,
+      "accepted_weight": 19,
+      "complete": 4,
+      "credited": 4,
       "tasks": 4,
       "weight": 19,
       "weighted": true
@@ -165,9 +165,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 203,
-      "complete": 53,
-      "credited": 53,
+      "accepted_weight": 208,
+      "complete": 54,
+      "credited": 54,
       "tasks": 54,
       "weight": 208,
       "weighted": true
@@ -215,9 +215,9 @@
       "weighted": true
     },
     "SENSE": {
-      "accepted_weight": 47,
-      "complete": 10,
-      "credited": 10,
+      "accepted_weight": 52,
+      "complete": 11,
+      "credited": 11,
       "tasks": 11,
       "weight": 52,
       "weighted": true
@@ -233,16 +233,14 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 198/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 203/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: added KOS-MIND-001"
+      "Accepted progress: 203/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 208/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KOS-SENSE-010"
     ],
-    "recorded_at": "2026-11-10T13:32:29Z",
-    "since": "2026-11-10T13:16:33Z"
+    "recorded_at": "2026-11-12T02:45:17Z",
+    "since": "2026-11-10T13:33:28Z"
   },
   "errors": [],
-  "evidence_health": [
-    "KOS-SENSE-010: the repo reports no commit-bound CI evidence"
-  ],
+  "evidence_health": [],
   "gates": [
     {
       "approval_required": true,
@@ -336,22 +334,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-10T13:33:28Z",
+  "generated_at": "2026-11-12T02:46:14Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
-      "tasks_with_github_verified_run": 53,
-      "tasks_with_verified_evidence": 53
+      "tasks_with_github_verified_run": 54,
+      "tasks_with_verified_evidence": 54
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 53,
+      "tasks_complete": 54,
       "tasks_total": 54
     },
     "release_readiness": {
       "open_release_gates": [],
-      "state": "NOT_READY",
-      "uncredited_tasks": 1
+      "state": "READY",
+      "uncredited_tasks": 0
     }
   },
   "milestone_alignment": [
@@ -548,10 +546,10 @@
       "workstream": "MOTION"
     },
     {
-      "accepted_weight": 14,
+      "accepted_weight": 19,
       "class": "V2_REPO",
       "closure": "none",
-      "credited": 3,
+      "credited": 4,
       "milestone": "V2-M2-SENSE-001",
       "program_milestone": "V2-M2",
       "status": "PROPOSED",
@@ -941,7 +939,7 @@
         "rows": 4
       },
       "M2": {
-        "accepted": 27,
+        "accepted": 32,
         "baseline": 32,
         "high": 68,
         "low": 44,
@@ -1041,8 +1039,8 @@
         "rows": 1
       },
       "Sense": {
-        "accepted": 47,
-        "accepted_tasks": 10,
+        "accepted": 52,
+        "accepted_tasks": 11,
         "baseline": 52,
         "baseline_tasks": 11,
         "high": 0,
@@ -1221,7 +1219,7 @@
           "rows": 0
         },
         "M2": {
-          "accepted": 14,
+          "accepted": 19,
           "baseline": 19,
           "point": 0,
           "rows": 0
@@ -1684,7 +1682,7 @@
       "M7": "LIVE & RESULTS",
       "M8": "PRODUCTION"
     },
-    "v2_accepted_weight": 99,
+    "v2_accepted_weight": 104,
     "v2_baseline_weight": 104
   },
   "program_status": {
@@ -1720,8 +1718,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 97.6,
-    "basis": "203/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 100.0,
+    "basis": "208/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "sequence": [
@@ -1830,7 +1828,7 @@
     "rows": [
       {
         "age_hours": 0,
-        "ahead_by": 26,
+        "ahead_by": 28,
         "changed_files": [
           "sources/CI_DEV_INFRA.json",
           "sources/MANIFEST.json",
@@ -1862,8 +1860,8 @@
           "v2/tracking/run_verification.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-10T13:32:05Z",
-        "fetched_head": "90c25ca74d54794bff9fde34a373f5a49783f36a",
+        "fetched_at": "2026-11-12T02:44:55Z",
+        "fetched_head": "f03c164a203e6f6af2864df7e41175beb9a586f8",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -1891,7 +1889,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-10T13:32:05Z",
+        "fetched_at": "2026-11-12T02:44:55Z",
         "fetched_head": "3021c5b9c72e030e7721e191e1772fc3b25ea8ff",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1918,7 +1916,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-10T13:32:05Z",
+        "fetched_at": "2026-11-12T02:44:55Z",
         "fetched_head": "3850bccca36a00df6290ad600617b04ca4c28164",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1930,17 +1928,19 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 2,
+        "ahead_by": 4,
         "changed_files": [
           "planning/CHANGELOG.md",
           "planning/MILESTONE_STATUS.md",
           "planning/TASKS.md",
+          "status/STATUS.md",
+          "status/program_snapshot.json",
           "status/status.json",
           "tasks/KOS-MIND-001/TASK.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-10T13:32:05Z",
-        "fetched_head": "e0b53c0024b1336db5e1f6e1dea6c3424c927985",
+        "fetched_at": "2026-11-12T02:44:55Z",
+        "fetched_head": "7f3d339ca1dfb49f3b6090ef20c78f9fd49b6083",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -1973,7 +1973,7 @@
           "tests/status_gen/test_gen_status.py"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-10T13:32:05Z",
+        "fetched_at": "2026-11-12T02:44:55Z",
         "fetched_head": "7544c0618a7e42ee717da0b05a40c3cafaa12e93",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1985,7 +1985,7 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 114,
+        "ahead_by": 116,
         "changed_files": [
           ".github/kritva-gate.json",
           ".github/workflows/commit-message-check.yml",
@@ -2019,6 +2019,7 @@
           "scripts/progress_report.py",
           "scripts/regenerate_regression_golden.py",
           "scripts/regression_gate.py",
+          "scripts/test_all.py",
           "src/kritva_sense/CONFORMANCE.md",
           "src/kritva_sense/GENERATOR.md",
           "src/kritva_sense/__main__.py",
@@ -2035,12 +2036,11 @@
           "tasks/KOS-SENSE-002/TASK.md",
           "tasks/KOS-SENSE-003/ACCEPTANCE_CRITERIA.md",
           "tasks/KOS-SENSE-003/TASK.md",
-          "tasks/KOS-SENSE-004/ACCEPTANCE_CRITERIA.md",
-          "tasks/KOS-SENSE-004/TASK.md"
+          "tasks/KOS-SENSE-004/ACCEPTANCE_CRITERIA.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-10T13:32:05Z",
-        "fetched_head": "0b8123aa1a6315d790ab477910cbdc37a8fdbede",
+        "fetched_at": "2026-11-12T02:44:55Z",
+        "fetched_head": "35e6a9e4e97343faef982a10ad1db4c637c375d7",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -2067,7 +2067,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-10T13:32:05Z",
+        "fetched_at": "2026-11-12T02:44:55Z",
         "fetched_head": "e97938e059627c5ded4ea24a3535aba7c59fa284",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2129,6 +2129,7 @@
       "KOS-SENSE-007",
       "KOS-SENSE-008",
       "KOS-SENSE-009",
+      "KOS-SENSE-010",
       "KOS-SENSE-M0-001",
       "KOS-SKILL-M0-001",
       "KRP-ENG-001",
@@ -2147,8 +2148,8 @@
     },
     "pending_decisions": 2,
     "pending_reviews": 0,
-    "progress": "203/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 97.6,
+    "progress": "208/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 100.0,
     "readiness": {},
     "warnings": 17
   },
@@ -3488,24 +3489,30 @@
       "workstream_id": "SENSE"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no central approval recorded",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_EVIDENCE_REPORTED",
-      "evidence_verified": false,
-      "execution": "IN_PROGRESS",
+      "credit": true,
+      "credit_reason": "weight 5 x approval A494 (PASS, APPROVED) on commit a072cee with PASS evidence",
+      "evidence_class": "MILESTONE",
+      "evidence_run": "43139244187",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
       "git_sync": "SYNCED",
       "milestone_id": "V2-M2-SENSE-001",
       "phase": null,
       "readiness": "IMPLEMENTABLE",
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "reported_evidence": {
+        "class": "MILESTONE",
+        "commit": "a072cee8c52bc9e5f3d6d1774bb919d572108074",
+        "github_verified": true,
+        "run": "43139244187",
+        "task_commit": "d775dd6213e9886253480c1bac26e053bc37e3c9"
+      },
+      "run_verified": true,
+      "task_commit": "d775dd6213e9886253480c1bac26e053bc37e3c9",
       "task_id": "KOS-SENSE-010",
-      "tested_commit": null,
+      "tested_commit": "a072cee8c52bc9e5f3d6d1774bb919d572108074",
       "title": "Regression gate and compatibility suite",
       "weight": 5,
       "workstream_id": "SENSE"

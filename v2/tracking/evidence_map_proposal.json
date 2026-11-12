@@ -1329,6 +1329,34 @@
       },
       "task_files_changed_after": null,
       "review_flags": []
+    },
+    {
+      "task_id": "KOS-SENSE-010",
+      "workstream_id": "SENSE",
+      "task_commit": "d775dd6213e9886253480c1bac26e053bc37e3c9",
+      "task_subject": "feat(regression): add the KOS-SENSE-010 regression suite and gate runner",
+      "mode": "MILESTONE",
+      "evidence": {
+        "commit": "a072cee8c52bc9e5f3d6d1774bb919d572108074",
+        "ci_run": 43139244187,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sense/actions/runs/43139244187",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "README.md",
+        "planning/CHANGELOG.md",
+        "tests/regression/README.md",
+        "tests/regression/REGRESSION_INVENTORY.md",
+        "tests/regression/golden/command_lines.json",
+        "tests/regression/regression_support.py",
+        "tests/security/test_build_dependencies.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
+        "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
+      ]
     }
   ],
   "unmapped": []
