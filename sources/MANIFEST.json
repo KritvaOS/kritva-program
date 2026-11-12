@@ -2,7 +2,7 @@
   "_note": "Written by tools/refresh_sources.py. Records which revision each committed source copy was fetched from. STATUS_ONLY means the commits between the report's inspected commit and the fetched head touch only the status path; STATUS_TOOLING also touches the repo's own status generator and its test; OTHER_FILES means review the listed files. It is a freshness aid, not acceptance.",
   "sources": {
     "CI_DEV_INFRA": {
-      "ahead_by": 26,
+      "ahead_by": 28,
       "changed_files": [
         "sources/CI_DEV_INFRA.json",
         "sources/MANIFEST.json",
@@ -34,10 +34,10 @@
         "v2/tracking/run_verification.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-10T13:32:05Z",
-      "fetched_head": "90c25ca74d54794bff9fde34a373f5a49783f36a",
+      "fetched_at": "2026-11-12T02:44:55Z",
+      "fetched_head": "f03c164a203e6f6af2864df7e41175beb9a586f8",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-10T13:32:05Z",
+      "last_attempt_at": "2026-11-12T02:44:55Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-program",
@@ -65,10 +65,10 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-10T13:32:05Z",
+      "fetched_at": "2026-11-12T02:44:55Z",
       "fetched_head": "3021c5b9c72e030e7721e191e1772fc3b25ea8ff",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-10T13:32:05Z",
+      "last_attempt_at": "2026-11-12T02:44:55Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritvaos-community",
@@ -94,10 +94,10 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-10T13:32:05Z",
+      "fetched_at": "2026-11-12T02:44:55Z",
       "fetched_head": "3850bccca36a00df6290ad600617b04ca4c28164",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-10T13:32:05Z",
+      "last_attempt_at": "2026-11-12T02:44:55Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-core",
@@ -108,19 +108,21 @@
       "tasks": 10
     },
     "MIND": {
-      "ahead_by": 2,
+      "ahead_by": 4,
       "changed_files": [
         "planning/CHANGELOG.md",
         "planning/MILESTONE_STATUS.md",
         "planning/TASKS.md",
+        "status/STATUS.md",
+        "status/program_snapshot.json",
         "status/status.json",
         "tasks/KOS-MIND-001/TASK.md"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-10T13:32:05Z",
-      "fetched_head": "e0b53c0024b1336db5e1f6e1dea6c3424c927985",
+      "fetched_at": "2026-11-12T02:44:55Z",
+      "fetched_head": "7f3d339ca1dfb49f3b6090ef20c78f9fd49b6083",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-10T13:32:05Z",
+      "last_attempt_at": "2026-11-12T02:44:55Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-mind",
@@ -153,10 +155,10 @@
         "tests/status_gen/test_gen_status.py"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-10T13:32:05Z",
+      "fetched_at": "2026-11-12T02:44:55Z",
       "fetched_head": "7544c0618a7e42ee717da0b05a40c3cafaa12e93",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-10T13:32:05Z",
+      "last_attempt_at": "2026-11-12T02:44:55Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-motion",
@@ -167,7 +169,7 @@
       "tasks": 4
     },
     "SENSE": {
-      "ahead_by": 114,
+      "ahead_by": 116,
       "changed_files": [
         ".github/kritva-gate.json",
         ".github/workflows/commit-message-check.yml",
@@ -201,6 +203,7 @@
         "scripts/progress_report.py",
         "scripts/regenerate_regression_golden.py",
         "scripts/regression_gate.py",
+        "scripts/test_all.py",
         "src/kritva_sense/CONFORMANCE.md",
         "src/kritva_sense/GENERATOR.md",
         "src/kritva_sense/__main__.py",
@@ -217,19 +220,18 @@
         "tasks/KOS-SENSE-002/TASK.md",
         "tasks/KOS-SENSE-003/ACCEPTANCE_CRITERIA.md",
         "tasks/KOS-SENSE-003/TASK.md",
-        "tasks/KOS-SENSE-004/ACCEPTANCE_CRITERIA.md",
-        "tasks/KOS-SENSE-004/TASK.md"
+        "tasks/KOS-SENSE-004/ACCEPTANCE_CRITERIA.md"
       ],
       "changed_files_truncated": true,
-      "fetched_at": "2026-11-10T13:32:05Z",
-      "fetched_head": "0b8123aa1a6315d790ab477910cbdc37a8fdbede",
+      "fetched_at": "2026-11-12T02:44:55Z",
+      "fetched_head": "35e6a9e4e97343faef982a10ad1db4c637c375d7",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-10T13:32:05Z",
+      "last_attempt_at": "2026-11-12T02:44:55Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-sense",
       "report_source_commit": "07c48d5398bea19e58f7bd4c7a5af55041b28df5",
-      "report_updated_at": "2026-11-07T17:30:00Z",
+      "report_updated_at": "2026-11-12T06:00:00Z",
       "state": "FETCHED",
       "status_only": false,
       "tasks": 11
@@ -251,10 +253,10 @@
         "status/status.schema.json.sha256"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-10T13:32:05Z",
+      "fetched_at": "2026-11-12T02:44:55Z",
       "fetched_head": "e97938e059627c5ded4ea24a3535aba7c59fa284",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-10T13:32:05Z",
+      "last_attempt_at": "2026-11-12T02:44:55Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-skill",
