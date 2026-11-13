@@ -334,7 +334,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-12T02:46:14Z",
+  "generated_at": "2026-11-13T17:29:34Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
@@ -552,7 +552,7 @@
       "credited": 4,
       "milestone": "V2-M2-SENSE-001",
       "program_milestone": "V2-M2",
-      "status": "PROPOSED",
+      "status": "CLOSED",
       "tasks": 4,
       "weight": 19,
       "workstream": "SENSE"
@@ -1828,12 +1828,13 @@
     "rows": [
       {
         "age_hours": 0,
-        "ahead_by": 28,
+        "ahead_by": 30,
         "changed_files": [
           "sources/CI_DEV_INFRA.json",
           "sources/MANIFEST.json",
           "sources/MIND.json",
           "sources/MOTION.json",
+          "sources/SENSE.json",
           "status/README.md",
           "status/status.json",
           "tests/test_baseline_reapproval.py",
@@ -1860,8 +1861,8 @@
           "v2/tracking/run_verification.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-12T02:44:55Z",
-        "fetched_head": "f03c164a203e6f6af2864df7e41175beb9a586f8",
+        "fetched_at": "2026-11-13T17:29:04Z",
+        "fetched_head": "e1e6da67c452689bd3afe25dc5bb405abc8f9f09",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -1889,7 +1890,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-12T02:44:55Z",
+        "fetched_at": "2026-11-13T17:29:04Z",
         "fetched_head": "3021c5b9c72e030e7721e191e1772fc3b25ea8ff",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1916,7 +1917,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-12T02:44:55Z",
+        "fetched_at": "2026-11-13T17:29:04Z",
         "fetched_head": "3850bccca36a00df6290ad600617b04ca4c28164",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1939,7 +1940,7 @@
           "tasks/KOS-MIND-001/TASK.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-12T02:44:55Z",
+        "fetched_at": "2026-11-13T17:29:04Z",
         "fetched_head": "7f3d339ca1dfb49f3b6090ef20c78f9fd49b6083",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1973,7 +1974,7 @@
           "tests/status_gen/test_gen_status.py"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-12T02:44:55Z",
+        "fetched_at": "2026-11-13T17:29:04Z",
         "fetched_head": "7544c0618a7e42ee717da0b05a40c3cafaa12e93",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -1985,7 +1986,7 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 116,
+        "ahead_by": 119,
         "changed_files": [
           ".github/kritva-gate.json",
           ".github/workflows/commit-message-check.yml",
@@ -2039,8 +2040,8 @@
           "tasks/KOS-SENSE-004/ACCEPTANCE_CRITERIA.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-12T02:44:55Z",
-        "fetched_head": "35e6a9e4e97343faef982a10ad1db4c637c375d7",
+        "fetched_at": "2026-11-13T17:29:04Z",
+        "fetched_head": "69428a4f6a40945c188f2a46aa5a6f3e4fa74212",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -2067,7 +2068,7 @@
           "status/status.schema.json.sha256"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-12T02:44:55Z",
+        "fetched_at": "2026-11-13T17:29:04Z",
         "fetched_head": "e97938e059627c5ded4ea24a3535aba7c59fa284",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",

@@ -287,7 +287,7 @@
       "milestone_id": "V2-M2",
       "repo_code": "SENSE",
       "outcome": "Contract validation and synthetic-data tests pass; unit, integration and regression gates implemented.",
-      "status": "PROPOSED",
+      "status": "CLOSED",
       "tasks": []
     },
     {
