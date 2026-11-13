@@ -334,7 +334,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-13T17:29:34Z",
+  "generated_at": "2026-11-13T17:51:38Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 54,
@@ -588,7 +588,7 @@
       "credited": 2,
       "milestone": "V2-M8-SENSE-001",
       "program_milestone": "V2-M8",
-      "status": "PROPOSED",
+      "status": "CLOSED",
       "tasks": 2,
       "weight": 11,
       "workstream": "SENSE"
