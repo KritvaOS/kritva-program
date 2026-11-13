@@ -87,7 +87,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 - V2-M2-SENSE-001 (2027-01-15, CLOSED): Contract validation and synthetic-data tests pass; unit, integration and regression gates implemented.
 - V2-M5-SENSE-001 (2027-06-15, PROPOSED): Sense frames validated in simulated execution.
 - V2-M7-SENSE-001 (2027-08-15, PROPOSED): Telemetry stream contract validated end to end (software scope).
-- V2-M8-SENSE-001 (2027-09-13, PROPOSED): Release and security review complete.
+- V2-M8-SENSE-001 (2027-09-13, CLOSED): Release and security review complete.
 
 ### kritva-mind
 

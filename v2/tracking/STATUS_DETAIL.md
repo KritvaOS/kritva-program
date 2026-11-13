@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-13T17:29:34Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-13T17:51:38Z (freshness of sources is judged at this time)
 - Baseline version: 13 (APPROVED)
 - Accepted engineering progress: 100.0% (208/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 54/54 tasks (repo-reported; not acceptance)
@@ -29,7 +29,7 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-13T17:29:34Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-13T17:51:38Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
@@ -144,7 +144,7 @@ Rows: PRE_V2 5, V2_REPO 39.
 | V2-M2-SENSE-001 | V2_REPO | V2-M2 | SENSE | CLOSED | 4 | 4 | 19 | 19 | none |
 | V2-M5-SENSE-001 | V2_REPO | V2-M5 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M7-SENSE-001 | V2_REPO | V2-M7 | SENSE | PROPOSED | 2 | 2 | 9 | 9 | none |
-| V2-M8-SENSE-001 | V2_REPO | V2-M8 | SENSE | PROPOSED | 2 | 2 | 11 | 11 | none |
+| V2-M8-SENSE-001 | V2_REPO | V2-M8 | SENSE | CLOSED | 2 | 2 | 11 | 11 | none |
 | V2-M0-COMMUNITY-001 | V2_REPO | V2-M0 | COMMUNITY | PROPOSED | 0 | 0 | - | - | v2/milestones/V2-M0/COMPLETION_RECORD.md |
 | V2-M1-COMMUNITY-001 | V2_REPO | V2-M1 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
 | V2-M1-SKILL-001 | V2_REPO | V2-M1 | SKILL | PROPOSED | 0 | 0 | - | - | none |

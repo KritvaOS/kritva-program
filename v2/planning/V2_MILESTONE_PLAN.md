@@ -171,7 +171,7 @@ Exit conditions:
 | V2-M8-PROGRAM-001 | kritva-program | PROPOSED | Production-readiness review, residual risks and visibility decisions recorded. |
 | V2-M8-CORE-001 | kritva-core | PROPOSED | Release, security disposition and recovery documentation reviewed. |
 | V2-M8-COMMUNITY-001 | kritvaos-community | PROPOSED | Release, security disposition and licence review complete. |
-| V2-M8-SENSE-001 | kritva-sense | PROPOSED | Release and security review complete. |
+| V2-M8-SENSE-001 | kritva-sense | CLOSED | Release and security review complete. |
 | V2-M8-MOTION-001 | kritva-motion | PROPOSED | Release and security review complete. |
 | V2-M8-MIND-001 | kritva-mind | PROPOSED | Release and security review complete. |
 | V2-M8-SKILL-001 | kritva-skill | PROPOSED | Release and security review complete. |
