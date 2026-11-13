@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-12T02:46:14Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-13T17:29:34Z (freshness of sources is judged at this time)
 - Baseline version: 13 (APPROVED)
 - Accepted engineering progress: 100.0% (208/208 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 54/54 tasks (repo-reported; not acceptance)
@@ -29,17 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-12T02:46:14Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-13T17:29:34Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | FRESH | 2026-11-12T02:44:55Z (0h ago) | f03c164 | 0b0f180 | 28 commit(s) | OTHER FILES (review): sources/CI_DEV_INFRA.json, sources/MANIFEST.json, sources/MIND.json, sources/MOTION.json, status/README.md |
-| COMMUNITY | FRESH | 2026-11-12T02:44:55Z (0h ago) | 3021c5b | 37c59c1 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
-| CORE | FRESH | 2026-11-12T02:44:55Z (0h ago) | 3850bcc | 0b30a99 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
-| MIND | FRESH | 2026-11-12T02:44:55Z (0h ago) | 7f3d339 | d593493 | 4 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, status/STATUS.md, status/program_snapshot.json |
-| MOTION | FRESH | 2026-11-12T02:44:55Z (0h ago) | 7544c06 | 1acb437 | 8 commit(s) | OTHER FILES (review): .github/kritva-gate.json, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md, README.md |
-| SENSE | FRESH | 2026-11-12T02:44:55Z (0h ago) | 35e6a9e | 07c48d5 | 116 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
-| SKILL | FRESH | 2026-11-12T02:44:55Z (0h ago) | e97938e | 557f19b | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
+| CI_DEV_INFRA | FRESH | 2026-11-13T17:29:04Z (0h ago) | e1e6da6 | 0b0f180 | 30 commit(s) | OTHER FILES (review): sources/CI_DEV_INFRA.json, sources/MANIFEST.json, sources/MIND.json, sources/MOTION.json, sources/SENSE.json |
+| COMMUNITY | FRESH | 2026-11-13T17:29:04Z (0h ago) | 3021c5b | 37c59c1 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
+| CORE | FRESH | 2026-11-13T17:29:04Z (0h ago) | 3850bcc | 0b30a99 | 6 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
+| MIND | FRESH | 2026-11-13T17:29:04Z (0h ago) | 7f3d339 | d593493 | 4 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, status/STATUS.md, status/program_snapshot.json |
+| MOTION | FRESH | 2026-11-13T17:29:04Z (0h ago) | 7544c06 | 1acb437 | 8 commit(s) | OTHER FILES (review): .github/kritva-gate.json, AGENTS.md, COMPLETION_RECORD.md, CONTRIBUTING.md, README.md |
+| SENSE | FRESH | 2026-11-13T17:29:04Z (0h ago) | 69428a4 | 07c48d5 | 119 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
+| SKILL | FRESH | 2026-11-13T17:29:04Z (0h ago) | e97938e | 557f19b | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
 
 ## Workstreams
 
@@ -141,7 +141,7 @@ Rows: PRE_V2 5, V2_REPO 39.
 | V2-M1-SENSE-001 | V2_REPO | V2-M1 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M2-MOTION-001 | V2_REPO | V2-M2 | MOTION | CLOSED | 1 | 1 | 5 | 5 | none |
 | V2-M2-MOTION-002 | V2_REPO | V2-M2 | MOTION | CLOSED | 1 | 1 | 8 | 8 | none |
-| V2-M2-SENSE-001 | V2_REPO | V2-M2 | SENSE | PROPOSED | 4 | 4 | 19 | 19 | none |
+| V2-M2-SENSE-001 | V2_REPO | V2-M2 | SENSE | CLOSED | 4 | 4 | 19 | 19 | none |
 | V2-M5-SENSE-001 | V2_REPO | V2-M5 | SENSE | PROPOSED | 1 | 1 | 5 | 5 | none |
 | V2-M7-SENSE-001 | V2_REPO | V2-M7 | SENSE | PROPOSED | 2 | 2 | 9 | 9 | none |
 | V2-M8-SENSE-001 | V2_REPO | V2-M8 | SENSE | PROPOSED | 2 | 2 | 11 | 11 | none |
