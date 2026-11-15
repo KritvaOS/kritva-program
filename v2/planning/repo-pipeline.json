@@ -52,7 +52,9 @@
     "pr-acceptance-gate",
     "unit-tests",
     "readme-check",
-    "progress-check"
+    "progress-check",
+    "integration-tests",
+    "regression-tests"
   ],
   "known_local_gates": [
     "make check",
@@ -307,7 +309,9 @@
         "pr-acceptance-gate",
         "unit-tests",
         "readme-check",
-        "progress-check"
+        "progress-check",
+        "integration-tests",
+        "regression-tests"
       ],
       "local_gates": [
         "make check",
