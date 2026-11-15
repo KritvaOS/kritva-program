@@ -78,7 +78,7 @@ regen: ## Regenerate the status JSON, STATUS_VIEW.md and STATUS_DETAIL.md from t
 verify: ## Check that the committed status files match their inputs (reads only)
 	@python3 tools/consolidate_status.py --sources-dir sources --check
 
-# README structure, metadata and local links (v2/planning/standards/README_STANDARD.md).
+# README structure, metadata and local links (README standard: KritvaOS/kritva-standard common/readme/README_STANDARD.md).
 readme_check: ## Check README.md against the README standard (D-055); README=path for another file
 	@python3 scripts/docs/check_readme.py $(or $(README),README.md)
 

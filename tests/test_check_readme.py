@@ -71,22 +71,6 @@ class Repository(unittest.TestCase):
         self.assertEqual(run(str(ROOT / "README.md")).returncode, 0)
         self.assertEqual(run(str(ROOT / "nope.md")).returncode, 1)
 
-    def test_standard_files_exist_and_link_each_other(self):
-        d = ROOT / "v2/planning/standards"
-        names = ["README_STANDARD.md", "README_TEMPLATE_PUBLIC.md", "README_TEMPLATE_PRIVATE.md", "DOCUMENT_HEADER_STANDARD.md",
-                 "README_REVIEW_CHECKLIST.md", "README_MIGRATION_PLAN.md"]
-        for n in names:
-            self.assertTrue((d / n).is_file(), n)
-        std = (d / "README_STANDARD.md").read_text(encoding="utf-8")
-        for n in names[1:]:
-            self.assertIn(n, std)
-
-    def test_templates_carry_every_metadata_field(self):
-        for n in ("README_TEMPLATE_PUBLIC.md", "README_TEMPLATE_PRIVATE.md"):
-            t = (ROOT / "v2/planning/standards" / n).read_text(encoding="utf-8")
-            for f in C.FIELDS:
-                self.assertIn(f"| {f} |", t, f"{n}: {f}")
-
 
 if __name__ == "__main__":
     unittest.main()
