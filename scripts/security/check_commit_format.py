@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the V2 commit format (D-044, program commit standard): Conventional Commits header plus one Task footer.
+"""Check the V2 commit format (D-044, aligned with the raas rules in D-053): Conventional Commits header plus one Task footer.
 
   header   type(scope): summary [TASK-ID]
            type in feat fix docs refactor test build ci chore perf revert security; summary up to 90 chars;
