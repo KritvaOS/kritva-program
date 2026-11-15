@@ -19,7 +19,7 @@
 | Status Reporting | [v2/tracking/STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) (generated snapshot) and [schema/status.schema.json](schema/status.schema.json) |
 | License | [LICENSE](LICENSE) (Apache-2.0; D-074) |
 
-This README follows the [Kritva README standard](v2/planning/standards/README_STANDARD.md) (D-055). It is the entry point; the documents it links own the detail.
+This README follows the [Kritva README standard](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/README_STANDARD.md) (D-055). It is the entry point; the documents it links own the detail.
 
 ## 1. Purpose and Scope
 
@@ -103,7 +103,7 @@ Planning is not acceptance. Proposed milestones, newly drafted tasks, finished i
 | [Makefile](Makefile) | Program helpers: `pr_open`, `pr_watch`, `pr_land`, `sync`, `test`, `regen`, `verify`, `pr_check`, `ship`, `merge`, `readme_check` (`make help` lists them) | INPUT | yes, with tests |
 | [v2/](v2/) | Program documents: plan, scope, roadmap, gates, risks, decisions, reviews | MIXED: each document has its own label (section 7) | per document |
 | [v2/tracking/](v2/tracking/) | Baseline, approvals and gate closures (INPUT: the JSON files); the status view and `consolidated_status.json` (GENERATED) | MIXED: INPUT and GENERATED, per file | see section 17 |
-| [v2/planning/](v2/planning/) | Repository pipeline, milestones and decision records (INPUT: the JSON files); V2_MILESTONE_PLAN, V2_REPO_PLAN, PENDING_* (GENERATED); ACCEPTANCE_STANDARD (AUTHORITATIVE, PROPOSED) and the README standard (AUTHORITATIVE, APPROVED, D-066) | MIXED: INPUT, GENERATED and AUTHORITATIVE, per file | see section 17 |
+| [v2/planning/](v2/planning/) | Repository pipeline, milestones and decision records (INPUT: the JSON files); V2_MILESTONE_PLAN, V2_REPO_PLAN, PENDING_* (GENERATED); ACCEPTANCE_STANDARD (AUTHORITATIVE, PROPOSED) and a pointer to the README standard, which now lives in `KritvaOS/kritva-standard` (D-066) | MIXED: INPUT, GENERATED and AUTHORITATIVE, per file | see section 17 |
 | [sources/](sources/) | Copies of each repository's `status/status.json`, provenance in `MANIFEST.json` | SNAPSHOT | no: refresh |
 | [status/](status/) | This repository's own status report (workstream CI_DEV_INFRA) | INPUT | via its generator |
 | [schema/](schema/) | `status.schema.json`, the status report schema (version 2.0) | AUTHORITATIVE | owner decision |
@@ -233,14 +233,14 @@ Editing a generated view is not changing the baseline, and editing a snapshot is
 
 ## 18. Related Repositories
 
-See section 3 for the list and [DEPENDENCY_MAP](v2/DEPENDENCY_MAP.md) for the relationships. Each engineering repository's README links its own architecture, milestones, tasks and acceptance documents, and follows the same [README standard](v2/planning/standards/README_STANDARD.md). The rollout order is in [README_MIGRATION_PLAN.md](v2/planning/standards/README_MIGRATION_PLAN.md).
+See section 3 for the list and [DEPENDENCY_MAP](v2/DEPENDENCY_MAP.md) for the relationships. Each engineering repository's README links its own architecture, milestones, tasks and acceptance documents, and follows the same [README standard](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/README_STANDARD.md). The rollout order is in [README_MIGRATION_PLAN.md](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/README_MIGRATION_PLAN.md).
 
 ## 19. Document Index
 
 - Start here: [v2/README.md](v2/README.md) (dashboard and document index), [STATUS_VIEW.md](v2/tracking/STATUS_VIEW.md) (generated summary), [DECISIONS.md](v2/DECISIONS.md).
 - Plans: [PROGRAM_PLAN](v2/PROGRAM_PLAN.md), [ROADMAP](v2/ROADMAP.md), [V2_MILESTONE_PLAN](v2/planning/V2_MILESTONE_PLAN.md), [V2_REPO_PLAN](v2/planning/V2_REPO_PLAN.md).
 - Rules: [ACCEPTANCE_STANDARD](v2/planning/ACCEPTANCE_STANDARD.md), [AGENTS](AGENTS.md), [SECURITY](SECURITY.md).
-- README rollout standards (one package): [README_STANDARD](v2/planning/standards/README_STANDARD.md), [README_TEMPLATE_PUBLIC](v2/planning/standards/README_TEMPLATE_PUBLIC.md), [README_TEMPLATE_PRIVATE](v2/planning/standards/README_TEMPLATE_PRIVATE.md), [DOCUMENT_HEADER_STANDARD](v2/planning/standards/DOCUMENT_HEADER_STANDARD.md), [README_REVIEW_CHECKLIST](v2/planning/standards/README_REVIEW_CHECKLIST.md), [README_MIGRATION_PLAN](v2/planning/standards/README_MIGRATION_PLAN.md).
+- README rollout standards (one package, in `KritvaOS/kritva-standard` from 2026-11-15): [README_STANDARD](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/README_STANDARD.md), [README_TEMPLATE_PUBLIC](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/README_TEMPLATE_PUBLIC.md), [README_TEMPLATE_PRIVATE](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/README_TEMPLATE_PRIVATE.md), [DOCUMENT_HEADER_STANDARD](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/DOCUMENT_HEADER_STANDARD.md), [README_REVIEW_CHECKLIST](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/README_REVIEW_CHECKLIST.md), [README_MIGRATION_PLAN](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/README_MIGRATION_PLAN.md).
 - Other templates: [PR template](v2/planning/templates/PULL_REQUEST_TEMPLATE.md), [acceptance criteria](v2/planning/templates/ACCEPTANCE_CRITERIA.template.md), [completion record](v2/planning/templates/COMPLETION_RECORD.template.md).
 
 ## 20. License
