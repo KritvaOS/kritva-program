@@ -1111,6 +1111,36 @@
       ]
     },
     {
+      "task_id": "KOS-MOTION-004",
+      "workstream_id": "MOTION",
+      "task_commit": "6824bc853dd974f292ddba5e1c813d44b46d70de",
+      "task_subject": "Merge pull request #65 from KritvaOS/feat/kos-motion-004-pr06-regression-gate",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "6824bc853dd974f292ddba5e1c813d44b46d70de",
+        "ci_run": 43742271912,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-motion/actions/runs/43742271912",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "README.md",
+        "planning/CHANGELOG.md",
+        "planning/MILESTONE_STATUS.md",
+        "planning/TASKS.md",
+        "scripts/status/gen_status.py",
+        "status/status.json",
+        "tasks/KOS-MOTION-004/EVIDENCE.json",
+        "tasks/KOS-MOTION-004/REVIEW.md",
+        "tasks/KOS-MOTION-004/TASK.md",
+        "tests/status_gen/test_gen_status.py"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT"
+      ]
+    },
+    {
       "task_id": "KOS-MOTION-005",
       "workstream_id": "MOTION",
       "task_commit": "1d4f433fa83ef05db6c14e92bd23903a5bac7dfd",
