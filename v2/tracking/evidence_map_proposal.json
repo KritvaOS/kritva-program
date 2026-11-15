@@ -1111,6 +1111,28 @@
       ]
     },
     {
+      "task_id": "KOS-MOTION-005",
+      "workstream_id": "MOTION",
+      "task_commit": "1d4f433fa83ef05db6c14e92bd23903a5bac7dfd",
+      "task_subject": "Merge pull request #53 from KritvaOS/feat/kos-motion-005-pr06-replay-property",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "1d4f433fa83ef05db6c14e92bd23903a5bac7dfd",
+        "ci_run": 43695411353,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-motion/actions/runs/43695411353",
+        "workflow": "unit-tests"
+      },
+      "task_files_changed_after": [
+        "planning/CHANGELOG.md",
+        "tasks/KOS-MOTION-005/TASK.md"
+      ],
+      "review_flags": [
+        "TASK_FILES_CHANGED_AFTER_TASK_COMMIT"
+      ]
+    },
+    {
       "task_id": "KOS-SENSE-M0-001",
       "workstream_id": "SENSE",
       "task_commit": "ddf95185341656bea5f26b2f9196838321853852",
