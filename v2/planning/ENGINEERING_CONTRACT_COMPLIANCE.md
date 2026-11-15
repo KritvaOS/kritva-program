@@ -1,16 +1,16 @@
 # Engineering contract compliance report (KRP-ENG-001)
 
-Generated 2026-11-15T14:57:38Z by `tools/engineering_compliance.py` from the default branch of each repository on GitHub. It records facts only; it is not an acceptance decision. Acceptance is the owner's approval record in `v2/tracking/approvals.json`.
+Generated 2026-11-15T15:37:49Z by `tools/engineering_compliance.py` from the default branch of each repository on GitHub. It records facts only; it is not an acceptance decision. Acceptance is the owner's approval record in `v2/tracking/approvals.json`.
 
 | Repository | Default branch head | Agent file | commit-message-check | secret-scan | readme-check | pr-acceptance-gate | unit-tests | Required checks on the default branch |
 |---|---|---|---|---|---|---|---|---|
-| kritva-program | `a60d95d` | AGENTS.md | yes | yes | yes | yes | yes | commit-message-check, pr-acceptance-gate, secret-scan, status-validate, tag-policy-check, unit-tests |
-| kritva-core | `79c700a` | AGENTS.md | yes | yes | yes | no | no | commit-message-check, secret-scan, source-header-check, status-report-check |
+| kritva-program | `da8d6db` | AGENTS.md | yes | yes | yes | yes | yes | commit-message-check, pr-acceptance-gate, secret-scan, status-validate, tag-policy-check, unit-tests |
+| kritva-core | `59335f8` | AGENTS.md | yes | yes | yes | no | no | commit-message-check, secret-scan, source-header-check, status-report-check |
 | kritvaos-community | `c35ddb7` | AGENTS.md | yes | yes | yes | no | no | commit-message-check, secret-scan, source-header-check, status-report-check |
-| kritva-sense | `7472ca5` | AGENTS.md | yes | yes | yes | yes | yes | commit-message-check, pr-acceptance-gate, progress-check, readme-check, secret-scan, unit-tests |
-| kritva-mind | `7f3d339` | AGENTS.md | yes | yes | yes | yes | yes | commit-message-check, pr-acceptance-gate, readme-check, secret-scan, unit-tests |
-| kritva-motion | `43de819` | AGENTS.md | yes | yes | yes | yes | yes | commit-message-check, pr-acceptance-gate, progress-check, readme-check, secret-scan, unit-tests |
-| kritva-skill | `e97938e` | AGENTS.md | yes | yes | yes | yes | no | commit-message-check, pr-acceptance-gate, readme-check, secret-scan |
+| kritva-sense | `a1259e5` | AGENTS.md | yes | yes | yes | yes | yes | commit-message-check, pr-acceptance-gate, progress-check, readme-check, secret-scan, unit-tests |
+| kritva-mind | `29b8c4f` | AGENTS.md | yes | yes | yes | yes | yes | commit-message-check, pr-acceptance-gate, readme-check, secret-scan, unit-tests |
+| kritva-motion | `5d7f36f` | AGENTS.md | yes | yes | yes | yes | yes | commit-message-check, pr-acceptance-gate, progress-check, readme-check, secret-scan, unit-tests |
+| kritva-skill | `83d7a46` | AGENTS.md | yes | yes | yes | yes | no | commit-message-check, pr-acceptance-gate, readme-check, secret-scan |
 
 Core engineering contract pin file `docs/development/ENGINEERING_CONTRACT.pin.json`: present.
 
