@@ -307,6 +307,14 @@
       "tasks": []
     },
     {
+      "id": "V2-M2-MOTION-003",
+      "milestone_id": "V2-M2",
+      "repo_code": "MOTION",
+      "outcome": "Software-only Motion configuration activation, idempotent submission, command history, feedback status and event stream semantics conform to the Motion contract v0.1.0-draft through deterministic reference tests, with no persistent storage, transport, backend or physical behaviour.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
       "id": "V2-M2-MIND-001",
       "milestone_id": "V2-M2",
       "repo_code": "MIND",
