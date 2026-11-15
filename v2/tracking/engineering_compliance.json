@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-08T12:11:51Z",
+  "generated_at": "2026-11-15T11:49:08Z",
   "org": "KritvaOS",
   "repos": [
     {
       "repo": "kritva-program",
       "default_branch": "main",
-      "head": "5c435d7839fc5fd20ed56c2a181fbd6d5053feab",
+      "head": "a0461433cfc52ea4228db0f63ed7d4ae7b5dabf5",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -18,14 +18,29 @@
       },
       "required_checks": [
         "commit-message-check",
+        "pr-acceptance-gate",
         "secret-scan",
-        "status-validate"
-      ]
+        "status-validate",
+        "tag-policy-check",
+        "unit-tests"
+      ],
+      "checkers": {
+        "scripts/security/check_commit_format.py": {
+          "present": true,
+          "body_sha256": "965266c1c3dfe230869a16052bd8bceed829643f3999403109cb836641c0b2af",
+          "matches_base": true
+        },
+        "scripts/security/check_commit_messages.py": {
+          "present": true,
+          "body_sha256": "9bf12734ce245dbabad1eb2b21927fc5a9edabe7243bd365630b2270ad2e242e",
+          "matches_base": true
+        }
+      }
     },
     {
       "repo": "kritva-core",
       "default_branch": "main",
-      "head": "8ac173f8a331ed15e3180126d199482040b70964",
+      "head": "3850bccca36a00df6290ad600617b04ca4c28164",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -42,12 +57,24 @@
         "source-header-check",
         "status-report-check"
       ],
-      "contract_pin": true
+      "contract_pin": true,
+      "checkers": {
+        "scripts/security/check_commit_format.py": {
+          "present": true,
+          "body_sha256": "965266c1c3dfe230869a16052bd8bceed829643f3999403109cb836641c0b2af",
+          "matches_base": true
+        },
+        "scripts/security/check_commit_messages.py": {
+          "present": true,
+          "body_sha256": "40f43e52c9357e58966bd3a259b65f4b3d5c189de8545af96d23d8c559aee993",
+          "matches_base": false
+        }
+      }
     },
     {
       "repo": "kritvaos-community",
       "default_branch": "main",
-      "head": "87007e86250e31d582d82e9a829695ca457f058c",
+      "head": "3021c5b9c72e030e7721e191e1772fc3b25ea8ff",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -59,14 +86,28 @@
         "unit-tests": false
       },
       "required_checks": [
+        "commit-message-check",
+        "secret-scan",
         "source-header-check",
         "status-report-check"
-      ]
+      ],
+      "checkers": {
+        "scripts/security/check_commit_format.py": {
+          "present": true,
+          "body_sha256": "965266c1c3dfe230869a16052bd8bceed829643f3999403109cb836641c0b2af",
+          "matches_base": true
+        },
+        "scripts/security/check_commit_messages.py": {
+          "present": true,
+          "body_sha256": "40f43e52c9357e58966bd3a259b65f4b3d5c189de8545af96d23d8c559aee993",
+          "matches_base": false
+        }
+      }
     },
     {
       "repo": "kritva-sense",
       "default_branch": "main",
-      "head": "6a10cac3c87cfc2664ff6c1300ff1ea368b126db",
+      "head": "7472ca5ece1978a66f22fe8532bf340a05b87fa5",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -80,36 +121,28 @@
       "required_checks": [
         "commit-message-check",
         "pr-acceptance-gate",
+        "progress-check",
         "readme-check",
         "secret-scan",
         "unit-tests"
-      ]
+      ],
+      "checkers": {
+        "scripts/security/check_commit_format.py": {
+          "present": true,
+          "body_sha256": "965266c1c3dfe230869a16052bd8bceed829643f3999403109cb836641c0b2af",
+          "matches_base": true
+        },
+        "scripts/security/check_commit_messages.py": {
+          "present": true,
+          "body_sha256": "9bf12734ce245dbabad1eb2b21927fc5a9edabe7243bd365630b2270ad2e242e",
+          "matches_base": true
+        }
+      }
     },
     {
       "repo": "kritva-mind",
       "default_branch": "main",
-      "head": "beb9fa19265b548cbd2d62f3bd19864637319e69",
-      "agent_files": [
-        "AGENTS.md"
-      ],
-      "workflows": {
-        "commit-message-check": true,
-        "secret-scan": true,
-        "readme-check": true,
-        "pr-acceptance-gate": true,
-        "unit-tests": true
-      },
-      "required_checks": [
-        "commit-message-check",
-        "pr-acceptance-gate",
-        "readme-check",
-        "secret-scan"
-      ]
-    },
-    {
-      "repo": "kritva-motion",
-      "default_branch": "main",
-      "head": "5c52ae758b05318e4c472d846191671406522ce7",
+      "head": "7f3d339ca1dfb49f3b6090ef20c78f9fd49b6083",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -126,12 +159,59 @@
         "readme-check",
         "secret-scan",
         "unit-tests"
-      ]
+      ],
+      "checkers": {
+        "scripts/security/check_commit_format.py": {
+          "present": true,
+          "body_sha256": "965266c1c3dfe230869a16052bd8bceed829643f3999403109cb836641c0b2af",
+          "matches_base": true
+        },
+        "scripts/security/check_commit_messages.py": {
+          "present": true,
+          "body_sha256": "9bf12734ce245dbabad1eb2b21927fc5a9edabe7243bd365630b2270ad2e242e",
+          "matches_base": true
+        }
+      }
+    },
+    {
+      "repo": "kritva-motion",
+      "default_branch": "main",
+      "head": "43de819aa8e01af7c63d1c1483b3d85dc5a72b57",
+      "agent_files": [
+        "AGENTS.md"
+      ],
+      "workflows": {
+        "commit-message-check": true,
+        "secret-scan": true,
+        "readme-check": true,
+        "pr-acceptance-gate": true,
+        "unit-tests": true
+      },
+      "required_checks": [
+        "commit-message-check",
+        "pr-acceptance-gate",
+        "progress-check",
+        "readme-check",
+        "secret-scan",
+        "unit-tests"
+      ],
+      "checkers": {
+        "scripts/security/check_commit_format.py": {
+          "present": true,
+          "body_sha256": "965266c1c3dfe230869a16052bd8bceed829643f3999403109cb836641c0b2af",
+          "matches_base": true
+        },
+        "scripts/security/check_commit_messages.py": {
+          "present": true,
+          "body_sha256": "9bf12734ce245dbabad1eb2b21927fc5a9edabe7243bd365630b2270ad2e242e",
+          "matches_base": true
+        }
+      }
     },
     {
       "repo": "kritva-skill",
       "default_branch": "main",
-      "head": "5c04151f018b3a9e8b3fe4c5461b5379f20d3f1a",
+      "head": "e97938e059627c5ded4ea24a3535aba7c59fa284",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -147,7 +227,19 @@
         "pr-acceptance-gate",
         "readme-check",
         "secret-scan"
-      ]
+      ],
+      "checkers": {
+        "scripts/security/check_commit_format.py": {
+          "present": true,
+          "body_sha256": "965266c1c3dfe230869a16052bd8bceed829643f3999403109cb836641c0b2af",
+          "matches_base": true
+        },
+        "scripts/security/check_commit_messages.py": {
+          "present": true,
+          "body_sha256": "9bf12734ce245dbabad1eb2b21927fc5a9edabe7243bd365630b2270ad2e242e",
+          "matches_base": true
+        }
+      }
     }
   ]
 }
