@@ -117,5 +117,14 @@
     "canonical_commit": "5ca6201cb0c4062e27990e32bbf7ce6852be72aa",
     "reason": "Baseline v13 (D-125): KOS-MIND-001 added from the approved planning row (weight 5); 53 weights unchanged; no credit changes",
     "baseline_sha256": "9bdd9f990a2dafe96f0cdddca09204521214e83d11aed0d04df2759e8a16f00e"
+  },
+  {
+    "from_version": 13,
+    "to_version": 14,
+    "approver": "Dinesh",
+    "approved_at": "2026-11-15T06:32:49Z",
+    "canonical_commit": "0c6ea82be91d920a6efef1428487de1589742a0a",
+    "reason": "Baseline v14 (D-130): KOS-MOTION-005 added at weight 6 under the new repo milestone V2-M2-MOTION-003; 54 weights unchanged; no credit changes",
+    "baseline_sha256": "6cc8a85a2252df6b9ee63f2ee4b016ffa925651a1a6c166e124aa1436ed008e6"
   }
 ]

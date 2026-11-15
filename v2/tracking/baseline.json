@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 13,
+  "baseline_version": 14,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -65,6 +65,10 @@
     },
     {
       "id": "V2-M2-MOTION-002",
+      "workstream_id": "MOTION"
+    },
+    {
+      "id": "V2-M2-MOTION-003",
       "workstream_id": "MOTION"
     },
     {
@@ -538,6 +542,16 @@
       "weight_rationale": "Initial planning estimate (D-107, D-108), not a recorded engineering estimate: larger than KOS-MOTION-001 and KOS-MOTION-002 (5 each) because of six pull requests, a design checkpoint with an owner review stop, a lifecycle, termination and fault state machine for the 52 conformance IDs the manifest marks as needing it plus up to four classified in PR-01, and a generated transition matrix with a fixed-seed property test (AC-301..AC-307). Software only, deterministic, offline, no hardware, no backend, no stores. Depends on KOS-MOTION-002. Scale 1-8. To be revised as work proceeds."
     },
     {
+      "id": "KOS-MOTION-005",
+      "workstream_id": "MOTION",
+      "milestone_id": "V2-M2-MOTION-003",
+      "title": "Motion stores, configuration activation and event publisher",
+      "weight": 6,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-129, D-130), not a recorded engineering estimate: 6 chosen by the owner on 2026-11-15, equal to the Motion planning rows of the seven-repository register (6, range 5 to 7) and below KOS-MOTION-003 (8). Six pull requests with a design checkpoint and an owner review stop, 19 target conformance IDs that need a store, an activation step or a publisher (configuration activation, the idempotency store, command history with feedback status, event streams, and replay if the history allows it), and a fixed-seed property test (AC-501..AC-507). Software only, deterministic, offline, in memory, no persistence, transport, backend, authentication or hardware. Depends on KOS-MOTION-003. Scale 1-8. To be revised as work proceeds."
+    },
+    {
       "id": "KRP-M0-001",
       "workstream_id": "CI_DEV_INFRA",
       "milestone_id": "V2-M0-PROGRAM-001",
@@ -709,9 +723,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-11-10T13:03:38Z",
-    "canonical_commit": "5ca6201cb0c4062e27990e32bbf7ce6852be72aa",
-    "baseline_sha256": "9bdd9f990a2dafe96f0cdddca09204521214e83d11aed0d04df2759e8a16f00e",
-    "reason": "Baseline v13 (D-125): KOS-MIND-001 added from the approved planning row (weight 5); 53 weights unchanged; no credit changes"
+    "approved_at": "2026-11-15T06:32:49Z",
+    "canonical_commit": "0c6ea82be91d920a6efef1428487de1589742a0a",
+    "baseline_sha256": "6cc8a85a2252df6b9ee63f2ee4b016ffa925651a1a6c166e124aa1436ed008e6",
+    "reason": "Baseline v14 (D-130): KOS-MOTION-005 added at weight 6 under the new repo milestone V2-M2-MOTION-003; 54 weights unchanged; no credit changes"
   }
 }
