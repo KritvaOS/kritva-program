@@ -342,7 +342,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-15T08:54:55Z",
+  "generated_at": "2026-11-15T09:01:58Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 55,
@@ -560,7 +560,7 @@
       "credited": 1,
       "milestone": "V2-M2-MOTION-003",
       "program_milestone": "V2-M2",
-      "status": "PROPOSED",
+      "status": "CLOSED",
       "tasks": 1,
       "weight": 6,
       "workstream": "MOTION"
