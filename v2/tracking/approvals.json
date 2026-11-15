@@ -9612,6 +9612,21 @@
       ],
       "rationale": "Carried onto baseline v15 (D-135) with the same evidence commits and no new judgement (D-027, D-078)",
       "supersedes": "A549"
+    },
+    {
+      "approval_id": "A605",
+      "task_id": "KOS-MOTION-004",
+      "baseline_version": 15,
+      "source_repo": "KritvaOS/kritva-motion",
+      "source_commit": "6824bc853dd974f292ddba5e1c813d44b46d70de",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-15T17:54:48Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-motion/actions/runs/43742271912"
+      ],
+      "rationale": "Owner accepted KOS-MOTION-004 on 2026-11-15: acceptance criteria AC-401 to AC-407 judged met on commit 6824bc853dd974f292ddba5e1c813d44b46d70de; unit-tests run 43742271912 passed; 119 IN_SCOPE conformance IDs pass, 5 CT-AUTH IDs stay DEFERRED (D-136)"
     }
   ]
 }
