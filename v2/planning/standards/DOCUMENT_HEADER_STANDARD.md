@@ -1,5 +1,7 @@
 # Kritva Document Header Standard
 
+> **Pointer (2026-11-15):** the authoritative copy of this document is [`common/readme/DOCUMENT_HEADER_STANDARD.md`](https://github.com/KritvaOS/kritva-standard/blob/main/common/readme/DOCUMENT_HEADER_STANDARD.md) in `KritvaOS/kritva-standard` (its roadmap decisions D-4 and D-7). This copy is kept only until the old-copy cleanup and is not updated. The text below is unchanged.
+
 | Property | Value |
 |---|---|
 | Document ID | KOS-STD-DOCHDR |

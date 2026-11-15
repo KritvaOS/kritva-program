@@ -1,5 +1,7 @@
 # V2 Acceptance Standard (approved)
 
+> **Pointer (2026-11-15):** the authoritative copy of this document is [`common/acceptance/ACCEPTANCE_STANDARD.md`](https://github.com/KritvaOS/kritva-standard/blob/main/common/acceptance/ACCEPTANCE_STANDARD.md) in `KritvaOS/kritva-standard` (its roadmap decisions D-4 and D-7). This copy is kept only until the old-copy cleanup and is not updated. The text below is unchanged.
+
 **Owner of:** the common acceptance, test, commit, tag and merge rules for every Kritva repository in the V2 plan.
 **Status:** APPROVED. PD-005 (acceptance and test policy) and PD-006 (tag policy) by D-080, PD-007 (reviewer roles, interim) by D-047, PD-010 (merge method) by D-053. No coverage threshold is set. Repository CI checks below are enforced only where a repository has adopted them.
 **Relation to D-023:** the approved engineering contract (D-023) remains the controlling lifecycle, branch, commit and tag convention. Where this standard and the pinned contract text differ, the contract wins and this file is corrected. The contract text is `docs/development/ENGINEERING_CONTRACT.md` in kritva-core, pinned by `ENGINEERING_CONTRACT.pin.json` at commit 71a82e9b6e2ec3c6155270391adaa30e7751c1b9 (D-113).
