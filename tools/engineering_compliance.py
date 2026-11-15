@@ -5,7 +5,10 @@ Reads each repository's default branch from GitHub with `gh` and records facts o
   * the agent instructions file (AGENTS.md or CLAUDE.md) at the repository root;
   * which of the program's enforcement workflows exist under .github/workflows;
   * the required status checks of the active rulesets on the default branch (when readable);
-  * for kritva-core, the pinned contract file docs/development/ENGINEERING_CONTRACT.pin.json.
+  * for kritva-core, the pinned contract file docs/development/ENGINEERING_CONTRACT.pin.json;
+  * the commit checkers (scripts/security/check_commit_format.py and check_commit_messages.py): the SHA-256 of each file's
+    body (everything from the first docstring line on, so a local copy may differ in its header block) and whether it equals
+    the kritva-program copy, which is the base (drift control, kritva-standard roadmap D-14).
 It never changes a repository. It does not judge acceptance: the owner reads the table and approves in approvals.json.
 
   python3 tools/engineering_compliance.py --write     # writes the JSON and Markdown report (owner machine, needs gh)
@@ -15,6 +18,7 @@ Stdlib only. Exit 0 ok | 1 check failed | 2 gh or usage error.
 import argparse
 import base64
 import datetime as dt
+import hashlib
 import json
 import subprocess
 import sys
@@ -27,6 +31,8 @@ AGENT_FILES = ["AGENTS.md", "CLAUDE.md"]
 CORE_PIN = "docs/development/ENGINEERING_CONTRACT.pin.json"
 JSON_OUT = "v2/tracking/engineering_compliance.json"
 MD_OUT = "v2/planning/ENGINEERING_CONTRACT_COMPLIANCE.md"
+BASE_REPO = "kritva-program"
+CHECKERS = ["scripts/security/check_commit_format.py", "scripts/security/check_commit_messages.py"]
 
 
 def gh(*args):
@@ -50,8 +56,47 @@ def _exists(run, repo, path):
         raise
 
 
-def collect(run=gh, repos=REPOS, now=None):
-    """Return the report dict. `run(*gh_args)` returns stdout text; tests pass a fake."""
+def body_sha256(text):
+    """SHA-256 of a checker's body: the text from the first line that starts the module docstring, so the leading
+    header block (copyright, SPDX, component fields) is ignored. None when there is no docstring line."""
+    lines = text.splitlines(keepends=True)
+    for i, line in enumerate(lines):
+        if line.startswith('"""'):
+            return hashlib.sha256("".join(lines[i:]).encode("utf-8")).hexdigest()
+    return None
+
+
+def _file_text(run, repo, branch, path):
+    """Decoded file text from the default branch, or None when the file does not exist."""
+    try:
+        raw = run("api", f"repos/{ORG}/{repo}/contents/{path}?ref={branch}", "--jq", ".content")
+    except RuntimeError as e:
+        if "404" in str(e) or "Not Found" in str(e):
+            return None
+        raise
+    return base64.b64decode(raw).decode("utf-8")
+
+
+def collect_checkers(run, repo, branch):
+    out = {}
+    for path in CHECKERS:
+        text = _file_text(run, repo, branch, path)
+        out[path] = {"present": text is not None, "body_sha256": body_sha256(text) if text is not None else None}
+    return out
+
+
+def mark_drift(report):
+    """Add matches_base to every checker entry, comparing with the base repository's body hashes."""
+    base = next((r for r in report["repos"] if r["repo"] == BASE_REPO), None)
+    for r in report["repos"]:
+        for path, c in (r.get("checkers") or {}).items():
+            want = ((base or {}).get("checkers") or {}).get(path, {}).get("body_sha256")
+            c["matches_base"] = bool(c["present"] and want and c["body_sha256"] == want)
+
+
+def collect(run=gh, repos=REPOS, now=None, with_checkers=False):
+    """Return the report dict. `run(*gh_args)` returns stdout text; tests pass a fake.
+    with_checkers also records the commit checker body hashes and the comparison with the base."""
     out = {"generated_at": now or dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "org": ORG, "repos": []}
     for repo in repos:
         info = _json(run, "api", f"repos/{ORG}/{repo}", "--jq", "{default_branch: .default_branch, private: .private}")
@@ -75,7 +120,11 @@ def collect(run=gh, repos=REPOS, now=None):
                  "required_checks": sorted(set(required)) if readable else None}
         if repo == "kritva-core":
             entry["contract_pin"] = _exists(run, repo, CORE_PIN)
+        if with_checkers:
+            entry["checkers"] = collect_checkers(run, repo, branch)
         out["repos"].append(entry)
+    if with_checkers:
+        mark_drift(out)
     return out
 
 
@@ -112,6 +161,22 @@ def render(report):
         for w in ("commit-message-check", "secret-scan"):
             if not r["workflows"][w]:
                 gaps.append(f"{r['repo']} has no {w} workflow")
+    if any("checkers" in r for r in report["repos"]):
+        L += ["", "## Commit checker drift (body hash against the kritva-program copy)", "",
+              "| Repository | " + " | ".join(Path(c).name for c in CHECKERS) + " |", "|---|" + "---|" * len(CHECKERS)]
+        for r in report["repos"]:
+            cells = []
+            for c in CHECKERS:
+                e = (r.get("checkers") or {}).get(c)
+                cells.append("not recorded" if e is None else "missing" if not e["present"]
+                             else f"{e['body_sha256'][:12]} {'matches base' if e['matches_base'] else 'DIFFERS'}")
+            L.append(f"| {r['repo']} | " + " | ".join(cells) + " |")
+        for r in report["repos"]:
+            for c, e in (r.get("checkers") or {}).items():
+                if e["present"] and not e["matches_base"]:
+                    gaps.append(f"{r['repo']} {Path(c).name} differs from the kritva-program copy")
+                elif not e["present"] and r["repo"] in ("kritva-program", "kritva-core", "kritvaos-community"):
+                    gaps.append(f"{r['repo']} has no {Path(c).name}")
     L += ["", "## Differences to read before approving", ""]
     L += [f"- {g}." for g in gaps] or ["- None in the agent file, commit-message-check and secret-scan checks."]
     L += ["- `no` in the pr-acceptance-gate, unit-tests or readme-check columns is not itself a gap: the owner decisions D-061 and PD-018 require the PR gate in the four capability repositories (Sense, Mind, Motion, Skill) and the program, and the commit standard in Core and Community. Read the column against those decisions.",
@@ -128,7 +193,7 @@ def main(argv=None):
     root = Path(a.root)
     if a.write:
         try:
-            rep = collect()
+            rep = collect(with_checkers=True)
         except (RuntimeError, OSError) as e:
             print(f"ERROR: {e}", file=sys.stderr)
             return 2
