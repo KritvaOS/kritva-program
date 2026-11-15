@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-15T14:57:38Z",
+  "generated_at": "2026-11-15T15:37:49Z",
   "org": "KritvaOS",
   "repos": [
     {
       "repo": "kritva-program",
       "default_branch": "main",
-      "head": "a60d95d5ed0574eeac3d86a8afafd7995d87a02e",
+      "head": "da8d6db418bfb28cae3a9f3ce0d42f4fbb0fc304",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -40,7 +40,7 @@
     {
       "repo": "kritva-core",
       "default_branch": "main",
-      "head": "79c700a4e3db13a466958f4f119fcb7c2799e81e",
+      "head": "59335f89a7f8bac9119be1cd919fad071f1f214c",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -107,7 +107,7 @@
     {
       "repo": "kritva-sense",
       "default_branch": "main",
-      "head": "7472ca5ece1978a66f22fe8532bf340a05b87fa5",
+      "head": "a1259e5c5a87e148d7c89017fab1840bcaa47a47",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -142,7 +142,7 @@
     {
       "repo": "kritva-mind",
       "default_branch": "main",
-      "head": "7f3d339ca1dfb49f3b6090ef20c78f9fd49b6083",
+      "head": "29b8c4fd92e6a21d6c4716ae869f1e5dadd5244e",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -176,7 +176,7 @@
     {
       "repo": "kritva-motion",
       "default_branch": "main",
-      "head": "43de819aa8e01af7c63d1c1483b3d85dc5a72b57",
+      "head": "5d7f36f4e59bcda1ce53d1738292597325bda788",
       "agent_files": [
         "AGENTS.md"
       ],
@@ -211,7 +211,7 @@
     {
       "repo": "kritva-skill",
       "default_branch": "main",
-      "head": "e97938e059627c5ded4ea24a3535aba7c59fa284",
+      "head": "83d7a463d1ed003472e5e6b8f031a84d5935f0e1",
       "agent_files": [
         "AGENTS.md"
       ],
