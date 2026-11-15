@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Tests for tools/engineering_compliance.py (KRP-ENG-001): the report records facts and flags what is missing."""
-import json, sys, tempfile, unittest
+import base64, json, sys, tempfile, unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -79,6 +79,79 @@ class Check(unittest.TestCase):
     def test_wrong_repository_list_is_a_problem(self):
         rep = E.collect(fake(), repos=E.REPOS[:3])
         self.assertTrue(E.problems(rep))
+
+
+BODY = '"""Check the V2 commit format."""\nimport sys\n'
+
+
+def with_files(files, base_run=None):
+    """Extend fake() so contents/<checker path> returns base64 text from files[(repo, path)], or 404."""
+    inner = base_run or fake()
+
+    def run(*a):
+        s = " ".join(a)
+        if "/contents/scripts/security/" in s:
+            repo = next(r for r in E.REPOS if f"/{r}/" in s)
+            path = s.split("/contents/")[1].split("?")[0]
+            if (repo, path) not in files:
+                raise RuntimeError("gh: Not Found (HTTP 404)")
+            return base64.b64encode(files[(repo, path)].encode()).decode()
+        return inner(*a)
+    return run
+
+
+def all_files(**overrides):
+    f = {(r, c): BODY for r in E.REPOS for c in E.CHECKERS}
+    f.update(overrides)
+    return f
+
+
+class Drift(unittest.TestCase):
+    def test_body_hash_ignores_the_header_block(self):
+        header = "#!/usr/bin/env python3\n# Copyright (c) 2026 Somebody\n# SPDX-License-Identifier: X\n"
+        self.assertEqual(E.body_sha256(header + BODY), E.body_sha256("#!/usr/bin/env python3\n" + BODY))
+        self.assertNotEqual(E.body_sha256(BODY), E.body_sha256(BODY + "x = 1\n"))
+        self.assertIsNone(E.body_sha256("no docstring here\n"))
+
+    def test_default_collect_does_not_read_checkers(self):
+        rep = E.collect(fake(), now="2026-11-15T00:00:00Z")
+        self.assertNotIn("checkers", rep["repos"][0])
+        self.assertNotIn("Commit checker drift", E.render(rep))
+
+    def test_matching_copies_with_different_headers_are_not_drift(self):
+        f = all_files()
+        f[("kritva-core", E.CHECKERS[0])] = "# Copyright (c) 2026 KritvaOS\n" + BODY
+        rep = E.collect(with_files(f), with_checkers=True)
+        core = next(r for r in rep["repos"] if r["repo"] == "kritva-core")
+        self.assertTrue(core["checkers"][E.CHECKERS[0]]["matches_base"])
+        self.assertNotIn("differs from the kritva-program copy", E.render(rep))
+
+    def test_changed_body_is_flagged_as_drift(self):
+        f = all_files()
+        f[("kritva-mind", E.CHECKERS[1])] = BODY + "x = 1\n"
+        rep = E.collect(with_files(f), with_checkers=True)
+        md = E.render(rep)
+        self.assertIn("kritva-mind check_commit_messages.py differs from the kritva-program copy", md)
+        self.assertIn("DIFFERS", md)
+
+    def test_missing_file_is_reported_and_core_missing_is_a_gap(self):
+        f = all_files()
+        del f[("kritva-core", E.CHECKERS[0])]
+        del f[("kritva-sense", E.CHECKERS[0])]
+        md = E.render(E.collect(with_files(f), with_checkers=True))
+        self.assertIn("kritva-core has no check_commit_format.py", md)
+        self.assertNotIn("kritva-sense has no check_commit_format.py", md)
+        self.assertIn("missing", md)
+
+    def test_check_still_passes_on_files_without_checker_data(self):
+        rep = E.collect(fake(), now="2026-11-15T00:00:00Z")
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            for p in (E.JSON_OUT, E.MD_OUT):
+                (root / p).parent.mkdir(parents=True, exist_ok=True)
+            (root / E.JSON_OUT).write_text(json.dumps(rep))
+            (root / E.MD_OUT).write_text(E.render(rep))
+            self.assertEqual(E.main(["--root", d, "--check"]), 0)
 
 
 if __name__ == "__main__":
