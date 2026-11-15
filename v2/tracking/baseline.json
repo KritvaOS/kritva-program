@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 14,
+  "baseline_version": 15,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -69,6 +69,10 @@
     },
     {
       "id": "V2-M2-MOTION-003",
+      "workstream_id": "MOTION"
+    },
+    {
+      "id": "V2-M2-MOTION-004",
       "workstream_id": "MOTION"
     },
     {
@@ -542,6 +546,16 @@
       "weight_rationale": "Initial planning estimate (D-107, D-108), not a recorded engineering estimate: larger than KOS-MOTION-001 and KOS-MOTION-002 (5 each) because of six pull requests, a design checkpoint with an owner review stop, a lifecycle, termination and fault state machine for the 52 conformance IDs the manifest marks as needing it plus up to four classified in PR-01, and a generated transition matrix with a fixed-seed property test (AC-301..AC-307). Software only, deterministic, offline, no hardware, no backend, no stores. Depends on KOS-MOTION-002. Scale 1-8. To be revised as work proceeds."
     },
     {
+      "id": "KOS-MOTION-004",
+      "workstream_id": "MOTION",
+      "milestone_id": "V2-M2-MOTION-004",
+      "title": "Motion execution backend interface, simulator and integration and regression gates",
+      "weight": 7,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Initial planning estimate (D-134, D-135), not a recorded engineering estimate: 7 chosen by the owner on 2026-11-15, between KOS-MOTION-005 (6) and KOS-MOTION-003 (8) and within the Motion range of the seven-repository register (5 to 7 for planning rows, here at the top). Six pull requests with a design checkpoint and an owner review stop, 6 target conformance IDs (CT-BE-01, 02, 03, 04, 06 and 07) but three new packages (backend interface, scripted S1 simulator, runtime driver), two real gates (integration and regression, with golden traces) and three small engine hooks, plus a fixed-seed property test (AC-401..AC-407). Software only, deterministic, offline, in memory, no real actuator, transport, firmware, authentication or hardware. Depends on KOS-MOTION-003 and KOS-MOTION-005. Scale 1-8. To be revised as work proceeds."
+    },
+    {
       "id": "KOS-MOTION-005",
       "workstream_id": "MOTION",
       "milestone_id": "V2-M2-MOTION-003",
@@ -723,9 +737,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-11-15T06:32:49Z",
-    "canonical_commit": "0c6ea82be91d920a6efef1428487de1589742a0a",
-    "baseline_sha256": "6cc8a85a2252df6b9ee63f2ee4b016ffa925651a1a6c166e124aa1436ed008e6",
-    "reason": "Baseline v14 (D-130): KOS-MOTION-005 added at weight 6 under the new repo milestone V2-M2-MOTION-003; 54 weights unchanged; no credit changes"
+    "approved_at": "2026-11-15T09:22:52Z",
+    "canonical_commit": "57724e072387ffe0ca33aefa7b612f9222200edb",
+    "baseline_sha256": "520e4f6fd14a3d8162209228ecd14d7340d6d28745b909a45a3b79874f5f2b5f",
+    "reason": "Baseline v15 (D-135): KOS-MOTION-004 added at weight 7 under the new repo milestone V2-M2-MOTION-004; 55 weights unchanged; no credit changes"
   }
 }

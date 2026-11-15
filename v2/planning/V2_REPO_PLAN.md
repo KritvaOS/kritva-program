@@ -78,6 +78,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 - V2-M2-MOTION-001 (2027-01-15, CLOSED): Command and configuration validation, limit enforcement and admission-time and joint-state fault-path tests pass as a software-only reference validator, with the `make test-unit` gate and a conformance manifest. The integration and regression gates and the runtime lifecycle, termination and fault state machine are separate, later work.
 - V2-M2-MOTION-002 (2027-01-15, CLOSED): Software-only Motion lifecycle, termination, stop-preemption and fault state machine conforms to the Motion contract v0.1.0-draft through deterministic reference tests, with no backend, store or physical behaviour.
 - V2-M2-MOTION-003 (2027-01-15, CLOSED): Software-only Motion configuration activation, idempotent submission, command history, feedback status and event stream semantics conform to the Motion contract v0.1.0-draft through deterministic reference tests, with no persistent storage, transport, backend or physical behaviour.
+- V2-M2-MOTION-004 (2027-01-15, PROPOSED): Software-only Motion execution backend interface, scripted deterministic S1 simulator, runtime driver and integration and regression gates conform to the Motion contract v0.1.0-draft (section 17) through deterministic reference tests, with no real actuator, transport, firmware or physical behaviour.
 - V2-M5-MOTION-001 (2027-06-15, PROPOSED): Motion commands validated against a simulated actuator interface.
 - V2-M8-MOTION-001 (2027-09-13, PROPOSED): Release and security review complete.
 
