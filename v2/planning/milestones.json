@@ -315,6 +315,14 @@
       "tasks": []
     },
     {
+      "id": "V2-M2-MOTION-004",
+      "milestone_id": "V2-M2",
+      "repo_code": "MOTION",
+      "outcome": "Software-only Motion execution backend interface, scripted deterministic S1 simulator, runtime driver and integration and regression gates conform to the Motion contract v0.1.0-draft (section 17) through deterministic reference tests, with no real actuator, transport, firmware or physical behaviour.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
       "id": "V2-M2-MIND-001",
       "milestone_id": "V2-M2",
       "repo_code": "MIND",
