@@ -1,4 +1,5 @@
 <!-- KritvaOS README template, PRIVATE repositories.
+     POINTER (2026-11-15): authoritative copy is common/readme/README_TEMPLATE_PRIVATE.md in KritvaOS/kritva-standard (roadmap D-4, D-7); this copy is not updated.
      Use it for every repository whose approved Visibility Class is PRIVATE, whatever its GitHub setting is today
      (a temporary public setting does not change the template). The class of each repository is recorded in the
      visibility decision, not in this comment.
