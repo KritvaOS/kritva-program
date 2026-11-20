@@ -203,7 +203,7 @@ class TemplateHygiene(unittest.TestCase):
         for field in ("File", "Description", "Component", "Module", "Layer", "Requirements", "API", "Author", "Created"):
             self.assertRegex(text, rf"#\s*{field}\s*:\s*\S")
         self.assertIn("SPDX-License-Identifier: Apache-2.0", text)
-        self.assertIn("Copyright (c) 2026 KritvaOS", text)
+        self.assertIn("Copyright (c) 2026 Kritva Robotics Private Limited.", text)
         self.assertRegex(text, r"Created\s*:\s*\d\d-\d\d-\d{4}")
 
     def test_template_has_the_standard_source_header(self):
@@ -212,6 +212,8 @@ class TemplateHygiene(unittest.TestCase):
         for field in ("File", "Description", "Component", "Module", "Layer", "Requirements", "API", "Author", "Created"):
             self.assertRegex(text, rf"#\s*{field}\s*:")
         self.assertIn("SPDX-License-Identifier: Apache-2.0", text)
+        # The capability repositories require this holder line in their header check, so a template with another one fails there on every publish.
+        self.assertIn("Copyright (c) 2026 Kritva Robotics Private Limited.", text)
 
 
 if __name__ == "__main__":
