@@ -273,6 +273,104 @@
       "evidence_refs": [
         "https://github.com/KritvaOS/kritvaos-community/actions/runs/38158709895"
       ]
+    },
+    {
+      "closure_id": "C012",
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "disposition": "REOPENED",
+      "evidence_commit": null,
+      "closed_at": "2026-11-20T16:11:33Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "findings": "none (administrative re-opening to record a review at a later commit; no new safety finding)",
+      "limitations": "Claude did not perform or verify any safety review. Re-opened on the owner's instruction in chat on 2026-11-20 so that a closure at the reviewed commit can be appended; earlier records are unchanged.",
+      "rationale": "Dinesh instructed in chat on 2026-11-20 to record his approval of the KOS-I3 and KOS-I4 human safety reviews at a later Community commit; recorded by Claude on his instruction.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it."
+    },
+    {
+      "closure_id": "C013",
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "disposition": "REOPENED",
+      "evidence_commit": null,
+      "closed_at": "2026-11-20T16:11:33Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh",
+        "role": "owner",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "findings": "none (administrative re-opening to record a review at a later commit; no new safety finding)",
+      "limitations": "Claude did not perform or verify any safety review. Re-opened on the owner's instruction in chat on 2026-11-20 so that a closure at the reviewed commit can be appended; earlier records are unchanged.",
+      "rationale": "Dinesh instructed in chat on 2026-11-20 to record his approval of the KOS-I3 and KOS-I4 human safety reviews at a later Community commit; recorded by Claude on his instruction.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it."
+    },
+    {
+      "closure_id": "C014",
+      "gate_id": "GATE-KOS-I3-SAFETY",
+      "disposition": "CLOSED",
+      "evidence_commit": "b62cc2e3c275aa23546a4ca466b4cb52e061e700",
+      "closed_at": "2026-11-20T16:11:35Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh Annyya",
+        "role": "owner and reviewer",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I3"
+        ],
+        "task_ids": []
+      },
+      "findings": "None, as stated by the reviewer. No written review record was provided to Claude.",
+      "limitations": "Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-11-20. The reviewed commit is as stated by the owner and was not verified by Claude. Reviewer independence from the implementation is not stated. The review covers the software contract only: only mock devices and a simulated transport exist, and no physical actuator was involved. CI results are supporting evidence only.",
+      "rationale": "Dinesh Annyya stated in chat on 2026-11-20 that he approved the KOS-I3 and KOS-I4 human safety reviews at Community commit b62cc2e, with no findings; recorded by Claude on his instruction. The commit follows the Edge heartbeat timeout ceiling and driver safety contract change.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
+      "evidence_refs": [
+        "https://claude.ai/artifact/K1hoYyCPZAqiiUxDYuwquc"
+      ]
+    },
+    {
+      "closure_id": "C015",
+      "gate_id": "GATE-KOS-I4-SAFETY",
+      "disposition": "CLOSED",
+      "evidence_commit": "b62cc2e3c275aa23546a4ca466b4cb52e061e700",
+      "closed_at": "2026-11-20T16:11:35Z",
+      "closed_by": "Dinesh",
+      "reviewer": {
+        "name": "Dinesh Annyya",
+        "role": "owner and reviewer",
+        "independent_of_implementation": "not-stated"
+      },
+      "scope_reviewed": {
+        "milestone_ids": [
+          "KOS-I4"
+        ],
+        "task_ids": []
+      },
+      "findings": "None, as stated by the reviewer. No written review record was provided to Claude.",
+      "limitations": "Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-11-20. The reviewed commit is as stated by the owner and was not verified by Claude. Reviewer independence from the implementation is not stated. The review covers the software contract only: only mock devices and a simulated transport exist, and no physical actuator was involved. CI results are supporting evidence only.",
+      "rationale": "Dinesh Annyya stated in chat on 2026-11-20 that he approved the KOS-I3 and KOS-I4 human safety reviews at Community commit b62cc2e, with no findings; recorded by Claude on his instruction. The commit follows the Edge heartbeat timeout ceiling and driver safety contract change.",
+      "criteria_ref": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
+      "evidence_refs": [
+        "https://claude.ai/artifact/K1hoYyCPZAqiiUxDYuwquc"
+      ]
     }
   ],
   "_note": "Append-only gate-closure ledger. Never edit or delete records; the last record per gate wins. CLOSED records the owner's human safety review (D-016, D-019)."

@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-15T18:02:31Z from committed data. Baseline v15 (APPROVED). Validation: 0 error(s), 17 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-20T16:12:49Z from committed data. Baseline v15 (APPROVED). Validation: 0 error(s), 17 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -122,6 +122,6 @@ Community I3/I4 software implementation credit is included in Foundation (PRE_V2
 |---|---|
 | Validation errors | 0 |
 | Warnings | 17 (17 workstreams with no status source) |
-| Source freshness | FRESH 7 |
+| Source freshness | STALE 7 |
 
 Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).

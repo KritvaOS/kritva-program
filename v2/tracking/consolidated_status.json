@@ -266,20 +266,20 @@
         "PHASE_EXIT",
         "RELEASE"
       ],
-      "closed_at": "2026-10-17T07:45:00Z",
+      "closed_at": "2026-11-20T16:11:35Z",
       "closed_by": "Dinesh",
       "closure_criteria": "Owner's explicit human safety review of KOS-I3 recorded and approved; software acceptance never closes it.",
-      "closure_id": "C009",
-      "closure_limitations": "Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.",
-      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "closure_id": "C014",
+      "closure_limitations": "Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-11-20. The reviewed commit is as stated by the owner and was not verified by Claude. Reviewer independence from the implementation is not stated. The review covers the software contract only: only mock devices and a simulated transport exist, and no physical actuator was involved. CI results are supporting evidence only.",
+      "evidence_commit": "b62cc2e3c275aa23546a4ca466b4cb52e061e700",
       "frozen_status": "OPEN",
       "gate_id": "GATE-KOS-I3-SAFETY",
       "note": "OPEN per Community MILESTONE_STATUS.md. Scope is the whole milestone as a conservative default; the owner may narrow it to specific task_ids.",
       "owner": "Dinesh",
       "reviewer": {
-        "independent_of_implementation": "yes",
-        "name": "Not named to Claude",
-        "role": "Independent reviewer (per owner statement)"
+        "independent_of_implementation": "not-stated",
+        "name": "Dinesh Annyya",
+        "role": "owner and reviewer"
       },
       "scope": {
         "milestone_ids": [
@@ -297,20 +297,20 @@
         "PHASE_EXIT",
         "RELEASE"
       ],
-      "closed_at": "2026-10-17T07:45:00Z",
+      "closed_at": "2026-11-20T16:11:35Z",
       "closed_by": "Dinesh",
       "closure_criteria": "Owner's explicit human safety review of KOS-I4 (actuator write path) recorded and approved; software acceptance never closes it.",
-      "closure_id": "C010",
-      "closure_limitations": "Claude did not perform or verify the review. The reviewer is not named to Claude and independence from the implementation is the owner's statement of 2026-10-17, not verified here. CI results are supporting evidence only.",
-      "evidence_commit": "8256ba331f4e09472fa6afc09dadef5ddabdc032",
+      "closure_id": "C015",
+      "closure_limitations": "Claude did not perform or verify the review. Closure rests on the owner's statement in chat on 2026-11-20. The reviewed commit is as stated by the owner and was not verified by Claude. Reviewer independence from the implementation is not stated. The review covers the software contract only: only mock devices and a simulated transport exist, and no physical actuator was involved. CI results are supporting evidence only.",
+      "evidence_commit": "b62cc2e3c275aa23546a4ca466b4cb52e061e700",
       "frozen_status": "OPEN",
       "gate_id": "GATE-KOS-I4-SAFETY",
       "note": "OPEN per Community MILESTONE_STATUS.md. I4-004..008 are flagged safety-relevant; milestone-wide scope is a conservative default pending owner narrowing.",
       "owner": "Dinesh",
       "reviewer": {
-        "independent_of_implementation": "yes",
-        "name": "Not named to Claude",
-        "role": "Independent reviewer (per owner statement)"
+        "independent_of_implementation": "not-stated",
+        "name": "Dinesh Annyya",
+        "role": "owner and reviewer"
       },
       "scope": {
         "milestone_ids": [
@@ -351,7 +351,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-15T18:02:31Z",
+  "generated_at": "2026-11-20T16:12:49Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 56,
@@ -1868,7 +1868,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 0,
+        "age_hours": 118,
         "ahead_by": 62,
         "changed_files": [
           "AGENTS.md",
@@ -1925,7 +1925,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-15T17:54:15Z",
         "fetched_head": "a8be849b566bd045ef51a62aa27104a47037b6ee",
-        "freshness": "FRESH",
+        "freshness": "STALE",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-program",
@@ -1934,7 +1934,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 0,
+        "age_hours": 118,
         "ahead_by": 8,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1955,7 +1955,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-15T17:54:15Z",
         "fetched_head": "c35ddb7f80b83c996b392741cb9f13eda6adcd3d",
-        "freshness": "FRESH",
+        "freshness": "STALE",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritvaos-community",
@@ -1964,7 +1964,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 0,
+        "age_hours": 118,
         "ahead_by": 10,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1984,7 +1984,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-15T17:54:15Z",
         "fetched_head": "59335f89a7f8bac9119be1cd919fad071f1f214c",
-        "freshness": "FRESH",
+        "freshness": "STALE",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-core",
@@ -1993,7 +1993,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 0,
+        "age_hours": 118,
         "ahead_by": 6,
         "changed_files": [
           "README.md",
@@ -2009,7 +2009,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-15T17:54:15Z",
         "fetched_head": "29b8c4fd92e6a21d6c4716ae869f1e5dadd5244e",
-        "freshness": "FRESH",
+        "freshness": "STALE",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-mind",
@@ -2018,7 +2018,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 0,
+        "age_hours": 118,
         "ahead_by": 2,
         "changed_files": [
           "planning/CHANGELOG.md",
@@ -2029,7 +2029,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-15T17:54:15Z",
         "fetched_head": "cb0d2bd3059acce89aac35fd476d0d7a3b951da1",
-        "freshness": "FRESH",
+        "freshness": "STALE",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-motion",
@@ -2038,7 +2038,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 0,
+        "age_hours": 118,
         "ahead_by": 122,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2095,7 +2095,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-15T17:54:15Z",
         "fetched_head": "a1259e5c5a87e148d7c89017fab1840bcaa47a47",
-        "freshness": "FRESH",
+        "freshness": "STALE",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-sense",
@@ -2104,7 +2104,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 0,
+        "age_hours": 118,
         "ahead_by": 12,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2124,7 +2124,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-15T17:54:15Z",
         "fetched_head": "83d7a463d1ed003472e5e6b8f031a84d5935f0e1",
-        "freshness": "FRESH",
+        "freshness": "STALE",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-skill",
