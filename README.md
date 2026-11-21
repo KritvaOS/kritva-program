@@ -175,6 +175,8 @@ Change an input (baseline, approvals, gates, sources, planning inventory, v2/pla
 make help                                                            # list every command
 make regen                                                           # generate: regenerate JSON, STATUS_VIEW.md and STATUS_DETAIL.md (the same as the python3 tools/consolidate_status.py --sources-dir sources line)
 make verify                                                          # check: the committed status files match their inputs
+make preflight                                                       # check: run the CI checks locally and list every failure (git fetch origin first)
+make hooks-install                                                   # modify: make git push run make preflight in this clone (make preflight-hook-off turns it off)
 make pr_open TAR=~/Downloads/x.tar.gz BRANCH=chore/x MSG="chore(x): ..."   # handoff tarball to PR: branch, extract, test, commit, push, open (DRY=1 to preview)
 make pr_watch                                                        # wait for the PR's checks
 make pr_land                                                         # merge the current branch's PR (--admin) after the checks pass, back to an updated main

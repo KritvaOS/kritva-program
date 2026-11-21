@@ -94,6 +94,56 @@ ship: ## Open, check, merge and sync one PR per repo from a patch set. TAR= or P
 merge: ## Merge a PR you pushed yourself in another repo: gate, checks, --admin merge, sync. REPO=x PR=n [DRY=1]
 	@scripts/pipeline/merge-pr.sh $(if $(REPO),--repo "$(REPO)") $(if $(PR),--pr "$(PR)") $(if $(DRY),--dry) $(if $(NOADMIN),--no-admin)
 
+##@ Preflight
+# "make preflight" is the one command to run before pushing. It runs the checks CI runs on a pull request,
+# keeps going after a failure, prints a summary, fixes nothing and never fetches or installs anything.
+# Not mirrored: secret-scan (gitleaks), the PR gate's remote rules and the scheduled source refresh.
+# PREFLIGHT_BASE is the branch the commits are compared with; run "git fetch origin" first.
+.PHONY: preflight preflight-commits inventory-check example-status-check commit-tests hooks-install preflight-hook-on preflight-hook-off
+
+PREFLIGHT_BASE ?= origin/main
+PREFLIGHT_STEPS := test verify inventory-check example-status-check readme_check commit-tests preflight-commits
+
+preflight: ## Run the CI checks locally and report every failure (PREFLIGHT_BASE=origin/main)
+	@fail=""; \
+	for step in $(PREFLIGHT_STEPS); do \
+	  echo ""; echo "[preflight] >>> $$step"; \
+	  if $(MAKE) --no-print-directory $$step; then :; else fail="$$fail $$step"; fi; \
+	done; \
+	echo ""; \
+	if [ -n "$$fail" ]; then \
+	  echo "[preflight] FAILED:$$fail"; \
+	  echo "[preflight] Fix these, then run make preflight again. CI would reject this push."; \
+	  exit 1; \
+	fi; \
+	echo "[preflight] All preflight checks passed. CI also runs secret-scan."
+
+preflight-commits: ## Check the commit messages since PREFLIGHT_BASE (same as the commit-message-check workflow)
+	@git rev-parse --verify --quiet "$(PREFLIGHT_BASE)^{commit}" >/dev/null || { echo "[preflight-commits] $(PREFLIGHT_BASE) not found. Run: git fetch origin"; exit 2; }
+	@python3 scripts/security/check_commit_messages.py --range "$(PREFLIGHT_BASE)..HEAD"
+
+commit-tests: ## Run the commit-message checker tests (same as the commit-message-check workflow)
+	@python3 -m unittest discover -s tests/commit_message_check
+
+inventory-check: ## Check the planning inventory (same as the status workflow)
+	@python3 tools/check_planning_inventory.py .
+
+example-status-check: ## Consolidate examples/sources in a scratch copy (same as the status workflow; nothing is written here)
+	@tmp=$$(mktemp -d) && trap 'rm -rf "$$tmp"' EXIT && cp -r . "$$tmp/kp" && python3 tools/consolidate_status.py --root "$$tmp/kp" --sources-dir examples/sources --now 2026-10-12T00:00:00Z
+
+hooks-install: ## Enable the repository Git hooks (.githooks): make preflight runs before every git push
+	git config core.hooksPath .githooks
+	@echo "[hooks] core.hooksPath set to .githooks; pre-push runs make preflight."
+	@echo "[hooks] Turn it off with: make preflight-hook-off. Skip it once with: git push --no-verify"
+
+preflight-hook-on: ## Run "make preflight" before every git push (the default after hooks-install)
+	git config kritva.preflightOnPush true
+	@echo "[hooks] pre-push preflight is ON for this clone. It needs core.hooksPath (make hooks-install)."
+
+preflight-hook-off: ## Turn off the pre-push preflight in this clone (CI still runs every check)
+	git config kritva.preflightOnPush false
+	@echo "[hooks] pre-push preflight is OFF for this clone."
+
 ##@ Git
 git_sync: ## Switch to main, fast-forward from origin, prune, delete merged local branches
 	@git switch main
