@@ -67,7 +67,7 @@
       "record_id": "PD-003",
       "record_type": "DECISION",
       "title": "Decide where Sim, SDK, Studio and Control Plane live",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-10-18",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -80,14 +80,12 @@
         ],
         "repo_ids": []
       },
-      "required_action": "Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them.",
-      "blocking": true,
-      "blocks": [
-        "V2-M1"
-      ],
+      "required_action": "Resolved by D-144: SDK and Studio live in kritvaos-community; the Control Plane is a planned separate repository (kritva-control-plane, proposed name, not created); Sim placement stays open until COMMUNITY-004-01 defines the simulator artifact interface. No repository, pipeline entry, task move or baseline change is made.",
+      "blocking": false,
+      "blocks": [],
       "evidence_refs": [],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-144",
       "source": "ChatGPT advice 2026-10-18 (advisory)"
     },
     {

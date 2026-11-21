@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-20T16:12:49Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-21T12:18:32Z (freshness of sources is judged at this time)
 - Baseline version: 15 (APPROVED)
 - Accepted engineering progress: 100.0% (221/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 56/56 tasks (repo-reported; not acceptance)
@@ -29,17 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-20T16:12:49Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-21T12:18:32Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | STALE | 2026-11-15T17:54:15Z (118h ago) | a8be849 | 0b0f180 | 62 commit(s) | OTHER FILES (review): AGENTS.md, Makefile, README.md, scripts/docs/check_readme.py, scripts/security/check_commit_format.py |
-| COMMUNITY | STALE | 2026-11-15T17:54:15Z (118h ago) | c35ddb7 | 37c59c1 | 8 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
-| CORE | STALE | 2026-11-15T17:54:15Z (118h ago) | 59335f8 | 0b30a99 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
-| MIND | STALE | 2026-11-15T17:54:15Z (118h ago) | 29b8c4f | d593493 | 6 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, scripts/check_readme.py |
-| MOTION | STALE | 2026-11-15T17:54:15Z (118h ago) | cb0d2bd | d3289b8 | 2 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, scripts/status/gen_status.py, status/status.json, tests/status_gen/test_gen_status.py |
-| SENSE | STALE | 2026-11-15T17:54:15Z (118h ago) | a1259e5 | 07c48d5 | 122 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
-| SKILL | STALE | 2026-11-15T17:54:15Z (118h ago) | 83d7a46 | 557f19b | 12 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
+| CI_DEV_INFRA | STALE | 2026-11-15T17:54:15Z (138h ago) | a8be849 | 0b0f180 | 62 commit(s) | OTHER FILES (review): AGENTS.md, Makefile, README.md, scripts/docs/check_readme.py, scripts/security/check_commit_format.py |
+| COMMUNITY | STALE | 2026-11-15T17:54:15Z (138h ago) | c35ddb7 | 37c59c1 | 8 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
+| CORE | STALE | 2026-11-15T17:54:15Z (138h ago) | 59335f8 | 0b30a99 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
+| MIND | STALE | 2026-11-15T17:54:15Z (138h ago) | 29b8c4f | d593493 | 6 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, scripts/check_readme.py |
+| MOTION | STALE | 2026-11-15T17:54:15Z (138h ago) | cb0d2bd | d3289b8 | 2 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, scripts/status/gen_status.py, status/status.json, tests/status_gen/test_gen_status.py |
+| SENSE | STALE | 2026-11-15T17:54:15Z (138h ago) | a1259e5 | 07c48d5 | 122 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
+| SKILL | STALE | 2026-11-15T17:54:15Z (138h ago) | 83d7a46 | 557f19b | 12 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
 
 ## Workstreams
 
@@ -338,15 +338,12 @@ Open items derived from the program records. Owners and due dates appear only wh
 | # | Item | Why it matters | Recorded owner | Record |
 |---|---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh | v2/planning/PENDING_DECISIONS.md |
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-15T17:56:09Z (recorded 2026-11-15T17:56:09Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-20T16:12:49Z (recorded 2026-11-21T12:18:32Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 214/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 221/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Credited tasks: added KOS-MOTION-004
-- Warnings: 18 -> 17
+- Pending decisions: 2 -> 1
 
 ## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
 
@@ -413,7 +410,7 @@ Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-0
 | V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | no |
 | V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | no |
 
-Pending: 2 decisions (2 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 1 decisions (1 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 

@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-20T16:12:49Z from committed data. Baseline v15 (APPROVED). Validation: 0 error(s), 17 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-21T12:18:32Z from committed data. Baseline v15 (APPROVED). Validation: 0 error(s), 17 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -91,12 +91,6 @@ M1 is the earliest milestone with open tasks: 15 of 32 weight accepted, 7 tasks 
 | Motion | KOS-MOTION-001 | Motion command and state contract | 5 | COMPLETE (credited) |
 | Skill | KOS-SKILL-001 | Skill foundational contract and capability integration | 5 | IN_PROGRESS |
 
-What stands between M1 and closure: the items below, then an approved completion record. Closing a milestone does not by itself award weighted credit; credit needs baselined tasks that are completed with approval and CI evidence.
-
-| ID | Item | Effect | Reviewer / owner |
-|---|---|---|---|
-| PD-003 | Decide where Sim, SDK, Studio and Control Plane live | blocks closing M1 | UNASSIGNED |
-
 Weights add up to 32. Every milestone's tasks are listed in [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 ## Needs owner attention
@@ -104,7 +98,6 @@ Weights add up to 32. Every milestone's tasks are listed in [STATUS_DETAIL.md](S
 | # | Item | Why it matters | Owner |
 |---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh |
-| 2 | PD-003: Decide where Sim, SDK, Studio and Control Plane live | Name which are separate repositories, which live inside another repository, and which are planned. Until then no pipeline entry exists for them. | Dinesh |
 
 All open items are shown.
 
