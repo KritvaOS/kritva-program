@@ -172,7 +172,7 @@ KOS-MOTION-003, milestone V2-M2-MOTION-002, baseline weight 8 (baseline v10, D-1
 
 ## 9. Caveats
 
-- Community I2 to I4 software credit (21/21 tasks, 71/71 weight) is not safety clearance. KOS-I3 and KOS-I4 human safety reviews stay OPEN, KOS-CI-001 is deferred, and physical actuator deployment is blocked.
+- Community I2 to I4 software credit (21/21 tasks, 71/71 weight) is not safety clearance. The KOS-I3 and KOS-I4 human safety reviews are closed (gate records C014 and C015, 2026-11-20) and KOS-CI-001 is closed (gate record C011), but those closures cover the software contract only, and physical actuator deployment remains blocked.
 - kritva-core/planning is authoritative for Core planning.
 - Per-repo status.json files lag their repositories; use task registers and the frozen baseline.
 - Dependencies (KRP-M0-002, owner-proposed from plan order): rows marked `PROPOSED: <ID>` depend on the previous row in the same repository and ID series (a -02 child depends on its -01); `PROPOSED: none` marks the first row of a repository. Rows with an earlier recorded dependency (KOS-MIND-003 children, KOS-MIND-007) are unchanged. The proposals are planning input, not baseline dependencies; they are confirmed or corrected when each task's criteria are made concrete.
