@@ -249,12 +249,10 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 214/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 221/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: added KOS-MOTION-004",
-      "Warnings: 18 -> 17"
+      "Pending decisions: 2 -> 1"
     ],
-    "recorded_at": "2026-11-15T17:56:09Z",
-    "since": "2026-11-15T17:56:09Z"
+    "recorded_at": "2026-11-21T12:18:32Z",
+    "since": "2026-11-20T16:12:49Z"
   },
   "errors": [],
   "evidence_health": [],
@@ -351,7 +349,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-20T16:12:49Z",
+  "generated_at": "2026-11-21T12:18:32Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 56,
@@ -1868,7 +1866,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 118,
+        "age_hours": 138,
         "ahead_by": 62,
         "changed_files": [
           "AGENTS.md",
@@ -1934,7 +1932,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 118,
+        "age_hours": 138,
         "ahead_by": 8,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1964,7 +1962,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 118,
+        "age_hours": 138,
         "ahead_by": 10,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1993,7 +1991,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 118,
+        "age_hours": 138,
         "ahead_by": 6,
         "changed_files": [
           "README.md",
@@ -2018,7 +2016,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 118,
+        "age_hours": 138,
         "ahead_by": 2,
         "changed_files": [
           "planning/CHANGELOG.md",
@@ -2038,7 +2036,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 118,
+        "age_hours": 138,
         "ahead_by": 122,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2104,7 +2102,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 118,
+        "age_hours": 138,
         "ahead_by": 12,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2203,7 +2201,7 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 2,
+    "pending_decisions": 1,
     "pending_reviews": 0,
     "progress": "221/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 100.0,
@@ -3837,7 +3835,7 @@
     }
   ],
   "v2_plan": {
-    "blocking_decisions": 2,
+    "blocking_decisions": 1,
     "horizon_end": "2027-09-13",
     "milestones": [
       {
@@ -3904,7 +3902,7 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 2,
+    "pending_decisions": 1,
     "pending_reviews": 0,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
