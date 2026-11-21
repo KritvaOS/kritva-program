@@ -20,6 +20,8 @@ These instructions apply to the `kritva-program` repository, the program's singl
 
 ## Validation before a pull request
 
+Run `git fetch origin` and `make preflight` before you push. It runs the unit tests, the status check (`make verify`), the planning-inventory check, the example-sources check in a scratch copy, the README check and the commit-message checks over your branch commits, keeps going after a failure and lists every failed step. `make hooks-install` (once per clone) makes `git push` run it; `make preflight-hook-off` turns that off in a clone and `git push --no-verify` skips it once. It does not run `secret-scan` or the PR gate's remote rules, and it does not replace CI. Do not claim a check passed unless you ran it. The commands it wraps are:
+
     python3 -m unittest discover -s tests
     python3 tools/consolidate_status.py --sources-dir sources --check
     python3 tools/check_planning_inventory.py . --verify-sources <sources-dir>   # when the inventory changes
