@@ -1,6 +1,6 @@
 {
   "_note": "Planning inventory (D-024). Registration is not credit: every group and task is PLANNING_ONLY and credit_eligible is false. Entries are NOT baseline tasks, carry no weight and cannot receive approvals. A task becomes creditable only by entering an approved baseline version and then following the normal chain (approval PASS + COMPLETE + evidence on the approved commit with a passing CI run). Identity = repository + workstream_id + canonical task_id; a legacy ID is an alias only (alias_kind rename or split). recorded_status is a snapshot read from the pinned source file, with its authority named; NOT_RECORDED means the source has no status. It is never an execution fact and never a program approval. The five actuator groups were registered under D-034 with their own ACT_* workstream ids (source_workstream_label equals workstream_id); rollup_targets records where their effort rolls up and must equal rolls_up_to in workstreams.json. Registration is identity only. A group whose program workstream is not yet approved would have workstream_id null, mapping_status PROPOSED and the source's own label in source_workstream_label. Checked by tools/check_planning_inventory.py.",
-  "inventory_version": 2,
+  "inventory_version": 3,
   "classification": "PLANNING_ONLY",
   "groups": [
     {
@@ -466,6 +466,81 @@
       ],
       "rollup_targets": [
         "MECHANICAL"
+      ]
+    },
+    {
+      "repository": "KritvaOS/kritva-connect",
+      "workstream_id": "CONNECT",
+      "mapping_status": "REGISTERED",
+      "classification": "PLANNING_ONLY",
+      "credit_eligible": false,
+      "source": {
+        "repo": "KritvaOS/kritva-connect",
+        "commit": "2753390ef8b70617bee20deba465667c09edd6e9",
+        "path": "planning/TASKS.md",
+        "sha256": "144b3bee7b76937cc5340b5d5dbd1c6c0a2d4b4b42da7002d8f12e5f1ceb026a"
+      },
+      "tasks": [
+        {
+          "task_id": "KOS-CONNECT-001",
+          "title": "Architecture, ownership and interface contracts",
+          "recorded_status": "IN_PROGRESS",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        },
+        {
+          "task_id": "KOS-CONNECT-002",
+          "title": "Provider abstraction, LiveKit adapter, mock provider, session lifecycle, and the CONNECT-ADR-03 benchmark",
+          "recorded_status": "NOT_STARTED",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        },
+        {
+          "task_id": "KOS-CONNECT-003",
+          "title": "Session grant and authorization integration",
+          "recorded_status": "NOT_STARTED",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        },
+        {
+          "task_id": "KOS-CONNECT-004",
+          "title": "Voice and audio",
+          "recorded_status": "NOT_STARTED",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        },
+        {
+          "task_id": "KOS-CONNECT-005",
+          "title": "Video and media",
+          "recorded_status": "NOT_STARTED",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        },
+        {
+          "task_id": "KOS-CONNECT-006",
+          "title": "Telemetry transport",
+          "recorded_status": "NOT_STARTED",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        },
+        {
+          "task_id": "KOS-CONNECT-007",
+          "title": "Robot and simulator gateway (simulation first)",
+          "recorded_status": "NOT_STARTED",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        },
+        {
+          "task_id": "KOS-CONNECT-008",
+          "title": "Mind, Skill and Motion integration",
+          "recorded_status": "NOT_STARTED",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        },
+        {
+          "task_id": "KOS-CONNECT-009",
+          "title": "RaaS live-session integration",
+          "recorded_status": "NOT_STARTED",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        },
+        {
+          "task_id": "KOS-CONNECT-010",
+          "title": "Security and production qualification",
+          "recorded_status": "NOT_STARTED",
+          "status_authority": "Connect owner (Dinesh); not a program approval"
+        }
       ]
     }
   ]
