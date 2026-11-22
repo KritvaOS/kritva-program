@@ -249,10 +249,10 @@
   },
   "changes": {
     "items": [
-      "Pending decisions: 2 -> 1"
+      "Warnings: 17 -> 18"
     ],
-    "recorded_at": "2026-11-21T12:18:32Z",
-    "since": "2026-11-20T16:12:49Z"
+    "recorded_at": "2026-11-22T11:56:32Z",
+    "since": "2026-11-21T12:18:32Z"
   },
   "errors": [],
   "evidence_health": [],
@@ -349,7 +349,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-21T12:18:32Z",
+  "generated_at": "2026-11-22T11:56:32Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 56,
@@ -1866,7 +1866,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 138,
+        "age_hours": 162,
         "ahead_by": 62,
         "changed_files": [
           "AGENTS.md",
@@ -1932,7 +1932,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 138,
+        "age_hours": 162,
         "ahead_by": 8,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1962,7 +1962,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 138,
+        "age_hours": 162,
         "ahead_by": 10,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1991,7 +1991,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 138,
+        "age_hours": 162,
         "ahead_by": 6,
         "changed_files": [
           "README.md",
@@ -2016,7 +2016,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 138,
+        "age_hours": 162,
         "ahead_by": 2,
         "changed_files": [
           "planning/CHANGELOG.md",
@@ -2036,7 +2036,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 138,
+        "age_hours": 162,
         "ahead_by": 122,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2102,7 +2102,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 138,
+        "age_hours": 162,
         "ahead_by": 12,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2206,7 +2206,7 @@
     "progress": "221/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 100.0,
     "readiness": {},
-    "warnings": 17
+    "warnings": 18
   },
   "tasks": [
     {
@@ -3915,6 +3915,7 @@
     "ACT_L: no status source (UNVERIFIED)",
     "ACT_M: no status source (UNVERIFIED)",
     "ACT_S: no status source (UNVERIFIED)",
+    "CONNECT: no status source (UNVERIFIED)",
     "CONTROL_PLANE: no status source (UNVERIFIED)",
     "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
@@ -3983,6 +3984,13 @@
       "repo": "KritvaOS/kritvaos-community",
       "source_state": "OK",
       "tasks_reported": 21
+    },
+    {
+      "commit": "-------",
+      "id": "CONNECT",
+      "repo": "KritvaOS/kritva-connect",
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
     },
     {
       "commit": "-------",

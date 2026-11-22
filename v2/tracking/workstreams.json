@@ -41,6 +41,11 @@
       "repo": "KritvaOS/kritva-mind"
     },
     {
+      "id": "CONNECT",
+      "name": "Connect",
+      "repo": "KritvaOS/kritva-connect"
+    },
+    {
       "id": "SIM",
       "name": "Sim",
       "repo": null

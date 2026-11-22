@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-21T12:18:32Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-22T11:56:32Z (freshness of sources is judged at this time)
 - Baseline version: 15 (APPROVED)
 - Accepted engineering progress: 100.0% (221/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 56/56 tasks (repo-reported; not acceptance)
@@ -29,17 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-21T12:18:32Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-22T11:56:32Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | STALE | 2026-11-15T17:54:15Z (138h ago) | a8be849 | 0b0f180 | 62 commit(s) | OTHER FILES (review): AGENTS.md, Makefile, README.md, scripts/docs/check_readme.py, scripts/security/check_commit_format.py |
-| COMMUNITY | STALE | 2026-11-15T17:54:15Z (138h ago) | c35ddb7 | 37c59c1 | 8 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
-| CORE | STALE | 2026-11-15T17:54:15Z (138h ago) | 59335f8 | 0b30a99 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
-| MIND | STALE | 2026-11-15T17:54:15Z (138h ago) | 29b8c4f | d593493 | 6 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, scripts/check_readme.py |
-| MOTION | STALE | 2026-11-15T17:54:15Z (138h ago) | cb0d2bd | d3289b8 | 2 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, scripts/status/gen_status.py, status/status.json, tests/status_gen/test_gen_status.py |
-| SENSE | STALE | 2026-11-15T17:54:15Z (138h ago) | a1259e5 | 07c48d5 | 122 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
-| SKILL | STALE | 2026-11-15T17:54:15Z (138h ago) | 83d7a46 | 557f19b | 12 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
+| CI_DEV_INFRA | STALE | 2026-11-15T17:54:15Z (162h ago) | a8be849 | 0b0f180 | 62 commit(s) | OTHER FILES (review): AGENTS.md, Makefile, README.md, scripts/docs/check_readme.py, scripts/security/check_commit_format.py |
+| COMMUNITY | STALE | 2026-11-15T17:54:15Z (162h ago) | c35ddb7 | 37c59c1 | 8 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
+| CORE | STALE | 2026-11-15T17:54:15Z (162h ago) | 59335f8 | 0b30a99 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
+| MIND | STALE | 2026-11-15T17:54:15Z (162h ago) | 29b8c4f | d593493 | 6 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, scripts/check_readme.py |
+| MOTION | STALE | 2026-11-15T17:54:15Z (162h ago) | cb0d2bd | d3289b8 | 2 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, scripts/status/gen_status.py, status/status.json, tests/status_gen/test_gen_status.py |
+| SENSE | STALE | 2026-11-15T17:54:15Z (162h ago) | a1259e5 | 07c48d5 | 122 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
+| SKILL | STALE | 2026-11-15T17:54:15Z (162h ago) | 83d7a46 | 557f19b | 12 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
 
 ## Workstreams
 
@@ -55,6 +55,7 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | ACT_S | KritvaOS/kritva-actuator-s | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | CI_DEV_INFRA | KritvaOS/kritva-program | BASELINED (5 tasks) | OK | 5 | 0b0f180 |
 | COMMUNITY | KritvaOS/kritvaos-community | BASELINED (21 tasks) | OK | 21 | 37c59c1 |
+| CONNECT | KritvaOS/kritva-connect | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | CONTROL_PLANE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | CORE | KritvaOS/kritva-core | BASELINED (10 tasks) | OK | 10 | 0b30a99 |
 | DEVICE_ENDPOINT | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
@@ -256,6 +257,7 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 - ACT_L: no status source (UNVERIFIED)
 - ACT_M: no status source (UNVERIFIED)
 - ACT_S: no status source (UNVERIFIED)
+- CONNECT: no status source (UNVERIFIED)
 - CONTROL_PLANE: no status source (UNVERIFIED)
 - DEVICE_ENDPOINT: no status source (UNVERIFIED)
 - EDUCATION_APPLICATIONS: no status source (UNVERIFIED)
@@ -341,9 +343,9 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-20T16:12:49Z (recorded 2026-11-21T12:18:32Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-21T12:18:32Z (recorded 2026-11-22T11:56:32Z). The record is replaced only when a tracked fact changes.
 
-- Pending decisions: 2 -> 1
+- Warnings: 17 -> 18
 
 ## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
 
@@ -427,9 +429,9 @@ Order only. Start and end dates, durations and percent complete are TBD in [v2/R
 | Measure | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 17 |
-| Workstreams registered / baselined | 24 / 7 |
-| Workstreams with no status source (UNVERIFIED) | 17 |
+| Warnings | 18 |
+| Workstreams registered / baselined | 25 / 7 |
+| Workstreams with no status source (UNVERIFIED) | 18 |
 | Source freshness | STALE 7 |
 
-No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, NEXUS_EDGE, SDK, SIM, STUDIO.
+No status source, so no evidence and no credit (not zero progress): ACTUATION_CONTROLS, ACT_EMB, ACT_INT, ACT_L, ACT_M, ACT_S, CONNECT, CONTROL_PLANE, DEVICE_ENDPOINT, EDUCATION_APPLICATIONS, ELECTRICAL_POWER, INTEGRATION_SOFTWARE_VALIDATION, MANUFACTURING_FLEET, MECHANICAL, NEXUS_EDGE, SDK, SIM, STUDIO.
