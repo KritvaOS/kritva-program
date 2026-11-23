@@ -83,9 +83,9 @@
       "weighted": true
     },
     "V2-M0-SKILL-001": {
-      "accepted_weight": 3,
-      "complete": 1,
-      "credited": 1,
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
       "tasks": 1,
       "weight": 3,
       "weighted": true
@@ -181,9 +181,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 221,
-      "complete": 56,
-      "credited": 56,
+      "accepted_weight": 218,
+      "complete": 55,
+      "credited": 55,
       "tasks": 56,
       "weight": 221,
       "weighted": true
@@ -239,9 +239,9 @@
       "weighted": true
     },
     "SKILL": {
-      "accepted_weight": 3,
-      "complete": 1,
-      "credited": 1,
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
       "tasks": 1,
       "weight": 3,
       "weighted": true
@@ -249,13 +249,19 @@
   },
   "changes": {
     "items": [
-      "Warnings: 17 -> 18"
+      "Accepted progress: 221/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 218/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: removed KOS-SKILL-M0-001",
+      "Warnings: 18 -> 20",
+      "Pending decisions: 1 -> 2"
     ],
-    "recorded_at": "2026-11-22T11:56:32Z",
-    "since": "2026-11-21T12:18:32Z"
+    "recorded_at": "2026-11-23T02:31:15Z",
+    "since": "2026-11-22T14:36:24Z"
   },
   "errors": [],
-  "evidence_health": [],
+  "evidence_health": [
+    "KOS-SKILL-M0-001: no current report from the owning workstream",
+    "SKILL: source STALE"
+  ],
   "gates": [
     {
       "approval_required": true,
@@ -349,22 +355,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-22T14:36:24Z",
+  "generated_at": "2026-11-23T02:31:15Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 56,
-      "tasks_with_github_verified_run": 56,
-      "tasks_with_verified_evidence": 56
+      "tasks_with_github_verified_run": 55,
+      "tasks_with_verified_evidence": 55
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 56,
+      "tasks_complete": 55,
       "tasks_total": 56
     },
     "release_readiness": {
       "open_release_gates": [],
-      "state": "READY",
-      "uncredited_tasks": 0
+      "state": "NOT_READY",
+      "uncredited_tasks": 1
     }
   },
   "milestone_alignment": [
@@ -489,10 +495,10 @@
       "workstream": "SENSE"
     },
     {
-      "accepted_weight": 3,
+      "accepted_weight": 0,
       "class": "V2_REPO",
       "closure": "v2/milestones/V2-M0/COMPLETION_RECORD.md",
-      "credited": 1,
+      "credited": 0,
       "milestone": "V2-M0-SKILL-001",
       "program_milestone": "V2-M0",
       "status": "PROPOSED",
@@ -962,7 +968,7 @@
   "plan_register": {
     "by_milestone": {
       "M0": {
-        "accepted": 32,
+        "accepted": 29,
         "baseline": 32,
         "high": 0,
         "low": 0,
@@ -1088,8 +1094,8 @@
         "rows": 0
       },
       "Skill": {
-        "accepted": 3,
-        "accepted_tasks": 1,
+        "accepted": 0,
+        "accepted_tasks": 0,
         "baseline": 3,
         "baseline_tasks": 1,
         "high": 33,
@@ -1284,7 +1290,7 @@
       },
       "Skill": {
         "M0": {
-          "accepted": 3,
+          "accepted": 0,
           "baseline": 3,
           "point": 0,
           "rows": 0
@@ -1721,7 +1727,7 @@
       "M7": "LIVE & RESULTS",
       "M8": "PRODUCTION"
     },
-    "v2_accepted_weight": 117,
+    "v2_accepted_weight": 114,
     "v2_baseline_weight": 117
   },
   "program_status": {
@@ -1757,8 +1763,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 100.0,
-    "basis": "221/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 98.64,
+    "basis": "218/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "require_run_verification": true,
   "sequence": [
@@ -1866,7 +1872,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 164,
+        "age_hours": 176,
         "ahead_by": 62,
         "changed_files": [
           "AGENTS.md",
@@ -1932,7 +1938,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 164,
+        "age_hours": 176,
         "ahead_by": 8,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1962,7 +1968,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 164,
+        "age_hours": 176,
         "ahead_by": 10,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -1991,7 +1997,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 164,
+        "age_hours": 176,
         "ahead_by": 6,
         "changed_files": [
           "README.md",
@@ -2016,7 +2022,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 164,
+        "age_hours": 176,
         "ahead_by": 2,
         "changed_files": [
           "planning/CHANGELOG.md",
@@ -2036,7 +2042,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 164,
+        "age_hours": 176,
         "ahead_by": 122,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2102,7 +2108,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 164,
+        "age_hours": 176,
         "ahead_by": 12,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2186,7 +2192,6 @@
       "KOS-SENSE-009",
       "KOS-SENSE-010",
       "KOS-SENSE-M0-001",
-      "KOS-SKILL-M0-001",
       "KRP-ENG-001",
       "KRP-M0-001",
       "KRP-M0-002",
@@ -2201,12 +2206,12 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 1,
+    "pending_decisions": 2,
     "pending_reviews": 0,
-    "progress": "221/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 100.0,
+    "progress": "218/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 98.64,
     "readiness": {},
-    "warnings": 18
+    "warnings": 20
   },
   "tasks": [
     {
@@ -3660,30 +3665,24 @@
       "workstream_id": "SENSE"
     },
     {
-      "acceptance": "PASS",
+      "acceptance": "NOT_RUN",
       "blocked_by": [],
-      "credit": true,
-      "credit_reason": "weight 3 x approval A594 (PASS, APPROVED) on commit c171920 with PASS evidence",
-      "evidence_class": "MILESTONE",
-      "evidence_run": "41598873743",
-      "evidence_state": "VERIFIED",
-      "evidence_verified": true,
-      "execution": "COMPLETE",
-      "git_sync": "SYNCED",
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
       "milestone_id": "V2-M0-SKILL-001",
       "phase": null,
-      "readiness": "IMPLEMENTABLE",
-      "reported_evidence": {
-        "class": "MILESTONE",
-        "commit": "c17192001f6c672819589857e8644ad21573d8d8",
-        "github_verified": true,
-        "run": "41598873743",
-        "task_commit": "c17192001f6c672819589857e8644ad21573d8d8"
-      },
-      "run_verified": true,
-      "task_commit": "c17192001f6c672819589857e8644ad21573d8d8",
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
       "task_id": "KOS-SKILL-M0-001",
-      "tested_commit": "c17192001f6c672819589857e8644ad21573d8d8",
+      "tested_commit": null,
       "title": "Skill governance and acceptance review",
       "weight": 3,
       "workstream_id": "SKILL"
@@ -3902,7 +3901,7 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 1,
+    "pending_decisions": 2,
     "pending_reviews": 0,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
@@ -3921,11 +3920,13 @@
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
+    "KOS-SKILL-M0-001: not reported by SKILL (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
     "NEXUS_EDGE: no status source (UNVERIFIED)",
     "SDK: no status source (UNVERIFIED)",
     "SIM: no status source (UNVERIFIED)",
+    "SKILL: status is 15 days old",
     "STUDIO: no status source (UNVERIFIED)"
   ],
   "workstreams": [
@@ -4094,7 +4095,7 @@
       "commit": "557f19bc21de867f03bef8c867ac599ec17d0693",
       "id": "SKILL",
       "repo": "KritvaOS/kritva-skill",
-      "source_state": "OK",
+      "source_state": "STALE",
       "tasks_reported": 1
     },
     {
