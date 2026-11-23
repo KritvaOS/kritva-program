@@ -4,8 +4,9 @@
 
 Generated from structured records only (status, owner, due date and blocking state are fields, not parsed text). Missing owners and dates are shown as UNASSIGNED and NO_DUE_DATE_RECORDED. Superseded records are excluded. Open gates are tracked separately in the Gates section of [tracking/STATUS_DETAIL.md](../tracking/STATUS_DETAIL.md), not here.
 
-1 pending, 1 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
+2 pending, 1 marked blocking. Decision authority is the owner (Dinesh) unless a record says otherwise.
 
 | ID | Decision needed | Status | Blocking | Blocks | Scope | Owner | Due | Required action |
 |---|---|---|---|---|---|---|---|---|
 | PD-002 | Define P6 LAB & ROBOT reopening criteria | PROPOSED | yes | V2-M6 | kritva-actuator, kritva-actuator-embedded, kritva-actuator-s, kritva-actuator-m, kritva-actuator-l, V2-M6 | UNASSIGNED | NO_DUE_DATE_RECORDED | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. |
+| PD-020 | Clarify Control Plane capability ownership, implementation responsibility and the planned repository location in D-144 | PROPOSED | no | - | kritva-connect, V2-M7 | UNASSIGNED | NO_DUE_DATE_RECORDED | Clarify the relationship between Control Plane capability ownership, implementation responsibility and the planned repository location recorded in D-144. Requires owner clarification before the relevant implementation stage (KOS-CONNECT-003 stage 2). D-144 is not superseded by this record. |
