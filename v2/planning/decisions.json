@@ -410,22 +410,24 @@
       "due_date": null,
       "scope": {
         "phase_ids": [
+          "V2-M3",
           "V2-M7"
         ],
         "repo_ids": [
           "kritva-connect"
         ]
       },
-      "required_action": "Clarify the relationship between Control Plane capability ownership, implementation responsibility and the planned repository location recorded in D-144. Requires owner clarification before the relevant implementation stage (KOS-CONNECT-003 stage 2). D-144 is not superseded by this record.",
+      "required_action": "Confirm during V2-M3 planning the repository location and ownership arrangement for the Control Plane. Working direction (D-148, provisional): RaaS owns the capability and its implementation responsibility, and the code is planned for the separate repository recorded in D-144. Before V2-M3 implementation planning, revisit the repository registration, ownership arrangements and dependencies; the Security Owner review of the authorisation boundary is a prerequisite for accepting the authorisation design (KOS-CONNECT-003 stage 2). D-144 is not superseded by this record.",
       "blocking": false,
       "blocks": [],
       "evidence_refs": [
         "D-144",
-        "D-146"
+        "D-146",
+        "D-148"
       ],
       "supersedes": [],
       "approval_ref": null,
-      "source": "Connect planning review, 2026-11-23"
+      "source": "Connect planning review, 2026-11-23; working direction recorded in D-148"
     }
   ]
 }
