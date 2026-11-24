@@ -1,0 +1,197 @@
+From ee209b8eb5552fcaa39679235d0dad80ca802e6f Mon Sep 17 00:00:00 2001
+From: Dinesh <dinesh@kritvaos.in>
+Date: Mon, 23 Nov 2026 02:55:16 +0000
+Subject: [PATCH] docs(decisions): record the Control Plane working direction
+ (D-148, PD-020)
+
+Adds D-148: RaaS remains the owner of the Control Plane capability and its
+implementation responsibility, and the separate repository planned in D-144
+remains the planned code location, pending confirmation during V2-M3
+planning. This is a provisional, non-blocking working direction. D-144 is
+not superseded. PD-020 stays open for the V2-M3 confirmation: its action
+text now carries the working direction, V2-M3 joins its scope and D-148 its
+evidence. Regenerates PENDING_DECISIONS.md. No repository, task, baseline,
+weight, estimate, gate or credit change.
+
+Tasks: None (record keeping; implements no task)
+---
+ .../check_commit_format.cpython-313.pyc         | Bin 0 -> 10074 bytes
+ v2/DECISIONS.md                                 |   1 +
+ v2/planning/PENDING_DECISIONS.md                |   2 +-
+ v2/planning/decisions.json                      |   8 +++++---
+ 4 files changed, 7 insertions(+), 4 deletions(-)
+ create mode 100644 scripts/security/__pycache__/check_commit_format.cpython-313.pyc
+
+diff --git a/scripts/security/__pycache__/check_commit_format.cpython-313.pyc b/scripts/security/__pycache__/check_commit_format.cpython-313.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..54aadfaab75db483abe0d6b0c5cf7cc514d48b5c
+GIT binary patch
+literal 10074
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/v2/DECISIONS.md b/v2/DECISIONS.md
+index f6ad7b3..e9a7a1e 100644
+--- a/v2/DECISIONS.md
++++ b/v2/DECISIONS.md
+@@ -125,5 +125,6 @@
+ | D-145 | Kritva Connect is registered as a planned workstream `CONNECT` with repository `KritvaOS/kritva-connect`, its ten architecture decision records (CONNECT-ADR-01 to CONNECT-ADR-10) are recorded as accepted, and its tasks KOS-CONNECT-001 to KOS-CONNECT-010 enter the planning inventory as PLANNING_ONLY (Dinesh, chat, 2026-11-22: confirmed the public/private repository split, then "I approve D1-D12 and PR 1 and PR 2 as branches for review", after reviewing a plan on which Claude and an external AI reviewer, advisory only, aligned) | The seven-repository register (D-109) has no row for realtime connectivity (LiveKit audio, video, telemetry and operator input between robots, simulators and the platform), and the RaaS WebRTC and signaling tasks that might overlap could not be located. A provider-neutral Connect layer with a thin gateway keeps LiveKit credentials out of public code and keeps command authority in RaaS and on the robot | `workstreams.json` gains `CONNECT` with its repository. `planning_inventory.json` gains one REGISTERED group pinned to `planning/TASKS.md` of kritva-connect at commit 2753390ef8b70617bee20deba465667c09edd6e9 (sha256 144b3bee7b76937cc5340b5d5dbd1c6c0a2d4b4b42da7002d8f12e5f1ceb026a). The tasks carry no weight, have no baseline entry, approval or credit, and any baseline entry later needs a non-zero weight and its own owner decision (D-109). The ten ADRs live in kritva-connect `docs/adr/` and were accepted in chat only. They include work that Connect does not own and that is not registered: device enrollment, a device-authenticated token endpoint, a control-lease service and revocation belong to RaaS, and where the Control Plane lives must be reconciled with D-144 first. A Security Owner review is required before KOS-CONNECT-003 is accepted. The repository count becomes eight (D-144 says a count change needs its own owner decision and a register re-plan before V2-M3, 2027-03-15): this decision adds no `repo-pipeline.json` entry, no milestone rows, no dependency or risk rows, and does not change `V2_REPO_PLAN.md`; those are separate changes. A separate private deployment repository exists and is deliberately not named in this record. `kritva-sdk` and `kritva-sim` are not registered (D-144). Not verified: that the KR-FE-3 and KR-BE-6 RaaS tasks do or do not overlap Connect | Open (accepted when the owner merges this pull request) |
+ | D-146 | The Connect planning boundary with RaaS is recorded and the Connect planning-inventory source is re-pinned (Dinesh, chat, 2026-11-22: approved the boundary below, then "approved" the plan; the Connect change was merged by the owner). LiveKit provides signalling, ICE and TURN for the V2 live-media path; RaaS owns business sessions, room administration, participant tokens and the browser media client; kritva-connect owns the robot and lab-side client and telemetry transport; KOS-CONNECT-003 is staged (V2-M3 enrollment contract and a mocked token exchange, V2-M7 the real RaaS token endpoint); KOS-CONNECT-004 voice is deferred and outside V2 acceptance; V2 live work is observation-only unless operator command and control is approved; every device join needs a fresh session-bound RaaS authorization (amendment to CONNECT-ADR-10) | D-145 pinned the Connect tasks to `planning/TASKS.md` at commit 2753390ef8b70617bee20deba465667c09edd6e9. That file was revised by the Connect boundary change (merged; branch commit 0c4176f9168b5ca36a6aba91c3363eb1d6223ed6). The RaaS tasks that sit beside Connect are kept, because the overlap is at interfaces and not in implementation; the private program record holds the RaaS-specific detail. This partly answers the open overlap question in D-145 | `planning_inventory.json` source pin for `KritvaOS/kritva-connect` moves to commit 0c4176f9168b5ca36a6aba91c3363eb1d6223ed6 and sha256 e87cc9e83422e364667e84a607aba607df2721002b7795d51a1921fe789c5e84. Task titles and recorded statuses are unchanged (the inventory vocabulary has no DEFERRED value, so KOS-CONNECT-004 stays NOT_STARTED there; its deferred status is in the pinned source). `baseline.json`, weights, estimates and approvals are unchanged. No task is baselined and none earns credit. The RaaS enrollment, credential-lifecycle and participant-token work stays unregistered, and the Control Plane location (D-030 and D-144) is still to be reconciled | Open (accepted when the owner merges this pull request) |
+ | D-147 | The Kritva Connect repository keeps its own provisional review register at `planning/REVIEW_REGISTER.md`, and `kritva-program` links to it at commit d3db3ee (Dinesh, chat, 2026-11-23: asked to keep these decision and review records under the individual repository and to have the program repositories link to them, then "PR Merged" for kritva-connect pull request 6) | Provisional owner directions were first tracked in one project document. The owner chose one register per repository, so that each repository keeps its own records and each program repository links only to the registers it may show. The public Connect register is merged at commit d3db3ee (merge of kritva-connect pull request 6). Each repository remains responsible for maintaining its own register and evidence | The Connect register records provisional owner directions and their review status; entries remain subject to independent review and the applicable acceptance processes. It is an index and copies no decision text. This record does not establish program baseline approval or implementation acceptance, and `baseline.json`, weights, estimates, task IDs, gate IDs and credit are unchanged. The Connect register's Program links section is updated in a follow-up pull request that names this record and the merge commit of this change | Open (accepted when the owner merges this pull request) |
++| D-148 | Control Plane working direction, provisional: RaaS remains the owner of the Control Plane capability and its implementation responsibility, and the separate repository planned in D-144 (proposed name kritva-control-plane) remains the planned code location, pending confirmation during V2-M3 planning (Dinesh, chat, 2026-11-23: "go with B", after reviewing a proposal on which Claude and an external AI reviewer, advisory only, aligned) | D-144 recorded the Control Plane as a planned separate repository, and PD-020 asked how its capability ownership, implementation responsibility and repository location fit together. The owner chose to keep both statements and to settle the final repository location at V2-M3 planning. Work on Connect does not depend on the answer before KOS-CONNECT-003 stage 2 | This is a provisional working direction, not a final repository-location decision, and it is non-blocking for current V2 work. D-144 is not superseded. No repository is created or registered, no `repo-pipeline.json` entry is added, no D-109 register row moves, no task is reassigned, and `baseline.json`, weights, estimates, task IDs, gate IDs and credit are unchanged. Before V2-M3 implementation planning (2027-03-15) the repository registration, ownership arrangements and dependencies are revisited, and the Security Owner review of the Control Plane authorisation boundary is a prerequisite for accepting the authorisation design. PD-020 stays open for that confirmation and its action text is updated. Approvals are owner-held under D-047 and are not independent | Open (accepted when the owner merges this pull request) |
+ 
+ Decisions D-001, D-008, D-020, D-021, D-026, D-028, D-030, D-034, D-036..D-039, D-041..D-043, D-053..D-057, D-060, D-063, D-068, D-070, D-071 and D-073 concern private records and are kept in the private program record. Their IDs are left unused here for traceability.
+diff --git a/v2/planning/PENDING_DECISIONS.md b/v2/planning/PENDING_DECISIONS.md
+index 5b97d2e..8725bcb 100644
+--- a/v2/planning/PENDING_DECISIONS.md
++++ b/v2/planning/PENDING_DECISIONS.md
+@@ -9,4 +9,4 @@ Generated from structured records only (status, owner, due date and blocking sta
+ | ID | Decision needed | Status | Blocking | Blocks | Scope | Owner | Due | Required action |
+ |---|---|---|---|---|---|---|---|---|
+ | PD-002 | Define P6 LAB & ROBOT reopening criteria | PROPOSED | yes | V2-M6 | kritva-actuator, kritva-actuator-embedded, kritva-actuator-s, kritva-actuator-m, kritva-actuator-l, V2-M6 | UNASSIGNED | NO_DUE_DATE_RECORDED | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. |
+-| PD-020 | Clarify Control Plane capability ownership, implementation responsibility and the planned repository location in D-144 | PROPOSED | no | - | kritva-connect, V2-M7 | UNASSIGNED | NO_DUE_DATE_RECORDED | Clarify the relationship between Control Plane capability ownership, implementation responsibility and the planned repository location recorded in D-144. Requires owner clarification before the relevant implementation stage (KOS-CONNECT-003 stage 2). D-144 is not superseded by this record. |
++| PD-020 | Clarify Control Plane capability ownership, implementation responsibility and the planned repository location in D-144 | PROPOSED | no | - | kritva-connect, V2-M3, V2-M7 | UNASSIGNED | NO_DUE_DATE_RECORDED | Confirm during V2-M3 planning the repository location and ownership arrangement for the Control Plane. Working direction (D-148, provisional): RaaS owns the capability and its implementation responsibility, and the code is planned for the separate repository recorded in D-144. Before V2-M3 implementation planning, revisit the repository registration, ownership arrangements and dependencies; the Security Owner review of the authorisation boundary is a prerequisite for accepting the authorisation design (KOS-CONNECT-003 stage 2). D-144 is not superseded by this record. |
+diff --git a/v2/planning/decisions.json b/v2/planning/decisions.json
+index 0ebaa1e..4faab56 100644
+--- a/v2/planning/decisions.json
++++ b/v2/planning/decisions.json
+@@ -410,22 +410,24 @@
+       "due_date": null,
+       "scope": {
+         "phase_ids": [
++          "V2-M3",
+           "V2-M7"
+         ],
+         "repo_ids": [
+           "kritva-connect"
+         ]
+       },
+-      "required_action": "Clarify the relationship between Control Plane capability ownership, implementation responsibility and the planned repository location recorded in D-144. Requires owner clarification before the relevant implementation stage (KOS-CONNECT-003 stage 2). D-144 is not superseded by this record.",
++      "required_action": "Confirm during V2-M3 planning the repository location and ownership arrangement for the Control Plane. Working direction (D-148, provisional): RaaS owns the capability and its implementation responsibility, and the code is planned for the separate repository recorded in D-144. Before V2-M3 implementation planning, revisit the repository registration, ownership arrangements and dependencies; the Security Owner review of the authorisation boundary is a prerequisite for accepting the authorisation design (KOS-CONNECT-003 stage 2). D-144 is not superseded by this record.",
+       "blocking": false,
+       "blocks": [],
+       "evidence_refs": [
+         "D-144",
+-        "D-146"
++        "D-146",
++        "D-148"
+       ],
+       "supersedes": [],
+       "approval_ref": null,
+-      "source": "Connect planning review, 2026-11-23"
++      "source": "Connect planning review, 2026-11-23; working direction recorded in D-148"
+     }
+   ]
+ }
+-- 
+2.43.0
+
