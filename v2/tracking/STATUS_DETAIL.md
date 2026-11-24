@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-24T17:52:52Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-24T17:55:34Z (freshness of sources is judged at this time)
 - Baseline version: 15 (APPROVED)
 - Accepted engineering progress: 42.53% (94/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 19/56 tasks (repo-reported; not acceptance)
@@ -29,17 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-24T17:52:52Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-24T17:55:34Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | STALE | 2026-11-15T17:54:15Z (215h ago) | a8be849 | 0b0f180 | 62 commit(s) | OTHER FILES (review): AGENTS.md, Makefile, README.md, scripts/docs/check_readme.py, scripts/security/check_commit_format.py |
-| COMMUNITY | STALE | 2026-11-15T17:54:15Z (215h ago) | c35ddb7 | 37c59c1 | 8 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
-| CORE | STALE | 2026-11-15T17:54:15Z (215h ago) | 59335f8 | 0b30a99 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
-| MIND | STALE | 2026-11-15T17:54:15Z (215h ago) | 29b8c4f | d593493 | 6 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, scripts/check_readme.py |
-| MOTION | STALE | 2026-11-15T17:54:15Z (215h ago) | cb0d2bd | d3289b8 | 2 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, scripts/status/gen_status.py, status/status.json, tests/status_gen/test_gen_status.py |
-| SENSE | STALE | 2026-11-15T17:54:15Z (215h ago) | a1259e5 | 07c48d5 | 122 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
-| SKILL | STALE | 2026-11-15T17:54:15Z (215h ago) | 83d7a46 | 557f19b | 12 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
+| CI_DEV_INFRA | STALE | 2026-11-15T17:54:15Z (216h ago) | a8be849 | 0b0f180 | 62 commit(s) | OTHER FILES (review): AGENTS.md, Makefile, README.md, scripts/docs/check_readme.py, scripts/security/check_commit_format.py |
+| COMMUNITY | STALE | 2026-11-15T17:54:15Z (216h ago) | c35ddb7 | 37c59c1 | 8 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
+| CORE | STALE | 2026-11-15T17:54:15Z (216h ago) | 59335f8 | 0b30a99 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
+| MIND | STALE | 2026-11-15T17:54:15Z (216h ago) | 29b8c4f | d593493 | 6 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, scripts/check_readme.py |
+| MOTION | STALE | 2026-11-15T17:54:15Z (216h ago) | cb0d2bd | d3289b8 | 2 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, scripts/status/gen_status.py, status/status.json, tests/status_gen/test_gen_status.py |
+| SENSE | STALE | 2026-11-15T17:54:15Z (216h ago) | a1259e5 | 07c48d5 | 122 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
+| SKILL | STALE | 2026-11-15T17:54:15Z (216h ago) | 83d7a46 | 557f19b | 12 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
 
 ## Workstreams
 
