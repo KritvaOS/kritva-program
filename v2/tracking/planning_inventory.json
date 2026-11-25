@@ -551,9 +551,9 @@
       "credit_eligible": false,
       "source": {
         "repo": "KritvaOS/kritva-sdk",
-        "commit": "86035f1a49d9bfe1545b9cd0b2969653e26a59de",
+        "commit": "63504031fa32b4889fad7bc00d96ac8e7e27222b",
         "path": "planning/TASKS.md",
-        "sha256": "08c4ca032f68627bf13805da14f86a81755539cc927fb3123d9c7948faf391d8"
+        "sha256": "5cfc68bcb89429842a80515c00122fa3e7d3c3397a25d6ec746da123c3fceb0a"
       },
       "tasks": [
         {
@@ -570,7 +570,7 @@
         },
         {
           "task_id": "KOS-SDK-003",
-          "title": "Implement core client, configuration and contract compatibility",
+          "title": "Implement configuration, contract compatibility and Sense models",
           "recorded_status": "NOT_STARTED",
           "status_authority": "SDK owner (Dinesh); not a program approval"
         },
