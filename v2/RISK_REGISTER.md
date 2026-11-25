@@ -14,7 +14,7 @@ Scale: Likelihood and Impact = Low / Medium / High.
 | RISK-005 | Conflicting status/phase terminology across documents | Medium | Medium | Frozen phase names; one owning document per fact | TBD | Open |
 | RISK-006 | Effort estimated from commit counts | Medium | Medium | Evidence-backed effort logs only | TBD | Open |
 | RISK-007 | Scope creep by removing unfinished tasks to inflate progress | Low | Medium | Preserve baselines; record scope changes | TBD | Open |
-| RISK-008 | Six D-109 Community SDK planning rows (26 weight) overlap kritva-sdk scope, so ownership or credit could be duplicated or transferred without a decision | Medium | High | PD-021 records the owner choice; no weight, ownership or credit moves until decided | TBD | Open |
+| RISK-008 | Six D-109 Community SDK planning rows (26 weight) overlap kritva-sdk scope, so ownership or credit could be duplicated or transferred without a decision | Medium | High | PD-021 accepted (D-151): re-home to kritva-sdk approved in principle; no weight, ownership or credit moves until the row mapping and baseline change are separately approved | TBD | Open |
 | RISK-009 | SDK work for Control Plane and Sim is planned before any approved upstream API or interface exists | High | Medium | SDK milestones M3 and M5 are conditional; no adapter is built or pinned against a draft contract (DEP-007, DEP-008) | TBD | Open |
 | RISK-010 | Vendored SDK contract schemas drift from the upstream contract | Medium | Medium | Pinned tag and commit SHA with provenance and a CI drift check (DEP-006); updates only by reviewed change | TBD | Open |
 

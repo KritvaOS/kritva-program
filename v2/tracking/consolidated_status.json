@@ -249,10 +249,10 @@
   },
   "changes": {
     "items": [
-      "Pending decisions: 2 -> 3"
+      "Pending decisions: 3 -> 2"
     ],
-    "recorded_at": "2026-11-25T02:25:51Z",
-    "since": "2026-11-25T02:13:21Z"
+    "recorded_at": "2026-11-25T02:48:21Z",
+    "since": "2026-11-25T02:25:51Z"
   },
   "errors": [],
   "evidence_health": [
@@ -355,7 +355,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-25T02:25:51Z",
+  "generated_at": "2026-11-25T02:48:21Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 56,
@@ -2242,7 +2242,7 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 3,
+    "pending_decisions": 2,
     "pending_reviews": 0,
     "progress": "94/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 42.53,
@@ -3721,7 +3721,7 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 3,
+    "pending_decisions": 2,
     "pending_reviews": 0,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
