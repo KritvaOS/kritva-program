@@ -249,12 +249,10 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 218/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 94/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: removed I2-001, I2-002, I2-003, I2-004, I2-005, I2-006, I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008, KF-CORE-M0-001, KF-CORE-R10-001, KF-CORE-R10-002, KF-CORE-R10-003, KF-CORE-R10-004, KF-CORE-R10-005, KF-CORE-R10-006, KF-CORE-R10-007, KF-CORE-R10-008, KF-CORE-R10-009, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004",
-      "Warnings: 20 -> 59"
+      "Pending decisions: 2 -> 3"
     ],
-    "recorded_at": "2026-11-24T17:52:52Z",
-    "since": "2026-11-23T02:31:15Z"
+    "recorded_at": "2026-11-25T02:25:51Z",
+    "since": "2026-11-25T02:13:21Z"
   },
   "errors": [],
   "evidence_health": [
@@ -357,7 +355,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-25T02:13:21Z",
+  "generated_at": "2026-11-25T02:25:51Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 56,
@@ -669,6 +667,18 @@
       "class": "V2_REPO",
       "closure": "none",
       "credited": 0,
+      "milestone": "V2-M1-SDK-001",
+      "program_milestone": "V2-M1",
+      "status": "PROPOSED",
+      "tasks": 0,
+      "weight": null,
+      "workstream": "SDK"
+    },
+    {
+      "accepted_weight": null,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
       "milestone": "V2-M1-SKILL-001",
       "program_milestone": "V2-M1",
       "status": "PROPOSED",
@@ -705,6 +715,18 @@
       "class": "V2_REPO",
       "closure": "none",
       "credited": 0,
+      "milestone": "V2-M2-SDK-001",
+      "program_milestone": "V2-M2",
+      "status": "PROPOSED",
+      "tasks": 0,
+      "weight": null,
+      "workstream": "SDK"
+    },
+    {
+      "accepted_weight": null,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
       "milestone": "V2-M2-SKILL-001",
       "program_milestone": "V2-M2",
       "status": "PROPOSED",
@@ -723,6 +745,18 @@
       "tasks": 0,
       "weight": null,
       "workstream": "COMMUNITY"
+    },
+    {
+      "accepted_weight": null,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M3-SDK-001",
+      "program_milestone": "V2-M3",
+      "status": "PROPOSED",
+      "tasks": 0,
+      "weight": null,
+      "workstream": "SDK"
     },
     {
       "accepted_weight": null,
@@ -771,6 +805,18 @@
       "tasks": 0,
       "weight": null,
       "workstream": "MOTION"
+    },
+    {
+      "accepted_weight": null,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M5-SDK-001",
+      "program_milestone": "V2-M5",
+      "status": "PROPOSED",
+      "tasks": 0,
+      "weight": null,
+      "workstream": "SDK"
     },
     {
       "accepted_weight": null,
@@ -861,6 +907,18 @@
       "class": "V2_REPO",
       "closure": "none",
       "credited": 0,
+      "milestone": "V2-M7-SDK-001",
+      "program_milestone": "V2-M7",
+      "status": "PROPOSED",
+      "tasks": 0,
+      "weight": null,
+      "workstream": "SDK"
+    },
+    {
+      "accepted_weight": null,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
       "milestone": "V2-M8-COMMUNITY-001",
       "program_milestone": "V2-M8",
       "status": "PROPOSED",
@@ -915,6 +973,18 @@
       "tasks": 0,
       "weight": null,
       "workstream": "CI_DEV_INFRA"
+    },
+    {
+      "accepted_weight": null,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M8-SDK-001",
+      "program_milestone": "V2-M8",
+      "status": "PROPOSED",
+      "tasks": 0,
+      "weight": null,
+      "workstream": "SDK"
     },
     {
       "accepted_weight": null,
@@ -2172,7 +2242,7 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 2,
+    "pending_decisions": 3,
     "pending_reviews": 0,
     "progress": "94/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 42.53,
@@ -3651,11 +3721,11 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 2,
+    "pending_decisions": 3,
     "pending_reviews": 0,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
-    "repositories": 12
+    "repositories": 13
   },
   "warnings": [
     "ACTUATION_CONTROLS: no status source (UNVERIFIED)",

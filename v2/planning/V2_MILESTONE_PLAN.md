@@ -59,6 +59,7 @@ Exit conditions:
 | V2-M1-MIND-001 | kritva-mind | PROPOSED | Mind request, context and result contract (task 001) reviewed and tagged v0.1.0. |
 | V2-M1-SKILL-001 | kritva-skill | PROPOSED | Skill manifest and execution contract (task 001) reviewed and tagged v0.1.0. |
 | V2-M1-COMMUNITY-001 | kritvaos-community | PROPOSED | Public architecture description matches the approved capability contracts. |
+| V2-M1-SDK-001 | kritva-sdk | PROPOSED | Python-first contract-first SDK architecture and public API reviewed; first-release scope limited to approved contracts (Sense 0.1.0). |
 
 ### V2-M2 P2 BUILD & ARTIFACT
 
@@ -80,6 +81,7 @@ Exit conditions:
 | V2-M2-MIND-001 | kritva-mind | PROPOSED | Schema validation, cancellation and error-path tests pass; gates implemented. |
 | V2-M2-SKILL-001 | kritva-skill | PROPOSED | Manifest validation and lifecycle conformance tests pass; gates implemented. |
 | V2-M2-CORE-001 | kritva-core | PROPOSED | Artifact and compatibility contract published as a versioned release. |
+| V2-M2-SDK-001 | kritva-sdk | PROPOSED | Python package foundation, reproducible build, configuration, contract compatibility and Sense models over vendored pinned schemas. |
 
 ### V2-M3 P3 CONTROL PLANE
 
@@ -95,6 +97,7 @@ Exit conditions:
 |---|---|---|---|
 | V2-M3-SKILL-001 | kritva-skill | PROPOSED | Skill execution exposed through the control-plane contract. |
 | V2-M3-COMMUNITY-001 | kritvaos-community | PROPOSED | Public integration guide matches the control-plane contract. |
+| V2-M3-SDK-001 | kritva-sdk | PROPOSED | Control Plane and capability adapters, conditional on an approved Control Plane API and approved upstream contracts; not implied to exist. |
 
 ### V2-M4 P4 BOOKING & COMMERCIAL
 
@@ -125,6 +128,7 @@ Exit conditions:
 | V2-M5-MOTION-001 | kritva-motion | PROPOSED | Motion commands validated against a simulated actuator interface. |
 | V2-M5-SENSE-001 | kritva-sense | PROPOSED | Sense frames validated in simulated execution. |
 | V2-M5-ACTUATOR-001 | kritva-actuator | PROPOSED | Shared actuator interface verified in software only (no physical claim). |
+| V2-M5-SDK-001 | kritva-sdk | PROPOSED | Simulation adapter and reproducible examples, conditional on an approved simulation interface; evidence labelled simulation. |
 
 ### V2-M6 P6 LAB & ROBOT
 
@@ -157,6 +161,7 @@ Exit conditions:
 |---|---|---|---|
 | V2-M7-SENSE-001 | kritva-sense | PROPOSED | Telemetry stream contract validated end to end (software scope). |
 | V2-M7-COMMUNITY-001 | kritvaos-community | PROPOSED | Public documentation reflects the live and results interfaces. |
+| V2-M7-SDK-001 | kritva-sdk | PROPOSED | Telemetry, event and result interfaces where approved upstream contracts define them (software scope). |
 
 ### V2-M8 P8 PRODUCTION
 
@@ -177,6 +182,7 @@ Exit conditions:
 | V2-M8-MOTION-001 | kritva-motion | PROPOSED | Release and security review complete. |
 | V2-M8-MIND-001 | kritva-mind | PROPOSED | Release and security review complete. |
 | V2-M8-SKILL-001 | kritva-skill | PROPOSED | Release and security review complete. |
+| V2-M8-SDK-001 | kritva-sdk | PROPOSED | Security, compatibility and release readiness review complete. |
 
 ## Historical milestones (pre-V2 baseline)
 

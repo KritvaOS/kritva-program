@@ -513,6 +513,54 @@
       "outcome": "Release and security review complete.",
       "status": "PROPOSED",
       "tasks": []
+    },
+    {
+      "id": "V2-M1-SDK-001",
+      "milestone_id": "V2-M1",
+      "repo_code": "SDK",
+      "outcome": "Python-first contract-first SDK architecture and public API reviewed; first-release scope limited to approved contracts (Sense 0.1.0).",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M2-SDK-001",
+      "milestone_id": "V2-M2",
+      "repo_code": "SDK",
+      "outcome": "Python package foundation, reproducible build, configuration, contract compatibility and Sense models over vendored pinned schemas.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M3-SDK-001",
+      "milestone_id": "V2-M3",
+      "repo_code": "SDK",
+      "outcome": "Control Plane and capability adapters, conditional on an approved Control Plane API and approved upstream contracts; not implied to exist.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M5-SDK-001",
+      "milestone_id": "V2-M5",
+      "repo_code": "SDK",
+      "outcome": "Simulation adapter and reproducible examples, conditional on an approved simulation interface; evidence labelled simulation.",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M7-SDK-001",
+      "milestone_id": "V2-M7",
+      "repo_code": "SDK",
+      "outcome": "Telemetry, event and result interfaces where approved upstream contracts define them (software scope).",
+      "status": "PROPOSED",
+      "tasks": []
+    },
+    {
+      "id": "V2-M8-SDK-001",
+      "milestone_id": "V2-M8",
+      "repo_code": "SDK",
+      "outcome": "Security, compatibility and release readiness review complete.",
+      "status": "PROPOSED",
+      "tasks": []
     }
   ],
   "historical_milestones": {
