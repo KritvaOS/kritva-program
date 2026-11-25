@@ -433,7 +433,7 @@
       "record_id": "PD-021",
       "record_type": "DECISION",
       "title": "Resolve ownership of the six D-109 Community SDK planning rows",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-11-25",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -456,10 +456,11 @@
         "D-109",
         "D-144",
         "D-149",
-        "D-150"
+        "D-150",
+        "D-151"
       ],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-151",
       "source": "SDK repository plan registration, 2026-11-25 (advisory review with an external AI reviewer)"
     }
   ]
