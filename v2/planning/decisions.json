@@ -428,6 +428,39 @@
       "supersedes": [],
       "approval_ref": null,
       "source": "Connect planning review, 2026-11-23; working direction recorded in D-148"
+    },
+    {
+      "record_id": "PD-021",
+      "record_type": "DECISION",
+      "title": "Resolve ownership of the six D-109 Community SDK planning rows",
+      "status": "PROPOSED",
+      "created_at": "2026-11-25",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M2",
+          "V2-M4",
+          "V2-M5"
+        ],
+        "repo_ids": [
+          "kritvaos-community",
+          "kritva-sdk"
+        ]
+      },
+      "required_action": "Choose for the six approved D-109 planning rows owned by Community (PROPOSED-NEW-COMMUNITY-005-01, 005-02, 012-01, 012-02, 014-01, 014-02; 26 weight of 446): A, re-home them to kritva-sdk keeping their total weight, with the task and baseline changes approved separately; or B, keep them Community-owned with kritva-sdk tasks as unweighted support work and duplicate implementation and credit explicitly prevented. Until decided no weight, task ownership or credit changes, V2-M4 has no SDK repository milestone, and the CLI and job-run scope of these rows is not part of KOS-SDK-001 to KOS-SDK-009.",
+      "blocking": false,
+      "blocks": [],
+      "evidence_refs": [
+        "D-109",
+        "D-144",
+        "D-149",
+        "D-150"
+      ],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "SDK repository plan registration, 2026-11-25 (advisory review with an external AI reviewer)"
     }
   ]
 }

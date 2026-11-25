@@ -476,6 +476,67 @@
       }
     },
     {
+      "repo_id": "kritva-sdk",
+      "code": "SDK",
+      "github_repo": "KritvaOS/kritva-sdk",
+      "sequence": 70,
+      "depends_on": [
+        "kritva-sense"
+      ],
+      "workstream_id": "SDK",
+      "task_prefix": "KOS-SDK",
+      "kind": "library",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "ARCHITECTURE_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check",
+        "pr-acceptance-gate",
+        "readme-check"
+      ],
+      "local_gates": [
+        "make check",
+        "make test-unit",
+        "make test-integration",
+        "make test-regression",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [
+        "V2-M1",
+        "V2-M2",
+        "V2-M3",
+        "V2-M5",
+        "V2-M7",
+        "V2-M8"
+      ],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "repo-tasks-md",
+        "path": "planning/TASKS.md"
+      },
+      "commit_standard": {
+        "adopted": true,
+        "basis": "D-044 format; new repo or program"
+      }
+    },
+    {
       "repo_id": "kritva-actuator",
       "code": "ACTUATOR",
       "github_repo": "KritvaOS/kritva-actuator",

@@ -32,6 +32,7 @@ REPOS := \
 	kritva-motion \
 	kritva-mind \
 	kritva-skill \
+	kritva-sdk \
 	kritva-actuator \
 	kritva-actuator-embedded \
 	kritva-actuator-s \

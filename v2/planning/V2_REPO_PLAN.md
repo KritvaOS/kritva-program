@@ -27,11 +27,12 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 | 5 | kritva-sense | capability | kritva-core, kritvaos-community | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check, pr-acceptance-gate, unit-tests, readme-check | make check, make test-unit, make test-integration, make test-regression, make docs-check | V2-M0, V2-M1, V2-M2, V2-M5, V2-M7, V2-M8 |
 | 6 | kritva-mind | capability | kritva-core, kritva-sense | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check, pr-acceptance-gate, readme-check | make check, make test-unit, make test-integration, make test-regression, make docs-check | V2-M0, V2-M1, V2-M2, V2-M5, V2-M8 |
 | 7 | kritva-skill | capability | kritva-core, kritva-mind, kritva-motion | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check, pr-acceptance-gate, readme-check | make check, make test-unit, make test-integration, make test-regression, make docs-check | V2-M0, V2-M1, V2-M2, V2-M3, V2-M5, V2-M8 |
-| 8 | kritva-actuator | hardware-interface | kritva-core, kritva-motion | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make test-unit, make test-regression, make docs-check | V2-M5, V2-M6 |
-| 9 | kritva-actuator-embedded (HOLD) | firmware | kritva-actuator | REPO_CODE_OWNER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make test-unit, make test-regression | V2-M6 |
-| 10 | kritva-actuator-l (HOLD) | mechanical | kritva-actuator | REPO_CODE_OWNER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make docs-check | V2-M6 |
-| 11 | kritva-actuator-m (HOLD) | mechanical | kritva-actuator | REPO_CODE_OWNER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make docs-check | V2-M6 |
-| 12 | kritva-actuator-s (HOLD) | mechanical | kritva-actuator | REPO_CODE_OWNER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make docs-check | V2-M6 |
+| 8 | kritva-sdk | library | kritva-sense | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER | secret-scan, commit-message-check, pr-acceptance-gate, readme-check | make check, make test-unit, make test-integration, make test-regression, make docs-check | V2-M1, V2-M2, V2-M3, V2-M5, V2-M7, V2-M8 |
+| 9 | kritva-actuator | hardware-interface | kritva-core, kritva-motion | REPO_CODE_OWNER, ARCHITECTURE_REVIEWER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make test-unit, make test-regression, make docs-check | V2-M5, V2-M6 |
+| 10 | kritva-actuator-embedded (HOLD) | firmware | kritva-actuator | REPO_CODE_OWNER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make test-unit, make test-regression | V2-M6 |
+| 11 | kritva-actuator-l (HOLD) | mechanical | kritva-actuator | REPO_CODE_OWNER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make docs-check | V2-M6 |
+| 12 | kritva-actuator-m (HOLD) | mechanical | kritva-actuator | REPO_CODE_OWNER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make docs-check | V2-M6 |
+| 13 | kritva-actuator-s (HOLD) | mechanical | kritva-actuator | REPO_CODE_OWNER, SAFETY_REVIEWER | secret-scan, commit-message-check | make check, make docs-check | V2-M6 |
 
 ## Repository registry
 
@@ -44,6 +45,7 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 | kritva-sense | SENSE | SENSE | KOS-SENSE | no (planning only) |
 | kritva-mind | MIND | MIND | KOS-MIND | no (planning only) |
 | kritva-skill | SKILL | SKILL | KOS-SKILL | no (planning only) |
+| kritva-sdk | SDK | SDK | KOS-SDK | no (planning only) |
 | kritva-actuator | ACTUATOR | ACT_INT | ACT-INT | no (planning only) |
 | kritva-actuator-embedded | EMBEDDED | ACT_EMB | ACT-EMB | no (planning only) |
 | kritva-actuator-l | ACTL | ACT_L | ACT-L | no (planning only) |
@@ -107,6 +109,15 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 - V2-M3-SKILL-001 (2027-03-15, PROPOSED): Skill execution exposed through the control-plane contract.
 - V2-M5-SKILL-001 (2027-06-15, PROPOSED): Skills execute through the runtime against simulated capabilities.
 - V2-M8-SKILL-001 (2027-09-13, PROPOSED): Release and security review complete.
+
+### kritva-sdk
+
+- V2-M1-SDK-001 (2026-11-30, PROPOSED): Python-first contract-first SDK architecture and public API reviewed; first-release scope limited to approved contracts (Sense 0.1.0).
+- V2-M2-SDK-001 (2027-01-15, PROPOSED): Python package foundation, reproducible build, configuration, contract compatibility and Sense models over vendored pinned schemas.
+- V2-M3-SDK-001 (2027-03-15, PROPOSED): Control Plane and capability adapters, conditional on an approved Control Plane API and approved upstream contracts; not implied to exist.
+- V2-M5-SDK-001 (2027-06-15, PROPOSED): Simulation adapter and reproducible examples, conditional on an approved simulation interface; evidence labelled simulation.
+- V2-M7-SDK-001 (2027-08-15, PROPOSED): Telemetry, event and result interfaces where approved upstream contracts define them (software scope).
+- V2-M8-SDK-001 (2027-09-13, PROPOSED): Security, compatibility and release readiness review complete.
 
 ### kritva-actuator
 

@@ -47,6 +47,7 @@ The repositories of the program, for navigation. The roster, the dependency orde
 | [kritva-core](https://github.com/KritvaOS/kritva-core) | Kritva Core implementation and its engineering evidence (baselined) |
 | [kritvaos-community](https://github.com/KritvaOS/kritvaos-community) | Community implementation, integration and evidence (baselined) |
 | [kritva-motion](https://github.com/KritvaOS/kritva-motion), [kritva-sense](https://github.com/KritvaOS/kritva-sense), [kritva-mind](https://github.com/KritvaOS/kritva-mind), [kritva-skill](https://github.com/KritvaOS/kritva-skill) | Capability repositories: motion, perception, reasoning and skills (planning only; each runs the PR acceptance gate) |
+| [kritva-sdk](https://github.com/KritvaOS/kritva-sdk) | Python SDK: contract-first typed models and validators over approved contracts, first for Sense 0.1.0 (planning only; no network client until an approved API exists) |
 | [kritva-actuator](https://github.com/KritvaOS/kritva-actuator) | Parent actuator repository: shared interface, requirements and integration (planning only) |
 | [kritva-actuator-embedded](https://github.com/KritvaOS/kritva-actuator-embedded) | Firmware and electronics for the actuator family (planning only; HOLD lifted by D-052) |
 | [kritva-actuator-s](https://github.com/KritvaOS/kritva-actuator-s), [-m](https://github.com/KritvaOS/kritva-actuator-m), [-l](https://github.com/KritvaOS/kritva-actuator-l) | Mechanical design of the S, M and L variants (planning only; HOLD lifted by D-052) |

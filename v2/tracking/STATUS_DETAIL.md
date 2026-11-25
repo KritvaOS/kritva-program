@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-25T02:13:21Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-25T02:25:51Z (freshness of sources is judged at this time)
 - Baseline version: 15 (APPROVED)
 - Accepted engineering progress: 42.53% (94/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 19/56 tasks (repo-reported; not acceptance)
@@ -29,7 +29,7 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-25T02:13:21Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-25T02:25:51Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
@@ -124,7 +124,7 @@ No approved task-to-phase mapping exists (baseline tasks have no phase), so ever
 
 Joins the baseline milestones to the V2 planning layer (v2/planning/milestones.json). It is a read-only report: it adds no credit and changes no weight. Task counts and baseline weights are shown side by side; there is no per-milestone percentage. A repository milestone has no closure field, so the closure column shows the closure record of its program milestone (none until an approved COMPLETION_RECORD.md). PRE_V2 and V2_FOUNDATION are planning classifications of historical baseline milestones (D-094, D-095); a PRE_V2 milestone has no program milestone and its weight is not part of any V2 milestone. V2_REPO rows with no baselined tasks are planned repository milestones (planning only).
 
-Rows: PRE_V2 5, V2_REPO 41.
+Rows: PRE_V2 5, V2_REPO 47.
 
 | Milestone | Class | Program milestone | Workstream | Repo milestone status | Baselined tasks | Credited | Baseline weight | Accepted weight | Closure record |
 |---|---|---|---|---|---|---|---|---|---|
@@ -152,15 +152,19 @@ Rows: PRE_V2 5, V2_REPO 41.
 | V2-M8-SENSE-001 | V2_REPO | V2-M8 | SENSE | CLOSED | 2 | 2 | 11 | 11 | none |
 | V2-M0-COMMUNITY-001 | V2_REPO | V2-M0 | COMMUNITY | PROPOSED | 0 | 0 | - | - | v2/milestones/V2-M0/COMPLETION_RECORD.md |
 | V2-M1-COMMUNITY-001 | V2_REPO | V2-M1 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
+| V2-M1-SDK-001 | V2_REPO | V2-M1 | SDK | PROPOSED | 0 | 0 | - | - | none |
 | V2-M1-SKILL-001 | V2_REPO | V2-M1 | SKILL | PROPOSED | 0 | 0 | - | - | none |
 | V2-M2-CORE-001 | V2_REPO | V2-M2 | CORE | PROPOSED | 0 | 0 | - | - | none |
 | V2-M2-MIND-001 | V2_REPO | V2-M2 | MIND | PROPOSED | 0 | 0 | - | - | none |
+| V2-M2-SDK-001 | V2_REPO | V2-M2 | SDK | PROPOSED | 0 | 0 | - | - | none |
 | V2-M2-SKILL-001 | V2_REPO | V2-M2 | SKILL | PROPOSED | 0 | 0 | - | - | none |
 | V2-M3-COMMUNITY-001 | V2_REPO | V2-M3 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
+| V2-M3-SDK-001 | V2_REPO | V2-M3 | SDK | PROPOSED | 0 | 0 | - | - | none |
 | V2-M3-SKILL-001 | V2_REPO | V2-M3 | SKILL | PROPOSED | 0 | 0 | - | - | none |
 | V2-M5-ACTUATOR-001 | V2_REPO | V2-M5 | ACT_INT | PROPOSED | 0 | 0 | - | - | none |
 | V2-M5-MIND-001 | V2_REPO | V2-M5 | MIND | PROPOSED | 0 | 0 | - | - | none |
 | V2-M5-MOTION-001 | V2_REPO | V2-M5 | MOTION | PROPOSED | 0 | 0 | - | - | none |
+| V2-M5-SDK-001 | V2_REPO | V2-M5 | SDK | PROPOSED | 0 | 0 | - | - | none |
 | V2-M5-SKILL-001 | V2_REPO | V2-M5 | SKILL | PROPOSED | 0 | 0 | - | - | none |
 | V2-M6-ACTL-001 | V2_REPO | V2-M6 | ACT_L | ON_HOLD | 0 | 0 | - | - | none |
 | V2-M6-ACTM-001 | V2_REPO | V2-M6 | ACT_M | ON_HOLD | 0 | 0 | - | - | none |
@@ -168,11 +172,13 @@ Rows: PRE_V2 5, V2_REPO 41.
 | V2-M6-ACTUATOR-001 | V2_REPO | V2-M6 | ACT_INT | ON_HOLD | 0 | 0 | - | - | none |
 | V2-M6-EMBEDDED-001 | V2_REPO | V2-M6 | ACT_EMB | ON_HOLD | 0 | 0 | - | - | none |
 | V2-M7-COMMUNITY-001 | V2_REPO | V2-M7 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
+| V2-M7-SDK-001 | V2_REPO | V2-M7 | SDK | PROPOSED | 0 | 0 | - | - | none |
 | V2-M8-COMMUNITY-001 | V2_REPO | V2-M8 | COMMUNITY | PROPOSED | 0 | 0 | - | - | none |
 | V2-M8-CORE-001 | V2_REPO | V2-M8 | CORE | PROPOSED | 0 | 0 | - | - | none |
 | V2-M8-MIND-001 | V2_REPO | V2-M8 | MIND | PROPOSED | 0 | 0 | - | - | none |
 | V2-M8-MOTION-001 | V2_REPO | V2-M8 | MOTION | PROPOSED | 0 | 0 | - | - | none |
 | V2-M8-PROGRAM-001 | V2_REPO | V2-M8 | CI_DEV_INFRA | PROPOSED | 0 | 0 | - | - | none |
+| V2-M8-SDK-001 | V2_REPO | V2-M8 | SDK | PROPOSED | 0 | 0 | - | - | none |
 | V2-M8-SKILL-001 | V2_REPO | V2-M8 | SKILL | PROPOSED | 0 | 0 | - | - | none |
 
 ## Tasks
@@ -392,11 +398,9 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-23T02:31:15Z (recorded 2026-11-24T17:52:52Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-25T02:13:21Z (recorded 2026-11-25T02:25:51Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 218/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 94/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Credited tasks: removed I2-001, I2-002, I2-003, I2-004, I2-005, I2-006, I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008, KF-CORE-M0-001, KF-CORE-R10-001, KF-CORE-R10-002, KF-CORE-R10-003, KF-CORE-R10-004, KF-CORE-R10-005, KF-CORE-R10-006, KF-CORE-R10-007, KF-CORE-R10-008, KF-CORE-R10-009, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004
-- Warnings: 20 -> 59
+- Pending decisions: 2 -> 3
 
 ## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
 
@@ -463,7 +467,7 @@ Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-0
 | V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | no |
 | V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | no |
 
-Pending: 2 decisions (1 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 3 decisions (1 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 
