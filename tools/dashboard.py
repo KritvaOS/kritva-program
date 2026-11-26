@@ -459,6 +459,11 @@ def repo_table_lines(c):
         tn = f[3] + v.get("baseline_tasks", 0) + v["rows"]
         L.append(f"| {k} | {ta} / {tn} | {_fmt(acc)} / {_fmt(tot)} | `{_bar20(acc, tot)}` {_share(acc, tot)} |")
     L.append(f"| **Total** | **{t['tacc']} / {t['ttot']}** | **{t['acc']} / {t['tot']}** | `{_bar20(t['acc'], t['tot'])}` **{_share(t['acc'], t['tot'])}** |")
+    extra = c.get("registered_no_weight") or []
+    if extra:
+        names = ", ".join(f"{r['repository'].split('/')[-1]} ({r['tasks']} planning tasks)" for r in extra)
+        L += ["", "Registered in the planning inventory with no plan-register rows yet: " + names + ". They are NOT BASELINED and UNVERIFIED, "
+              "carry no weight and no credit, and are not part of the totals above; see STATUS_DETAIL.md."]
     return L + [""]
 
 

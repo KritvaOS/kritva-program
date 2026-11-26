@@ -817,6 +817,25 @@ def render_view(c):
     return "\n".join(L).rstrip("\n") + "\n"
 
 
+def registered_no_weight(root, register):
+    """Repositories that have planning-inventory groups but no plan-register rows (display only). They carry no weight,
+    no baseline entry and no credit; the Repositories table of STATUS_VIEW.md lists them in a line below the table."""
+    path = root / TRACK / "planning_inventory.json"
+    if not path.exists():
+        return []
+    shown = {k.lower() for k in register.get("by_repo", {})}
+    out = []
+    for g in load_json(path).get("groups", []):
+        name = g["repository"].split("/")[-1]
+        for pre in ("kritvaos-", "kritva-"):
+            if name.startswith(pre):
+                name = name[len(pre):]
+                break
+        if name.lower() not in shown:
+            out.append({"repository": g["repository"], "workstream_id": g["workstream_id"], "tasks": len(g.get("tasks", []))})
+    return sorted(out, key=lambda r: r["repository"])
+
+
 def alignment_lines(c):
     """Milestone alignment section of STATUS_DETAIL.md (D-093). Counts and weights are shown side by side, no percentage."""
     rows = c.get("milestone_alignment")
@@ -1184,6 +1203,7 @@ def main():
         c["errors"] = sorted(errors)
         if not perrs2:
             c["plan_register"] = plan_register.summary(prows, c, ptext)
+            c["registered_no_weight"] = registered_no_weight(root, c["plan_register"])
     if c.get("v2_plan"):
         srows, serrs = sequence_check.check(root, c)
         c["sequence"] = srows
