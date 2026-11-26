@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0",
+  "workstream_id": "SDK",
+  "repo": "KritvaOS/kritva-sdk",
+  "source": {
+    "branch": "main",
+    "commit": "f6eb25b1bd94b61c593ef7dc1a596cc91fd13c9c",
+    "tag": null
+  },
+  "tasks": [],
+  "updated_at": "2026-11-26T03:00:00Z"
+}

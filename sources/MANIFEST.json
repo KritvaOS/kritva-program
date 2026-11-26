@@ -181,6 +181,37 @@
       "status_only": false,
       "tasks": 6
     },
+    "SDK": {
+      "ahead_by": 2,
+      "changed_files": [
+        ".github/workflows/progress-check.yml",
+        "Makefile",
+        "README.md",
+        "planning/CHANGELOG.md",
+        "planning/MILESTONE.md",
+        "planning/README.md",
+        "scripts/progress_report.py",
+        "status/README.md",
+        "status/STATUS.md",
+        "status/program_snapshot.json",
+        "status/status.json",
+        "status/status.schema.json",
+        "status/status.schema.json.sha256"
+      ],
+      "changed_files_truncated": false,
+      "fetched_at": "2026-11-26T02:06:04Z",
+      "fetched_head": "0dd83f658e2152146625e26bd30cdb8a563623aa",
+      "gap_kind": "OTHER_FILES",
+      "last_attempt_at": "2026-11-26T02:06:04Z",
+      "ref": "main",
+      "relation": "AHEAD",
+      "repo": "KritvaOS/kritva-sdk",
+      "report_source_commit": "f6eb25b1bd94b61c593ef7dc1a596cc91fd13c9c",
+      "report_updated_at": "2026-11-26T03:00:00Z",
+      "state": "FETCHED",
+      "status_only": false,
+      "tasks": 0
+    },
     "SENSE": {
       "ahead_by": 122,
       "changed_files": [

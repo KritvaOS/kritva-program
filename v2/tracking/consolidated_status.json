@@ -249,12 +249,10 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 94/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 86/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: removed KOS-MIND-001, KOS-MIND-M0-001",
-      "Warnings: 59 -> 62"
+      "Warnings: 62 -> 61"
     ],
-    "recorded_at": "2026-11-26T01:39:16Z",
-    "since": "2026-11-25T02:48:21Z"
+    "recorded_at": "2026-11-26T02:07:08Z",
+    "since": "2026-11-26T01:54:41Z"
   },
   "errors": [],
   "evidence_health": [
@@ -358,7 +356,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-26T01:54:41Z",
+  "generated_at": "2026-11-26T02:07:08Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 56,
@@ -2267,6 +2265,35 @@
         "workstream_id": "MOTION"
       },
       {
+        "age_hours": 0,
+        "ahead_by": 2,
+        "changed_files": [
+          ".github/workflows/progress-check.yml",
+          "Makefile",
+          "README.md",
+          "planning/CHANGELOG.md",
+          "planning/MILESTONE.md",
+          "planning/README.md",
+          "scripts/progress_report.py",
+          "status/README.md",
+          "status/STATUS.md",
+          "status/program_snapshot.json",
+          "status/status.json",
+          "status/status.schema.json",
+          "status/status.schema.json.sha256"
+        ],
+        "fetch_state": "FETCHED",
+        "fetched_at": "2026-11-26T02:06:04Z",
+        "fetched_head": "0dd83f658e2152146625e26bd30cdb8a563623aa",
+        "freshness": "FRESH",
+        "gap_kind": "OTHER_FILES",
+        "relation": "AHEAD",
+        "repo": "KritvaOS/kritva-sdk",
+        "report_source_commit": "f6eb25b1bd94b61c593ef7dc1a596cc91fd13c9c",
+        "status_only": false,
+        "workstream_id": "SDK"
+      },
+      {
         "age_hours": 248,
         "ahead_by": 122,
         "changed_files": [
@@ -2398,7 +2425,7 @@
     "progress": "86/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 38.91,
     "readiness": {},
-    "warnings": 62
+    "warnings": 61
   },
   "tasks": [
     {
@@ -3925,7 +3952,6 @@
     "MECHANICAL: no status source (UNVERIFIED)",
     "MIND: status is 15 days old",
     "NEXUS_EDGE: no status source (UNVERIFIED)",
-    "SDK: no status source (UNVERIFIED)",
     "SIM: no status source (UNVERIFIED)",
     "SKILL: status is 18 days old",
     "STUDIO: no status source (UNVERIFIED)"
@@ -4072,10 +4098,10 @@
       "tasks_reported": 0
     },
     {
-      "commit": "-------",
+      "commit": "f6eb25b1bd94b61c593ef7dc1a596cc91fd13c9c",
       "id": "SDK",
       "repo": "KritvaOS/kritva-sdk",
-      "source_state": "UNVERIFIED",
+      "source_state": "OK",
       "tasks_reported": 0
     },
     {
