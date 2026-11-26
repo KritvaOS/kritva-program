@@ -15,8 +15,13 @@ from pathlib import Path
 FILE = "v2/planning/SEVEN_REPO_PLAN_REGISTER.md"
 COLS = ["record_type", "id", "repo", "milestone", "title", "parent_id", "weight_point", "low", "high",
         "plan_state", "execution_status", "credit", "counted", "dependencies"]
-REPOS = ["Program", "Core", "Community", "Sense", "Mind", "Motion", "Skill"]
+REPOS = ["Program", "Core", "Community", "Sense", "Mind", "Motion", "Skill", "SDK"]
 V2_MILESTONE = re.compile(r"^V2-(M\d+)-")
+
+
+def repo_name(code):
+    """Display name of a workstream code in the register: SDK stays upper case, the others are capitalised."""
+    return code if code == "SDK" else code.capitalize()
 
 
 def _cells(line):
@@ -103,7 +108,7 @@ def _base_cells(c):
     for k, v in (c.get("by_milestone") or {}).items():
         m = re.match(r"^V2-(M\d+)-([A-Z]+)-", k)
         if m and v.get("weighted"):
-            a = out.setdefault((m.group(2).capitalize(), m.group(1)), [0, 0])
+            a = out.setdefault((repo_name(m.group(2)), m.group(1)), [0, 0])
             a[0] += v["weight"]
             a[1] += v["accepted_weight"]
     return out
@@ -114,7 +119,7 @@ def _base_by_repo(c):
     for k, v in (c.get("by_milestone") or {}).items():
         m = re.match(r"^V2-M\d+-([A-Z]+)-", k)
         if m and v.get("weighted"):
-            name = m.group(1).capitalize()
+            name = repo_name(m.group(1))
             a = out.setdefault(name, [0, 0, 0, 0])
             a[0] += v["weight"]
             a[1] += v["accepted_weight"]

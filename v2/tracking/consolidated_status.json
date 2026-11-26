@@ -358,7 +358,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-26T01:39:16Z",
+  "generated_at": "2026-11-26T01:54:41Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 56,
@@ -1053,26 +1053,26 @@
       "M1": {
         "accepted": 10,
         "baseline": 15,
-        "high": 21,
-        "low": 13,
-        "point": 17,
-        "rows": 4
+        "high": 26,
+        "low": 16,
+        "point": 21,
+        "rows": 5
       },
       "M2": {
         "accepted": 45,
         "baseline": 45,
-        "high": 68,
-        "low": 44,
-        "point": 56,
-        "rows": 12
+        "high": 76,
+        "low": 49,
+        "point": 62,
+        "rows": 13
       },
       "M3": {
         "accepted": 0,
         "baseline": 0,
-        "high": 60,
-        "low": 37,
-        "point": 48,
-        "rows": 10
+        "high": 82,
+        "low": 48,
+        "point": 64,
+        "rows": 13
       },
       "M4": {
         "accepted": 0,
@@ -1085,26 +1085,26 @@
       "M5": {
         "accepted": 5,
         "baseline": 5,
-        "high": 60,
-        "low": 38,
-        "point": 49,
-        "rows": 9
+        "high": 65,
+        "low": 41,
+        "point": 53,
+        "rows": 10
       },
       "M7": {
         "accepted": 9,
         "baseline": 9,
-        "high": 16,
-        "low": 10,
-        "point": 13,
-        "rows": 3
+        "high": 21,
+        "low": 13,
+        "point": 17,
+        "rows": 4
       },
       "M8": {
         "accepted": 11,
         "baseline": 11,
-        "high": 41,
-        "low": 29,
-        "point": 35,
-        "rows": 6
+        "high": 48,
+        "low": 34,
+        "point": 41,
+        "rows": 7
       }
     },
     "by_repo": {
@@ -1113,10 +1113,10 @@
         "accepted_tasks": 0,
         "baseline": 0,
         "baseline_tasks": 0,
-        "high": 167,
-        "low": 107,
-        "point": 137,
-        "rows": 30
+        "high": 135,
+        "low": 87,
+        "point": 111,
+        "rows": 24
       },
       "Core": {
         "accepted": 0,
@@ -1158,6 +1158,16 @@
         "point": 5,
         "rows": 1
       },
+      "SDK": {
+        "accepted": 0,
+        "accepted_tasks": 0,
+        "baseline": 0,
+        "baseline_tasks": 0,
+        "high": 84,
+        "low": 50,
+        "point": 66,
+        "rows": 14
+      },
       "Sense": {
         "accepted": 52,
         "accepted_tasks": 11,
@@ -1180,8 +1190,8 @@
       }
     },
     "file": "v2/planning/SEVEN_REPO_PLAN_REGISTER.md",
-    "high": 288,
-    "low": 185,
+    "high": 340,
+    "low": 215,
     "matrix": {
       "Community": {
         "M1": {
@@ -1193,8 +1203,8 @@
         "M2": {
           "accepted": 0,
           "baseline": 0,
-          "point": 26,
-          "rows": 6
+          "point": 18,
+          "rows": 4
         },
         "M3": {
           "accepted": 0,
@@ -1205,14 +1215,14 @@
         "M4": {
           "accepted": 0,
           "baseline": 0,
-          "point": 18,
-          "rows": 4
+          "point": 9,
+          "rows": 2
         },
         "M5": {
           "accepted": 0,
           "baseline": 0,
-          "point": 19,
-          "rows": 4
+          "point": 10,
+          "rows": 2
         },
         "M7": {
           "accepted": 0,
@@ -1325,6 +1335,50 @@
           "rows": 1
         }
       },
+      "SDK": {
+        "M1": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 4,
+          "rows": 1
+        },
+        "M2": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 14,
+          "rows": 3
+        },
+        "M3": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 16,
+          "rows": 3
+        },
+        "M4": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 9,
+          "rows": 2
+        },
+        "M5": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 13,
+          "rows": 3
+        },
+        "M7": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 4,
+          "rows": 1
+        },
+        "M8": {
+          "accepted": 0,
+          "baseline": 0,
+          "point": 6,
+          "rows": 1
+        }
+      },
       "Sense": {
         "M0": {
           "accepted": 3,
@@ -1402,9 +1456,9 @@
         }
       }
     },
-    "point": 236,
+    "point": 276,
     "retired_parents": 14,
-    "rows": 48,
+    "rows": 56,
     "tasks": [
       {
         "id": "PROPOSED-NEW-PROGRAM-002",
@@ -1617,7 +1671,7 @@
       {
         "id": "PROPOSED-NEW-COMMUNITY-005-01",
         "milestone": "M2",
-        "repo": "Community",
+        "repo": "SDK",
         "status": "NOT_STARTED",
         "title": "SDK package and build manifest",
         "weight": 4
@@ -1625,7 +1679,7 @@
       {
         "id": "PROPOSED-NEW-COMMUNITY-005-02",
         "milestone": "M2",
-        "repo": "Community",
+        "repo": "SDK",
         "status": "NOT_STARTED",
         "title": "Clean-environment SDK installation and import tests",
         "weight": 4
@@ -1713,7 +1767,7 @@
       {
         "id": "PROPOSED-NEW-COMMUNITY-012-01",
         "milestone": "M4",
-        "repo": "Community",
+        "repo": "SDK",
         "status": "NOT_STARTED",
         "title": "SDK developer API and CLI",
         "weight": 4
@@ -1721,7 +1775,7 @@
       {
         "id": "PROPOSED-NEW-COMMUNITY-012-02",
         "milestone": "M4",
-        "repo": "Community",
+        "repo": "SDK",
         "status": "NOT_STARTED",
         "title": "SDK examples, documentation and clean-environment tests",
         "weight": 5
@@ -1745,7 +1799,7 @@
       {
         "id": "PROPOSED-NEW-COMMUNITY-014-01",
         "milestone": "M5",
-        "repo": "Community",
+        "repo": "SDK",
         "status": "NOT_STARTED",
         "title": "SDK job submit, status and cancel integration",
         "weight": 4
@@ -1753,7 +1807,7 @@
       {
         "id": "PROPOSED-NEW-COMMUNITY-014-02",
         "milestone": "M5",
-        "repo": "Community",
+        "repo": "SDK",
         "status": "NOT_STARTED",
         "title": "SDK result retrieval and error handling",
         "weight": 5
@@ -1789,6 +1843,70 @@
         "status": "NOT_STARTED",
         "title": "Edge and Hybrid context conformance fixtures",
         "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-SDK-001",
+        "milestone": "M1",
+        "repo": "SDK",
+        "status": "NOT_STARTED",
+        "title": "Architecture and API design",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-SDK-003",
+        "milestone": "M2",
+        "repo": "SDK",
+        "status": "NOT_STARTED",
+        "title": "Configuration, contract compatibility and Sense models",
+        "weight": 6
+      },
+      {
+        "id": "PROPOSED-NEW-SDK-005",
+        "milestone": "M3",
+        "repo": "SDK",
+        "status": "NOT_STARTED",
+        "title": "Sense API, stream and frame-graph adapters",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-SDK-004",
+        "milestone": "M3",
+        "repo": "SDK",
+        "status": "NOT_STARTED",
+        "title": "Control Plane client and transport foundation (excludes job operations; conditional on an approved Control Plane API)",
+        "weight": 5
+      },
+      {
+        "id": "PROPOSED-NEW-SDK-009",
+        "milestone": "M3",
+        "repo": "SDK",
+        "status": "NOT_STARTED",
+        "title": "Motion, Mind and Skill adapters (conditional on approved, tagged component contracts)",
+        "weight": 6
+      },
+      {
+        "id": "PROPOSED-NEW-SDK-006",
+        "milestone": "M5",
+        "repo": "SDK",
+        "status": "NOT_STARTED",
+        "title": "Simulation adapter only (examples stay with PROPOSED-NEW-COMMUNITY-012-02; conditional on an approved simulation interface)",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-SDK-007",
+        "milestone": "M7",
+        "repo": "SDK",
+        "status": "NOT_STARTED",
+        "title": "Telemetry and event interfaces only (result retrieval stays with PROPOSED-NEW-COMMUNITY-014-02; conditional on an approved telemetry or event contract)",
+        "weight": 4
+      },
+      {
+        "id": "PROPOSED-NEW-SDK-008",
+        "milestone": "M8",
+        "repo": "SDK",
+        "status": "NOT_STARTED",
+        "title": "Security, compatibility and release readiness",
+        "weight": 6
       }
     ],
     "titles": {
@@ -1871,11 +1989,6 @@
       "repository": "KritvaOS/kritva-connect",
       "tasks": 10,
       "workstream_id": "CONNECT"
-    },
-    {
-      "repository": "KritvaOS/kritva-sdk",
-      "tasks": 9,
-      "workstream_id": "SDK"
     }
   ],
   "require_run_verification": true,
@@ -1984,7 +2097,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 247,
+        "age_hours": 248,
         "ahead_by": 62,
         "changed_files": [
           "AGENTS.md",
@@ -2050,7 +2163,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 247,
+        "age_hours": 248,
         "ahead_by": 8,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2080,7 +2193,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 247,
+        "age_hours": 248,
         "ahead_by": 10,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2109,7 +2222,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 247,
+        "age_hours": 248,
         "ahead_by": 6,
         "changed_files": [
           "README.md",
@@ -2134,7 +2247,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 247,
+        "age_hours": 248,
         "ahead_by": 2,
         "changed_files": [
           "planning/CHANGELOG.md",
@@ -2154,7 +2267,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 247,
+        "age_hours": 248,
         "ahead_by": 122,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2220,7 +2333,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 247,
+        "age_hours": 248,
         "ahead_by": 12,
         "changed_files": [
           ".github/workflows/progress-check.yml",
