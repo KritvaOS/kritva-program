@@ -37,6 +37,15 @@ It does **not** contain engineering source code, and it is not the authority for
 | Code ownership | Single code owner; a second reviewer is a program decision (D-025) | [.github/CODEOWNERS](.github/CODEOWNERS) |
 | Pending owner input | Open decisions and reviews, generated from structured records | [PENDING_DECISIONS.md](v2/planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](v2/planning/PENDING_REVIEWS.md) |
 
+
+## 2A. Public Program Scope and Authority
+
+This repository is the independent public program authority for the Kritva open-source ecosystem. It owns the public program decisions, repository planning sequence, baseline, approvals, gates, planning inventory and public status reporting for Core, Community and the public capability repositories registered here.
+
+The private Enterprise program is a separate authority for the integrated product plan and Enterprise scope. This public repository is not generated from the private repository. Enterprise may consume public status and release evidence as read-only, commit-pinned inputs, but does not edit public decisions, baselines, approvals or gates (D-154; cross-reference ENT:ED-095).
+
+The public baseline and task records remain unchanged by this authority clarification. Repository implementation evidence is reported by engineering repositories; acceptance and credit remain governed by this program's approved records.
+
 ## 3. KritvaOS Ecosystem Overview
 
 The repositories of the program, for navigation. The roster, the dependency order, the approval roles and the required checks are owned by [repo-pipeline.json](v2/planning/repo-pipeline.json) (read by `scripts/pipeline/ship-prs.sh`), not by this table. Each repository states its own visibility in its README.
