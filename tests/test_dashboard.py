@@ -256,6 +256,17 @@ class ExecutiveView(unittest.TestCase):
         self.assertIn("| Core | 3 / 5 | 9 / 20 |", t)
         self.assertIn("| Sense | 1 / 3 | 10 / 40 |", t)
 
+    def test_registered_without_register_rows_is_a_line_not_a_row(self):
+        c = self.plan_doc()
+        base = "\n".join(D.repo_table_lines(c))
+        self.assertNotIn("Registered in the planning inventory", base)
+        c["registered_no_weight"] = [{"repository": "KritvaOS/kritva-sdk", "workstream_id": "SDK", "tasks": 9}]
+        t = "\n".join(D.repo_table_lines(c))
+        self.assertIn("Registered in the planning inventory with no plan-register rows yet: kritva-sdk (9 planning tasks).", t)
+        self.assertNotIn("| kritva-sdk |", t)
+        self.assertNotIn("| SDK |", t)
+        self.assertEqual([l for l in t.splitlines() if l.startswith("|")], [l for l in base.splitlines() if l.startswith("|")])
+
     def test_matrix_has_foundation_column(self):
         t = exec_view(self.plan_doc())
         self.assertIn("| Repository | Foundation (PRE_V2) | M0 |", t)
