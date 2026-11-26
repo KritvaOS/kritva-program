@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-26T01:39:16Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-26T01:54:41Z (freshness of sources is judged at this time)
 - Baseline version: 15 (APPROVED)
 - Accepted engineering progress: 38.91% (86/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 17/56 tasks (repo-reported; not acceptance)
@@ -29,17 +29,17 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-26T01:39:16Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-26T01:54:41Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | STALE | 2026-11-15T17:54:15Z (247h ago) | a8be849 | 0b0f180 | 62 commit(s) | OTHER FILES (review): AGENTS.md, Makefile, README.md, scripts/docs/check_readme.py, scripts/security/check_commit_format.py |
-| COMMUNITY | STALE | 2026-11-15T17:54:15Z (247h ago) | c35ddb7 | 37c59c1 | 8 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
-| CORE | STALE | 2026-11-15T17:54:15Z (247h ago) | 59335f8 | 0b30a99 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
-| MIND | STALE | 2026-11-15T17:54:15Z (247h ago) | 29b8c4f | d593493 | 6 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, scripts/check_readme.py |
-| MOTION | STALE | 2026-11-15T17:54:15Z (247h ago) | cb0d2bd | d3289b8 | 2 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, scripts/status/gen_status.py, status/status.json, tests/status_gen/test_gen_status.py |
-| SENSE | STALE | 2026-11-15T17:54:15Z (247h ago) | a1259e5 | 07c48d5 | 122 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
-| SKILL | STALE | 2026-11-15T17:54:15Z (247h ago) | 83d7a46 | 557f19b | 12 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
+| CI_DEV_INFRA | STALE | 2026-11-15T17:54:15Z (248h ago) | a8be849 | 0b0f180 | 62 commit(s) | OTHER FILES (review): AGENTS.md, Makefile, README.md, scripts/docs/check_readme.py, scripts/security/check_commit_format.py |
+| COMMUNITY | STALE | 2026-11-15T17:54:15Z (248h ago) | c35ddb7 | 37c59c1 | 8 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE.md, planning/MILESTONE_STATUS.md, planning/PD-017-SECURITY-MAILBOX-TEST.md |
+| CORE | STALE | 2026-11-15T17:54:15Z (248h ago) | 59335f8 | 0b30a99 | 10 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/milestones/KF-CORE-M0/tasks/KF-CORE-M0-001/ACCEPTANCE_CRITERIA.md |
+| MIND | STALE | 2026-11-15T17:54:15Z (248h ago) | 29b8c4f | d593493 | 6 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, scripts/check_readme.py |
+| MOTION | STALE | 2026-11-15T17:54:15Z (248h ago) | cb0d2bd | d3289b8 | 2 commit(s) | OTHER FILES (review): planning/CHANGELOG.md, scripts/status/gen_status.py, status/status.json, tests/status_gen/test_gen_status.py |
+| SENSE | STALE | 2026-11-15T17:54:15Z (248h ago) | a1259e5 | 07c48d5 | 122 commit(s) | OTHER FILES (review): .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml, .github/workflows/readme-check.yml |
+| SKILL | STALE | 2026-11-15T17:54:15Z (248h ago) | 83d7a46 | 557f19b | 12 commit(s) | OTHER FILES (review): .github/workflows/progress-check.yml, README.md, planning/MILESTONE_STATUS.md, planning/TASKS.md, planning/reviews/REV-007-GOVERNANCE-BASELINE.md |
 
 ## Workstreams
 
@@ -347,18 +347,20 @@ Approved plan rows (no credit). Weights are planning estimates. Status is the ex
 | M1 | Community | PROPOSED-NEW-COMMUNITY-018-01 | Capability contract inventory and compatibility matrix | 4 | NOT_STARTED |
 | M1 | Community | PROPOSED-NEW-COMMUNITY-018-02 | Automated version and pin compatibility checks | 4 | NOT_STARTED |
 | M1 | Skill | KOS-SKILL-001 | Skill foundational contract and capability integration | 5 | IN_PROGRESS |
+| M1 | SDK | PROPOSED-NEW-SDK-001 | Architecture and API design | 4 | NOT_STARTED |
 | M2 | Core | PROPOSED-NEW-CORE-002 | Core build and artifact integration | 5 | NOT_STARTED |
 | M2 | Community | PROPOSED-NEW-COMMUNITY-003-01 | Build artifact handoff specification and metadata | 4 | NOT_STARTED |
 | M2 | Community | PROPOSED-NEW-COMMUNITY-003-02 | Reproducible integration build and artifact hash | 5 | NOT_STARTED |
 | M2 | Community | PROPOSED-NEW-COMMUNITY-004-01 | Simulator artifact interface and manifest | 5 | NOT_STARTED |
 | M2 | Community | PROPOSED-NEW-COMMUNITY-004-02 | Deterministic simulator artifact handoff tests | 4 | NOT_STARTED |
-| M2 | Community | PROPOSED-NEW-COMMUNITY-005-01 | SDK package and build manifest | 4 | NOT_STARTED |
-| M2 | Community | PROPOSED-NEW-COMMUNITY-005-02 | Clean-environment SDK installation and import tests | 4 | NOT_STARTED |
 | M2 | Mind | KOS-MIND-002 | Mind validation and semantics implementation | 5 | IN_PROGRESS |
 | M2 | Mind | KOS-MIND-004 | Mind capability and contract integration | 6 | NOT_STARTED |
 | M2 | Mind | PROPOSED-NEW-MIND-003-01 | Context lifecycle model | 5 | NOT_STARTED |
 | M2 | Mind | PROPOSED-NEW-MIND-003-02 | Edge and Hybrid context conformance fixtures | 5 | NOT_STARTED |
 | M2 | Skill | PROPOSED-NEW-SKILL-002 | Skill build and package integration | 4 | NOT_STARTED |
+| M2 | SDK | PROPOSED-NEW-COMMUNITY-005-01 | SDK package and build manifest | 4 | NOT_STARTED |
+| M2 | SDK | PROPOSED-NEW-COMMUNITY-005-02 | Clean-environment SDK installation and import tests | 4 | NOT_STARTED |
+| M2 | SDK | PROPOSED-NEW-SDK-003 | Configuration, contract compatibility and Sense models | 6 | NOT_STARTED |
 | M3 | Community | PROPOSED-NEW-COMMUNITY-006 | Control Plane service conformance | 5 | NOT_STARTED |
 | M3 | Community | PROPOSED-NEW-COMMUNITY-007-01 | Control Plane API resource model and versioning | 5 | NOT_STARTED |
 | M3 | Community | PROPOSED-NEW-COMMUNITY-007-02 | API schema validation and compatibility fixtures | 4 | NOT_STARTED |
@@ -369,28 +371,34 @@ Approved plan rows (no credit). Weights are planning estimates. Status is the ex
 | M3 | Community | PROPOSED-NEW-COMMUNITY-010-01 | Control Plane service conformance harness and traceability | 5 | NOT_STARTED |
 | M3 | Community | PROPOSED-NEW-COMMUNITY-010-02 | API, lifecycle and authorization integration tests | 5 | NOT_STARTED |
 | M3 | Skill | PROPOSED-NEW-SKILL-003 | Skill Control Plane registration and consumption | 5 | NOT_STARTED |
+| M3 | SDK | PROPOSED-NEW-SDK-004 | Control Plane client and transport foundation (excludes job operations; conditional on an approved Control Plane API) | 5 | NOT_STARTED |
+| M3 | SDK | PROPOSED-NEW-SDK-005 | Sense API, stream and frame-graph adapters | 5 | NOT_STARTED |
+| M3 | SDK | PROPOSED-NEW-SDK-009 | Motion, Mind and Skill adapters (conditional on approved, tagged component contracts) | 6 | NOT_STARTED |
 | M4 | Community | PROPOSED-NEW-COMMUNITY-011-01 | Studio workflow model | 5 | NOT_STARTED |
 | M4 | Community | PROPOSED-NEW-COMMUNITY-011-02 | Demonstrable Studio sample-project workflow | 4 | NOT_STARTED |
-| M4 | Community | PROPOSED-NEW-COMMUNITY-012-01 | SDK developer API and CLI | 4 | NOT_STARTED |
-| M4 | Community | PROPOSED-NEW-COMMUNITY-012-02 | SDK examples, documentation and clean-environment tests | 5 | NOT_STARTED |
+| M4 | SDK | PROPOSED-NEW-COMMUNITY-012-01 | SDK developer API and CLI | 4 | NOT_STARTED |
+| M4 | SDK | PROPOSED-NEW-COMMUNITY-012-02 | SDK examples, documentation and clean-environment tests | 5 | NOT_STARTED |
 | M5 | Community | PROPOSED-NEW-COMMUNITY-013-01 | Simulator job execution orchestration | 5 | NOT_STARTED |
 | M5 | Community | PROPOSED-NEW-COMMUNITY-013-02 | Deterministic execution and result handoff | 5 | NOT_STARTED |
-| M5 | Community | PROPOSED-NEW-COMMUNITY-014-01 | SDK job submit, status and cancel integration | 4 | NOT_STARTED |
-| M5 | Community | PROPOSED-NEW-COMMUNITY-014-02 | SDK result retrieval and error handling | 5 | NOT_STARTED |
 | M5 | Mind | KOS-MIND-005 | Mind execution and runtime integration | 6 | NOT_STARTED |
 | M5 | Mind | KOS-MIND-006 | Mind execution conformance and validation | 6 | NOT_STARTED |
 | M5 | Mind | KOS-MIND-007 | Joint Mind-to-Skill integration | 6 | NOT_STARTED |
 | M5 | Motion | PROPOSED-NEW-MOTION-002 | Motion simulated execution integration | 6 | NOT_STARTED |
 | M5 | Skill | PROPOSED-NEW-SKILL-004 | Skill runtime execution against simulated capabilities | 6 | NOT_STARTED |
+| M5 | SDK | PROPOSED-NEW-COMMUNITY-014-01 | SDK job submit, status and cancel integration | 4 | NOT_STARTED |
+| M5 | SDK | PROPOSED-NEW-COMMUNITY-014-02 | SDK result retrieval and error handling | 5 | NOT_STARTED |
+| M5 | SDK | PROPOSED-NEW-SDK-006 | Simulation adapter only (examples stay with PROPOSED-NEW-COMMUNITY-012-02; conditional on an approved simulation interface) | 4 | NOT_STARTED |
 | M7 | Community | PROPOSED-NEW-COMMUNITY-015 | Live and results public documentation | 3 | NOT_STARTED |
 | M7 | Community | PROPOSED-NEW-COMMUNITY-016-01 | Telemetry and results ingestion using Sense stream contract | 5 | NOT_STARTED |
 | M7 | Community | PROPOSED-NEW-COMMUNITY-016-02 | Correlation, query and export end-to-end traceability | 5 | NOT_STARTED |
+| M7 | SDK | PROPOSED-NEW-SDK-007 | Telemetry and event interfaces only (result retrieval stays with PROPOSED-NEW-COMMUNITY-014-02; conditional on an approved telemetry or event contract) | 4 | NOT_STARTED |
 | M8 | Program | PROPOSED-NEW-PROGRAM-002 | Production governance and release readiness | 5 | NOT_STARTED |
 | M8 | Core | PROPOSED-NEW-CORE-003 | Core release and security review | 6 | NOT_STARTED |
 | M8 | Community | PROPOSED-NEW-COMMUNITY-017 | Community release and security review | 6 | NOT_STARTED |
 | M8 | Mind | KOS-MIND-008 | Mind production readiness and release review | 6 | NOT_STARTED |
 | M8 | Motion | PROPOSED-NEW-MOTION-003 | Motion production and security review | 6 | NOT_STARTED |
 | M8 | Skill | PROPOSED-NEW-SKILL-005 | Skill production readiness and release review | 6 | NOT_STARTED |
+| M8 | SDK | PROPOSED-NEW-SDK-008 | Security, compatibility and release readiness | 6 | NOT_STARTED |
 
 ## Owner actions and blockers
 
@@ -412,30 +420,31 @@ Compared with the snapshot generated 2026-11-25T02:48:21Z (recorded 2026-11-26T0
 
 Source: [SEVEN_REPO_PLAN_REGISTER.md](../planning/SEVEN_REPO_PLAN_REGISTER.md), recorded as an owner-approved planning record in D-109. Planning weights are estimates, not baseline weights: they earn no credit and are not part of the 155/171 figure above. Each row below keeps the V2 baseline and the approved plan in separate columns.
 
-V2 baseline weight 117 (86 accepted). Approved plan 48 rows, 236 [185-288] (14 retired parents not counted). Total V2 plan weight 353 [302-405]; provisional accepted share 86/353 = 24.4% [21.2%-28.5%].
+V2 baseline weight 117 (86 accepted). Approved plan 56 rows, 276 [215-340] (14 retired parents not counted). Total V2 plan weight 393 [332-457]; provisional accepted share 86/393 = 21.9% [18.8%-25.9%].
 
 | Milestone | V2 baseline weight | Accepted weight | Plan rows | Plan weight [low-high] | Total plan weight |
 |---|---|---|---|---|---|
 | M0 | 32 | 6 | 0 | 0 [0-0] | 32 |
-| M1 | 15 | 10 | 4 | 17 [13-21] | 32 |
-| M2 | 45 | 45 | 12 | 56 [44-68] | 101 |
-| M3 | 0 | 0 | 10 | 48 [37-60] | 48 |
+| M1 | 15 | 10 | 5 | 21 [16-26] | 36 |
+| M2 | 45 | 45 | 13 | 62 [49-76] | 107 |
+| M3 | 0 | 0 | 13 | 64 [48-82] | 64 |
 | M4 | 0 | 0 | 4 | 18 [14-22] | 18 |
-| M5 | 5 | 5 | 9 | 49 [38-60] | 54 |
-| M7 | 9 | 9 | 3 | 13 [10-16] | 22 |
-| M8 | 11 | 11 | 6 | 35 [29-41] | 46 |
-| Total | 117 | 86 | 48 | 236 [185-288] | 353 |
+| M5 | 5 | 5 | 10 | 53 [41-65] | 58 |
+| M7 | 9 | 9 | 4 | 17 [13-21] | 26 |
+| M8 | 11 | 11 | 7 | 41 [34-48] | 52 |
+| Total | 117 | 86 | 56 | 276 [215-340] | 393 |
 
 | Repository | Plan rows | Plan weight [low-high] |
 |---|---|---|
 | Program | 1 | 5 [4-6] |
 | Core | 2 | 11 [9-13] |
-| Community | 30 | 137 [107-167] |
+| Community | 24 | 111 [87-135] |
 | Sense | 0 | 0 [0-0] |
 | Mind | 8 | 45 [35-55] |
 | Motion | 2 | 12 [10-14] |
 | Skill | 5 | 26 [20-33] |
-| Total | 48 | 236 [185-288] |
+| SDK | 14 | 66 [50-84] |
+| Total | 56 | 276 [215-340] |
 
 V2-M6 (physical validation) is on HOLD and excluded. Mechanical, actuator, kritva-enterprise_program and kritva-raas work are outside this plan.
 

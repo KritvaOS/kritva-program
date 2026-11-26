@@ -122,7 +122,7 @@ class Template(unittest.TestCase):
             for _r, folder, _w in pub.REPOS.values():
                 (Path(d) / folder).mkdir()
             done = pub.write(pub.build_all(DATA), d)
-            self.assertEqual(len(done), 6)
+            self.assertEqual(len(done), 7)
             for folder in done:
                 for rel in ("status/program_snapshot.json", "status/STATUS.md", "scripts/progress_report.py",
                             ".github/workflows/progress-check.yml"):

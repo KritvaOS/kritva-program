@@ -14,6 +14,7 @@ scope:
     - kritva-mind
     - kritva-motion
     - kritva-skill
+    - kritva-sdk
 ---
 
 # Seven-repository plan register (DRAFT, planning only)
@@ -26,13 +27,16 @@ Out of scope, aligned separately: kritva-enterprise_program, kritva-raas, all me
 
 Source commits when this was prepared (local main, equal to GitHub main): kritva-program 4a35519870b44e83c5cffb4e53e630f11434ec51; kritva-core 9fe6aa65303cae1bfe8a9d428f0dc0b32e649073; kritvaos-community a4d4fbfaaddb684bae971f2081f5ca5f678d9be5; kritva-sense ddf95185341656bea5f26b2f9196838321853852; kritva-motion cc4503f0b43a3c4e43ed69daf8b557806c28d377; kritva-mind 8cc33291919ce5599d60351d0cf181ea19cdf0ff; kritva-skill c17192001f6c672819589857e8644ad21573d8d8.
 
+D-151 re-homed six D-109 SDK rows from Community to the SDK repository (IDs and weights unchanged) and D-153 added eight SDK planning rows (40 weight) and authorized this register change; the register therefore now covers eight repositories (kritva-sdk added). The seven-repository title is historical.
+
 ## 1. Reconciliation totals
 
 | Subset | Rows | Point | Low | High |
 |---|---:|---:|---:|---:|
 | Original planning rows | 20 | 107 | 84 | 131 |
 | Approved child rows | 28 | 129 | 101 | 157 |
-| Counted planning register | 48 | 236 | 185 | 288 |
+| New SDK planning rows (D-153) | 8 | 40 | 30 | 52 |
+| Counted planning register | 56 | 276 | 215 | 340 |
 | Retired parents (not counted) | 14 | - | - | - |
 | Moved to the baseline in v11 (D-117, not counted) | 10 | 34 | 24 | 44 |
 | Of those, descoped and removed from baseline v12 (D-119, not counted) | 1 | 2 | 1 | 3 |
@@ -45,14 +49,14 @@ V2 baseline (v11, once frozen) is separate: 101 V2 weight, 54 accepted, 23 task 
 | Milestone | Rows | Point | Low | High | V2 baseline | Accepted |
 |---|---:|---:|---:|---:|---:|---:|
 | M0 | 0 | 0 | 0 | 0 | 32 | 0 |
-| M1 | 4 | 17 | 13 | 21 | 15 | 10 |
-| M2 | 12 | 56 | 44 | 68 | 32 | 19 |
-| M3 | 10 | 48 | 37 | 60 | 0 | 0 |
+| M1 | 5 | 21 | 16 | 26 | 15 | 10 |
+| M2 | 13 | 62 | 49 | 76 | 32 | 19 |
+| M3 | 13 | 64 | 48 | 82 | 0 | 0 |
 | M4 | 4 | 18 | 14 | 22 | 0 | 0 |
-| M5 | 9 | 49 | 38 | 60 | 5 | 5 |
-| M7 | 3 | 13 | 10 | 16 | 9 | 9 |
-| M8 | 6 | 35 | 29 | 41 | 11 | 11 |
-| Total | 48 | 236 | 185 | 288 | 104 | 54 |
+| M5 | 10 | 53 | 41 | 65 | 5 | 5 |
+| M7 | 4 | 17 | 13 | 21 | 9 | 9 |
+| M8 | 7 | 41 | 34 | 48 | 11 | 11 |
+| Total | 56 | 276 | 215 | 340 | 104 | 54 |
 
 M6 is excluded (HOLD). M4 reuses the ID as Developer Experience and Ecosystem.
 
@@ -76,12 +80,13 @@ Milestone titles used by this plan (status views show these titles). Booking and
 |---|---:|---:|---:|---:|
 | Program | 1 | 5 | 4 | 6 |
 | Core | 2 | 11 | 9 | 13 |
-| Community | 30 | 137 | 107 | 167 |
+| Community | 24 | 111 | 87 | 135 |
 | Sense | 0 | 0 | 0 | 0 |
 | Mind | 8 | 45 | 35 | 55 |
 | Motion | 2 | 12 | 10 | 14 |
 | Skill | 5 | 26 | 20 | 33 |
-| Total | 48 | 236 | 185 | 288 |
+| SDK | 14 | 66 | 50 | 84 |
+| Total | 56 | 276 | 215 | 340 |
 
 ## 4. Column definitions
 
@@ -124,8 +129,8 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-003-02 | Community | M2 | Reproducible integration build and artifact hash | PROPOSED-NEW-COMMUNITY-003 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-003-01 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-004-01 | Community | M2 | Simulator artifact interface and manifest | PROPOSED-NEW-COMMUNITY-004 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-003-02 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-004-02 | Community | M2 | Deterministic simulator artifact handoff tests | PROPOSED-NEW-COMMUNITY-004 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-004-01 |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-01 | Community | M2 | SDK package and build manifest | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-004-02 |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-02 | Community | M2 | Clean-environment SDK installation and import tests | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-005-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-01 | SDK | M2 | SDK package and build manifest | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-004-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-02 | SDK | M2 | Clean-environment SDK installation and import tests | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-005-01 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-007-01 | Community | M3 | Control Plane API resource model and versioning | PROPOSED-NEW-COMMUNITY-007 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-006 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-007-02 | Community | M3 | API schema validation and compatibility fixtures | PROPOSED-NEW-COMMUNITY-007 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-007-01 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-008-01 | Community | M3 | Job and run lifecycle model | PROPOSED-NEW-COMMUNITY-008 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-007-02 |
@@ -136,12 +141,12 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-010-02 | Community | M3 | API, lifecycle and authorization integration tests | PROPOSED-NEW-COMMUNITY-010 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-010-01 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-011-01 | Community | M4 | Studio workflow model | PROPOSED-NEW-COMMUNITY-011 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-010-02 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-011-02 | Community | M4 | Demonstrable Studio sample-project workflow | PROPOSED-NEW-COMMUNITY-011 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-011-01 |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-012-01 | Community | M4 | SDK developer API and CLI | PROPOSED-NEW-COMMUNITY-012 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-011-02 |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-012-02 | Community | M4 | SDK examples, documentation and clean-environment tests | PROPOSED-NEW-COMMUNITY-012 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-012-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-012-01 | SDK | M4 | SDK developer API and CLI | PROPOSED-NEW-COMMUNITY-012 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-011-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-012-02 | SDK | M4 | SDK examples, documentation and clean-environment tests | PROPOSED-NEW-COMMUNITY-012 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-012-01 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-013-01 | Community | M5 | Simulator job execution orchestration | PROPOSED-NEW-COMMUNITY-013 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-012-02 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-013-02 | Community | M5 | Deterministic execution and result handoff | PROPOSED-NEW-COMMUNITY-013 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-013-01 |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-014-01 | Community | M5 | SDK job submit, status and cancel integration | PROPOSED-NEW-COMMUNITY-014 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-013-02 |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-014-02 | Community | M5 | SDK result retrieval and error handling | PROPOSED-NEW-COMMUNITY-014 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-014-01 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-014-01 | SDK | M5 | SDK job submit, status and cancel integration | PROPOSED-NEW-COMMUNITY-014 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-013-02 |
+| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-014-02 | SDK | M5 | SDK result retrieval and error handling | PROPOSED-NEW-COMMUNITY-014 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-014-01 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-016-01 | Community | M7 | Telemetry and results ingestion using Sense stream contract | PROPOSED-NEW-COMMUNITY-016 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-015 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-016-02 | Community | M7 | Correlation, query and export end-to-end traceability | PROPOSED-NEW-COMMUNITY-016 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-016-01 |
 | PLANNING_TASK | PROPOSED-NEW-MIND-003-01 | Mind | M2 | Context lifecycle model | KOS-MIND-003 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | KOS-MIND-001 accepted |
@@ -201,3 +206,18 @@ The planning row KOS-MIND-001 was removed from the counted register when baselin
 | Baseline task | Former register row | Repo | Baseline milestone | Weight | Range |
 |---|---|---|---|---:|---|
 | KOS-MIND-001 | KOS-MIND-001 | Mind | V2-M1-MIND-001 | 5 | 4-6 |
+
+## 11. New SDK planning rows (D-153)
+
+Eight planning rows added by D-153, each with the register ID PROPOSED-NEW-SDK-nnn for the kritva-sdk repository task KOS-SDK-nnn of the same number (the planning inventory keeps the KOS-SDK IDs; registers and inventory stay separate records) (owner approval 2026-11-26: "I approves 40 more weight for program due to SDK task addition"); the six D-109 SDK rows above moved to the SDK repository under D-151 with their IDs and weights unchanged. Each new row is APPROVED_PLAN with credit 0: planning weight is not implementation progress and earns no credit before an approved baseline task, approval and accepted evidence (D-109). PROPOSED-NEW-SDK-004, 006, 007 and 009 are conditional on the approvals named in their dependencies; PROPOSED-NEW-COMMUNITY-012-01 and 012-02 are conditional and 014-01 and 014-02 are deferred (D-152). The repository task KOS-SDK-002 (package foundation) is the evidence anchor for PROPOSED-NEW-COMMUNITY-005-01 and 005-02 and has no row of its own (D-152); no row here is credited for it. Boundaries: PROPOSED-NEW-SDK-001 is the API design and 012-01 the later developer API and CLI implementation; PROPOSED-NEW-SDK-004 is the generic client and 014-01 owns job lifecycle operations.
+
+| record_type | id | repo | milestone | title | parent_id | weight_point | low | high | plan_state | execution_status | credit | counted | dependencies |
+|---|---|---|---|---|---|---:|---:|---:|---|---|---:|---|---|
+| PLANNING_TASK | PROPOSED-NEW-SDK-001 | SDK | M1 | Architecture and API design |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: none |
+| PLANNING_TASK | PROPOSED-NEW-SDK-003 | SDK | M2 | Configuration, contract compatibility and Sense models |  | 6 | 5 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SDK-001, PROPOSED-NEW-COMMUNITY-005-02 |
+| PLANNING_TASK | PROPOSED-NEW-SDK-005 | SDK | M3 | Sense API, stream and frame-graph adapters |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SDK-003 |
+| PLANNING_TASK | PROPOSED-NEW-SDK-004 | SDK | M3 | Control Plane client and transport foundation (excludes job operations; conditional on an approved Control Plane API) |  | 5 | 3 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: approved Control Plane API and security model |
+| PLANNING_TASK | PROPOSED-NEW-SDK-009 | SDK | M3 | Motion, Mind and Skill adapters (conditional on approved, tagged component contracts) |  | 6 | 4 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: approved, tagged Motion, Mind and Skill contracts |
+| PLANNING_TASK | PROPOSED-NEW-SDK-006 | SDK | M5 | Simulation adapter only (examples stay with PROPOSED-NEW-COMMUNITY-012-02; conditional on an approved simulation interface) |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: approved simulation interface |
+| PLANNING_TASK | PROPOSED-NEW-SDK-007 | SDK | M7 | Telemetry and event interfaces only (result retrieval stays with PROPOSED-NEW-COMMUNITY-014-02; conditional on an approved telemetry or event contract) |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: approved telemetry and event contracts |
+| PLANNING_TASK | PROPOSED-NEW-SDK-008 | SDK | M8 | Security, compatibility and release readiness |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SDK-001, PROPOSED-NEW-SDK-003, PROPOSED-NEW-SDK-005 |

@@ -31,9 +31,10 @@ REPOS = {
     "Mind": ("KritvaOS/kritva-mind", "kritva-mind", "MIND"),
     "Motion": ("KritvaOS/kritva-motion", "kritva-motion", "MOTION"),
     "Skill": ("KritvaOS/kritva-skill", "kritva-skill", "SKILL"),
+    "SDK": ("KritvaOS/kritva-sdk", "kritva-sdk", "SDK"),
 }
 _NOTE_KEY = {"Core": r"CORE", "Community": r"COMMUNITY|KOS-I\d", "Sense": r"SENSE", "Mind": r"MIND",
-             "Motion": r"MOTION", "Skill": r"SKILL", "Program": r"KRP"}
+             "Motion": r"MOTION", "Skill": r"SKILL", "SDK": r"SDK", "Program": r"KRP"}
 
 
 def _titles(c):
