@@ -45,7 +45,7 @@ A task already approved on the same commit is refused (nothing is duplicated). A
 
 ## 5. Procedure: changing the baseline
 
-1. A proposal file `v2/tracking/baseline_v<N>_proposal.json` is prepared and reviewed in a PR.
+1. A proposal file `v2/tracking/baseline_v<N>_proposal.json` is prepared and reviewed in a PR. To add tasks, the proposal also carries `new_tasks` (id, workstream_id, milestone_id, title) and, for a new repository milestone, `new_milestones` (id, workstream_id); `weights` must cover the new tasks. `freeze_baseline.py` adds them to the next baseline in memory, refuses duplicate ids and unknown workstreams or milestones, and never edits a frozen version. Without these keys the proposal only sets weights.
 2. The owner freezes it: `python3 tools/freeze_baseline.py --proposal <file> --approver Dinesh --commit "$(git rev-parse HEAD)" --reason "<why>" --approve`. It writes `v2/tracking/baselines/baseline_v<N>.json`, makes `baseline.json` identical, and appends the reason to `v2/tracking/baselines/CHANGELOG.json`.
 3. Immediately after, with the same time, the owner carries approvals forward: `python3 tools/carry_forward_approvals.py --approver Dinesh --at <freeze time> --reason "<why>" --approve` (D-027). An approval is bound to one baseline version, so a freeze leaves every effective approval stale until this runs. It copies the evidence commit and run, names the old record in `supersedes`, and makes no new judgement. New tasks get nothing.
 4. Record the decision as a new D-number and merge.

@@ -13,6 +13,10 @@ What --approve does (and refuses to do):
     canonical commit and the SHA-256 of the baseline data;
   * preserves the previous version as baselines/baseline_v<old>.json and appends the reason to
     baselines/CHANGELOG.json.
+  * a proposal may also carry `new_tasks` (and `new_milestones`): they are added to the proposed baseline in memory
+    before the weight check, so a new task is frozen with its weight and rationale in the same owner-run step. Each new
+    task needs id, workstream_id, milestone_id and title; `weights` must then cover it. Duplicate ids, unknown
+    workstreams and unknown milestones are refused. Without these keys nothing changes.
 The consolidator re-checks the hash and the frozen copy on every run, so editing baseline.json afterwards
 is reported as an error until a new baseline_version is frozen.
 Stdlib only. Never commits or pushes.
@@ -26,6 +30,56 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import consolidate_status as cs  # noqa: E402
+
+
+NEW_TASK_REQUIRED = ("id", "workstream_id", "milestone_id", "title")
+
+
+def apply_additions(base, proposal, workstream_ids):
+    """Return (new_baseline, added_milestone_ids, added_task_ids, errors): the base with the proposal's new_milestones
+    and new_tasks added. Never mutates `base`. Pure and strictly additive: existing entries are never changed."""
+    new = json.loads(json.dumps(base))
+    errs, added_m, added_t = [], [], []
+    new.setdefault("milestones", [])
+    known_m = {m["id"]: m.get("workstream_id") for m in new["milestones"]}
+    for m in proposal.get("new_milestones", []):
+        mid, ws = m.get("id"), m.get("workstream_id")
+        if not mid or not ws:
+            errs.append(f"new milestone needs id and workstream_id: {m!r}")
+        elif mid in known_m:
+            errs.append(f"new milestone {mid}: id already exists")
+        elif ws not in workstream_ids:
+            errs.append(f"new milestone {mid}: unknown workstream {ws!r}")
+        else:
+            known_m[mid] = ws
+            new["milestones"].append({"id": mid, "workstream_id": ws})
+            added_m.append(mid)
+    known_t = {t["id"] for t in new["tasks"]}
+    for t in proposal.get("new_tasks", []):
+        missing = [k for k in NEW_TASK_REQUIRED if not str(t.get(k) or "").strip()]
+        tid = t.get("id", "?")
+        if missing:
+            errs.append(f"new task {tid}: missing {missing}")
+            continue
+        if tid in known_t:
+            errs.append(f"new task {tid}: id already exists")
+            continue
+        if t["workstream_id"] not in workstream_ids:
+            errs.append(f"new task {tid}: unknown workstream {t['workstream_id']!r}")
+            continue
+        if t["milestone_id"] not in known_m:
+            errs.append(f"new task {tid}: unknown milestone {t['milestone_id']!r}")
+            continue
+        if known_m[t["milestone_id"]] != t["workstream_id"]:
+            errs.append(f"new task {tid}: milestone {t['milestone_id']} belongs to workstream "
+                        f"{known_m[t['milestone_id']]!r}, not {t['workstream_id']!r}")
+            continue
+        known_t.add(tid)
+        added_t.append(tid)
+        new["tasks"].append({"id": tid, "workstream_id": t["workstream_id"], "milestone_id": t["milestone_id"],
+                             "title": t["title"], "weight": None, "requires_physical": bool(t.get("requires_physical", False)),
+                             "phase": t.get("phase")})
+    return new, added_m, added_t, errs
 
 
 def main():
@@ -42,8 +96,11 @@ def main():
     track = root / cs.TRACK
     base = json.loads((track / "baseline.json").read_text(encoding="utf-8"))
     ledger = json.loads((track / "approvals.json").read_text(encoding="utf-8"))
-    prop = json.loads(Path(a.proposal).read_text(encoding="utf-8"))["weights"]
-    errs = []
+    proposal = json.loads(Path(a.proposal).read_text(encoding="utf-8"))
+    prop = proposal["weights"]
+    workstreams = json.loads((track / "workstreams.json").read_text(encoding="utf-8"))["workstreams"]
+    current = base  # the frozen baseline as it is now; the preserved previous version must stay exactly this
+    base, added_m, added_t, errs = apply_additions(current, proposal, {w["id"] for w in workstreams})
     ids = [t["id"] for t in base["tasks"]]
     if set(prop) != set(ids):
         errs.append(f"proposal must cover exactly the baseline tasks (missing {sorted(set(ids) - set(prop))}, "
@@ -63,6 +120,8 @@ def main():
             t["weight"] = prop[t["id"]]["weight"]
             t["weight_rationale"] = prop[t["id"]]["rationale"]
     total = sum(t.get("weight") or 0 for t in new["tasks"])
+    if added_m or added_t:
+        print(f"adds {len(added_t)} task(s) {added_t} and {len(added_m)} milestone(s) {added_m}")
     print(f"proposed baseline v{new['baseline_version']}: {len(ids)} tasks, total weight {total}")
     h = cs.baseline_hash(new)
     print(f"baseline data sha256 (before approval record): {h}")
@@ -91,7 +150,7 @@ def main():
     frozen_dir.mkdir(parents=True, exist_ok=True)
     prev = frozen_dir / f"baseline_v{old_version}.json"
     if not prev.exists():
-        prev.write_text(json.dumps(base, indent=2) + "\n", encoding="utf-8")
+        prev.write_text(json.dumps(current, indent=2) + "\n", encoding="utf-8")
     text = json.dumps(new, indent=2) + "\n"
     target.write_text(text, encoding="utf-8")
     (track / "baseline.json").write_text(text, encoding="utf-8")
