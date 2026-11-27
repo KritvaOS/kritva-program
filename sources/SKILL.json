@@ -4,7 +4,7 @@
   "repo": "KritvaOS/kritva-skill",
   "source": {
     "branch": "main",
-    "commit": "557f19bc21de867f03bef8c867ac599ec17d0693",
+    "commit": "d98b64829d461024b533f2bb3ea3b19ed27bb599",
     "tag": null
   },
   "tasks": [
@@ -26,7 +26,7 @@
         {
           "type": "software",
           "uri": "https://github.com/KritvaOS/kritva-skill/actions/runs/41598873743",
-          "description": "secret-scan CI run 41598873743 PASS on c1719200, the commit reviewed in REV-007; later commits change planning and status files only",
+          "description": "secret-scan CI run 41598873743 PASS on c1719200, the commit reviewed in REV-007 (historical evidence, not a run on the current head). Later commits changed governance tooling and planning files; reviewed against AC-M0-1 to AC-M0-6 at d98b6482 (owner interim review, not independent; record in the review pull request)",
           "commit": "c17192001f6c672819589857e8644ad21573d8d8",
           "ci_run": "41598873743",
           "report_sha256": null,
@@ -35,5 +35,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-07T17:30:00+00:00"
+  "updated_at": "2026-11-24T03:03:22Z"
 }

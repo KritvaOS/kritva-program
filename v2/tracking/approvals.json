@@ -10523,6 +10523,51 @@
       ],
       "rationale": "Carry every effective approval onto baseline v16 (D-155); no new judgement",
       "supersedes": "A605"
+    },
+    {
+      "approval_id": "A662",
+      "task_id": "KOS-SDK-001",
+      "baseline_version": 16,
+      "source_repo": "KritvaOS/kritva-sdk",
+      "source_commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-27T02:52:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403191"
+      ],
+      "rationale": "Owner acceptance under D-155 (interim D-047, not independent): software acceptance of KOS-SDK-001, 002 and 003 on evidence commit 645f984 with the required local gates green; the manual acceptance criteria listed by make acceptance are decided by the owner"
+    },
+    {
+      "approval_id": "A663",
+      "task_id": "KOS-SDK-002",
+      "baseline_version": 16,
+      "source_repo": "KritvaOS/kritva-sdk",
+      "source_commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-27T02:52:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403191"
+      ],
+      "rationale": "Owner acceptance under D-155 (interim D-047, not independent): software acceptance of KOS-SDK-001, 002 and 003 on evidence commit 645f984 with the required local gates green; the manual acceptance criteria listed by make acceptance are decided by the owner"
+    },
+    {
+      "approval_id": "A664",
+      "task_id": "KOS-SDK-003",
+      "baseline_version": 16,
+      "source_repo": "KritvaOS/kritva-sdk",
+      "source_commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-27T02:52:06Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403191"
+      ],
+      "rationale": "Owner acceptance under D-155 (interim D-047, not independent): software acceptance of KOS-SDK-001, 002 and 003 on evidence commit 645f984 with the required local gates green; the manual acceptance criteria listed by make acceptance are decided by the owner"
     }
   ]
 }
