@@ -273,12 +273,10 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 86/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 213/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: added I2-001, I2-002, I2-003, I2-004, I2-005, I2-006, I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008, KF-CORE-M0-001, KF-CORE-R10-001, KF-CORE-R10-002, KF-CORE-R10-003, KF-CORE-R10-004, KF-CORE-R10-005, KF-CORE-R10-006, KF-CORE-R10-007, KF-CORE-R10-008, KF-CORE-R10-009, KOS-SDK-001, KOS-SDK-002, KOS-SDK-003, KOS-SKILL-M0-001",
-      "Warnings: 64 -> 26"
+      "Pending decisions: 2 -> 3"
     ],
-    "recorded_at": "2026-11-27T02:52:06Z",
-    "since": "2026-11-27T02:45:05Z"
+    "recorded_at": "2026-11-27T02:53:17Z",
+    "since": "2026-11-27T02:53:17Z"
   },
   "errors": [],
   "evidence_health": [
@@ -2424,7 +2422,7 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 2,
+    "pending_decisions": 3,
     "pending_reviews": 0,
     "progress": "213/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 89.12,
@@ -4103,7 +4101,7 @@
     }
   ],
   "v2_plan": {
-    "blocking_decisions": 1,
+    "blocking_decisions": 2,
     "horizon_end": "2027-09-13",
     "milestones": [
       {
@@ -4170,7 +4168,7 @@
         "target_date": "2027-09-13"
       }
     ],
-    "pending_decisions": 2,
+    "pending_decisions": 3,
     "pending_reviews": 0,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",

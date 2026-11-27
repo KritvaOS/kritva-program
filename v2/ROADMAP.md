@@ -1,7 +1,7 @@
 # Roadmap
 
 **Owner of:** phase and milestone sequence, planned dates, checkpoints and target outcomes.
-**Status:** DRAFT — sequence is frozen; **no dates have been approved**.
+**Status:** DRAFT — phase sequence is frozen. Owner-approved planning dates were recorded under D-076; the V2-M1 target of 2026-11-30 is no longer considered a credible expected delivery date, and a slip is expected (D-159). That date remains in the machine-readable planning record pending an owner-approved, dependency-aware reforecast (PD-022). No replacement date for V2-M1 or its affected downstream milestones is approved.
 
 ## Phase sequence
 

@@ -104,6 +104,7 @@ Weights add up to 32. Every milestone's tasks are listed in [STATUS_DETAIL.md](S
 | # | Item | Why it matters | Owner |
 |---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh |
+| 2 | PD-022: Approve a dependency-aware reforecast for V2-M1 and downstream phase milestones | Prepare and obtain owner approval for a dependency-aware reforecast after reviewing the remaining M1 exit conditions, the Core identity/security interface, the Mind and Motion contract approval state, the Skill manifest and execution contract, the public registry/platform interface, relevant vocabulary definitions, and the M2 dependency on M1. Propose replacement dates for M1 and all affected downstream milestones as one coherent schedule. Do not treat any advisory date as approved. Preserve milestone scope unless a separate owner decision changes it. Update milestones.json and regenerate the planning outputs only after the replacement schedule is approved. | Dinesh |
 
 All open items are shown.
 
