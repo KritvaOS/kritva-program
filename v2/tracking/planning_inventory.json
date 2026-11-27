@@ -557,24 +557,6 @@
       },
       "tasks": [
         {
-          "task_id": "KOS-SDK-001",
-          "title": "Define Python-first SDK architecture and developer API",
-          "recorded_status": "NOT_STARTED",
-          "status_authority": "SDK owner (Dinesh); not a program approval"
-        },
-        {
-          "task_id": "KOS-SDK-002",
-          "title": "Establish Python package foundation and reproducible build",
-          "recorded_status": "NOT_STARTED",
-          "status_authority": "SDK owner (Dinesh); not a program approval"
-        },
-        {
-          "task_id": "KOS-SDK-003",
-          "title": "Implement configuration, contract compatibility and Sense models",
-          "recorded_status": "NOT_STARTED",
-          "status_authority": "SDK owner (Dinesh); not a program approval"
-        },
-        {
           "task_id": "KOS-SDK-004",
           "title": "Define and implement Control Plane client adapter",
           "recorded_status": "NOT_STARTED",

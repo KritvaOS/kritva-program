@@ -135,5 +135,14 @@
     "canonical_commit": "57724e072387ffe0ca33aefa7b612f9222200edb",
     "reason": "Baseline v15 (D-135): KOS-MOTION-004 added at weight 7 under the new repo milestone V2-M2-MOTION-004; 55 weights unchanged; no credit changes",
     "baseline_sha256": "520e4f6fd14a3d8162209228ecd14d7340d6d28745b909a45a3b79874f5f2b5f"
+  },
+  {
+    "from_version": 15,
+    "to_version": 16,
+    "approver": "Dinesh",
+    "approved_at": "2026-11-27T02:45:05Z",
+    "canonical_commit": "9a2d3a57ed189e0ecf789392ce1ffff936e21445",
+    "reason": "Baseline v16 (D-155): KOS-SDK-001 (weight 4), KOS-SDK-002 (weight 8, replacing the D-109 rows 005-01 and 005-02) and KOS-SDK-003 (weight 6) added under V2-M1-SDK-001 and V2-M2-SDK-001; 56 weights unchanged; no credit changes",
+    "baseline_sha256": "cbcff0c1b2ab12551ec91701f33c85fbcb3fea500d27fca7b90d302700b59d81"
   }
 ]

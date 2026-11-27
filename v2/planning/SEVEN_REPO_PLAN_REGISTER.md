@@ -34,13 +34,14 @@ D-151 re-homed six D-109 SDK rows from Community to the SDK repository (IDs and 
 | Subset | Rows | Point | Low | High |
 |---|---:|---:|---:|---:|
 | Original planning rows | 20 | 107 | 84 | 131 |
-| Approved child rows | 28 | 129 | 101 | 157 |
-| New SDK planning rows (D-153) | 8 | 40 | 30 | 52 |
-| Counted planning register | 56 | 276 | 215 | 340 |
+| Approved child rows | 26 | 121 | 95 | 147 |
+| New SDK planning rows (D-153) | 6 | 30 | 22 | 39 |
+| Counted planning register | 52 | 258 | 201 | 317 |
 | Retired parents (not counted) | 14 | - | - | - |
 | Moved to the baseline in v11 (D-117, not counted) | 10 | 34 | 24 | 44 |
 | Of those, descoped and removed from baseline v12 (D-119, not counted) | 1 | 2 | 1 | 3 |
 | Moved to the baseline in v13 (D-125, not counted) | 1 | 5 | 4 | 6 |
+| Moved to the baseline in v16 (D-155, not counted) | 4 | 18 | 14 | 23 |
 
 V2 baseline (v11, once frozen) is separate: 101 V2 weight, 54 accepted, 23 task rows, because the ten M0 rows above moved from this register into the baseline (D-117). Total plan weight 101 + 241 = 342 [280-405], unchanged by the move; baseline v12 (D-119) then removes the descoped Community task (weight 2), so the V2 baseline is 99 and the total 99 + 241 = 340; provisional accepted share 54/342 = 15.8% [13.3-19.3%]. These measures are never blended with the historical 155/171 (90.64%, PRE_V2 plus V2).
 
@@ -49,14 +50,14 @@ V2 baseline (v11, once frozen) is separate: 101 V2 weight, 54 accepted, 23 task 
 | Milestone | Rows | Point | Low | High | V2 baseline | Accepted |
 |---|---:|---:|---:|---:|---:|---:|
 | M0 | 0 | 0 | 0 | 0 | 32 | 0 |
-| M1 | 5 | 21 | 16 | 26 | 15 | 10 |
-| M2 | 13 | 62 | 49 | 76 | 32 | 19 |
+| M1 | 4 | 17 | 13 | 21 | 19 | 10 |
+| M2 | 10 | 48 | 38 | 58 | 46 | 19 |
 | M3 | 13 | 64 | 48 | 82 | 0 | 0 |
 | M4 | 4 | 18 | 14 | 22 | 0 | 0 |
 | M5 | 10 | 53 | 41 | 65 | 5 | 5 |
 | M7 | 4 | 17 | 13 | 21 | 9 | 9 |
 | M8 | 7 | 41 | 34 | 48 | 11 | 11 |
-| Total | 56 | 276 | 215 | 340 | 104 | 54 |
+| Total | 52 | 258 | 201 | 317 | 122 | 54 |
 
 M6 is excluded (HOLD). M4 reuses the ID as Developer Experience and Ecosystem.
 
@@ -85,8 +86,8 @@ Milestone titles used by this plan (status views show these titles). Booking and
 | Mind | 8 | 45 | 35 | 55 |
 | Motion | 2 | 12 | 10 | 14 |
 | Skill | 5 | 26 | 20 | 33 |
-| SDK | 14 | 66 | 50 | 84 |
-| Total | 56 | 276 | 215 | 340 |
+| SDK | 10 | 48 | 36 | 61 |
+| Total | 52 | 258 | 201 | 317 |
 
 ## 4. Column definitions
 
@@ -119,7 +120,7 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 | PLANNING_TASK | PROPOSED-NEW-SKILL-004 | Skill | M5 | Skill runtime execution against simulated capabilities |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SKILL-003 |
 | PLANNING_TASK | PROPOSED-NEW-SKILL-005 | Skill | M8 | Skill production readiness and release review |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SKILL-004 |
 
-## 6. Child rows (28)
+## 6. Child rows (26)
 
 | record_type | id | repo | milestone | title | parent_id | weight_point | low | high | plan_state | execution_status | credit | counted | dependencies |
 |---|---|---|---|---|---|---:|---:|---:|---|---|---:|---|---|
@@ -129,8 +130,6 @@ Titles and execution statuses are register-friendly summaries. Before relying on
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-003-02 | Community | M2 | Reproducible integration build and artifact hash | PROPOSED-NEW-COMMUNITY-003 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-003-01 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-004-01 | Community | M2 | Simulator artifact interface and manifest | PROPOSED-NEW-COMMUNITY-004 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-003-02 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-004-02 | Community | M2 | Deterministic simulator artifact handoff tests | PROPOSED-NEW-COMMUNITY-004 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-004-01 |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-01 | SDK | M2 | SDK package and build manifest | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-004-02 |
-| PLANNING_TASK | PROPOSED-NEW-COMMUNITY-005-02 | SDK | M2 | Clean-environment SDK installation and import tests | PROPOSED-NEW-COMMUNITY-005 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-005-01 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-007-01 | Community | M3 | Control Plane API resource model and versioning | PROPOSED-NEW-COMMUNITY-007 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-006 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-007-02 | Community | M3 | API schema validation and compatibility fixtures | PROPOSED-NEW-COMMUNITY-007 | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-007-01 |
 | PLANNING_TASK | PROPOSED-NEW-COMMUNITY-008-01 | Community | M3 | Job and run lifecycle model | PROPOSED-NEW-COMMUNITY-008 | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-COMMUNITY-007-02 |
@@ -213,11 +212,19 @@ Eight planning rows added by D-153, each with the register ID PROPOSED-NEW-SDK-n
 
 | record_type | id | repo | milestone | title | parent_id | weight_point | low | high | plan_state | execution_status | credit | counted | dependencies |
 |---|---|---|---|---|---|---:|---:|---:|---|---|---:|---|---|
-| PLANNING_TASK | PROPOSED-NEW-SDK-001 | SDK | M1 | Architecture and API design |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: none |
-| PLANNING_TASK | PROPOSED-NEW-SDK-003 | SDK | M2 | Configuration, contract compatibility and Sense models |  | 6 | 5 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SDK-001, PROPOSED-NEW-COMMUNITY-005-02 |
 | PLANNING_TASK | PROPOSED-NEW-SDK-005 | SDK | M3 | Sense API, stream and frame-graph adapters |  | 5 | 4 | 6 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SDK-003 |
 | PLANNING_TASK | PROPOSED-NEW-SDK-004 | SDK | M3 | Control Plane client and transport foundation (excludes job operations; conditional on an approved Control Plane API) |  | 5 | 3 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: approved Control Plane API and security model |
 | PLANNING_TASK | PROPOSED-NEW-SDK-009 | SDK | M3 | Motion, Mind and Skill adapters (conditional on approved, tagged component contracts) |  | 6 | 4 | 8 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: approved, tagged Motion, Mind and Skill contracts |
 | PLANNING_TASK | PROPOSED-NEW-SDK-006 | SDK | M5 | Simulation adapter only (examples stay with PROPOSED-NEW-COMMUNITY-012-02; conditional on an approved simulation interface) |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: approved simulation interface |
 | PLANNING_TASK | PROPOSED-NEW-SDK-007 | SDK | M7 | Telemetry and event interfaces only (result retrieval stays with PROPOSED-NEW-COMMUNITY-014-02; conditional on an approved telemetry or event contract) |  | 4 | 3 | 5 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: approved telemetry and event contracts |
 | PLANNING_TASK | PROPOSED-NEW-SDK-008 | SDK | M8 | Security, compatibility and release readiness |  | 6 | 5 | 7 | APPROVED_PLAN | NOT_STARTED | 0 | true | PROPOSED: PROPOSED-NEW-SDK-001, PROPOSED-NEW-SDK-003, PROPOSED-NEW-SDK-005 |
+
+## 12. Rows moved to the baseline in v16 (D-155)
+
+Four planning rows were removed from the counted register when baseline v16 added the SDK tasks KOS-SDK-001, KOS-SDK-002 and KOS-SDK-003 as baseline tasks, so no weight is counted twice. 18 weight [14-23] moved; total plan weight is unchanged. KOS-SDK-002 is ONE baseline task and acceptance unit that replaces the two D-109 rows 005-01 and 005-02 (4 + 4 = 8, range 6-10), as D-155 records (it supersedes the D-152 clauses that kept the two rows as separate acceptance units). The two rows are retired into KOS-SDK-002; they are not deleted and not completed, and their scope earns credit once, on KOS-SDK-002, only after an approved baseline task, an approval PASS and CI evidence on the approved commit. Weights and ranges are otherwise unchanged. The six remaining SDK rows of D-153 (005, 004, 009, 006, 007 and 008) and the D-109 rows 012-01, 012-02, 014-01 and 014-02 stay in the register.
+
+| Baseline task | Former register row(s) | Repo | Baseline milestone | Weight | Range |
+|---|---|---|---|---:|---|
+| KOS-SDK-001 | PROPOSED-NEW-SDK-001 | SDK | V2-M1-SDK-001 | 4 | 3-5 |
+| KOS-SDK-002 | PROPOSED-NEW-COMMUNITY-005-01 and PROPOSED-NEW-COMMUNITY-005-02 | SDK | V2-M2-SDK-001 | 8 | 6-10 |
+| KOS-SDK-003 | PROPOSED-NEW-SDK-003 | SDK | V2-M2-SDK-001 | 6 | 5-8 |
