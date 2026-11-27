@@ -4,7 +4,7 @@
   "repo": "KritvaOS/kritva-skill",
   "source": {
     "branch": "main",
-    "commit": "d98b64829d461024b533f2bb3ea3b19ed27bb599",
+    "commit": "3d38e45567c04881e0ac569ab4e577ee1f37d0aa",
     "tag": null
   },
   "tasks": [
@@ -35,5 +35,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-24T03:03:22Z"
+  "updated_at": "2026-11-27T13:50:14Z"
 }
