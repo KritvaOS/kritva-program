@@ -4,9 +4,223 @@
   "repo": "KritvaOS/kritva-sdk",
   "source": {
     "branch": "main",
-    "commit": "f6eb25b1bd94b61c593ef7dc1a596cc91fd13c9c",
+    "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
     "tag": null
   },
-  "tasks": [],
-  "updated_at": "2026-11-26T03:00:00Z"
+  "tasks": [
+    {
+      "task_id": "KOS-SDK-001",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403191",
+          "description": "gates: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): make check, lint, docs-check, test (unit, integration with the pinned kritva-sense oracle, regression) and acceptance",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403191",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403192",
+          "description": "sense-conformance: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): vendored fixtures and pinned oracle cross-validation",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403192",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403186",
+          "description": "package-build: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): pinned reproducible build, wheel and sdist, clean-environment install and import",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403186",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403498",
+          "description": "schema-drift: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): vendored contract files match the recorded provenance",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403498",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403358",
+          "description": "readme-check: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): README standard",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403358",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403211",
+          "description": "progress-check: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): status report against its pinned program snapshot",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403211",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403352",
+          "description": "secret-scan: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): secret scan",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403352",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "task_id": "KOS-SDK-002",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403191",
+          "description": "gates: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): make check, lint, docs-check, test (unit, integration with the pinned kritva-sense oracle, regression) and acceptance",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403191",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403192",
+          "description": "sense-conformance: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): vendored fixtures and pinned oracle cross-validation",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403192",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403186",
+          "description": "package-build: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): pinned reproducible build, wheel and sdist, clean-environment install and import",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403186",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403498",
+          "description": "schema-drift: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): vendored contract files match the recorded provenance",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403498",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403358",
+          "description": "readme-check: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): README standard",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403358",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403211",
+          "description": "progress-check: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): status report against its pinned program snapshot",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403211",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403352",
+          "description": "secret-scan: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): secret scan",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403352",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "task_id": "KOS-SDK-003",
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
+      "readiness": "IMPLEMENTABLE",
+      "evidence": [
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403191",
+          "description": "gates: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): make check, lint, docs-check, test (unit, integration with the pinned kritva-sense oracle, regression) and acceptance",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403191",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403192",
+          "description": "sense-conformance: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): vendored fixtures and pinned oracle cross-validation",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403192",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403186",
+          "description": "package-build: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): pinned reproducible build, wheel and sdist, clean-environment install and import",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403186",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403498",
+          "description": "schema-drift: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): vendored contract files match the recorded provenance",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403498",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403358",
+          "description": "readme-check: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): README standard",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403358",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403211",
+          "description": "progress-check: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): status report against its pinned program snapshot",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403211",
+          "report_sha256": null,
+          "result": "PASS"
+        },
+        {
+          "type": "software",
+          "uri": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403352",
+          "description": "secret-scan: PASS on main commit 645f984 (Merge pull request #14, required local gates merged): secret scan",
+          "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+          "ci_run": "https://github.com/KritvaOS/kritva-sdk/actions/runs/45928403352",
+          "report_sha256": null,
+          "result": "PASS"
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-11-27T13:00:00Z"
 }
