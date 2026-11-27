@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-27T13:52:10Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-27T13:57:11Z (freshness of sources is judged at this time)
 - Baseline version: 16 (APPROVED)
 - Accepted engineering progress: 89.12% (213/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 52/59 tasks (repo-reported; not acceptance)
@@ -29,7 +29,7 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-27T13:52:10Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-27T13:57:11Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
@@ -371,13 +371,12 @@ Open items derived from the program records. Owners and due dates appear only wh
 | # | Item | Why it matters | Recorded owner | Record |
 |---|---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
-| 2 | PD-022: Approve a dependency-aware reforecast for V2-M1 and downstream phase milestones | Prepare and obtain owner approval for a dependency-aware reforecast after reviewing the remaining M1 exit conditions, the Core identity/security interface, the Mind and Motion contract approval state, the Skill manifest and execution contract, the public registry/platform interface, relevant vocabulary definitions, and the M2 dependency on M1. Propose replacement dates for M1 and all affected downstream milestones as one coherent schedule. Do not treat any advisory date as approved. Preserve milestone scope unless a separate owner decision changes it. Update milestones.json and regenerate the planning outputs only after the replacement schedule is approved. | Dinesh | v2/planning/PENDING_DECISIONS.md |
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-27T02:53:17Z (recorded 2026-11-27T02:53:17Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-27T13:52:10Z (recorded 2026-11-27T13:57:11Z). The record is replaced only when a tracked fact changes.
 
-- Pending decisions: 2 -> 3
+- Pending decisions: 3 -> 2
 
 ## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
 
@@ -432,21 +431,21 @@ Frozen baseline; credit needs a recorded approval and verified CI evidence. Only
 
 ## V2 milestone plan (proposed; not the baseline)
 
-Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-044). Phase dates are owner-approved planning dates (D-076, PD-001); they were not derived from a recorded capacity. P6 LAB & ROBOT is on HOLD and has no date. This plan adds no tasks, weights or credit and does not change accepted progress.
+Program start 2026-09-14 and a horizon ending 2027-10-14 are owner-approved (D-044). Phase dates are owner-approved planning dates (D-076, PD-001); they were not derived from a recorded capacity. P6 LAB & ROBOT is on HOLD and has no date. This plan adds no tasks, weights or credit and does not change accepted progress.
 
 | Milestone | Phase | Target | Schedule status | Closed |
 |---|---|---|---|---|
 | V2-M0 | P0 FOUNDATION | 2026-11-08 | APPROVED | yes |
-| V2-M1 | P1 STUDIO | 2026-11-30 | APPROVED | no |
-| V2-M2 | P2 BUILD & ARTIFACT | 2027-01-15 | APPROVED | no |
-| V2-M3 | P3 CONTROL PLANE | 2027-03-15 | APPROVED | no |
-| V2-M4 | P4 BOOKING & COMMERCIAL | 2027-04-30 | APPROVED | no |
-| V2-M5 | P5 EXECUTION | 2027-06-15 | APPROVED | no |
+| V2-M1 | P1 STUDIO | 2026-12-31 | APPROVED | no |
+| V2-M2 | P2 BUILD & ARTIFACT | 2027-02-15 | APPROVED | no |
+| V2-M3 | P3 CONTROL PLANE | 2027-04-15 | APPROVED | no |
+| V2-M4 | P4 BOOKING & COMMERCIAL | 2027-05-31 | APPROVED | no |
+| V2-M5 | P5 EXECUTION | 2027-07-16 | APPROVED | no |
 | V2-M6 | P6 LAB & ROBOT | NO DATE (HOLD) | HOLD | no |
-| V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | no |
-| V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | no |
+| V2-M7 | P7 LIVE & RESULTS | 2027-09-15 | APPROVED | no |
+| V2-M8 | P8 PRODUCTION | 2027-10-14 | APPROVED | no |
 
-Pending: 3 decisions (2 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 2 decisions (1 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 

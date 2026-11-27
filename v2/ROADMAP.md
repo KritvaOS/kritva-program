@@ -1,7 +1,7 @@
 # Roadmap
 
 **Owner of:** phase and milestone sequence, planned dates, checkpoints and target outcomes.
-**Status:** DRAFT — phase sequence is frozen. Owner-approved planning dates were recorded under D-076; the V2-M1 target of 2026-11-30 is no longer considered a credible expected delivery date, and a slip is expected (D-159). That date remains in the machine-readable planning record pending an owner-approved, dependency-aware reforecast (PD-022). No replacement date for V2-M1 or its affected downstream milestones is approved.
+**Status:** DRAFT — phase sequence is frozen. Owner-approved planning dates were first recorded under D-076; the V2-M1 target of 2026-11-30 was withdrawn as not credible (D-159) and the owner approved a dependency-aware reforecast under D-160 (PD-022): V2-M1 2026-12-31, V2-M2 2027-02-15, V2-M3 2027-04-15, V2-M4 2027-05-31, V2-M5 2027-07-16, V2-M7 2027-09-15 and V2-M8 2027-10-14, with the horizon extended to 2027-10-14. These are planning dates, not capacity-derived and not commitments; V2-M6 stays on HOLD.
 
 ## Phase sequence
 

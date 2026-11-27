@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-27T13:52:10Z from committed data. Baseline v16 (APPROVED). Validation: 0 error(s), 26 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-27T13:57:11Z from committed data. Baseline v16 (APPROVED). Validation: 0 error(s), 26 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -32,14 +32,14 @@ Accepted weight over total weight (completed foundation, V2 baseline and approve
 |---|---|---|---|---|---|---|---|---|
 | Foundation (PRE_V2) | Completed before V2 | done | none | n/a | `███████████████████░` | 101 / 104 | 97.1% | 30 / 31 |
 | M0 | FOUNDATION | 2026-11-08 | none | OK | `█████████░░░░░░░░░░░` | 14 / 32 | 43.8% | 4 / 9 |
-| M1 | STUDIO | 2026-11-30 | M0 | OK | `████████░░░░░░░░░░░░` | 14 / 36 | 38.9% | 3 / 8 |
-| M2 | BUILD & ARTIFACT | 2027-01-15 | M1 | STARTED before M1 closed (waived D-112) | `███████████░░░░░░░░░` | 59 / 107 | 55.1% | 10 / 20 |
-| M3 | CONTROL PLANE | 2027-03-15 | M2 | OK | `░░░░░░░░░░░░░░░░░░░░` | 0 / 64 | 0.0% | 0 / 13 |
-| M4 | DEVELOPER EXPERIENCE & ECOSYSTEM | 2027-04-30 * | M3 | OK | `░░░░░░░░░░░░░░░░░░░░` | 0 / 18 | 0.0% | 0 / 4 |
-| M5 | EXECUTION | 2027-06-15 | M3 | STARTED before M3 closed (waived D-112) | `██░░░░░░░░░░░░░░░░░░` | 5 / 58 | 8.6% | 1 / 11 |
+| M1 | STUDIO | 2026-12-31 | M0 | OK | `████████░░░░░░░░░░░░` | 14 / 36 | 38.9% | 3 / 8 |
+| M2 | BUILD & ARTIFACT | 2027-02-15 | M1 | STARTED before M1 closed (waived D-112) | `███████████░░░░░░░░░` | 59 / 107 | 55.1% | 10 / 20 |
+| M3 | CONTROL PLANE | 2027-04-15 | M2 | OK | `░░░░░░░░░░░░░░░░░░░░` | 0 / 64 | 0.0% | 0 / 13 |
+| M4 | DEVELOPER EXPERIENCE & ECOSYSTEM | 2027-05-31 * | M3 | OK | `░░░░░░░░░░░░░░░░░░░░` | 0 / 18 | 0.0% | 0 / 4 |
+| M5 | EXECUTION | 2027-07-16 | M3 | STARTED before M3 closed (waived D-112) | `██░░░░░░░░░░░░░░░░░░` | 5 / 58 | 8.6% | 1 / 11 |
 | M6 | LAB & ROBOT | HOLD | M5 | n/a | HOLD (excluded) | n/a | n/a | n/a |
-| M7 | LIVE & RESULTS | 2027-08-15 | M4, M5 | STARTED before M4, M5 closed (waived D-112) | `███████░░░░░░░░░░░░░` | 9 / 26 | 34.6% | 2 / 6 |
-| M8 | PRODUCTION | 2027-09-13 | M7 | STARTED before M7 closed (waived D-112) | `████░░░░░░░░░░░░░░░░` | 11 / 52 | 21.2% | 2 / 9 |
+| M7 | LIVE & RESULTS | 2027-09-15 | M4, M5 | STARTED before M4, M5 closed (waived D-112) | `███████░░░░░░░░░░░░░` | 9 / 26 | 34.6% | 2 / 6 |
+| M8 | PRODUCTION | 2027-10-14 | M7 | STARTED before M7 closed (waived D-112) | `████░░░░░░░░░░░░░░░░` | 11 / 52 | 21.2% | 2 / 9 |
 | **Total** | | | | | `█████████░░░░░░░░░░░` | **213 / 497** | **42.9%** | **52 / 111** |
 
 Target dates are the owner-approved planning dates; they are not commitments or forecasts. Rule (D-112): a milestone may not start until the milestones it depends on are closed. Closure needs a recorded completion record; closed so far: M0. STARTED means accepted weight or an in-progress plan task. Existing out-of-sequence work is grandfathered by waivers; a new start without a waiver is a validation error.
@@ -104,7 +104,6 @@ Weights add up to 32. Every milestone's tasks are listed in [STATUS_DETAIL.md](S
 | # | Item | Why it matters | Owner |
 |---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh |
-| 2 | PD-022: Approve a dependency-aware reforecast for V2-M1 and downstream phase milestones | Prepare and obtain owner approval for a dependency-aware reforecast after reviewing the remaining M1 exit conditions, the Core identity/security interface, the Mind and Motion contract approval state, the Skill manifest and execution contract, the public registry/platform interface, relevant vocabulary definitions, and the M2 dependency on M1. Propose replacement dates for M1 and all affected downstream milestones as one coherent schedule. Do not treat any advisory date as approved. Preserve milestone scope unless a separate owner decision changes it. Update milestones.json and regenerate the planning outputs only after the replacement schedule is approved. | Dinesh |
 
 All open items are shown.
 

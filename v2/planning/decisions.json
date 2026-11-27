@@ -467,7 +467,7 @@
       "record_id": "PD-022",
       "record_type": "DECISION",
       "title": "Approve a dependency-aware reforecast for V2-M1 and downstream phase milestones",
-      "status": "PROPOSED",
+      "status": "ACCEPTED",
       "created_at": "2026-11-27",
       "owner": null,
       "decision_authority": "Dinesh",
@@ -492,24 +492,16 @@
           "kritvaos-community"
         ]
       },
-      "required_action": "Prepare and obtain owner approval for a dependency-aware reforecast after reviewing the remaining M1 exit conditions, the Core identity/security interface, the Mind and Motion contract approval state, the Skill manifest and execution contract, the public registry/platform interface, relevant vocabulary definitions, and the M2 dependency on M1. Propose replacement dates for M1 and all affected downstream milestones as one coherent schedule. Do not treat any advisory date as approved. Preserve milestone scope unless a separate owner decision changes it. Update milestones.json and regenerate the planning outputs only after the replacement schedule is approved.",
-      "blocking": true,
-      "blocks": [
-        "V2-M1",
-        "V2-M2",
-        "V2-M3",
-        "V2-M4",
-        "V2-M5",
-        "V2-M7",
-        "V2-M8"
-      ],
+      "required_action": "Resolved by D-160: the owner chose option A (keep the existing intervals, V2-M1 slips 31 days): V2-M1 2026-12-31, V2-M2 2027-02-15, V2-M3 2027-04-15, V2-M4 2027-05-31, V2-M5 2027-07-16, V2-M7 2027-09-15, V2-M8 2027-10-14, with the program horizon extended to 2027-10-14. V2-M0 is unchanged and V2-M6 stays on HOLD without a date. The dates are planning dates, not capacity-derived and not commitments.",
+      "blocking": false,
+      "blocks": [],
       "evidence_refs": [
         "D-076",
         "D-112",
         "D-159"
       ],
       "supersedes": [],
-      "approval_ref": null,
+      "approval_ref": "D-160",
       "source": "V2-M1 schedule withdrawal and dependency-aware reforecast required by D-159"
     }
   ]

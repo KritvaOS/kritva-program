@@ -32,7 +32,7 @@ class Records(unittest.TestCase):
         ms = [m for m in data()["milestones"]["milestones"] if m["target_date"]]
         dates = [m["target_date"] for m in ms]
         self.assertEqual(dates, sorted(dates))
-        self.assertTrue("2026-09-14" <= dates[0] and dates[-1] <= "2027-09-13")
+        self.assertTrue("2026-09-14" <= dates[0] and dates[-1] <= "2027-10-14")
 
     def test_only_dated_milestones_with_a_recorded_approval_are_approved(self):
         for m in data()["milestones"]["milestones"]:
@@ -73,7 +73,7 @@ class Records(unittest.TestCase):
         self.assertTrue(any("HOLD" in e for e in P.validate(d)))
 
     def test_date_outside_horizon_is_rejected(self):
-        d = copy.deepcopy(data()); d["milestones"]["milestones"][8]["target_date"] = "2027-10-01"
+        d = copy.deepcopy(data()); d["milestones"]["milestones"][8]["target_date"] = "2027-11-01"
         self.assertTrue(any("outside the program horizon" in e for e in P.validate(d)))
 
     def test_approved_schedule_needs_approval_record(self):

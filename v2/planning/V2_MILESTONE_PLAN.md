@@ -2,7 +2,7 @@
 
 # V2 Milestone Plan (proposed)
 
-Plan KOS-V2-PLAN, status **PROPOSED**. Program start 2026-09-14 (APPROVED: Dinesh, chat, 2026-10-18 (D-044)); horizon 12 months, ending 2027-09-13 (APPROVED). The eight dated phase milestones carry owner-approved planning dates (decision D-076, PD-001, 2026-10-26); V2-M6 stays on HOLD without a date. The dates were not derived from a recorded capacity (PD-011 is still open) and the owner did not say they are commitments, so they add no baseline tasks, weights or credit.
+Plan KOS-V2-PLAN, status **PROPOSED**. Program start 2026-09-14 (APPROVED: Dinesh, chat, 2026-10-18 (D-044)); horizon 13 months, ending 2027-10-14 (APPROVED). The seven dated phase milestones V2-M1 to V2-M5, V2-M7 and V2-M8 carry owner-approved planning dates from decision D-160 (PD-022, 2026-11-27), which replaced the D-076 dates after D-159 withdrew the V2-M1 target of 2026-11-30; V2-M0 is unchanged and V2-M6 stays on HOLD without a date. D-160 kept the existing intervals between milestones and shifted V2-M1 by 31 days, which required extending the horizon to 2027-10-14. The dates were not derived from a recorded capacity (PD-011 is still open) and the owner did not say they are commitments, so they add no baseline tasks, weights or credit.
 
 This is a planning layer. It is not the frozen baseline: it adds no tasks, weights or credit, and it never changes accepted progress (baseline v2 stays as recorded in [tracking/STATUS_VIEW.md](../tracking/STATUS_VIEW.md)). A milestone closes only through an approved COMPLETION_RECORD.md; a merge, a passing CI run or a tag does not close it.
 
@@ -11,14 +11,14 @@ This is a planning layer. It is not the frozen baseline: it adds no tasks, weigh
 | ID | Phase | Target | Schedule status | Depends on | Outcome |
 |---|---|---|---|---|---|
 | V2-M0 | P0 FOUNDATION | 2026-11-08 | APPROVED | - | Governance contracts, status schemas, repository ownership, CI and PR conventions and evidence requirements are consistent and checked in every repository. |
-| V2-M1 | P1 STUDIO | 2026-11-30 | APPROVED | V2-M0 | Studio scope and the capability interfaces it consumes are defined; the first capability contracts (Sense, Motion, Mind, Skill) are reviewed. |
-| V2-M2 | P2 BUILD & ARTIFACT | 2027-01-15 | APPROVED | V2-M1 | Versioned build and artifact flow works with reproducible metadata, integrity checks and compatibility rules; capability repositories pass contract validation with synthetic data. |
-| V2-M3 | P3 CONTROL PLANE | 2027-03-15 | APPROVED | V2-M2 | Control Plane lifecycle, job and run state, artifact references, authorisation boundaries and API contracts pass integration tests. |
-| V2-M4 | P4 BOOKING & COMMERCIAL | 2027-04-30 | APPROVED | V2-M3 | Booking, credits and commercial flows and their audit records are validated end to end. |
-| V2-M5 | P5 EXECUTION | 2027-06-15 | APPROVED | V2-M3 | Jobs execute through the defined runtime and control path against simulated labs and robots; results and failures are observable and reproducible. |
+| V2-M1 | P1 STUDIO | 2026-12-31 | APPROVED | V2-M0 | Studio scope and the capability interfaces it consumes are defined; the first capability contracts (Sense, Motion, Mind, Skill) are reviewed. |
+| V2-M2 | P2 BUILD & ARTIFACT | 2027-02-15 | APPROVED | V2-M1 | Versioned build and artifact flow works with reproducible metadata, integrity checks and compatibility rules; capability repositories pass contract validation with synthetic data. |
+| V2-M3 | P3 CONTROL PLANE | 2027-04-15 | APPROVED | V2-M2 | Control Plane lifecycle, job and run state, artifact references, authorisation boundaries and API contracts pass integration tests. |
+| V2-M4 | P4 BOOKING & COMMERCIAL | 2027-05-31 | APPROVED | V2-M3 | Booking, credits and commercial flows and their audit records are validated end to end. |
+| V2-M5 | P5 EXECUTION | 2027-07-16 | APPROVED | V2-M3 | Jobs execute through the defined runtime and control path against simulated labs and robots; results and failures are observable and reproducible. |
 | V2-M6 | P6 LAB & ROBOT | NO DATE (HOLD) | HOLD | V2-M5 | Physical Lab Agent and robot work. On HOLD: mechanical scope is not reopened (D-003), so no date is proposed. |
-| V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | V2-M4, V2-M5 | Live service and result flow validated in the available environment (software scope only); physical-robot claims remain gated on V2-M6. |
-| V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | V2-M7 | Production-readiness evidence, security disposition, release and recovery procedures, operational documentation and accepted residual risks are reviewed. |
+| V2-M7 | P7 LIVE & RESULTS | 2027-09-15 | APPROVED | V2-M4, V2-M5 | Live service and result flow validated in the available environment (software scope only); physical-robot claims remain gated on V2-M6. |
+| V2-M8 | P8 PRODUCTION | 2027-10-14 | APPROVED | V2-M7 | Production-readiness evidence, security disposition, release and recovery procedures, operational documentation and accepted residual risks are reviewed. |
 
 Dependency rule: V2-M7 and V2-M8 close only for the scope actually validated. Any criterion that needs physical-robot evidence stays blocked by V2-M6.
 
@@ -44,7 +44,7 @@ Exit conditions:
 
 ### V2-M1 P1 STUDIO
 
-Target: 2026-11-30; schedule status APPROVED; owner UNASSIGNED; closure record none.
+Target: 2026-12-31; schedule status APPROVED; owner UNASSIGNED; closure record none.
 
 Exit conditions:
 
@@ -63,7 +63,7 @@ Exit conditions:
 
 ### V2-M2 P2 BUILD & ARTIFACT
 
-Target: 2027-01-15; schedule status APPROVED; owner UNASSIGNED; closure record none.
+Target: 2027-02-15; schedule status APPROVED; owner UNASSIGNED; closure record none.
 
 Exit conditions:
 
@@ -85,7 +85,7 @@ Exit conditions:
 
 ### V2-M3 P3 CONTROL PLANE
 
-Target: 2027-03-15; schedule status APPROVED; owner UNASSIGNED; closure record none.
+Target: 2027-04-15; schedule status APPROVED; owner UNASSIGNED; closure record none.
 
 Exit conditions:
 
@@ -101,7 +101,7 @@ Exit conditions:
 
 ### V2-M4 P4 BOOKING & COMMERCIAL
 
-Target: 2027-04-30; schedule status APPROVED; owner UNASSIGNED; closure record none.
+Target: 2027-05-31; schedule status APPROVED; owner UNASSIGNED; closure record none.
 
 Exit conditions:
 
@@ -114,7 +114,7 @@ Exit conditions:
 
 ### V2-M5 P5 EXECUTION
 
-Target: 2027-06-15; schedule status APPROVED; owner UNASSIGNED; closure record none.
+Target: 2027-07-16; schedule status APPROVED; owner UNASSIGNED; closure record none.
 
 Exit conditions:
 
@@ -150,7 +150,7 @@ Exit conditions:
 
 ### V2-M7 P7 LIVE & RESULTS
 
-Target: 2027-08-15; schedule status APPROVED; owner UNASSIGNED; closure record none.
+Target: 2027-09-15; schedule status APPROVED; owner UNASSIGNED; closure record none.
 
 Exit conditions:
 
@@ -165,7 +165,7 @@ Exit conditions:
 
 ### V2-M8 P8 PRODUCTION
 
-Target: 2027-09-13; schedule status APPROVED; owner UNASSIGNED; closure record none.
+Target: 2027-10-14; schedule status APPROVED; owner UNASSIGNED; closure record none.
 
 Exit conditions:
 

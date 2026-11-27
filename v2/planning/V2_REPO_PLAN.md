@@ -57,71 +57,71 @@ Merge method: **merge** (decision PD-010 is pending). Releases use annotated Sem
 ### kritva-program
 
 - V2-M0-PROGRAM-001 (2026-11-08, PROPOSED): Plan, registry, schemas, acceptance standard and pipeline manifest approved; status views generated from them.
-- V2-M8-PROGRAM-001 (2027-09-13, PROPOSED): Production-readiness review, residual risks and visibility decisions recorded.
+- V2-M8-PROGRAM-001 (2027-10-14, PROPOSED): Production-readiness review, residual risks and visibility decisions recorded.
 
 ### kritva-core
 
 - V2-M0-CORE-001 (2026-11-08, PROPOSED): Engineering contract approved and pinned; contract_pin check closed.
-- V2-M2-CORE-001 (2027-01-15, PROPOSED): Artifact and compatibility contract published as a versioned release.
-- V2-M8-CORE-001 (2027-09-13, PROPOSED): Release, security disposition and recovery documentation reviewed.
+- V2-M2-CORE-001 (2027-02-15, PROPOSED): Artifact and compatibility contract published as a versioned release.
+- V2-M8-CORE-001 (2027-10-14, PROPOSED): Release, security disposition and recovery documentation reviewed.
 
 ### kritvaos-community
 
 - V2-M0-COMMUNITY-001 (2026-11-08, PROPOSED): Security reporting path working (SECURITY.md contact tested).
-- V2-M1-COMMUNITY-001 (2026-11-30, PROPOSED): Public architecture description matches the approved capability contracts.
-- V2-M3-COMMUNITY-001 (2027-03-15, PROPOSED): Public integration guide matches the control-plane contract.
-- V2-M7-COMMUNITY-001 (2027-08-15, PROPOSED): Public documentation reflects the live and results interfaces.
-- V2-M8-COMMUNITY-001 (2027-09-13, PROPOSED): Release, security disposition and licence review complete.
+- V2-M1-COMMUNITY-001 (2026-12-31, PROPOSED): Public architecture description matches the approved capability contracts.
+- V2-M3-COMMUNITY-001 (2027-04-15, PROPOSED): Public integration guide matches the control-plane contract.
+- V2-M7-COMMUNITY-001 (2027-09-15, PROPOSED): Public documentation reflects the live and results interfaces.
+- V2-M8-COMMUNITY-001 (2027-10-14, PROPOSED): Release, security disposition and licence review complete.
 
 ### kritva-motion
 
 - V2-M0-MOTION-001 (2026-11-08, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
-- V2-M1-MOTION-001 (2026-11-30, PROPOSED): Motion command and state contract (task 001) reviewed and tagged v0.1.0.
-- V2-M2-MOTION-001 (2027-01-15, CLOSED): Command and configuration validation, limit enforcement and admission-time and joint-state fault-path tests pass as a software-only reference validator, with the `make test-unit` gate and a conformance manifest. The integration and regression gates and the runtime lifecycle, termination and fault state machine are separate, later work.
-- V2-M2-MOTION-002 (2027-01-15, CLOSED): Software-only Motion lifecycle, termination, stop-preemption and fault state machine conforms to the Motion contract v0.1.0-draft through deterministic reference tests, with no backend, store or physical behaviour.
-- V2-M2-MOTION-003 (2027-01-15, CLOSED): Software-only Motion configuration activation, idempotent submission, command history, feedback status and event stream semantics conform to the Motion contract v0.1.0-draft through deterministic reference tests, with no persistent storage, transport, backend or physical behaviour.
-- V2-M2-MOTION-004 (2027-01-15, CLOSED): Software-only Motion execution backend interface, scripted deterministic S1 simulator, runtime driver and integration and regression gates conform to the Motion contract v0.1.0-draft (section 17) through deterministic reference tests, with no real actuator, transport, firmware or physical behaviour.
-- V2-M5-MOTION-001 (2027-06-15, PROPOSED): Motion commands validated against a simulated actuator interface.
-- V2-M8-MOTION-001 (2027-09-13, PROPOSED): Release and security review complete.
+- V2-M1-MOTION-001 (2026-12-31, PROPOSED): Motion command and state contract (task 001) reviewed and tagged v0.1.0.
+- V2-M2-MOTION-001 (2027-02-15, CLOSED): Command and configuration validation, limit enforcement and admission-time and joint-state fault-path tests pass as a software-only reference validator, with the `make test-unit` gate and a conformance manifest. The integration and regression gates and the runtime lifecycle, termination and fault state machine are separate, later work.
+- V2-M2-MOTION-002 (2027-02-15, CLOSED): Software-only Motion lifecycle, termination, stop-preemption and fault state machine conforms to the Motion contract v0.1.0-draft through deterministic reference tests, with no backend, store or physical behaviour.
+- V2-M2-MOTION-003 (2027-02-15, CLOSED): Software-only Motion configuration activation, idempotent submission, command history, feedback status and event stream semantics conform to the Motion contract v0.1.0-draft through deterministic reference tests, with no persistent storage, transport, backend or physical behaviour.
+- V2-M2-MOTION-004 (2027-02-15, CLOSED): Software-only Motion execution backend interface, scripted deterministic S1 simulator, runtime driver and integration and regression gates conform to the Motion contract v0.1.0-draft (section 17) through deterministic reference tests, with no real actuator, transport, firmware or physical behaviour.
+- V2-M5-MOTION-001 (2027-07-16, PROPOSED): Motion commands validated against a simulated actuator interface.
+- V2-M8-MOTION-001 (2027-10-14, PROPOSED): Release and security review complete.
 
 ### kritva-sense
 
 - V2-M0-SENSE-001 (2026-11-08, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
-- V2-M1-SENSE-001 (2026-11-30, PROPOSED): Sense architecture and data contract (task 001) reviewed and tagged v0.1.0.
-- V2-M2-SENSE-001 (2027-01-15, CLOSED): Contract validation and synthetic-data tests pass; unit, integration and regression gates implemented.
-- V2-M5-SENSE-001 (2027-06-15, PROPOSED): Sense frames validated in simulated execution.
-- V2-M7-SENSE-001 (2027-08-15, PROPOSED): Telemetry stream contract validated end to end (software scope).
-- V2-M8-SENSE-001 (2027-09-13, CLOSED): Release and security review complete.
+- V2-M1-SENSE-001 (2026-12-31, PROPOSED): Sense architecture and data contract (task 001) reviewed and tagged v0.1.0.
+- V2-M2-SENSE-001 (2027-02-15, CLOSED): Contract validation and synthetic-data tests pass; unit, integration and regression gates implemented.
+- V2-M5-SENSE-001 (2027-07-16, PROPOSED): Sense frames validated in simulated execution.
+- V2-M7-SENSE-001 (2027-09-15, PROPOSED): Telemetry stream contract validated end to end (software scope).
+- V2-M8-SENSE-001 (2027-10-14, CLOSED): Release and security review complete.
 
 ### kritva-mind
 
 - V2-M0-MIND-001 (2026-11-08, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
-- V2-M1-MIND-001 (2026-11-30, PROPOSED): Mind request, context and result contract (task 001) reviewed and tagged v0.1.0.
-- V2-M2-MIND-001 (2027-01-15, PROPOSED): Schema validation, cancellation and error-path tests pass; gates implemented.
-- V2-M5-MIND-001 (2027-06-15, PROPOSED): Mind results reproducible in simulated execution.
-- V2-M8-MIND-001 (2027-09-13, PROPOSED): Release and security review complete.
+- V2-M1-MIND-001 (2026-12-31, PROPOSED): Mind request, context and result contract (task 001) reviewed and tagged v0.1.0.
+- V2-M2-MIND-001 (2027-02-15, PROPOSED): Schema validation, cancellation and error-path tests pass; gates implemented.
+- V2-M5-MIND-001 (2027-07-16, PROPOSED): Mind results reproducible in simulated execution.
+- V2-M8-MIND-001 (2027-10-14, PROPOSED): Release and security review complete.
 
 ### kritva-skill
 
 - V2-M0-SKILL-001 (2026-11-08, PROPOSED): Repository governance baseline merged: acceptance criteria, CI checks, CODEOWNERS, AGENTS.md.
-- V2-M1-SKILL-001 (2026-11-30, PROPOSED): Skill manifest and execution contract (task 001) reviewed and tagged v0.1.0.
-- V2-M2-SKILL-001 (2027-01-15, PROPOSED): Manifest validation and lifecycle conformance tests pass; gates implemented.
-- V2-M3-SKILL-001 (2027-03-15, PROPOSED): Skill execution exposed through the control-plane contract.
-- V2-M5-SKILL-001 (2027-06-15, PROPOSED): Skills execute through the runtime against simulated capabilities.
-- V2-M8-SKILL-001 (2027-09-13, PROPOSED): Release and security review complete.
+- V2-M1-SKILL-001 (2026-12-31, PROPOSED): Skill manifest and execution contract (task 001) reviewed and tagged v0.1.0.
+- V2-M2-SKILL-001 (2027-02-15, PROPOSED): Manifest validation and lifecycle conformance tests pass; gates implemented.
+- V2-M3-SKILL-001 (2027-04-15, PROPOSED): Skill execution exposed through the control-plane contract.
+- V2-M5-SKILL-001 (2027-07-16, PROPOSED): Skills execute through the runtime against simulated capabilities.
+- V2-M8-SKILL-001 (2027-10-14, PROPOSED): Release and security review complete.
 
 ### kritva-sdk
 
-- V2-M1-SDK-001 (2026-11-30, PROPOSED): Python-first contract-first SDK architecture and public API reviewed; first-release scope limited to approved contracts (Sense 0.1.0).
-- V2-M2-SDK-001 (2027-01-15, PROPOSED): Python package foundation, reproducible build, configuration, contract compatibility and Sense models over vendored pinned schemas.
-- V2-M3-SDK-001 (2027-03-15, PROPOSED): Control Plane and capability adapters, conditional on an approved Control Plane API and approved upstream contracts; not implied to exist.
-- V2-M5-SDK-001 (2027-06-15, PROPOSED): Simulation adapter and reproducible examples, conditional on an approved simulation interface; evidence labelled simulation.
-- V2-M7-SDK-001 (2027-08-15, PROPOSED): Telemetry, event and result interfaces where approved upstream contracts define them (software scope).
-- V2-M8-SDK-001 (2027-09-13, PROPOSED): Security, compatibility and release readiness review complete.
+- V2-M1-SDK-001 (2026-12-31, PROPOSED): Python-first contract-first SDK architecture and public API reviewed; first-release scope limited to approved contracts (Sense 0.1.0).
+- V2-M2-SDK-001 (2027-02-15, PROPOSED): Python package foundation, reproducible build, configuration, contract compatibility and Sense models over vendored pinned schemas.
+- V2-M3-SDK-001 (2027-04-15, PROPOSED): Control Plane and capability adapters, conditional on an approved Control Plane API and approved upstream contracts; not implied to exist.
+- V2-M5-SDK-001 (2027-07-16, PROPOSED): Simulation adapter and reproducible examples, conditional on an approved simulation interface; evidence labelled simulation.
+- V2-M7-SDK-001 (2027-09-15, PROPOSED): Telemetry, event and result interfaces where approved upstream contracts define them (software scope).
+- V2-M8-SDK-001 (2027-10-14, PROPOSED): Security, compatibility and release readiness review complete.
 
 ### kritva-actuator
 
-- V2-M5-ACTUATOR-001 (2027-06-15, PROPOSED): Shared actuator interface verified in software only (no physical claim).
+- V2-M5-ACTUATOR-001 (2027-07-16, PROPOSED): Shared actuator interface verified in software only (no physical claim).
 - V2-M6-ACTUATOR-001 (no date, HOLD, ON_HOLD): On HOLD: physical integration scope not defined until the mechanical HOLD is reopened.
 
 ### kritva-actuator-embedded
