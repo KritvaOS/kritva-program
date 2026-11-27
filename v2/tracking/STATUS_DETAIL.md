@@ -371,14 +371,13 @@ Open items derived from the program records. Owners and due dates appear only wh
 | # | Item | Why it matters | Recorded owner | Record |
 |---|---|---|---|---|
 | 1 | PD-002: Define P6 LAB & ROBOT reopening criteria | Say who can reopen mechanical work, what safety and mechanical readiness evidence is required, and whether P7 and P8 physical acceptance depend on V2-M6. | Dinesh | v2/planning/PENDING_DECISIONS.md |
+| 2 | PD-022: Approve a dependency-aware reforecast for V2-M1 and downstream phase milestones | Prepare and obtain owner approval for a dependency-aware reforecast after reviewing the remaining M1 exit conditions, the Core identity/security interface, the Mind and Motion contract approval state, the Skill manifest and execution contract, the public registry/platform interface, relevant vocabulary definitions, and the M2 dependency on M1. Propose replacement dates for M1 and all affected downstream milestones as one coherent schedule. Do not treat any advisory date as approved. Preserve milestone scope unless a separate owner decision changes it. Update milestones.json and regenerate the planning outputs only after the replacement schedule is approved. | Dinesh | v2/planning/PENDING_DECISIONS.md |
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-27T02:45:05Z (recorded 2026-11-27T02:52:06Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-27T02:53:17Z (recorded 2026-11-27T02:53:17Z). The record is replaced only when a tracked fact changes.
 
-- Accepted progress: 86/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 213/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
-- Credited tasks: added I2-001, I2-002, I2-003, I2-004, I2-005, I2-006, I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008, KF-CORE-M0-001, KF-CORE-R10-001, KF-CORE-R10-002, KF-CORE-R10-003, KF-CORE-R10-004, KF-CORE-R10-005, KF-CORE-R10-006, KF-CORE-R10-007, KF-CORE-R10-008, KF-CORE-R10-009, KOS-SDK-001, KOS-SDK-002, KOS-SDK-003, KOS-SKILL-M0-001
-- Warnings: 64 -> 26
+- Pending decisions: 2 -> 3
 
 ## Approved plan by milestone and repository (owner-approved; no credit; not the baseline)
 
@@ -447,7 +446,7 @@ Program start 2026-09-14 and a horizon ending 2027-09-13 are owner-approved (D-0
 | V2-M7 | P7 LIVE & RESULTS | 2027-08-15 | APPROVED | no |
 | V2-M8 | P8 PRODUCTION | 2027-09-13 | APPROVED | no |
 
-Pending: 2 decisions (1 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
+Pending: 3 decisions (2 blocking) and 0 reviews. See [PENDING_DECISIONS.md](../planning/PENDING_DECISIONS.md), [PENDING_REVIEWS.md](../planning/PENDING_REVIEWS.md), [V2_MILESTONE_PLAN.md](../planning/V2_MILESTONE_PLAN.md) and the PR approval sequence in [V2_REPO_PLAN.md](../planning/V2_REPO_PLAN.md).
 
 ## Dated milestones (approved dates only)
 

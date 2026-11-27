@@ -462,6 +462,55 @@
       "supersedes": [],
       "approval_ref": "D-151",
       "source": "SDK repository plan registration, 2026-11-25 (advisory review with an external AI reviewer)"
+    },
+    {
+      "record_id": "PD-022",
+      "record_type": "DECISION",
+      "title": "Approve a dependency-aware reforecast for V2-M1 and downstream phase milestones",
+      "status": "PROPOSED",
+      "created_at": "2026-11-27",
+      "owner": null,
+      "decision_authority": "Dinesh",
+      "due_date": null,
+      "scope": {
+        "phase_ids": [
+          "V2-M1",
+          "V2-M2",
+          "V2-M3",
+          "V2-M4",
+          "V2-M5",
+          "V2-M7",
+          "V2-M8"
+        ],
+        "repo_ids": [
+          "kritva-core",
+          "kritva-mind",
+          "kritva-motion",
+          "kritva-skill",
+          "kritva-sdk",
+          "kritva-sense",
+          "kritvaos-community"
+        ]
+      },
+      "required_action": "Prepare and obtain owner approval for a dependency-aware reforecast after reviewing the remaining M1 exit conditions, the Core identity/security interface, the Mind and Motion contract approval state, the Skill manifest and execution contract, the public registry/platform interface, relevant vocabulary definitions, and the M2 dependency on M1. Propose replacement dates for M1 and all affected downstream milestones as one coherent schedule. Do not treat any advisory date as approved. Preserve milestone scope unless a separate owner decision changes it. Update milestones.json and regenerate the planning outputs only after the replacement schedule is approved.",
+      "blocking": true,
+      "blocks": [
+        "V2-M1",
+        "V2-M2",
+        "V2-M3",
+        "V2-M4",
+        "V2-M5",
+        "V2-M7",
+        "V2-M8"
+      ],
+      "evidence_refs": [
+        "D-076",
+        "D-112",
+        "D-159"
+      ],
+      "supersedes": [],
+      "approval_ref": null,
+      "source": "V2-M1 schedule withdrawal and dependency-aware reforecast required by D-159"
     }
   ]
 }
