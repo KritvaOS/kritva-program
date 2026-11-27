@@ -273,10 +273,10 @@
   },
   "changes": {
     "items": [
-      "Pending decisions: 2 -> 3"
+      "Pending decisions: 3 -> 2"
     ],
-    "recorded_at": "2026-11-27T02:53:17Z",
-    "since": "2026-11-27T02:53:17Z"
+    "recorded_at": "2026-11-27T13:57:11Z",
+    "since": "2026-11-27T13:52:10Z"
   },
   "errors": [],
   "evidence_health": [
@@ -377,7 +377,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-27T13:52:10Z",
+  "generated_at": "2026-11-27T13:57:11Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 59,
@@ -2385,7 +2385,7 @@
       "GATE-KOS-I3-SAFETY": "CLOSED",
       "GATE-KOS-I4-SAFETY": "CLOSED"
     },
-    "pending_decisions": 3,
+    "pending_decisions": 2,
     "pending_reviews": 0,
     "progress": "213/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 89.12,
@@ -4064,8 +4064,8 @@
     }
   ],
   "v2_plan": {
-    "blocking_decisions": 2,
-    "horizon_end": "2027-09-13",
+    "blocking_decisions": 1,
+    "horizon_end": "2027-10-14",
     "milestones": [
       {
         "closed": true,
@@ -4079,35 +4079,35 @@
         "id": "V2-M1",
         "phase": "P1 STUDIO",
         "schedule_status": "APPROVED",
-        "target_date": "2026-11-30"
+        "target_date": "2026-12-31"
       },
       {
         "closed": false,
         "id": "V2-M2",
         "phase": "P2 BUILD & ARTIFACT",
         "schedule_status": "APPROVED",
-        "target_date": "2027-01-15"
+        "target_date": "2027-02-15"
       },
       {
         "closed": false,
         "id": "V2-M3",
         "phase": "P3 CONTROL PLANE",
         "schedule_status": "APPROVED",
-        "target_date": "2027-03-15"
+        "target_date": "2027-04-15"
       },
       {
         "closed": false,
         "id": "V2-M4",
         "phase": "P4 BOOKING & COMMERCIAL",
         "schedule_status": "APPROVED",
-        "target_date": "2027-04-30"
+        "target_date": "2027-05-31"
       },
       {
         "closed": false,
         "id": "V2-M5",
         "phase": "P5 EXECUTION",
         "schedule_status": "APPROVED",
-        "target_date": "2027-06-15"
+        "target_date": "2027-07-16"
       },
       {
         "closed": false,
@@ -4121,17 +4121,17 @@
         "id": "V2-M7",
         "phase": "P7 LIVE & RESULTS",
         "schedule_status": "APPROVED",
-        "target_date": "2027-08-15"
+        "target_date": "2027-09-15"
       },
       {
         "closed": false,
         "id": "V2-M8",
         "phase": "P8 PRODUCTION",
         "schedule_status": "APPROVED",
-        "target_date": "2027-09-13"
+        "target_date": "2027-10-14"
       }
     ],
-    "pending_decisions": 3,
+    "pending_decisions": 2,
     "pending_reviews": 0,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
