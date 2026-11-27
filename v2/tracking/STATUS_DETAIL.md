@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-27T02:53:17Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-27T13:52:10Z (freshness of sources is judged at this time)
 - Baseline version: 16 (APPROVED)
 - Accepted engineering progress: 89.12% (213/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 52/59 tasks (repo-reported; not acceptance)
@@ -29,18 +29,18 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-27T02:53:17Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-27T13:52:10Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | FRESH | 2026-11-27T02:51:15Z (0h ago) | 95524ed | 0b0f180 | 135 commit(s) | OTHER FILES (review): .githooks/pre-push, AGENTS.md, Makefile, README.md, claude-patches-control-plane-direction/0001-control-plane-direction.patch |
-| COMMUNITY | FRESH | 2026-11-27T02:51:15Z (0h ago) | f3c2af3 | 94cb0ac | 12 commit(s) | OTHER FILES (review): ARCHITECTURE.md, CONTRIBUTING.md, README.md, planning/README.md, planning/TASKS.md |
-| CORE | FRESH | 2026-11-27T02:51:15Z (0h ago) | 42253f9 | 44b00c0 | 2 commit(s) | STATUS_ONLY |
-| MIND | FRESH | 2026-11-27T02:51:15Z (0h ago) | dfabe33 | d593493 | 12 commit(s) | OTHER FILES (review): .githooks/pre-push, .github/workflows/progress-check.yml, AGENTS.md, CONTRIBUTING.md, Makefile |
-| MOTION | FRESH | 2026-11-27T02:51:15Z (0h ago) | c68d6bb | d3289b8 | 8 commit(s) | OTHER FILES (review): .githooks/pre-push, .github/kritva-gate.json, .github/workflows/integration-tests.yml, .github/workflows/progress-check.yml, .github/workflows/regression-tests.yml |
-| SDK | FRESH | 2026-11-27T02:51:15Z (0h ago) | bbc166c | 645f984 | 2 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, status/README.md, status/status.json |
-| SENSE | FRESH | 2026-11-27T02:51:15Z (0h ago) | f33b67b | 07c48d5 | 126 commit(s) | OTHER FILES (review): .githooks/pre-push, .github/kritva-gate.json, .github/workflows/commit-message-check.yml, .github/workflows/pr-acceptance-gate.yml, .github/workflows/progress-check.yml |
-| SKILL | FRESH | 2026-11-27T02:51:15Z (0h ago) | e0d9cc2 | d98b648 | 2 commit(s) | STATUS_ONLY |
+| CI_DEV_INFRA | FRESH | 2026-11-27T13:51:44Z (0h ago) | 265cbd2 | 0b0f180 | 144 commit(s) | OTHER FILES (review): .githooks/pre-push, AGENTS.md, Makefile, README.md, claude-patches-control-plane-direction/0001-control-plane-direction.patch |
+| COMMUNITY | FRESH | 2026-11-27T13:51:44Z (0h ago) | f3c2af3 | 94cb0ac | 12 commit(s) | OTHER FILES (review): ARCHITECTURE.md, CONTRIBUTING.md, README.md, planning/README.md, planning/TASKS.md |
+| CORE | FRESH | 2026-11-27T13:51:44Z (0h ago) | 42253f9 | 44b00c0 | 2 commit(s) | STATUS_ONLY |
+| MIND | FRESH | 2026-11-27T13:51:44Z (0h ago) | dfabe33 | d593493 | 12 commit(s) | OTHER FILES (review): .githooks/pre-push, .github/workflows/progress-check.yml, AGENTS.md, CONTRIBUTING.md, Makefile |
+| MOTION | FRESH | 2026-11-27T13:51:44Z (0h ago) | c68d6bb | d3289b8 | 8 commit(s) | OTHER FILES (review): .githooks/pre-push, .github/kritva-gate.json, .github/workflows/integration-tests.yml, .github/workflows/progress-check.yml, .github/workflows/regression-tests.yml |
+| SDK | FRESH | 2026-11-27T13:51:44Z (0h ago) | b069b83 | 645f984 | 6 commit(s) | OTHER FILES (review): README.md, planning/CHANGELOG.md, planning/TASKS.md, planning/dependencies/CONTRACT_DEPENDENCY_REGISTER.md, planning/milestones/V2-M3-SDK-001/tasks/KOS-SDK-005/TASK.md |
+| SENSE | FRESH | 2026-11-27T13:51:44Z (0h ago) | ceb79d0 | f33b67b | 2 commit(s) | STATUS_ONLY |
+| SKILL | FRESH | 2026-11-27T13:51:44Z (0h ago) | 4914d16 | 3d38e45 | 2 commit(s) | STATUS_ONLY |
 
 ## Workstreams
 
@@ -69,9 +69,9 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | MOTION | KritvaOS/kritva-motion | BASELINED (6 tasks) | OK | 6 | d3289b8 |
 | NEXUS_EDGE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SDK | KritvaOS/kritva-sdk | BASELINED (3 tasks) | OK | 3 | 645f984 |
-| SENSE | KritvaOS/kritva-sense | BASELINED (11 tasks) | OK | 11 | 07c48d5 |
+| SENSE | KritvaOS/kritva-sense | BASELINED (11 tasks) | OK | 11 | f33b67b |
 | SIM | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| SKILL | KritvaOS/kritva-skill | BASELINED (1 tasks) | OK | 1 | d98b648 |
+| SKILL | KritvaOS/kritva-skill | BASELINED (1 tasks) | OK | 1 | 3d38e45 |
 | STUDIO | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 
 ## Rollup by phase (P0-P8)
@@ -276,7 +276,7 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 - ACT_L: no status source (UNVERIFIED)
 - ACT_M: no status source (UNVERIFIED)
 - ACT_S: no status source (UNVERIFIED)
-- CI_DEV_INFRA: status is 18 days old
+- CI_DEV_INFRA: status is 19 days old
 - CONNECT: no status source (UNVERIFIED)
 - CONTROL_PLANE: no status source (UNVERIFIED)
 - DEVICE_ENDPOINT: no status source (UNVERIFIED)
@@ -292,7 +292,7 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 - KRP-M0-004: not reported by CI_DEV_INFRA (no credit)
 - MANUFACTURING_FLEET: no status source (UNVERIFIED)
 - MECHANICAL: no status source (UNVERIFIED)
-- MIND: status is 16 days old
+- MIND: status is 17 days old
 - NEXUS_EDGE: no status source (UNVERIFIED)
 - SIM: no status source (UNVERIFIED)
 - STUDIO: no status source (UNVERIFIED)
@@ -472,7 +472,7 @@ No status source, so no evidence and no credit (not zero progress): ACTUATION_CO
 
 Other warnings:
 
-- CI_DEV_INFRA: status is 18 days old
+- CI_DEV_INFRA: status is 19 days old
 - KOS-MIND-001: not reported by MIND (no credit)
 - KOS-MIND-M0-001: not reported by MIND (no credit)
 - KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)
@@ -480,4 +480,4 @@ Other warnings:
 - KRP-M0-002: not reported by CI_DEV_INFRA (no credit)
 - KRP-M0-003: not reported by CI_DEV_INFRA (no credit)
 - KRP-M0-004: not reported by CI_DEV_INFRA (no credit)
-- MIND: status is 16 days old
+- MIND: status is 17 days old
