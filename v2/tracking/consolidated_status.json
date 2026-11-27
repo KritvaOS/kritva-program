@@ -1,6 +1,6 @@
 {
   "baseline_approved": true,
-  "baseline_version": 15,
+  "baseline_version": 16,
   "by_milestone": {
     "KF-CORE-R10": {
       "accepted_weight": 0,
@@ -106,6 +106,14 @@
       "weight": 5,
       "weighted": true
     },
+    "V2-M1-SDK-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 1,
+      "weight": 4,
+      "weighted": true
+    },
     "V2-M1-SENSE-001": {
       "accepted_weight": 5,
       "complete": 1,
@@ -146,6 +154,14 @@
       "weight": 7,
       "weighted": true
     },
+    "V2-M2-SDK-001": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 2,
+      "weight": 14,
+      "weighted": true
+    },
     "V2-M2-SENSE-001": {
       "accepted_weight": 19,
       "complete": 4,
@@ -184,8 +200,8 @@
       "accepted_weight": 86,
       "complete": 17,
       "credited": 17,
-      "tasks": 56,
-      "weight": 221,
+      "tasks": 59,
+      "weight": 239,
       "weighted": true
     }
   },
@@ -230,6 +246,14 @@
       "weight": 34,
       "weighted": true
     },
+    "SDK": {
+      "accepted_weight": 0,
+      "complete": 0,
+      "credited": 0,
+      "tasks": 3,
+      "weight": 18,
+      "weighted": true
+    },
     "SENSE": {
       "accepted_weight": 52,
       "complete": 11,
@@ -249,17 +273,18 @@
   },
   "changes": {
     "items": [
-      "Warnings: 62 -> 61"
+      "Accepted progress: 86/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 86/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Warnings: 61 -> 64"
     ],
-    "recorded_at": "2026-11-26T02:07:08Z",
-    "since": "2026-11-26T01:54:41Z"
+    "recorded_at": "2026-11-27T02:45:05Z",
+    "since": "2026-11-26T02:07:08Z"
   },
   "errors": [],
   "evidence_health": [
     "CI_DEV_INFRA: source STALE",
     "COMMUNITY: source STALE",
     "CORE: source STALE",
-    "I2-001, I2-002, I2-003, I2-004, I2-005, I2-006, I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008, KF-CORE-M0-001, KF-CORE-R10-001, KF-CORE-R10-002, KF-CORE-R10-003, KF-CORE-R10-004, KF-CORE-R10-005, KF-CORE-R10-006, KF-CORE-R10-007, KF-CORE-R10-008, KF-CORE-R10-009, KOS-MIND-001, KOS-MIND-M0-001, KOS-SKILL-M0-001, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream",
+    "I2-001, I2-002, I2-003, I2-004, I2-005, I2-006, I3-001, I3-002, I3-003, I3-004, I3-005, I3-006, I3-007, I4-001, I4-002, I4-003, I4-004, I4-005, I4-006, I4-007, I4-008, KF-CORE-M0-001, KF-CORE-R10-001, KF-CORE-R10-002, KF-CORE-R10-003, KF-CORE-R10-004, KF-CORE-R10-005, KF-CORE-R10-006, KF-CORE-R10-007, KF-CORE-R10-008, KF-CORE-R10-009, KOS-MIND-001, KOS-MIND-M0-001, KOS-SDK-001, KOS-SDK-002, KOS-SDK-003, KOS-SKILL-M0-001, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream",
     "MIND: source STALE",
     "SKILL: source STALE"
   ],
@@ -356,22 +381,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-26T02:07:08Z",
+  "generated_at": "2026-11-27T02:45:05Z",
   "measures": {
     "evidence_coverage": {
-      "tasks_total": 56,
+      "tasks_total": 59,
       "tasks_with_github_verified_run": 17,
       "tasks_with_verified_evidence": 17
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
       "tasks_complete": 17,
-      "tasks_total": 56
+      "tasks_total": 59
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 39
+      "uncredited_tasks": 42
     }
   },
   "milestone_alignment": [
@@ -532,6 +557,18 @@
       "workstream": "MOTION"
     },
     {
+      "accepted_weight": 0,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M1-SDK-001",
+      "program_milestone": "V2-M1",
+      "status": "PROPOSED",
+      "tasks": 1,
+      "weight": 4,
+      "workstream": "SDK"
+    },
+    {
       "accepted_weight": 5,
       "class": "V2_REPO",
       "closure": "none",
@@ -590,6 +627,18 @@
       "tasks": 1,
       "weight": 7,
       "workstream": "MOTION"
+    },
+    {
+      "accepted_weight": 0,
+      "class": "V2_REPO",
+      "closure": "none",
+      "credited": 0,
+      "milestone": "V2-M2-SDK-001",
+      "program_milestone": "V2-M2",
+      "status": "PROPOSED",
+      "tasks": 2,
+      "weight": 14,
+      "workstream": "SDK"
     },
     {
       "accepted_weight": 19,
@@ -668,18 +717,6 @@
       "class": "V2_REPO",
       "closure": "none",
       "credited": 0,
-      "milestone": "V2-M1-SDK-001",
-      "program_milestone": "V2-M1",
-      "status": "PROPOSED",
-      "tasks": 0,
-      "weight": null,
-      "workstream": "SDK"
-    },
-    {
-      "accepted_weight": null,
-      "class": "V2_REPO",
-      "closure": "none",
-      "credited": 0,
       "milestone": "V2-M1-SKILL-001",
       "program_milestone": "V2-M1",
       "status": "PROPOSED",
@@ -710,18 +747,6 @@
       "tasks": 0,
       "weight": null,
       "workstream": "MIND"
-    },
-    {
-      "accepted_weight": null,
-      "class": "V2_REPO",
-      "closure": "none",
-      "credited": 0,
-      "milestone": "V2-M2-SDK-001",
-      "program_milestone": "V2-M2",
-      "status": "PROPOSED",
-      "tasks": 0,
-      "weight": null,
-      "workstream": "SDK"
     },
     {
       "accepted_weight": null,
@@ -1050,19 +1075,19 @@
       },
       "M1": {
         "accepted": 10,
-        "baseline": 15,
-        "high": 26,
-        "low": 16,
-        "point": 21,
-        "rows": 5
+        "baseline": 19,
+        "high": 21,
+        "low": 13,
+        "point": 17,
+        "rows": 4
       },
       "M2": {
         "accepted": 45,
-        "baseline": 45,
-        "high": 76,
-        "low": 49,
-        "point": 62,
-        "rows": 13
+        "baseline": 59,
+        "high": 58,
+        "low": 38,
+        "point": 48,
+        "rows": 10
       },
       "M3": {
         "accepted": 0,
@@ -1159,12 +1184,12 @@
       "SDK": {
         "accepted": 0,
         "accepted_tasks": 0,
-        "baseline": 0,
-        "baseline_tasks": 0,
-        "high": 84,
-        "low": 50,
-        "point": 66,
-        "rows": 14
+        "baseline": 18,
+        "baseline_tasks": 3,
+        "high": 61,
+        "low": 36,
+        "point": 48,
+        "rows": 10
       },
       "Sense": {
         "accepted": 52,
@@ -1188,8 +1213,8 @@
       }
     },
     "file": "v2/planning/SEVEN_REPO_PLAN_REGISTER.md",
-    "high": 340,
-    "low": 215,
+    "high": 317,
+    "low": 201,
     "matrix": {
       "Community": {
         "M1": {
@@ -1336,15 +1361,15 @@
       "SDK": {
         "M1": {
           "accepted": 0,
-          "baseline": 0,
-          "point": 4,
-          "rows": 1
+          "baseline": 4,
+          "point": 0,
+          "rows": 0
         },
         "M2": {
           "accepted": 0,
-          "baseline": 0,
-          "point": 14,
-          "rows": 3
+          "baseline": 14,
+          "point": 0,
+          "rows": 0
         },
         "M3": {
           "accepted": 0,
@@ -1454,9 +1479,9 @@
         }
       }
     },
-    "point": 276,
+    "point": 258,
     "retired_parents": 14,
-    "rows": 56,
+    "rows": 52,
     "tasks": [
       {
         "id": "PROPOSED-NEW-PROGRAM-002",
@@ -1667,22 +1692,6 @@
         "weight": 4
       },
       {
-        "id": "PROPOSED-NEW-COMMUNITY-005-01",
-        "milestone": "M2",
-        "repo": "SDK",
-        "status": "NOT_STARTED",
-        "title": "SDK package and build manifest",
-        "weight": 4
-      },
-      {
-        "id": "PROPOSED-NEW-COMMUNITY-005-02",
-        "milestone": "M2",
-        "repo": "SDK",
-        "status": "NOT_STARTED",
-        "title": "Clean-environment SDK installation and import tests",
-        "weight": 4
-      },
-      {
         "id": "PROPOSED-NEW-COMMUNITY-007-01",
         "milestone": "M3",
         "repo": "Community",
@@ -1843,22 +1852,6 @@
         "weight": 5
       },
       {
-        "id": "PROPOSED-NEW-SDK-001",
-        "milestone": "M1",
-        "repo": "SDK",
-        "status": "NOT_STARTED",
-        "title": "Architecture and API design",
-        "weight": 4
-      },
-      {
-        "id": "PROPOSED-NEW-SDK-003",
-        "milestone": "M2",
-        "repo": "SDK",
-        "status": "NOT_STARTED",
-        "title": "Configuration, contract compatibility and Sense models",
-        "weight": 6
-      },
-      {
         "id": "PROPOSED-NEW-SDK-005",
         "milestone": "M3",
         "repo": "SDK",
@@ -1919,7 +1912,7 @@
       "M8": "PRODUCTION"
     },
     "v2_accepted_weight": 86,
-    "v2_baseline_weight": 117
+    "v2_baseline_weight": 135
   },
   "program_status": {
     "accepted_progress": "0% of the P0 baseline (no tasks defined or accepted yet)",
@@ -1954,8 +1947,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 38.91,
-    "basis": "86/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 35.98,
+    "basis": "86/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "registered_no_weight": [
     {
@@ -2095,7 +2088,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 248,
+        "age_hours": 272,
         "ahead_by": 62,
         "changed_files": [
           "AGENTS.md",
@@ -2161,7 +2154,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 248,
+        "age_hours": 272,
         "ahead_by": 8,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2191,7 +2184,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 248,
+        "age_hours": 272,
         "ahead_by": 10,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2220,7 +2213,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 248,
+        "age_hours": 272,
         "ahead_by": 6,
         "changed_files": [
           "README.md",
@@ -2245,7 +2238,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 248,
+        "age_hours": 272,
         "ahead_by": 2,
         "changed_files": [
           "planning/CHANGELOG.md",
@@ -2265,7 +2258,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 0,
+        "age_hours": 24,
         "ahead_by": 2,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2285,7 +2278,7 @@
         "fetch_state": "FETCHED",
         "fetched_at": "2026-11-26T02:06:04Z",
         "fetched_head": "0dd83f658e2152146625e26bd30cdb8a563623aa",
-        "freshness": "FRESH",
+        "freshness": "WARN",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-sdk",
@@ -2294,7 +2287,7 @@
         "workstream_id": "SDK"
       },
       {
-        "age_hours": 248,
+        "age_hours": 272,
         "ahead_by": 122,
         "changed_files": [
           ".github/kritva-gate.json",
@@ -2360,7 +2353,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 248,
+        "age_hours": 272,
         "ahead_by": 12,
         "changed_files": [
           ".github/workflows/progress-check.yml",
@@ -2422,10 +2415,10 @@
     },
     "pending_decisions": 2,
     "pending_reviews": 0,
-    "progress": "86/221 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 38.91,
+    "progress": "86/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 35.98,
     "readiness": {},
-    "warnings": 61
+    "warnings": 64
   },
   "tasks": [
     {
@@ -3191,7 +3184,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A580 (PASS, APPROVED) on commit 3b9e12b with PASS evidence",
+      "credit_reason": "weight 5 x approval A636 (PASS, APPROVED) on commit 3b9e12b with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "41876610087",
       "evidence_state": "VERIFIED",
@@ -3220,7 +3213,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A581 (PASS, APPROVED) on commit 77319b4 with PASS evidence",
+      "credit_reason": "weight 5 x approval A637 (PASS, APPROVED) on commit 77319b4 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "42252338614",
       "evidence_state": "VERIFIED",
@@ -3249,7 +3242,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 8 x approval A601 (PASS, APPROVED) on commit 1acb437 with PASS evidence",
+      "credit_reason": "weight 8 x approval A657 (PASS, APPROVED) on commit 1acb437 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "42605983509",
       "evidence_state": "VERIFIED",
@@ -3278,7 +3271,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 7 x approval A605 (PASS, APPROVED) on commit 6824bc8 with PASS evidence",
+      "credit_reason": "weight 7 x approval A661 (PASS, APPROVED) on commit 6824bc8 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "43742271912",
       "evidence_state": "VERIFIED",
@@ -3307,7 +3300,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 6 x approval A604 (PASS, APPROVED) on commit 1d4f433 with PASS evidence",
+      "credit_reason": "weight 6 x approval A660 (PASS, APPROVED) on commit 1d4f433 with PASS evidence",
       "evidence_class": "OWN",
       "evidence_run": "43695411353",
       "evidence_state": "VERIFIED",
@@ -3336,7 +3329,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A593 (PASS, APPROVED) on commit 44b733d with PASS evidence",
+      "credit_reason": "weight 3 x approval A649 (PASS, APPROVED) on commit 44b733d with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "42385668763",
       "evidence_state": "VERIFIED",
@@ -3362,10 +3355,79 @@
       "workstream_id": "MOTION"
     },
     {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M1-SDK-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-SDK-001",
+      "tested_commit": null,
+      "title": "Python-first SDK architecture and developer API design",
+      "weight": 4,
+      "workstream_id": "SDK"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M2-SDK-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-SDK-002",
+      "tested_commit": null,
+      "title": "Python package foundation and reproducible build, with clean-environment installation and import tests",
+      "weight": 8,
+      "workstream_id": "SDK"
+    },
+    {
+      "acceptance": "NOT_RUN",
+      "blocked_by": [],
+      "credit": false,
+      "credit_reason": "no current report from the owning workstream",
+      "evidence_class": null,
+      "evidence_run": null,
+      "evidence_state": "NO_REPORT",
+      "evidence_verified": false,
+      "execution": null,
+      "git_sync": null,
+      "milestone_id": "V2-M2-SDK-001",
+      "phase": null,
+      "readiness": null,
+      "reported_evidence": null,
+      "run_verified": null,
+      "task_commit": null,
+      "task_id": "KOS-SDK-003",
+      "tested_commit": null,
+      "title": "Configuration, contract compatibility and Sense models",
+      "weight": 6,
+      "workstream_id": "SDK"
+    },
+    {
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A582 (PASS, APPROVED) on commit e949b9f with PASS evidence",
+      "credit_reason": "weight 5 x approval A638 (PASS, APPROVED) on commit e949b9f with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "40994325092",
       "evidence_state": "VERIFIED",
@@ -3394,7 +3456,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A583 (PASS, APPROVED) on commit e949b9f with PASS evidence",
+      "credit_reason": "weight 4 x approval A639 (PASS, APPROVED) on commit e949b9f with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "40994325092",
       "evidence_state": "VERIFIED",
@@ -3423,7 +3485,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A584 (PASS, APPROVED) on commit c92e841 with PASS evidence",
+      "credit_reason": "weight 5 x approval A640 (PASS, APPROVED) on commit c92e841 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41267842700",
       "evidence_state": "VERIFIED",
@@ -3452,7 +3514,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A585 (PASS, APPROVED) on commit 82b3174 with PASS evidence",
+      "credit_reason": "weight 4 x approval A641 (PASS, APPROVED) on commit 82b3174 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41275942226",
       "evidence_state": "VERIFIED",
@@ -3481,7 +3543,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 4 x approval A586 (PASS, APPROVED) on commit 0bee5ed with PASS evidence",
+      "credit_reason": "weight 4 x approval A642 (PASS, APPROVED) on commit 0bee5ed with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41278515695",
       "evidence_state": "VERIFIED",
@@ -3510,7 +3572,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A587 (PASS, APPROVED) on commit 67590bc with PASS evidence",
+      "credit_reason": "weight 5 x approval A643 (PASS, APPROVED) on commit 67590bc with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41289421496",
       "evidence_state": "VERIFIED",
@@ -3539,7 +3601,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A588 (PASS, APPROVED) on commit 5f1aa7a with PASS evidence",
+      "credit_reason": "weight 5 x approval A644 (PASS, APPROVED) on commit 5f1aa7a with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41292919590",
       "evidence_state": "VERIFIED",
@@ -3568,7 +3630,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 6 x approval A589 (PASS, APPROVED) on commit a8dfb5a with PASS evidence",
+      "credit_reason": "weight 6 x approval A645 (PASS, APPROVED) on commit a8dfb5a with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41298259048",
       "evidence_state": "VERIFIED",
@@ -3597,7 +3659,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 6 x approval A590 (PASS, APPROVED) on commit 55191ab with PASS evidence",
+      "credit_reason": "weight 6 x approval A646 (PASS, APPROVED) on commit 55191ab with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "41761323273",
       "evidence_state": "VERIFIED",
@@ -3626,7 +3688,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 5 x approval A603 (PASS, APPROVED) on commit a072cee with PASS evidence",
+      "credit_reason": "weight 5 x approval A659 (PASS, APPROVED) on commit a072cee with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "43139244187",
       "evidence_state": "VERIFIED",
@@ -3655,7 +3717,7 @@
       "acceptance": "PASS",
       "blocked_by": [],
       "credit": true,
-      "credit_reason": "weight 3 x approval A591 (PASS, APPROVED) on commit ddf9518 with PASS evidence",
+      "credit_reason": "weight 3 x approval A647 (PASS, APPROVED) on commit ddf9518 with PASS evidence",
       "evidence_class": "MILESTONE",
       "evidence_run": "42329065787",
       "evidence_state": "VERIFIED",
@@ -3900,11 +3962,11 @@
     "ACT_L: no status source (UNVERIFIED)",
     "ACT_M: no status source (UNVERIFIED)",
     "ACT_S: no status source (UNVERIFIED)",
-    "CI_DEV_INFRA: status is 17 days old",
-    "COMMUNITY: status is 17 days old",
+    "CI_DEV_INFRA: status is 18 days old",
+    "COMMUNITY: status is 18 days old",
     "CONNECT: no status source (UNVERIFIED)",
     "CONTROL_PLANE: no status source (UNVERIFIED)",
-    "CORE: status is 17 days old",
+    "CORE: status is 18 days old",
     "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
@@ -3942,6 +4004,9 @@
     "KF-CORE-R10-009: not reported by CORE (no credit)",
     "KOS-MIND-001: not reported by MIND (no credit)",
     "KOS-MIND-M0-001: not reported by MIND (no credit)",
+    "KOS-SDK-001: not reported by SDK (no credit)",
+    "KOS-SDK-002: not reported by SDK (no credit)",
+    "KOS-SDK-003: not reported by SDK (no credit)",
     "KOS-SKILL-M0-001: not reported by SKILL (no credit)",
     "KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)",
     "KRP-M0-001: not reported by CI_DEV_INFRA (no credit)",
@@ -3950,10 +4015,10 @@
     "KRP-M0-004: not reported by CI_DEV_INFRA (no credit)",
     "MANUFACTURING_FLEET: no status source (UNVERIFIED)",
     "MECHANICAL: no status source (UNVERIFIED)",
-    "MIND: status is 15 days old",
+    "MIND: status is 16 days old",
     "NEXUS_EDGE: no status source (UNVERIFIED)",
     "SIM: no status source (UNVERIFIED)",
-    "SKILL: status is 18 days old",
+    "SKILL: status is 19 days old",
     "STUDIO: no status source (UNVERIFIED)"
   ],
   "workstreams": [

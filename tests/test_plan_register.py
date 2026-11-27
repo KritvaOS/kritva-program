@@ -68,9 +68,9 @@ class RegisterTests(unittest.TestCase):
     def test_counts_and_totals(self):
         planned = [r for r in self.rows if r["record_type"] == "PLANNING_TASK"]
         retired = [r for r in self.rows if r["record_type"] == "RETIRED_PARENT"]
-        self.assertEqual(len(planned), 56)
+        self.assertEqual(len(planned), 52)
         self.assertEqual(len(retired), 14)
-        self.assertEqual((sum(int(r["weight_point"]) for r in planned), sum(int(r["low"]) for r in planned), sum(int(r["high"]) for r in planned)), (276, 215, 340))
+        self.assertEqual((sum(int(r["weight_point"]) for r in planned), sum(int(r["low"]) for r in planned), sum(int(r["high"]) for r in planned)), (258, 201, 317))
 
     def test_summary_matches_baseline_split(self):
         base = {"by_milestone": {"V2-M1-SENSE-001": {"weight": 5, "accepted_weight": 5, "weighted": True},
@@ -78,20 +78,20 @@ class RegisterTests(unittest.TestCase):
                                  "KOS-I2": {"weight": 18, "accepted_weight": 18, "weighted": True}}}
         s = plan_register.summary(self.rows, base)
         self.assertEqual((s["v2_baseline_weight"], s["v2_accepted_weight"]), (24, 19))
-        self.assertEqual(s["point"], 276)
+        self.assertEqual(s["point"], 258)
         self.assertEqual(s["by_milestone"]["M2"]["baseline"], 19)
-        self.assertEqual(sum(v["point"] for v in s["by_repo"].values()), 276)
+        self.assertEqual(sum(v["point"] for v in s["by_repo"].values()), 258)
 
     def test_sdk_rows_are_registered_with_planning_only_weight(self):
         sdk = [r for r in self.rows if r["record_type"] == "PLANNING_TASK" and r["repo"] == "SDK"]
-        self.assertEqual(len(sdk), 14)
-        self.assertEqual((sum(int(r["weight_point"]) for r in sdk), sum(int(r["low"]) for r in sdk), sum(int(r["high"]) for r in sdk)), (66, 50, 84))
+        self.assertEqual(len(sdk), 10)
+        self.assertEqual((sum(int(r["weight_point"]) for r in sdk), sum(int(r["low"]) for r in sdk), sum(int(r["high"]) for r in sdk)), (48, 36, 61))
         self.assertTrue(all(r["credit"] == "0" and r["plan_state"] == "APPROVED_PLAN" for r in sdk))
-        six = {f"PROPOSED-NEW-COMMUNITY-{n}" for n in ("005-01", "005-02", "012-01", "012-02", "014-01", "014-02")}
+        six = {f"PROPOSED-NEW-COMMUNITY-{n}" for n in ("012-01", "012-02", "014-01", "014-02")}
         self.assertEqual({r["id"] for r in sdk if r["id"] in six}, six)
-        self.assertEqual(sum(int(r["weight_point"]) for r in sdk if r["id"] in six), 26)
+        self.assertEqual(sum(int(r["weight_point"]) for r in sdk if r["id"] in six), 18)
         s = plan_register.summary(self.rows, {"by_milestone": {}})
-        self.assertEqual(s["by_repo"]["SDK"]["point"], 66)
+        self.assertEqual(s["by_repo"]["SDK"]["point"], 48)
 
     def test_view_lines_state_no_credit(self):
         base = {"by_milestone": {"V2-M1-SENSE-001": {"weight": 5, "accepted_weight": 5, "weighted": True}}}
