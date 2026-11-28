@@ -281,12 +281,10 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 213/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 218/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Credited tasks: added KOS-SDK-005",
-      "Warnings: 27 -> 26"
+      "Warnings: 26 -> 27"
     ],
-    "recorded_at": "2026-11-28T03:27:13Z",
-    "since": "2026-11-28T03:26:58Z"
+    "recorded_at": "2026-11-28T05:30:46Z",
+    "since": "2026-11-28T03:27:13Z"
   },
   "errors": [],
   "evidence_health": [
@@ -387,7 +385,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-28T03:27:13Z",
+  "generated_at": "2026-11-28T05:30:46Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 60,
@@ -2088,7 +2086,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 0,
+        "age_hours": 2,
         "ahead_by": 153,
         "changed_files": [
           ".githooks/pre-push",
@@ -2154,7 +2152,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 0,
+        "age_hours": 2,
         "ahead_by": 12,
         "changed_files": [
           "ARCHITECTURE.md",
@@ -2176,7 +2174,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 0,
+        "age_hours": 2,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
@@ -2193,7 +2191,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 0,
+        "age_hours": 2,
         "ahead_by": 12,
         "changed_files": [
           ".githooks/pre-push",
@@ -2224,7 +2222,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 0,
+        "age_hours": 2,
         "ahead_by": 8,
         "changed_files": [
           ".githooks/pre-push",
@@ -2256,7 +2254,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 0,
+        "age_hours": 2,
         "ahead_by": 4,
         "changed_files": [
           "API.md",
@@ -2281,7 +2279,7 @@
         "workstream_id": "SDK"
       },
       {
-        "age_hours": 0,
+        "age_hours": 2,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
@@ -2298,7 +2296,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 0,
+        "age_hours": 2,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
@@ -2387,7 +2385,7 @@
     "progress": "218/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
     "progress_pct": 89.34,
     "readiness": {},
-    "warnings": 26
+    "warnings": 27
   },
   "tasks": [
     {
@@ -4173,6 +4171,7 @@
     "CI_DEV_INFRA: status is 19 days old",
     "CONNECT: no status source (UNVERIFIED)",
     "CONTROL_PLANE: no status source (UNVERIFIED)",
+    "CONTROL_PLANE_API: no status source (UNVERIFIED)",
     "DEVICE_ENDPOINT: no status source (UNVERIFIED)",
     "EDUCATION_APPLICATIONS: no status source (UNVERIFIED)",
     "ELECTRICAL_POWER: no status source (UNVERIFIED)",
@@ -4259,6 +4258,13 @@
       "commit": "-------",
       "id": "CONTROL_PLANE",
       "repo": null,
+      "source_state": "UNVERIFIED",
+      "tasks_reported": 0
+    },
+    {
+      "commit": "-------",
+      "id": "CONTROL_PLANE_API",
+      "repo": "KritvaOS/kritva-control-plane-api",
       "source_state": "UNVERIFIED",
       "tasks_reported": 0
     },
