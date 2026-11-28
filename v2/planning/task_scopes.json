@@ -1,0 +1,877 @@
+{
+  "_note": "Task scope registry (D-164). UNREVIEWED entries are unclassifiable and fail closed. Validate with: python3 tools/task_scopes.py --check",
+  "schema_version": "1.0",
+  "baseline_version": 17,
+  "repos": {
+    "CORE": {
+      "review": "REVIEWED",
+      "shared_paths": [
+        ".github/workflows/",
+        "CMakeLists.txt",
+        "CMakePresets.json",
+        "cmake/",
+        "Makefile",
+        "VERSION",
+        "config/",
+        "include/kritva/",
+        "src/",
+        "planning/milestones/KF-CORE-R10/tasks/"
+      ]
+    },
+    "COMMUNITY": {
+      "review": "REVIEWED",
+      "shared_paths": [
+        ".github/workflows/",
+        ".clang-format",
+        ".devcontainer/",
+        "CMakeLists.txt",
+        "CMakePresets.json",
+        "Makefile",
+        "toolchain/",
+        "config/",
+        "runtime/CMakeLists.txt",
+        "hardware/CMakeLists.txt",
+        "tests/CMakeLists.txt",
+        "tests/hardware/support/test_endpoints.hpp",
+        "tests/hardware/conformance/"
+      ]
+    },
+    "CI_DEV_INFRA": {
+      "review": "REVIEWED",
+      "shared_paths": [
+        ".github/workflows/",
+        "Makefile",
+        "tests/support.py"
+      ]
+    },
+    "SENSE": {
+      "review": "REVIEWED",
+      "shared_paths": [
+        ".github/workflows/",
+        "MANIFEST.in",
+        "Makefile",
+        "pyproject.toml",
+        "release/",
+        "scripts/gate_common.py",
+        "scripts/test_all.py",
+        "src/kritva_sense/__init__.py",
+        "src/kritva_sense/version.py"
+      ]
+    },
+    "MOTION": {
+      "review": "REVIEWED",
+      "shared_paths": [
+        ".github/workflows/",
+        "Makefile",
+        "requirements-test.txt",
+        "scripts/test_gate.py",
+        "contract/ERROR_CODES.md",
+        "src/kritva_motion/__init__.py"
+      ]
+    },
+    "MIND": {
+      "review": "REVIEWED",
+      "shared_paths": [
+        ".github/workflows/",
+        "Makefile",
+        "src/kritva_mind/__init__.py"
+      ]
+    },
+    "SKILL": {
+      "review": "REVIEWED",
+      "shared_paths": [
+        ".github/workflows/",
+        "Makefile"
+      ]
+    },
+    "SDK": {
+      "review": "REVIEWED",
+      "shared_paths": [
+        ".github/workflows/",
+        "Makefile",
+        "pyproject.toml",
+        "release/",
+        "scripts/test_all.py",
+        "scripts/lint.py",
+        "scripts/acceptance_gate.py",
+        "src/kritva_sdk/__init__.py",
+        "src/kritva_sdk/_version.py",
+        "src/kritva_sdk/py.typed",
+        "tests/acceptance/",
+        "planning/milestones/",
+        "planning/dependencies/"
+      ]
+    }
+  },
+  "tasks": {
+    "KF-CORE-R10-001": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "docs/compatibility/API_INVENTORY.md",
+        "docs/api/",
+        "tests/compat/"
+      ]
+    },
+    "KF-CORE-R10-002": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "docs/compatibility/COMPATIBILITY_POLICY.md",
+        "docs/api/API_GUIDELINES.md",
+        "tests/compat/"
+      ]
+    },
+    "KF-CORE-R10-003": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "docs/compatibility/ABI_POLICY.md"
+      ]
+    },
+    "KF-CORE-R10-004": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "docs/compatibility/VERSIONING_POLICY.md",
+        "VERSION"
+      ]
+    },
+    "KF-CORE-R10-005": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "docs/compatibility/DEPRECATION_POLICY.md",
+        "docs/compatibility/DEPRECATIONS.md"
+      ]
+    },
+    "KF-CORE-R10-006": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "tests/compat/",
+        "tests/audit/",
+        "tests/unit/api_compat_boundary_test.cpp",
+        "tests/unit/capability_boundary_test.cpp",
+        "tests/unit/configuration_boundary_test.cpp",
+        "tests/unit/platform_boundary_test.cpp"
+      ]
+    },
+    "KF-CORE-R10-007": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "cmake/",
+        "tests/install/"
+      ]
+    },
+    "KF-CORE-R10-008": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "docs/security/",
+        "docs/compatibility/README.md",
+        "docs/api/README.md",
+        "docs/architecture/",
+        "tests/audit/"
+      ]
+    },
+    "KF-CORE-R10-009": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "tests/",
+        "docs/",
+        "scripts/",
+        "CHANGELOG.md",
+        "planning/milestones/KF-CORE-R10/"
+      ]
+    },
+    "I2-001": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "runtime/",
+        "tests/runtime/",
+        "docs/verification/KOS-I2_VERIFICATION.md",
+        "docs/requirements/RUNTIME_REQUIREMENTS.md",
+        "planning/milestones/KOS-I2/I2-001/"
+      ]
+    },
+    "I2-002": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "runtime/",
+        "tests/runtime/",
+        "docs/verification/KOS-I2_VERIFICATION.md",
+        "docs/requirements/RUNTIME_REQUIREMENTS.md",
+        "planning/milestones/KOS-I2/I2-002/",
+        "examples/kritva_demo/demo_component.hpp"
+      ]
+    },
+    "I2-003": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "runtime/",
+        "tests/runtime/",
+        "docs/verification/KOS-I2_VERIFICATION.md",
+        "docs/requirements/RUNTIME_REQUIREMENTS.md",
+        "planning/milestones/KOS-I2/I2-003/",
+        "config/"
+      ]
+    },
+    "I2-004": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "runtime/",
+        "tests/runtime/",
+        "docs/verification/KOS-I2_VERIFICATION.md",
+        "docs/requirements/RUNTIME_REQUIREMENTS.md",
+        "planning/milestones/KOS-I2/I2-004/"
+      ]
+    },
+    "I2-005": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "runtime/",
+        "tests/runtime/",
+        "docs/verification/KOS-I2_VERIFICATION.md",
+        "docs/requirements/RUNTIME_REQUIREMENTS.md",
+        "planning/milestones/KOS-I2/I2-005/",
+        "examples/kritva_demo/kritva_demo_failure.conf"
+      ]
+    },
+    "I2-006": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "runtime/",
+        "tests/runtime/",
+        "docs/verification/KOS-I2_VERIFICATION.md",
+        "docs/requirements/RUNTIME_REQUIREMENTS.md",
+        "planning/milestones/KOS-I2/I2-006/",
+        "examples/kritva_demo/"
+      ]
+    },
+    "I3-001": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "planning/milestones/KOS-I3/I3-001/",
+        "tests/hardware/unit/endpoint_test.cpp",
+        "tests/hardware/unit/device_test.cpp"
+      ]
+    },
+    "I3-002": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "planning/milestones/KOS-I3/I3-002/",
+        "tests/hardware/unit/device_registry_test.cpp",
+        "tests/hardware/unit/device_manager_test.cpp",
+        "tests/hardware/integration/registry_discovery_integration_test.cpp",
+        "tests/hardware/sanity/device_manager_sanity.cpp",
+        "tests/hardware/sanity/run_device_manager_sanity.cmake"
+      ]
+    },
+    "I3-003": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "planning/milestones/KOS-I3/I3-003/",
+        "runtime/",
+        "tests/hardware/integration/device_manager_runtime_integration_test.cpp",
+        "tests/hardware/integration/contract_runtime_integration_test.cpp"
+      ]
+    },
+    "I3-004": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "planning/milestones/KOS-I3/I3-004/",
+        "tests/hardware/unit/typed_data_test.cpp",
+        "tests/hardware/unit/capability_dispatch_test.cpp",
+        "tests/hardware/integration/typed_discovery_integration_test.cpp"
+      ]
+    },
+    "I3-005": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "planning/milestones/KOS-I3/I3-005/",
+        "hardware/mock/",
+        "tests/hardware/unit/mock_test.cpp",
+        "tests/hardware/integration/mock_runtime_integration_test.cpp",
+        "tests/hardware/sanity/mock_sanity.cpp",
+        "tests/hardware/sanity/run_mock_sanity.cmake"
+      ]
+    },
+    "I3-006": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "planning/milestones/KOS-I3/I3-006/",
+        "tests/hardware/unit/diagnostics_test.cpp",
+        "tests/hardware/integration/fault_observation_integration_test.cpp",
+        "tests/hardware/sanity/diagnostics_sanity.cpp",
+        "tests/hardware/sanity/run_diagnostics_sanity.cmake"
+      ]
+    },
+    "I3-007": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
+        "docs/verification/KOS-I3_VERIFICATION.md",
+        "planning/milestones/KOS-I3/I3-007/",
+        "examples/device_demo/",
+        "hardware/mock/",
+        "tests/hardware/integration/device_demo_test.cpp",
+        "tests/hardware/sanity/run_device_demo_sanity.cmake"
+      ]
+    },
+    "I4-001": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/verification/KOS-I4_VERIFICATION.md",
+        "docs/verification/KOS-I4_REGRESSION_STRATEGY.md",
+        "planning/milestones/KOS-I4/I4-001/",
+        "hardware/remote/",
+        "hardware/transport/",
+        "tests/hardware/unit/identity_test.cpp",
+        "tests/hardware/unit/node_identity_test.cpp",
+        "tests/hardware/unit/protocol_contract_test.cpp",
+        "tests/hardware/unit/protocol_spec_consistency_test.cpp",
+        "tests/hardware/unit/topology_test.cpp",
+        "tests/hardware/unit/link_config_test.cpp"
+      ]
+    },
+    "I4-002": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/verification/KOS-I4_VERIFICATION.md",
+        "docs/verification/KOS-I4_REGRESSION_STRATEGY.md",
+        "planning/milestones/KOS-I4/I4-002/",
+        "hardware/transport/",
+        "tests/hardware/unit/codec_test.cpp",
+        "tests/hardware/unit/codec_fuzz_test.cpp",
+        "tests/hardware/unit/codec_truncation_test.cpp",
+        "tests/hardware/unit/frame_test.cpp",
+        "tests/hardware/support/codec_samples.hpp",
+        "tests/hardware/integration/frame_transport_test.cpp"
+      ]
+    },
+    "I4-003": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/verification/KOS-I4_VERIFICATION.md",
+        "docs/verification/KOS-I4_REGRESSION_STRATEGY.md",
+        "planning/milestones/KOS-I4/I4-003/",
+        "hardware/transport/",
+        "tests/hardware/unit/simulated_transport_test.cpp",
+        "tests/hardware/unit/loopback_link_test.cpp",
+        "tests/hardware/unit/transport_hygiene_test.cpp"
+      ]
+    },
+    "I4-004": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/verification/KOS-I4_VERIFICATION.md",
+        "docs/verification/KOS-I4_REGRESSION_STRATEGY.md",
+        "planning/milestones/KOS-I4/I4-004/",
+        "hardware/remote/",
+        "hardware/transport/",
+        "tests/hardware/unit/edge_service_test.cpp",
+        "tests/hardware/unit/edge_session_test.cpp",
+        "tests/hardware/unit/edge_supervision_test.cpp",
+        "tests/hardware/unit/edge_write_test.cpp",
+        "tests/hardware/integration/edge_transport_test.cpp",
+        "tests/hardware/support/edge_rig.hpp"
+      ]
+    },
+    "I4-005": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/verification/KOS-I4_VERIFICATION.md",
+        "docs/verification/KOS-I4_REGRESSION_STRATEGY.md",
+        "planning/milestones/KOS-I4/I4-005/",
+        "hardware/remote/",
+        "hardware/transport/",
+        "tests/hardware/unit/remote_endpoint_test.cpp",
+        "tests/hardware/unit/remote_session_test.cpp",
+        "tests/hardware/unit/remote_hygiene_test.cpp",
+        "tests/hardware/integration/nexus_edge_test.cpp",
+        "tests/hardware/support/nexus_rig.hpp"
+      ]
+    },
+    "I4-006": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/verification/KOS-I4_VERIFICATION.md",
+        "docs/verification/KOS-I4_REGRESSION_STRATEGY.md",
+        "planning/milestones/KOS-I4/I4-006/",
+        "hardware/remote/",
+        "tests/hardware/unit/edge_supervision_test.cpp",
+        "tests/hardware/unit/remote_supervision_test.cpp"
+      ]
+    },
+    "I4-007": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/verification/KOS-I4_VERIFICATION.md",
+        "docs/verification/KOS-I4_REGRESSION_STRATEGY.md",
+        "planning/milestones/KOS-I4/I4-007/",
+        "runtime/",
+        "hardware/remote/",
+        "tests/hardware/unit/remote_diagnostics_test.cpp",
+        "tests/hardware/integration/runtime_remote_integration_test.cpp",
+        "tests/hardware/support/stack_rig.hpp"
+      ]
+    },
+    "I4-008": {
+      "workstream_id": "COMMUNITY",
+      "review": "REVIEWED",
+      "paths": [
+        "hardware/abstraction/",
+        "docs/verification/KOS-I4_VERIFICATION.md",
+        "docs/verification/KOS-I4_REGRESSION_STRATEGY.md",
+        "planning/milestones/KOS-I4/I4-008/",
+        "examples/nexus_edge_demo/",
+        "hardware/remote/",
+        "hardware/transport/",
+        "tests/hardware/integration/nexus_edge_demo_test.cpp",
+        "tests/hardware/unit/nexus_edge_demo_hygiene_test.cpp",
+        "tests/hardware/sanity/run_nexus_edge_demo_sanity.cmake"
+      ]
+    },
+    "KRP-ENG-001": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "REVIEWED",
+      "paths": [
+        "AGENTS.md",
+        ".githooks/",
+        ".github/",
+        "scripts/",
+        "tests/commit_message_check/",
+        "tests/test_pr_gate.py",
+        "tests/test_pr_check.py",
+        "tests/test_ci_templates.py",
+        "tests/test_check_readme.py",
+        "tools/ci-templates/",
+        "tools/repo-templates/",
+        "tools/publish_repo_progress.py",
+        "tests/test_publish_repo_progress.py"
+      ]
+    },
+    "KOS-SENSE-001": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "contract/SENSE_CONTRACT.md",
+        "contract/sense-sample.schema.json",
+        "tasks/KOS-SENSE-001/"
+      ]
+    },
+    "KOS-SENSE-002": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_sense/validator.py",
+        "contract/sense-sample.schema.json",
+        "contract/SENSE_CONTRACT.md",
+        "tests/contract/",
+        "tasks/KOS-SENSE-002/"
+      ]
+    },
+    "KOS-SENSE-003": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_sense/frame_graph.py",
+        "contract/FRAME_GRAPH_CONTRACT.md",
+        "contract/frame-transform.schema.json",
+        "tests/frame_graph/",
+        "tasks/KOS-SENSE-003/"
+      ]
+    },
+    "KOS-SENSE-004": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_sense/generator.py",
+        "src/kritva_sense/GENERATOR.md",
+        "contract/sense-sample.schema.json",
+        "tests/generator/",
+        "tasks/KOS-SENSE-004/"
+      ]
+    },
+    "KOS-SENSE-005": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_sense/stream.py",
+        "contract/STREAM_CONTRACT.md",
+        "contract/stream.schema.json",
+        "tests/stream/",
+        "tasks/KOS-SENSE-005/"
+      ]
+    },
+    "KOS-SENSE-006": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_sense/conformance.py",
+        "src/kritva_sense/CONFORMANCE.md",
+        "contract/STREAM_CONTRACT.md",
+        "tests/conformance/",
+        "tasks/KOS-SENSE-006/"
+      ]
+    },
+    "KOS-SENSE-007": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_sense/_entry.py",
+        "src/kritva_sense/__main__.py",
+        "release/",
+        "MANIFEST.in",
+        "pyproject.toml",
+        "RELEASE.md",
+        "tests/packaging/",
+        "tasks/KOS-SENSE-007/"
+      ]
+    },
+    "KOS-SENSE-008": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "scripts/security/",
+        ".github/workflows/",
+        "tests/security/",
+        "SECURITY.md",
+        "tasks/KOS-SENSE-008/"
+      ]
+    },
+    "KOS-SENSE-009": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "scripts/integration_gate.py",
+        "src/kritva_sense/",
+        "contract/",
+        "tests/integration/",
+        "tests/integration_gate/",
+        "tasks/KOS-SENSE-009/"
+      ]
+    },
+    "KOS-SENSE-010": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "scripts/regression_gate.py",
+        "scripts/regenerate_regression_golden.py",
+        "src/kritva_sense/",
+        "contract/",
+        "tests/regression/",
+        "tests/regression_gate/",
+        "tasks/KOS-SENSE-010/"
+      ]
+    },
+    "KOS-MOTION-001": {
+      "workstream_id": "MOTION",
+      "review": "REVIEWED",
+      "paths": [
+        "contract/",
+        "architecture/",
+        "tasks/KOS-MOTION-001/"
+      ]
+    },
+    "KOS-MOTION-002": {
+      "workstream_id": "MOTION",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_motion/admission.py",
+        "src/kritva_motion/config_validation.py",
+        "contract/CONFORMANCE_TEST_PLAN.md",
+        "contract/motion-command.schema.json",
+        "tests/validator/",
+        "tests/schema/",
+        "tasks/KOS-MOTION-002/"
+      ]
+    },
+    "KOS-MOTION-003": {
+      "workstream_id": "MOTION",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_motion/lifecycle/",
+        "scripts/lifecycle_matrix.py",
+        "tests/lifecycle/",
+        "tasks/KOS-MOTION-003/"
+      ]
+    },
+    "KOS-MOTION-004": {
+      "workstream_id": "MOTION",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_motion/backend/",
+        "scripts/integration_gate.py",
+        "scripts/regression_gate.py",
+        "scripts/regression_update.py",
+        "tests/backend/",
+        "tests/integration/",
+        "tests/regression/",
+        "tasks/KOS-MOTION-004/"
+      ]
+    },
+    "KOS-MOTION-005": {
+      "workstream_id": "MOTION",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_motion/stores/",
+        "src/kritva_motion/runtime/",
+        "contract/motion-event.schema.json",
+        "tests/stores/",
+        "tests/runtime/",
+        "tasks/KOS-MOTION-005/"
+      ]
+    },
+    "KRP-M0-001": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "REVIEWED",
+      "paths": [
+        "v2/PROGRAM_PLAN.md",
+        "v2/ROADMAP.md",
+        "v2/PRODUCT_SCOPE.md",
+        "v2/CRITICAL_PATH.md",
+        "v2/DEPENDENCY_MAP.md",
+        "v2/milestones/",
+        "v2/planning/milestones.json",
+        "tools/planning.py",
+        "tests/test_planning.py",
+        "tests/test_milestone_alignment.py"
+      ]
+    },
+    "KRP-M0-002": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "REVIEWED",
+      "paths": [
+        "v2/RISK_REGISTER.md",
+        "v2/GATE_REGISTER.md",
+        "tools/plan_register.py",
+        "tools/check_planning_inventory.py",
+        "tools/readiness.py",
+        "tests/test_plan_register.py",
+        "tests/test_planning_inventory.py"
+      ]
+    },
+    "KRP-M0-003": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "REVIEWED",
+      "paths": [
+        "tools/record_approvals.py",
+        "tools/carry_forward_approvals.py",
+        "tools/record_gate_closure.py",
+        "tools/resolve_shas.py",
+        "tests/test_record_approvals.py",
+        "tests/test_carry_forward_approvals.py",
+        "tests/test_gate_closures.py",
+        "tests/test_resolve_shas.py"
+      ]
+    },
+    "KRP-M0-004": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "REVIEWED",
+      "paths": [
+        "tools/consolidate_status.py",
+        "tools/refresh_sources.py",
+        "tools/engineering_compliance.py",
+        "tools/sequence_check.py",
+        "tools/freeze_baseline.py",
+        "tools/dashboard.py",
+        "tools/build_evidence_map.py",
+        "tools/task_scopes.py",
+        "schema/",
+        "tests/test_credit_gating.py",
+        "tests/test_baseline_reapproval.py",
+        "tests/test_engineering_compliance.py",
+        "tests/test_sequence_check.py",
+        "tests/test_freeze_new_tasks.py",
+        "tests/test_refresh_sources.py",
+        "tests/test_dashboard.py",
+        "tests/test_evidence_map.py",
+        "tests/test_task_scopes.py"
+      ]
+    },
+    "KF-CORE-M0-001": {
+      "workstream_id": "CORE",
+      "review": "REVIEWED",
+      "paths": [
+        "docs/development/ENGINEERING_CONTRACT.md",
+        "docs/development/ENGINEERING_CONTRACT.pin.json",
+        "AGENTS.md",
+        ".githooks/",
+        "scripts/check_readme.py",
+        "scripts/security/",
+        "scripts/lint/",
+        "planning/milestones/KF-CORE-M0/"
+      ]
+    },
+    "KOS-SENSE-M0-001": {
+      "workstream_id": "SENSE",
+      "review": "REVIEWED",
+      "paths": [
+        "AGENTS.md",
+        "ACCEPTANCE_CRITERIA.md",
+        "COMPLETION_RECORD.md",
+        "planning/reviews/REV-004-GOVERNANCE-BASELINE.md",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
+    },
+    "KOS-MIND-M0-001": {
+      "workstream_id": "MIND",
+      "review": "REVIEWED",
+      "paths": [
+        "AGENTS.md",
+        "ACCEPTANCE_CRITERIA.md",
+        "COMPLETION_RECORD.md",
+        "planning/reviews/REV-006-GOVERNANCE-BASELINE.md",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
+    },
+    "KOS-MOTION-M0-001": {
+      "workstream_id": "MOTION",
+      "review": "REVIEWED",
+      "paths": [
+        "AGENTS.md",
+        "ACCEPTANCE_CRITERIA.md",
+        "COMPLETION_RECORD.md",
+        "planning/reviews/",
+        "tasks/KOS-MOTION-M0-001/",
+        "scripts/status/",
+        "tests/status_gen/",
+        "scripts/security/",
+        "scripts/pipeline/"
+      ]
+    },
+    "KOS-SKILL-M0-001": {
+      "workstream_id": "SKILL",
+      "review": "REVIEWED",
+      "paths": [
+        "AGENTS.md",
+        "ACCEPTANCE_CRITERIA.md",
+        "planning/reviews/REV-007-GOVERNANCE-BASELINE.md",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ]
+    },
+    "KOS-MIND-001": {
+      "workstream_id": "MIND",
+      "review": "REVIEWED",
+      "paths": [
+        "contract/",
+        "src/kritva_mind/",
+        "examples/",
+        "tests/validator/",
+        "ARCHITECTURE.md",
+        "tasks/KOS-MIND-001/",
+        "planning/reviews/KOS-MIND-001-ARCHITECTURE-REVIEW.md",
+        "planning/reviews/KOS-MIND-001-CLOSURE.md",
+        "planning/reviews/KOS-MIND-001-CODE-OWNER-REVIEW.md",
+        "planning/reviews/KOS-MIND-001-SENSE-REVIEW.md",
+        "planning/reviews/KOS-MIND-001-SKILL-REVIEW.md"
+      ]
+    },
+    "KOS-SDK-001": {
+      "workstream_id": "SDK",
+      "review": "REVIEWED",
+      "paths": [
+        "ARCHITECTURE.md",
+        "API.md",
+        "REQUIREMENTS.md",
+        "docs/adr/"
+      ]
+    },
+    "KOS-SDK-002": {
+      "workstream_id": "SDK",
+      "review": "REVIEWED",
+      "paths": [
+        "pyproject.toml",
+        "release/",
+        "tests/packaging/",
+        "tests/unit/test_package.py",
+        "tests/unit/test_support_matrix.py",
+        "CHANGELOG.md"
+      ]
+    },
+    "KOS-SDK-003": {
+      "workstream_id": "SDK",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_sdk/config.py",
+        "src/kritva_sdk/compat.py",
+        "src/kritva_sdk/errors.py",
+        "src/kritva_sdk/sense.py",
+        "scripts/check_schema_drift.py",
+        "scripts/oracle_fetch.py",
+        "tests/unit/test_config_errors_compat.py",
+        "tests/unit/test_schema_drift.py",
+        "tests/unit/test_sense_fixtures.py",
+        "tests/data/"
+      ]
+    },
+    "KOS-SDK-005": {
+      "workstream_id": "SDK",
+      "review": "REVIEWED",
+      "paths": [
+        "src/kritva_sdk/sense.py",
+        "src/kritva_sdk/stream.py",
+        "src/kritva_sdk/frame_graph.py",
+        "scripts/oracle_fetch.py",
+        "tests/unit/test_sense.py",
+        "tests/unit/test_stream.py",
+        "tests/unit/test_frame_graph.py",
+        "tests/conformance/",
+        "tests/data/"
+      ]
+    }
+  }
+}
