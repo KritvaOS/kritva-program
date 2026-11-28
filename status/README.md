@@ -8,4 +8,4 @@ The four KRP-M0 tasks are reported COMPLETE with CI evidence on main commit f4ec
 
 KRP-ENG-001 is reported COMPLETE with CI evidence on main commit 0b0f180 (status run). It earns credit only with the owner's approval record.
 
-This report was refreshed on 2026-11-28 against main ef51e17. The program treats a report older than 14 days as stale and gives its tasks no credit, so update `source.commit` and `updated_at` before 2026-12-12 and every 14 days after.
+This report was refreshed on 2026-11-28 against main fc448ec. The program treats a report older than 14 days as stale and gives its tasks no credit, so update `source.commit` and `updated_at` before 2026-12-12 and every 14 days after.
