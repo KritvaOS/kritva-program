@@ -89,6 +89,18 @@ class Committed(unittest.TestCase):
         for x in w:
             self.assertIn(f"| {x['decision']} |", log)
 
+    def test_d161_waiver_is_limited_to_kos_sdk_005(self):
+        """The waiver is keyed by milestone and predecessor, so the task limit is enforced here: no baseline task other than
+        KOS-SDK-005 may sit in a V2-M3 repository milestone while V2-M2 is open (D-161)."""
+        w = {(x["milestone"], x["predecessor"]): x for x in json.loads((ROOT / S.WAIVERS).read_text())["waivers"]}
+        self.assertEqual(w[("V2-M3", "V2-M2")]["decision"], "D-161")
+        self.assertIn("KOS-SDK-005 only", w[("V2-M3", "V2-M2")]["reason"])
+        base = json.loads((ROOT / "v2/tracking/baseline.json").read_text())
+        m3 = {t["id"] for t in base["tasks"] if t["milestone_id"].startswith("V2-M3-")}
+        self.assertLessEqual(m3, {"KOS-SDK-005"})
+        ms = json.loads((ROOT / "v2/planning/milestones.json").read_text())["milestones"]
+        self.assertEqual(len([m for m in ms if m["id"] == "V2-M3"]), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
