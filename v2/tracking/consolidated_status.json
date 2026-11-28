@@ -385,7 +385,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-28T05:41:01Z",
+  "generated_at": "2026-11-28T06:26:49Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 60,
@@ -2086,7 +2086,7 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 2,
+        "age_hours": 3,
         "ahead_by": 153,
         "changed_files": [
           ".githooks/pre-push",
@@ -2152,7 +2152,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 2,
+        "age_hours": 3,
         "ahead_by": 12,
         "changed_files": [
           "ARCHITECTURE.md",
@@ -2174,7 +2174,7 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 2,
+        "age_hours": 3,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
@@ -2191,7 +2191,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 2,
+        "age_hours": 3,
         "ahead_by": 12,
         "changed_files": [
           ".githooks/pre-push",
@@ -2222,7 +2222,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 2,
+        "age_hours": 3,
         "ahead_by": 8,
         "changed_files": [
           ".githooks/pre-push",
@@ -2254,7 +2254,7 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 2,
+        "age_hours": 3,
         "ahead_by": 4,
         "changed_files": [
           "API.md",
@@ -2279,7 +2279,7 @@
         "workstream_id": "SDK"
       },
       {
-        "age_hours": 2,
+        "age_hours": 3,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
@@ -2296,7 +2296,7 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 2,
+        "age_hours": 3,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
