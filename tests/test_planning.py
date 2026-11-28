@@ -181,13 +181,13 @@ class Pipeline(unittest.TestCase):
             for dep in by[rid]["depends_on"]:
                 self.assertLess(order.index(dep), i)
         self.assertEqual(order[0], "kritva-program")
-        self.assertEqual(len(order), 13)
+        self.assertEqual(len(order), 14)
 
 
-    def test_all_thirteen_repos_present_with_unique_codes(self):
+    def test_all_fourteen_repos_present_with_unique_codes(self):
         repos = data()["pipeline"]["repositories"]
         self.assertEqual({r["repo_id"] for r in repos} >= {"kritva-mind", "kritva-sense", "kritva-skill", "kritva-motion"}, True)
-        self.assertEqual(len({r["code"] for r in repos}), 13)
+        self.assertEqual(len({r["code"] for r in repos}), 14)
 
     def test_cycle_unknown_dep_unknown_role_unknown_check_rejected(self):
         d = copy.deepcopy(data()); d["pipeline"]["repositories"][0]["depends_on"] = ["kritva-core"]

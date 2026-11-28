@@ -537,6 +537,55 @@
       }
     },
     {
+      "repo_id": "kritva-control-plane-api",
+      "code": "CPAPI",
+      "github_repo": "KritvaOS/kritva-control-plane-api",
+      "sequence": 65,
+      "depends_on": [
+        "kritva-program"
+      ],
+      "workstream_id": "CONTROL_PLANE_API",
+      "task_prefix": "KOS-CPAPI",
+      "kind": "contract",
+      "baselined": false,
+      "required_approvals": [
+        "REPO_CODE_OWNER",
+        "ARCHITECTURE_REVIEWER"
+      ],
+      "required_github_checks": [
+        "secret-scan",
+        "commit-message-check",
+        "readme-check"
+      ],
+      "local_gates": [
+        "make check",
+        "make docs-check"
+      ],
+      "release_policy": {
+        "tag_format": "vMAJOR.MINOR.PATCH",
+        "annotated": true,
+        "requires_completion_record": true
+      },
+      "phase_milestones": [],
+      "on_hold": false,
+      "protected_paths": [
+        ".github/",
+        "SECURITY.md",
+        "LICENSE",
+        "ACCEPTANCE_CRITERIA.md",
+        "Makefile",
+        "scripts/pipeline/",
+        "scripts/security/"
+      ],
+      "task_registry": {
+        "type": "none"
+      },
+      "commit_standard": {
+        "adopted": false,
+        "basis": "D-162; the commit-format checker is not installed in this repository yet"
+      }
+    },
+    {
       "repo_id": "kritva-actuator",
       "code": "ACTUATOR",
       "github_repo": "KritvaOS/kritva-actuator",

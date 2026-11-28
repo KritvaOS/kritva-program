@@ -385,7 +385,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-28T05:30:46Z",
+  "generated_at": "2026-11-28T05:41:01Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 60,
@@ -4159,7 +4159,7 @@
     "pending_reviews": 0,
     "plan_status": "PROPOSED",
     "program_start": "2026-09-14",
-    "repositories": 13
+    "repositories": 14
   },
   "warnings": [
     "ACTUATION_CONTROLS: no status source (UNVERIFIED)",
