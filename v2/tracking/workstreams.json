@@ -69,6 +69,11 @@
       "independent_effort": "none_for_mapped_tasks"
     },
     {
+      "id": "CONTROL_PLANE_API",
+      "name": "Control Plane API",
+      "repo": "KritvaOS/kritva-control-plane-api"
+    },
+    {
       "id": "EDUCATION_APPLICATIONS",
       "name": "Education applications",
       "repo": null
