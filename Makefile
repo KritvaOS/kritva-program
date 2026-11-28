@@ -33,6 +33,7 @@ REPOS := \
 	kritva-mind \
 	kritva-skill \
 	kritva-sdk \
+	kritva-control-plane-api \
 	kritva-actuator \
 	kritva-actuator-embedded \
 	kritva-actuator-s \
