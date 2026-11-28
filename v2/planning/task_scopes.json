@@ -1,0 +1,341 @@
+{
+  "_note": "Task scope registry (D-164). UNREVIEWED entries are unclassifiable and fail closed. Validate with: python3 tools/task_scopes.py --check",
+  "schema_version": "1.0",
+  "baseline_version": 17,
+  "repos": {
+    "CORE": {
+      "review": "UNREVIEWED",
+      "shared_paths": []
+    },
+    "COMMUNITY": {
+      "review": "UNREVIEWED",
+      "shared_paths": []
+    },
+    "CI_DEV_INFRA": {
+      "review": "UNREVIEWED",
+      "shared_paths": []
+    },
+    "SENSE": {
+      "review": "UNREVIEWED",
+      "shared_paths": []
+    },
+    "MOTION": {
+      "review": "UNREVIEWED",
+      "shared_paths": []
+    },
+    "MIND": {
+      "review": "UNREVIEWED",
+      "shared_paths": []
+    },
+    "SKILL": {
+      "review": "UNREVIEWED",
+      "shared_paths": []
+    },
+    "SDK": {
+      "review": "UNREVIEWED",
+      "shared_paths": []
+    }
+  },
+  "tasks": {
+    "KF-CORE-R10-001": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KF-CORE-R10-002": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KF-CORE-R10-003": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KF-CORE-R10-004": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KF-CORE-R10-005": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KF-CORE-R10-006": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KF-CORE-R10-007": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KF-CORE-R10-008": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KF-CORE-R10-009": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I2-001": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I2-002": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I2-003": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I2-004": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I2-005": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I2-006": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I3-001": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I3-002": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I3-003": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I3-004": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I3-005": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I3-006": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I3-007": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I4-001": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I4-002": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I4-003": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I4-004": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I4-005": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I4-006": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I4-007": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "I4-008": {
+      "workstream_id": "COMMUNITY",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KRP-ENG-001": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-001": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-002": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-003": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-004": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-005": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-006": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-007": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-008": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-009": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-010": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-MOTION-001": {
+      "workstream_id": "MOTION",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-MOTION-002": {
+      "workstream_id": "MOTION",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-MOTION-003": {
+      "workstream_id": "MOTION",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-MOTION-004": {
+      "workstream_id": "MOTION",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-MOTION-005": {
+      "workstream_id": "MOTION",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KRP-M0-001": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KRP-M0-002": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KRP-M0-003": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KRP-M0-004": {
+      "workstream_id": "CI_DEV_INFRA",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KF-CORE-M0-001": {
+      "workstream_id": "CORE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SENSE-M0-001": {
+      "workstream_id": "SENSE",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-MIND-M0-001": {
+      "workstream_id": "MIND",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-MOTION-M0-001": {
+      "workstream_id": "MOTION",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SKILL-M0-001": {
+      "workstream_id": "SKILL",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-MIND-001": {
+      "workstream_id": "MIND",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SDK-001": {
+      "workstream_id": "SDK",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SDK-002": {
+      "workstream_id": "SDK",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SDK-003": {
+      "workstream_id": "SDK",
+      "review": "UNREVIEWED",
+      "paths": []
+    },
+    "KOS-SDK-005": {
+      "workstream_id": "SDK",
+      "review": "UNREVIEWED",
+      "paths": []
+    }
+  }
+}
