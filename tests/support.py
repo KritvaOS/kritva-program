@@ -25,6 +25,9 @@ def make_root(d, approve=True, real=False):
     cfgp = r / "v2/tracking/sources.json"
     cfg = json.loads(cfgp.read_text())
     cfg.pop("require_run_verification", None)
+    # fixtures model the age rule unless a test sets currency_rule itself (the real sources.json uses commit-gap, D-165)
+    cfg.pop("currency_rule", None)
+    cfg.pop("age_warning_days", None)
     # fixtures model the two original reporting repos; the program-owned CI_DEV_INFRA source is covered by the repo itself
     cfg["sources"] = [x for x in cfg["sources"] if x["workstream_id"] in ("CORE", "COMMUNITY")]
     cfgp.write_text(json.dumps(cfg))

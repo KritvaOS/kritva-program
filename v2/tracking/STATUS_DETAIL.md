@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-28T07:35:06Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-28T12:29:45Z (freshness of sources is judged at this time)
 - Baseline version: 17 (APPROVED)
 - Accepted engineering progress: 100.0% (244/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 60/60 tasks (repo-reported; not acceptance)
@@ -27,20 +27,24 @@ Source v2/tracking/STATUS.md, as of 2026-11-28. Accepted progress there: 49.1% o
 | P1 | STUDIO | IN_PROGRESS | — | — | see STATUS_VIEW.md |
 | P2–P8 | — | IN_PROGRESS | — | — | see STATUS_VIEW.md |
 
+## Currency rule
+
+Commit-gap rule (D-164): a status report never expires on age. A task earns no credit only when the repository changed inside that task's scope, or in shared material, after the report's source commit (per v2/planning/task_scopes.json and the impact data in sources/MANIFEST.json); a source without impact data earns no credit. Report age is an advisory warning only.
+
 ## Source freshness
 
-Judged at 2026-11-28T07:35:06Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-28T12:29:45Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | FRESH | 2026-11-28T06:59:43Z (0h ago) | aeb5159 | ef51e17 | 2 commit(s) | STATUS_ONLY |
-| COMMUNITY | FRESH | 2026-11-28T06:59:43Z (0h ago) | f3c2af3 | 94cb0ac | 12 commit(s) | OTHER FILES (review): ARCHITECTURE.md, CONTRIBUTING.md, README.md, planning/README.md, planning/TASKS.md |
-| CORE | FRESH | 2026-11-28T06:59:43Z (0h ago) | 42253f9 | 44b00c0 | 2 commit(s) | STATUS_ONLY |
-| MIND | FRESH | 2026-11-28T06:59:43Z (0h ago) | afc263f | dfabe33 | 2 commit(s) | STATUS_ONLY |
-| MOTION | FRESH | 2026-11-28T06:59:43Z (0h ago) | c68d6bb | d3289b8 | 8 commit(s) | OTHER FILES (review): .githooks/pre-push, .github/kritva-gate.json, .github/workflows/integration-tests.yml, .github/workflows/progress-check.yml, .github/workflows/regression-tests.yml |
-| SDK | FRESH | 2026-11-28T06:59:43Z (0h ago) | 6191dcb | 3505859 | 6 commit(s) | OTHER FILES (review): API.md, ARCHITECTURE.md, README.md, planning/CHANGELOG.md, planning/TASKS.md |
-| SENSE | FRESH | 2026-11-28T06:59:43Z (0h ago) | ceb79d0 | f33b67b | 2 commit(s) | STATUS_ONLY |
-| SKILL | FRESH | 2026-11-28T06:59:43Z (0h ago) | 4914d16 | 3d38e45 | 2 commit(s) | STATUS_ONLY |
+| CI_DEV_INFRA | FRESH | 2026-11-28T12:29:23Z (0h ago) | b584199 | fc448ec | 2 commit(s) | STATUS_ONLY |
+| COMMUNITY | FRESH | 2026-11-28T12:29:23Z (0h ago) | f3c2af3 | 94cb0ac | 12 commit(s) | OTHER FILES (review): ARCHITECTURE.md, CONTRIBUTING.md, README.md, planning/README.md, planning/TASKS.md |
+| CORE | FRESH | 2026-11-28T12:29:23Z (0h ago) | 42253f9 | 44b00c0 | 2 commit(s) | STATUS_ONLY |
+| MIND | FRESH | 2026-11-28T12:29:23Z (0h ago) | 8ee12b1 | dfabe33 | 4 commit(s) | STATUS_ONLY |
+| MOTION | FRESH | 2026-11-28T12:29:23Z (0h ago) | 1b39e1d | c68d6bb | 2 commit(s) | STATUS_ONLY |
+| SDK | FRESH | 2026-11-28T12:29:23Z (0h ago) | 3fe0205 | 6191dcb | 2 commit(s) | STATUS_ONLY |
+| SENSE | FRESH | 2026-11-28T12:29:23Z (0h ago) | ceb79d0 | f33b67b | 2 commit(s) | STATUS_ONLY |
+| SKILL | FRESH | 2026-11-28T12:29:23Z (0h ago) | 4914d16 | 3d38e45 | 2 commit(s) | STATUS_ONLY |
 
 ## Workstreams
 
@@ -54,7 +58,7 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | ACT_L | KritvaOS/kritva-actuator-l | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | ACT_M | KritvaOS/kritva-actuator-m | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | ACT_S | KritvaOS/kritva-actuator-s | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| CI_DEV_INFRA | KritvaOS/kritva-program | BASELINED (5 tasks) | OK | 5 | ef51e17 |
+| CI_DEV_INFRA | KritvaOS/kritva-program | BASELINED (5 tasks) | OK | 5 | fc448ec |
 | COMMUNITY | KritvaOS/kritvaos-community | BASELINED (21 tasks) | OK | 21 | 94cb0ac |
 | CONNECT | KritvaOS/kritva-connect | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | CONTROL_PLANE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
@@ -67,9 +71,9 @@ BASELINED means approved baseline tasks exist. NOT BASELINED is neither zero pro
 | MANUFACTURING_FLEET | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MECHANICAL | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | MIND | KritvaOS/kritva-mind | BASELINED (2 tasks) | OK | 2 | dfabe33 |
-| MOTION | KritvaOS/kritva-motion | BASELINED (6 tasks) | OK | 6 | d3289b8 |
+| MOTION | KritvaOS/kritva-motion | BASELINED (6 tasks) | OK | 6 | c68d6bb |
 | NEXUS_EDGE | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
-| SDK | KritvaOS/kritva-sdk | BASELINED (4 tasks) | OK | 4 | 3505859 |
+| SDK | KritvaOS/kritva-sdk | BASELINED (4 tasks) | OK | 4 | 6191dcb |
 | SENSE | KritvaOS/kritva-sense | BASELINED (11 tasks) | OK | 11 | f33b67b |
 | SIM | UNVERIFIED | NOT BASELINED | UNVERIFIED | 0 | ------- |
 | SKILL | KritvaOS/kritva-skill | BASELINED (1 tasks) | OK | 1 | 3d38e45 |
