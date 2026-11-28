@@ -4,7 +4,7 @@
   "baseline_version": 17,
   "repos": {
     "CORE": {
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "shared_paths": [
         ".github/workflows/",
         "CMakeLists.txt",
@@ -19,7 +19,7 @@
       ]
     },
     "COMMUNITY": {
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "shared_paths": [
         ".github/workflows/",
         ".clang-format",
@@ -37,7 +37,7 @@
       ]
     },
     "CI_DEV_INFRA": {
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "shared_paths": [
         ".github/workflows/",
         "Makefile",
@@ -45,7 +45,7 @@
       ]
     },
     "SENSE": {
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "shared_paths": [
         ".github/workflows/",
         "MANIFEST.in",
@@ -59,7 +59,7 @@
       ]
     },
     "MOTION": {
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "shared_paths": [
         ".github/workflows/",
         "Makefile",
@@ -70,7 +70,7 @@
       ]
     },
     "MIND": {
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "shared_paths": [
         ".github/workflows/",
         "Makefile",
@@ -78,14 +78,14 @@
       ]
     },
     "SKILL": {
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "shared_paths": [
         ".github/workflows/",
         "Makefile"
       ]
     },
     "SDK": {
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "shared_paths": [
         ".github/workflows/",
         "Makefile",
@@ -106,7 +106,7 @@
   "tasks": {
     "KF-CORE-R10-001": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "docs/compatibility/API_INVENTORY.md",
         "docs/api/",
@@ -115,7 +115,7 @@
     },
     "KF-CORE-R10-002": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "docs/compatibility/COMPATIBILITY_POLICY.md",
         "docs/api/API_GUIDELINES.md",
@@ -124,14 +124,14 @@
     },
     "KF-CORE-R10-003": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "docs/compatibility/ABI_POLICY.md"
       ]
     },
     "KF-CORE-R10-004": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "docs/compatibility/VERSIONING_POLICY.md",
         "VERSION"
@@ -139,7 +139,7 @@
     },
     "KF-CORE-R10-005": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "docs/compatibility/DEPRECATION_POLICY.md",
         "docs/compatibility/DEPRECATIONS.md"
@@ -147,7 +147,7 @@
     },
     "KF-CORE-R10-006": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "tests/compat/",
         "tests/audit/",
@@ -159,7 +159,7 @@
     },
     "KF-CORE-R10-007": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "cmake/",
         "tests/install/"
@@ -167,7 +167,7 @@
     },
     "KF-CORE-R10-008": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "docs/security/",
         "docs/compatibility/README.md",
@@ -178,7 +178,7 @@
     },
     "KF-CORE-R10-009": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "tests/",
         "docs/",
@@ -189,7 +189,7 @@
     },
     "I2-001": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "runtime/",
         "tests/runtime/",
@@ -200,7 +200,7 @@
     },
     "I2-002": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "runtime/",
         "tests/runtime/",
@@ -212,7 +212,7 @@
     },
     "I2-003": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "runtime/",
         "tests/runtime/",
@@ -224,7 +224,7 @@
     },
     "I2-004": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "runtime/",
         "tests/runtime/",
@@ -235,7 +235,7 @@
     },
     "I2-005": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "runtime/",
         "tests/runtime/",
@@ -247,7 +247,7 @@
     },
     "I2-006": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "runtime/",
         "tests/runtime/",
@@ -259,7 +259,7 @@
     },
     "I3-001": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
@@ -271,7 +271,7 @@
     },
     "I3-002": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
@@ -286,7 +286,7 @@
     },
     "I3-003": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
@@ -299,7 +299,7 @@
     },
     "I3-004": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
@@ -312,7 +312,7 @@
     },
     "I3-005": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
@@ -327,7 +327,7 @@
     },
     "I3-006": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
@@ -341,7 +341,7 @@
     },
     "I3-007": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/requirements/DEVICE_ENDPOINT_REQUIREMENTS.md",
@@ -355,7 +355,7 @@
     },
     "I4-001": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/verification/KOS-I4_VERIFICATION.md",
@@ -373,7 +373,7 @@
     },
     "I4-002": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/verification/KOS-I4_VERIFICATION.md",
@@ -390,7 +390,7 @@
     },
     "I4-003": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/verification/KOS-I4_VERIFICATION.md",
@@ -404,7 +404,7 @@
     },
     "I4-004": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/verification/KOS-I4_VERIFICATION.md",
@@ -422,7 +422,7 @@
     },
     "I4-005": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/verification/KOS-I4_VERIFICATION.md",
@@ -439,7 +439,7 @@
     },
     "I4-006": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/verification/KOS-I4_VERIFICATION.md",
@@ -452,7 +452,7 @@
     },
     "I4-007": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/verification/KOS-I4_VERIFICATION.md",
@@ -467,7 +467,7 @@
     },
     "I4-008": {
       "workstream_id": "COMMUNITY",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "hardware/abstraction/",
         "docs/verification/KOS-I4_VERIFICATION.md",
@@ -483,7 +483,7 @@
     },
     "KRP-ENG-001": {
       "workstream_id": "CI_DEV_INFRA",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "AGENTS.md",
         ".githooks/",
@@ -502,7 +502,7 @@
     },
     "KOS-SENSE-001": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "contract/SENSE_CONTRACT.md",
         "contract/sense-sample.schema.json",
@@ -511,7 +511,7 @@
     },
     "KOS-SENSE-002": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_sense/validator.py",
         "contract/sense-sample.schema.json",
@@ -522,7 +522,7 @@
     },
     "KOS-SENSE-003": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_sense/frame_graph.py",
         "contract/FRAME_GRAPH_CONTRACT.md",
@@ -533,7 +533,7 @@
     },
     "KOS-SENSE-004": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_sense/generator.py",
         "src/kritva_sense/GENERATOR.md",
@@ -544,7 +544,7 @@
     },
     "KOS-SENSE-005": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_sense/stream.py",
         "contract/STREAM_CONTRACT.md",
@@ -555,7 +555,7 @@
     },
     "KOS-SENSE-006": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_sense/conformance.py",
         "src/kritva_sense/CONFORMANCE.md",
@@ -566,7 +566,7 @@
     },
     "KOS-SENSE-007": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_sense/_entry.py",
         "src/kritva_sense/__main__.py",
@@ -580,7 +580,7 @@
     },
     "KOS-SENSE-008": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "scripts/security/",
         ".github/workflows/",
@@ -591,7 +591,7 @@
     },
     "KOS-SENSE-009": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "scripts/integration_gate.py",
         "src/kritva_sense/",
@@ -603,7 +603,7 @@
     },
     "KOS-SENSE-010": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "scripts/regression_gate.py",
         "scripts/regenerate_regression_golden.py",
@@ -616,7 +616,7 @@
     },
     "KOS-MOTION-001": {
       "workstream_id": "MOTION",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "contract/",
         "architecture/",
@@ -625,7 +625,7 @@
     },
     "KOS-MOTION-002": {
       "workstream_id": "MOTION",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_motion/admission.py",
         "src/kritva_motion/config_validation.py",
@@ -638,7 +638,7 @@
     },
     "KOS-MOTION-003": {
       "workstream_id": "MOTION",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_motion/lifecycle/",
         "scripts/lifecycle_matrix.py",
@@ -648,7 +648,7 @@
     },
     "KOS-MOTION-004": {
       "workstream_id": "MOTION",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_motion/backend/",
         "scripts/integration_gate.py",
@@ -662,7 +662,7 @@
     },
     "KOS-MOTION-005": {
       "workstream_id": "MOTION",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_motion/stores/",
         "src/kritva_motion/runtime/",
@@ -674,7 +674,7 @@
     },
     "KRP-M0-001": {
       "workstream_id": "CI_DEV_INFRA",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "v2/PROGRAM_PLAN.md",
         "v2/ROADMAP.md",
@@ -690,7 +690,7 @@
     },
     "KRP-M0-002": {
       "workstream_id": "CI_DEV_INFRA",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "v2/RISK_REGISTER.md",
         "v2/GATE_REGISTER.md",
@@ -703,7 +703,7 @@
     },
     "KRP-M0-003": {
       "workstream_id": "CI_DEV_INFRA",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "tools/record_approvals.py",
         "tools/carry_forward_approvals.py",
@@ -717,7 +717,7 @@
     },
     "KRP-M0-004": {
       "workstream_id": "CI_DEV_INFRA",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "tools/consolidate_status.py",
         "tools/refresh_sources.py",
@@ -741,7 +741,7 @@
     },
     "KF-CORE-M0-001": {
       "workstream_id": "CORE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "docs/development/ENGINEERING_CONTRACT.md",
         "docs/development/ENGINEERING_CONTRACT.pin.json",
@@ -755,7 +755,7 @@
     },
     "KOS-SENSE-M0-001": {
       "workstream_id": "SENSE",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "AGENTS.md",
         "ACCEPTANCE_CRITERIA.md",
@@ -767,7 +767,7 @@
     },
     "KOS-MIND-M0-001": {
       "workstream_id": "MIND",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "AGENTS.md",
         "ACCEPTANCE_CRITERIA.md",
@@ -779,7 +779,7 @@
     },
     "KOS-MOTION-M0-001": {
       "workstream_id": "MOTION",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "AGENTS.md",
         "ACCEPTANCE_CRITERIA.md",
@@ -794,7 +794,7 @@
     },
     "KOS-SKILL-M0-001": {
       "workstream_id": "SKILL",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "AGENTS.md",
         "ACCEPTANCE_CRITERIA.md",
@@ -805,7 +805,7 @@
     },
     "KOS-MIND-001": {
       "workstream_id": "MIND",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "contract/",
         "src/kritva_mind/",
@@ -822,7 +822,7 @@
     },
     "KOS-SDK-001": {
       "workstream_id": "SDK",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "ARCHITECTURE.md",
         "API.md",
@@ -832,7 +832,7 @@
     },
     "KOS-SDK-002": {
       "workstream_id": "SDK",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "pyproject.toml",
         "release/",
@@ -844,7 +844,7 @@
     },
     "KOS-SDK-003": {
       "workstream_id": "SDK",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_sdk/config.py",
         "src/kritva_sdk/compat.py",
@@ -860,7 +860,7 @@
     },
     "KOS-SDK-005": {
       "workstream_id": "SDK",
-      "review": "UNREVIEWED",
+      "review": "REVIEWED",
       "paths": [
         "src/kritva_sdk/sense.py",
         "src/kritva_sdk/stream.py",
