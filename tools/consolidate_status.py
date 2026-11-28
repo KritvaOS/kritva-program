@@ -900,7 +900,7 @@ def render(c):
         L += ["", "## Program phase status (manual; separate scope from the engineering baseline)", "",
               f"Source {ps['source']}, as of {ps['as_of']}. Accepted progress there: {ps['accepted_progress'] or 'n/a'}. "
               "The engineering baseline (Core R1.0, Community I2-I4) is historical engineering work; it does not by itself "
-              "complete P0 FOUNDATION or pass the P0 exit review.", "",
+              "complete any program phase. Phase completion is recorded in the phase status source above.", "",
               "| Phase | Name | Execution | Review | Acceptance | Accepted progress |", "|---|---|---|---|---|---|"]
         L += [f"| {r['phase']} | {r['name']} | {r['execution']} | {r['review']} | {r['acceptance']} | {r['accepted']} |" for r in ps["phases"]]
     sf = c.get("source_freshness")
