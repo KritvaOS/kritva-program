@@ -1748,6 +1748,23 @@
         "TASK_FILES_CHANGED_AFTER_TASK_COMMIT",
         "MILESTONE_LEVEL_ACCEPTED_AS_OF_COMMIT"
       ]
+    },
+    {
+      "task_id": "KOS-SDK-005",
+      "workstream_id": "SDK",
+      "task_commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
+      "task_subject": "Merge pull request #20 from KritvaOS/feat/sdk-005-conformance-acceptance",
+      "mode": "OWN",
+      "evidence": {
+        "commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
+        "ci_run": 46100977556,
+        "result": "PASS",
+        "kind": "CI_RUN",
+        "url": "https://github.com/KritvaOS/kritva-sdk/actions/runs/46100977556",
+        "workflow": "gates"
+      },
+      "task_files_changed_after": null,
+      "review_flags": []
     }
   ],
   "unmapped": []

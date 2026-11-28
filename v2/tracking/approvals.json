@@ -11512,6 +11512,21 @@
       ],
       "rationale": "Baseline v17 (D-161): carry every effective approval forward; no new judgement",
       "supersedes": "A664"
+    },
+    {
+      "approval_id": "A724",
+      "task_id": "KOS-SDK-005",
+      "baseline_version": 17,
+      "source_repo": "KritvaOS/kritva-sdk",
+      "source_commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
+      "review_status": "APPROVED",
+      "acceptance": "PASS",
+      "approver": "Dinesh",
+      "approved_at": "2026-11-28T03:26:58Z",
+      "evidence_refs": [
+        "https://github.com/KritvaOS/kritva-sdk/actions/runs/46100977556"
+      ],
+      "rationale": "Owner acceptance under D-161 (interim D-047, not independent): software acceptance of KOS-SDK-005 on evidence commit 3505859 (gates run 46100977556, all seven workflows green). The manual criteria AC-003, AC-006 and AC-014 were reviewed (Claude and an external AI reviewer, advisory) and decided PASS by the owner. Two stale historical statements in API.md and ARCHITECTURE.md were corrected by a wording-only documentation PR (docs/sdk-005-stale-wording); it changes no implementation, contract support or gate result, and must be merged before release closure"
     }
   ]
 }

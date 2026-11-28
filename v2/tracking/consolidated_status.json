@@ -171,9 +171,9 @@
       "weighted": true
     },
     "V2-M3-SDK-001": {
-      "accepted_weight": 0,
-      "complete": 0,
-      "credited": 0,
+      "accepted_weight": 5,
+      "complete": 1,
+      "credited": 1,
       "tasks": 1,
       "weight": 5,
       "weighted": true
@@ -205,9 +205,9 @@
   },
   "by_phase": {
     "UNMAPPED": {
-      "accepted_weight": 213,
-      "complete": 52,
-      "credited": 52,
+      "accepted_weight": 218,
+      "complete": 53,
+      "credited": 53,
       "tasks": 60,
       "weight": 244,
       "weighted": true
@@ -255,9 +255,9 @@
       "weighted": true
     },
     "SDK": {
-      "accepted_weight": 18,
-      "complete": 3,
-      "credited": 3,
+      "accepted_weight": 23,
+      "complete": 4,
+      "credited": 4,
       "tasks": 4,
       "weight": 23,
       "weighted": true
@@ -281,16 +281,17 @@
   },
   "changes": {
     "items": [
-      "Accepted progress: 213/239 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 213/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-      "Warnings: 26 -> 27"
+      "Accepted progress: 213/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 218/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+      "Credited tasks: added KOS-SDK-005",
+      "Warnings: 27 -> 26"
     ],
-    "recorded_at": "2026-11-28T03:13:24Z",
-    "since": "2026-11-27T13:57:11Z"
+    "recorded_at": "2026-11-28T03:27:13Z",
+    "since": "2026-11-28T03:26:58Z"
   },
   "errors": [],
   "evidence_health": [
     "CI_DEV_INFRA: source STALE",
-    "KOS-MIND-001, KOS-MIND-M0-001, KOS-SDK-005, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream",
+    "KOS-MIND-001, KOS-MIND-M0-001, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004: no current report from the owning workstream",
     "MIND: source STALE"
   ],
   "gates": [
@@ -386,22 +387,22 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-28T03:13:24Z",
+  "generated_at": "2026-11-28T03:27:13Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 60,
-      "tasks_with_github_verified_run": 52,
-      "tasks_with_verified_evidence": 52
+      "tasks_with_github_verified_run": 53,
+      "tasks_with_verified_evidence": 53
     },
     "execution_complete": {
       "note": "reported by repos; not acceptance",
-      "tasks_complete": 52,
+      "tasks_complete": 53,
       "tasks_total": 60
     },
     "release_readiness": {
       "open_release_gates": [],
       "state": "NOT_READY",
-      "uncredited_tasks": 8
+      "uncredited_tasks": 7
     }
   },
   "milestone_alignment": [
@@ -658,10 +659,10 @@
       "workstream": "SENSE"
     },
     {
-      "accepted_weight": 0,
+      "accepted_weight": 5,
       "class": "V2_REPO",
       "closure": "none",
-      "credited": 0,
+      "credited": 1,
       "milestone": "V2-M3-SDK-001",
       "program_milestone": "V2-M3",
       "status": "PROPOSED",
@@ -1095,7 +1096,7 @@
         "rows": 10
       },
       "M3": {
-        "accepted": 0,
+        "accepted": 5,
         "baseline": 5,
         "high": 76,
         "low": 44,
@@ -1187,8 +1188,8 @@
         "rows": 1
       },
       "SDK": {
-        "accepted": 18,
-        "accepted_tasks": 3,
+        "accepted": 23,
+        "accepted_tasks": 4,
         "baseline": 23,
         "baseline_tasks": 4,
         "high": 55,
@@ -1377,7 +1378,7 @@
           "rows": 0
         },
         "M3": {
-          "accepted": 0,
+          "accepted": 5,
           "baseline": 5,
           "point": 11,
           "rows": 2
@@ -1908,7 +1909,7 @@
       "M7": "LIVE & RESULTS",
       "M8": "PRODUCTION"
     },
-    "v2_accepted_weight": 112,
+    "v2_accepted_weight": 117,
     "v2_baseline_weight": 140
   },
   "program_status": {
@@ -1944,8 +1945,8 @@
     "source": "v2/tracking/STATUS.md"
   },
   "progress": {
-    "accepted_progress_pct": 87.3,
-    "basis": "213/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
+    "accepted_progress_pct": 89.34,
+    "basis": "218/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit)"
   },
   "registered_no_weight": [
     {
@@ -2021,9 +2022,11 @@
       "open_predecessors": [
         "M2"
       ],
-      "started": false,
-      "status": "OK",
-      "waiver": []
+      "started": true,
+      "status": "WAIVED",
+      "waiver": [
+        "D-161"
+      ]
     },
     {
       "depends_on": [
@@ -2085,8 +2088,8 @@
   "source_freshness": {
     "rows": [
       {
-        "age_hours": 13,
-        "ahead_by": 144,
+        "age_hours": 0,
+        "ahead_by": 153,
         "changed_files": [
           ".githooks/pre-push",
           "AGENTS.md",
@@ -2118,6 +2121,7 @@
           "tests/test_planning.py",
           "tests/test_pr_gate.py",
           "tests/test_publish_repo_progress.py",
+          "tests/test_sequence_check.py",
           "tools/consolidate_status.py",
           "tools/dashboard.py",
           "tools/engineering_compliance.py",
@@ -2136,12 +2140,11 @@
           "v2/planning/KOS_MOTION_004_PROPOSAL.md",
           "v2/planning/KOS_MOTION_005_PROPOSAL.md",
           "v2/planning/KOS_MOTION_006_PROPOSAL.md",
-          "v2/planning/PENDING_DECISIONS.md",
-          "v2/planning/SEVEN_REPO_PLAN_REGISTER.md"
+          "v2/planning/PENDING_DECISIONS.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-27T13:51:44Z",
-        "fetched_head": "265cbd20cfe07902175e09333d7a985114dbdf99",
+        "fetched_at": "2026-11-28T03:26:32Z",
+        "fetched_head": "babb10555ecf093bc08a049594e05fb94c9fb3dd",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
@@ -2151,7 +2154,7 @@
         "workstream_id": "CI_DEV_INFRA"
       },
       {
-        "age_hours": 13,
+        "age_hours": 0,
         "ahead_by": 12,
         "changed_files": [
           "ARCHITECTURE.md",
@@ -2162,7 +2165,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-27T13:51:44Z",
+        "fetched_at": "2026-11-28T03:26:32Z",
         "fetched_head": "f3c2af33f823ed75ee650532727fd6ae0c78d7c8",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2173,13 +2176,13 @@
         "workstream_id": "COMMUNITY"
       },
       {
-        "age_hours": 13,
+        "age_hours": 0,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-27T13:51:44Z",
+        "fetched_at": "2026-11-28T03:26:32Z",
         "fetched_head": "42253f9d9a81dd0823d383895d3c3f34d9a236bd",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2190,7 +2193,7 @@
         "workstream_id": "CORE"
       },
       {
-        "age_hours": 13,
+        "age_hours": 0,
         "ahead_by": 12,
         "changed_files": [
           ".githooks/pre-push",
@@ -2210,7 +2213,7 @@
           "tasks/KOS-MIND-001/TASK.md"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-27T13:51:44Z",
+        "fetched_at": "2026-11-28T03:26:32Z",
         "fetched_head": "dfabe337b7954c0fcb03aeec7fac230bb2f3439d",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2221,7 +2224,7 @@
         "workstream_id": "MIND"
       },
       {
-        "age_hours": 13,
+        "age_hours": 0,
         "ahead_by": 8,
         "changed_files": [
           ".githooks/pre-push",
@@ -2242,7 +2245,7 @@
           "tests/status_gen/test_gen_status.py"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-27T13:51:44Z",
+        "fetched_at": "2026-11-28T03:26:32Z",
         "fetched_head": "c68d6bb7b18c41e3b6895f47af794bb16ab913b9",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2253,46 +2256,38 @@
         "workstream_id": "MOTION"
       },
       {
-        "age_hours": 13,
-        "ahead_by": 6,
+        "age_hours": 0,
+        "ahead_by": 4,
         "changed_files": [
+          "API.md",
+          "ARCHITECTURE.md",
           "README.md",
           "planning/CHANGELOG.md",
           "planning/TASKS.md",
-          "planning/dependencies/CONTRACT_DEPENDENCY_REGISTER.md",
+          "planning/milestones/V2-M3-SDK-001/MILESTONE.md",
           "planning/milestones/V2-M3-SDK-001/tasks/KOS-SDK-005/TASK.md",
-          "src/kritva_sdk/_schemas/sense/FRAME_GRAPH_CONTRACT.md",
-          "src/kritva_sdk/_schemas/sense/PROVENANCE.json",
-          "src/kritva_sdk/_schemas/sense/STREAM_CONTRACT.md",
-          "src/kritva_sdk/_schemas/sense/frame-transform.schema.json",
-          "src/kritva_sdk/_schemas/sense/stream.schema.json",
           "status/README.md",
-          "status/STATUS.md",
-          "status/program_snapshot.json",
-          "status/status.json",
-          "tests/packaging/test_packaging.py",
-          "tests/regression/golden/vendored_and_version.json",
-          "tests/unit/test_schema_drift.py"
+          "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-27T13:51:44Z",
-        "fetched_head": "b069b83928454c6f227e7a2007abcda2608dae4c",
+        "fetched_at": "2026-11-28T03:26:32Z",
+        "fetched_head": "1e31a0aa9f493a548181cf6bf8ee3998cef9bab3",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-sdk",
-        "report_source_commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+        "report_source_commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
         "status_only": false,
         "workstream_id": "SDK"
       },
       {
-        "age_hours": 13,
+        "age_hours": 0,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-27T13:51:44Z",
+        "fetched_at": "2026-11-28T03:26:32Z",
         "fetched_head": "ceb79d043d5d7ddeada866ebcd2fdfe74557a462",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2303,13 +2298,13 @@
         "workstream_id": "SENSE"
       },
       {
-        "age_hours": 13,
+        "age_hours": 0,
         "ahead_by": 2,
         "changed_files": [
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-27T13:51:44Z",
+        "fetched_at": "2026-11-28T03:26:32Z",
         "fetched_head": "4914d1620c40375748970085c6130320de985af9",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2365,6 +2360,7 @@
       "KOS-SDK-001",
       "KOS-SDK-002",
       "KOS-SDK-003",
+      "KOS-SDK-005",
       "KOS-SENSE-001",
       "KOS-SENSE-002",
       "KOS-SENSE-003",
@@ -2388,10 +2384,10 @@
     },
     "pending_decisions": 2,
     "pending_reviews": 0,
-    "progress": "213/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
-    "progress_pct": 87.3,
+    "progress": "218/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit)",
+    "progress_pct": 89.34,
     "readiness": {},
-    "warnings": 27
+    "warnings": 26
   },
   "tasks": [
     {
@@ -3601,24 +3597,30 @@
       "workstream_id": "SDK"
     },
     {
-      "acceptance": "NOT_RUN",
+      "acceptance": "PASS",
       "blocked_by": [],
-      "credit": false,
-      "credit_reason": "no current report from the owning workstream",
-      "evidence_class": null,
-      "evidence_run": null,
-      "evidence_state": "NO_REPORT",
-      "evidence_verified": false,
-      "execution": null,
-      "git_sync": null,
+      "credit": true,
+      "credit_reason": "weight 5 x approval A724 (PASS, APPROVED) on commit 3505859 with PASS evidence",
+      "evidence_class": "OWN",
+      "evidence_run": "46100977556",
+      "evidence_state": "VERIFIED",
+      "evidence_verified": true,
+      "execution": "COMPLETE",
+      "git_sync": "SYNCED",
       "milestone_id": "V2-M3-SDK-001",
       "phase": null,
-      "readiness": null,
-      "reported_evidence": null,
-      "run_verified": null,
-      "task_commit": null,
+      "readiness": "IMPLEMENTABLE",
+      "reported_evidence": {
+        "class": "OWN",
+        "commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
+        "github_verified": true,
+        "run": "46100977556",
+        "task_commit": "35058598f01f03af7ee064bd22be15822d9bbceb"
+      },
+      "run_verified": true,
+      "task_commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
       "task_id": "KOS-SDK-005",
-      "tested_commit": null,
+      "tested_commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
       "title": "Sense API, stream and frame-graph adapters",
       "weight": 5,
       "workstream_id": "SDK"
@@ -4177,7 +4179,6 @@
     "INTEGRATION_SOFTWARE_VALIDATION: no status source (UNVERIFIED)",
     "KOS-MIND-001: not reported by MIND (no credit)",
     "KOS-MIND-M0-001: not reported by MIND (no credit)",
-    "KOS-SDK-005: not reported by SDK (no credit)",
     "KRP-ENG-001: not reported by CI_DEV_INFRA (no credit)",
     "KRP-M0-001: not reported by CI_DEV_INFRA (no credit)",
     "KRP-M0-002: not reported by CI_DEV_INFRA (no credit)",
@@ -4332,11 +4333,11 @@
       "tasks_reported": 0
     },
     {
-      "commit": "645f984b23bca9c5e515869362693dba61cd4fec",
+      "commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
       "id": "SDK",
       "repo": "KritvaOS/kritva-sdk",
       "source_state": "OK",
-      "tasks_reported": 3
+      "tasks_reported": 4
     },
     {
       "commit": "f33b67b4cfcd6525cd74caa6accd1232a77d7bc0",
