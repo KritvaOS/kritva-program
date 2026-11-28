@@ -735,7 +735,9 @@
         "tests/test_refresh_sources.py",
         "tests/test_dashboard.py",
         "tests/test_evidence_map.py",
-        "tests/test_task_scopes.py"
+        "tests/test_task_scopes.py",
+        "tests/test_refresh_impact.py",
+        "tests/test_currency_preview.py"
       ]
     },
     "KF-CORE-M0-001": {
