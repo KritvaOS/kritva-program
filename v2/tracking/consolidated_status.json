@@ -383,7 +383,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-28T07:00:05Z",
+  "generated_at": "2026-11-28T07:35:06Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 60,
@@ -1909,30 +1909,30 @@
     "v2_baseline_weight": 140
   },
   "program_status": {
-    "accepted_progress": "0% of the P0 baseline (no tasks defined or accepted yet)",
-    "as_of": "2026-10-09",
-    "current_phase": "P0 FOUNDATION",
+    "accepted_progress": "49.1% of total V2 weight (244/497) on 2026-11-28; engineering baseline 100.0% (244/244); see STATUS_VIEW.md",
+    "as_of": "2026-11-28",
+    "current_phase": "P1 STUDIO (P0 closed, D-118; later milestones started under recorded waivers; P6 on HOLD)",
     "phases": [
       {
-        "acceptance": "NOT_RUN",
-        "accepted": "0%",
-        "execution": "IN_PROGRESS",
+        "acceptance": "CLOSED (D-118)",
+        "accepted": "see STATUS_VIEW.md (closure is not credit)",
+        "execution": "COMPLETE",
         "name": "FOUNDATION",
         "phase": "P0",
-        "review": "NOT_REVIEWED"
+        "review": "RECORDED"
       },
       {
         "acceptance": "\u2014",
-        "accepted": "0%",
-        "execution": "NOT_STARTED",
+        "accepted": "see STATUS_VIEW.md",
+        "execution": "IN_PROGRESS",
         "name": "STUDIO",
         "phase": "P1",
         "review": "\u2014"
       },
       {
         "acceptance": "\u2014",
-        "accepted": "0%",
-        "execution": "NOT_STARTED",
+        "accepted": "see STATUS_VIEW.md",
+        "execution": "IN_PROGRESS",
         "name": "\u2014",
         "phase": "P2\u2013P8",
         "review": "\u2014"

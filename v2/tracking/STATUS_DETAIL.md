@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-28T07:00:05Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-28T07:35:06Z (freshness of sources is judged at this time)
 - Baseline version: 17 (APPROVED)
 - Accepted engineering progress: 100.0% (244/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 60/60 tasks (repo-reported; not acceptance)
@@ -19,17 +19,17 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Program phase status (manual; separate scope from the engineering baseline)
 
-Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of the P0 baseline (no tasks defined or accepted yet). The engineering baseline (Core R1.0, Community I2-I4) is historical engineering work; it does not by itself complete P0 FOUNDATION or pass the P0 exit review.
+Source v2/tracking/STATUS.md, as of 2026-11-28. Accepted progress there: 49.1% of total V2 weight (244/497) on 2026-11-28; engineering baseline 100.0% (244/244); see STATUS_VIEW.md. The engineering baseline (Core R1.0, Community I2-I4) is historical engineering work; it does not by itself complete P0 FOUNDATION or pass the P0 exit review.
 
 | Phase | Name | Execution | Review | Acceptance | Accepted progress |
 |---|---|---|---|---|---|
-| P0 | FOUNDATION | IN_PROGRESS | NOT_REVIEWED | NOT_RUN | 0% |
-| P1 | STUDIO | NOT_STARTED | — | — | 0% |
-| P2–P8 | — | NOT_STARTED | — | — | 0% |
+| P0 | FOUNDATION | COMPLETE | RECORDED | CLOSED (D-118) | see STATUS_VIEW.md (closure is not credit) |
+| P1 | STUDIO | IN_PROGRESS | — | — | see STATUS_VIEW.md |
+| P2–P8 | — | IN_PROGRESS | — | — | see STATUS_VIEW.md |
 
 ## Source freshness
 
-Judged at 2026-11-28T07:00:05Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-28T07:35:06Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
@@ -291,7 +291,7 @@ The frozen baseline records each gate's state at approval. A closure is a separa
 | Measure | Value | Scope and basis |
 |---|---|---|
 | Accepted engineering progress | 100.0% (244/244 weight) | Frozen baseline v17: only the 60 baselined tasks (Core R1.0 and Community I2-I4). Approval- and CI-evidence-credited. Baselined tasks only; the whole-program figure including approved plan scope is in STATUS_VIEW.md |
-| Program phase (P0-P8) | P0 FOUNDATION | Manual status in v2/tracking/STATUS.md, as of 2026-10-09; it may lag this report and is not derived from the engineering baseline |
+| Program phase (P0-P8) | P1 STUDIO (P0 closed, D-118; later milestones started under recorded waivers; P6 on HOLD) | Manual status in v2/tracking/STATUS.md, as of 2026-11-28; it may lag this report and is not derived from the engineering baseline |
 
 
 ## Plan tasks by milestone and repository
