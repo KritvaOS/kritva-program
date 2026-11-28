@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-28T12:29:45Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-28T12:45:02Z (freshness of sources is judged at this time)
 - Baseline version: 17 (APPROVED)
 - Accepted engineering progress: 100.0% (244/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 60/60 tasks (repo-reported; not acceptance)
@@ -19,7 +19,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Program phase status (manual; separate scope from the engineering baseline)
 
-Source v2/tracking/STATUS.md, as of 2026-11-28. Accepted progress there: 49.1% of total V2 weight (244/497) on 2026-11-28; engineering baseline 100.0% (244/244); see STATUS_VIEW.md. The engineering baseline (Core R1.0, Community I2-I4) is historical engineering work; it does not by itself complete P0 FOUNDATION or pass the P0 exit review.
+Source v2/tracking/STATUS.md, as of 2026-11-28. Accepted progress there: 49.1% of total V2 weight (244/497) on 2026-11-28; engineering baseline 100.0% (244/244); see STATUS_VIEW.md. The engineering baseline (Core R1.0, Community I2-I4) is historical engineering work; it does not by itself complete any program phase. Phase completion is recorded in the phase status source above.
 
 | Phase | Name | Execution | Review | Acceptance | Accepted progress |
 |---|---|---|---|---|---|
@@ -33,7 +33,7 @@ Commit-gap rule (D-164): a status report never expires on age. A task earns no c
 
 ## Source freshness
 
-Judged at 2026-11-28T12:29:45Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-28T12:45:02Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
