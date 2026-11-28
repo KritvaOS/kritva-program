@@ -26,6 +26,12 @@ Also (D-015..D-017):
   * --snapshot appends a hash-chained record to v2/history/ (failed
     reconciliations go to v2/history/failures/, never into snapshots).
 
+Currency rule (D-164): sources.json "currency_rule" is "age" (default: a report older than freshness_days earns no credit) or
+"commit-gap" (a report never expires on age; a task earns no credit only when sources/MANIFEST.json impact data says the repo changed
+inside the task's scope, or shared material, since the report; a source with no usable impact data earns no credit). "commit-gap"
+needs --sources-dir and a MANIFEST.json written by tools/refresh_sources.py. "age_warning_days" (default 60) is an advisory
+warning only. See v2/planning/STATUS_CURRENCY_POLICY.md.
+
 Currency preview (D-164 step 5, report-only): --currency-preview (with --sources-dir) recomputes accepted progress under
 the commit-gap rule from sources/MANIFEST.json impact data and prints it beside the current 14-day result. It writes
 nothing, changes no credit and no generated file; the 14-day rule stays the rule until the owner enables the new one.
@@ -898,6 +904,12 @@ def render(c):
               "| Phase | Name | Execution | Review | Acceptance | Accepted progress |", "|---|---|---|---|---|---|"]
         L += [f"| {r['phase']} | {r['name']} | {r['execution']} | {r['review']} | {r['acceptance']} | {r['accepted']} |" for r in ps["phases"]]
     sf = c.get("source_freshness")
+    if sf and c.get("currency_rule") == "commit-gap":
+        L += ["", "## Currency rule", "",
+              "Commit-gap rule (D-164): a status report never expires on age. A task earns no credit only when the repository "
+              "changed inside that task's scope, or in shared material, after the report's source commit (per "
+              "v2/planning/task_scopes.json and the impact data in sources/MANIFEST.json); a source without impact data earns "
+              "no credit. Report age is an advisory warning only."]
     if sf:
         L += ["", "## Source freshness", "",
               f"Judged at {c['generated_at']}. FRESH up to {sf['warn_hours']}h since the last successful fetch, WARN up to "
@@ -1141,6 +1153,11 @@ def main():
     base = load_json(root / TRACK / "baseline.json")
     ledger = load_json(root / TRACK / "approvals.json")
     cfg = load_json(root / TRACK / "sources.json")
+    rule = cfg.get("currency_rule", "age")
+    if rule not in ("age", "commit-gap"):
+        raise SystemExit(f"config/IO error: sources.json currency_rule must be 'age' or 'commit-gap', not {rule!r}")
+    if rule == "commit-gap" and not a.sources_dir:
+        raise SystemExit("config/IO error: currency_rule 'commit-gap' needs --sources-dir (it reads sources/MANIFEST.json)")
     prev_out = root / TRACK / "consolidated_status.json"
     replay = None
     if a.check and not a.now and prev_out.exists():  # replay the generation time so --check is deterministic
@@ -1192,7 +1209,12 @@ def main():
                 age = (now - parse_ts(doc["updated_at"])).days
                 all_valid[ws_id] = (origin, doc)
                 entry.update(repo=doc["repo"], commit=doc["source"]["commit"], tasks_reported=len(doc["tasks"]))
-                if age > cfg.get("freshness_days", 14):
+                if rule == "commit-gap":
+                    entry["source_state"] = "OK"  # decided after the loop from the manifest impact data
+                    if age > cfg.get("age_warning_days", 60):
+                        warnings.append(f"{ws_id}: report is {age} days old (advisory only: the commit-gap rule never "
+                                        "withdraws credit on age)")
+                elif age > cfg.get("freshness_days", 14):
                     entry["source_state"] = "STALE"
                     warnings.append(f"{ws_id}: status is {age} days old")
                     stale_or_missing = True
@@ -1208,6 +1230,24 @@ def main():
             stale_or_missing = True
         out_ws.append(entry)
     errors += [f"source for unknown workstream {u!r}" for u in sorted(set(found) - set(reg))]
+    if rule == "commit-gap":
+        mpath = Path(a.sources_dir) / "MANIFEST.json"
+        manifest = load_json(mpath) if mpath.exists() else {}
+        reports, rows = new_rule_reports(all_valid, manifest)
+        stale_h = manifest.get("stale_hours", 72)
+        for row in rows:
+            entry = next(e for e in out_ws if e["id"] == row["id"])
+            if row["state"] == "EXCLUDED":
+                entry["source_state"] = "STALE"
+                warnings.append(f"{row['id']}: {row['reason']}; no credit (commit-gap rule)")
+                stale_or_missing = True
+            elif row["state"] == "PARTIAL":
+                warnings.append(f"{row['id']}: {len(row['affected'])} task(s) changed since the report and earn no credit "
+                                f"until it is refreshed: {', '.join(row['affected'])}")
+            fa = ((manifest.get("sources") or {}).get(row["id"]) or {}).get("fetched_at")
+            if fa and (now - parse_ts(fa)).total_seconds() / 3600 > stale_h:
+                warnings.append(f"{row['id']}: the manifest was fetched more than {stale_h}h ago; run tools/refresh_sources.py "
+                                "(commit-gap results are as of that fetch)")
 
     vfile = root / TRACK / VERIFICATION_FILE
     vr = json.loads(vfile.read_text(encoding="utf-8")) if vfile.exists() else {"runs": {}}
@@ -1235,6 +1275,8 @@ def main():
          "by_milestone": rollup(tasks, "milestone_id"), "gates": gates,
          "evidence_health": evidence_health(tasks, out_ws, warnings),
          "errors": sorted(errors), "warnings": sorted(warnings)}
+    if rule != "age":
+        c["currency_rule"] = rule
     c["program_status"] = program_status(root)
     c["phase_sequence"] = dashboard.phase_names(root)
     c["source_freshness"] = source_freshness(a.sources_dir, now) if a.sources_dir else None

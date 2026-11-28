@@ -17,7 +17,12 @@ A source report loses credit when its `updated_at` is more than 14 days old (D-0
    - REPORT_INTEGRITY: changes the status files or their tooling; the report must be refreshed or reviewed.
    - Anything that cannot be classified is UNKNOWN and fails closed (credit withheld until reviewed).
 5. A gap with no file in any class (for example only docs outside every scope) leaves credit unchanged.
-6. Age alone never removes credit. A long-age warning (60 days proposed, not decided) is advisory only.
+6. Age alone never removes credit. A report older than 60 days (`age_warning_days`, owner decision 2026-11-28) gets an advisory
+   warning only.
+7. The rule is selected by `currency_rule` in `v2/tracking/sources.json`: `age` (the 14-day rule, the default) or `commit-gap`.
+   `commit-gap` needs `--sources-dir` and the `sources/MANIFEST.json` written by `tools/refresh_sources.py`. A source with no
+   usable impact data, or a manifest entry that does not describe the committed report, earns no credit (fails closed). Impact is
+   as of the manifest fetch, so a manifest fetched more than 72 hours ago raises an advisory warning to refresh.
 
 ## Migration order
 
@@ -34,7 +39,14 @@ A source report loses credit when its `updated_at` is more than 14 days old (D-0
 
 The 14-day rule stays in force. Reports are refreshed before expiry: Community 2026-12-05, Core 2026-12-08, Sense and Skill 2026-12-11, SDK, Mind and Program CI 2026-12-12.
 
-## Open items
+## Progress (2026-11-28)
 
-- Long-age warning threshold (60 days proposed).
-- Shared-material list for each repository (step 3).
+Steps 1 to 6 are merged: the decision (D-164), the scope registry and validator, the reviewed scopes, per-task impact in the
+manifest, the report-only preview and its first side-by-side run (95.08% against 100.0%, all three differences real). Step 7 is
+split: 7a adds the `currency_rule` switch (default `age`, no behaviour change) and 7b, after the SDK and CI_DEV_INFRA reports are
+refreshed, sets `currency_rule` to `commit-gap`, regenerates the status files and records the decision that supersedes D-078.
+
+## Decided
+
+- Long-age warning threshold: 60 days (advisory only).
+- Shared-material lists: reviewed with the owner at step 3 (#172, #173) and narrowed for the SDK at step 6 (#176).
