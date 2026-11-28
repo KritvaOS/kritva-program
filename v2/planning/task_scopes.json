@@ -98,7 +98,6 @@
         "src/kritva_sdk/_version.py",
         "src/kritva_sdk/py.typed",
         "tests/acceptance/",
-        "planning/milestones/",
         "planning/dependencies/"
       ]
     }
@@ -827,7 +826,9 @@
         "ARCHITECTURE.md",
         "API.md",
         "REQUIREMENTS.md",
-        "docs/adr/"
+        "docs/adr/",
+        "planning/milestones/V2-M1-SDK-001/MILESTONE.md",
+        "planning/milestones/V2-M1-SDK-001/tasks/KOS-SDK-001/"
       ]
     },
     "KOS-SDK-002": {
@@ -839,7 +840,9 @@
         "tests/packaging/",
         "tests/unit/test_package.py",
         "tests/unit/test_support_matrix.py",
-        "CHANGELOG.md"
+        "CHANGELOG.md",
+        "planning/milestones/V2-M2-SDK-001/MILESTONE.md",
+        "planning/milestones/V2-M2-SDK-001/tasks/KOS-SDK-002/"
       ]
     },
     "KOS-SDK-003": {
@@ -855,7 +858,9 @@
         "tests/unit/test_config_errors_compat.py",
         "tests/unit/test_schema_drift.py",
         "tests/unit/test_sense_fixtures.py",
-        "tests/data/"
+        "tests/data/",
+        "planning/milestones/V2-M2-SDK-001/MILESTONE.md",
+        "planning/milestones/V2-M2-SDK-001/tasks/KOS-SDK-003/"
       ]
     },
     "KOS-SDK-005": {
@@ -870,7 +875,9 @@
         "tests/unit/test_stream.py",
         "tests/unit/test_frame_graph.py",
         "tests/conformance/",
-        "tests/data/"
+        "tests/data/",
+        "planning/milestones/V2-M3-SDK-001/MILESTONE.md",
+        "planning/milestones/V2-M3-SDK-001/tasks/KOS-SDK-005/"
       ]
     }
   }
