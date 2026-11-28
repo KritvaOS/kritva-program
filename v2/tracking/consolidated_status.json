@@ -285,7 +285,7 @@
       "Credited tasks: added KOS-MIND-001, KOS-MIND-M0-001, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004",
       "Warnings: 27 -> 18"
     ],
-    "recorded_at": "2026-11-28T07:05:56Z",
+    "recorded_at": "2026-11-28T07:00:05Z",
     "since": "2026-11-28T06:26:49Z"
   },
   "errors": [],
@@ -383,7 +383,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-28T07:05:56Z",
+  "generated_at": "2026-11-28T07:00:05Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 60,
@@ -2090,7 +2090,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T07:05:37Z",
+        "fetched_at": "2026-11-28T06:59:43Z",
         "fetched_head": "aeb515987ca9f15832c693826d790d5721155aaf",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2112,7 +2112,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T07:05:37Z",
+        "fetched_at": "2026-11-28T06:59:43Z",
         "fetched_head": "f3c2af33f823ed75ee650532727fd6ae0c78d7c8",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2129,7 +2129,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T07:05:37Z",
+        "fetched_at": "2026-11-28T06:59:43Z",
         "fetched_head": "42253f9d9a81dd0823d383895d3c3f34d9a236bd",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2147,7 +2147,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T07:05:37Z",
+        "fetched_at": "2026-11-28T06:59:43Z",
         "fetched_head": "afc263f1ce895938d1a1e38dbfcebd089c3c11a9",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2179,7 +2179,7 @@
           "tests/status_gen/test_gen_status.py"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T07:05:37Z",
+        "fetched_at": "2026-11-28T06:59:43Z",
         "fetched_head": "c68d6bb7b18c41e3b6895f47af794bb16ab913b9",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2206,7 +2206,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T07:05:37Z",
+        "fetched_at": "2026-11-28T06:59:43Z",
         "fetched_head": "6191dcbef0c0b717ba86e719098a2fa657677aa7",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2223,7 +2223,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T07:05:37Z",
+        "fetched_at": "2026-11-28T06:59:43Z",
         "fetched_head": "ceb79d043d5d7ddeada866ebcd2fdfe74557a462",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2240,7 +2240,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T07:05:37Z",
+        "fetched_at": "2026-11-28T06:59:43Z",
         "fetched_head": "4914d1620c40375748970085c6130320de985af9",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",

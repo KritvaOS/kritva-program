@@ -6,7 +6,7 @@ The executive summary is [STATUS_VIEW.md](STATUS_VIEW.md). This file holds the f
 
 ## Summary
 
-- Generated at: 2026-11-28T07:05:56Z (freshness of sources is judged at this time)
+- Generated at: 2026-11-28T07:00:05Z (freshness of sources is judged at this time)
 - Baseline version: 17 (APPROVED)
 - Accepted engineering progress: 100.0% (244/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit))
 - Execution reported complete: 60/60 tasks (repo-reported; not acceptance)
@@ -29,18 +29,18 @@ Source v2/tracking/STATUS.md, as of 2026-10-09. Accepted progress there: 0% of t
 
 ## Source freshness
 
-Judged at 2026-11-28T07:05:56Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
+Judged at 2026-11-28T07:00:05Z. FRESH up to 24h since the last successful fetch, WARN up to 72h, STALE beyond. A report can only name the commit before the one that contains it, so a gap that touches only the status path or the repo's own status generator (STATUS_ONLY, STATUS_TOOLING) is expected and is not a staleness signal.
 
 | Workstream | Freshness | Fetched | Fetched head | Report inspected | Gap | Gap touches |
 |---|---|---|---|---|---|---|
-| CI_DEV_INFRA | FRESH | 2026-11-28T07:05:37Z (0h ago) | aeb5159 | ef51e17 | 2 commit(s) | STATUS_ONLY |
-| COMMUNITY | FRESH | 2026-11-28T07:05:37Z (0h ago) | f3c2af3 | 94cb0ac | 12 commit(s) | OTHER FILES (review): ARCHITECTURE.md, CONTRIBUTING.md, README.md, planning/README.md, planning/TASKS.md |
-| CORE | FRESH | 2026-11-28T07:05:37Z (0h ago) | 42253f9 | 44b00c0 | 2 commit(s) | STATUS_ONLY |
-| MIND | FRESH | 2026-11-28T07:05:37Z (0h ago) | afc263f | dfabe33 | 2 commit(s) | STATUS_ONLY |
-| MOTION | FRESH | 2026-11-28T07:05:37Z (0h ago) | c68d6bb | d3289b8 | 8 commit(s) | OTHER FILES (review): .githooks/pre-push, .github/kritva-gate.json, .github/workflows/integration-tests.yml, .github/workflows/progress-check.yml, .github/workflows/regression-tests.yml |
-| SDK | FRESH | 2026-11-28T07:05:37Z (0h ago) | 6191dcb | 3505859 | 6 commit(s) | OTHER FILES (review): API.md, ARCHITECTURE.md, README.md, planning/CHANGELOG.md, planning/TASKS.md |
-| SENSE | FRESH | 2026-11-28T07:05:37Z (0h ago) | ceb79d0 | f33b67b | 2 commit(s) | STATUS_ONLY |
-| SKILL | FRESH | 2026-11-28T07:05:37Z (0h ago) | 4914d16 | 3d38e45 | 2 commit(s) | STATUS_ONLY |
+| CI_DEV_INFRA | FRESH | 2026-11-28T06:59:43Z (0h ago) | aeb5159 | ef51e17 | 2 commit(s) | STATUS_ONLY |
+| COMMUNITY | FRESH | 2026-11-28T06:59:43Z (0h ago) | f3c2af3 | 94cb0ac | 12 commit(s) | OTHER FILES (review): ARCHITECTURE.md, CONTRIBUTING.md, README.md, planning/README.md, planning/TASKS.md |
+| CORE | FRESH | 2026-11-28T06:59:43Z (0h ago) | 42253f9 | 44b00c0 | 2 commit(s) | STATUS_ONLY |
+| MIND | FRESH | 2026-11-28T06:59:43Z (0h ago) | afc263f | dfabe33 | 2 commit(s) | STATUS_ONLY |
+| MOTION | FRESH | 2026-11-28T06:59:43Z (0h ago) | c68d6bb | d3289b8 | 8 commit(s) | OTHER FILES (review): .githooks/pre-push, .github/kritva-gate.json, .github/workflows/integration-tests.yml, .github/workflows/progress-check.yml, .github/workflows/regression-tests.yml |
+| SDK | FRESH | 2026-11-28T06:59:43Z (0h ago) | 6191dcb | 3505859 | 6 commit(s) | OTHER FILES (review): API.md, ARCHITECTURE.md, README.md, planning/CHANGELOG.md, planning/TASKS.md |
+| SENSE | FRESH | 2026-11-28T06:59:43Z (0h ago) | ceb79d0 | f33b67b | 2 commit(s) | STATUS_ONLY |
+| SKILL | FRESH | 2026-11-28T06:59:43Z (0h ago) | 4914d16 | 3d38e45 | 2 commit(s) | STATUS_ONLY |
 
 ## Workstreams
 
@@ -362,7 +362,7 @@ Open items derived from the program records. Owners and due dates appear only wh
 
 ## What changed
 
-Compared with the snapshot generated 2026-11-28T06:26:49Z (recorded 2026-11-28T07:05:56Z). The record is replaced only when a tracked fact changes.
+Compared with the snapshot generated 2026-11-28T06:26:49Z (recorded 2026-11-28T07:00:05Z). The record is replaced only when a tracked fact changes.
 
 - Accepted progress: 218/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit) -> 244/244 weight (WAIVED, FAIL, stale, gated or missing earn no credit)
 - Credited tasks: added KOS-MIND-001, KOS-MIND-M0-001, KRP-ENG-001, KRP-M0-001, KRP-M0-002, KRP-M0-003, KRP-M0-004
