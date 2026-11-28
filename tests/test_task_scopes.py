@@ -85,6 +85,70 @@ class Cli(unittest.TestCase):
             self.assertEqual(ts.main(["--root", d, "--check"]), 1)
 
 
+class Impact(unittest.TestCase):
+    STATUS = "status/status.json"
+    REPO = {"review": "REVIEWED", "shared_paths": ["Makefile", ".github/workflows/"]}
+
+    def tasks(self):
+        return {"A-1": {"review": "REVIEWED", "paths": ["src/a/", "docs/a.md"]},
+                "A-2": {"review": "REVIEWED", "paths": ["src/b/"]}}
+
+    def run_it(self, files, relation="AHEAD", truncated=False, repo=None, tasks=None):
+        return ts.classify_impact(files, truncated, relation, self.STATUS, repo or self.REPO, tasks or self.tasks(), {"gen_status.py"})
+
+    def states(self, r):
+        return {k: v["state"] for k, v in r.items()}
+
+    def test_status_only_gap_is_current(self):
+        r = self.run_it(["status/status.json", "status/evidence.json"])
+        self.assertEqual(self.states(r), {"A-1": "CURRENT", "A-2": "CURRENT"})
+
+    def test_identical_is_current(self):
+        self.assertEqual(self.states(self.run_it([], relation="IDENTICAL")), {"A-1": "CURRENT", "A-2": "CURRENT"})
+
+    def test_task_scope_affects_only_that_task(self):
+        r = self.run_it(["src/a/x.c", "README.md"])
+        self.assertEqual(self.states(r), {"A-1": "AFFECTED", "A-2": "CURRENT"})
+        self.assertEqual(r["A-1"]["classes"], ["TASK_SCOPE"])
+        self.assertEqual(r["A-1"]["files"], ["src/a/x.c"])
+
+    def test_shared_affects_every_task(self):
+        r = self.run_it(["Makefile"])
+        self.assertEqual(self.states(r), {"A-1": "AFFECTED", "A-2": "AFFECTED"})
+        self.assertEqual(r["A-2"]["classes"], ["TASK_SHARED"])
+
+    def test_tooling_is_report_integrity(self):
+        r = self.run_it(["scripts/gen_status.py"])
+        self.assertEqual(r["A-1"]["classes"], ["REPORT_INTEGRITY"])
+        self.assertEqual(self.states(r), {"A-1": "AFFECTED", "A-2": "AFFECTED"})
+
+    def test_classes_combine_and_sort(self):
+        r = self.run_it(["src/a/x.c", "Makefile"])
+        self.assertEqual(r["A-1"]["classes"], ["TASK_SCOPE", "TASK_SHARED"])
+        self.assertEqual(r["A-2"]["classes"], ["TASK_SHARED"])
+
+    def test_file_in_no_scope_affects_nothing(self):
+        self.assertEqual(self.states(self.run_it(["docs/other.md"])), {"A-1": "CURRENT", "A-2": "CURRENT"})
+
+    def test_unknown_relation_and_truncation_fail_closed(self):
+        self.assertEqual(set(self.states(self.run_it([], relation="UNKNOWN")).values()), {"UNKNOWN"})
+        self.assertEqual(set(self.states(self.run_it(["src/a/x.c"], truncated=True)).values()), {"UNKNOWN"})
+
+    def test_unreviewed_repo_fails_closed_on_non_status_change(self):
+        repo = {"review": "UNREVIEWED", "shared_paths": []}
+        self.assertEqual(set(self.states(self.run_it(["src/a/x.c"], repo=repo)).values()), {"UNKNOWN"})
+        self.assertEqual(set(self.states(self.run_it(["status/status.json"], repo=repo)).values()), {"CURRENT"})
+
+    def test_unreviewed_task_fails_closed(self):
+        tasks = self.tasks(); tasks["A-2"]["review"] = "UNREVIEWED"
+        r = self.run_it(["docs/other.md"], tasks=tasks)
+        self.assertEqual(self.states(r), {"A-1": "CURRENT", "A-2": "UNKNOWN"})
+
+    def test_file_list_is_capped_per_task(self):
+        r = self.run_it([f"src/a/{i}.c" for i in range(9)])
+        self.assertEqual(len(r["A-1"]["files"]), 5)
+
+
 class RealRepo(unittest.TestCase):
     def test_registry_matches_baseline(self):
         """Fails when a baseline change adds or removes a task without updating the registry."""

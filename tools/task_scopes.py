@@ -43,6 +43,65 @@ def matches(path, entries):
     return any(path == e or (e.endswith("/") and path.startswith(e)) for e in entries)
 
 
+IMPACT_CLASSES = ("TASK_SCOPE", "TASK_SHARED", "REPORT_INTEGRITY")
+
+
+def classify_impact(files, truncated, relation, status_path, repo, tasks, tooling=()):
+    """Per-task impact of the commits between a report's source.commit and the repository head (D-164).
+
+    files: changed file paths in the gap; relation: IDENTICAL, AHEAD or UNKNOWN (as refresh_sources reports it);
+    repo: the registry's repos entry; tasks: {task_id: registry entry} for this workstream.
+    Returns {task_id: {"state": CURRENT | AFFECTED | UNKNOWN, "classes": [...], "files": [...]}}.
+
+    - Files under the status directory are the report's own update and are ignored (a report can only name its parent).
+    - The repository's own status generator and its test (tooling) are REPORT_INTEGRITY and affect every task.
+    - A file in the repository's shared_paths is TASK_SHARED and affects every task.
+    - A file inside a task's paths is TASK_SCOPE and affects that task only.
+    - A file in no path is outside every scope and affects nothing (the registry is reviewed, so this is deliberate).
+    - An unknown or truncated gap, or an UNREVIEWED repository or task that sees a non-status change, is UNKNOWN (fails closed).
+    """
+    out = {tid: {"state": "CURRENT", "classes": [], "files": []} for tid in tasks}
+    if relation not in ("IDENTICAL", "AHEAD") or truncated:
+        for e in out.values():
+            e["state"] = "UNKNOWN"
+        return out
+    prefix = status_path.rsplit("/", 1)[0] + "/"
+    repo_ok = repo.get("review") == "REVIEWED"
+
+    def hit(tid, cls, f):
+        e = out[tid]
+        if e["state"] != "UNKNOWN":
+            e["state"] = "AFFECTED"
+        if cls not in e["classes"]:
+            e["classes"].append(cls)
+        if len(e["files"]) < 5 and f not in e["files"]:
+            e["files"].append(f)
+
+    for f in sorted(files):
+        if f.startswith(prefix):
+            continue
+        if f.startswith("scripts/") and f.rsplit("/", 1)[-1] in tooling:
+            for tid in tasks:
+                hit(tid, "REPORT_INTEGRITY", f)
+            continue
+        if not repo_ok:
+            for e in out.values():
+                e["state"] = "UNKNOWN"
+            continue
+        if matches(f, repo.get("shared_paths", [])):
+            for tid in tasks:
+                hit(tid, "TASK_SHARED", f)
+            continue
+        for tid, t in tasks.items():
+            if t.get("review") != "REVIEWED":
+                out[tid]["state"] = "UNKNOWN"
+            elif matches(f, t.get("paths", [])):
+                hit(tid, "TASK_SCOPE", f)
+    for e in out.values():
+        e["classes"].sort()
+    return out
+
+
 def check_paths(label, paths, problems):
     if not isinstance(paths, list):
         problems.append(f"{label}: paths must be a list")

@@ -14,6 +14,11 @@ parent commit, so a gap that touches nothing but status/ is expected and is labe
 Freshness: FRESH <= warn_hours, WARN <= stale_hours, STALE beyond. FETCH_FAILED keeps the old snapshot on
 disk (for reproducibility) and is recorded as such; it is never presented as fresh.
 
+Impact (D-164, report-only): each FETCHED entry also records "impact", computed with tools/task_scopes.py from
+v2/planning/task_scopes.json: how many tasks the gap leaves CURRENT, and which tasks are AFFECTED or UNKNOWN with the
+impact class and files. It changes no credit; consolidate_status.py does not read it yet. If the registry is missing or does
+not match the baseline, impact is {"basis": "UNAVAILABLE"} and the rest of the manifest is unaffected.
+
 Exit codes: 0 ok, 2 a source failed to fetch or validate, 3 nothing changed (with --fail-if-unchanged).
 """
 import argparse
@@ -24,6 +29,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import consolidate_status as cs  # noqa: E402
+import task_scopes as ts  # noqa: E402
 
 MANIFEST = "MANIFEST.json"
 WARN_HOURS, STALE_HOURS = 24, 72
@@ -56,7 +62,28 @@ def classify_gap(report_commit, head, repo, status_path, gh=None):
     return {"relation": "AHEAD", "ahead_by": cmp.get("ahead_by"),
             "gap_kind": "UNKNOWN" if truncated else gap_kind(files, status_path),
             "status_only": (not truncated) and gap_kind(files, status_path) == "STATUS_ONLY",
-            "changed_files": files[:50], "changed_files_truncated": truncated or len(files) > 50}
+            "changed_files": files[:50], "changed_files_truncated": truncated or len(files) > 50,
+            "_all_files": files, "_truncated": truncated}
+
+
+def impact_for(ws, gap, status_path, root, cfg):
+    """Per-task impact of one source's gap, from the task scope registry (report-only)."""
+    try:
+        reg = ts.load(root / ts.REGISTRY)
+        problems = ts.validate(reg, ts.load(root / ts.BASELINE), cfg)
+    except (OSError, ValueError, KeyError) as e:
+        return {"basis": "UNAVAILABLE", "reason": f"registry unreadable: {type(e).__name__}"}
+    if problems:
+        return {"basis": "UNAVAILABLE", "reason": "registry does not match the baseline", "problems": problems[:3]}
+    tasks = {tid: e for tid, e in reg["tasks"].items() if e["workstream_id"] == ws}
+    res = ts.classify_impact(gap.get("_all_files", []), gap.get("_truncated", False), gap["relation"], status_path,
+                             reg["repos"][ws], tasks, TOOLING)
+    affected = {tid: e for tid, e in res.items() if e["state"] != "CURRENT"}
+    return {"basis": "task_scopes", "registry_baseline_version": reg["baseline_version"],
+            "summary": {"CURRENT": len(res) - len(affected),
+                        "AFFECTED": sum(1 for e in affected.values() if e["state"] == "AFFECTED"),
+                        "UNKNOWN": sum(1 for e in affected.values() if e["state"] == "UNKNOWN")},
+            "affected": affected}
 
 
 def freshness(fetched_at, now):
@@ -95,10 +122,13 @@ def main(argv=None):
             target.write_text(text, encoding="utf-8")
             changed.append(ws)
         gap = classify_gap(doc["source"].get("commit"), head, s["repo"], cfg["status_path"])
+        impact = impact_for(ws, gap, cfg["status_path"], root, cfg)
+        gap.pop("_all_files", None)
+        gap.pop("_truncated", None)
         entries[ws] = {"repo": s["repo"], "ref": s["ref"], "state": "FETCHED", "fetched_at": stamp,
                        "last_attempt_at": stamp, "fetched_head": head,
                        "report_source_commit": doc["source"].get("commit"),
-                       "report_updated_at": doc["updated_at"], "tasks": len(doc["tasks"]), **gap}
+                       "report_updated_at": doc["updated_at"], "tasks": len(doc["tasks"]), **gap, "impact": impact}
     out = {"_note": "Written by tools/refresh_sources.py. Records which revision each committed source copy was fetched "
                     "from. STATUS_ONLY means the commits between the report's inspected commit and the fetched head touch "
                     "only the status path; STATUS_TOOLING also touches the repo's own status generator and its test; "
@@ -112,6 +142,9 @@ def main(argv=None):
         print("PROBLEM:", p, file=sys.stderr)
     for ws, e in entries.items():
         extra = f" ahead_by={e.get('ahead_by')} gap={e.get('gap_kind')}" if e["state"] == "FETCHED" else ""
+        sm = (e.get("impact") or {}).get("summary")
+        if sm:
+            extra += f" impact: {sm['CURRENT']} current, {sm['AFFECTED']} affected, {sm['UNKNOWN']} unknown"
         print(f"{ws}: {e['state']}{extra}")
     print("changed: " + (", ".join(changed) or "nothing"))
     if problems:
