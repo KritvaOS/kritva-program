@@ -26,6 +26,10 @@ Also (D-015..D-017):
   * --snapshot appends a hash-chained record to v2/history/ (failed
     reconciliations go to v2/history/failures/, never into snapshots).
 
+Currency preview (D-164 step 5, report-only): --currency-preview (with --sources-dir) recomputes accepted progress under
+the commit-gap rule from sources/MANIFEST.json impact data and prints it beside the current 14-day result. It writes
+nothing, changes no credit and no generated file; the 14-day rule stays the rule until the owner enables the new one.
+
 Exit codes: 0 ok | 1 validation errors | 2 config/IO error |
             3 stale/missing sources (--strict) | 4 --check drift |
             5 history verification failed
@@ -1045,6 +1049,65 @@ def write_history(root, c, base, cfg, meta, ok_required, reasons, now, script_pa
     return f"snapshot {rec['snapshot_id']} appended"
 
 
+def new_rule_reports(all_valid, manifest):
+    """Reports as the commit-gap rule (D-164) would admit them, for the report-only preview.
+
+    A report is admitted without any age test; each task that the manifest impact lists as AFFECTED or UNKNOWN is dropped from
+    it (so it earns no credit until the report is refreshed). Fails closed: a source with no usable impact data, a manifest
+    entry that is not for this committed report, or a source that is not FETCHED is excluded whole.
+    Returns (reports, rows) where rows explain each workstream.
+    """
+    sources = (manifest or {}).get("sources", {})
+    reports, rows = {}, []
+    for ws_id, (origin, doc) in sorted(all_valid.items()):
+        e = sources.get(ws_id) or {}
+        impact = e.get("impact") or {}
+        row = {"id": ws_id, "state": "EXCLUDED", "affected": [], "reason": ""}
+        if e.get("state") != "FETCHED":
+            row["reason"] = "no fetched manifest entry"
+        elif e.get("report_source_commit") != doc["source"]["commit"]:
+            row["reason"] = "manifest does not describe the committed report"
+        elif impact.get("basis") != "task_scopes":
+            row["reason"] = f"no impact data ({impact.get('basis', 'missing')})"
+        else:
+            affected = impact.get("affected", {})
+            row["affected"] = sorted(affected)
+            kept = [t for t in doc["tasks"] if t["task_id"] not in affected]
+            reports[ws_id] = (origin, {**doc, "tasks": kept})
+            row["state"] = "PARTIAL" if affected else "CURRENT"
+            row["reason"] = (f"{len(affected)} task(s) affected or unknown since the report" if affected
+                             else "nothing in any task's scope changed since the report")
+        rows.append(row)
+    return reports, rows
+
+
+def currency_preview(base_eff, all_valid, manifest, effective, reg, vr, require_vr, emap, old_tasks, old_prog, old_states):
+    """Old (14-day) and new (commit-gap) results side by side. Pure: reads its inputs, writes nothing."""
+    reports, rows = new_rule_reports(all_valid, manifest)
+    new_tasks, new_prog, _ = compute(base_eff, reports, effective, reg, vr, require_vr, emap)
+    old_c = {t["task_id"]: t["credit"] for t in old_tasks}
+    new_c = {t["task_id"]: t["credit"] for t in new_tasks}
+    for r in rows:
+        r["old_state"] = old_states.get(r["id"], "UNVERIFIED")
+    return {"rule": "commit-gap (report-only)", "old_progress": old_prog, "new_progress": new_prog, "workstreams": rows,
+            "gained": sorted(t for t in new_c if new_c[t] and not old_c.get(t)),
+            "lost": sorted(t for t in new_c if old_c.get(t) and not new_c[t])}
+
+
+def render_preview(p):
+    L = ["Currency preview (report-only; the 14-day rule is still the rule)", "",
+         f"  14-day rule : {p['old_progress'].get('accepted_progress_pct')}%  ({p['old_progress'].get('basis')})",
+         f"  commit-gap  : {p['new_progress'].get('accepted_progress_pct')}%  ({p['new_progress'].get('basis')})", "",
+         f"  {'workstream':<14}{'14-day':<12}{'commit-gap':<12}reason"]
+    for r in p["workstreams"]:
+        L.append(f"  {r['id']:<14}{r['old_state']:<12}{r['state']:<12}{r['reason']}")
+        if r["affected"]:
+            L.append(f"  {'':<14}{'':<12}{'':<12}affected: {', '.join(r['affected'])}")
+    L += ["", f"  gained credit under commit-gap: {', '.join(p['gained']) or 'none'}",
+          f"  lost credit under commit-gap  : {', '.join(p['lost']) or 'none'}"]
+    return "\n".join(L)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", default=".", help="kritva-program repo root")
@@ -1055,6 +1118,9 @@ def main():
     ap.add_argument("--now", help="ISO time for freshness checks (default: current UTC)")
     ap.add_argument("--snapshot", action="store_true", help="append a snapshot (or failure record) under v2/history")
     ap.add_argument("--verify-history", action="store_true", help="verify the snapshot hash chain and exit")
+    ap.add_argument("--currency-preview", action="store_true",
+                    help="report-only: print accepted progress under the commit-gap rule (D-164) beside the 14-day result; "
+                         "needs --sources-dir; writes nothing")
     ap.add_argument("--verify-runs", action="store_true",
                     help="query GitHub for every CI run cited by evidence and record the facts in v2/tracking/run_verification.json")
     a = ap.parse_args()
@@ -1068,6 +1134,8 @@ def main():
         ap.error("choose exactly one of --sources-dir or --fetch")
     if a.snapshot and a.check:
         ap.error("--snapshot and --check cannot be combined")
+    if a.currency_preview and (not a.sources_dir or a.snapshot or a.check or a.verify_runs):
+        ap.error("--currency-preview needs --sources-dir and cannot be combined with --snapshot, --check or --verify-runs")
 
     reg = {w["id"]: w for w in load_json(root / TRACK / "workstreams.json")["workstreams"]}
     base = load_json(root / TRACK / "baseline.json")
@@ -1105,7 +1173,7 @@ def main():
     gates = effective_gates(base.get("gates", []), closures)
     base_eff = {**base, "gates": gates}
 
-    reports, out_ws, claimed = {}, [], {}
+    reports, out_ws, claimed, all_valid = {}, [], {}, {}
     for ws_id in sorted(reg):
         w = reg[ws_id]
         if w.get("closed_release") and not w.get("closed_ids"):
@@ -1122,6 +1190,7 @@ def main():
                 entry["source_state"] = "INVALID"
             else:
                 age = (now - parse_ts(doc["updated_at"])).days
+                all_valid[ws_id] = (origin, doc)
                 entry.update(repo=doc["repo"], commit=doc["source"]["commit"], tasks_reported=len(doc["tasks"]))
                 if age > cfg.get("freshness_days", 14):
                     entry["source_state"] = "STALE"
@@ -1152,6 +1221,13 @@ def main():
     emap = {r["task_id"]: r for r in json.loads(emap_path.read_text(encoding="utf-8")).get("rows", [])} if emap_path.exists() else {}
     tasks, prog, cwarn = compute(base_eff, reports, effective, reg, vr, require_vr, emap)
     warnings += cwarn
+    if a.currency_preview:
+        mpath = Path(a.sources_dir) / "MANIFEST.json"
+        manifest = load_json(mpath) if mpath.exists() else {}
+        prev = currency_preview(base_eff, all_valid, manifest, effective, reg, vr, require_vr, emap, tasks, prog,
+                                {w["id"]: w["source_state"] for w in out_ws})
+        print(render_preview(prev))
+        return 1 if errors else 0
     c = {"baseline_version": base["baseline_version"], "baseline_approved": bool(base.get("baseline_approved")),
          "progress": prog, "measures": measures(tasks, gates), "workstreams": out_ws, "tasks": tasks,
          "require_run_verification": require_vr, "generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
