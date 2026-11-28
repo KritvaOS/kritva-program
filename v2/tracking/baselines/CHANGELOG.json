@@ -144,5 +144,14 @@
     "canonical_commit": "9a2d3a57ed189e0ecf789392ce1ffff936e21445",
     "reason": "Baseline v16 (D-155): KOS-SDK-001 (weight 4), KOS-SDK-002 (weight 8, replacing the D-109 rows 005-01 and 005-02) and KOS-SDK-003 (weight 6) added under V2-M1-SDK-001 and V2-M2-SDK-001; 56 weights unchanged; no credit changes",
     "baseline_sha256": "cbcff0c1b2ab12551ec91701f33c85fbcb3fea500d27fca7b90d302700b59d81"
+  },
+  {
+    "from_version": 16,
+    "to_version": 17,
+    "approver": "Dinesh",
+    "approved_at": "2026-11-28T03:13:24Z",
+    "canonical_commit": "310dc5ecf40d9cb803b47e8ab1c361ce2ef244a3",
+    "reason": "Baseline v17 (D-161): KOS-SDK-005 (weight 5, from PROPOSED-NEW-SDK-005) added under V2-M3-SDK-001; 59 weights unchanged; no credit changes",
+    "baseline_sha256": "c7568108fe9f59d287c9bc442372bac8aca160f15bf87fb4974adb59d4d0011a"
   }
 ]
