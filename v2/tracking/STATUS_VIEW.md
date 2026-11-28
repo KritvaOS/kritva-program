@@ -2,7 +2,7 @@
 
 # Kritva Program Status (generated)
 
-Snapshot generated 2026-11-27T13:57:11Z from committed data. Baseline v16 (APPROVED). Validation: 0 error(s), 26 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
+Snapshot generated 2026-11-28T03:13:24Z from committed data. Baseline v17 (APPROVED). Validation: 0 error(s), 27 warning(s) (see Data health). Full tables: [STATUS_DETAIL.md](STATUS_DETAIL.md).
 
 Views are snapshots of the records, not approvals, schedule commitments or forecasts. Progress is one weight-based figure; estimated effort and repository readiness are reported separately and are not mixed into it.
 
@@ -13,13 +13,13 @@ Program completion: 42.9%  (213 / 497 weight)
 █████████░░░░░░░░░░░
 ```
 
-Accepted weight across completed Foundation work and accepted V2 baseline tasks, divided by total Foundation weight, V2 baseline weight and owner-approved V2 planning weight. Planning-only tasks are in the denominator but earn no credit until they are baselined and accepted. Plan estimate range 38.3% to 48.4% (total weight 440 to 556). Tasks accepted: 52 of 111.
+Accepted weight across completed Foundation work and accepted V2 baseline tasks, divided by total Foundation weight, V2 baseline weight and owner-approved V2 planning weight. Planning-only tasks are in the denominator but earn no credit until they are baselined and accepted. Plan estimate range 38.4% to 48.3% (total weight 441 to 555). Tasks accepted: 52 of 111.
 
 | Component | Accepted / total weight | Tasks accepted / total | What it is |
 |---|---|---|---|
 | Completed Foundation (PRE_V2) | 101 / 104 | 30 / 31 | Core R1.0, Community I2-I4 and the program CI task, completed before the V2 plan |
-| V2 baselined | 112 / 135 | 22 / 28 | Approved baseline tasks (Sense, Motion) |
-| V2 approved planning scope (not baselined) | 0 / 258 | 0 / 52 | Owner-approved scope not yet in the baseline; not necessarily ready to execute; no credit until baselined and accepted |
+| V2 baselined | 112 / 140 | 22 / 29 | Approved baseline tasks (Sense, Motion) |
+| V2 approved planning scope (not baselined) | 0 / 253 | 0 / 51 | Owner-approved scope not yet in the baseline; not necessarily ready to execute; no credit until baselined and accepted |
 | **Total** | **213 / 497** | **52 / 111** | **42.9%** |
 
 Moving approved-plan tasks into the baseline later changes which row they sit in, not the total or the percentage. Credit comes only from baselined tasks with an approval, a completed task and CI evidence. Plan weights are estimates. Physical validation (V2-M6) is on HOLD and excluded; mechanical, actuator, enterprise and raas work are outside this view.
@@ -109,7 +109,7 @@ All open items are shown.
 
 ## Notes on the total
 
-The previously displayed 89.12% (213/239) used the same accepted weight but a narrower denominator: it excluded the 258 points of approved V2 planning scope not yet baselined. The consolidated measure includes that scope, giving 213/497 (42.9%).
+The previously displayed 87.3% (213/244) used the same accepted weight but a narrower denominator: it excluded the 253 points of approved V2 planning scope not yet baselined. The consolidated measure includes that scope, giving 213/497 (42.9%).
 
 Consolidated program completion is a reporting aggregate across Foundation and V2 scope. It does not merge their baselines, alter task ownership, transfer credit between phases, or make planning-only tasks credit-eligible. Promoting planning tasks into a later baseline changes their classification, not the denominator or the accepted credit.
 
@@ -120,7 +120,7 @@ Community I3/I4 software implementation credit is included in Foundation (PRE_V2
 | Check | Value |
 |---|---|
 | Validation errors | 0 |
-| Warnings | 26 (17 workstreams with no status source) |
+| Warnings | 27 (17 workstreams with no status source) |
 | Source freshness | FRESH 8 |
 
 Details: [STATUS_DETAIL.md](STATUS_DETAIL.md).

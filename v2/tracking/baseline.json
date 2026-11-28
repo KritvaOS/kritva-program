@@ -1,6 +1,6 @@
 {
   "_note": "Baseline v2 (amendment approved by Dinesh 2026-10-17, D-022): baseline v1 plus KRP-ENG-001. Task IDs and weights of the 30 v1 tasks are unchanged. Core R02..R09 are intentionally not seeded.json (PLANNING_ONLY). Engineering repos cannot alter this file; changes need a decision entry and a baseline_version increment. Gates are first-class records (D-016); phase is null (unmapped) until the owner assigns P0-P8.",
-  "baseline_version": 16,
+  "baseline_version": 17,
   "baseline_approved": true,
   "mechanical_hold_reopened_by_decision": null,
   "phases": [
@@ -109,6 +109,10 @@
     },
     {
       "id": "V2-M2-SDK-001",
+      "workstream_id": "SDK"
+    },
+    {
+      "id": "V2-M3-SDK-001",
       "workstream_id": "SDK"
     }
   ],
@@ -702,6 +706,16 @@
       "requires_physical": false,
       "phase": null,
       "weight_rationale": "Register row PROPOSED-NEW-SDK-003 (6 [5-8], D-153) moved into the baseline unchanged: configuration, contract compatibility and Sense models over the vendored pinned kritva-sense 0.1.0 contract (kritva-sdk task KOS-SDK-003). Initial planning estimate (D-153, D-155), not a recorded engineering estimate; scale 1-8; to be revised as work proceeds. Software and documentation only; no hardware, no network service."
+    },
+    {
+      "id": "KOS-SDK-005",
+      "workstream_id": "SDK",
+      "milestone_id": "V2-M3-SDK-001",
+      "title": "Sense API, stream and frame-graph adapters",
+      "weight": 5,
+      "requires_physical": false,
+      "phase": null,
+      "weight_rationale": "Register row PROPOSED-NEW-SDK-005 (5 [4-6], D-153) moved into the baseline unchanged: Sense stream 0.1.0 and frame graph 0.1.0 adapters (typed models, validation, incremental stream checking, frame resolution) over the vendored pinned kritva-sense v0.2.0 contracts, with oracle conformance, regression and integration gates (kritva-sdk task KOS-SDK-005). Initial planning estimate (D-153, D-161), not a recorded engineering estimate; scale 1-8; to be revised as work proceeds. Software and documentation only; no hardware, no network service."
     }
   ],
   "gates": [
@@ -775,9 +789,9 @@
   ],
   "approval": {
     "approver": "Dinesh",
-    "approved_at": "2026-11-27T02:45:05Z",
-    "canonical_commit": "9a2d3a57ed189e0ecf789392ce1ffff936e21445",
-    "baseline_sha256": "cbcff0c1b2ab12551ec91701f33c85fbcb3fea500d27fca7b90d302700b59d81",
-    "reason": "Baseline v16 (D-155): KOS-SDK-001 (weight 4), KOS-SDK-002 (weight 8, replacing the D-109 rows 005-01 and 005-02) and KOS-SDK-003 (weight 6) added under V2-M1-SDK-001 and V2-M2-SDK-001; 56 weights unchanged; no credit changes"
+    "approved_at": "2026-11-28T03:13:24Z",
+    "canonical_commit": "310dc5ecf40d9cb803b47e8ab1c361ce2ef244a3",
+    "baseline_sha256": "c7568108fe9f59d287c9bc442372bac8aca160f15bf87fb4974adb59d4d0011a",
+    "reason": "Baseline v17 (D-161): KOS-SDK-005 (weight 5, from PROPOSED-NEW-SDK-005) added under V2-M3-SDK-001; 59 weights unchanged; no credit changes"
   }
 }

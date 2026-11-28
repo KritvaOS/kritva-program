@@ -563,12 +563,6 @@
           "status_authority": "SDK owner (Dinesh); not a program approval"
         },
         {
-          "task_id": "KOS-SDK-005",
-          "title": "Implement Sense API adapter",
-          "recorded_status": "NOT_STARTED",
-          "status_authority": "SDK owner (Dinesh); not a program approval"
-        },
-        {
           "task_id": "KOS-SDK-006",
           "title": "Add simulation adapter and executable examples",
           "recorded_status": "NOT_STARTED",
