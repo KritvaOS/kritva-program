@@ -4,18 +4,29 @@
     "CI_DEV_INFRA": {
       "ahead_by": 2,
       "changed_files": [
+        "status/README.md",
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-28T06:59:43Z",
-      "fetched_head": "aeb515987ca9f15832c693826d790d5721155aaf",
+      "fetched_at": "2026-11-28T12:29:23Z",
+      "fetched_head": "b58419935461c6bd72d7ebf8f12b6981347d3876",
       "gap_kind": "STATUS_ONLY",
-      "last_attempt_at": "2026-11-28T06:59:43Z",
+      "impact": {
+        "affected": {},
+        "basis": "task_scopes",
+        "registry_baseline_version": 17,
+        "summary": {
+          "AFFECTED": 0,
+          "CURRENT": 5,
+          "UNKNOWN": 0
+        }
+      },
+      "last_attempt_at": "2026-11-28T12:29:23Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-program",
-      "report_source_commit": "ef51e171f8b3f03825345f1d23602cf8bef8ef47",
-      "report_updated_at": "2026-11-28T06:45:00Z",
+      "report_source_commit": "fc448ec7713d8275c5849aa4120640993d3f746c",
+      "report_updated_at": "2026-11-28T12:26:16Z",
       "state": "FETCHED",
       "status_only": true,
       "tasks": 5
@@ -31,10 +42,20 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-28T06:59:43Z",
+      "fetched_at": "2026-11-28T12:29:23Z",
       "fetched_head": "f3c2af33f823ed75ee650532727fd6ae0c78d7c8",
       "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-28T06:59:43Z",
+      "impact": {
+        "affected": {},
+        "basis": "task_scopes",
+        "registry_baseline_version": 17,
+        "summary": {
+          "AFFECTED": 0,
+          "CURRENT": 21,
+          "UNKNOWN": 0
+        }
+      },
+      "last_attempt_at": "2026-11-28T12:29:23Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritvaos-community",
@@ -50,10 +71,20 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-28T06:59:43Z",
+      "fetched_at": "2026-11-28T12:29:23Z",
       "fetched_head": "42253f9d9a81dd0823d383895d3c3f34d9a236bd",
       "gap_kind": "STATUS_ONLY",
-      "last_attempt_at": "2026-11-28T06:59:43Z",
+      "impact": {
+        "affected": {},
+        "basis": "task_scopes",
+        "registry_baseline_version": 17,
+        "summary": {
+          "AFFECTED": 0,
+          "CURRENT": 10,
+          "UNKNOWN": 0
+        }
+      },
+      "last_attempt_at": "2026-11-28T12:29:23Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-core",
@@ -64,16 +95,28 @@
       "tasks": 10
     },
     "MIND": {
-      "ahead_by": 2,
+      "ahead_by": 4,
       "changed_files": [
         "status/README.md",
+        "status/STATUS.md",
+        "status/program_snapshot.json",
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-28T06:59:43Z",
-      "fetched_head": "afc263f1ce895938d1a1e38dbfcebd089c3c11a9",
+      "fetched_at": "2026-11-28T12:29:23Z",
+      "fetched_head": "8ee12b130333d7db0d3a8fddb3e6a97f4eb96802",
       "gap_kind": "STATUS_ONLY",
-      "last_attempt_at": "2026-11-28T06:59:43Z",
+      "impact": {
+        "affected": {},
+        "basis": "task_scopes",
+        "registry_baseline_version": 17,
+        "summary": {
+          "AFFECTED": 0,
+          "CURRENT": 2,
+          "UNKNOWN": 0
+        }
+      },
+      "last_attempt_at": "2026-11-28T12:29:23Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-mind",
@@ -84,66 +127,61 @@
       "tasks": 2
     },
     "MOTION": {
-      "ahead_by": 8,
+      "ahead_by": 2,
       "changed_files": [
-        ".githooks/pre-push",
-        ".github/kritva-gate.json",
-        ".github/workflows/integration-tests.yml",
-        ".github/workflows/progress-check.yml",
-        ".github/workflows/regression-tests.yml",
-        "AGENTS.md",
-        "COMPLETION_RECORD.md",
-        "CONTRIBUTING.md",
-        "Makefile",
-        "README.md",
-        "planning/CHANGELOG.md",
-        "planning/MILESTONE_STATUS.md",
-        "scripts/progress_report.py",
-        "scripts/status/gen_status.py",
-        "status/status.json",
-        "tests/status_gen/test_gen_status.py"
-      ],
-      "changed_files_truncated": false,
-      "fetched_at": "2026-11-28T06:59:43Z",
-      "fetched_head": "c68d6bb7b18c41e3b6895f47af794bb16ab913b9",
-      "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-28T06:59:43Z",
-      "ref": "main",
-      "relation": "AHEAD",
-      "repo": "KritvaOS/kritva-motion",
-      "report_source_commit": "d3289b85a8aad80525816d16d09cce8bda648602",
-      "report_updated_at": "2026-11-15T23:13:51+05:30",
-      "state": "FETCHED",
-      "status_only": false,
-      "tasks": 6
-    },
-    "SDK": {
-      "ahead_by": 6,
-      "changed_files": [
-        "API.md",
-        "ARCHITECTURE.md",
-        "README.md",
-        "planning/CHANGELOG.md",
-        "planning/TASKS.md",
-        "planning/milestones/V2-M3-SDK-001/MILESTONE.md",
-        "planning/milestones/V2-M3-SDK-001/tasks/KOS-SDK-005/TASK.md",
-        "status/README.md",
-        "status/STATUS.md",
-        "status/program_snapshot.json",
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-28T06:59:43Z",
-      "fetched_head": "6191dcbef0c0b717ba86e719098a2fa657677aa7",
-      "gap_kind": "OTHER_FILES",
-      "last_attempt_at": "2026-11-28T06:59:43Z",
+      "fetched_at": "2026-11-28T12:29:23Z",
+      "fetched_head": "1b39e1dbc452bfced16fcb18e0ed260acafab424",
+      "gap_kind": "STATUS_ONLY",
+      "impact": {
+        "affected": {},
+        "basis": "task_scopes",
+        "registry_baseline_version": 17,
+        "summary": {
+          "AFFECTED": 0,
+          "CURRENT": 6,
+          "UNKNOWN": 0
+        }
+      },
+      "last_attempt_at": "2026-11-28T12:29:23Z",
+      "ref": "main",
+      "relation": "AHEAD",
+      "repo": "KritvaOS/kritva-motion",
+      "report_source_commit": "c68d6bb7b18c41e3b6895f47af794bb16ab913b9",
+      "report_updated_at": "2026-11-28T13:19:19+05:30",
+      "state": "FETCHED",
+      "status_only": true,
+      "tasks": 6
+    },
+    "SDK": {
+      "ahead_by": 2,
+      "changed_files": [
+        "status/status.json"
+      ],
+      "changed_files_truncated": false,
+      "fetched_at": "2026-11-28T12:29:23Z",
+      "fetched_head": "3fe0205ac0a385cc1c34f712f9d2108a338f0a45",
+      "gap_kind": "STATUS_ONLY",
+      "impact": {
+        "affected": {},
+        "basis": "task_scopes",
+        "registry_baseline_version": 17,
+        "summary": {
+          "AFFECTED": 0,
+          "CURRENT": 4,
+          "UNKNOWN": 0
+        }
+      },
+      "last_attempt_at": "2026-11-28T12:29:23Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-sdk",
-      "report_source_commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
-      "report_updated_at": "2026-11-28T03:16:12Z",
+      "report_source_commit": "6191dcbef0c0b717ba86e719098a2fa657677aa7",
+      "report_updated_at": "2026-11-28T12:18:23Z",
       "state": "FETCHED",
-      "status_only": false,
+      "status_only": true,
       "tasks": 4
     },
     "SENSE": {
@@ -152,10 +190,20 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-28T06:59:43Z",
+      "fetched_at": "2026-11-28T12:29:23Z",
       "fetched_head": "ceb79d043d5d7ddeada866ebcd2fdfe74557a462",
       "gap_kind": "STATUS_ONLY",
-      "last_attempt_at": "2026-11-28T06:59:43Z",
+      "impact": {
+        "affected": {},
+        "basis": "task_scopes",
+        "registry_baseline_version": 17,
+        "summary": {
+          "AFFECTED": 0,
+          "CURRENT": 11,
+          "UNKNOWN": 0
+        }
+      },
+      "last_attempt_at": "2026-11-28T12:29:23Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-sense",
@@ -171,10 +219,20 @@
         "status/status.json"
       ],
       "changed_files_truncated": false,
-      "fetched_at": "2026-11-28T06:59:43Z",
+      "fetched_at": "2026-11-28T12:29:23Z",
       "fetched_head": "4914d1620c40375748970085c6130320de985af9",
       "gap_kind": "STATUS_ONLY",
-      "last_attempt_at": "2026-11-28T06:59:43Z",
+      "impact": {
+        "affected": {},
+        "basis": "task_scopes",
+        "registry_baseline_version": 17,
+        "summary": {
+          "AFFECTED": 0,
+          "CURRENT": 1,
+          "UNKNOWN": 0
+        }
+      },
+      "last_attempt_at": "2026-11-28T12:29:23Z",
       "ref": "main",
       "relation": "AHEAD",
       "repo": "KritvaOS/kritva-skill",

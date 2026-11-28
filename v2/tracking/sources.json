@@ -1,7 +1,9 @@
 {
-  "_note": "Where to fetch each workstream's status.json. ref may be a branch (a live source) or a commit/tag (pinned). A live source is reproducible through the committed copy under sources/ and the fetched head recorded in sources/MANIFEST.json; a pinned ref is advanced by a reviewed change (Stage 1 plan). All UNVERIFIED until repos are reconciled. require_run_verification: credit needs each cited CI run confirmed against the GitHub Actions API (run consolidate_status.py --verify-runs; facts are kept in run_verification.json).",
+  "_note": "currency_rule (D-165): commit-gap means a report never expires on age and a task loses credit only when sources/MANIFEST.json impact data says its scope or shared material changed since the report; freshness_days applies only when currency_rule is age. Where to fetch each workstream's status.json. ref may be a branch (a live source) or a commit/tag (pinned). A live source is reproducible through the committed copy under sources/ and the fetched head recorded in sources/MANIFEST.json; a pinned ref is advanced by a reviewed change (Stage 1 plan). All UNVERIFIED until repos are reconciled. require_run_verification: credit needs each cited CI run confirmed against the GitHub Actions API (run consolidate_status.py --verify-runs; facts are kept in run_verification.json).",
   "status_path": "status/status.json",
   "freshness_days": 14,
+  "currency_rule": "commit-gap",
+  "age_warning_days": 60,
   "sources": [
     {
       "workstream_id": "CORE",

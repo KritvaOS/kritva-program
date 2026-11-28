@@ -1,6 +1,6 @@
 # Status currency policy (D-164)
 
-Status: APPROVED by the owner on 2026-11-28 (D-164). Docs only: nothing here changes tooling, credit, baseline or weight until migration step 7.
+Status: APPROVED by the owner on 2026-11-28 (D-164) and ENABLED the same day (D-165).
 
 ## Problem
 
@@ -35,16 +35,18 @@ A source report loses credit when its `updated_at` is more than 14 days old (D-0
 7. Owner enables the new rule; D-078's 14-day prerequisite is superseded.
 8. Update the status READMEs of Mind, Motion and Program to describe the new rule.
 
-## Until step 7
+## Enabled
 
-The 14-day rule stays in force. Reports are refreshed before expiry: Community 2026-12-05, Core 2026-12-08, Sense and Skill 2026-12-11, SDK, Mind and Program CI 2026-12-12.
+Enabled on 2026-11-28 by D-165 (`currency_rule` is `commit-gap` in `v2/tracking/sources.json`). D-078's 14-day freeze prerequisite is
+superseded. Reports are refreshed when a task's files change, not on a calendar.
 
 ## Progress (2026-11-28)
 
 Steps 1 to 6 are merged: the decision (D-164), the scope registry and validator, the reviewed scopes, per-task impact in the
-manifest, the report-only preview and its first side-by-side run (95.08% against 100.0%, all three differences real). Step 7 is
-split: 7a adds the `currency_rule` switch (default `age`, no behaviour change) and 7b, after the SDK and CI_DEV_INFRA reports are
-refreshed, sets `currency_rule` to `commit-gap`, regenerates the status files and records the decision that supersedes D-078.
+manifest, the report-only preview and its first side-by-side run (95.08% against 100.0%, all three differences real). Step 7 was
+split: 7a added the `currency_rule` switch (#177, default `age`); after the SDK and CI_DEV_INFRA reports were refreshed (#24, #178) the
+side-by-side run showed 100.0% under both rules, and 7b set `currency_rule` to `commit-gap` and recorded D-165. Step 8 (the Mind and
+Motion status READMEs) remains.
 
 ## Decided
 

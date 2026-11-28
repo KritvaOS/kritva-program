@@ -288,6 +288,7 @@
     "recorded_at": "2026-11-28T07:00:05Z",
     "since": "2026-11-28T06:26:49Z"
   },
+  "currency_rule": "commit-gap",
   "errors": [],
   "evidence_health": [],
   "gates": [
@@ -383,7 +384,7 @@
       "title": "KOS-CI-001 Release/ASan/UBSan CI"
     }
   ],
-  "generated_at": "2026-11-28T07:35:06Z",
+  "generated_at": "2026-11-28T12:29:45Z",
   "measures": {
     "evidence_coverage": {
       "tasks_total": 60,
@@ -2087,16 +2088,17 @@
         "age_hours": 0,
         "ahead_by": 2,
         "changed_files": [
+          "status/README.md",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T06:59:43Z",
-        "fetched_head": "aeb515987ca9f15832c693826d790d5721155aaf",
+        "fetched_at": "2026-11-28T12:29:23Z",
+        "fetched_head": "b58419935461c6bd72d7ebf8f12b6981347d3876",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-program",
-        "report_source_commit": "ef51e171f8b3f03825345f1d23602cf8bef8ef47",
+        "report_source_commit": "fc448ec7713d8275c5849aa4120640993d3f746c",
         "status_only": true,
         "workstream_id": "CI_DEV_INFRA"
       },
@@ -2112,7 +2114,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T06:59:43Z",
+        "fetched_at": "2026-11-28T12:29:23Z",
         "fetched_head": "f3c2af33f823ed75ee650532727fd6ae0c78d7c8",
         "freshness": "FRESH",
         "gap_kind": "OTHER_FILES",
@@ -2129,7 +2131,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T06:59:43Z",
+        "fetched_at": "2026-11-28T12:29:23Z",
         "fetched_head": "42253f9d9a81dd0823d383895d3c3f34d9a236bd",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2141,14 +2143,16 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 2,
+        "ahead_by": 4,
         "changed_files": [
           "status/README.md",
+          "status/STATUS.md",
+          "status/program_snapshot.json",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T06:59:43Z",
-        "fetched_head": "afc263f1ce895938d1a1e38dbfcebd089c3c11a9",
+        "fetched_at": "2026-11-28T12:29:23Z",
+        "fetched_head": "8ee12b130333d7db0d3a8fddb3e6a97f4eb96802",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
         "relation": "AHEAD",
@@ -2159,61 +2163,36 @@
       },
       {
         "age_hours": 0,
-        "ahead_by": 8,
+        "ahead_by": 2,
         "changed_files": [
-          ".githooks/pre-push",
-          ".github/kritva-gate.json",
-          ".github/workflows/integration-tests.yml",
-          ".github/workflows/progress-check.yml",
-          ".github/workflows/regression-tests.yml",
-          "AGENTS.md",
-          "COMPLETION_RECORD.md",
-          "CONTRIBUTING.md",
-          "Makefile",
-          "README.md",
-          "planning/CHANGELOG.md",
-          "planning/MILESTONE_STATUS.md",
-          "scripts/progress_report.py",
-          "scripts/status/gen_status.py",
-          "status/status.json",
-          "tests/status_gen/test_gen_status.py"
+          "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T06:59:43Z",
-        "fetched_head": "c68d6bb7b18c41e3b6895f47af794bb16ab913b9",
+        "fetched_at": "2026-11-28T12:29:23Z",
+        "fetched_head": "1b39e1dbc452bfced16fcb18e0ed260acafab424",
         "freshness": "FRESH",
-        "gap_kind": "OTHER_FILES",
+        "gap_kind": "STATUS_ONLY",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-motion",
-        "report_source_commit": "d3289b85a8aad80525816d16d09cce8bda648602",
-        "status_only": false,
+        "report_source_commit": "c68d6bb7b18c41e3b6895f47af794bb16ab913b9",
+        "status_only": true,
         "workstream_id": "MOTION"
       },
       {
         "age_hours": 0,
-        "ahead_by": 6,
+        "ahead_by": 2,
         "changed_files": [
-          "API.md",
-          "ARCHITECTURE.md",
-          "README.md",
-          "planning/CHANGELOG.md",
-          "planning/TASKS.md",
-          "planning/milestones/V2-M3-SDK-001/MILESTONE.md",
-          "planning/milestones/V2-M3-SDK-001/tasks/KOS-SDK-005/TASK.md",
-          "status/README.md",
-          "status/STATUS.md",
-          "status/program_snapshot.json",
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T06:59:43Z",
-        "fetched_head": "6191dcbef0c0b717ba86e719098a2fa657677aa7",
+        "fetched_at": "2026-11-28T12:29:23Z",
+        "fetched_head": "3fe0205ac0a385cc1c34f712f9d2108a338f0a45",
         "freshness": "FRESH",
-        "gap_kind": "OTHER_FILES",
+        "gap_kind": "STATUS_ONLY",
         "relation": "AHEAD",
         "repo": "KritvaOS/kritva-sdk",
-        "report_source_commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
-        "status_only": false,
+        "report_source_commit": "6191dcbef0c0b717ba86e719098a2fa657677aa7",
+        "status_only": true,
         "workstream_id": "SDK"
       },
       {
@@ -2223,7 +2202,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T06:59:43Z",
+        "fetched_at": "2026-11-28T12:29:23Z",
         "fetched_head": "ceb79d043d5d7ddeada866ebcd2fdfe74557a462",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -2240,7 +2219,7 @@
           "status/status.json"
         ],
         "fetch_state": "FETCHED",
-        "fetched_at": "2026-11-28T06:59:43Z",
+        "fetched_at": "2026-11-28T12:29:23Z",
         "fetched_head": "4914d1620c40375748970085c6130320de985af9",
         "freshness": "FRESH",
         "gap_kind": "STATUS_ONLY",
@@ -4212,7 +4191,7 @@
       "tasks_reported": 0
     },
     {
-      "commit": "ef51e171f8b3f03825345f1d23602cf8bef8ef47",
+      "commit": "fc448ec7713d8275c5849aa4120640993d3f746c",
       "id": "CI_DEV_INFRA",
       "repo": "KritvaOS/kritva-program",
       "source_state": "OK",
@@ -4303,7 +4282,7 @@
       "tasks_reported": 2
     },
     {
-      "commit": "d3289b85a8aad80525816d16d09cce8bda648602",
+      "commit": "c68d6bb7b18c41e3b6895f47af794bb16ab913b9",
       "id": "MOTION",
       "repo": "KritvaOS/kritva-motion",
       "source_state": "OK",
@@ -4317,7 +4296,7 @@
       "tasks_reported": 0
     },
     {
-      "commit": "35058598f01f03af7ee064bd22be15822d9bbceb",
+      "commit": "6191dcbef0c0b717ba86e719098a2fa657677aa7",
       "id": "SDK",
       "repo": "KritvaOS/kritva-sdk",
       "source_state": "OK",
