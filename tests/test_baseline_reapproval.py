@@ -94,6 +94,12 @@ class SelfReportedProgramTaskTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             r = make_root(d + "/kp", real=True)
             shutil.copytree(ROOT / "sources", r / "sources")
+            # this test edits the report by hand, so it runs under the age rule: the committed manifest (read by the
+            # commit-gap rule, D-165) describes the real report, not the edited one
+            cp = r / "v2/tracking/sources.json"
+            cfg = json.loads(cp.read_text())
+            cfg.pop("currency_rule", None)
+            cp.write_text(json.dumps(cfg))
             # the live ledger may already hold an approval for this task; this test models a self-report with none
             ap = r / "v2/tracking/approvals.json"
             led = json.loads(ap.read_text())
